@@ -1,0 +1,10 @@
+Amount:
+  documentation: "An object representing an Amount"
+  type: object
+  properties:
+    value:
+      type: number
+    unit: 
+      type: UnitEnum
+    unitDimension:
+      type: UnitDimensionEnum

@@ -1,0 +1,10 @@
+UnitTimeEnum:
+  type: enum
+  inherit: UnitEnum
+  values:
+    day:
+      documentation: "day"
+    consecutiveDay:
+      documentation: "consecutive day"
+    night:
+      documentation: "night"

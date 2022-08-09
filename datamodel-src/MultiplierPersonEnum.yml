@@ -1,0 +1,11 @@
+MultiplierPersonEnum:
+  type: enum
+  values:
+    perPerson:
+      documentation: "Per person"
+    perPassenger:
+      documentation: "Per passenger"
+    perEmployee:
+      documentation: "Per employee"
+    perLoneTraveler:
+      documentation: "Per lone traveler"

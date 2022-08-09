@@ -1,0 +1,17 @@
+MultiplierTimeEnum:
+  type: enum
+  values:
+    perMinutes:
+      documentation: "Per minutes"
+    perHour:
+      documentation: "Per hour"
+    perDay:
+      documentation: "Per Day"
+    perMonth:
+      documentation: "Per Month"
+    perCalendarMonth:
+      documentation: "Per Calendar Month"
+    perYear:
+      documentation: "Per Year"
+    perPeriodOfInsurance:
+      documentation: "Per period of insurance"

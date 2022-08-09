@@ -1,0 +1,13 @@
+PayoutTypeEnum:
+  type: enum
+  values:
+    Limit:
+      documentation : "A Limit"
+    Excess:
+      documentation: "An Excess"
+    Deductible:
+      documentation: "A Deductible"
+    Franchise:
+      documentation: "A Franchise"
+    StrictLimit:
+      documentation: "A Strict Limit"

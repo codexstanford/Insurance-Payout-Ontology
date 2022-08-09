@@ -1,0 +1,9 @@
+MultiplierOccurenceEnum:
+  type: enum
+  values:
+    perClaim:
+      documentation: per claim
+    perLine:
+      documentation: per line of claim
+    perIncident:
+      documentation: per incident

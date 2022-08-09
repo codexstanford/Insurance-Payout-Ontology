@@ -1,0 +1,28 @@
+
+
+InsurancePayout:
+  documentation: "An object representing an insurance payout"
+  type: object
+  properties:
+    payoutType:
+      type: PayoutTypeEnum
+    amount:
+      type: Amount
+      documentation: "The amount of the payout"
+    minimalAmount:
+      type: Amount
+      documentation: "The minimal amount"
+    multipliers:
+      type: Multiplier
+      documentation: "The Payout multiplier"
+    for:
+      type: List
+      of: PayoutScopeServiceEnum
+      documentation: "The scope of the payout"
+    forComposition:
+      type: CompositionOperatorEnum
+      documentation: "Composition of payout scopes"
+    isExtra:
+      type: boolean
+      documentation: "Does the payout impact the consumption of other payout"
+    

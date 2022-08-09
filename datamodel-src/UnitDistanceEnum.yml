@@ -1,0 +1,8 @@
+UnitDistanceEnum:
+  type: enum
+  inherit: UnitEnum
+  values:
+    kilometer:
+      documentation: kilometer
+    miles:
+      documentation: miles

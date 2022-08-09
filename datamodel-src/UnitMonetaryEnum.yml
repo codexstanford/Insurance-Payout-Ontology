@@ -1,0 +1,8 @@
+UnitMonetaryEnum:
+  type: enum
+  inherit: UnitEnum
+  values:
+    EUR:
+      documentation: eur
+    GBP:
+      documentation: gbp

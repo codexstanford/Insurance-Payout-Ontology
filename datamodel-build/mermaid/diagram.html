@@ -1,0 +1,166 @@
+
+<html>
+    <body>
+<div class="mermaid">
+
+classDiagram
+Amount -- UnitEnum
+Amount -- UnitDimensionEnum
+
+
+class Amount {
+
+  number value
+  UnitEnum unit
+  UnitDimensionEnum unitDimension
+
+}
+
+class CompositionOperatorEnum {
+&lt&ltenumeration&gt&gt
+  o and
+  o or
+}
+
+InsurancePayout -- PayoutTypeEnum
+InsurancePayout -- Amount
+InsurancePayout -- Multiplier
+InsurancePayout -- PayoutScopeServiceEnum
+InsurancePayout -- CompositionOperatorEnum
+
+
+class InsurancePayout {
+
+  PayoutTypeEnum payoutType
+  Amount amount
+  Amount minimalAmount
+  Multiplier multipliers
+  PayoutScopeServiceEnum[] for
+  CompositionOperatorEnum forComposition
+  boolean isExtra
+
+}
+
+Multiplier -- MultiplierTimeEnum
+Multiplier -- MultiplierPersonEnum
+Multiplier -- MultiplierOccurenceEnum
+Multiplier -- MultiplierInsuredObjectEnum
+
+
+class Multiplier {
+
+  MultiplierTimeEnum time
+  MultiplierPersonEnum person
+  MultiplierOccurenceEnum occurence
+  MultiplierInsuredObjectEnum insuredObject
+
+}
+
+class MultiplierOccurenceEnum {
+&lt&ltenumeration&gt&gt
+  o perClaim
+  o perLine
+  o perIncident
+}
+
+class MultiplierPersonEnum {
+&lt&ltenumeration&gt&gt
+  o perPerson
+  o perPassenger
+  o perEmployee
+  o perLoneTraveler
+}
+
+class MultiplierTimeEnum {
+&lt&ltenumeration&gt&gt
+  o perMinutes
+  o perHour
+  o perDay
+  o perMonth
+  o perCalendarMonth
+  o perYear
+  o perPeriodOfInsurance
+}
+
+class PayoutScopeServiceEnum {
+&lt&ltenumeration&gt&gt
+  o indemnity
+  o legalCost
+  o legalExpenses
+  o windscreenRepair
+  o windscreenReplacement
+  o carStorageFee
+  o travelingCost
+  o courtesyCar
+  o carHire
+  o alternativeTransport
+  o towing
+  o overnightAccomodation
+  o bedAndBreakfast
+}
+
+class PayoutTypeEnum {
+&lt&ltenumeration&gt&gt
+  o Limit
+  o Excess
+  o Deductible
+  o Franchise
+  o StrictLimit
+}
+
+class UnitDimensionEnum {
+&lt&ltenumeration&gt&gt
+  o Monetary
+  o Time
+  o Distance
+  o Person
+}
+
+UnitEnum o-- UnitDistanceEnum
+  class UnitDistanceEnum {
+&lt&ltenumeration&gt&gt
+  o kilometer
+  o miles
+}
+
+UnitEnum o-- UnitMonetaryEnum
+  class UnitMonetaryEnum {
+&lt&ltenumeration&gt&gt
+  o EUR
+  o GBP
+}
+
+UnitEnum o-- UnitPersonEnum
+  class UnitPersonEnum {
+&lt&ltenumeration&gt&gt
+  o person
+  o passenger
+  o driver
+  o policyholder
+}
+
+UnitEnum o-- UnitTimeEnum
+  class UnitTimeEnum {
+&lt&ltenumeration&gt&gt
+  o day
+  o consecutiveDay
+  o night
+}
+
+
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({startOnLoad:true});
+</script>
+
+
+<script>
+setTimeout(function() {
+  document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
+}, 100);
+</script>
+</body>
+</html>

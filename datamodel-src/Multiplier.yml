@@ -1,0 +1,11 @@
+Multiplier:
+  type: object
+  properties:
+    time:
+      type: MultiplierTimeEnum
+    person:
+      type: MultiplierPersonEnum
+    occurence:
+      type: MultiplierOccurenceEnum
+    insuredObject:
+      type: MultiplierInsuredObjectEnum

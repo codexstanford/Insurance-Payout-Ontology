@@ -1,0 +1,12 @@
+UnitPersonEnum:
+    type: enum
+    inherit: UnitEnum
+    values:
+      person:
+        documentation: "A person"
+      passenger:
+        documentation: "A passenger"
+      driver:
+        documentation: "A driver"
+      policyholder:
+        documentation: "A policyholder"
