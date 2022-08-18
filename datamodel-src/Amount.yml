@@ -3,7 +3,9 @@ Amount:
   type: object
   properties:
     value:
-      type: number
+      type: string
+      documentation:
+        en: "A string representing a value. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
     unit: 
       type: UnitEnum
     unitDimension:
