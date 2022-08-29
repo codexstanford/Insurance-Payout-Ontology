@@ -1,5 +1,6 @@
 const fs = require('fs');
 const yaml = require('yaml');
+const execSync = require('child_process').execSync;
 
 const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
 const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
@@ -7,7 +8,6 @@ const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 // document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
 
 
-let objectsList = fs.readdirSync(DATA_MODEL_SRC_PATH);
 
 // remove old build
 if (fs.existsSync(DATA_MODEL_MERMAID_PATH)) {
@@ -18,6 +18,7 @@ fs.mkdirSync(DATA_MODEL_MERMAID_PATH);
 
 // for each object, build the TS
 
+let objectsList = fs.readdirSync(DATA_MODEL_SRC_PATH);
 let output = "classDiagram";
 for (let file of objectsList) {
   // skip dot files
@@ -28,7 +29,7 @@ for (let file of objectsList) {
   output += buildMermaid(file);
 }
 
-fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.mmd`, output, 'utf8');
+  fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.mmd`, output, 'utf8');
 
 
 let html = `
@@ -59,6 +60,11 @@ setTimeout(function() {
 fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.html`, html, 'utf8');
 
 
+execSync(`mmdc -i ${DATA_MODEL_MERMAID_PATH}/diagram.mmd -o ${DATA_MODEL_MERMAID_PATH}/diagram.svg`);
+
+fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.svg`, styleIt(
+  fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.svg`, 'utf8')
+));
 function buildMermaid(fileName) {
   let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${fileName}`, 'utf-8'));
 
@@ -156,6 +162,13 @@ ${output}
 
 }
 `
+
+  fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.mmd`, `classDiagram
+  ${output}`);
+execSync(`mmdc -i ${DATA_MODEL_MERMAID_PATH}/${name}.mmd -o ${DATA_MODEL_MERMAID_PATH}/${name}.svg`);
+fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, styleIt(
+  fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, 'utf8')
+));
   return output;
 }
 
@@ -177,7 +190,25 @@ function renderEnum(name, data) {
   output += `}
 `;
 
+
+fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.mmd`, `classDiagram
+${output}`);
+execSync(`mmdc -i ${DATA_MODEL_MERMAID_PATH}/${name}.mmd -o ${DATA_MODEL_MERMAID_PATH}/${name}.svg`);
+
+fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, styleIt(
+  fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, 'utf8')
+));
+
  // fs.writeFileSync(`${DATA_MODEL_TS_PATH}/${name}.ts`, output, 'utf8');
 
   return output;
+}
+
+function styleIt(svg) {
+
+  //background
+  svg = svg.replace(/ECECFF/g, "eeeeee");
+  svg = svg.replace(/9370DB/g, "222222");
+
+  return svg;
 }

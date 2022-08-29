@@ -4,14 +4,13 @@
 <div class="mermaid">
 
 classDiagram
-Amount -- UnitEnum
 Amount -- UnitDimensionEnum
 
 
 class Amount {
 
-  string value
-  UnitEnum unit
+  string quantity
+  string unit
   UnitDimensionEnum unitDimension
 
 }
@@ -32,7 +31,7 @@ InsurancePayout -- CompositionOperatorEnum
 class InsurancePayout {
 
   PayoutTypeEnum payoutType
-  Amount amount
+  Amount[] amount
   Amount minimalAmount
   Multiplier multipliers
   PayoutScopeServiceEnum[] for

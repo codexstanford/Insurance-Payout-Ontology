@@ -1,0 +1,19 @@
+classDiagram
+  InsurancePayout -- PayoutTypeEnum
+InsurancePayout -- Amount
+InsurancePayout -- Multiplier
+InsurancePayout -- PayoutScopeServiceEnum
+InsurancePayout -- CompositionOperatorEnum
+
+
+class InsurancePayout {
+
+  PayoutTypeEnum payoutType
+  Amount[] amount
+  Amount minimalAmount
+  Multiplier multipliers
+  PayoutScopeServiceEnum[] for
+  CompositionOperatorEnum forComposition
+  boolean isExtra
+
+}

@@ -1,28 +1,40 @@
 
 
 InsurancePayout:
-  documentation: "An object representing an insurance payout"
+  documentation: "An object representing an insurance payout: what modification should be apply to the claim amount, as describe in a contract. <br/><br/>There is different type of payout (see PayoutTypeEnum), such as Limit or Deductible. This model was develop to be able to represent any type of payouts. (see Documentation)"
   type: object
   properties:
     payoutType:
       type: PayoutTypeEnum
+      documentation:
+        en: "Describe the type of payout."
+      default: "Limit"
     amount:
-      type: Amount
-      documentation: "The amount of the payout"
+      type: List
+      of: Amount
+      documentation: "The amounts of the payout. It is a list as some Payout require multiple amounts."
     minimalAmount:
       type: Amount
-      documentation: "The minimal amount"
+      default: "undefined"
+      documentation: "The minimal amount of the payout. (See Minimal amount Doc)"
+      sample:
+        sample1:
+          name: "A limit with a minimal amount"
+          legalese: "In case of fire we will pay you up to 10% of value insured but at least $5000"
+          explanation: "Here the minimal amount will be $5000"
     multipliers:
       type: Multiplier
-      documentation: "The Payout multiplier"
+      documentation: "The Payout multiplier, eg: per Person. It is not possible to have 2 multipliers affecting the same dimension. (See Multipliers Doc)"
     for:
       type: List
       of: PayoutScopeServiceEnum
-      documentation: "The scope of the payout"
+      documentation: "The scope of the payout, what the payout should be use for."
     forComposition:
       type: CompositionOperatorEnum
       documentation: "Composition of payout scopes"
+      default: "and"
     isExtra:
       type: boolean
-      documentation: "Does the payout impact the consumption of other payout"
-    
+      documentation: "Does the payout impact the consumption of other payout (see Payout extra documentation)"
+      default: false
+     

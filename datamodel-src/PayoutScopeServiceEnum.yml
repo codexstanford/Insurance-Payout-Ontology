@@ -31,6 +31,8 @@ PayoutScopeServiceEnum:
 
     carHire:
       documentation: "Car hire"
+
+      
     alternativeTransport:
       documentation: "Alternative Transports"
     towing:

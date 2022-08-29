@@ -1,12 +1,16 @@
 Amount:
-  documentation: "An object representing an Amount"
+  documentation: "An object representing an Amount. <br/> In our representation an amout contain a quantity (how much), a unit (how much of what?), and a unit dimension (in which dimension do we mesure, eg: distance,monetary, ...)"
   type: object
   properties:
-    value:
+    quantity:
       type: string
       documentation:
-        en: "A string representing a value. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
+        en: "A string representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
     unit: 
-      type: UnitEnum
+      type: string
+      documentation: 
+        en: "The unit of the amount. It is recommended that it match an enum value corresponding to the dimension object."
     unitDimension:
       type: UnitDimensionEnum
+      documentation: 
+        en: "The dimension of the value"
