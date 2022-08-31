@@ -1,0 +1,8 @@
+RiskChainNode:
+  documentation: "An abstract class to represent a Risk Chain node : Situation or Actor"
+  type: object
+  abstract: true
+  properties:
+    niet:
+      type: string
+      documentation: "A we have a mermaid render bug..."

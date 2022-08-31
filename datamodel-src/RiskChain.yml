@@ -1,0 +1,21 @@
+RiskChain:
+  documentation: "Represent a chain of risks in the form of a knowledge graph"
+  type: object
+  properties:
+    actors:
+      type: List
+      of: RiskChainActor
+    situations:
+      type: List
+      of: RiskChainSituation
+    logicNode:
+      type: List
+      of: RiskChainLogicNode
+    relations:
+      # of edges
+      type: List
+      of: RiskChainEdge
+    logicRelation:
+      # of edges
+      type: List
+      of: RiskChainLogicEdge

@@ -1,0 +1,7 @@
+RiskChainSituation:
+  type: object
+  documentation: "A situation"
+  inherit: RiskChainNode
+  properties:
+    event: 
+      type: EventTypeEnum

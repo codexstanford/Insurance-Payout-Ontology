@@ -1,0 +1,11 @@
+RiskObjectActionEnum:
+  type: enum
+  values:
+    driveBy:
+      documentation: "Drive by"
+    impactedBy:
+      documentation: "Impacted by"
+    usedBy:
+      documentation: "Used by"
+    ownedBy:
+      documentation: "Owned by"

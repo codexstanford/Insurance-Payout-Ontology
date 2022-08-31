@@ -8,6 +8,9 @@
         body {
           min-height: 100vh;
           min-height: -webkit-fill-available;
+          background-color:#fff;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 16px;
         }
 
         html {
@@ -31,7 +34,8 @@
         fill: currentColor;
       }
 
-      .container {
+      .scrollable {
+        width: 100%;
         overflow-y: auto;
       }
 
@@ -45,15 +49,37 @@
         margin-left: 3.25rem;
       }
       .activeLink {
-        color: var(--bs-link-color)!important;
+        color: #e89c2e!important;
       }
 
       .documentation {
-        border: 1px solid #888;
-        border-radius: 4px;
-        border-left: 4px solid #888;
-        background-color: #FDFDFF;
-        padding: 1rem;
+        margin-top: 16px;
+      }
+      .sampleT {
+        border : 1px solid #888;
+        border-radius: 0px 4px 4px 0px;
+        border-left: 3px solid #888;
+        padding: 16px;
+      }
+      .sample {
+        padding: 0px;
+        margin-bottom: 16px;
+        border : 1px solid #d8d8d8;
+        border-top: 3px solid #d8d8d8;
+        border-radius: 0px 0px 4px 4px;
+      }
+
+      .sampleExample {
+        background-color : #eee;
+        padding: 8px; 
+      }
+      .sampleExplanation{
+        padding: 8px; 
+      }
+
+      .sampleTitle{
+        text-align: left;
+        font-weight: bold;
       }
 
       .bd-callout-info {
@@ -73,9 +99,26 @@
         background-color: var(--bd-callout-bg, var(--bs-gray-100));
         border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
         }
+
+      .bd-card {
+        padding: .25rem 1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        background-color: #fff;
+        border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
+        border-radius: 0px 4px 4px 0px;
+        }
+
+        .text-bg-dark {
+          background-color: #8C1515!important;
+        }
+
+        .link-light {
+          color : #fff!important;
+        }
     </style>
     <title>
-      Stanford Insurane Standard
+       Insurance Standard
     </title>
   </head>
   <body>
@@ -140,43 +183,43 @@
     <main class="d-flex flex-nowrap">
  
       <!-- Menu -->
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light" style="width: 280px; height: 100vh">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none text-bg-light">
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark menu" style="width: 280px; height: 100vh">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none text-bg-dark">
        
-          <span class="fs-4">       Stanford Insurance Standard
+          <span class="fs-4"> Insurance Standard
           </span>
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link text-bg-light" aria-current="page">
+            <a href="index.html" class="nav-link text-bg-dark" aria-current="page">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="InsurancePayout.html" class="nav-link text-bg-light">
+            <a href="InsurancePayout.html" class="nav-link text-bg-dark">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
-              Insurance Payout
+              Payout Model
             </a>
           
           </li>
-            <li><a href="Amount.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkAmount">Amount</a></li><!--SUBMENU_Amount--><li><a href="CompositionOperatorEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkCompositionOperatorEnum">CompositionOperatorEnum</a></li><!--SUBMENU_CompositionOperatorEnum--><li><a href="InsurancePayout.html" class="link-dark d-inline-flex text-decoration-none subLink activeLink">InsurancePayout</a></li><li><a href="InsurancePayout.html#payoutType" class="link-dark d-inline-flex text-decoration-none subLink2">payoutType</a></li><li><a href="InsurancePayout.html#amount" class="link-dark d-inline-flex text-decoration-none subLink2">amount</a></li><li><a href="InsurancePayout.html#minimalAmount" class="link-dark d-inline-flex text-decoration-none subLink2">minimalAmount</a></li><li><a href="InsurancePayout.html#multipliers" class="link-dark d-inline-flex text-decoration-none subLink2">multipliers</a></li><li><a href="InsurancePayout.html#for" class="link-dark d-inline-flex text-decoration-none subLink2">for</a></li><li><a href="InsurancePayout.html#forComposition" class="link-dark d-inline-flex text-decoration-none subLink2">forComposition</a></li><li><a href="InsurancePayout.html#isExtra" class="link-dark d-inline-flex text-decoration-none subLink2">isExtra</a></li><li><a href="Multiplier.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkMultiplier">Multiplier</a></li><!--SUBMENU_Multiplier--><li><a href="MultiplierOccurenceEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkMultiplierOccurenceEnum">MultiplierOccurenceEnum</a></li><!--SUBMENU_MultiplierOccurenceEnum--><li><a href="MultiplierPersonEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkMultiplierPersonEnum">MultiplierPersonEnum</a></li><!--SUBMENU_MultiplierPersonEnum--><li><a href="MultiplierTimeEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkMultiplierTimeEnum">MultiplierTimeEnum</a></li><!--SUBMENU_MultiplierTimeEnum--><li><a href="PayoutScopeServiceEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkPayoutScopeServiceEnum">PayoutScopeServiceEnum</a></li><!--SUBMENU_PayoutScopeServiceEnum--><li><a href="PayoutTypeEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkPayoutTypeEnum">PayoutTypeEnum</a></li><!--SUBMENU_PayoutTypeEnum--><li><a href="UnitDimensionEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkUnitDimensionEnum">UnitDimensionEnum</a></li><!--SUBMENU_UnitDimensionEnum--><li><a href="UnitDistanceEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkUnitDistanceEnum">UnitDistanceEnum</a></li><!--SUBMENU_UnitDistanceEnum--><li><a href="UnitMonetaryEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkUnitMonetaryEnum">UnitMonetaryEnum</a></li><!--SUBMENU_UnitMonetaryEnum--><li><a href="UnitPersonEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkUnitPersonEnum">UnitPersonEnum</a></li><!--SUBMENU_UnitPersonEnum--><li><a href="UnitTimeEnum.html" class="link-dark d-inline-flex text-decoration-none subLink namedLinkUnitTimeEnum">UnitTimeEnum</a></li><!--SUBMENU_UnitTimeEnum-->
+            <li><a href="ActionRelation.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkActionRelation">ActionRelation</a></li><!--SUBMENU_ActionRelation--><li><a href="Amount.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkAmount">Amount</a></li><!--SUBMENU_Amount--><li><a href="Chainable.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkChainable">Chainable</a></li><!--SUBMENU_Chainable--><li><a href="CompositionOperatorEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkCompositionOperatorEnum">CompositionOperatorEnum</a></li><!--SUBMENU_CompositionOperatorEnum--><li><a href="InsurancePayout.html" class="link-light d-inline-flex text-decoration-none subLink activeLink">InsurancePayout</a></li><li><a href="InsurancePayout.html#payoutType" class="link-light d-inline-flex text-decoration-none subLink2">payoutType</a></li><li><a href="InsurancePayout.html#amount" class="link-light d-inline-flex text-decoration-none subLink2">amount</a></li><li><a href="InsurancePayout.html#minimalAmount" class="link-light d-inline-flex text-decoration-none subLink2">minimalAmount</a></li><li><a href="InsurancePayout.html#multipliers" class="link-light d-inline-flex text-decoration-none subLink2">multipliers</a></li><li><a href="InsurancePayout.html#for" class="link-light d-inline-flex text-decoration-none subLink2">for</a></li><li><a href="InsurancePayout.html#isExtra" class="link-light d-inline-flex text-decoration-none subLink2">isExtra</a></li><li><a href="Multiplier.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkMultiplier">Multiplier</a></li><!--SUBMENU_Multiplier--><li><a href="MultiplierOccurenceEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkMultiplierOccurenceEnum">MultiplierOccurenceEnum</a></li><!--SUBMENU_MultiplierOccurenceEnum--><li><a href="MultiplierPersonEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkMultiplierPersonEnum">MultiplierPersonEnum</a></li><!--SUBMENU_MultiplierPersonEnum--><li><a href="MultiplierTimeEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkMultiplierTimeEnum">MultiplierTimeEnum</a></li><!--SUBMENU_MultiplierTimeEnum--><li><a href="PayoutScopeServiceEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkPayoutScopeServiceEnum">PayoutScopeServiceEnum</a></li><!--SUBMENU_PayoutScopeServiceEnum--><li><a href="PayoutTypeEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkPayoutTypeEnum">PayoutTypeEnum</a></li><!--SUBMENU_PayoutTypeEnum--><li><a href="RiskChain.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkRiskChain">RiskChain</a></li><!--SUBMENU_RiskChain--><li><a href="RiskObject.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkRiskObject">RiskObject</a></li><!--SUBMENU_RiskObject--><li><a href="RiskObjectActionEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkRiskObjectActionEnum">RiskObjectActionEnum</a></li><!--SUBMENU_RiskObjectActionEnum--><li><a href="Situation.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkSituation">Situation</a></li><!--SUBMENU_Situation--><li><a href="UnitDimensionEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitDimensionEnum">UnitDimensionEnum</a></li><!--SUBMENU_UnitDimensionEnum--><li><a href="UnitDistanceEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitDistanceEnum">UnitDistanceEnum</a></li><!--SUBMENU_UnitDistanceEnum--><li><a href="UnitMonetaryEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitMonetaryEnum">UnitMonetaryEnum</a></li><!--SUBMENU_UnitMonetaryEnum--><li><a href="UnitPersonEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitPersonEnum">UnitPersonEnum</a></li><!--SUBMENU_UnitPersonEnum--><li><a href="UnitTimeEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitTimeEnum">UnitTimeEnum</a></li><!--SUBMENU_UnitTimeEnum-->
           <li>
-            <a href="#" class="nav-link text-bg-light">
+            <a href="#" class="nav-link text-bg-dark">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
               Coverage Model
             </a>
             
           </li>
           <li>
-            <a href="#" class="nav-link text-bg-light">
+            <a href="#" class="nav-link text-bg-dark">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
               Ontology Description Format
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-bg-light">
+            <a href="#" class="nav-link text-bg-dark">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
               About
             </a>
@@ -185,70 +228,101 @@
       </div>
       
       <!-- Content-->
-
-      <div class="container py-4">
-        
-    <h1>InsurancePayout</h1>
-    <p class="bd-callout"><b>Type</b> object</p>
-    <p class="bd-callout bd-callout-info">An object representing an insurance payout: what modification should be apply to the claim amount, as describe in a contract. <br/><br/>There is different type of payout (see PayoutTypeEnum), such as Limit or Deductible. This model was develop to be able to represent any type of payouts. (see Documentation)</p>
-  <svg id="mermaid-1661802750511" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="221.125" style="max-width: 698.34375px;" viewBox="-20 -20 698.34375 221.125"><style>#mermaid-1661802750511{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-1661802750511 .error-icon{fill:#552222;}#mermaid-1661802750511 .error-text{fill:#552222;stroke:#552222;}#mermaid-1661802750511 .edge-thickness-normal{stroke-width:2px;}#mermaid-1661802750511 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-1661802750511 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-1661802750511 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-1661802750511 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-1661802750511 .marker{fill:#333333;stroke:#333333;}#mermaid-1661802750511 .marker.cross{stroke:#333333;}#mermaid-1661802750511 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-1661802750511 g.classGroup text{fill:#222222;fill:#131300;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#mermaid-1661802750511 g.classGroup text .title{font-weight:bolder;}#mermaid-1661802750511 .classTitle{font-weight:bolder;}#mermaid-1661802750511 .node rect,#mermaid-1661802750511 .node circle,#mermaid-1661802750511 .node ellipse,#mermaid-1661802750511 .node polygon,#mermaid-1661802750511 .node path{fill:#eeeeee;stroke:#222222;stroke-width:1px;}#mermaid-1661802750511 .divider{stroke:#222222;stroke:1;}#mermaid-1661802750511 g.clickable{cursor:pointer;}#mermaid-1661802750511 g.classGroup rect{fill:#eeeeee;stroke:#222222;}#mermaid-1661802750511 g.classGroup line{stroke:#222222;stroke-width:1;}#mermaid-1661802750511 .classLabel .box{stroke:none;stroke-width:0;fill:#eeeeee;opacity:0.5;}#mermaid-1661802750511 .classLabel .label{fill:#222222;font-size:10px;}#mermaid-1661802750511 .relation{stroke:#333333;stroke-width:1;fill:none;}#mermaid-1661802750511 .dashed-line{stroke-dasharray:3;}#mermaid-1661802750511 #compositionStart,#mermaid-1661802750511 .composition{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661802750511 #compositionEnd,#mermaid-1661802750511 .composition{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661802750511 #dependencyStart,#mermaid-1661802750511 .dependency{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661802750511 #dependencyStart,#mermaid-1661802750511 .dependency{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661802750511 #extensionStart,#mermaid-1661802750511 .extension{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661802750511 #extensionEnd,#mermaid-1661802750511 .extension{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661802750511 #aggregationStart,#mermaid-1661802750511 .aggregation{fill:#eeeeee !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661802750511 #aggregationEnd,#mermaid-1661802750511 .aggregation{fill:#eeeeee !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661802750511 .edgeTerminals{font-size:11px;}#mermaid-1661802750511:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g></g><defs><marker id="extensionStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker id="extensionEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker id="compositionStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="compositionEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="aggregationStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="aggregationEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="dependencyStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="dependencyEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><g id="classid-InsurancePayout-0" class="classGroup" transform="translate(162.1171875,0 )"><rect x="0" y="0" width="205.9375" height="101.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="64.296875">InsurancePayout</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="205.9375"></line><text x="5" y="31.0625" fill="white" class="classText"><tspan x="5">PayoutTypeEnum payoutType</tspan><tspan x="5" dy="10">Amount[] amount</tspan><tspan x="5" dy="10">Amount minimalAmount</tspan><tspan x="5" dy="10">Multiplier multipliers</tspan><tspan x="5" dy="10">PayoutScopeServiceEnum[] for</tspan><tspan x="5" dy="10">CompositionOperatorEnum forComposition</tspan><tspan x="5" dy="10">boolean isExtra</tspan></text><line x1="0" y1="97.0625" y2="97.0625" x2="205.9375"></line><text x="5" y="112.0625" fill="white" class="classText"></text></g><g id="classid-PayoutTypeEnum-1" class="classGroup" transform="translate(0,151.0625 )"><rect x="0" y="0" width="91.1875" height="30.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">PayoutTypeEnum</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="91.1875"></line><text x="5" y="31.0625" fill="white" class="classText"></text><line x1="0" y1="26.0625" y2="26.0625" x2="91.1875"></line><text x="5" y="41.0625" fill="white" class="classText"></text></g><g id="classid-Amount-2" class="classGroup" transform="translate(141.1875,151.09375 )"><rect x="0" y="0" width="46.375" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">Amount</tspan></text><line x1="0" y1="21" y2="21" x2="46.375"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="46.375"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-Multiplier-3" class="classGroup" transform="translate(237.5625,151.0625 )"><rect x="0" y="0" width="55.046875" height="30.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">Multiplier</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="55.046875"></line><text x="5" y="31.0625" fill="white" class="classText"></text><line x1="0" y1="26.0625" y2="26.0625" x2="55.046875"></line><text x="5" y="41.0625" fill="white" class="classText"></text></g><g id="classid-PayoutScopeServiceEnum-4" class="classGroup" transform="translate(342.609375,151.0625 )"><rect x="0" y="0" width="129.875" height="30.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">PayoutScopeServiceEnum</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="129.875"></line><text x="5" y="31.0625" fill="white" class="classText"></text><line x1="0" y1="26.0625" y2="26.0625" x2="129.875"></line><text x="5" y="41.0625" fill="white" class="classText"></text></g><g id="classid-CompositionOperatorEnum-5" class="classGroup" transform="translate(522.484375,151.0625 )"><rect x="0" y="0" width="135.859375" height="30.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">CompositionOperatorEnum</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="135.859375"></line><text x="5" y="31.0625" fill="white" class="classText"></text><line x1="0" y1="26.0625" y2="26.0625" x2="135.859375"></line><text x="5" y="41.0625" fill="white" class="classText"></text></g><path d="M162.1171875,85.96466786794804L142.69661458333334,92.6476398899567C123.27604166666667,99.33061191196536,84.43489583333333,112.69655595598267,65.01432291666667,123.546194644658C45.59375,134.39583333333334,45.59375,142.72916666666666,45.59375,146.89583333333334L45.59375,151.0625" id="edge0" class="relation"></path><path d="M197.7091952834092,101.0625L192.15349606950767,105.22916666666667C186.59779685560613,109.39583333333333,175.48639842780304,117.72916666666667,169.93069921390153,126.06770833333333C164.375,134.40625,164.375,142.75,164.375,146.921875L164.375,151.09375" id="edge1" class="relation"></path><path d="M265.0859375,101.0625L265.0859375,105.22916666666667C265.0859375,109.39583333333333,265.0859375,117.72916666666667,265.0859375,126.0625C265.0859375,134.39583333333334,265.0859375,142.72916666666666,265.0859375,146.89583333333334L265.0859375,151.0625" id="edge2" class="relation"></path><path d="M360.39389610053786,101.0625L368.2527259171149,105.22916666666667C376.1115557336919,109.39583333333333,391.829215366846,117.72916666666667,399.68804518342296,126.0625C407.546875,134.39583333333334,407.546875,142.72916666666666,407.546875,146.89583333333334L407.546875,151.0625" id="edge3" class="relation"></path><path d="M368.0546875,74.43744746890158L405.1145833333333,83.04162289075133C442.1744791666667,91.64579831260106,516.2942708333334,108.85414915630054,553.3541666666666,121.62499124481694C590.4140625,134.39583333333334,590.4140625,142.72916666666666,590.4140625,146.89583333333334L590.4140625,151.0625" id="edge4" class="relation"></path></svg><div><h2>Properties</h2>
+      <div class='scrollable'>
+        <div class="container py-4">
+          <h1>InsurancePayout</h1>
+    <span class="badge text-bg-secondary">object</span>
+    <p class='documentation'>An object representing an insurance payout: what modification should be apply to the claim amount, as describe in a contract. <br/><br/>There is different type of payout (see PayoutTypeEnum), such as Limit or Deductible. This model was develop to be able to represent any type of payouts. (see Documentation)</p>
+  <svg id="mermaid-1661897168660" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="211.125" style="max-width: 437.75px;" viewBox="-20 -20 437.75 211.125"><style>#mermaid-1661897168660{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-1661897168660 .error-icon{fill:#552222;}#mermaid-1661897168660 .error-text{fill:#552222;stroke:#552222;}#mermaid-1661897168660 .edge-thickness-normal{stroke-width:2px;}#mermaid-1661897168660 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-1661897168660 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-1661897168660 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-1661897168660 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-1661897168660 .marker{fill:#333333;stroke:#333333;}#mermaid-1661897168660 .marker.cross{stroke:#333333;}#mermaid-1661897168660 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-1661897168660 g.classGroup text{fill:#222222;fill:#131300;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#mermaid-1661897168660 g.classGroup text .title{font-weight:bolder;}#mermaid-1661897168660 .classTitle{font-weight:bolder;}#mermaid-1661897168660 .node rect,#mermaid-1661897168660 .node circle,#mermaid-1661897168660 .node ellipse,#mermaid-1661897168660 .node polygon,#mermaid-1661897168660 .node path{fill:#eeeeee;stroke:#222222;stroke-width:1px;}#mermaid-1661897168660 .divider{stroke:#222222;stroke:1;}#mermaid-1661897168660 g.clickable{cursor:pointer;}#mermaid-1661897168660 g.classGroup rect{fill:#eeeeee;stroke:#222222;}#mermaid-1661897168660 g.classGroup line{stroke:#222222;stroke-width:1;}#mermaid-1661897168660 .classLabel .box{stroke:none;stroke-width:0;fill:#eeeeee;opacity:0.5;}#mermaid-1661897168660 .classLabel .label{fill:#222222;font-size:10px;}#mermaid-1661897168660 .relation{stroke:#333333;stroke-width:1;fill:none;}#mermaid-1661897168660 .dashed-line{stroke-dasharray:3;}#mermaid-1661897168660 #compositionStart,#mermaid-1661897168660 .composition{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661897168660 #compositionEnd,#mermaid-1661897168660 .composition{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661897168660 #dependencyStart,#mermaid-1661897168660 .dependency{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661897168660 #dependencyStart,#mermaid-1661897168660 .dependency{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661897168660 #extensionStart,#mermaid-1661897168660 .extension{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661897168660 #extensionEnd,#mermaid-1661897168660 .extension{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661897168660 #aggregationStart,#mermaid-1661897168660 .aggregation{fill:#eeeeee !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661897168660 #aggregationEnd,#mermaid-1661897168660 .aggregation{fill:#eeeeee !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1661897168660 .edgeTerminals{font-size:11px;}#mermaid-1661897168660:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g></g><defs><marker id="extensionStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker id="extensionEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker id="compositionStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="compositionEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="aggregationStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="aggregationEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="dependencyStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="dependencyEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><g id="classid-InsurancePayout-0" class="classGroup" transform="translate(141.11328125,0 )"><rect x="0" y="0" width="147.234375" height="91.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="34.9453125">InsurancePayout</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="147.234375"></line><text x="5" y="31.0625" fill="white" class="classText"><tspan x="5">PayoutTypeEnum payoutType</tspan><tspan x="5" dy="10">Amount[] amount</tspan><tspan x="5" dy="10">Amount minimalAmount</tspan><tspan x="5" dy="10">Multiplier multipliers</tspan><tspan x="5" dy="10">RiskChain for</tspan><tspan x="5" dy="10">boolean isExtra</tspan></text><line x1="0" y1="87.0625" y2="87.0625" x2="147.234375"></line><text x="5" y="102.0625" fill="white" class="classText"></text></g><g id="classid-PayoutTypeEnum-1" class="classGroup" transform="translate(0,141.0625 )"><rect x="0" y="0" width="91.1875" height="30.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">PayoutTypeEnum</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="91.1875"></line><text x="5" y="31.0625" fill="white" class="classText"></text><line x1="0" y1="26.0625" y2="26.0625" x2="91.1875"></line><text x="5" y="41.0625" fill="white" class="classText"></text></g><g id="classid-Amount-2" class="classGroup" transform="translate(141.1875,141.09375 )"><rect x="0" y="0" width="46.375" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">Amount</tspan></text><line x1="0" y1="21" y2="21" x2="46.375"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="46.375"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-Multiplier-3" class="classGroup" transform="translate(237.5625,141.0625 )"><rect x="0" y="0" width="55.046875" height="30.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">Multiplier</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="55.046875"></line><text x="5" y="31.0625" fill="white" class="classText"></text><line x1="0" y1="26.0625" y2="26.0625" x2="55.046875"></line><text x="5" y="41.0625" fill="white" class="classText"></text></g><g id="classid-RiskChain-4" class="classGroup" transform="translate(342.609375,141.09375 )"><rect x="0" y="0" width="55.140625" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">RiskChain</tspan></text><line x1="0" y1="21" y2="21" x2="55.140625"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="55.140625"></line><text x="5" y="41" fill="white" class="classText"></text></g><path d="M141.11328125,76.23015615256703L125.193359375,82.86888012713919C109.2734375,89.50760410171135,77.43359375,102.78505205085567,61.513671875,113.5904426920945C45.59375,124.39583333333333,45.59375,132.72916666666666,45.59375,136.89583333333334L45.59375,141.0625" id="edge0" class="relation"></path><path d="M182.2236375719982,91.0625L179.2488646433318,95.22916666666667C176.27409171466547,99.39583333333333,170.32454585733274,107.72916666666667,167.34977292866637,116.06770833333333C164.375,124.40625,164.375,132.75,164.375,136.921875L164.375,141.09375" id="edge1" class="relation"></path><path d="M247.2372999280018,91.0625L250.2120728566682,95.22916666666667C253.18684578533453,99.39583333333333,259.13639164266726,107.72916666666667,262.11116457133363,116.0625C265.0859375,124.39583333333333,265.0859375,132.72916666666666,265.0859375,136.89583333333334L265.0859375,141.0625" id="edge2" class="relation"></path><path d="M288.34765625,78.93323360346777L301.986328125,85.12144466955648C315.625,91.3096557356452,342.90234375,103.68607786782259,356.541015625,114.0461639339113C370.1796875,124.40625,370.1796875,132.75,370.1796875,136.921875L370.1796875,141.09375" id="edge3" class="relation"></path></svg><div><h2>Properties</h2>
   <div id="payoutType">
     <h3>payoutType</h3>
-<p class="bd-callout"><b>Type</b> <a href="PayoutTypeEnum.html"> PayoutTypeEnum</a></p><p class="bd-callout"> <b>Default Value</b> Limit</p><p class="bd-callout bd-callout-info">
-    Describe the type of payout.
-    </p>   
-</div>
-  <div id="amount">
-    <h3>amount</h3>
-<p class="bd-callout"> <b>Type</b> List of <a href="Amount.html">Amount</a></p><p class="bd-callout bd-callout-info">
-    The amounts of the payout. It is a list as some Payout require multiple amounts.
-    </p>   
-</div>
-  <div id="minimalAmount">
-    <h3>minimalAmount</h3>
-<p class="bd-callout"><b>Type</b> <a href="Amount.html"> Amount</a></p><p class="bd-callout"> <b>Default Value</b> undefined</p><p class="bd-callout bd-callout-info">
-    The minimal amount of the payout. (See Minimal amount Doc)
-    </p>   
-<p class="bd-callout">
-          <b> A limit with a minimal amount </b> : <br/>
-          In case of fire we will pay you up to 10% of value insured but at least $5000<br/>
-          Here the minimal amount will be $5000
-        </p></div>
-  <div id="multipliers">
-    <h3>multipliers</h3>
-<p class="bd-callout"><b>Type</b> <a href="Multiplier.html"> Multiplier</a></p><p class="bd-callout bd-callout-info">
-    The Payout multiplier, eg: per Person. It is not possible to have 2 multipliers affecting the same dimension. (See Multipliers Doc)
-    </p>   
-</div>
-  <div id="for">
-    <h3>for</h3>
-<p class="bd-callout"> <b>Type</b> List of <a href="PayoutScopeServiceEnum.html">PayoutScopeServiceEnum</a></p><p class="bd-callout bd-callout-info">
-    The scope of the payout, what the payout should be use for.
-    </p>   
-</div>
-  <div id="forComposition">
-    <h3>forComposition</h3>
-<p class="bd-callout"><b>Type</b> <a href="CompositionOperatorEnum.html"> CompositionOperatorEnum</a></p><p class="bd-callout"> <b>Default Value</b> and</p><p class="bd-callout bd-callout-info">
-    Composition of payout scopes
-    </p>   
-</div>
-  <div id="isExtra">
-    <h3>isExtra</h3>
-<p class="bd-callout"><b>Type</b> <a href="boolean.html"> boolean</a></p><p class="bd-callout bd-callout-info">
-    Does the payout impact the consumption of other payout (see Payout extra documentation)
+    <div class="" >
+<div class="type-info"><b>Type</b> <a href="PayoutTypeEnum.html"> PayoutTypeEnum</a></div><div class="default-info"> <b>Default Value</b> Limit</div><p class="documentation">
+    Describe the 'type' of payout, eg: 'Limit'
     </p>   
 </div></div>
+  <div id="amount">
+    <h3>amount</h3>
+    <div class="" >
+<div class="type-info"> <b>Type</b> List of <a href="Amount.html">Amount</a></div><p class="documentation">
+    The amounts of the payout. It is a list as some Payout require multiple amounts.
+    </p>   
 
+        <div class='sampleTitle'>Sample: Multiple amount in a limit</div>
+        <div class="sample">
+          <div class="sampleExample">
+          if our rescue team decide to provide overnight accommodation, we will pay a maximum of £40 per person for one night for up to 6 passengers.
+          </div>
+          <div class="sampleExplanation">
+          In this case there is 3 amount: 40GBP(Monetary), 1 night(time), 6 passenger(person)
+          </div>
+        </div></div></div>
+  <div id="minimalAmount">
+    <h3>minimalAmount</h3>
+    <div class="" >
+<div class="type-info"><b>Type</b> <a href="Amount.html"> Amount</a></div><div class="default-info"> <b>Default Value</b> undefined</div><p class="documentation">
+    The minimal amount of the payout. (See Minimal amount Doc)
+    </p>   
+
+        <div class='sampleTitle'>Sample: A limit with a minimal amount</div>
+        <div class="sample">
+          <div class="sampleExample">
+          In case of fire we will pay you up to 10% of value insured but at least $5000
+          </div>
+          <div class="sampleExplanation">
+          In this case the minimal amount will be $5000
+          </div>
+        </div></div></div>
+  <div id="multipliers">
+    <h3>multipliers</h3>
+    <div class="" >
+<div class="type-info"><b>Type</b> <a href="Multiplier.html"> Multiplier</a></div><p class="documentation">
+    The Payout multiplier, eg: per Person. As it is not possible to have 2 multipliers affecting the same dimension the mullitplier object is used as a way to constraint to one multiplier per dimension.
+    </p>   
+</div></div>
+  <div id="for">
+    <h3>for</h3>
+    <div class="" >
+<div class="type-info"><b>Type</b> <a href="RiskChain.html"> RiskChain</a></div><p class="documentation">
+    The scope of the payout. 'It is a limit for'
+    </p>   
+
+        <div class='sampleTitle'>Sample: A limit applying to a payout for a specific indemnity</div>
+        <div class="sample">
+          <div class="sampleExample">
+          We will cover up to $300 for the cost of bail bonds required because of accident or traffic law violation arising out of use of your insured car.
+          </div>
+          <div class="sampleExplanation">
+          In this case the $300 Limit apply for money financing bails bonds
+          </div>
+        </div></div></div>
+  <div id="isExtra">
+    <h3>isExtra</h3>
+    <div class="" >
+<div class="type-info"><b>Type</b> <a href="boolean.html"> boolean</a></div><p class="documentation">
+    Does the payout impact the consumption of other payout. If it does, then it is not extra and it should be false
+    </p>   
+
+        <div class='sampleTitle'>Sample: A limit that is out of other limit consumption</div>
+        <div class="sample">
+          <div class="sampleExample">
+          
+          </div>
+          <div class="sampleExplanation">
+          
+          </div>
+        </div></div></div></div>
+  
+        </div>
       </div>
+
 
     </main>
 
 
       <!-- remove mermaid secon line-->
     <script>
-      setTimeout(function() {
-        document.querySelectorAll("svg g line:last-of-type").forEach(e => e.remove());
-      }, 100);
+document.querySelectorAll("svg g line:last-of-type").forEach(e => e.remove());
       </script>
   </body>
 </html>

@@ -1,7 +1,6 @@
 const fs = require('fs');
 const yaml = require('yaml');
 const execSync = require('child_process').execSync;
-
 const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
 const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 
@@ -65,7 +64,11 @@ execSync(`mmdc -i ${DATA_MODEL_MERMAID_PATH}/diagram.mmd -o ${DATA_MODEL_MERMAID
 fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.svg`, styleIt(
   fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.svg`, 'utf8')
 ));
+
 function buildMermaid(fileName) {
+  console.log(`----
+  ${fileName}
+  `)
   let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${fileName}`, 'utf-8'));
 
   console.log(JSON.stringify(data, null, 2));

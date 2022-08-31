@@ -1,0 +1,6 @@
+RiskChainActor:
+  type: object
+  inherit: RiskChainNode
+  properties:
+    object:
+      type: string

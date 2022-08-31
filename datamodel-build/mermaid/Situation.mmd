@@ -1,0 +1,13 @@
+classDiagram
+  Situation -- EventTypeEnum
+Situation -- ActionRelation
+
+
+Chainable <|-- Situation
+  class Situation {
+
+  EventTypeEnum event
+  ActionRelation[] impact
+  ActionRelation[] impactedBy
+
+}

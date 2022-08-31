@@ -8,6 +8,9 @@
         body {
           min-height: 100vh;
           min-height: -webkit-fill-available;
+          background-color:#fff;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 16px;
         }
 
         html {
@@ -31,7 +34,8 @@
         fill: currentColor;
       }
 
-      .container {
+      .scrollable {
+        width: 100%;
         overflow-y: auto;
       }
 
@@ -45,15 +49,37 @@
         margin-left: 3.25rem;
       }
       .activeLink {
-        color: var(--bs-link-color)!important;
+        color: #e89c2e!important;
       }
 
       .documentation {
-        border: 1px solid #888;
-        border-radius: 4px;
-        border-left: 4px solid #888;
-        background-color: #FDFDFF;
-        padding: 1rem;
+        margin-top: 16px;
+      }
+      .sampleT {
+        border : 1px solid #888;
+        border-radius: 0px 4px 4px 0px;
+        border-left: 3px solid #888;
+        padding: 16px;
+      }
+      .sample {
+        padding: 0px;
+        margin-bottom: 16px;
+        border : 1px solid #d8d8d8;
+        border-top: 3px solid #d8d8d8;
+        border-radius: 0px 0px 4px 4px;
+      }
+
+      .sampleExample {
+        background-color : #eee;
+        padding: 8px; 
+      }
+      .sampleExplanation{
+        padding: 8px; 
+      }
+
+      .sampleTitle{
+        text-align: left;
+        font-weight: bold;
       }
 
       .bd-callout-info {
@@ -73,9 +99,26 @@
         background-color: var(--bd-callout-bg, var(--bs-gray-100));
         border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
         }
+
+      .bd-card {
+        padding: .25rem 1.25rem;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        background-color: #fff;
+        border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
+        border-radius: 0px 4px 4px 0px;
+        }
+
+        .text-bg-dark {
+          background-color: #8C1515!important;
+        }
+
+        .link-light {
+          color : #fff!important;
+        }
     </style>
     <title>
-      Stanford Insurane Standard
+       Insurance Standard
     </title>
   </head>
   <body>
@@ -140,43 +183,43 @@
     <main class="d-flex flex-nowrap">
  
       <!-- Menu -->
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-light" style="width: 280px; height: 100vh">
-        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none text-bg-light">
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark menu" style="width: 280px; height: 100vh">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none text-bg-dark">
        
-          <span class="fs-4">       Stanford Insurance Standard
+          <span class="fs-4"> Insurance Standard
           </span>
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link text-bg-light" aria-current="page">
+            <a href="index.html" class="nav-link text-bg-dark" aria-current="page">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="InsurancePayout.html" class="nav-link text-bg-light">
+            <a href="InsurancePayout.html" class="nav-link text-bg-dark">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
-              Insurance Payout
+              Payout Model
             </a>
           
           </li>
             <!--$$DM_INDEX-->
           <li>
-            <a href="#" class="nav-link text-bg-light">
+            <a href="#" class="nav-link text-bg-dark">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
               Coverage Model
             </a>
             
           </li>
           <li>
-            <a href="#" class="nav-link text-bg-light">
+            <a href="#" class="nav-link text-bg-dark">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
               Ontology Description Format
             </a>
           </li>
           <li>
-            <a href="#" class="nav-link text-bg-light">
+            <a href="#" class="nav-link text-bg-dark">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
               About
             </a>
@@ -185,20 +228,20 @@
       </div>
       
       <!-- Content-->
-
-      <div class="container py-4">
-        $$CONTENT
-
+      <div class='scrollable'>
+        <div class="container py-4">
+          $$CONTENT
+  
+        </div>
       </div>
+
 
     </main>
 
 
       <!-- remove mermaid secon line-->
     <script>
-      setTimeout(function() {
-        document.querySelectorAll("svg g line:last-of-type").forEach(e => e.remove());
-      }, 100);
+document.querySelectorAll("svg g line:last-of-type").forEach(e => e.remove());
       </script>
   </body>
 </html>

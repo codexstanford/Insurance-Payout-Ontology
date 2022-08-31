@@ -46,7 +46,7 @@ function buildIndex() {
     let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${file}`, 'utf-8'));
     let objName =  Object.keys(data)[0];
     INDEX[objName] = data[objName];
-    DM_INDEX += `<li><a href="${objName}.html" class="link-dark d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+    DM_INDEX += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
   }
 
   for (let objName in INDEX) {
@@ -102,11 +102,21 @@ function buildObjDoc(objName) {
  
   let name =  objName;
   let data = INDEX[objName];
+  let doc = "";
+
+  if (data.inherit) {
+    doc += `<h1>${name} <span style="font-size: 16px"> implement <a href="${data.inherit}.html">${data.inherit}</a></span></h1>`;
+  } else {
+    doc += `<h1>${name}</h1>`;
+  }
   
-  let doc = `
-    <h1>${name}</h1>
-    <p class="bd-callout"><b>Type</b> ${data.type}</p>
-    <p class="bd-callout bd-callout-info">${getText(data, 'documentation')}</p>
+  doc += `
+    <span class="badge text-bg-secondary">${data.type}</span>
+    `;
+  
+   
+    
+    doc += `<p class='documentation'>${getText(data, 'documentation')}</p>
   `
 
   doc += fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`,'utf8')
@@ -118,12 +128,13 @@ function buildObjDoc(objName) {
 
     console.log(JSON.stringify(data, null, 2));
     doc += "<div>";
+
     doc += "<h2>Properties</h2>"
     doc += renderPropertiesDoc(data)
     doc += "</div>";
 
     for (let prop in data.properties) {
-      PROP_MENU += `<li><a href="${objName}.html#${prop}" class="link-dark d-inline-flex text-decoration-none subLink2">${prop}</a></li>`
+      PROP_MENU += `<li><a href="${objName}.html#${prop}" class="link-light d-inline-flex text-decoration-none subLink2">${prop}</a></li>`
     }
   }
 
@@ -169,23 +180,24 @@ function renderPropertiesDoc(data) {
     doc += `
   <div id="${propertyName}">
     <h3>${propertyName}</h3>
+    <div class="" >
 `
 
     let type = property.type;
     
     switch(type) {
       case "List":
-        doc += `<p class="bd-callout"> <b>Type</b> List of <a href="${property.of}.html">${property.of}</a></p>`
+        doc += `<div class="type-info"> <b>Type</b> List of <a href="${property.of}.html">${property.of}</a></div>`
       break;
       default:
-        doc +=  `<p class="bd-callout"><b>Type</b> <a href="${property.type}.html"> ${property.type}</a></p>`
+        doc +=  `<div class="type-info"><b>Type</b> <a href="${property.type}.html"> ${property.type}</a></div>`
     }
    
     if (property.default) {
-      doc += `<p class="bd-callout"> <b>Default Value</b> ${property.default}</p>`
+      doc += `<div class="default-info"> <b>Default Value</b> ${property.default}</div>`
     }
 
-    doc += `<p class="bd-callout bd-callout-info">
+    doc += `<p class="documentation">
     ${getText(property, 'documentation')}
     </p>   
 `;   
@@ -200,18 +212,23 @@ function renderPropertiesDoc(data) {
       for (let sampleKey in property.sample) {
         let sample = property.sample[sampleKey];
 
-        doc += `<p class="bd-callout">
-          <b> ${sample.name} </b> : <br/>
-          ${sample.legalese}<br/>
+        doc += `
+        <div class='sampleTitle'>Sample: ${sample.name}</div>
+        <div class="sample">
+          <div class="sampleExample">
+          ${sample.legalese}
+          </div>
+          <div class="sampleExplanation">
           ${sample.explanation}
-        </p>`
+          </div>
+        </div>`
       }
 
 
     }
   
 
-    doc += '</div>';
+    doc += '</div></div>';
   }
   return doc;
 }
@@ -228,7 +245,7 @@ function renderValuesDoc(data) {
   <div>
     <h3>${valueName}</h3>`
 
-    doc += `<p class="bd-callout bd-callout-info">
+    doc += `<p class="documentation">
         ${getText(data.values[valueName], 'documentation')}
         </p>   
     `;   

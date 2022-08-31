@@ -1,0 +1,12 @@
+classDiagram
+  RiskChain -- Chainable
+RiskChain -- CompositionOperatorEnum
+
+
+Chainable <|-- RiskChain
+  class RiskChain {
+
+  Chainable[] chain
+  CompositionOperatorEnum chainComposition
+
+}

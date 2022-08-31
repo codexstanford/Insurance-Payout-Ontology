@@ -4,6 +4,17 @@
 <div class="mermaid">
 
 classDiagram
+ActionRelation -- RiskObject
+ActionRelation -- RiskObjectActionEnum
+
+
+class ActionRelation {
+
+  RiskObject riskObject
+  RiskObjectActionEnum relation
+
+}
+
 Amount -- UnitDimensionEnum
 
 
@@ -12,6 +23,14 @@ class Amount {
   string quantity
   string unit
   UnitDimensionEnum unitDimension
+
+}
+
+
+
+class Chainable {
+
+  boolean abstract
 
 }
 
@@ -24,8 +43,7 @@ class CompositionOperatorEnum {
 InsurancePayout -- PayoutTypeEnum
 InsurancePayout -- Amount
 InsurancePayout -- Multiplier
-InsurancePayout -- PayoutScopeServiceEnum
-InsurancePayout -- CompositionOperatorEnum
+InsurancePayout -- RiskChain
 
 
 class InsurancePayout {
@@ -34,8 +52,7 @@ class InsurancePayout {
   Amount[] amount
   Amount minimalAmount
   Multiplier multipliers
-  PayoutScopeServiceEnum[] for
-  CompositionOperatorEnum forComposition
+  RiskChain for
   boolean isExtra
 
 }
@@ -106,6 +123,47 @@ class PayoutTypeEnum {
   o Deductible
   o Franchise
   o StrictLimit
+}
+
+RiskChain -- Chainable
+RiskChain -- CompositionOperatorEnum
+
+
+Chainable &lt|-- RiskChain
+  class RiskChain {
+
+  Chainable[] chain
+  CompositionOperatorEnum chainComposition
+
+}
+
+
+
+class RiskObject {
+
+  string object
+
+}
+
+class RiskObjectActionEnum {
+&lt&ltenumeration&gt&gt
+  o driveBy
+  o impactedBy
+  o usedBy
+  o ownedBy
+}
+
+Situation -- EventTypeEnum
+Situation -- ActionRelation
+
+
+Chainable &lt|-- Situation
+  class Situation {
+
+  EventTypeEnum event
+  ActionRelation[] impact
+  ActionRelation[] impactedBy
+
 }
 
 class UnitDimensionEnum {

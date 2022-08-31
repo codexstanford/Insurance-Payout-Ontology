@@ -7,34 +7,43 @@ InsurancePayout:
     payoutType:
       type: PayoutTypeEnum
       documentation:
-        en: "Describe the type of payout."
+        en: "Describe the 'type' of payout, eg: 'Limit'"
       default: "Limit"
     amount:
       type: List
       of: Amount
       documentation: "The amounts of the payout. It is a list as some Payout require multiple amounts."
+      sample:
+        multiple:
+          name: "Multiple amount in a limit"
+          legalese: "if our rescue team decide to provide overnight accommodation, we will pay a maximum of £40 per person for one night for up to 6 passengers."
+          explanation: "In this case there is 3 amount: 40GBP(Monetary), 1 night(time), 6 passenger(person)"
     minimalAmount:
       type: Amount
       default: "undefined"
       documentation: "The minimal amount of the payout. (See Minimal amount Doc)"
       sample:
-        sample1:
+        minimal:
           name: "A limit with a minimal amount"
           legalese: "In case of fire we will pay you up to 10% of value insured but at least $5000"
-          explanation: "Here the minimal amount will be $5000"
+          explanation: "In this case the minimal amount will be $5000"
     multipliers:
       type: Multiplier
-      documentation: "The Payout multiplier, eg: per Person. It is not possible to have 2 multipliers affecting the same dimension. (See Multipliers Doc)"
+      documentation: "The Payout multiplier, eg: per Person. As it is not possible to have 2 multipliers affecting the same dimension the mullitplier object is used as a way to constraint to one multiplier per dimension."
     for:
-      type: List
-      of: PayoutScopeServiceEnum
-      documentation: "The scope of the payout, what the payout should be use for."
-    forComposition:
-      type: CompositionOperatorEnum
-      documentation: "Composition of payout scopes"
-      default: "and"
+      type: RiskChain
+      documentation: "The scope of the payout. 'It is a limit for'"
+      sample:
+        forBailsBonds:
+          name: "A limit applying to a payout for a specific indemnity"
+          legalese: "We will cover up to $300 for the cost of bail bonds required because of accident or traffic law violation arising out of use of your insured car."
+          explanation: "In this case the $300 Limit apply for money financing bails bonds"
     isExtra:
       type: boolean
-      documentation: "Does the payout impact the consumption of other payout (see Payout extra documentation)"
+      documentation: "Does the payout impact the consumption of other payout. If it does, then it is not extra and it should be false"
       default: false
-     
+      sample:
+        extraSample:
+          name: "A limit that is out of other limit consumption"
+          legalese: ""
+          explanation: ""     
