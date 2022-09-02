@@ -21,14 +21,6 @@ class Amount {
 
 }
 
-
-
-class Chainable {
-
-  boolean abstract
-
-}
-
 class CompositionOperatorEnum {
 <<enumeration>>
   o and
@@ -120,23 +112,48 @@ class PayoutTypeEnum {
   o StrictLimit
 }
 
-RiskChain -- Chainable
-RiskChain -- CompositionOperatorEnum
+RiskChain -- RiskChainActor
+RiskChain -- RiskChainSituation
+RiskChain -- RiskChainLogicNode
+RiskChain -- RiskChainEdge
+RiskChain -- RiskChainLogicEdge
 
 
-Chainable <|-- RiskChain
-  class RiskChain {
+class RiskChain {
 
-  Chainable[] chain
-  CompositionOperatorEnum chainComposition
+  RiskChainActor[] actors
+  RiskChainSituation[] situations
+  RiskChainLogicNode[] logicNode
+  RiskChainEdge[] relations
+  RiskChainLogicEdge[] logicRelation
 
 }
 
 
 
-class RiskObject {
+RiskChainNode <|-- RiskChainActor
+  class RiskChainActor {
 
   string object
+
+}
+
+
+
+class RiskChainNode {
+<<abstract>>
+
+  string niet
+
+}
+
+RiskChainSituation -- EventTypeEnum
+
+
+RiskChainNode <|-- RiskChainSituation
+  class RiskChainSituation {
+
+  EventTypeEnum event
 
 }
 
@@ -146,19 +163,6 @@ class RiskObjectActionEnum {
   o impactedBy
   o usedBy
   o ownedBy
-}
-
-Situation -- EventTypeEnum
-Situation -- ActionRelation
-
-
-Chainable <|-- Situation
-  class Situation {
-
-  EventTypeEnum event
-  ActionRelation[] impact
-  ActionRelation[] impactedBy
-
 }
 
 class UnitDimensionEnum {

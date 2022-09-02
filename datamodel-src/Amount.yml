@@ -14,3 +14,12 @@ Amount:
       type: UnitDimensionEnum
       documentation: 
         en: "The dimension of the value"
+  sample:
+    simpleNumeric:
+      name: "A simple numeric amount"
+      legalese: "300 USD"
+      explanation: "In this case, quantiy will be 300, the unit will be USD, and the unitDimension will be Monetary"
+      table:
+        quantity: 300
+        unit: UnitMonetaryEnum.USD
+        unitDimension: UnitDimensionEnum.Monetary

@@ -40,10 +40,10 @@ InsurancePayout:
           explanation: "In this case the $300 Limit apply for money financing bails bonds"
     isExtra:
       type: boolean
-      documentation: "Does the payout impact the consumption of other payout. If it does, then it is not extra and it should be false"
+      documentation: "Sometime (rare case) some insurance payout are specify to not impact other payout. This mean that they should be taken into consideration on their own, and every payment modified by this payout should not impact other contract modifications." 
       default: false
       sample:
         extraSample:
           name: "A limit that is out of other limit consumption"
-          legalese: ""
-          explanation: ""     
+          legalese: "If you car can not be fix dyring the day, we will pay up to $100 for overnight accomodation independetly of other limits."
+          explanation: "In this case the $100 amount should not be taken in consideration in other limits, therefore isExtra should be set to true"

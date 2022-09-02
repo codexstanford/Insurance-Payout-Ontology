@@ -146,7 +146,15 @@ function buildObjDoc(objName) {
     doc += "</div>";
   }
 
-  
+  if (data.sample) {
+    doc += "<h2>Samples</h2>";
+
+    for (let sampleKey in data.sample) {
+      let sample = data.sample[sampleKey];
+
+      doc += renderSample(sample)
+    }
+  }
 
   if (data.refs) {
     doc += "<h2>References</h2>";
@@ -170,6 +178,37 @@ function buildObjDoc(objName) {
   
 }
 
+
+function renderSample(sample) {
+  let sampleRender =  `
+    <div class='sampleTitle'>Sample: ${sample.name}</div>
+    <div class="sample">
+      <div class="sampleExample">
+      ${sample.legalese}
+      </div>
+      <div class="sampleExplanation">
+      ${sample.explanation}`;
+      
+    if (sample.table) {
+      sampleRender += `<table class="table bd-callout">
+      <thead><tr>
+      <th scope="col">key</th>
+      <th scope="col">value</th></tr><tbody>`;
+
+      for (let key in sample.table) {
+      
+      
+        sampleRender += `<tr><td>${key} </td><td> ${sample.table[key]}</td></tr>`;
+    
+      }
+      sampleRender += "</tbody></table>";
+    }
+
+    sampleRender +=` 
+      </div>
+    </div>`;
+  return sampleRender;
+}
 
 function renderPropertiesDoc(data) {
   let doc = "";
@@ -212,16 +251,7 @@ function renderPropertiesDoc(data) {
       for (let sampleKey in property.sample) {
         let sample = property.sample[sampleKey];
 
-        doc += `
-        <div class='sampleTitle'>Sample: ${sample.name}</div>
-        <div class="sample">
-          <div class="sampleExample">
-          ${sample.legalese}
-          </div>
-          <div class="sampleExplanation">
-          ${sample.explanation}
-          </div>
-        </div>`
+        doc += renderSample(sample)
       }
 
 

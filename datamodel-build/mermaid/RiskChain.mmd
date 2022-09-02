@@ -1,12 +1,17 @@
 classDiagram
-  RiskChain -- Chainable
-RiskChain -- CompositionOperatorEnum
+  RiskChain -- RiskChainActor
+RiskChain -- RiskChainSituation
+RiskChain -- RiskChainLogicNode
+RiskChain -- RiskChainEdge
+RiskChain -- RiskChainLogicEdge
 
 
-Chainable <|-- RiskChain
-  class RiskChain {
+class RiskChain {
 
-  Chainable[] chain
-  CompositionOperatorEnum chainComposition
+  RiskChainActor[] actors
+  RiskChainSituation[] situations
+  RiskChainLogicNode[] logicNode
+  RiskChainEdge[] relations
+  RiskChainLogicEdge[] logicRelation
 
 }
