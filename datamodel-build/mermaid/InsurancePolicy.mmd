@@ -1,0 +1,11 @@
+classDiagram
+  InsurancePolicy -- InsuranceBenefits
+InsurancePolicy -- timePeriod
+
+
+class InsurancePolicy {
+
+  InsuranceBenefits[] benefits
+  timePeriod validityPeriod
+
+}

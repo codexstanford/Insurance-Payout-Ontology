@@ -1,0 +1,10 @@
+classDiagram
+  ChainCompositionOr -- RiskChain
+
+
+Chainable <|-- ChainCompositionOr
+class ChainCompositionOr {
+
+  RiskChain[] or
+
+}

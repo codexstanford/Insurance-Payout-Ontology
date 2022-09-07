@@ -2,7 +2,7 @@ MultiplierOccurenceEnum:
   type: enum
   values:
     perClaim:
-      documentation: per claim
+      documentation: "an amount that apply per claim"
     perLine:
       documentation: per line of claim
     perIncident:

@@ -1,0 +1,9 @@
+InsuranceBenefits:
+  type: object
+  documentation: "Represent an insurance benefits"
+  properties:
+    riskChain:
+      type: RiskChain
+    payout:
+      type: List
+      of: InsurancePayout

@@ -7,7 +7,7 @@ Amount:
       documentation:
         en: "A string representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
     unit: 
-      type: string
+      type: UnitEnum
       documentation: 
         en: "The unit of the amount. It is recommended that it match an enum value corresponding to the dimension object."
     unitDimension:

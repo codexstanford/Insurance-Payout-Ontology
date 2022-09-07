@@ -1,0 +1,13 @@
+Situation:
+  type: object
+  inherit: 
+    - Chainable
+    - Relatable
+  documentation: Represent a Situation
+  properties:
+    event:
+      type: string
+    location:
+      type: string
+    period:
+      type: string

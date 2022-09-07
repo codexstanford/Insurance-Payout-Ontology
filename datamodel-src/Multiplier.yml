@@ -1,5 +1,7 @@
 Multiplier:
   type: object
+  documentation:
+    en: "Multiplier indicate how the amount to be pay or retain is to be multiply. A payement of $10 per person have a perPerson multiplier. There could be only one multiplier of each type."
   properties:
     time:
       type: MultiplierTimeEnum
@@ -9,3 +11,7 @@ Multiplier:
       type: MultiplierOccurenceEnum
     insuredObject:
       type: MultiplierInsuredObjectEnum
+    other:
+      type: List
+      of: string
+      

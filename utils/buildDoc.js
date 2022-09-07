@@ -105,7 +105,18 @@ function buildObjDoc(objName) {
   let doc = "";
 
   if (data.inherit) {
-    doc += `<h1>${name} <span style="font-size: 16px"> implement <a href="${data.inherit}.html">${data.inherit}</a></span></h1>`;
+    if (typeof data.inherit == "string") {
+      doc += `<h1>${name} <span style="font-size: 16px"> implement <a href="${data.inherit}.html">${data.inherit}</a></span></h1>`;
+    }
+    else {
+      doc += `<h1>${name} <span style="font-size: 16px"> implement </span>`;
+      for (let inherit of data.inherit) {
+        doc += ` <span style="font-size: 16px"><a href="${inherit}.html">${inherit}</a></span>`
+      }
+      
+      doc += `</h1>`;
+    }
+   
   } else {
     doc += `<h1>${name}</h1>`;
   }
@@ -119,12 +130,18 @@ function buildObjDoc(objName) {
     doc += `<p class='documentation'>${getText(data, 'documentation')}</p>
   `
 
-  doc += fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`,'utf8')
+
+
+
+  
+  if (data.type !== 'system') {
+    doc += fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`,'utf8')
+  }
 
   let PROP_MENU = "";
   if (data.type == 'object') { 
 
-   
+  
 
     console.log(JSON.stringify(data, null, 2));
     doc += "<div>";
@@ -163,8 +180,8 @@ function buildObjDoc(objName) {
       doc += `<div><a href="${ref[0]}.html#${ref[1]}"> ${ref[0]}:${ref[1]}</a></div>`;
     }
   }
+    
   
-
 
   fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
     template

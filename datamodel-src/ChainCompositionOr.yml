@@ -1,0 +1,8 @@
+ChainCompositionOr:
+    type: object
+    documentation: "Represent a composition in a chain, aka an OR on multiple risk chains"
+    inherit: Chainable
+    properties:
+      or:
+        type: List
+        of: RiskChain

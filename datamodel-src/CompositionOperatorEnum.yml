@@ -1,7 +1,0 @@
-CompositionOperatorEnum:
-  type: enum
-  values:
-    and:
-      documentation: "And"
-    or:
-      documentation: "Or"

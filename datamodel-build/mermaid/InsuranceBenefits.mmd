@@ -1,0 +1,11 @@
+classDiagram
+  InsuranceBenefits -- RiskChain
+InsuranceBenefits -- InsurancePayout
+
+
+class InsuranceBenefits {
+
+  RiskChain riskChain
+  InsurancePayout[] payout
+
+}

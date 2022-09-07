@@ -1,0 +1,9 @@
+Relation:
+  type: object
+  properties:
+    impacter:
+      type: Relatable
+    impactee:
+      type: Relatable
+    verb:
+      type: string

@@ -6,14 +6,19 @@ const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 
 // document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
 
+// todo add it as an argument
+const REDO_ALL = true;
 
 
 // remove old build
-if (fs.existsSync(DATA_MODEL_MERMAID_PATH)) {
-  fs.rmdirSync(DATA_MODEL_MERMAID_PATH, { recursive: true });
+if (REDO_ALL) {
+  if (fs.existsSync(DATA_MODEL_MERMAID_PATH)) {
+    fs.rmdirSync(DATA_MODEL_MERMAID_PATH, { recursive: true });
+  }
+  
+  fs.mkdirSync(DATA_MODEL_MERMAID_PATH);
 }
 
-fs.mkdirSync(DATA_MODEL_MERMAID_PATH);
 
 // for each object, build the TS
 
@@ -23,6 +28,19 @@ for (let file of objectsList) {
   // skip dot files
   if (file[0] == '.') {
     continue;
+  }
+
+  if (!REDO_ALL) {
+    if (fs.existsSync(`${DATA_MODEL_MERMAID_PATH}/${file.replace('.yml', '.svg')}`)) {
+      let statSvg = fs.statSync(`${DATA_MODEL_MERMAID_PATH}/${file.replace('.yml', '.svg')}`);
+      let statYml = fs.statSync(`${DATA_MODEL_SRC_PATH}/${file}`);
+
+      if (statSvg.mtimeMs > statYml.mtimeMs) {
+        console.log(`skip Object ${file}`);
+        continue;
+      }
+
+    }
   }
 
   output += buildMermaid(file);
@@ -108,8 +126,17 @@ function renderObject(name, data) {
   let output = "";
 
   if (data.inherit) {
-    output += `${data.inherit} <|-- ${name}
-  `;
+    if (typeof data.inherit == "string") {
+      output += `${data.inherit} <|-- ${name}
+`;
+    }
+    else {
+      for (let inherit of data.inherit) {
+        output += `${inherit} <|-- ${name}
+`;
+      }
+    }
+
   }
 
   output += `class ${name}`;
@@ -119,27 +146,28 @@ function renderObject(name, data) {
   output += ` {
 `;
 
-  if (data.abstract) {
+  if (data.isAbstract) {
     output += `<<abstract>>
 `
   }
   let typeList = {};
-  for (let propertyName in data.properties) {
-    let property = data.properties[propertyName];
-    if (property.type == "List") {
-      output += `
+
+  if (data.properties) {
+    for (let propertyName in data.properties) {
+      let property = data.properties[propertyName];
+      if (property.type == "List") {
+        output += `
   ${property.of}[] ${propertyName}`;
-      typeList[property.of] = true;
-    }
-    else {
-      output += `
+        typeList[property.of] = true;
+      }
+      else {
+        output += `
   ${property.type} ${propertyName}`;
-     typeList[property.type] = true;
+      typeList[property.type] = true;
+      }
     }
-    
-
-
   }
+
 
   let importStmt = "";
 
@@ -183,10 +211,22 @@ function renderEnum(name, data) {
   }
   output += `class ${name} {
 <<enumeration>>
-`
+` 
 
+  let maxCount = 5;
+  let leftOver = 0;
   for (let value in data.values) {
+    maxCount--;
+    if (maxCount <= 0) {
+      leftOver++;
+      continue;
+    }
+
     output += `  o ${value}
+`      
+  }
+  if (leftOver > 0) {
+    output += `  o . . . ${leftOver} more values
 `
   }
 

@@ -1,17 +1,13 @@
 classDiagram
-  RiskChain -- RiskChainActor
-RiskChain -- RiskChainSituation
-RiskChain -- RiskChainLogicNode
-RiskChain -- RiskChainEdge
-RiskChain -- RiskChainLogicEdge
+  RiskChain -- Chainable
+RiskChain -- Entity
+RiskChain -- Relation
 
 
 class RiskChain {
 
-  RiskChainActor[] actors
-  RiskChainSituation[] situations
-  RiskChainLogicNode[] logicNode
-  RiskChainEdge[] relations
-  RiskChainLogicEdge[] logicRelation
+  Chainable[] chain
+  Entity[] actors
+  Relation[] relations
 
 }

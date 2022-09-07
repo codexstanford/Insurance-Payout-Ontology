@@ -1,0 +1,4 @@
+Relatable:
+  type: object
+  isAbstract: true
+  

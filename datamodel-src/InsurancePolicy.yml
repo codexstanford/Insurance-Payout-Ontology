@@ -1,0 +1,10 @@
+InsurancePolicy:
+  type: object
+  documentation: "An insurance policy"
+  properties:
+    benefits:
+      type: List
+      of: InsuranceBenefits
+    validityPeriod:
+      type: timePeriod
+    

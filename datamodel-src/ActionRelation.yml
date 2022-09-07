@@ -1,8 +1,0 @@
-ActionRelation:
-  type: object
-  documentation: "A relation between a situation and a risk object"
-  properties:
-    riskObject:
-      type: RiskObject
-    relation:
-      type: RiskObjectActionEnum
