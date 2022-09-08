@@ -1,5 +1,6 @@
 MultiplierOccurenceEnum:
   type: enum
+  namespace: org.codex.insurance.core
   values:
     perClaim:
       documentation: "an amount that apply per claim"

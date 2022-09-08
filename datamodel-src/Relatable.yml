@@ -1,4 +1,5 @@
 Relatable:
   type: object
   isAbstract: true
+  namespace: org.codex.insurance.core
   

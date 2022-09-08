@@ -1,6 +1,7 @@
 Amount:
   documentation: "An object representing an Amount. <br/> In our representation an amout contain a quantity (how much), a unit (how much of what?), and a unit dimension (in which dimension do we mesure, eg: distance,monetary, ...)"
   type: object
+  namespace: org.codex.insurance.core
   properties:
     quantity:
       type: string

@@ -1,5 +1,6 @@
 UnitPersonEnum:
     type: enum
+    namespace: org.codex.insurance.core
     inherit: UnitEnum
     values:
       person:

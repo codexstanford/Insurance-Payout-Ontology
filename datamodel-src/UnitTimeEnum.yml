@@ -1,6 +1,7 @@
 UnitTimeEnum:
   type: enum
   inherit: UnitEnum
+  namespace: org.codex.insurance.core
   values:
     day:
       documentation: "day"
@@ -8,3 +9,7 @@ UnitTimeEnum:
       documentation: "consecutive day"
     night:
       documentation: "night"
+    month:
+      documentation: "month"
+    year:
+      documentation: "year"

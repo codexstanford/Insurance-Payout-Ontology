@@ -1,13 +1,17 @@
 PayoutTypeEnum:
   type: enum
+  namespace: org.codex.insurance.core
+  documentation: "A list of insurance payout. Details on implementation can be found here https://docs.google.com/document/d/15mNl4lbPMjJRJJXz3XEEOuGSJdn55uWDyvAezr3CEng/edit?usp=sharing (to be update to direct doc insertion once finished)"
   values:
     Limit:
-      documentation : "A Limit"
+      documentation : "A Limit is a maximum amount to be paid during a claim. Limit can apply across claims or for a given claim or claim line."
     Excess:
-      documentation: "An Excess"
+      documentation: "An excess is an amount withheld from the claim amount before applying any other modification. It can be applied per line or per claim."
     Deductible:
-      documentation: "A Deductible"
+      documentation: "A deductible is an amount withheld from the claim amount paid to the insurer. It can be applied per line or per claim."
     Franchise:
-      documentation: "A Franchise"
+      documentation: "A Franchise is an amount of liability under which the responsibility of the insurer is not engaged. However, contrary to an excess the full claimed amount will be liable if the franchise amount is reached."
     StrictLimit:
-      documentation: "A Strict Limit"
+      documentation: "A StrictLimit is the opposite of a franchise. If the strictLimit amount is attained, then the claim amount is brought to zero. If the amount is under then the claim amount is conserved."
+    Exclusion:
+      documentation: "An exclusion means the sum to pay is zero. Exclusion takes precedence over every other modification applied to the payout. If an exclusion applies, the payout is always zero for the claim or line of claim the exclusion applies to."

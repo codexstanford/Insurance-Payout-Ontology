@@ -3,6 +3,7 @@ Situation:
   inherit: 
     - Chainable
     - Relatable
+  namespace: org.codex.insurance.core
   documentation: Represent a Situation
   properties:
     event:

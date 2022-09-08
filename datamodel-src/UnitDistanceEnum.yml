@@ -1,5 +1,6 @@
 UnitDistanceEnum:
   type: enum
+  namespace: org.codex.insurance.core
   inherit: UnitEnum
   values:
     kilometer:

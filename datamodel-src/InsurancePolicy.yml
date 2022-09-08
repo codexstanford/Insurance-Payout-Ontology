@@ -1,10 +1,11 @@
 InsurancePolicy:
   type: object
-  documentation: "An insurance policy"
+  documentation: "An insurance policy. Currently partial, to be extend"
+  namespace: org.codex.insurance.core
   properties:
     benefits:
+      documentation: "A list of benefits contain in the insurance policy"
       type: List
       of: InsuranceBenefits
-    validityPeriod:
-      type: timePeriod
+
     

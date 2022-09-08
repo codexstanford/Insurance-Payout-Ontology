@@ -1,5 +1,6 @@
 MultiplierTimeEnum:
   type: enum
+  namespace: org.codex.insurance.core
   values:
     perMinutes:
       documentation: "Per minutes"

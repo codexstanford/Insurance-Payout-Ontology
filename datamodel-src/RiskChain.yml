@@ -1,6 +1,7 @@
 RiskChain:
   documentation: "Represent a chain of risks in the form of a knowledge graph"
   type: object
+  namespace: org.codex.insurance.core
   properties:
     chain:
       type: List

@@ -1,5 +1,6 @@
 UnitMonetaryEnum:
   type: enum
+  namespace: org.codex.insurance.core
   inherit: UnitEnum
   documentation:
     en: "A List of currency based on iso 4217"
