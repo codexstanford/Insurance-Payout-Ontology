@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title> annotate </title>
+
+    <script src="/datamodel.js" crossorigin="anonymous"></script>
+    <style>
+      .Annotation {
+        padding: 8px;
+        padding-left : 32px;
+        border-radius: 3px;
+        border : 1px solid #aaa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      
+      let startPoint = "InsuranceBenefits";
+
+ 
+      function addButtonClicked(e) {
+
+        let path = e.target.getAttribute("path");
+        let target = e.target.getAttribute("target");
+
+        if (datamodel[target]) {
+          document.getElementById(path + "---ctn").appendChild(buildAnnotator(target), path);
+        }
+      }
+
+      function buildAnnotator(target, path) {
+        if (target == "string") {
+          let input = document.createElement('input');
+          return input;
+        } 
+
+        let container = document.createElement('div');
+        container.className = "Annotation"
+        if (!datamodel[target]) {
+          return container;
+        }
+        if (datamodel[target].type == "object") {
+          for (let property in datamodel[target].properties) {
+            container.innerHTML += `<div>${property}: `;
+            if (datamodel[target].properties[property].type == "List") {
+              let targetAddDiv = document.createElement('div');
+              targetAddDiv.id= path + "--" + property + "---ctn";
+              container.appendChild(targetAddDiv)
+              let addButton = document.createElement('button');
+              addButton.innerHTML = "Add item"
+              addButton.className = "btn btn-success"
+              addButton.setAttribute("path", path + "--" + property);
+              addButton.setAttribute("target", datamodel[target].properties[property].of);
+              addButton.setAttribute("onclick", "addButtonClicked(event)");
+              container.appendChild(addButton)
+            }
+            else {
+              container.appendChild(buildAnnotator(datamodel[target].properties[property].type), path + "-:-" + property)
+            }
+            container.innerHTML += "</div>"
+    
+          }
+
+        }
+        if (datamodel[target].type == "enum") {
+          let select = document.createElement('select');
+          for (let value in datamodel[target].values) {
+            let option = document.createElement('option');
+            option.value = value;
+            option.innerText = value;
+            select.appendChild(option);
+          }
+
+        
+          container.appendChild(select);
+
+        } 
+       
+
+        return container;
+      }
+
+      document.body.appendChild(buildAnnotator(startPoint, startPoint));
+
+    </script>
+
+
+  </body>
+
+
+</html>

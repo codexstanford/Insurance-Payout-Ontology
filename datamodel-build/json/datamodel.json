@@ -1,69 +1,172 @@
 {
   "Amount": {
-    "documentation": "An object representing an Amount",
+    "documentation": "An object representing an Amount. <br/> In our representation an amout contain a quantity (how much), a unit (how much of what?), and a unit dimension (in which dimension do we mesure, eg: distance,monetary, ...)",
     "type": "object",
+    "namespace": "org.codex.insurance.core",
     "properties": {
-      "value": {
+      "quantity": {
         "type": "string",
         "documentation": {
-          "en": "A string representing a value. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
+          "en": "A string representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
         }
       },
       "unit": {
-        "type": "UnitEnum"
+        "type": "UnitEnum",
+        "documentation": {
+          "en": "The unit of the amount. It is recommended that it match an enum value corresponding to the dimension object."
+        }
       },
       "unitDimension": {
-        "type": "UnitDimensionEnum"
+        "type": "UnitDimensionEnum",
+        "documentation": {
+          "en": "The dimension of the value"
+        }
+      }
+    },
+    "sample": {
+      "simpleNumeric": {
+        "name": "A simple numeric amount",
+        "legalese": "300 USD",
+        "explanation": "In this case, quantiy will be 300, the unit will be USD, and the unitDimension will be Monetary",
+        "table": {
+          "quantity": 300,
+          "unit": "UnitMonetaryEnum.USD",
+          "unitDimension": "UnitDimensionEnum.Monetary"
+        }
       }
     }
   },
-  "CompositionOperatorEnum": {
-    "type": "enum",
-    "values": {
-      "and": {
-        "documentation": "And"
-      },
+  "ChainCompositionOr": {
+    "type": "object",
+    "documentation": "Represent a composition in a chain, aka an OR on multiple risk chains",
+    "inherit": "Chainable",
+    "namespace": "org.codex.insurance.core",
+    "properties": {
       "or": {
-        "documentation": "Or"
+        "type": "List",
+        "of": "RiskChain"
+      }
+    }
+  },
+  "Chainable": {
+    "type": "object",
+    "isAbstract": true,
+    "namespace": "org.codex.insurance.core"
+  },
+  "Entity": {
+    "type": "object",
+    "isAbstract": true,
+    "inherit": "Relatable",
+    "documentation": "Represent a real thing in the world!",
+    "namespace": "org.codex.insurance.core"
+  },
+  "InsuranceBenefits": {
+    "type": "object",
+    "documentation": "Represent an insurance benefits. A benefits is a rish chain (what could happen) associated with a payout.",
+    "namespace": "org.codex.insurance.core",
+    "properties": {
+      "riskChain": {
+        "type": "RiskChain",
+        "documentation": "What could happen to match this benefit"
+      },
+      "payout": {
+        "type": "List",
+        "of": "InsurancePayout",
+        "documentation": "What are the expected payout associat with this benefits."
+      },
+      "name": {
+        "type": "string",
+        "documentation": "The name of the benefits."
+      },
+      "description": {
+        "type": "string",
+        "documentation": "A short documentation of the benefits"
       }
     }
   },
   "InsurancePayout": {
-    "documentation": "An object representing an insurance payout",
+    "documentation": "An object representing an insurance payout: what modification should be apply to the claim amount, as describe in a contract. <br/><br/>There is different type of payout (see PayoutTypeEnum), such as Limit or Deductible. This model was develop to be able to represent any type of payouts. (see Documentation)",
     "type": "object",
+    "namespace": "org.codex.insurance.core",
     "properties": {
       "payoutType": {
-        "type": "PayoutTypeEnum"
+        "type": "PayoutTypeEnum",
+        "documentation": {
+          "en": "Describe the 'type' of payout, eg: 'Limit'"
+        },
+        "default": "Limit"
       },
       "amount": {
-        "type": "Amount",
-        "documentation": "The amount of the payout"
+        "type": "List",
+        "of": "Amount",
+        "documentation": "The amounts of the payout. It is a list as some Payout require multiple amounts.",
+        "sample": {
+          "multiple": {
+            "name": "Multiple amount in a limit",
+            "legalese": "if our rescue team decide to provide overnight accommodation, we will pay a maximum of £40 per person for one night for up to 6 passengers.",
+            "explanation": "In this case there is 3 amount: 40GBP(Monetary), 1 night(time), 6 passenger(person)"
+          }
+        }
       },
       "minimalAmount": {
         "type": "Amount",
-        "documentation": "The minimal amount"
+        "default": "undefined",
+        "documentation": "The minimal amount of the payout. (See Minimal amount Doc)",
+        "sample": {
+          "minimal": {
+            "name": "A limit with a minimal amount",
+            "legalese": "In case of fire we will pay you up to 10% of value insured but at least $5000",
+            "explanation": "In this case the minimal amount will be $5000"
+          }
+        }
       },
       "multipliers": {
         "type": "Multiplier",
-        "documentation": "The Payout multiplier"
+        "documentation": "The Payout multiplier, eg: per Person. As it is not possible to have 2 multipliers affecting the same dimension the mullitplier object is used as a way to constraint to one multiplier per dimension."
       },
       "for": {
-        "type": "List",
-        "of": "PayoutScopeServiceEnum",
-        "documentation": "The scope of the payout"
-      },
-      "forComposition": {
-        "type": "CompositionOperatorEnum",
-        "documentation": "Composition of payout scopes"
+        "type": "RiskChain",
+        "documentation": "The scope of the payout. 'It is a limit for'",
+        "sample": {
+          "forBailsBonds": {
+            "name": "A limit applying to a payout for a specific indemnity",
+            "legalese": "We will cover up to $300 for the cost of bail bonds required because of accident or traffic law violation arising out of use of your insured car.",
+            "explanation": "In this case the $300 Limit apply for money financing bails bonds"
+          }
+        }
       },
       "isExtra": {
         "type": "boolean",
-        "documentation": "Does the payout impact the consumption of other payout"
+        "documentation": "Sometime (rare case) some insurance payout are specify to not impact other payout. This mean that they should be taken into consideration on their own, and every payment modified by this payout should not impact other contract modifications.",
+        "default": false,
+        "sample": {
+          "extraSample": {
+            "name": "A limit that is out of other limit consumption",
+            "legalese": "If you car can not be fix dyring the day, we will pay up to $100 for overnight accomodation independetly of other limits.",
+            "explanation": "In this case the $100 amount should not be taken in consideration in other limits, therefore isExtra should be set to true"
+          }
+        }
+      }
+    }
+  },
+  "InsurancePolicy": {
+    "type": "object",
+    "documentation": "An insurance policy. Currently partial, to be extend",
+    "namespace": "org.codex.insurance.core",
+    "properties": {
+      "benefits": {
+        "documentation": "A list of benefits contain in the insurance policy",
+        "type": "List",
+        "of": "InsuranceBenefits"
       }
     }
   },
   "Multiplier": {
     "type": "object",
+    "documentation": {
+      "en": "Multiplier indicate how the amount to be pay or retain is to be multiply. A payement of $10 per person have a perPerson multiplier. There could be only one multiplier of each type."
+    },
+    "namespace": "org.codex.insurance.core",
     "properties": {
       "time": {
         "type": "MultiplierTimeEnum"
@@ -76,14 +179,19 @@
       },
       "insuredObject": {
         "type": "MultiplierInsuredObjectEnum"
+      },
+      "other": {
+        "type": "List",
+        "of": "string"
       }
     }
   },
   "MultiplierOccurenceEnum": {
     "type": "enum",
+    "namespace": "org.codex.insurance.core",
     "values": {
       "perClaim": {
-        "documentation": "per claim"
+        "documentation": "an amount that apply per claim"
       },
       "perLine": {
         "documentation": "per line of claim"
@@ -95,6 +203,7 @@
   },
   "MultiplierPersonEnum": {
     "type": "enum",
+    "namespace": "org.codex.insurance.core",
     "values": {
       "perPerson": {
         "documentation": "Per person"
@@ -112,6 +221,7 @@
   },
   "MultiplierTimeEnum": {
     "type": "enum",
+    "namespace": "org.codex.insurance.core",
     "values": {
       "perMinutes": {
         "documentation": "Per minutes"
@@ -136,81 +246,93 @@
       }
     }
   },
-  "PayoutScopeServiceEnum": {
+  "PayoutTypeEnum": {
     "type": "enum",
+    "namespace": "org.codex.insurance.core",
+    "documentation": "A list of insurance payout. Details on implementation can be found here https://docs.google.com/document/d/15mNl4lbPMjJRJJXz3XEEOuGSJdn55uWDyvAezr3CEng/edit?usp=sharing (to be update to direct doc insertion once finished)",
     "values": {
-      "indemnity": {
-        "documentation": "an indemnity"
+      "Limit": {
+        "documentation": "A Limit is a maximum amount to be paid during a claim. Limit can apply across claims or for a given claim or claim line."
       },
-      "legalCost": {
-        "lob": "legal",
-        "documentation": "Legal costs"
+      "Excess": {
+        "documentation": "An excess is an amount withheld from the claim amount before applying any other modification. It can be applied per line or per claim."
       },
-      "legalExpenses": {
-        "lob": "legal",
-        "documentation": "Legal expenses"
+      "Deductible": {
+        "documentation": "A deductible is an amount withheld from the claim amount paid to the insurer. It can be applied per line or per claim."
       },
-      "bailsBond": {
-        "lob": "legal",
-        "documentation": "Cost of bail bonds"
+      "Franchise": {
+        "documentation": "A Franchise is an amount of liability under which the responsibility of the insurer is not engaged. However, contrary to an excess the full claimed amount will be liable if the franchise amount is reached."
       },
-      "windscreenRepair": {
-        "documentation": "Windsceen repair",
-        "lob": "motor"
+      "StrictLimit": {
+        "documentation": "A StrictLimit is the opposite of a franchise. If the strictLimit amount is attained, then the claim amount is brought to zero. If the amount is under then the claim amount is conserved."
       },
-      "windscreenReplacement": {
-        "documentation": "Windsceen replacement",
-        "lob": "motor"
-      },
-      "carStorageFee": {
-        "documentation": "Car storage fee",
-        "lob": "motor"
-      },
-      "travelingCost": {
-        "documentation": "Traveling costs"
-      },
-      "courtesyCar": {
-        "documentation": "Courtesy car"
-      },
-      "carHire": {
-        "documentation": "Car hire"
-      },
-      "alternativeTransport": {
-        "documentation": "Alternative Transports"
-      },
-      "towing": {
-        "documentation": "Towing of vehicle"
-      },
-      "overnightAccomodation": {
-        "documentation": "overnight accomodation"
-      },
-      "bedAndBreakfast": {
-        "documentation": "Bed and breakfast"
+      "Exclusion": {
+        "documentation": "An exclusion means the sum to pay is zero. Exclusion takes precedence over every other modification applied to the payout. If an exclusion applies, the payout is always zero for the claim or line of claim the exclusion applies to."
       }
     }
   },
-  "PayoutTypeEnum": {
-    "type": "enum",
-    "values": {
-      "Limit": {
-        "documentation": "A Limit"
+  "Relatable": {
+    "type": "object",
+    "isAbstract": true,
+    "namespace": "org.codex.insurance.core"
+  },
+  "Relation": {
+    "type": "object",
+    "namespace": "org.codex.insurance.core",
+    "properties": {
+      "impacter": {
+        "type": "Relatable"
       },
-      "Excess": {
-        "documentation": "An Excess"
+      "impactee": {
+        "type": "Relatable"
       },
-      "Deductible": {
-        "documentation": "A Deductible"
+      "verb": {
+        "type": "string"
+      }
+    }
+  },
+  "RiskChain": {
+    "documentation": "Represent a chain of risks in the form of a knowledge graph",
+    "type": "object",
+    "namespace": "org.codex.insurance.core",
+    "properties": {
+      "chain": {
+        "type": "List",
+        "of": "Chainable"
       },
-      "Franchise": {
-        "documentation": "A Franchise"
+      "actors": {
+        "type": "List",
+        "of": "Entity"
       },
-      "StrictLimit": {
-        "documentation": "A Strict Limit"
+      "relations": {
+        "type": "List",
+        "of": "Relation"
+      }
+    }
+  },
+  "Situation": {
+    "type": "object",
+    "inherit": [
+      "Chainable",
+      "Relatable"
+    ],
+    "namespace": "org.codex.insurance.core",
+    "documentation": "Represent a Situation",
+    "properties": {
+      "event": {
+        "type": "string"
+      },
+      "location": {
+        "type": "string"
+      },
+      "period": {
+        "type": "string"
       }
     }
   },
   "UnitDimensionEnum": {
     "type": "enum",
+    "namespace": "org.codex.insurance.core",
     "values": {
       "Monetary": {
         "documentation": "A monetary amount"
@@ -228,6 +350,7 @@
   },
   "UnitDistanceEnum": {
     "type": "enum",
+    "namespace": "org.codex.insurance.core",
     "inherit": "UnitEnum",
     "values": {
       "kilometer": {
@@ -238,8 +361,14 @@
       }
     }
   },
+  "UnitEnum": {
+    "type": "enum",
+    "isAbstract": true,
+    "namespace": "org.codex.insurance.core"
+  },
   "UnitMonetaryEnum": {
     "type": "enum",
+    "namespace": "org.codex.insurance.core",
     "inherit": "UnitEnum",
     "documentation": {
       "en": "A List of currency based on iso 4217"
@@ -1516,6 +1645,7 @@
   },
   "UnitPersonEnum": {
     "type": "enum",
+    "namespace": "org.codex.insurance.core",
     "inherit": "UnitEnum",
     "values": {
       "person": {
@@ -1535,6 +1665,7 @@
   "UnitTimeEnum": {
     "type": "enum",
     "inherit": "UnitEnum",
+    "namespace": "org.codex.insurance.core",
     "values": {
       "day": {
         "documentation": "day"
@@ -1544,7 +1675,23 @@
       },
       "night": {
         "documentation": "night"
+      },
+      "month": {
+        "documentation": "month"
+      },
+      "year": {
+        "documentation": "year"
       }
     }
+  },
+  "boolean": {
+    "type": "system",
+    "documentation": "represent a boolean",
+    "namespace": "org.codex.insurance.core.system"
+  },
+  "string": {
+    "type": "system",
+    "documentation": "represent a string",
+    "namespace": "org.codex.insurance.core.system"
   }
 }

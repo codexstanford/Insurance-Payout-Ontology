@@ -1,0 +1,4 @@
+UnitEnum:
+  type: enum
+  isAbstract: true
+  namespace: org.codex.insurance.core
