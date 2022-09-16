@@ -4,7 +4,9 @@ Relation:
   properties:
     impacter:
       type: Relatable
+      isReference: true
     impactee:
       type: Relatable
+      isReference: true
     verb:
       type: string

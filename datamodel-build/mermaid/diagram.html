@@ -51,6 +51,8 @@ class InsuranceBenefits {
 
   RiskChain riskChain
   InsurancePayout[] payout
+  string name
+  string description
 
 }
 
@@ -72,13 +74,11 @@ class InsurancePayout {
 }
 
 InsurancePolicy -- InsuranceBenefits
-InsurancePolicy -- timePeriod
 
 
 class InsurancePolicy {
 
   InsuranceBenefits[] benefits
-  timePeriod validityPeriod
 
 }
 
@@ -96,6 +96,11 @@ class Multiplier {
   MultiplierInsuredObjectEnum insuredObject
   string[] other
 
+}
+
+class MultiplierInsuredObjectEnum {
+&lt&ltenumeration&gt&gt
+  o perCar
 }
 
 class MultiplierOccurenceEnum {
@@ -128,7 +133,19 @@ class PayoutTypeEnum {
   o Excess
   o Deductible
   o Franchise
-  o . . . 1 more values
+  o . . . 2 more values
+}
+
+
+
+Entity &lt|-- Person
+class Person {
+
+  boolean isPolicyHolder
+  string firstname
+  string lastname
+  number age
+
 }
 
 
@@ -190,6 +207,10 @@ UnitEnum o-- UnitDistanceEnum
   o miles
 }
 
+class UnitEnum {
+&lt&ltenumeration&gt&gt
+}
+
 UnitEnum o-- UnitMonetaryEnum
   class UnitMonetaryEnum {
 &lt&ltenumeration&gt&gt
@@ -215,6 +236,8 @@ UnitEnum o-- UnitTimeEnum
   o day
   o consecutiveDay
   o night
+  o month
+  o . . . 1 more values
 }
 
 undefined

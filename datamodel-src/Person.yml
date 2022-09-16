@@ -1,0 +1,12 @@
+Person:
+  type: object
+  inherit: Entity
+  properties:
+    isPolicyHolder:
+      type: boolean
+    firstname:
+      type: string
+    lastname:
+      type: string
+    age:
+      type: number

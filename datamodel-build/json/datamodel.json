@@ -186,6 +186,15 @@
       }
     }
   },
+  "MultiplierInsuredObjectEnum": {
+    "type": "enum",
+    "namespace": "org.codex.insurance.core",
+    "values": {
+      "perCar": {
+        "documentation": "per car"
+      }
+    }
+  },
   "MultiplierOccurenceEnum": {
     "type": "enum",
     "namespace": "org.codex.insurance.core",
@@ -268,6 +277,24 @@
       },
       "Exclusion": {
         "documentation": "An exclusion means the sum to pay is zero. Exclusion takes precedence over every other modification applied to the payout. If an exclusion applies, the payout is always zero for the claim or line of claim the exclusion applies to."
+      }
+    }
+  },
+  "Person": {
+    "type": "object",
+    "inherit": "Entity",
+    "properties": {
+      "isPolicyHolder": {
+        "type": "boolean"
+      },
+      "firstname": {
+        "type": "string"
+      },
+      "lastname": {
+        "type": "string"
+      },
+      "age": {
+        "type": "number"
       }
     }
   },

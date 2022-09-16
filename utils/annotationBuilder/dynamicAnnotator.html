@@ -12,31 +12,144 @@
         border-radius: 3px;
         border : 1px solid #aaa;
       }
+
+      .container{
+        width : 1024px;
+        margin: auto;
+        position: relative;
+      }
     </style>
   </head>
 
   <body>
+    <div class='container'>
+      <h1>Annotate risk chain</h1>
+      <h3>Text</h3>
+      <textarea style="width: 100%" id='originalText'>
+
+      </textarea>
+
+      <h3>Annotation</h3>
+      <div id='main'>
+      </div>
+      <br/>
+      <input type='button' value="Annotate!" style="position: absolute; right: 0px" onclick='annotate()'>
+
+      <pre id='outputAnnotation'></pre>
+    </div>
     <script>
       
       let startPoint = "InsuranceBenefits";
 
- 
+      function annotate() {
+        let annotations = document.getElementsByClassName('annotationInput');
+        let output = "";
+
+        output += originalText.value;
+        output += `
+[Annotation]-->
+
+`;
+        for (let item of annotations) {
+          if (item.value && item.value != undefined && item.value != "undefined") {
+            let value = item.value;
+
+            if (item.type == "checkbox") {
+              if (value == "on") {
+                value = true;
+              }
+              else {
+                value = false;
+              }
+            }
+
+            output += `${item.getAttribute('path').replace(/--/g, ".")} = ${value}
+`;
+          }
+        } 
+        outputAnnotation.innerHTML = output;
+      }
+
       function addButtonClicked(e) {
 
         let path = e.target.getAttribute("path");
         let target = e.target.getAttribute("target");
 
         if (datamodel[target]) {
-          document.getElementById(path + "---ctn").appendChild(buildAnnotator(target), path);
+        //  document.getElementById(path + "---ctn").innerHTML = "";
+          document.getElementById(path + "---ctn").appendChild(buildAnnotator(target, path));
         }
       }
+
+      function addButtonInListClicked(e) {
+
+        let path = e.target.getAttribute("path");
+        let target = e.target.getAttribute("target");
+        let count =  parseInt(e.target.getAttribute("count"));
+        e.target.setAttribute("count", count + 1)
+
+        if (datamodel[target]) {
+         document.getElementById(path + "---ctn").appendChild(buildAnnotator(target, path + '--' + count));
+        }
+      }
+
+
 
       function buildAnnotator(target, path) {
         if (target == "string") {
           let input = document.createElement('input');
+
+          input.setAttribute('path', path);
+          input.className = "annotationInput";
           return input;
         } 
+        if (target == "boolean") {
+          let input = document.createElement('input');
+          input.type = "checkbox";
+          input.checked = false;
+          input.setAttribute('path', path);
+          input.className = "annotationInput";
+          return input;
+        } 
+        if (target == "number") {
+          let input = document.createElement('input');
+          input.setAttribute('path', path)
+          input.className = "annotationInput";
+          return input;
+        }
 
+
+
+        if (datamodel[target].isAbstract) {
+       
+          let div = document.createElement('div')
+          let possible = [];
+          let targetAddDiv = document.createElement('div');
+          targetAddDiv.id= path + "---ctn";
+          div.appendChild(targetAddDiv)
+          for (let keyName in datamodel) {
+              if (datamodel[keyName].inherit 
+                && 
+                (
+                  datamodel[keyName].inherit == target 
+                  || (
+                  typeof datamodel[keyName].inherit != "string" && datamodel[keyName].inherit.indexOf(target) != -1)
+                )
+              ) {
+
+                let addButton = document.createElement("button");
+                addButton.innerHTML = `Add ${keyName}`;
+                addButton.className = "btn btn-success"
+                addButton.setAttribute("path", path);
+                addButton.setAttribute("target", keyName);
+                addButton.setAttribute("onclick", "addButtonClicked(event)");
+                div.appendChild(addButton)
+              }
+           
+          }
+          return div;
+        
+        }
         let container = document.createElement('div');
         container.className = "Annotation"
         if (!datamodel[target]) {
@@ -54,36 +167,41 @@
               addButton.className = "btn btn-success"
               addButton.setAttribute("path", path + "--" + property);
               addButton.setAttribute("target", datamodel[target].properties[property].of);
-              addButton.setAttribute("onclick", "addButtonClicked(event)");
+              addButton.setAttribute("count", 1);
+              addButton.setAttribute("onclick", "addButtonInListClicked(event)");
               container.appendChild(addButton)
             }
             else {
-              container.appendChild(buildAnnotator(datamodel[target].properties[property].type), path + "-:-" + property)
+              container.appendChild(buildAnnotator(datamodel[target].properties[property].type, path + "--" + property));
             }
             container.innerHTML += "</div>"
     
           }
 
         }
+ 
         if (datamodel[target].type == "enum") {
           let select = document.createElement('select');
+          let option = document.createElement('option');
+            option.value = undefined;
+            option.innerText = "Select Value...";
+            option.selected = true;
+            select.appendChild(option);
           for (let value in datamodel[target].values) {
-            let option = document.createElement('option');
+            option = document.createElement('option');
             option.value = value;
             option.innerText = value;
             select.appendChild(option);
           }
-
-        
+          select.setAttribute("path", path);
+          select.className = "annotationInput";
           container.appendChild(select);
-
-        } 
-       
+        }
 
         return container;
       }
 
-      document.body.appendChild(buildAnnotator(startPoint, startPoint));
+      main.appendChild(buildAnnotator(startPoint, startPoint));
 
     </script>
 

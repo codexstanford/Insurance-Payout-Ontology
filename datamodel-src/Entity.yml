@@ -4,3 +4,4 @@ Entity:
   inherit: Relatable
   documentation: "Represent a real thing in the world!"
   namespace: org.codex.insurance.core
+  
