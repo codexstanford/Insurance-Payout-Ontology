@@ -1,0 +1,4 @@
+number:
+  type: system
+  documentation: "represent a number"
+  namespace: org.codex.insurance.core.system

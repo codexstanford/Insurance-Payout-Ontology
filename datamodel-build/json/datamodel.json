@@ -1750,6 +1750,11 @@
     "documentation": "represent a boolean",
     "namespace": "org.codex.insurance.core.system"
   },
+  "number": {
+    "type": "system",
+    "documentation": "represent a number",
+    "namespace": "org.codex.insurance.core.system"
+  },
   "string": {
     "type": "system",
     "documentation": "represent a string",

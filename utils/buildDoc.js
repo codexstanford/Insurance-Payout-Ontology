@@ -34,10 +34,14 @@ fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/index.html`, home);
 let objectsList = fs.readdirSync(DATA_MODEL_SRC_PATH);
 
 // first Index ALl
-let INDEX = {};
+let INDEX = {
+    
+};
 let DM_INDEX = "";
 function buildIndex() {
   // indexAll
+  let DM_INDEX_CORE = "";
+  let DM_INDEX_SYSTEM = "";
   for (let file of objectsList) {
     // skip dot files
     if (file[0] == '.') {
@@ -45,11 +49,26 @@ function buildIndex() {
     }
     let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${file}`, 'utf-8'));
     let objName =  Object.keys(data)[0];
+    
     INDEX[objName] = data[objName];
-    DM_INDEX += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+    if (INDEX[objName].namespace.indexOf("org.codex.insurance.core.system") == 0) {
+      DM_INDEX_SYSTEM += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink2 namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+    }
+    else if (INDEX[objName].namespace.indexOf("org.codex.insurance.core") == 0) {
+      DM_INDEX_CORE += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+  
+    }
+  
   }
 
+  DM_INDEX += `
+    <li> <span class='link-light d-inline-flex text-decoration-none menuCategory'>Core</span></li> 
+    ${DM_INDEX_CORE} 
+    <li> <span class='link-light d-inline-flex text-decoration-none menuCategory'>System</span></li> 
+    ${DM_INDEX_SYSTEM}`;
+
   for (let objName in INDEX) {
+
     let obj = INDEX[objName];
     for (let propertyName in obj.properties) {
       let property = obj.properties[propertyName];
@@ -65,6 +84,7 @@ function buildIndex() {
       }
     }
   }
+
   
 
 
