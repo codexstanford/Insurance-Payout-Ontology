@@ -1,0 +1,8 @@
+ChainOperatorEnum:
+  type: enum
+  namespace: org.codex.insurance.core
+  doc: "A list of supported chain operators"
+  values:
+    wildcard:
+      doc: "The wildcard operator, match anything"
+    

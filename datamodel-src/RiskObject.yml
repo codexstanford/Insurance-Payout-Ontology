@@ -1,12 +1,11 @@
 RiskObject:
   type: object
   isAbstract: true
-  inherit: Relatable
   documentation: "Represent a real thing in the world!"
   namespace: org.codex.insurance.core
   properties:
     id:
       type: string
       documentation: A unique id for the object
-      
+    
   

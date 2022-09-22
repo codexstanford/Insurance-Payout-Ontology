@@ -2,11 +2,9 @@ Relation:
   type: object
   namespace: org.codex.insurance.core
   properties:
-    impacter:
-      type: Relatable
-      isReference: true
-    impactee:
-      type: Relatable
-      isReference: true
+    impacterId:
+      type: string
+    impacteeId:
+      type: String
     verb:
       type: string

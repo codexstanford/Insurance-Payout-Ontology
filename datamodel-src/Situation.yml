@@ -1,11 +1,11 @@
 Situation:
   type: object
-  inherit: 
-    - Chainable
-    - Relatable
+  inherit: Chainable
   namespace: org.codex.insurance.core
   documentation: Represent a Situation
   properties:
+    id:
+      type: string
     event:
       type: string
     location:

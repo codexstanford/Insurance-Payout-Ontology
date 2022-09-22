@@ -1,0 +1,8 @@
+ChainOperator:
+    type: object
+    documentation: "Represent an operator in a chain, such as a wildcard or initial"
+    inherit: Chainable
+    namespace: org.codex.insurance.core
+    properties:
+      type:
+        type: ChainOperatorEnum
