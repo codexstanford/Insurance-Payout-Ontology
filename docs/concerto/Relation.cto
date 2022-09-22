@@ -1,11 +1,10 @@
 namespace org.codex.insurance.core.Relation
 
-import org.codex.insurance.core.String from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/String.cto
 
 
 concept Relation {
 
   o string impacterId
-  o String impacteeId
+  o string impacteeId
   o string verb
 }

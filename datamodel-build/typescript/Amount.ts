@@ -1,9 +1,11 @@
-import { Unit } from "./Unit";
+import { UnitEnum } from "./UnitEnum";
+import { UnitDimensionEnum } from "./UnitDimensionEnum";
 
 
 export class Amount {
-  value: number;
-  unit: Unit;
+  quantity: string;
+  unit: UnitEnum;
+  unitDimension: UnitDimensionEnum;
 
 
 }

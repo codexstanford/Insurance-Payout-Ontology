@@ -22,7 +22,7 @@ ChainCompositionNot -- RiskChain
 Chainable &lt|-- ChainCompositionNot
 class ChainCompositionNot {
 
-  RiskChain[] or
+  RiskChain[] operands
 
 }
 
@@ -32,7 +32,7 @@ ChainCompositionOr -- RiskChain
 Chainable &lt|-- ChainCompositionOr
 class ChainCompositionOr {
 
-  RiskChain[] or
+  RiskChain[] operands
 
 }
 
@@ -164,13 +164,12 @@ class Person {
 
 }
 
-Relation -- String
 
 
 class Relation {
 
   string impacterId
-  String impacteeId
+  string impacteeId
   string verb
 
 }

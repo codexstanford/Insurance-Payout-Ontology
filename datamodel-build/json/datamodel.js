@@ -42,7 +42,7 @@ let datamodel = {
     "inherit": "Chainable",
     "namespace": "org.codex.insurance.core",
     "properties": {
-      "or": {
+      "operands": {
         "type": "List",
         "of": "RiskChain"
       }
@@ -54,7 +54,7 @@ let datamodel = {
     "inherit": "Chainable",
     "namespace": "org.codex.insurance.core",
     "properties": {
-      "or": {
+      "operands": {
         "type": "List",
         "of": "RiskChain"
       }
@@ -309,6 +309,7 @@ let datamodel = {
   "Person": {
     "type": "object",
     "inherit": "Entity",
+    "namespace": "org.codex.insurance.core",
     "properties": {
       "isPolicyHolder": {
         "type": "boolean"
@@ -332,7 +333,7 @@ let datamodel = {
         "type": "string"
       },
       "impacteeId": {
-        "type": "String"
+        "type": "string"
       },
       "verb": {
         "type": "string"

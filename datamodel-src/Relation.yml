@@ -5,6 +5,6 @@ Relation:
     impacterId:
       type: string
     impacteeId:
-      type: String
+      type: string
     verb:
       type: string

@@ -1,14 +1,16 @@
-import { Amount } from "./Amount";
+import { PayoutTypeEnum } from "./PayoutTypeEnum";
+import { List } from "./List";
 import { Multiplier } from "./Multiplier";
-import { PayoutScope } from "./PayoutScope";
+import { RiskChain } from "./RiskChain";
 
 
-export abstract class InsurancePayout {
-  amount: Amount;
-  minimalAmount: Amount;
+export class InsurancePayout {
+  payoutType: PayoutTypeEnum;
+  amount: List;
+  minimalAmount: List;
   multipliers: Multiplier;
-  isExtra: boolean;
-  scope: PayoutScope;
+  for: RiskChain;
+  impactOtherConsumption: boolean;
 
 
 }
