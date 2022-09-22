@@ -1,6 +1,7 @@
 Person:
   type: object
   inherit: Entity
+  namespace: org.codex.insurance.core
   properties:
     isPolicyHolder:
       type: boolean
