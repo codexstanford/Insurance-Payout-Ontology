@@ -1,0 +1,9 @@
+namespace org.codex.insurance.core.ChainCompositionOr
+
+import org.codex.insurance.core.RiskChain from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/RiskChain.cto
+
+
+concept ChainCompositionOr extends Chainable {
+
+  o RiskChain[] operands
+}

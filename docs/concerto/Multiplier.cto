@@ -1,0 +1,16 @@
+namespace org.codex.insurance.core.Multiplier
+
+import org.codex.insurance.core.MultiplierTimeEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MultiplierTimeEnum.cto
+import org.codex.insurance.core.MultiplierPersonEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MultiplierPersonEnum.cto
+import org.codex.insurance.core.MultiplierOccurenceEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MultiplierOccurenceEnum.cto
+import org.codex.insurance.core.MultiplierInsuredObjectEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MultiplierInsuredObjectEnum.cto
+
+
+concept Multiplier {
+
+  o MultiplierTimeEnum time
+  o MultiplierPersonEnum person
+  o MultiplierOccurenceEnum occurence
+  o MultiplierInsuredObjectEnum insuredObject
+  o string[] other
+}

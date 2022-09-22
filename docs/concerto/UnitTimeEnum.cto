@@ -1,0 +1,9 @@
+namespace org.codex.insurance.core.UnitTimeEnum
+
+enum UnitTimeEnum {
+  o day
+  o consecutiveDay
+  o night
+  o month
+  o year
+}

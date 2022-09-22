@@ -1,0 +1,11 @@
+namespace org.codex.insurance.core.Situation
+
+
+
+concept Situation extends Chainable {
+
+  o string id
+  o string event
+  o string location
+  o string period
+}

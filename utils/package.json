@@ -4,7 +4,7 @@
   "description": "",
   "main": "toTypescript.js",
   "scripts": {
-    "build": "node ./toMermaid.js; node ./toJson.js; node ./buildDoc.js"
+    "build": "node ./toMermaid.js; node ./buildDoc.js; node ./toJson.js; node ./toTypescript.js"
   },
   "author": "",
   "license": "ISC",

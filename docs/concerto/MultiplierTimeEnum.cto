@@ -1,0 +1,11 @@
+namespace org.codex.insurance.core.MultiplierTimeEnum
+
+enum MultiplierTimeEnum {
+  o perMinutes
+  o perHour
+  o perDay
+  o perMonth
+  o perCalendarMonth
+  o perYear
+  o perPeriodOfInsurance
+}

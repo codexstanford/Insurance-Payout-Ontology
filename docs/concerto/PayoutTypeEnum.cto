@@ -1,0 +1,10 @@
+namespace org.codex.insurance.core.PayoutTypeEnum
+
+enum PayoutTypeEnum {
+  o Limit
+  o Excess
+  o Deductible
+  o Franchise
+  o StrictLimit
+  o Exclusion
+}

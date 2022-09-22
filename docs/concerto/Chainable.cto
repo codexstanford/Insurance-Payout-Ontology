@@ -1,0 +1,7 @@
+namespace org.codex.insurance.core.Chainable
+
+
+
+abstract concept Chainable {
+
+}

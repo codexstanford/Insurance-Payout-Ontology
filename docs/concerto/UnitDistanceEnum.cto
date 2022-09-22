@@ -1,0 +1,6 @@
+namespace org.codex.insurance.core.UnitDistanceEnum
+
+enum UnitDistanceEnum {
+  o kilometer
+  o miles
+}

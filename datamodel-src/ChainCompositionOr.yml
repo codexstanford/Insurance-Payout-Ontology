@@ -4,6 +4,6 @@ ChainCompositionOr:
     inherit: Chainable
     namespace: org.codex.insurance.core
     properties:
-      or:
+      operands:
         type: List
         of: RiskChain

@@ -1,0 +1,11 @@
+namespace undefined.Person
+
+
+
+concept Person extends Entity {
+
+  o boolean isPolicyHolder
+  o string firstname
+  o string lastname
+  o number age
+}

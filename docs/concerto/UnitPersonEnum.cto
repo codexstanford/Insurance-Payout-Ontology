@@ -1,0 +1,8 @@
+namespace org.codex.insurance.core.UnitPersonEnum
+
+enum UnitPersonEnum {
+  o person
+  o passenger
+  o driver
+  o policyholder
+}

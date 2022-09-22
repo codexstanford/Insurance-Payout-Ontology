@@ -1,0 +1,8 @@
+namespace org.codex.insurance.core.RiskObject
+
+
+
+abstract concept RiskObject {
+
+  o string id
+}

@@ -1,0 +1,8 @@
+namespace org.codex.insurance.core.MultiplierPersonEnum
+
+enum MultiplierPersonEnum {
+  o perPerson
+  o perPassenger
+  o perEmployee
+  o perLoneTraveler
+}

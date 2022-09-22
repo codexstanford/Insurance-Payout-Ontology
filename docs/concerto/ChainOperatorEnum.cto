@@ -1,0 +1,5 @@
+namespace org.codex.insurance.core.ChainOperatorEnum
+
+enum ChainOperatorEnum {
+  o wildcard
+}

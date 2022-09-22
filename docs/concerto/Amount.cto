@@ -1,0 +1,12 @@
+namespace org.codex.insurance.core.Amount
+
+import org.codex.insurance.core.UnitEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/UnitEnum.cto
+import org.codex.insurance.core.UnitDimensionEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/UnitDimensionEnum.cto
+
+
+concept Amount {
+
+  o string quantity
+  o UnitEnum unit
+  o UnitDimensionEnum unitDimension
+}
