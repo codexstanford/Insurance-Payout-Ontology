@@ -3,7 +3,7 @@ const yaml = require('yaml');
 
 
 const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
-const DATA_MODEL_DOC_PATH = `${__dirname}/docs`;
+const DATA_MODEL_DOC_PATH = `${__dirname}/../docs`;
 const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 const DATA_MODEL_TPL_PATH = `${__dirname}/../data-model-web-doc-template`;
 
