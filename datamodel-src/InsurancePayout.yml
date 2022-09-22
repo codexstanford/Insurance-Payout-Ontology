@@ -20,8 +20,8 @@ InsurancePayout:
           legalese: "if our rescue team decide to provide overnight accommodation, we will pay a maximum of £40 per person for one night for up to 6 passengers."
           explanation: "In this case there is 3 amount: 40GBP(Monetary), 1 night(time), 6 passenger(person)"
     minimalAmount:
-      type: Amount
-      default: "undefined"
+      type: List
+      of: Amount
       documentation: "The minimal amount of the payout. (See Minimal amount Doc)"
       sample:
         minimal:
@@ -39,7 +39,7 @@ InsurancePayout:
           name: "A limit applying to a payout for a specific indemnity"
           legalese: "We will cover up to $300 for the cost of bail bonds required because of accident or traffic law violation arising out of use of your insured car."
           explanation: "In this case the $300 Limit apply for money financing bails bonds"
-    isExtra:
+    impactOtherConsumption:
       type: boolean
       documentation: "Sometime (rare case) some insurance payout are specify to not impact other payout. This mean that they should be taken into consideration on their own, and every payment modified by this payout should not impact other contract modifications." 
       default: false

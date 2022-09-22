@@ -29,15 +29,6 @@ class Chainable {
 
 }
 
-
-
-Relatable <|-- Entity
-class Entity {
-<<abstract>>
-
-
-}
-
 InsuranceBenefits -- RiskChain
 InsuranceBenefits -- InsurancePayout
 
@@ -61,10 +52,10 @@ class InsurancePayout {
 
   PayoutTypeEnum payoutType
   Amount[] amount
-  Amount minimalAmount
+  Amount[] minimalAmount
   Multiplier multipliers
   RiskChain for
-  boolean isExtra
+  boolean impactOtherConsumption
 
 }
 
@@ -163,15 +154,25 @@ class Relation {
 }
 
 RiskChain -- Chainable
-RiskChain -- Entity
+RiskChain -- RiskObject
 RiskChain -- Relation
 
 
 class RiskChain {
 
   Chainable[] chain
-  Entity[] actors
+  RiskObject[] actors
   Relation[] relations
+
+}
+
+
+
+Relatable <|-- RiskObject
+class RiskObject {
+<<abstract>>
+
+  string id
 
 }
 

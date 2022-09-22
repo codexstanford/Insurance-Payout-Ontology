@@ -8,7 +8,7 @@ RiskChain:
       of: Chainable
     actors:
       type: List
-      of: Entity
+      of: RiskObject
     relations:
       type: List
       of: Relation

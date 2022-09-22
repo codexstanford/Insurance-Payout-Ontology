@@ -109,8 +109,8 @@ let datamodel = {
         }
       },
       "minimalAmount": {
-        "type": "Amount",
-        "default": "undefined",
+        "type": "List",
+        "of": "Amount",
         "documentation": "The minimal amount of the payout. (See Minimal amount Doc)",
         "sample": {
           "minimal": {
@@ -308,10 +308,12 @@ let datamodel = {
     "namespace": "org.codex.insurance.core",
     "properties": {
       "impacter": {
-        "type": "Relatable"
+        "type": "Relatable",
+        "isReference": true
       },
       "impactee": {
-        "type": "Relatable"
+        "type": "Relatable",
+        "isReference": true
       },
       "verb": {
         "type": "string"

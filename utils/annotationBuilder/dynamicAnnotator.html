@@ -76,9 +76,18 @@
         let target = e.target.getAttribute("target");
 
         if (datamodel[target]) {
-        //  document.getElementById(path + "---ctn").innerHTML = "";
           document.getElementById(path + "---ctn").appendChild(buildAnnotator(target, path));
         }
+
+
+        // html collection not iterable so old school
+        while(btns = document.getElementsByClassName(`btn-${path}`)) {
+          if (!btns.length) {
+            break;
+          }
+          btns[0].remove();
+        }
+        
       }
 
       function addButtonInListClicked(e) {
@@ -139,9 +148,10 @@
 
                 let addButton = document.createElement("button");
                 addButton.innerHTML = `Add ${keyName}`;
-                addButton.className = "btn btn-success"
+                addButton.className = `btn btn-success btn-${path}`;
                 addButton.setAttribute("path", path);
                 addButton.setAttribute("target", keyName);
+                addButton.setAttribute("id", path + '-btn');
                 addButton.setAttribute("onclick", "addButtonClicked(event)");
                 div.appendChild(addButton)
               }
@@ -168,6 +178,7 @@
               addButton.setAttribute("path", path + "--" + property);
               addButton.setAttribute("target", datamodel[target].properties[property].of);
               addButton.setAttribute("count", 1);
+
               addButton.setAttribute("onclick", "addButtonInListClicked(event)");
               container.appendChild(addButton)
             }

@@ -1,13 +1,13 @@
 classDiagram
   RiskChain -- Chainable
-RiskChain -- Entity
+RiskChain -- RiskObject
 RiskChain -- Relation
 
 
 class RiskChain {
 
   Chainable[] chain
-  Entity[] actors
+  RiskObject[] actors
   Relation[] relations
 
 }
