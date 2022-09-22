@@ -1,0 +1,10 @@
+classDiagram
+  ChainCompositionNot -- RiskChain
+
+
+Chainable <|-- ChainCompositionNot
+class ChainCompositionNot {
+
+  RiskChain[] or
+
+}
