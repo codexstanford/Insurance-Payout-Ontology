@@ -38,6 +38,7 @@ let INDEX = {
     
 };
 let DM_INDEX = "";
+let DM_ENTITY_INDEX = "";
 function buildIndex() {
   // indexAll
   let DM_INDEX_CORE = "";
@@ -52,11 +53,17 @@ function buildIndex() {
     
     INDEX[objName] = data[objName];
     if (INDEX[objName].namespace.indexOf("org.codex.insurance.core.system") == 0) {
-      DM_INDEX_SYSTEM += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink2 namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+
+        DM_INDEX_SYSTEM += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink2 namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+
     }
     else if (INDEX[objName].namespace.indexOf("org.codex.insurance.core") == 0) {
-      DM_INDEX_CORE += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
-  
+
+      if (INDEX[objName].inherit == "RiskObject") {
+        DM_ENTITY_INDEX += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+      } else {
+       DM_INDEX_CORE += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+      }
     }
   
   }
@@ -202,16 +209,27 @@ function buildObjDoc(objName) {
   }
     
   
-
-  fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
+  if (INDEX[name].inherit == "RiskObject") {
+    fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
+    template
+      .replace('$$CONTENT', doc)
+      .replace('<!--$$DM_ENTITY_INDEX-->', DM_ENTITY_INDEX)
+      .replace(`namedLink${name}`, 'activeLink')
+      .replace(`<!--SUBMENU_${name}-->`, PROP_MENU)
+      , 
+    'utf-8');
+  } 
+  else {
+    fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
     template
       .replace('$$CONTENT', doc)
       .replace('<!--$$DM_INDEX-->', DM_INDEX)
       .replace(`namedLink${name}`, 'activeLink')
       .replace(`<!--SUBMENU_${name}-->`, PROP_MENU)
-      
       , 
     'utf-8');
+  }
+ 
   
 }
 

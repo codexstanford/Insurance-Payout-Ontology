@@ -308,7 +308,7 @@ let datamodel = {
   },
   "Person": {
     "type": "object",
-    "inherit": "Entity",
+    "inherit": "RiskObject",
     "namespace": "org.codex.insurance.core",
     "properties": {
       "isPolicyHolder": {

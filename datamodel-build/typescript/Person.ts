@@ -1,6 +1,6 @@
 
 
-export class Person extends Entity {
+export class Person extends RiskObject {
   isPolicyHolder: boolean;
   firstname: string;
   lastname: string;

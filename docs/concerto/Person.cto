@@ -2,7 +2,7 @@ namespace org.codex.insurance.core.Person
 
 
 
-concept Person extends Entity {
+concept Person extends RiskObject {
 
   o boolean isPolicyHolder
   o string firstname
