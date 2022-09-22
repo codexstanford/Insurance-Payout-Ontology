@@ -36,6 +36,18 @@
       }
     }
   },
+  "ChainCompositionNot": {
+    "type": "object",
+    "documentation": "Represent a negative composition in a chain",
+    "inherit": "Chainable",
+    "namespace": "org.codex.insurance.core",
+    "properties": {
+      "or": {
+        "type": "List",
+        "of": "RiskChain"
+      }
+    }
+  },
   "ChainCompositionOr": {
     "type": "object",
     "documentation": "Represent a composition in a chain, aka an OR on multiple risk chains",
@@ -48,16 +60,30 @@
       }
     }
   },
+  "ChainOperator": {
+    "type": "object",
+    "documentation": "Represent an operator in a chain, such as a wildcard or initial",
+    "inherit": "Chainable",
+    "namespace": "org.codex.insurance.core",
+    "properties": {
+      "type": {
+        "type": "ChainOperatorEnum"
+      }
+    }
+  },
+  "ChainOperatorEnum": {
+    "type": "enum",
+    "namespace": "org.codex.insurance.core",
+    "doc": "A list of supported chain operators",
+    "values": {
+      "wildcard": {
+        "doc": "The wildcard operator, match anything"
+      }
+    }
+  },
   "Chainable": {
     "type": "object",
     "isAbstract": true,
-    "namespace": "org.codex.insurance.core"
-  },
-  "Entity": {
-    "type": "object",
-    "isAbstract": true,
-    "inherit": "Relatable",
-    "documentation": "Represent a real thing in the world!",
     "namespace": "org.codex.insurance.core"
   },
   "InsuranceBenefits": {
@@ -135,7 +161,7 @@
           }
         }
       },
-      "isExtra": {
+      "impactOtherConsumption": {
         "type": "boolean",
         "documentation": "Sometime (rare case) some insurance payout are specify to not impact other payout. This mean that they should be taken into consideration on their own, and every payment modified by this payout should not impact other contract modifications.",
         "default": false,
@@ -298,22 +324,15 @@
       }
     }
   },
-  "Relatable": {
-    "type": "object",
-    "isAbstract": true,
-    "namespace": "org.codex.insurance.core"
-  },
   "Relation": {
     "type": "object",
     "namespace": "org.codex.insurance.core",
     "properties": {
-      "impacter": {
-        "type": "Relatable",
-        "isReference": true
+      "impacterId": {
+        "type": "string"
       },
-      "impactee": {
-        "type": "Relatable",
-        "isReference": true
+      "impacteeId": {
+        "type": "String"
       },
       "verb": {
         "type": "string"
@@ -331,7 +350,7 @@
       },
       "actors": {
         "type": "List",
-        "of": "Entity"
+        "of": "RiskObject"
       },
       "relations": {
         "type": "List",
@@ -339,15 +358,27 @@
       }
     }
   },
+  "RiskObject": {
+    "type": "object",
+    "isAbstract": true,
+    "documentation": "Represent a real thing in the world!",
+    "namespace": "org.codex.insurance.core",
+    "properties": {
+      "id": {
+        "type": "string",
+        "documentation": "A unique id for the object"
+      }
+    }
+  },
   "Situation": {
     "type": "object",
-    "inherit": [
-      "Chainable",
-      "Relatable"
-    ],
+    "inherit": "Chainable",
     "namespace": "org.codex.insurance.core",
     "documentation": "Represent a Situation",
     "properties": {
+      "id": {
+        "type": "string"
+      },
       "event": {
         "type": "string"
       },

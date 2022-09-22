@@ -11,6 +11,16 @@ class Amount {
 
 }
 
+ChainCompositionNot -- RiskChain
+
+
+Chainable <|-- ChainCompositionNot
+class ChainCompositionNot {
+
+  RiskChain[] or
+
+}
+
 ChainCompositionOr -- RiskChain
 
 
@@ -19,6 +29,21 @@ class ChainCompositionOr {
 
   RiskChain[] or
 
+}
+
+ChainOperator -- ChainOperatorEnum
+
+
+Chainable <|-- ChainOperator
+class ChainOperator {
+
+  ChainOperatorEnum type
+
+}
+
+class ChainOperatorEnum {
+<<enumeration>>
+  o wildcard
 }
 
 
@@ -134,21 +159,13 @@ class Person {
 
 }
 
-
-
-class Relatable {
-<<abstract>>
-
-
-}
-
-Relation -- Relatable
+Relation -- String
 
 
 class Relation {
 
-  Relatable impacter
-  Relatable impactee
+  string impacterId
+  String impacteeId
   string verb
 
 }
@@ -168,7 +185,6 @@ class RiskChain {
 
 
 
-Relatable <|-- RiskObject
 class RiskObject {
 <<abstract>>
 
@@ -179,9 +195,9 @@ class RiskObject {
 
 
 Chainable <|-- Situation
-Relatable <|-- Situation
 class Situation {
 
+  string id
   string event
   string location
   string period
