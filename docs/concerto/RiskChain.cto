@@ -6,7 +6,6 @@ import org.codex.insurance.core.Relation from https://codexstanford.github.io/In
 
 
 concept RiskChain {
-
   o Chainable[] chain
   o RiskObject[] actors
   o Relation[] relations

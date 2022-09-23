@@ -4,6 +4,5 @@ import org.codex.insurance.core.InsuranceBenefits from https://codexstanford.git
 
 
 concept InsurancePolicy {
-
   o InsuranceBenefits[] benefits
 }

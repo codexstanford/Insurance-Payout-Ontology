@@ -5,9 +5,8 @@ import org.codex.insurance.core.InsurancePayout from https://codexstanford.githu
 
 
 concept InsuranceBenefits {
-
   o RiskChain riskChain
   o InsurancePayout[] payout
-  o string name
-  o string description
+  o String name
+  o String description
 }

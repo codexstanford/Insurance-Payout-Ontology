@@ -7,10 +7,9 @@ import org.codex.insurance.core.MultiplierInsuredObjectEnum from https://codexst
 
 
 concept Multiplier {
-
   o MultiplierTimeEnum time
   o MultiplierPersonEnum person
   o MultiplierOccurenceEnum occurence
   o MultiplierInsuredObjectEnum insuredObject
-  o string[] other
+  o String[] other
 }

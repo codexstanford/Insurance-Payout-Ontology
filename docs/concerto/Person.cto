@@ -3,9 +3,8 @@ namespace org.codex.insurance.core
 
 
 concept Person extends RiskObject {
-
-  o boolean isPolicyHolder
-  o string firstname
-  o string lastname
-  o number age
+  o Boolean isPolicyHolder
+  o String firstname
+  o String lastname
+  o Double age
 }

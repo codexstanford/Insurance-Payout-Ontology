@@ -6,3 +6,4 @@ enum MultiplierPersonEnum {
   o perEmployee
   o perLoneTraveler
 }
+

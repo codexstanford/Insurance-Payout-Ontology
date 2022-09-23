@@ -3,6 +3,5 @@ namespace org.codex.insurance.core
 
 
 abstract concept RiskObject {
-
-  o string id
+  o String id
 }

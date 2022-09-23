@@ -7,11 +7,10 @@ import org.codex.insurance.core.RiskChain from https://codexstanford.github.io/I
 
 
 concept InsurancePayout {
-
   o PayoutTypeEnum payoutType
   o Amount[] amount
   o Amount[] minimalAmount
   o Multiplier multipliers
   o RiskChain for
-  o boolean impactOtherConsumption
+  o Boolean impactOtherConsumption
 }

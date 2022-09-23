@@ -3,8 +3,7 @@ namespace org.codex.insurance.core
 
 
 concept Relation {
-
-  o string impacterId
-  o string impacteeId
-  o string verb
+  o String impacterId
+  o String impacteeId
+  o String verb
 }

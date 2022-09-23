@@ -5,8 +5,7 @@ import org.codex.insurance.core.UnitDimensionEnum from https://codexstanford.git
 
 
 concept Amount {
-
-  o string quantity
+  o String quantity
   o UnitEnum unit
   o UnitDimensionEnum unitDimension
 }

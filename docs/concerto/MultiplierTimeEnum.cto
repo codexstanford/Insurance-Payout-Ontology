@@ -9,3 +9,4 @@ enum MultiplierTimeEnum {
   o perYear
   o perPeriodOfInsurance
 }
+

@@ -4,6 +4,5 @@ import org.codex.insurance.core.RiskChain from https://codexstanford.github.io/I
 
 
 concept ChainCompositionNot extends Chainable {
-
   o RiskChain[] operands
 }

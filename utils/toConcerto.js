@@ -30,7 +30,7 @@ for (let file of objectsList) {
   output += buildConcerto(file);
 }
 
-//  fs.writeFileSync(`${DATA_MODEL_CONCERTO_PATH}/insurance.cto`, output, 'utf8');
+fs.writeFileSync(`${DATA_MODEL_CONCERTO_PATH}/insurance.cto`, output, 'utf8');
 
 
 function buildConcerto(fileName) {
@@ -69,6 +69,8 @@ function render(name, data) {
     throw (`Error Unspecified Object ${name} (no type property).`);
   }
 
+  return "";
+
 }
 
 function renderObject(name, data) {
@@ -97,8 +99,7 @@ function renderObject(name, data) {
 
   }
 
-  output += ` {
-`;
+  output += ` {`;
 
   if (data.isAbstract) {
 
@@ -113,17 +114,26 @@ function renderObject(name, data) {
   if (data.properties) {
     for (let propertyName in data.properties) {
       let property = data.properties[propertyName];
-      if (systemType[propertyName]) {
-        propertyName = systemType[propertyName];
-      }
+
       if (property.type == "List") {
+        let listType = property.of;
+        
+        if (systemType[listType]) {
+          listType = systemType[listType];
+        }
+
         output += `
-  o ${property.of}[] ${propertyName}`;
+  o ${listType}[] ${propertyName}`;
+
         typeList[property.of] = true;
       }
       else {
+        let typeName = property.type;
+        if (systemType[typeName]) {
+          typeName = systemType[typeName];
+        }
         output += `
-  o ${property.type} ${propertyName}`;
+  o ${typeName} ${propertyName}`;
       typeList[property.type] = true;
       }
     }
@@ -149,7 +159,7 @@ function renderObject(name, data) {
 `;
   }
 
-  output = `namespace ${data.namespace}
+  let poutput = `namespace ${data.namespace}
 
 ${importStmt}
 
@@ -157,15 +167,15 @@ ${output}
 }
 `
 
-  fs.writeFileSync(`${DATA_MODEL_CONCERTO_PATH}/${name}.cto`, `${output}`);
+  fs.writeFileSync(`${DATA_MODEL_CONCERTO_PATH}/${name}.cto`, `${poutput}`);
 
-  return output;
+  return output + `
+}
+`;
 }
 
 function renderEnum(name, data) {
-  let output = `namespace ${data.namespace}
-
-`;
+  let output = '';
 
   output += `enum ${name} {
 ` 
@@ -178,8 +188,13 @@ function renderEnum(name, data) {
   output += `}
 `;
 
+let poutput = `namespace ${data.namespace}
 
-  fs.writeFileSync(`${DATA_MODEL_CONCERTO_PATH}/${name}.cto`, `${output}`);
+${output}
+`;
+
+
+  fs.writeFileSync(`${DATA_MODEL_CONCERTO_PATH}/${name}.cto`, `${poutput}`);
 
   return output;
 }

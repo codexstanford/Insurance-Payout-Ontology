@@ -8,3 +8,4 @@ enum PayoutTypeEnum {
   o StrictLimit
   o Exclusion
 }
+
