@@ -149,7 +149,7 @@ function renderObject(name, data) {
 `;
   }
 
-  output = `namespace ${data.namespace}.${name}
+  output = `namespace ${data.namespace}
 
 ${importStmt}
 
@@ -163,7 +163,7 @@ ${output}
 }
 
 function renderEnum(name, data) {
-  let output = `namespace ${data.namespace}.${name}
+  let output = `namespace ${data.namespace}
 
 `;
 

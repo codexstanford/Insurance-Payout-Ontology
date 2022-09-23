@@ -1,4 +1,4 @@
-namespace org.codex.insurance.core.UnitPersonEnum
+namespace org.codex.insurance.core
 
 enum UnitPersonEnum {
   o person

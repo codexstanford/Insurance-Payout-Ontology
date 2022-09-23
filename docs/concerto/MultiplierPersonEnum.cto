@@ -1,4 +1,4 @@
-namespace org.codex.insurance.core.MultiplierPersonEnum
+namespace org.codex.insurance.core
 
 enum MultiplierPersonEnum {
   o perPerson
