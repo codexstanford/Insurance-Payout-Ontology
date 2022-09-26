@@ -1,9 +1,0 @@
-ChainCompositionNot:
-    type: object
-    documentation: "Represent a negative composition in a chain"
-    inherit: Chainable
-    namespace: org.codex.insurance.core
-    properties:
-      operands:
-        type: List
-        of: RiskChain

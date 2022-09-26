@@ -1,8 +1,0 @@
-namespace org.codex.insurance.core
-
-import org.codex.insurance.core.InsuranceBenefits from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/InsuranceBenefits.cto
-
-
-concept InsurancePolicy {
-  o InsuranceBenefits[] benefits
-}

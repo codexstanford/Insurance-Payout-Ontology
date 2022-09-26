@@ -6,10 +6,6 @@ concept Amount {
   o UnitDimensionEnum unitDimension
 }
 
-concept ChainCompositionNot extends Chainable {
-  o RiskChain[] operands
-}
-
 concept ChainCompositionOr extends Chainable {
   o RiskChain[] operands
 }
@@ -20,16 +16,10 @@ concept ChainOperator extends Chainable {
 
 enum ChainOperatorEnum {
   o wildcard
+  o not
 }
 
 abstract concept Chainable {
-}
-
-concept InsuranceBenefits {
-  o RiskChain riskChain
-  o InsurancePayout[] payout
-  o String name
-  o String description
 }
 
 concept InsurancePayout {
@@ -39,10 +29,6 @@ concept InsurancePayout {
   o Multiplier multipliers
   o RiskChain for
   o Boolean impactOtherConsumption
-}
-
-concept InsurancePolicy {
-  o InsuranceBenefits[] benefits
 }
 
 concept Multiplier {

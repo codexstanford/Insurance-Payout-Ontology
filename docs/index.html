@@ -18,11 +18,8 @@
         }
 
         main {
-          height: 100vh;
           height: -webkit-fill-available;
-          max-height: 100vh;
-          overflow-x: auto;
-          overflow-y: hidden;
+          min-height: 100vh;
         }
 
         .scrollarea {
@@ -43,7 +40,11 @@
         padding: 0rem 0.5rem;
         margin-left: 2.25rem;
       }
-
+   
+      .menu a {
+          color : #000;
+       }
+  
       .subLink {
         padding: 0rem 0.5rem;
         margin-left: 2.75rem;
@@ -53,8 +54,13 @@
         padding: 0rem 0.5rem;
         margin-left: 3.25rem;
       }
+
+      a {
+        color: #4c8fe2;
+      }
       .activeLink {
-        color: #e89c2e!important;
+        font-weight: bold;
+        color: #4c8fe2!important;
       }
 
       .documentation {
@@ -93,16 +99,17 @@
     }
 
 
-    .bd-callout-info {
-    --bd-callout-bg: rgba(var(--bs-info-rgb), .075);
-    --bd-callout-border: rgba(var(--bs-info-rgb), .5);
-    }
-    .bd-callout {
-        padding: 1.25rem;
-        margin-top: 1.25rem;
-        margin-bottom: 1.25rem;
-        background-color: var(--bd-callout-bg, var(--bs-gray-100));
-        border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
+        .bd-callout-info {
+          --bd-callout-bg: rgba(var(--bs-info-rgb), .075);
+          --bd-callout-border: rgba(var(--bs-info-rgb), .5);
+        }
+
+        .bd-callout {
+          padding: 1.25rem;
+          margin-top: 1.25rem;
+          margin-bottom: 1.25rem;
+          background-color: var(--bd-callout-bg, var(--bs-gray-100));
+          border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
         }
 
       .bd-card {
@@ -114,13 +121,8 @@
         border-radius: 0px 4px 4px 0px;
         }
 
-        .text-bg-dark {
-          background-color: #333!important;
-        }
+    
 
-        .link-light {
-          color : #fff!important;
-        }
     </style>
 
   </head>
@@ -186,8 +188,8 @@
     <main class="d-flex flex-nowrap">
  
       <!-- Menu -->
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark menu" style="width: 320px; min-height: 100vh; overflow-x: hidden; overflow-y: auto;">
-        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none text-bg-dark">
+      <div class="d-flex flex-column flex-shrink-0 p-3 menu" style="min-height: 100vh;">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
        
           <span class="fs-4"> Insurance Ontology
           </span>
@@ -195,22 +197,22 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link text-bg-dark" aria-current="page">
+            <a href="index.html" class="nav-link" aria-current="page">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="InsurancePayout.html" class="nav-link text-bg-dark">
+            <a href="InsurancePayout.html" class="nav-link">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
-              Reference
+              Product
             </a>
           
           </li>
             <!--$$DM_INDEX-->
 
             <li>
-              <a href="Person.html" class="nav-link text-bg-dark">
+              <a href="Person.html" class="nav-link">
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
                 Entities
               </a>
@@ -218,7 +220,7 @@
             </li>
             <!--$$DM_ENTITY_INDEX-->
           <li>
-            <a href="#" class="nav-link text-bg-dark">
+            <a href="#" class="nav-link">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
               About
             </a>

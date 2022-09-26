@@ -18,11 +18,8 @@
         }
 
         main {
-          height: 100vh;
           height: -webkit-fill-available;
-          max-height: 100vh;
-          overflow-x: auto;
-          overflow-y: hidden;
+          min-height: 100vh;
         }
 
         .scrollarea {
@@ -43,7 +40,11 @@
         padding: 0rem 0.5rem;
         margin-left: 2.25rem;
       }
-
+   
+      .menu a {
+          color : #000;
+       }
+  
       .subLink {
         padding: 0rem 0.5rem;
         margin-left: 2.75rem;
@@ -53,8 +54,13 @@
         padding: 0rem 0.5rem;
         margin-left: 3.25rem;
       }
+
+      a {
+        color: #4c8fe2;
+      }
       .activeLink {
-        color: #e89c2e!important;
+        font-weight: bold;
+        color: #4c8fe2!important;
       }
 
       .documentation {
@@ -93,16 +99,17 @@
     }
 
 
-    .bd-callout-info {
-    --bd-callout-bg: rgba(var(--bs-info-rgb), .075);
-    --bd-callout-border: rgba(var(--bs-info-rgb), .5);
-    }
-    .bd-callout {
-        padding: 1.25rem;
-        margin-top: 1.25rem;
-        margin-bottom: 1.25rem;
-        background-color: var(--bd-callout-bg, var(--bs-gray-100));
-        border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
+        .bd-callout-info {
+          --bd-callout-bg: rgba(var(--bs-info-rgb), .075);
+          --bd-callout-border: rgba(var(--bs-info-rgb), .5);
+        }
+
+        .bd-callout {
+          padding: 1.25rem;
+          margin-top: 1.25rem;
+          margin-bottom: 1.25rem;
+          background-color: var(--bd-callout-bg, var(--bs-gray-100));
+          border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
         }
 
       .bd-card {
@@ -114,13 +121,8 @@
         border-radius: 0px 4px 4px 0px;
         }
 
-        .text-bg-dark {
-          background-color: #333!important;
-        }
+    
 
-        .link-light {
-          color : #fff!important;
-        }
     </style>
 
   </head>
@@ -186,8 +188,8 @@
     <main class="d-flex flex-nowrap">
  
       <!-- Menu -->
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark menu" style="width: 320px; min-height: 100vh; overflow-x: hidden; overflow-y: auto;">
-        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none text-bg-dark">
+      <div class="d-flex flex-column flex-shrink-0 p-3 menu" style="min-height: 100vh;">
+        <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
        
           <span class="fs-4"> Insurance Ontology
           </span>
@@ -195,26 +197,26 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link text-bg-dark" aria-current="page">
+            <a href="index.html" class="nav-link" aria-current="page">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
               Home
             </a>
           </li>
           <li>
-            <a href="InsurancePayout.html" class="nav-link text-bg-dark">
+            <a href="InsurancePayout.html" class="nav-link">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
-              Reference
+              Product
             </a>
           
           </li>
             
-    <li> <span class='link-light d-inline-flex text-decoration-none menuCategory'>Core</span></li> 
-    <li><a href="Amount.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkAmount">Amount</a></li><!--SUBMENU_Amount--><li><a href="ChainCompositionNot.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkChainCompositionNot">ChainCompositionNot</a></li><!--SUBMENU_ChainCompositionNot--><li><a href="ChainCompositionOr.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkChainCompositionOr">ChainCompositionOr</a></li><!--SUBMENU_ChainCompositionOr--><li><a href="ChainOperator.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkChainOperator">ChainOperator</a></li><!--SUBMENU_ChainOperator--><li><a href="ChainOperatorEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkChainOperatorEnum">ChainOperatorEnum</a></li><!--SUBMENU_ChainOperatorEnum--><li><a href="Chainable.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkChainable">Chainable</a></li><!--SUBMENU_Chainable--><li><a href="InsuranceBenefits.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkInsuranceBenefits">InsuranceBenefits</a></li><!--SUBMENU_InsuranceBenefits--><li><a href="InsurancePayout.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkInsurancePayout">InsurancePayout</a></li><!--SUBMENU_InsurancePayout--><li><a href="InsurancePolicy.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkInsurancePolicy">InsurancePolicy</a></li><!--SUBMENU_InsurancePolicy--><li><a href="Multiplier.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkMultiplier">Multiplier</a></li><!--SUBMENU_Multiplier--><li><a href="MultiplierInsuredObjectEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkMultiplierInsuredObjectEnum">MultiplierInsuredObjectEnum</a></li><!--SUBMENU_MultiplierInsuredObjectEnum--><li><a href="MultiplierOccurenceEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkMultiplierOccurenceEnum">MultiplierOccurenceEnum</a></li><!--SUBMENU_MultiplierOccurenceEnum--><li><a href="MultiplierPersonEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkMultiplierPersonEnum">MultiplierPersonEnum</a></li><!--SUBMENU_MultiplierPersonEnum--><li><a href="MultiplierTimeEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkMultiplierTimeEnum">MultiplierTimeEnum</a></li><!--SUBMENU_MultiplierTimeEnum--><li><a href="PayoutTypeEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkPayoutTypeEnum">PayoutTypeEnum</a></li><!--SUBMENU_PayoutTypeEnum--><li><a href="Relation.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkRelation">Relation</a></li><!--SUBMENU_Relation--><li><a href="RiskChain.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkRiskChain">RiskChain</a></li><!--SUBMENU_RiskChain--><li><a href="RiskObject.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkRiskObject">RiskObject</a></li><!--SUBMENU_RiskObject--><li><a href="Situation.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkSituation">Situation</a></li><!--SUBMENU_Situation--><li><a href="UnitDimensionEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitDimensionEnum">UnitDimensionEnum</a></li><!--SUBMENU_UnitDimensionEnum--><li><a href="UnitDistanceEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitDistanceEnum">UnitDistanceEnum</a></li><!--SUBMENU_UnitDistanceEnum--><li><a href="UnitEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitEnum">UnitEnum</a></li><!--SUBMENU_UnitEnum--><li><a href="UnitMonetaryEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitMonetaryEnum">UnitMonetaryEnum</a></li><!--SUBMENU_UnitMonetaryEnum--><li><a href="UnitPersonEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitPersonEnum">UnitPersonEnum</a></li><!--SUBMENU_UnitPersonEnum--><li><a href="UnitTimeEnum.html" class="link-light d-inline-flex text-decoration-none subLink namedLinkUnitTimeEnum">UnitTimeEnum</a></li><!--SUBMENU_UnitTimeEnum--> 
-    <li> <span class='link-light d-inline-flex text-decoration-none menuCategory'>System</span></li> 
-    <li><a href="boolean.html" class="link-light d-inline-flex text-decoration-none subLink2 activeLink">boolean</a></li><li><a href="number.html" class="link-light d-inline-flex text-decoration-none subLink2 namedLinknumber">number</a></li><!--SUBMENU_number--><li><a href="string.html" class="link-light d-inline-flex text-decoration-none subLink2 namedLinkstring">string</a></li><!--SUBMENU_string-->
+    <li> <span class='d-inline-flex text-decoration-none menuCategory'>Core</span></li> 
+    <li><a href="Amount.html" class="d-inline-flex text-decoration-none subLink namedLinkAmount">Amount</a></li><!--SUBMENU_Amount--><li><a href="ChainCompositionOr.html" class="d-inline-flex text-decoration-none subLink namedLinkChainCompositionOr">ChainCompositionOr</a></li><!--SUBMENU_ChainCompositionOr--><li><a href="ChainOperator.html" class="d-inline-flex text-decoration-none subLink namedLinkChainOperator">ChainOperator</a></li><!--SUBMENU_ChainOperator--><li><a href="ChainOperatorEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkChainOperatorEnum">ChainOperatorEnum</a></li><!--SUBMENU_ChainOperatorEnum--><li><a href="Chainable.html" class="d-inline-flex text-decoration-none subLink namedLinkChainable">Chainable</a></li><!--SUBMENU_Chainable--><li><a href="InsurancePayout.html" class="d-inline-flex text-decoration-none subLink namedLinkInsurancePayout">InsurancePayout</a></li><!--SUBMENU_InsurancePayout--><li><a href="Multiplier.html" class="d-inline-flex text-decoration-none subLink namedLinkMultiplier">Multiplier</a></li><!--SUBMENU_Multiplier--><li><a href="MultiplierInsuredObjectEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkMultiplierInsuredObjectEnum">MultiplierInsuredObjectEnum</a></li><!--SUBMENU_MultiplierInsuredObjectEnum--><li><a href="MultiplierOccurenceEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkMultiplierOccurenceEnum">MultiplierOccurenceEnum</a></li><!--SUBMENU_MultiplierOccurenceEnum--><li><a href="MultiplierPersonEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkMultiplierPersonEnum">MultiplierPersonEnum</a></li><!--SUBMENU_MultiplierPersonEnum--><li><a href="MultiplierTimeEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkMultiplierTimeEnum">MultiplierTimeEnum</a></li><!--SUBMENU_MultiplierTimeEnum--><li><a href="PayoutTypeEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkPayoutTypeEnum">PayoutTypeEnum</a></li><!--SUBMENU_PayoutTypeEnum--><li><a href="Relation.html" class="d-inline-flex text-decoration-none subLink namedLinkRelation">Relation</a></li><!--SUBMENU_Relation--><li><a href="RiskChain.html" class="d-inline-flex text-decoration-none subLink namedLinkRiskChain">RiskChain</a></li><!--SUBMENU_RiskChain--><li><a href="RiskObject.html" class="d-inline-flex text-decoration-none subLink namedLinkRiskObject">RiskObject</a></li><!--SUBMENU_RiskObject--><li><a href="Situation.html" class="d-inline-flex text-decoration-none subLink namedLinkSituation">Situation</a></li><!--SUBMENU_Situation--><li><a href="UnitDimensionEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkUnitDimensionEnum">UnitDimensionEnum</a></li><!--SUBMENU_UnitDimensionEnum--><li><a href="UnitDistanceEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkUnitDistanceEnum">UnitDistanceEnum</a></li><!--SUBMENU_UnitDistanceEnum--><li><a href="UnitEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkUnitEnum">UnitEnum</a></li><!--SUBMENU_UnitEnum--><li><a href="UnitMonetaryEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkUnitMonetaryEnum">UnitMonetaryEnum</a></li><!--SUBMENU_UnitMonetaryEnum--><li><a href="UnitPersonEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkUnitPersonEnum">UnitPersonEnum</a></li><!--SUBMENU_UnitPersonEnum--><li><a href="UnitTimeEnum.html" class="d-inline-flex text-decoration-none subLink namedLinkUnitTimeEnum">UnitTimeEnum</a></li><!--SUBMENU_UnitTimeEnum--> 
+    <li> <span class='d-inline-flex text-decoration-none menuCategory'>System</span></li> 
+    <li><a href="boolean.html" class="d-inline-flex text-decoration-none subLink2 activeLink">boolean</a></li><li><a href="number.html" class="d-inline-flex text-decoration-none subLink2 namedLinknumber">number</a></li><!--SUBMENU_number--><li><a href="string.html" class="d-inline-flex text-decoration-none subLink2 namedLinkstring">string</a></li><!--SUBMENU_string-->
 
             <li>
-              <a href="Person.html" class="nav-link text-bg-dark">
+              <a href="Person.html" class="nav-link">
                 <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#collection"></use></svg>
                 Entities
               </a>
@@ -222,7 +224,7 @@
             </li>
             <!--$$DM_ENTITY_INDEX-->
           <li>
-            <a href="#" class="nav-link text-bg-dark">
+            <a href="#" class="nav-link">
               <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
               About
             </a>

@@ -54,24 +54,24 @@ function buildIndex() {
     INDEX[objName] = data[objName];
     if (INDEX[objName].namespace.indexOf("org.codex.insurance.core.system") == 0) {
 
-        DM_INDEX_SYSTEM += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink2 namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+        DM_INDEX_SYSTEM += `<li><a href="${objName}.html" class="d-inline-flex text-decoration-none subLink2 namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
 
     }
     else if (INDEX[objName].namespace.indexOf("org.codex.insurance.core") == 0) {
 
       if (INDEX[objName].inherit == "RiskObject") {
-        DM_ENTITY_INDEX += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+        DM_ENTITY_INDEX += `<li><a href="${objName}.html" class="d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
       } else {
-       DM_INDEX_CORE += `<li><a href="${objName}.html" class="link-light d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
+       DM_INDEX_CORE += `<li><a href="${objName}.html" class="d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
       }
     }
   
   }
 
   DM_INDEX += `
-    <li> <span class='link-light d-inline-flex text-decoration-none menuCategory'>Core</span></li> 
+    <li> <span class='d-inline-flex text-decoration-none menuCategory'>Core</span></li> 
     ${DM_INDEX_CORE} 
-    <li> <span class='link-light d-inline-flex text-decoration-none menuCategory'>System</span></li> 
+    <li> <span class='d-inline-flex text-decoration-none menuCategory'>System</span></li> 
     ${DM_INDEX_SYSTEM}`;
 
   for (let objName in INDEX) {
@@ -178,7 +178,7 @@ function buildObjDoc(objName) {
     doc += "</div>";
 
     for (let prop in data.properties) {
-      PROP_MENU += `<li><a href="${objName}.html#${prop}" class="link-light d-inline-flex text-decoration-none subLink2">${prop}</a></li>`
+      PROP_MENU += `<li><a href="${objName}.html#${prop}" class="d-inline-flex text-decoration-none subLink2">${prop}</a></li>`
     }
   }
 

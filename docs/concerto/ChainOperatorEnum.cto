@@ -2,5 +2,6 @@ namespace org.codex.insurance.core
 
 enum ChainOperatorEnum {
   o wildcard
+  o not
 }
 
