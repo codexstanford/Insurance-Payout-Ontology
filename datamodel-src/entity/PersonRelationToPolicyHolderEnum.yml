@@ -1,0 +1,13 @@
+PersonRelationToPolicyHolderEnum:
+  type: enum
+  namespace: org.codex.insurance.core
+  documentation:
+    en: "A List of possible relationship of a person to a policyHolder"
+  values:
+    self:
+      documentation: "The policyholder"
+    father:
+      documentation: "The father of policyholder"
+    mother:
+      documentation: "The mother of the policyholder"
+    

@@ -4,7 +4,7 @@ Relation:
   properties:
     impacterId:
       type: string
-    impacteeId:
+    impactedId:
       type: string
     verb:
       type: string

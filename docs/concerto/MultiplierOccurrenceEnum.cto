@@ -1,6 +1,6 @@
 namespace org.codex.insurance.core
 
-enum MultiplierOccurenceEnum {
+enum MultiplierOccurrenceEnum {
   o perClaim
   o perLine
   o perIncident

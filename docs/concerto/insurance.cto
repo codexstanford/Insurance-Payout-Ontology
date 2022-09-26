@@ -34,7 +34,7 @@ concept InsurancePayout {
 concept Multiplier {
   o MultiplierTimeEnum time
   o MultiplierPersonEnum person
-  o MultiplierOccurenceEnum occurence
+  o MultiplierOccurrenceEnum occurrence
   o MultiplierInsuredObjectEnum insuredObject
   o String[] other
 }
@@ -43,7 +43,7 @@ enum MultiplierInsuredObjectEnum {
   o perCar
 }
 
-enum MultiplierOccurenceEnum {
+enum MultiplierOccurrenceEnum {
   o perClaim
   o perLine
   o perIncident
@@ -77,7 +77,7 @@ enum PayoutTypeEnum {
 
 concept Relation {
   o String impacterId
-  o String impacteeId
+  o String impactedId
   o String verb
 }
 
@@ -316,8 +316,14 @@ enum UnitTimeEnum {
 
 
 concept Person extends RiskObject {
-  o Boolean isPolicyHolder
-  o String firstname
-  o String lastname
+  o PersonRelationToPolicyHolderEnum relationToPolicyHolder
+  o String firstName
+  o String lastName
   o Double age
+}
+
+enum PersonRelationToPolicyHolderEnum {
+  o self
+  o father
+  o mother
 }

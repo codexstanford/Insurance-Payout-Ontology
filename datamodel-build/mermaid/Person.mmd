@@ -1,12 +1,13 @@
 classDiagram
-  
+  Person -- PersonRelationToPolicyHolderEnum
+
 
 RiskObject <|-- Person
 class Person {
 
-  boolean isPolicyHolder
-  string firstname
-  string lastname
+  PersonRelationToPolicyHolderEnum relationToPolicyHolder
+  string firstName
+  string lastName
   number age
 
 }

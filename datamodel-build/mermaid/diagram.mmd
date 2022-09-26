@@ -64,7 +64,7 @@ class InsurancePayout {
 
 Multiplier -- MultiplierTimeEnum
 Multiplier -- MultiplierPersonEnum
-Multiplier -- MultiplierOccurenceEnum
+Multiplier -- MultiplierOccurrenceEnum
 Multiplier -- MultiplierInsuredObjectEnum
 
 
@@ -72,7 +72,7 @@ class Multiplier {
 
   MultiplierTimeEnum time
   MultiplierPersonEnum person
-  MultiplierOccurenceEnum occurence
+  MultiplierOccurrenceEnum occurrence
   MultiplierInsuredObjectEnum insuredObject
   string[] other
 
@@ -83,7 +83,7 @@ class MultiplierInsuredObjectEnum {
   o perCar
 }
 
-class MultiplierOccurenceEnum {
+class MultiplierOccurrenceEnum {
 <<enumeration>>
   o perClaim
   o perLine
@@ -121,7 +121,7 @@ class PayoutTypeEnum {
 class Relation {
 
   string impacterId
-  string impacteeId
+  string impactedId
   string verb
 
 }
@@ -211,14 +211,22 @@ UnitEnum o-- UnitTimeEnum
 undefined
 undefined
 undefined
+Person -- PersonRelationToPolicyHolderEnum
 
 
 RiskObject <|-- Person
 class Person {
 
-  boolean isPolicyHolder
-  string firstname
-  string lastname
+  PersonRelationToPolicyHolderEnum relationToPolicyHolder
+  string firstName
+  string lastName
   number age
 
+}
+
+class PersonRelationToPolicyHolderEnum {
+<<enumeration>>
+  o self
+  o father
+  o mother
 }

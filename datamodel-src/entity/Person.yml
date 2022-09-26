@@ -3,11 +3,11 @@ Person:
   inherit: RiskObject
   namespace: org.codex.insurance.core
   properties:
-    isPolicyHolder:
-      type: boolean
-    firstname:
+    relationToPolicyHolder:
+      type: PersonRelationToPolicyHolderEnum
+    firstName:
       type: string
-    lastname:
+    lastName:
       type: string
     age:
       type: number

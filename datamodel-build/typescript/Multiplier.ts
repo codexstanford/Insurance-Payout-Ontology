@@ -1,6 +1,6 @@
 import { MultiplierTimeEnum } from "./MultiplierTimeEnum";
 import { MultiplierPersonEnum } from "./MultiplierPersonEnum";
-import { MultiplierOccurenceEnum } from "./MultiplierOccurenceEnum";
+import { MultiplierOccurrenceEnum } from "./MultiplierOccurrenceEnum";
 import { MultiplierInsuredObjectEnum } from "./MultiplierInsuredObjectEnum";
 import { List } from "./List";
 
@@ -8,7 +8,7 @@ import { List } from "./List";
 export class Multiplier {
   time: MultiplierTimeEnum;
   person: MultiplierPersonEnum;
-  occurence: MultiplierOccurenceEnum;
+  occurrence: MultiplierOccurrenceEnum;
   insuredObject: MultiplierInsuredObjectEnum;
   other: List;
 

@@ -30,7 +30,7 @@ InsurancePayout:
           explanation: "In this case the minimal amount will be $5000"
     multipliers:
       type: Multiplier
-      documentation: "The Payout multiplier, eg: per Person. As it is not possible to have 2 multipliers affecting the same dimension the mullitplier object is used as a way to constraint to one multiplier per dimension."
+      documentation: "The Payout multiplier, eg: per Person. As it is not possible to have 2 multipliers affecting the same dimension the multiplier object is used as a way to constraint to one multiplier per dimension."
     for:
       type: RiskChain
       documentation: "The scope of the payout. 'It is a limit for'"
@@ -46,5 +46,5 @@ InsurancePayout:
       sample:
         extraSample:
           name: "A limit that is out of other limit consumption"
-          legalese: "If you car can not be fix dyring the day, we will pay up to $100 for overnight accomodation independetly of other limits."
+          legalese: "If you car can not be fix during the day, we will pay up to $100 for overnight accommodation independently of other limits."
           explanation: "In this case the $100 amount should not be taken in consideration in other limits, therefore isExtra should be set to true"

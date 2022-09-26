@@ -1,5 +1,5 @@
 Amount:
-  documentation: "An object representing an Amount. <br/> In our representation an amout contain a quantity (how much), a unit (how much of what?), and a unit dimension (in which dimension do we mesure, eg: distance,monetary, ...)"
+  documentation: "An object representing an Amount. <br/> In our representation an amount contain a quantity (how much), a unit (how much of what?), and a unit dimension (in which dimension do we measure, eg: distance,monetary, ...)"
   type: object
   namespace: org.codex.insurance.core
   properties:
@@ -19,7 +19,7 @@ Amount:
     simpleNumeric:
       name: "A simple numeric amount"
       legalese: "300 USD"
-      explanation: "In this case, quantiy will be 300, the unit will be USD, and the unitDimension will be Monetary"
+      explanation: "In this case, quantity will be 300, the unit will be USD, and the unitDimension will be Monetary"
       table:
         quantity: 300
         unit: UnitMonetaryEnum.USD

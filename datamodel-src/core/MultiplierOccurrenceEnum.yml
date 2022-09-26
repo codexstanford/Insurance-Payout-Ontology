@@ -1,4 +1,4 @@
-MultiplierOccurenceEnum:
+MultiplierOccurrenceEnum:
   type: enum
   namespace: org.codex.insurance.core
   values:

@@ -2,7 +2,7 @@
 
 export class Relation {
   impacterId: string;
-  impacteeId: string;
+  impactedId: string;
   verb: string;
 
 
