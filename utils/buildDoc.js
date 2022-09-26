@@ -1,8 +1,7 @@
 const fs = require('fs');
-const yaml = require('yaml');
 
+const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
 
-const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
 const DATA_MODEL_DOC_PATH = `${__dirname}/../docs`;
 const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 const DATA_MODEL_TPL_PATH = `${__dirname}/../data-model-web-doc-template`;
@@ -16,7 +15,6 @@ if (fs.existsSync(DATA_MODEL_DOC_PATH)) {
 fs.mkdirSync(DATA_MODEL_DOC_PATH);
 
 
-
 let template = fs.readFileSync(`${DATA_MODEL_TPL_PATH}/index.html`, 'utf-8');
 
 // build home
@@ -25,13 +23,11 @@ let home = fs.readFileSync(`${DATA_MODEL_TPL_PATH}/home.html`, 'utf-8');
 home = template.replace('$$CONTENT', home);
 home = home.replace('MAIN_SVG_DIAGRAM_IMG', fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.svg`, 'utf8'));
 
-
 fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/index.html`, home);
 
 
 
-// buidl individual docs
-let objectsList = fs.readdirSync(DATA_MODEL_SRC_PATH);
+let objectsList = loadObjFromSrc();
 
 // first Index ALl
 let INDEX = {
@@ -44,12 +40,9 @@ function buildIndex() {
   let DM_INDEX_CORE = "";
   let DM_INDEX_SYSTEM = "";
   for (let file of objectsList) {
-    // skip dot files
-    if (file[0] == '.') {
-      continue;
-    }
-    let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${file}`, 'utf-8'));
-    let objName =  Object.keys(data)[0];
+
+    let data = file.data;
+    let objName =  file.name;
     
     INDEX[objName] = data[objName];
     if (INDEX[objName].namespace.indexOf("org.codex.insurance.core.system") == 0) {

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const yaml = require('yaml');
+const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
 
 const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
 const DATA_MODEL_JSON_PATH = `${__dirname}/../datamodel-build/json`;
@@ -7,7 +7,7 @@ const UTILS_ANNOTATION_PATH = `${__dirname}/annotationBuilder`;
 // document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
 
 
-let objectsList = fs.readdirSync(DATA_MODEL_SRC_PATH);
+let objectsList = loadObjFromSrc();
 
 // remove old build
 if (fs.existsSync(DATA_MODEL_JSON_PATH)) {
@@ -19,10 +19,6 @@ fs.mkdirSync(DATA_MODEL_JSON_PATH);
 
 let output = {};
 for (let file of objectsList) {
-  // skip dot files
-  if (file[0] == '.') {
-    continue;
-  }
 
   buildJSON(file);
 
@@ -35,8 +31,9 @@ fs.writeFileSync(`${UTILS_ANNOTATION_PATH}/datamodel.js`, "let datamodel = " + J
 
 
 
-function buildJSON(fileName) {
-  let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${fileName}`, 'utf-8'));
+function buildJSON(file) {
+  let fileName = file.name;
+  let data = file.data;
 
   console.log(JSON.stringify(data, null, 2));
 

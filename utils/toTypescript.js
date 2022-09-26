@@ -1,11 +1,11 @@
 const fs = require('fs');
-const { stringify } = require('querystring');
-const yaml = require('yaml');
+const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
+
 
 const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
 const DATA_MODEL_TS_PATH = `${__dirname}/../datamodel-build/typescript`;
 
-let objectsList = fs.readdirSync(DATA_MODEL_SRC_PATH);
+let objectsList = loadObjFromSrc();
 
 // remove old build
 if (fs.existsSync(DATA_MODEL_TS_PATH)) {
@@ -17,16 +17,11 @@ fs.mkdirSync(DATA_MODEL_TS_PATH);
 // for each object, build the TS
 
 for (let file of objectsList) {
-  // skip dot files
-  if (file[0] == '.') {
-    continue;
-  }
-
   buildTypeScriptObject(file);
 }
 
-function buildTypeScriptObject(fileName) {
-  let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${fileName}`, 'utf-8'));
+function buildTypeScriptObject(file) {
+  let data = file.data;
 
   console.log(JSON.stringify(data, null, 2));
 

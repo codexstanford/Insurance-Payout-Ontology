@@ -36,18 +36,6 @@
       }
     }
   },
-  "ChainCompositionNot": {
-    "type": "object",
-    "documentation": "Represent a negative composition in a chain",
-    "inherit": "Chainable",
-    "namespace": "org.codex.insurance.core",
-    "properties": {
-      "operands": {
-        "type": "List",
-        "of": "RiskChain"
-      }
-    }
-  },
   "ChainCompositionOr": {
     "type": "object",
     "documentation": "Represent a composition in a chain, aka an OR on multiple risk chains",
@@ -78,6 +66,9 @@
     "values": {
       "wildcard": {
         "doc": "The wildcard operator, match anything"
+      },
+      "not": {
+        "doc": "the Not operator"
       }
     }
   },
@@ -85,30 +76,6 @@
     "type": "object",
     "isAbstract": true,
     "namespace": "org.codex.insurance.core"
-  },
-  "InsuranceBenefits": {
-    "type": "object",
-    "documentation": "Represent an insurance benefits. A benefits is a rish chain (what could happen) associated with a payout.",
-    "namespace": "org.codex.insurance.core",
-    "properties": {
-      "riskChain": {
-        "type": "RiskChain",
-        "documentation": "What could happen to match this benefit"
-      },
-      "payout": {
-        "type": "List",
-        "of": "InsurancePayout",
-        "documentation": "What are the expected payout associat with this benefits."
-      },
-      "name": {
-        "type": "string",
-        "documentation": "The name of the benefits."
-      },
-      "description": {
-        "type": "string",
-        "documentation": "A short documentation of the benefits"
-      }
-    }
   },
   "InsurancePayout": {
     "documentation": "An object representing an insurance payout: what modification should be apply to the claim amount, as describe in a contract. <br/><br/>There is different type of payout (see PayoutTypeEnum), such as Limit or Deductible. This model was develop to be able to represent any type of payouts. (see Documentation)",
@@ -172,18 +139,6 @@
             "explanation": "In this case the $100 amount should not be taken in consideration in other limits, therefore isExtra should be set to true"
           }
         }
-      }
-    }
-  },
-  "InsurancePolicy": {
-    "type": "object",
-    "documentation": "An insurance policy. Currently partial, to be extend",
-    "namespace": "org.codex.insurance.core",
-    "properties": {
-      "benefits": {
-        "documentation": "A list of benefits contain in the insurance policy",
-        "type": "List",
-        "of": "InsuranceBenefits"
       }
     }
   },
@@ -303,25 +258,6 @@
       },
       "Exclusion": {
         "documentation": "An exclusion means the sum to pay is zero. Exclusion takes precedence over every other modification applied to the payout. If an exclusion applies, the payout is always zero for the claim or line of claim the exclusion applies to."
-      }
-    }
-  },
-  "Person": {
-    "type": "object",
-    "inherit": "RiskObject",
-    "namespace": "org.codex.insurance.core",
-    "properties": {
-      "isPolicyHolder": {
-        "type": "boolean"
-      },
-      "firstname": {
-        "type": "string"
-      },
-      "lastname": {
-        "type": "string"
-      },
-      "age": {
-        "type": "number"
       }
     }
   },
@@ -1759,5 +1695,24 @@
     "type": "system",
     "documentation": "represent a string",
     "namespace": "org.codex.insurance.core.system"
+  },
+  "Person": {
+    "type": "object",
+    "inherit": "RiskObject",
+    "namespace": "org.codex.insurance.core",
+    "properties": {
+      "isPolicyHolder": {
+        "type": "boolean"
+      },
+      "firstname": {
+        "type": "string"
+      },
+      "lastname": {
+        "type": "string"
+      },
+      "age": {
+        "type": "number"
+      }
+    }
   }
 }

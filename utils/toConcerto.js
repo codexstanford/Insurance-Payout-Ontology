@@ -1,6 +1,6 @@
 const fs = require('fs');
-const yaml = require('yaml');
-const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
+const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
+
 const DATA_MODEL_CONCERTO_PATH = `${__dirname}/../docs/concerto`;
 
 // document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
@@ -16,28 +16,22 @@ fs.mkdirSync(DATA_MODEL_CONCERTO_PATH);
 
 // for each object, build the ctl
 
-let objectsList = fs.readdirSync(DATA_MODEL_SRC_PATH);
+let objectsList = loadObjFromSrc();
 let output = `namespace org.codex.insurance
 `;
 
 for (let file of objectsList) {
-  // skip dot files
-  if (file[0] == '.') {
-    continue;
-  }
-
-
   output += buildConcerto(file);
 }
 
 fs.writeFileSync(`${DATA_MODEL_CONCERTO_PATH}/insurance.cto`, output, 'utf8');
 
 
-function buildConcerto(fileName) {
+function buildConcerto(file) {
   console.log(`----
-  ${fileName}
+  ${file.name}
   `)
-  let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${fileName}`, 'utf-8'));
+  let data = file.data;
 
   console.log(JSON.stringify(data, null, 2));
 

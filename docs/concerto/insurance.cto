@@ -75,13 +75,6 @@ enum PayoutTypeEnum {
   o Exclusion
 }
 
-concept Person extends RiskObject {
-  o Boolean isPolicyHolder
-  o String firstname
-  o String lastname
-  o Double age
-}
-
 concept Relation {
   o String impacterId
   o String impacteeId
@@ -321,3 +314,10 @@ enum UnitTimeEnum {
 
 
 
+
+concept Person extends RiskObject {
+  o Boolean isPolicyHolder
+  o String firstname
+  o String lastname
+  o Double age
+}

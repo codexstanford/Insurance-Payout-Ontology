@@ -16,16 +16,6 @@ class Amount {
 
 }
 
-ChainCompositionNot -- RiskChain
-
-
-Chainable &lt|-- ChainCompositionNot
-class ChainCompositionNot {
-
-  RiskChain[] operands
-
-}
-
 ChainCompositionOr -- RiskChain
 
 
@@ -49,6 +39,7 @@ class ChainOperator {
 class ChainOperatorEnum {
 &lt&ltenumeration&gt&gt
   o wildcard
+  o not
 }
 
 
@@ -56,19 +47,6 @@ class ChainOperatorEnum {
 class Chainable {
 &lt&ltabstract&gt&gt
 
-
-}
-
-InsuranceBenefits -- RiskChain
-InsuranceBenefits -- InsurancePayout
-
-
-class InsuranceBenefits {
-
-  RiskChain riskChain
-  InsurancePayout[] payout
-  string name
-  string description
 
 }
 
@@ -86,15 +64,6 @@ class InsurancePayout {
   Multiplier multipliers
   RiskChain for
   boolean impactOtherConsumption
-
-}
-
-InsurancePolicy -- InsuranceBenefits
-
-
-class InsurancePolicy {
-
-  InsuranceBenefits[] benefits
 
 }
 
@@ -150,18 +119,6 @@ class PayoutTypeEnum {
   o Deductible
   o Franchise
   o . . . 2 more values
-}
-
-
-
-RiskObject &lt|-- Person
-class Person {
-
-  boolean isPolicyHolder
-  string firstname
-  string lastname
-  number age
-
 }
 
 
@@ -259,6 +216,18 @@ UnitEnum o-- UnitTimeEnum
 undefined
 undefined
 undefined
+
+
+RiskObject &lt|-- Person
+class Person {
+
+  boolean isPolicyHolder
+  string firstname
+  string lastname
+  number age
+
+}
+
 
 
 

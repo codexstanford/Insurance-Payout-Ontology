@@ -1,7 +1,7 @@
 const fs = require('fs');
-const yaml = require('yaml');
+const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
+
 const execSync = require('child_process').execSync;
-const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
 const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 
 // document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
@@ -22,26 +22,10 @@ if (REDO_ALL) {
 
 // for each object, build the TS
 
-let objectsList = fs.readdirSync(DATA_MODEL_SRC_PATH);
+let objectsList = loadObjFromSrc();
 let output = "classDiagram";
+
 for (let file of objectsList) {
-  // skip dot files
-  if (file[0] == '.') {
-    continue;
-  }
-
-  if (!REDO_ALL) {
-    if (fs.existsSync(`${DATA_MODEL_MERMAID_PATH}/${file.replace('.yml', '.svg')}`)) {
-      let statSvg = fs.statSync(`${DATA_MODEL_MERMAID_PATH}/${file.replace('.yml', '.svg')}`);
-      let statYml = fs.statSync(`${DATA_MODEL_SRC_PATH}/${file}`);
-
-      if (statSvg.mtimeMs > statYml.mtimeMs) {
-        console.log(`skip Object ${file}`);
-        continue;
-      }
-
-    }
-  }
 
   output += buildMermaid(file);
 }
@@ -83,12 +67,14 @@ fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.svg`, styleIt(
   fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.svg`, 'utf8')
 ));
 
-function buildMermaid(fileName) {
+function buildMermaid(file) {
+  let fileName = file.name;
+  let data = file.data;
+
   console.log(`----
   ${fileName}
   `)
-  let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${fileName}`, 'utf-8'));
-
+  
   console.log(JSON.stringify(data, null, 2));
 
   let output  = `
