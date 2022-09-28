@@ -5,4 +5,6 @@ export enum PayoutTypeEnum {
   Franchise,
   StrictLimit,
   Exclusion,
+  CoPayment,
+  CoInsurance,
 }

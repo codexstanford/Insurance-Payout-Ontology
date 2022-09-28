@@ -258,6 +258,12 @@ let datamodel = {
       },
       "Exclusion": {
         "documentation": "An exclusion means the sum to pay is zero. Exclusion takes precedence over every other modification applied to the payout. If an exclusion applies, the payout is always zero for the claim or line of claim the exclusion applies to."
+      },
+      "CoPayment": {
+        "documentation": "A co pay is an amount to be withheld before deductible apply"
+      },
+      "CoInsurance": {
+        "documentation": "A co pay is an amount to be withheld before deductible apply"
       }
     }
   },

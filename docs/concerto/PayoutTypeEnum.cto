@@ -7,5 +7,7 @@ enum PayoutTypeEnum {
   o Franchise
   o StrictLimit
   o Exclusion
+  o CoPayment
+  o CoInsurance
 }
 

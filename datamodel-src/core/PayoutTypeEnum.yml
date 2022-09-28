@@ -15,3 +15,7 @@ PayoutTypeEnum:
       documentation: "A StrictLimit is the opposite of a franchise. If the strictLimit amount is attained, then the claim amount is brought to zero. If the amount is under then the claim amount is conserved."
     Exclusion:
       documentation: "An exclusion means the sum to pay is zero. Exclusion takes precedence over every other modification applied to the payout. If an exclusion applies, the payout is always zero for the claim or line of claim the exclusion applies to."
+    CoPayment:
+      documentation: "A co pay is an amount to be withheld before deductible apply"
+    CoInsurance:
+      documentation: "A co pay is an amount to be withheld before deductible apply"
