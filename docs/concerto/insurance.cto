@@ -6,6 +6,7 @@ concept Amount {
   o UnitDimensionEnum unitDimension
 }
 
+
 concept ChainCompositionOr extends Chainable {
   o RiskChain[] operands
 }
@@ -76,6 +77,7 @@ enum PayoutTypeEnum {
   o CoPayment
   o CoInsurance
 }
+
 
 concept Relation {
   o String impacterId

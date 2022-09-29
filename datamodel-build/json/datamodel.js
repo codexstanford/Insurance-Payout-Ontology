@@ -36,6 +36,21 @@ let datamodel = {
       }
     }
   },
+  "Benefits": {
+    "type": "class",
+    "properties": {
+      "payouts": {
+        "type": "List",
+        "of": "InsurancePayout"
+      },
+      "riskChain": {
+        "type": "RiskChain"
+      },
+      "text": {
+        "type": "string"
+      }
+    }
+  },
   "ChainCompositionOr": {
     "type": "object",
     "documentation": "Represent a composition in a chain, aka an OR on multiple risk chains",
@@ -264,6 +279,19 @@ let datamodel = {
       },
       "CoInsurance": {
         "documentation": "A co pay is an amount to be withheld before deductible apply"
+      }
+    }
+  },
+  "Product": {
+    "type": "class",
+    "properties": {
+      "benefits": {
+        "type": "List",
+        "of": "Benefits"
+      },
+      "riskObjects": {
+        "type": "List",
+        "of": "RiskObjects"
       }
     }
   },

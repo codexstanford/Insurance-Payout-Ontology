@@ -39,7 +39,7 @@
     </div>
     <script>
       
-      let startPoint = "InsuranceBenefits";
+      let startPoint = "Benefits";
 
       function annotate() {
         let annotations = document.getElementsByClassName('annotationInput');
@@ -165,7 +165,7 @@
         if (!datamodel[target]) {
           return container;
         }
-        if (datamodel[target].type == "object") {
+        if (datamodel[target].type == "class") {
           for (let property in datamodel[target].properties) {
             container.innerHTML += `<div>${property}: `;
             if (datamodel[target].properties[property].type == "List") {
