@@ -8,8 +8,20 @@ Vehicle:
       ask:
         en: "Which year was the vehicle produced?"
         fr: "Quand le vehicle a-t-il ete produit?"
+    age: 
+      type: Amount
+      documentation: "The age of the vehicle"
+      ask:
+        en: "How old is the vehicle in year?"
     length:
       type: Amount
-      dimension: "distance"
-      unit: "meter"
-      documentation: "The lenght of the vehicle in meter"
+      with:
+        unit: UnitDistanceEnum.meter
+        unitDimension: "distance"
+      documentation: "The length of the vehicle in meter"   
+    weight:
+      type: Amount 
+      with:
+        unit: UnitMassEnum.kilogram
+        unitDimension: "mass"
+      documentation: "The weight of the vehicle in kilogram"

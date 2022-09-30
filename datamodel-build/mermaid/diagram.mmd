@@ -234,22 +234,34 @@ class Situation {
 
 class UnitDimensionEnum {
 <<enumeration>>
-  o Monetary
-  o Time
-  o Distance
-  o Person
+  o monetary
+  o time
+  o distance
+  o mass
+  o . . . 1 more values
 }
 
 UnitEnum o-- UnitDistanceEnum
   class UnitDistanceEnum {
 <<enumeration>>
   o meter
-  o kilometer
-  o miles
+  o decimeter
+  o centimeter
+  o millimeter
+  o . . . 8 more values
 }
 
 class UnitEnum {
 <<enumeration>>
+}
+
+UnitEnum o-- UnitMassEnum
+  class UnitMassEnum {
+<<enumeration>>
+  o kilogram
+  o gram
+  o ton
+  o pound
 }
 
 UnitEnum o-- UnitMonetaryEnum
@@ -274,11 +286,11 @@ UnitEnum o-- UnitPersonEnum
 UnitEnum o-- UnitTimeEnum
   class UnitTimeEnum {
 <<enumeration>>
-  o day
-  o consecutiveDay
-  o night
-  o month
-  o . . . 1 more values
+  o second
+  o millisecond
+  o minute
+  o hour
+  o . . . 5 more values
 }
 
 
@@ -319,7 +331,9 @@ RiskObject <|-- Vehicle
 class Vehicle {
 
   Amount productionYear
+  Amount age
   Amount length
+  Amount weight
 
 }
 

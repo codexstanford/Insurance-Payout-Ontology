@@ -1,7 +1,11 @@
 export enum UnitTimeEnum {
+  second,
+  millisecond,
+  minute,
+  hour,
   day,
-  consecutiveDay,
-  night,
+  week,
   month,
   year,
+  night,
 }

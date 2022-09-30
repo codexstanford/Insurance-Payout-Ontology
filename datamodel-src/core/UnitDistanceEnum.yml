@@ -3,11 +3,62 @@ UnitDistanceEnum:
   inherit: UnitEnum
   values:
     meter:
-      documentation: meter
-      displayName:
-        en: "Meter" 
+      primaryKey: "meter"
       conversion: 1
+      displayName.en: "meter"
+      shortNotation.en: "m"
+    decimeter:
+      primaryKey: "decimeter"
+      conversion: 0.1
+      displayName.en: "decimeter"
+      shortNotation.en: "dm"
+    centimeter:
+      primaryKey: "centimeter"
+      conversion: 0.01
+      displayName.en: "centimeter"
+      shortNotation.en: "cm"
+    millimeter:
+      primaryKey: "millimeter"
+      conversion: 0.001
+      displayName.en: "millimeter"
+      shortNotation.en: "mm"
+    decameter:
+      primaryKey: "decameter"
+      conversion: 10
+      displayName.en: "decameter"
+      shortNotation.en: "dam"
+    hectometer:
+      primaryKey: "hectometer"
+      conversion: 100
+      displayName.en: "hectometer"
+      shortNotation.en: "hm"
     kilometer:
-      documentation: kilometer
+      primaryKey: "kilometer"
+      conversion: 1000
+      displayName.en: "kilometer"
+      shortNotation.en: "km"
+    yard:
+      primaryKey: "yard"
+      conversion: 0.9144
+      displayName.en: "yard"
+      shortNotation.en: "yd."
+    inch:
+      primaryKey: "inch"
+      conversion: 0.0254
+      displayName.en: "inch"
+      shortNotation.en: "in"
     miles:
-      documentation: miles
+      primaryKey: "miles"
+      conversion: 1609.34
+      displayName.en: "miles"
+      shortNotation.en: "mi"
+    nauticalMiles:
+      primaryKey: "nauticalMiles"
+      conversion: 1852
+      displayName.en: "nautical miles"
+      shortNotation.en: "NM"
+    foot:
+      primaryKey: "foot"
+      conversion: 0.3048
+      displayName.en: "foot"
+      shortNotation.en: "ft"

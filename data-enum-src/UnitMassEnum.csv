@@ -1,0 +1,5 @@
+primaryKey,conversion,displayName.en
+kilogram,1,kg
+gram,0.001,g
+ton,1000,T
+pound,0.45359237,lb

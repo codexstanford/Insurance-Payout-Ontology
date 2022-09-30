@@ -1,0 +1,20 @@
+UnitMassEnum:
+  type: enum
+  inherit: UnitEnum
+  values:
+    kilogram:
+      primaryKey: "kilogram"
+      conversion: 1
+      displayName.en: "kg"
+    gram:
+      primaryKey: "gram"
+      conversion: 0.001
+      displayName.en: "g"
+    ton:
+      primaryKey: "ton"
+      conversion: 1000
+      displayName.en: "T"
+    pound:
+      primaryKey: "pound"
+      conversion: 0.45359237
+      displayName.en: "lb"

@@ -2,13 +2,30 @@ UnitTimeEnum:
   type: enum
   inherit: UnitEnum
   values:
+    second:
+      primaryKey: "second"
+      displayName.en: "second"
+    millisecond:
+      primaryKey: "millisecond"
+      displayName.en: "millisecond"
+    minute:
+      primaryKey: "minute"
+      displayName.en: "minute"
+    hour:
+      primaryKey: "hour"
+      displayName.en: "hour"
     day:
-      documentation: "day"
-    consecutiveDay:
-      documentation: "consecutive day"
-    night:
-      documentation: "night"
+      primaryKey: "day"
+      displayName.en: "day"
+    week:
+      primaryKey: "week"
+      displayName.en: "week"
     month:
-      documentation: "month"
+      primaryKey: "month"
+      displayName.en: "month"
     year:
-      documentation: "year"
+      primaryKey: "year"
+      displayName.en: "year"
+    night:
+      primaryKey: "night"
+      displayName.en: "night"

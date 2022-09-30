@@ -1,0 +1,13 @@
+primaryKey,conversion,displayName.en,shortNotation.en
+meter,1,meter,m
+decimeter,0.1,decimeter,dm
+centimeter,0.01,centimeter,cm
+millimeter,0.001,millimeter,mm
+decameter,10,decameter,dam
+hectometer,100,hectometer,hm
+kilometer,1000,kilometer,km
+yard,0.9144,yard,yd.
+inch,0.0254,inch,in
+miles,1609.34,miles,mi
+nauticalMiles,1852,nautic miles,NM
+foot,0.3048,foot,ft

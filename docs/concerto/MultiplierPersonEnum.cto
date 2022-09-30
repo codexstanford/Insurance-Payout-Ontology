@@ -1,0 +1,9 @@
+namespace undefined
+
+enum MultiplierPersonEnum {
+  o perPerson
+  o perPassenger
+  o perEmployee
+  o perLoneTraveler
+}
+

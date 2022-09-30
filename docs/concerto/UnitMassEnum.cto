@@ -1,0 +1,9 @@
+namespace undefined
+
+enum UnitMassEnum {
+  o kilogram
+  o gram
+  o ton
+  o pound
+}
+

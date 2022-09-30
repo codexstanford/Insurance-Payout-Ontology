@@ -412,17 +412,20 @@
   "UnitDimensionEnum": {
     "type": "enum",
     "values": {
-      "Monetary": {
+      "monetary": {
         "documentation": "A monetary amount"
       },
-      "Time": {
+      "time": {
         "documentation": "A time"
       },
-      "Distance": {
+      "distance": {
         "documentation": "A distance"
       },
-      "Person": {
-        "documentation": "Persons"
+      "mass": {
+        "documentation": "A mass"
+      },
+      "person": {
+        "documentation": "An amount of person"
       }
     }
   },
@@ -431,23 +434,108 @@
     "inherit": "UnitEnum",
     "values": {
       "meter": {
-        "documentation": "meter",
-        "displayName": {
-          "en": "Meter"
-        },
-        "conversion": 1
+        "primaryKey": "meter",
+        "conversion": 1,
+        "displayName.en": "meter",
+        "shortNotation.en": "m"
+      },
+      "decimeter": {
+        "primaryKey": "decimeter",
+        "conversion": 0.1,
+        "displayName.en": "decimeter",
+        "shortNotation.en": "dm"
+      },
+      "centimeter": {
+        "primaryKey": "centimeter",
+        "conversion": 0.01,
+        "displayName.en": "centimeter",
+        "shortNotation.en": "cm"
+      },
+      "millimeter": {
+        "primaryKey": "millimeter",
+        "conversion": 0.001,
+        "displayName.en": "millimeter",
+        "shortNotation.en": "mm"
+      },
+      "decameter": {
+        "primaryKey": "decameter",
+        "conversion": 10,
+        "displayName.en": "decameter",
+        "shortNotation.en": "dam"
+      },
+      "hectometer": {
+        "primaryKey": "hectometer",
+        "conversion": 100,
+        "displayName.en": "hectometer",
+        "shortNotation.en": "hm"
       },
       "kilometer": {
-        "documentation": "kilometer"
+        "primaryKey": "kilometer",
+        "conversion": 1000,
+        "displayName.en": "kilometer",
+        "shortNotation.en": "km"
+      },
+      "yard": {
+        "primaryKey": "yard",
+        "conversion": 0.9144,
+        "displayName.en": "yard",
+        "shortNotation.en": "yd."
+      },
+      "inch": {
+        "primaryKey": "inch",
+        "conversion": 0.0254,
+        "displayName.en": "inch",
+        "shortNotation.en": "in"
       },
       "miles": {
-        "documentation": "miles"
+        "primaryKey": "miles",
+        "conversion": 1609.34,
+        "displayName.en": "miles",
+        "shortNotation.en": "mi"
+      },
+      "nauticalMiles": {
+        "primaryKey": "nauticalMiles",
+        "conversion": 1852,
+        "displayName.en": "nautical miles",
+        "shortNotation.en": "NM"
+      },
+      "foot": {
+        "primaryKey": "foot",
+        "conversion": 0.3048,
+        "displayName.en": "foot",
+        "shortNotation.en": "ft"
       }
     }
   },
   "UnitEnum": {
     "type": "enum",
     "isAbstract": true
+  },
+  "UnitMassEnum": {
+    "type": "enum",
+    "inherit": "UnitEnum",
+    "values": {
+      "kilogram": {
+        "primaryKey": "kilogram",
+        "conversion": 1,
+        "displayName.en": "kg"
+      },
+      "gram": {
+        "primaryKey": "gram",
+        "conversion": 0.001,
+        "displayName.en": "g"
+      },
+      "ton": {
+        "primaryKey": "ton",
+        "conversion": 1000,
+        "displayName.en": "T"
+      },
+      "pound": {
+        "primaryKey": "pound",
+        "conversion": 0.45359237,
+        "displayName.en": "lb"
+      }
+    }
   },
   "UnitMonetaryEnum": {
     "type": "enum",
@@ -1747,20 +1835,41 @@
     "type": "enum",
     "inherit": "UnitEnum",
     "values": {
+      "second": {
+        "primaryKey": "second",
+        "displayName.en": "second"
+      },
+      "millisecond": {
+        "primaryKey": "millisecond",
+        "displayName.en": "millisecond"
+      },
+      "minute": {
+        "primaryKey": "minute",
+        "displayName.en": "minute"
+      },
+      "hour": {
+        "primaryKey": "hour",
+        "displayName.en": "hour"
+      },
       "day": {
-        "documentation": "day"
+        "primaryKey": "day",
+        "displayName.en": "day"
       },
-      "consecutiveDay": {
-        "documentation": "consecutive day"
-      },
-      "night": {
-        "documentation": "night"
+      "week": {
+        "primaryKey": "week",
+        "displayName.en": "week"
       },
       "month": {
-        "documentation": "month"
+        "primaryKey": "month",
+        "displayName.en": "month"
       },
       "year": {
-        "documentation": "year"
+        "primaryKey": "year",
+        "displayName.en": "year"
+      },
+      "night": {
+        "primaryKey": "night",
+        "displayName.en": "night"
       }
     }
   },
@@ -2008,11 +2117,28 @@
           "fr": "Quand le vehicle a-t-il ete produit?"
         }
       },
+      "age": {
+        "type": "Amount",
+        "documentation": "The age of the vehicle",
+        "ask": {
+          "en": "How old is the vehicle in year?"
+        }
+      },
       "length": {
         "type": "Amount",
-        "dimension": "distance",
-        "unit": "meter",
-        "documentation": "The lenght of the vehicle in meter"
+        "with": {
+          "unit": "UnitDistanceEnum.meter",
+          "unitDimension": "distance"
+        },
+        "documentation": "The length of the vehicle in meter"
+      },
+      "weight": {
+        "type": "Amount",
+        "with": {
+          "unit": "UnitMassEnum.kilogram",
+          "unitDimension": "mass"
+        },
+        "documentation": "The weight of the vehicle in kilogram"
       },
       "id": {
         "type": "string",

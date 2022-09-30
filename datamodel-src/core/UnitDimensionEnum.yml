@@ -1,11 +1,13 @@
 UnitDimensionEnum:
   type: enum
   values:
-    Monetary:
+    monetary:
       documentation: "A monetary amount"
-    Time:
+    time:
       documentation: "A time"
-    Distance:
+    distance:
       documentation: "A distance"
-    Person:
-      documentation: "Persons"
+    mass:
+      documentation: "A mass"
+    person:
+      documentation: "An amount of person"

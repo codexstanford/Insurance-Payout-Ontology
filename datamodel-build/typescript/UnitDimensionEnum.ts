@@ -1,6 +1,7 @@
 export enum UnitDimensionEnum {
-  Monetary,
-  Time,
-  Distance,
-  Person,
+  monetary,
+  time,
+  distance,
+  mass,
+  person,
 }

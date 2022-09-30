@@ -22,7 +22,14 @@ fs.createReadStream(`${__dirname}/${process.argv[2]}`)
         let obj = {};
 
         for (let key in row) {
-          console.log(`      ${key}: "${row[key]}"`)
+          // is not digit
+          if ("0123456789".indexOf(row[key][0]) == -1) {
+            console.log(`      ${key}: "${row[key]}"`)
+          }
+          else {
+            console.log(`      ${key}: ${row[key]}`)
+          }
+        
         }
 
     }

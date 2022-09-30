@@ -1,0 +1,9 @@
+namespace undefined
+
+
+
+concept Relation {
+  o String impacterId
+  o String impactedId
+  o String verb
+}

@@ -1,0 +1,9 @@
+namespace undefined
+
+enum UnitPersonEnum {
+  o person
+  o passenger
+  o driver
+  o policyholder
+}
+

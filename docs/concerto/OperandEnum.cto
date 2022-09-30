@@ -1,0 +1,7 @@
+namespace undefined
+
+enum OperandEnum {
+  o addition
+  o substraction
+}
+
