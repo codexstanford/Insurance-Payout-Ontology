@@ -1,6 +1,5 @@
 UnitDimensionEnum:
   type: enum
-  namespace: org.codex.insurance.core
   values:
     Monetary:
       documentation: "A monetary amount"

@@ -1,8 +1,12 @@
 UnitDistanceEnum:
   type: enum
-  namespace: org.codex.insurance.core
   inherit: UnitEnum
   values:
+    meter:
+      documentation: meter
+      displayName:
+        en: "Meter" 
+      conversion: 1
     kilometer:
       documentation: kilometer
     miles:

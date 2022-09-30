@@ -2,7 +2,6 @@ RiskObject:
   type: object
   isAbstract: true
   documentation: "Represent a real thing in the world!"
-  namespace: org.codex.insurance.core
   properties:
     id:
       type: string

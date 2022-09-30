@@ -10,9 +10,6 @@ node buildEnumFromCsv.js <cvsPath> <primaryKeyColumnName>
 }
 // usage :
 
-let header = fs.readFileSync(`${__dirname}/${process.argv[2].replace('.csv', '.yml')}`, 'utf8');
-
-console.log(header);
 fs.createReadStream(`${__dirname}/${process.argv[2]}`)
   .pipe(csv())
   .on('data', (data) => results.push(data))

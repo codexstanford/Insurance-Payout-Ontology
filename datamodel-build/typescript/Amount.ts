@@ -1,9 +1,10 @@
+import { Operand } from "./Operand";
 import { UnitEnum } from "./UnitEnum";
 import { UnitDimensionEnum } from "./UnitDimensionEnum";
 
 
 export class Amount {
-  quantity: string;
+  quantity: Operand;
   unit: UnitEnum;
   unitDimension: UnitDimensionEnum;
 

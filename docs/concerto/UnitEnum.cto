@@ -1,4 +1,4 @@
-namespace org.codex.insurance.core
+namespace undefined
 
 enum UnitEnum {
 }

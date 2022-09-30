@@ -1,6 +1,5 @@
 Relation:
   type: object
-  namespace: org.codex.insurance.core
   properties:
     impacterId:
       type: string

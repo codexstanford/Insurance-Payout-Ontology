@@ -1,7 +1,6 @@
 Person:
   type: object
   inherit: RiskObject
-  namespace: org.codex.insurance.core
   properties:
     relationToPolicyHolder:
       type: PersonRelationToPolicyHolderEnum

@@ -1,7 +1,6 @@
 Situation:
   type: object
   inherit: Chainable
-  namespace: org.codex.insurance.core
   documentation: Represent a Situation
   properties:
     id:

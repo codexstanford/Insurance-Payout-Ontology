@@ -1,4 +1,0 @@
-boolean:
-  type: system
-  documentation: "represent a boolean"
-  namespace: org.codex.insurance.core.system

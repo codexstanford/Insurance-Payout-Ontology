@@ -21,7 +21,8 @@ function loadObjFromSrc() {
         objectsList.push({
           name: objName,
           data : data,
-          from: dirname
+          from: dirname,
+          namespace: dirname
         })
       }
     

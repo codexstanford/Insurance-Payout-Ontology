@@ -1,17 +1,29 @@
 classDiagram
+Amount -- Operand
 Amount -- UnitEnum
 Amount -- UnitDimensionEnum
 
 
 class Amount {
 
-  string quantity
+  Operand quantity
   UnitEnum unit
   UnitDimensionEnum unitDimension
 
 }
 
-undefined
+Benefits -- InsurancePayout
+Benefits -- RiskChain
+
+
+class Benefits {
+
+  InsurancePayout[] payouts
+  RiskChain riskChain
+  string text
+
+}
+
 ChainCompositionOr -- RiskChain
 
 
@@ -108,6 +120,35 @@ class MultiplierTimeEnum {
   o . . . 3 more values
 }
 
+
+
+class Number {
+
+
+}
+
+
+
+class Operable {
+<<abstract>>
+
+
+}
+
+class OperandEnum {
+<<enumeration>>
+  o addition
+  o substraction
+}
+
+
+
+Operable <|-- Operation
+class Operation {
+
+
+}
+
 class PayoutTypeEnum {
 <<enumeration>>
   o Limit
@@ -117,7 +158,17 @@ class PayoutTypeEnum {
   o . . . 4 more values
 }
 
-undefined
+Product -- Benefits
+Product -- RiskObjects
+
+
+class Product {
+
+  Benefits[] benefits
+  RiskObjects[] riskObjects
+
+}
+
 
 
 class Relation {
@@ -173,6 +224,7 @@ class UnitDimensionEnum {
 UnitEnum o-- UnitDistanceEnum
   class UnitDistanceEnum {
 <<enumeration>>
+  o meter
   o kilometer
   o miles
 }
@@ -210,9 +262,15 @@ UnitEnum o-- UnitTimeEnum
   o . . . 1 more values
 }
 
-undefined
-undefined
-undefined
+
+
+Operable <|-- Variable
+class Variable {
+
+  string name
+
+}
+
 Person -- PersonRelationToPolicyHolderEnum
 
 
@@ -228,7 +286,23 @@ class Person {
 
 class PersonRelationToPolicyHolderEnum {
 <<enumeration>>
-  o self
-  o father
-  o mother
+  o aunt
+  o bother
+  o brotherInLaw
+  o cousin
+  o . . . 28 more values
 }
+
+
+
+RiskObject <|-- Person
+class Person {
+
+  number productionYear
+  number length
+
+}
+
+undefined
+undefined
+undefined

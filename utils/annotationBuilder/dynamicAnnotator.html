@@ -165,7 +165,7 @@
         if (!datamodel[target]) {
           return container;
         }
-        if (datamodel[target].type == "class") {
+        if (datamodel[target].type == "object") {
           for (let property in datamodel[target].properties) {
             container.innerHTML += `<div>${property}: `;
             if (datamodel[target].properties[property].type == "List") {

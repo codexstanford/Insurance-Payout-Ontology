@@ -4,19 +4,31 @@
 <div class="mermaid">
 
 classDiagram
+Amount -- Operand
 Amount -- UnitEnum
 Amount -- UnitDimensionEnum
 
 
 class Amount {
 
-  string quantity
+  Operand quantity
   UnitEnum unit
   UnitDimensionEnum unitDimension
 
 }
 
-undefined
+Benefits -- InsurancePayout
+Benefits -- RiskChain
+
+
+class Benefits {
+
+  InsurancePayout[] payouts
+  RiskChain riskChain
+  string text
+
+}
+
 ChainCompositionOr -- RiskChain
 
 
@@ -113,6 +125,35 @@ class MultiplierTimeEnum {
   o . . . 3 more values
 }
 
+
+
+class Number {
+
+
+}
+
+
+
+class Operable {
+&lt&ltabstract&gt&gt
+
+
+}
+
+class OperandEnum {
+&lt&ltenumeration&gt&gt
+  o addition
+  o substraction
+}
+
+
+
+Operable &lt|-- Operation
+class Operation {
+
+
+}
+
 class PayoutTypeEnum {
 &lt&ltenumeration&gt&gt
   o Limit
@@ -122,7 +163,17 @@ class PayoutTypeEnum {
   o . . . 4 more values
 }
 
-undefined
+Product -- Benefits
+Product -- RiskObjects
+
+
+class Product {
+
+  Benefits[] benefits
+  RiskObjects[] riskObjects
+
+}
+
 
 
 class Relation {
@@ -178,6 +229,7 @@ class UnitDimensionEnum {
 UnitEnum o-- UnitDistanceEnum
   class UnitDistanceEnum {
 &lt&ltenumeration&gt&gt
+  o meter
   o kilometer
   o miles
 }
@@ -215,9 +267,15 @@ UnitEnum o-- UnitTimeEnum
   o . . . 1 more values
 }
 
-undefined
-undefined
-undefined
+
+
+Operable &lt|-- Variable
+class Variable {
+
+  string name
+
+}
+
 Person -- PersonRelationToPolicyHolderEnum
 
 
@@ -233,11 +291,26 @@ class Person {
 
 class PersonRelationToPolicyHolderEnum {
 &lt&ltenumeration&gt&gt
-  o self
-  o father
-  o mother
+  o aunt
+  o bother
+  o brotherInLaw
+  o cousin
+  o . . . 28 more values
 }
 
+
+
+RiskObject &lt|-- Person
+class Person {
+
+  number productionYear
+  number length
+
+}
+
+undefined
+undefined
+undefined
 
 
 

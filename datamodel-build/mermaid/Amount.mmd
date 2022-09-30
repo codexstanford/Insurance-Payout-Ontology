@@ -1,11 +1,12 @@
 classDiagram
-  Amount -- UnitEnum
+  Amount -- Operand
+Amount -- UnitEnum
 Amount -- UnitDimensionEnum
 
 
 class Amount {
 
-  string quantity
+  Operand quantity
   UnitEnum unit
   UnitDimensionEnum unitDimension
 

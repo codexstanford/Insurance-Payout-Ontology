@@ -2,12 +2,11 @@ let datamodel = {
   "Amount": {
     "documentation": "An object representing an Amount. <br/> In our representation an amount contain a quantity (how much), a unit (how much of what?), and a unit dimension (in which dimension do we measure, eg: distance,monetary, ...)",
     "type": "object",
-    "namespace": "org.codex.insurance.core",
     "properties": {
       "quantity": {
-        "type": "string",
+        "type": "Operand",
         "documentation": {
-          "en": "A string representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
+          "en": "An expression representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
         }
       },
       "unit": {
@@ -37,7 +36,7 @@ let datamodel = {
     }
   },
   "Benefits": {
-    "type": "class",
+    "type": "object",
     "properties": {
       "payouts": {
         "type": "List",
@@ -55,7 +54,6 @@ let datamodel = {
     "type": "object",
     "documentation": "Represent a composition in a chain, aka an OR on multiple risk chains",
     "inherit": "Chainable",
-    "namespace": "org.codex.insurance.core",
     "properties": {
       "operands": {
         "type": "List",
@@ -67,7 +65,6 @@ let datamodel = {
     "type": "object",
     "documentation": "Represent an operator in a chain, such as a wildcard or initial",
     "inherit": "Chainable",
-    "namespace": "org.codex.insurance.core",
     "properties": {
       "type": {
         "type": "ChainOperatorEnum"
@@ -76,7 +73,6 @@ let datamodel = {
   },
   "ChainOperatorEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "doc": "A list of supported chain operators",
     "values": {
       "wildcard": {
@@ -89,13 +85,11 @@ let datamodel = {
   },
   "Chainable": {
     "type": "object",
-    "isAbstract": true,
-    "namespace": "org.codex.insurance.core"
+    "isAbstract": true
   },
   "InsurancePayout": {
     "documentation": "An object representing an insurance payout: what modification should be apply to the claim amount, as describe in a contract. <br/><br/>There is different type of payout (see PayoutTypeEnum), such as Limit or Deductible. This model was develop to be able to represent any type of payouts. (see Documentation)",
     "type": "object",
-    "namespace": "org.codex.insurance.core",
     "properties": {
       "payoutType": {
         "type": "PayoutTypeEnum",
@@ -162,7 +156,6 @@ let datamodel = {
     "documentation": {
       "en": "Multiplier indicate how the amount to be pay or retain is to be multiply. A payment of $10 per person have a perPerson multiplier. There could be only one multiplier of each type."
     },
-    "namespace": "org.codex.insurance.core",
     "properties": {
       "time": {
         "type": "MultiplierTimeEnum"
@@ -184,7 +177,6 @@ let datamodel = {
   },
   "MultiplierInsuredObjectEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "values": {
       "perCar": {
         "documentation": "per car"
@@ -193,7 +185,6 @@ let datamodel = {
   },
   "MultiplierOccurrenceEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "values": {
       "perClaim": {
         "documentation": "an amount that apply per claim"
@@ -208,7 +199,6 @@ let datamodel = {
   },
   "MultiplierPersonEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "values": {
       "perPerson": {
         "documentation": "Per person"
@@ -226,7 +216,6 @@ let datamodel = {
   },
   "MultiplierTimeEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "values": {
       "perMinutes": {
         "documentation": "Per minutes"
@@ -251,9 +240,45 @@ let datamodel = {
       }
     }
   },
+  "Number": {
+    "type": "object"
+  },
+  "Operable": {
+    "type": "object",
+    "isAbstract": true
+  },
+  "OperandEnum": {
+    "type": "enum",
+    "values": {
+      "addition": {
+        "documentation": {
+          "en": "Represent an addition [+]"
+        }
+      },
+      "substraction": {
+        "documentation": {
+          "en": "Represent a substraction"
+        }
+      }
+    }
+  },
+  "Operation": {
+    "type": "object",
+    "inherit": "Operable",
+    "property": {
+      "leftHand": {
+        "type": "Operable"
+      },
+      "operand": {
+        "type": "OperandEnum"
+      },
+      "rightHand": {
+        "type": "Operable"
+      }
+    }
+  },
   "PayoutTypeEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "documentation": "A list of insurance payout. Details on implementation can be found here https://docs.google.com/document/d/15mNl4lbPMjJRJJXz3XEEOuGSJdn55uWDyvAezr3CEng/edit?usp=sharing (to be update to direct doc insertion once finished)",
     "values": {
       "Limit": {
@@ -278,12 +303,12 @@ let datamodel = {
         "documentation": "A co pay is an amount to be withheld before deductible apply"
       },
       "CoInsurance": {
-        "documentation": "A co pay is an amount to be withheld before deductible apply"
+        "documentation": "A coInsurance pay is an amount to be withheld before deductible apply"
       }
     }
   },
   "Product": {
-    "type": "class",
+    "type": "object",
     "properties": {
       "benefits": {
         "type": "List",
@@ -297,7 +322,6 @@ let datamodel = {
   },
   "Relation": {
     "type": "object",
-    "namespace": "org.codex.insurance.core",
     "properties": {
       "impacterId": {
         "type": "string"
@@ -313,7 +337,6 @@ let datamodel = {
   "RiskChain": {
     "documentation": "Represent a chain of risks in the form of a knowledge graph",
     "type": "object",
-    "namespace": "org.codex.insurance.core",
     "properties": {
       "chain": {
         "type": "List",
@@ -333,7 +356,6 @@ let datamodel = {
     "type": "object",
     "isAbstract": true,
     "documentation": "Represent a real thing in the world!",
-    "namespace": "org.codex.insurance.core",
     "properties": {
       "id": {
         "type": "string",
@@ -344,7 +366,6 @@ let datamodel = {
   "Situation": {
     "type": "object",
     "inherit": "Chainable",
-    "namespace": "org.codex.insurance.core",
     "documentation": "Represent a Situation",
     "properties": {
       "id": {
@@ -363,7 +384,6 @@ let datamodel = {
   },
   "UnitDimensionEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "values": {
       "Monetary": {
         "documentation": "A monetary amount"
@@ -381,9 +401,15 @@ let datamodel = {
   },
   "UnitDistanceEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "inherit": "UnitEnum",
     "values": {
+      "meter": {
+        "documentation": "meter",
+        "displayName": {
+          "en": "Meter"
+        },
+        "conversion": 1
+      },
       "kilometer": {
         "documentation": "kilometer"
       },
@@ -394,12 +420,10 @@ let datamodel = {
   },
   "UnitEnum": {
     "type": "enum",
-    "isAbstract": true,
-    "namespace": "org.codex.insurance.core"
+    "isAbstract": true
   },
   "UnitMonetaryEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "inherit": "UnitEnum",
     "documentation": {
       "en": "A List of currency based on iso 4217"
@@ -1676,7 +1700,6 @@ let datamodel = {
   },
   "UnitPersonEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "inherit": "UnitEnum",
     "values": {
       "person": {
@@ -1696,7 +1719,6 @@ let datamodel = {
   "UnitTimeEnum": {
     "type": "enum",
     "inherit": "UnitEnum",
-    "namespace": "org.codex.insurance.core",
     "values": {
       "day": {
         "documentation": "day"
@@ -1715,56 +1737,245 @@ let datamodel = {
       }
     }
   },
-  "boolean": {
-    "type": "system",
-    "documentation": "represent a boolean",
-    "namespace": "org.codex.insurance.core.system"
-  },
-  "number": {
-    "type": "system",
-    "documentation": "represent a number",
-    "namespace": "org.codex.insurance.core.system"
-  },
-  "string": {
-    "type": "system",
-    "documentation": "represent a string",
-    "namespace": "org.codex.insurance.core.system"
+  "Variable": {
+    "type": "object",
+    "inherit": "Operable",
+    "properties": {
+      "name": {
+        "type": "string"
+      }
+    }
   },
   "Person": {
     "type": "object",
     "inherit": "RiskObject",
-    "namespace": "org.codex.insurance.core",
     "properties": {
-      "relationToPolicyHolder": {
-        "type": "PersonRelationToPolicyHolderEnum"
+      "productionYear": {
+        "type": "number",
+        "documentation": "The year the vehicle was produce",
+        "ask": {
+          "en": "Which year was the vehicle produced?",
+          "fr": "Quand le vehicle a-t-il ete produit?"
+        }
       },
-      "firstName": {
-        "type": "string"
-      },
-      "lastName": {
-        "type": "string"
-      },
-      "age": {
-        "type": "number"
+      "length": {
+        "type": "number",
+        "dimension": "distance",
+        "unit": "meter",
+        "documentation": "The lenght of the vehicle in meter"
       }
     }
   },
   "PersonRelationToPolicyHolderEnum": {
     "type": "enum",
-    "namespace": "org.codex.insurance.core",
     "documentation": {
       "en": "A List of possible relationship of a person to a policyHolder"
     },
     "values": {
-      "self": {
-        "documentation": "The policyholder"
+      "aunt": {
+        "primaryKey": "aunt",
+        "en": "Aunt",
+        "de": "Tante",
+        "relationShipType": "familly"
+      },
+      "bother": {
+        "primaryKey": "bother",
+        "en": "Brother",
+        "de": "Bruder",
+        "relationShipType": "familly"
+      },
+      "brotherInLaw": {
+        "primaryKey": "brotherInLaw",
+        "en": "Brother-in-law",
+        "de": "Schwager",
+        "relationShipType": "familly"
+      },
+      "cousin": {
+        "primaryKey": "cousin",
+        "en": "Cousin",
+        "de": "Cousin",
+        "relationShipType": "familly"
+      },
+      "daughter": {
+        "primaryKey": "daughter",
+        "en": "Daughter",
+        "de": "Tochter",
+        "relationShipType": "familly"
+      },
+      "daughterInLaw": {
+        "primaryKey": "daughterInLaw",
+        "en": "Daughter-in-law",
+        "de": "Schwiegertochter",
+        "relationShipType": "familly"
+      },
+      "domesticPatner": {
+        "primaryKey": "domesticPatner",
+        "en": "Domestic Partner",
+        "de": "Lebensgefährte",
+        "relationShipType": "familly"
       },
       "father": {
-        "documentation": "The father of policyholder"
+        "primaryKey": "father",
+        "en": "Father",
+        "de": "Vater",
+        "relationShipType": "familly"
+      },
+      "fatherInLaw": {
+        "primaryKey": "fatherInLaw",
+        "en": "Father-in-law",
+        "de": "Schwiegervater",
+        "relationShipType": "familly"
+      },
+      "grandChild": {
+        "primaryKey": "grandChild",
+        "en": "Grandchild",
+        "de": "Enkelkind",
+        "relationShipType": "familly"
+      },
+      "grandParent": {
+        "primaryKey": "grandParent",
+        "en": "Grandparent",
+        "de": "Großelternteil",
+        "relationShipType": "familly"
       },
       "mother": {
-        "documentation": "The mother of the policyholder"
+        "primaryKey": "mother",
+        "en": "Mother",
+        "de": "Mutter",
+        "relationShipType": "familly"
+      },
+      "motherInLaw": {
+        "primaryKey": "motherInLaw",
+        "en": "Mother-in-law",
+        "de": "Schwiegermutter",
+        "relationShipType": "familly"
+      },
+      "nephew": {
+        "primaryKey": "nephew",
+        "en": "Nephew",
+        "de": "Neffe",
+        "relationShipType": "familly"
+      },
+      "niece": {
+        "primaryKey": "niece",
+        "en": "Niece",
+        "de": "Nichte",
+        "relationShipType": "familly"
+      },
+      "self": {
+        "primaryKey": "self",
+        "en": "Self",
+        "de": "Selbst",
+        "relationShipType": "familly"
+      },
+      "sister": {
+        "primaryKey": "sister",
+        "en": "Sister",
+        "de": "Schwester",
+        "relationShipType": "familly"
+      },
+      "sisterInLaw": {
+        "primaryKey": "sisterInLaw",
+        "en": "Sister-in-law",
+        "de": "Schwägerin",
+        "relationShipType": "familly"
+      },
+      "son": {
+        "primaryKey": "son",
+        "en": "Son",
+        "de": "Sohn",
+        "relationShipType": "familly"
+      },
+      "sonInLaw": {
+        "primaryKey": "sonInLaw",
+        "en": "Son-in-law",
+        "de": "Schwiegersohn",
+        "relationShipType": "familly"
+      },
+      "spouse": {
+        "primaryKey": "spouse",
+        "en": "Spouse",
+        "de": "Ehepartner",
+        "relationShipType": "familly"
+      },
+      "stepBrother": {
+        "primaryKey": "stepBrother",
+        "en": "Stepbrother",
+        "de": "Stiefbruder",
+        "relationShipType": "familly"
+      },
+      "stepDaugther": {
+        "primaryKey": "stepDaugther",
+        "en": "Stepdaughter",
+        "de": "Stieftochter",
+        "relationShipType": "familly"
+      },
+      "stepFather": {
+        "primaryKey": "stepFather",
+        "en": "Stepfather",
+        "de": "Stiefvater",
+        "relationShipType": "familly"
+      },
+      "stepMother": {
+        "primaryKey": "stepMother",
+        "en": "Stepmother",
+        "de": "Stiefmutter",
+        "relationShipType": "familly"
+      },
+      "stepSister": {
+        "primaryKey": "stepSister",
+        "en": "Stepsister",
+        "de": "Stiefschwester",
+        "relationShipType": "familly"
+      },
+      "stepSon": {
+        "primaryKey": "stepSon",
+        "en": "Stepson",
+        "de": "Stiefsohn",
+        "relationShipType": "familly"
+      },
+      "uncle": {
+        "primaryKey": "uncle",
+        "en": "Uncle",
+        "de": "Onkel",
+        "relationShipType": "familly"
+      },
+      "closeBusinessAssociate": {
+        "primaryKey": "closeBusinessAssociate",
+        "en": "Close Business Associate",
+        "de": "Naher Geschäftspartner",
+        "relationShipType": "work"
+      },
+      "employee": {
+        "primaryKey": "employee",
+        "en": "Employee",
+        "de": "Mitarbeiter",
+        "relationShipType": "work"
+      },
+      "friend": {
+        "primaryKey": "friend",
+        "en": "Friend",
+        "de": "Freund",
+        "relationShipType": "acquaintance"
+      },
+      "travelingCompanion": {
+        "primaryKey": "travelingCompanion",
+        "en": "Travelling Companion",
+        "de": "Reisebegleiter",
+        "relationShipType": "acquaintance"
       }
     }
+  },
+  "boolean": {
+    "type": "system",
+    "documentation": "represent a boolean"
+  },
+  "number": {
+    "type": "system",
+    "documentation": "represent a number"
+  },
+  "string": {
+    "type": "system",
+    "documentation": "represent a string"
   }
 }

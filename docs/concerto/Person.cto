@@ -1,11 +1,8 @@
-namespace org.codex.insurance.core
+namespace undefined
 
-import org.codex.insurance.core.PersonRelationToPolicyHolderEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PersonRelationToPolicyHolderEnum.cto
 
 
 concept Person extends RiskObject {
-  o PersonRelationToPolicyHolderEnum relationToPolicyHolder
-  o String firstName
-  o String lastName
-  o Double age
+  o Double productionYear
+  o Double length
 }

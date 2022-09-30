@@ -1,13 +1,165 @@
 PersonRelationToPolicyHolderEnum:
   type: enum
-  namespace: org.codex.insurance.core
   documentation:
     en: "A List of possible relationship of a person to a policyHolder"
   values:
-    self:
-      documentation: "The policyholder"
+    aunt:
+      primaryKey: "aunt"
+      en: "Aunt"
+      de: "Tante"
+      relationShipType: "familly"
+    bother:
+      primaryKey: "bother"
+      en: "Brother"
+      de: "Bruder"
+      relationShipType: "familly"
+    brotherInLaw:
+      primaryKey: "brotherInLaw"
+      en: "Brother-in-law"
+      de: "Schwager"
+      relationShipType: "familly"
+    cousin:
+      primaryKey: "cousin"
+      en: "Cousin"
+      de: "Cousin"
+      relationShipType: "familly"
+    daughter:
+      primaryKey: "daughter"
+      en: "Daughter"
+      de: "Tochter"
+      relationShipType: "familly"
+    daughterInLaw:
+      primaryKey: "daughterInLaw"
+      en: "Daughter-in-law"
+      de: "Schwiegertochter"
+      relationShipType: "familly"
+    domesticPatner:
+      primaryKey: "domesticPatner"
+      en: "Domestic Partner"
+      de: "Lebensgefährte"
+      relationShipType: "familly"
     father:
-      documentation: "The father of policyholder"
+      primaryKey: "father"
+      en: "Father"
+      de: "Vater"
+      relationShipType: "familly"
+    fatherInLaw:
+      primaryKey: "fatherInLaw"
+      en: "Father-in-law"
+      de: "Schwiegervater"
+      relationShipType: "familly"
+    grandChild:
+      primaryKey: "grandChild"
+      en: "Grandchild"
+      de: "Enkelkind"
+      relationShipType: "familly"
+    grandParent:
+      primaryKey: "grandParent"
+      en: "Grandparent"
+      de: "Großelternteil"
+      relationShipType: "familly"
     mother:
-      documentation: "The mother of the policyholder"
-    
+      primaryKey: "mother"
+      en: "Mother"
+      de: "Mutter"
+      relationShipType: "familly"
+    motherInLaw:
+      primaryKey: "motherInLaw"
+      en: "Mother-in-law"
+      de: "Schwiegermutter"
+      relationShipType: "familly"
+    nephew:
+      primaryKey: "nephew"
+      en: "Nephew"
+      de: "Neffe"
+      relationShipType: "familly"
+    niece:
+      primaryKey: "niece"
+      en: "Niece"
+      de: "Nichte"
+      relationShipType: "familly"
+    self:
+      primaryKey: "self"
+      en: "Self"
+      de: "Selbst"
+      relationShipType: "familly"
+    sister:
+      primaryKey: "sister"
+      en: "Sister"
+      de: "Schwester"
+      relationShipType: "familly"
+    sisterInLaw:
+      primaryKey: "sisterInLaw"
+      en: "Sister-in-law"
+      de: "Schwägerin"
+      relationShipType: "familly"
+    son:
+      primaryKey: "son"
+      en: "Son"
+      de: "Sohn"
+      relationShipType: "familly"
+    sonInLaw:
+      primaryKey: "sonInLaw"
+      en: "Son-in-law"
+      de: "Schwiegersohn"
+      relationShipType: "familly"
+    spouse:
+      primaryKey: "spouse"
+      en: "Spouse"
+      de: "Ehepartner"
+      relationShipType: "familly"
+    stepBrother:
+      primaryKey: "stepBrother"
+      en: "Stepbrother"
+      de: "Stiefbruder"
+      relationShipType: "familly"
+    stepDaugther:
+      primaryKey: "stepDaugther"
+      en: "Stepdaughter"
+      de: "Stieftochter"
+      relationShipType: "familly"
+    stepFather:
+      primaryKey: "stepFather"
+      en: "Stepfather"
+      de: "Stiefvater"
+      relationShipType: "familly"
+    stepMother:
+      primaryKey: "stepMother"
+      en: "Stepmother"
+      de: "Stiefmutter"
+      relationShipType: "familly"
+    stepSister:
+      primaryKey: "stepSister"
+      en: "Stepsister"
+      de: "Stiefschwester"
+      relationShipType: "familly"
+    stepSon:
+      primaryKey: "stepSon"
+      en: "Stepson"
+      de: "Stiefsohn"
+      relationShipType: "familly"
+    uncle:
+      primaryKey: "uncle"
+      en: "Uncle"
+      de: "Onkel"
+      relationShipType: "familly"
+    closeBusinessAssociate:
+      primaryKey: "closeBusinessAssociate"
+      en: "Close Business Associate"
+      de: "Naher Geschäftspartner"
+      relationShipType: "work"
+    employee:
+      primaryKey: "employee"
+      en: "Employee"
+      de: "Mitarbeiter"
+      relationShipType: "work"
+    friend:
+      primaryKey: "friend"
+      en: "Friend"
+      de: "Freund"
+      relationShipType: "acquaintance"
+    travelingCompanion:
+      primaryKey: "travelingCompanion"
+      en: "Travelling Companion"
+      de: "Reisebegleiter"
+      relationShipType: "acquaintance"

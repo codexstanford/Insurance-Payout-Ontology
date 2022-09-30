@@ -1,6 +1,5 @@
 MultiplierInsuredObjectEnum:
   type: enum
-  namespace: org.codex.insurance.core
   values:
     perCar:
       documentation: "per car"

@@ -1,12 +1,11 @@
 Amount:
   documentation: "An object representing an Amount. <br/> In our representation an amount contain a quantity (how much), a unit (how much of what?), and a unit dimension (in which dimension do we measure, eg: distance,monetary, ...)"
   type: object
-  namespace: org.codex.insurance.core
   properties:
     quantity:
-      type: string
+      type: Operand
       documentation:
-        en: "A string representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
+        en: "An expression representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
     unit: 
       type: UnitEnum
       documentation: 
@@ -24,3 +23,4 @@ Amount:
         quantity: 300
         unit: UnitMonetaryEnum.USD
         unitDimension: UnitDimensionEnum.Monetary
+

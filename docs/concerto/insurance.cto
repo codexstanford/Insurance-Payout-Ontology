@@ -1,11 +1,16 @@
 namespace org.codex.insurance
 
 concept Amount {
-  o String quantity
+  o Operand quantity
   o UnitEnum unit
   o UnitDimensionEnum unitDimension
 }
 
+concept Benefits {
+  o InsurancePayout[] payouts
+  o RiskChain riskChain
+  o String text
+}
 
 concept ChainCompositionOr extends Chainable {
   o RiskChain[] operands
@@ -67,6 +72,20 @@ enum MultiplierTimeEnum {
   o perPeriodOfInsurance
 }
 
+concept Number {
+}
+
+abstract concept Operable {
+}
+
+enum OperandEnum {
+  o addition
+  o substraction
+}
+
+concept Operation extends Operable {
+}
+
 enum PayoutTypeEnum {
   o Limit
   o Excess
@@ -78,6 +97,10 @@ enum PayoutTypeEnum {
   o CoInsurance
 }
 
+concept Product {
+  o Benefits[] benefits
+  o RiskObjects[] riskObjects
+}
 
 concept Relation {
   o String impacterId
@@ -110,6 +133,7 @@ enum UnitDimensionEnum {
 }
 
 enum UnitDistanceEnum {
+  o meter
   o kilometer
   o miles
 }
@@ -316,8 +340,9 @@ enum UnitTimeEnum {
   o year
 }
 
-
-
+concept Variable extends Operable {
+  o String name
+}
 
 concept Person extends RiskObject {
   o PersonRelationToPolicyHolderEnum relationToPolicyHolder
@@ -327,7 +352,44 @@ concept Person extends RiskObject {
 }
 
 enum PersonRelationToPolicyHolderEnum {
-  o self
+  o aunt
+  o bother
+  o brotherInLaw
+  o cousin
+  o daughter
+  o daughterInLaw
+  o domesticPatner
   o father
+  o fatherInLaw
+  o grandChild
+  o grandParent
   o mother
+  o motherInLaw
+  o nephew
+  o niece
+  o self
+  o sister
+  o sisterInLaw
+  o son
+  o sonInLaw
+  o spouse
+  o stepBrother
+  o stepDaugther
+  o stepFather
+  o stepMother
+  o stepSister
+  o stepSon
+  o uncle
+  o closeBusinessAssociate
+  o employee
+  o friend
+  o travelingCompanion
 }
+
+concept Person extends RiskObject {
+  o Double productionYear
+  o Double length
+}
+
+
+

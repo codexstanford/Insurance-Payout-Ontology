@@ -1,4 +1,0 @@
-string:
-  type: system
-  documentation: "represent a string"
-  namespace: org.codex.insurance.core.system

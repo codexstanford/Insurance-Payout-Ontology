@@ -36,36 +36,31 @@ let INDEX = {
 let DM_INDEX = "";
 let DM_ENTITY_INDEX = "";
 function buildIndex() {
-  // indexAll
-  let DM_INDEX_CORE = "";
-  let DM_INDEX_SYSTEM = "";
+
+  let index = {
+
+  }
+
   for (let file of objectsList) {
 
     let data = file.data;
     let objName =  file.name;
     
     INDEX[objName] = data[objName];
-    if (INDEX[objName].namespace.indexOf("org.codex.insurance.core.system") == 0) {
 
-        DM_INDEX_SYSTEM += `<li><a href="${objName}.html" class="d-inline-flex text-decoration-none subLink2 namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
-
+    if (!index[file.namespace]) {
+      index[file.namespace] = "";
     }
-    else if (INDEX[objName].namespace.indexOf("org.codex.insurance.core") == 0) {
 
-      if (INDEX[objName].inherit == "RiskObject") {
-        DM_ENTITY_INDEX += `<li><a href="${objName}.html" class="d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
-      } else {
-       DM_INDEX_CORE += `<li><a href="${objName}.html" class="d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`
-      }
-    }
-  
+    index[file.namespace] += `<li><a href="${objName}.html" class="d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`;
   }
-
-  DM_INDEX += `
-    <li> <span class='d-inline-flex text-decoration-none menuCategory'>Core</span></li> 
-    ${DM_INDEX_CORE} 
-    <li> <span class='d-inline-flex text-decoration-none menuCategory'>System</span></li> 
-    ${DM_INDEX_SYSTEM}`;
+  debugger;
+  for (let catName in index) {
+    DM_INDEX += `
+    <li> <span class='d-inline-flex text-decoration-none menuCategory'>${catName}</span></li> 
+    ${index[catName]}`;
+  }
+ 
 
   for (let objName in INDEX) {
 

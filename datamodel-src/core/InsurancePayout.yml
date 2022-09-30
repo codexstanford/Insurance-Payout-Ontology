@@ -3,7 +3,6 @@
 InsurancePayout:
   documentation: "An object representing an insurance payout: what modification should be apply to the claim amount, as describe in a contract. <br/><br/>There is different type of payout (see PayoutTypeEnum), such as Limit or Deductible. This model was develop to be able to represent any type of payouts. (see Documentation)"
   type: object
-  namespace: org.codex.insurance.core
   properties:
     payoutType:
       type: PayoutTypeEnum

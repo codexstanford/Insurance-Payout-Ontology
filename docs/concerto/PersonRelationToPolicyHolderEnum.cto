@@ -1,8 +1,37 @@
-namespace org.codex.insurance.core
+namespace undefined
 
 enum PersonRelationToPolicyHolderEnum {
-  o self
+  o aunt
+  o bother
+  o brotherInLaw
+  o cousin
+  o daughter
+  o daughterInLaw
+  o domesticPatner
   o father
+  o fatherInLaw
+  o grandChild
+  o grandParent
   o mother
+  o motherInLaw
+  o nephew
+  o niece
+  o self
+  o sister
+  o sisterInLaw
+  o son
+  o sonInLaw
+  o spouse
+  o stepBrother
+  o stepDaugther
+  o stepFather
+  o stepMother
+  o stepSister
+  o stepSon
+  o uncle
+  o closeBusinessAssociate
+  o employee
+  o friend
+  o travelingCompanion
 }
 

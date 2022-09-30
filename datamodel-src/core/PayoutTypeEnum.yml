@@ -1,6 +1,5 @@
 PayoutTypeEnum:
   type: enum
-  namespace: org.codex.insurance.core
   documentation: "A list of insurance payout. Details on implementation can be found here https://docs.google.com/document/d/15mNl4lbPMjJRJJXz3XEEOuGSJdn55uWDyvAezr3CEng/edit?usp=sharing (to be update to direct doc insertion once finished)"
   values:
     Limit:
@@ -18,4 +17,4 @@ PayoutTypeEnum:
     CoPayment:
       documentation: "A co pay is an amount to be withheld before deductible apply"
     CoInsurance:
-      documentation: "A co pay is an amount to be withheld before deductible apply"
+      documentation: "A coInsurance pay is an amount to be withheld before deductible apply"

@@ -2,7 +2,6 @@ ChainCompositionOr:
     type: object
     documentation: "Represent a composition in a chain, aka an OR on multiple risk chains"
     inherit: Chainable
-    namespace: org.codex.insurance.core
     properties:
       operands:
         type: List

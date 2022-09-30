@@ -1,6 +1,5 @@
 MultiplierPersonEnum:
   type: enum
-  namespace: org.codex.insurance.core
   values:
     perPerson:
       documentation: "Per person"
