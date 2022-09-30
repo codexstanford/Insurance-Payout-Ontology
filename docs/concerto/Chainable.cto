@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+abstract concept Chainable {
+}

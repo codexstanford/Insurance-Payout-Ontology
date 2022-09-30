@@ -1,0 +1,10 @@
+namespace undefined
+
+enum UnitDimensionEnum {
+  o monetary
+  o time
+  o distance
+  o mass
+  o person
+}
+

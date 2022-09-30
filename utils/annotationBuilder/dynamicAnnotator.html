@@ -104,10 +104,12 @@
 
 
 
-      function buildAnnotator(target, path) {
+      function buildAnnotator(target, path, preset) {
         if (target == "string") {
           let input = document.createElement('input');
-
+          if (preset) {
+            input.value = preset
+          }
           input.setAttribute('path', path);
           input.className = "annotationInput";
           return input;
@@ -117,12 +119,18 @@
           input.type = "checkbox";
           input.checked = false;
           input.setAttribute('path', path);
+          if (preset) {
+            input.value = preset
+          }
           input.className = "annotationInput";
           return input;
         } 
         if (target == "number") {
           let input = document.createElement('input');
-          input.setAttribute('path', path)
+          input.setAttribute('path', path);
+          if (preset) {
+            input.value = preset
+          }
           input.className = "annotationInput";
           return input;
         }
@@ -160,6 +168,7 @@
           return div;
         
         }
+        
         let container = document.createElement('div');
         container.className = "Annotation"
         if (!datamodel[target]) {
@@ -183,7 +192,13 @@
               container.appendChild(addButton)
             }
             else {
-              container.appendChild(buildAnnotator(datamodel[target].properties[property].type, path + "--" + property));
+              if (preset && preset[property]) {
+       
+                container.appendChild(buildAnnotator(preset[property].split('.')[0], path + "--" + property, preset[property].split('.').slice(1).join(".")));
+              } else {
+                container.appendChild(buildAnnotator(datamodel[target].properties[property].type, path + "--" + property, datamodel[target].properties[property].with));
+              }
+              
             }
             container.innerHTML += "</div>"
     
@@ -194,21 +209,26 @@
         if (datamodel[target].type == "enum") {
           let select = document.createElement('select');
           let option = document.createElement('option');
-            option.value = undefined;
-            option.innerText = "Select Value...";
-            option.selected = true;
-            select.appendChild(option);
+          option.value = undefined;
+          option.innerText = "Select Value...";
+          if (!preset) {
+            option.setAttribute("selected", true);
+          }
+          select.appendChild(option);
+    
           for (let value in datamodel[target].values) {
             option = document.createElement('option');
             option.value = value;
             option.innerText = value;
+            if (value == preset) {
+              option.setAttribute("selected", true);
+            }
             select.appendChild(option);
           }
           select.setAttribute("path", path);
           select.className = "annotationInput";
           container.appendChild(select);
         }
-
         return container;
       }
 
