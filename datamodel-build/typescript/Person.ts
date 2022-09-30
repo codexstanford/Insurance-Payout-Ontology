@@ -1,8 +1,11 @@
+import { PersonRelationToPolicyHolderEnum } from "./PersonRelationToPolicyHolderEnum";
 
 
 export class Person extends RiskObject {
-  productionYear: number;
-  length: number;
+  relationToPolicyHolder: PersonRelationToPolicyHolderEnum;
+  firstName: string;
+  lastName: string;
+  age: number;
 
 
 }

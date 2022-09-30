@@ -4,14 +4,14 @@
 <div class="mermaid">
 
 classDiagram
-Amount -- Operand
+Amount -- Operable
 Amount -- UnitEnum
 Amount -- UnitDimensionEnum
 
 
 class Amount {
 
-  Operand quantity
+  Operable quantity
   UnitEnum unit
   UnitDimensionEnum unitDimension
 
@@ -127,8 +127,10 @@ class MultiplierTimeEnum {
 
 
 
+Operable &lt|-- Number
 class Number {
 
+  number value
 
 }
 
@@ -146,11 +148,16 @@ class OperandEnum {
   o substraction
 }
 
+Operation -- Operable
+Operation -- OperandEnum
 
 
 Operable &lt|-- Operation
 class Operation {
 
+  Operable leftHand
+  OperandEnum operand
+  Operable rightHand
 
 }
 
@@ -164,13 +171,13 @@ class PayoutTypeEnum {
 }
 
 Product -- Benefits
-Product -- RiskObjects
+Product -- RiskObject
 
 
 class Product {
 
   Benefits[] benefits
-  RiskObjects[] riskObjects
+  RiskObject[] riskObjects
 
 }
 
@@ -298,13 +305,14 @@ class PersonRelationToPolicyHolderEnum {
   o . . . 28 more values
 }
 
+Vehicle -- Amount
 
 
-RiskObject &lt|-- Person
-class Person {
+RiskObject &lt|-- Vehicle
+class Vehicle {
 
-  number productionYear
-  number length
+  Amount productionYear
+  Amount length
 
 }
 

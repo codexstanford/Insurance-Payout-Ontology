@@ -1,7 +1,7 @@
 namespace org.codex.insurance
 
 concept Amount {
-  o Operand quantity
+  o Operable quantity
   o UnitEnum unit
   o UnitDimensionEnum unitDimension
 }
@@ -72,7 +72,8 @@ enum MultiplierTimeEnum {
   o perPeriodOfInsurance
 }
 
-concept Number {
+concept Number extends Operable {
+  o Double value
 }
 
 abstract concept Operable {
@@ -84,6 +85,9 @@ enum OperandEnum {
 }
 
 concept Operation extends Operable {
+  o Operable leftHand
+  o OperandEnum operand
+  o Operable rightHand
 }
 
 enum PayoutTypeEnum {
@@ -99,7 +103,7 @@ enum PayoutTypeEnum {
 
 concept Product {
   o Benefits[] benefits
-  o RiskObjects[] riskObjects
+  o RiskObject[] riskObjects
 }
 
 concept Relation {
@@ -386,9 +390,9 @@ enum PersonRelationToPolicyHolderEnum {
   o travelingCompanion
 }
 
-concept Person extends RiskObject {
-  o Double productionYear
-  o Double length
+concept Vehicle extends RiskObject {
+  o Amount productionYear
+  o Amount length
 }
 
 

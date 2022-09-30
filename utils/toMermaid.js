@@ -27,7 +27,7 @@ let output = "classDiagram";
 
 for (let file of objectsList) {
 
-  output += buildMermaid(file);
+  output += buildMermaid(file) || "";
 }
 
   fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.mmd`, output, 'utf8');

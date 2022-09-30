@@ -1,0 +1,15 @@
+Vehicle:
+  type: object
+  inherit: RiskObject
+  properties:
+    productionYear: 
+      type: Amount
+      documentation: "The year the vehicle was produce"
+      ask:
+        en: "Which year was the vehicle produced?"
+        fr: "Quand le vehicle a-t-il ete produit?"
+    length:
+      type: Amount
+      dimension: "distance"
+      unit: "meter"
+      documentation: "The lenght of the vehicle in meter"

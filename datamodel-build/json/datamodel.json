@@ -4,7 +4,7 @@
     "type": "object",
     "properties": {
       "quantity": {
-        "type": "Operand",
+        "type": "Operable",
         "documentation": {
           "en": "An expression representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
         }
@@ -241,7 +241,13 @@
     }
   },
   "Number": {
-    "type": "object"
+    "type": "object",
+    "inherit": "Operable",
+    "properties": {
+      "value": {
+        "type": "number"
+      }
+    }
   },
   "Operable": {
     "type": "object",
@@ -265,7 +271,7 @@
   "Operation": {
     "type": "object",
     "inherit": "Operable",
-    "property": {
+    "properties": {
       "leftHand": {
         "type": "Operable"
       },
@@ -316,7 +322,7 @@
       },
       "riskObjects": {
         "type": "List",
-        "of": "RiskObjects"
+        "of": "RiskObject"
       }
     }
   },
@@ -1750,19 +1756,17 @@
     "type": "object",
     "inherit": "RiskObject",
     "properties": {
-      "productionYear": {
-        "type": "number",
-        "documentation": "The year the vehicle was produce",
-        "ask": {
-          "en": "Which year was the vehicle produced?",
-          "fr": "Quand le vehicle a-t-il ete produit?"
-        }
+      "relationToPolicyHolder": {
+        "type": "PersonRelationToPolicyHolderEnum"
       },
-      "length": {
-        "type": "number",
-        "dimension": "distance",
-        "unit": "meter",
-        "documentation": "The lenght of the vehicle in meter"
+      "firstName": {
+        "type": "string"
+      },
+      "lastName": {
+        "type": "string"
+      },
+      "age": {
+        "type": "number"
       }
     }
   },
@@ -1963,6 +1967,26 @@
         "en": "Travelling Companion",
         "de": "Reisebegleiter",
         "relationShipType": "acquaintance"
+      }
+    }
+  },
+  "Vehicle": {
+    "type": "object",
+    "inherit": "RiskObject",
+    "properties": {
+      "productionYear": {
+        "type": "Amount",
+        "documentation": "The year the vehicle was produce",
+        "ask": {
+          "en": "Which year was the vehicle produced?",
+          "fr": "Quand le vehicle a-t-il ete produit?"
+        }
+      },
+      "length": {
+        "type": "Amount",
+        "dimension": "distance",
+        "unit": "meter",
+        "documentation": "The lenght of the vehicle in meter"
       }
     }
   },

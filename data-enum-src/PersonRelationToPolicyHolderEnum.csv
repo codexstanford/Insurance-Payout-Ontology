@@ -1,0 +1,33 @@
+primaryKey,en,de,relationShipType
+aunt,Aunt,Tante,familly
+bother,Brother,Bruder,familly
+brotherInLaw,Brother-in-law,Schwager,familly
+cousin,Cousin,Cousin,familly
+daughter,Daughter,Tochter,familly
+daughterInLaw,Daughter-in-law,Schwiegertochter,familly
+domesticPatner,Domestic Partner,Lebensgefährte,familly
+father,Father,Vater,familly
+fatherInLaw,Father-in-law,Schwiegervater,familly
+grandChild,Grandchild,Enkelkind,familly
+grandParent,Grandparent,Großelternteil,familly
+mother,Mother,Mutter,familly
+motherInLaw,Mother-in-law,Schwiegermutter,familly
+nephew,Nephew,Neffe,familly
+niece,Niece,Nichte,familly
+self,Self,Selbst,familly
+sister,Sister,Schwester,familly
+sisterInLaw,Sister-in-law,Schwägerin,familly
+son,Son,Sohn,familly
+sonInLaw,Son-in-law,Schwiegersohn,familly
+spouse,Spouse,Ehepartner,familly
+stepBrother,Stepbrother,Stiefbruder,familly
+stepDaugther,Stepdaughter,Stieftochter,familly
+stepFather,Stepfather,Stiefvater,familly
+stepMother,Stepmother,Stiefmutter,familly
+stepSister,Stepsister,Stiefschwester,familly
+stepSon,Stepson,Stiefsohn,familly
+uncle,Uncle,Onkel,familly
+closeBusinessAssociate,Close Business Associate,Naher Geschäftspartner,work
+employee,Employee,Mitarbeiter,work
+friend,Friend,Freund,acquaintance
+travelingCompanion,Travelling Companion,Reisebegleiter,acquaintance

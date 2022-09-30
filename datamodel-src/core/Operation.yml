@@ -1,0 +1,10 @@
+Operation:
+  type: object
+  inherit: Operable
+  properties:
+    leftHand:
+      type: Operable
+    operand:
+      type: OperandEnum
+    rightHand:
+      type: Operable

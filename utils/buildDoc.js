@@ -34,7 +34,7 @@ let INDEX = {
     
 };
 let DM_INDEX = "";
-let DM_ENTITY_INDEX = "";
+
 function buildIndex() {
 
   let index = {
@@ -201,7 +201,6 @@ function buildObjDoc(objName) {
     fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
     template
       .replace('$$CONTENT', doc)
-      .replace('<!--$$DM_ENTITY_INDEX-->', DM_ENTITY_INDEX)
       .replace(`namedLink${name}`, 'activeLink')
       .replace(`<!--SUBMENU_${name}-->`, PROP_MENU)
       , 

@@ -1,0 +1,13 @@
+classDiagram
+  Operation -- Operable
+Operation -- OperandEnum
+
+
+Operable <|-- Operation
+class Operation {
+
+  Operable leftHand
+  OperandEnum operand
+  Operable rightHand
+
+}

@@ -1,0 +1,10 @@
+Benefits:
+  type: object
+  properties:
+    payouts:
+      type: List
+      of: InsurancePayout
+    riskChain:
+      type: RiskChain
+    text:
+      type: string
