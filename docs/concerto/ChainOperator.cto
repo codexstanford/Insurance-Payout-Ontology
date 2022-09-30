@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.ChainOperatorEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ChainOperatorEnum.cto
-
-
-concept ChainOperator extends Chainable {
-  o ChainOperatorEnum type
-}

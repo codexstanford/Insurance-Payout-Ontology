@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept Number extends Operable {
-  o Double value
-}
