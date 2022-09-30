@@ -1,8 +1,0 @@
-namespace undefined
-
-enum MultiplierOccurrenceEnum {
-  o perClaim
-  o perLine
-  o perIncident
-}
-

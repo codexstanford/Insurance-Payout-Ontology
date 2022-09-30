@@ -198,25 +198,16 @@ function buildObjDoc(objName) {
   }
     
   
-  if (INDEX[name].inherit == "RiskObject") {
-    fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
-    template
-      .replace('$$CONTENT', doc)
-      .replace(`namedLink${name}`, 'activeLink')
-      .replace(`<!--SUBMENU_${name}-->`, PROP_MENU)
-      , 
-    'utf-8');
-  } 
-  else {
-    fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
-    template
-      .replace('$$CONTENT', doc)
-      .replace('<!--$$DM_INDEX-->', DM_INDEX)
-      .replace(`namedLink${name}`, 'activeLink')
-      .replace(`<!--SUBMENU_${name}-->`, PROP_MENU)
-      , 
-    'utf-8');
-  }
+  
+  fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
+  template
+    .replace('$$CONTENT', doc)
+    .replace('<!--$$DM_INDEX-->', DM_INDEX)
+    .replace(`namedLink${name}`, 'activeLink')
+    .replace(`<!--SUBMENU_${name}-->`, PROP_MENU)
+    , 
+  'utf-8');
+
  
   
 }

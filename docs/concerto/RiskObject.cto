@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-abstract concept RiskObject {
-  o String id
-}

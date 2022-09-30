@@ -1,7 +1,0 @@
-namespace undefined
-
-enum ChainOperatorEnum {
-  o wildcard
-  o not
-}
-
