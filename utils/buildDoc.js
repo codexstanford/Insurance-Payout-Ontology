@@ -274,6 +274,29 @@ function renderPropertiesDoc(data) {
         doc +=  `<div class="type-info"><b>Type</b> <a href="${property.type}.html"> ${property.type}</a></div>`
     }
    
+    if (property.with) {
+      doc += `<div class="type-info"> <b>with:</b>`
+      for (let withKey in property.with) {
+        doc += `<div class="with-prop">
+        <a href="${property.type}.html#${withKey}">
+        ${property.type}.<b>${withKey}</b>
+        </a> as `;
+        let values = property.with[withKey].split('.');
+        if (INDEX[values[0]].type == "enum") {
+          doc +=  `<a href="${values[0]}.html#${values[1]}">
+            ${property.with[withKey].replace('.', ".<b>")}
+          </b></a>`
+        }
+        else {
+          doc +=  property.with[withKey];
+        }
+       
+        
+        doc += `</div>`;
+      }
+      doc += `</div>`
+    }
+
     if (property.default) {
       doc += `<div class="default-info"> <b>Default Value</b> ${property.default}</div>`
     }
@@ -314,7 +337,7 @@ function renderValuesDoc(data) {
 
     
     doc += `
-  <div>
+  <div id="${valueName}">
     <h3>${valueName}</h3>`
 
     doc += `<p class="documentation">

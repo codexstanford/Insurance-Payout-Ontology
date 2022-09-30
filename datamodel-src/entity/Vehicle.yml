@@ -17,11 +17,11 @@ Vehicle:
       type: Amount
       with:
         unit: UnitDistanceEnum.meter
-        unitDimension: "distance"
+        unitDimension: UnitDimensionEnum.distance
       documentation: "The length of the vehicle in meter"   
     weight:
       type: Amount 
       with:
         unit: UnitMassEnum.kilogram
-        unitDimension: "mass"
+        unitDimension: UnitDimensionEnum.mass
       documentation: "The weight of the vehicle in kilogram"
