@@ -13,7 +13,7 @@ const REDO_ALL = true;
 // remove old build
 if (REDO_ALL) {
   if (fs.existsSync(DATA_MODEL_MERMAID_PATH)) {
-    fs.rmdirSync(DATA_MODEL_MERMAID_PATH, { recursive: true });
+    fs.rmSync(DATA_MODEL_MERMAID_PATH, { recursive: true });
   }
   
   fs.mkdirSync(DATA_MODEL_MERMAID_PATH);
@@ -71,12 +71,8 @@ function buildMermaid(file) {
   let fileName = file.name;
   let data = file.data;
 
-  console.log(`----
-  ${fileName}
-  `)
+  console.log(`... building Mermaid for : ${fileName}`)
   
-  console.log(JSON.stringify(data, null, 2));
-
   let output  = `
 `;
   for (let ObjName in data) {

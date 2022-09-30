@@ -131,6 +131,18 @@ class Number {
 
 
 
+Operable <|-- NumberRange
+class NumberRange {
+
+  number from
+  number to
+  boolean fromIncluded
+  boolean toIncluded
+
+}
+
+
+
 class Operable {
 <<abstract>>
 

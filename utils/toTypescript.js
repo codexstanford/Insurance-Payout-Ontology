@@ -4,12 +4,13 @@ const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
 
 const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
 const DATA_MODEL_TS_PATH = `${__dirname}/../datamodel-build/typescript`;
+console.log("...Building Typescript")
 
 let objectsList = loadObjFromSrc();
 
 // remove old build
 if (fs.existsSync(DATA_MODEL_TS_PATH)) {
-  fs.rmdirSync(DATA_MODEL_TS_PATH, { recursive: true });
+  fs.rmSync(DATA_MODEL_TS_PATH, { recursive: true });
 }
 
 fs.mkdirSync(DATA_MODEL_TS_PATH);
@@ -23,7 +24,6 @@ for (let file of objectsList) {
 function buildTypeScriptObject(file) {
   let data = file.data;
 
-  console.log(JSON.stringify(data, null, 2));
 
   for (let ObjName in data) {
 

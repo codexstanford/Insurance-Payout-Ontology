@@ -1,0 +1,14 @@
+NumberRange:
+  type: object
+  inherit: Operable
+  properties:
+    from:
+      type: number
+    to:
+      type: number
+    fromIncluded:
+      type: boolean
+      default: true
+    toIncluded:
+      type: boolean
+      default: true

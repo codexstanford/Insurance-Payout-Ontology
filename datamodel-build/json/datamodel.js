@@ -249,6 +249,26 @@ let datamodel = {
       }
     }
   },
+  "NumberRange": {
+    "type": "object",
+    "inherit": "Operable",
+    "properties": {
+      "from": {
+        "type": "number"
+      },
+      "to": {
+        "type": "number"
+      },
+      "fromIncluded": {
+        "type": "boolean",
+        "default": true
+      },
+      "toIncluded": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  },
   "Operable": {
     "type": "object",
     "isAbstract": true
@@ -365,7 +385,8 @@ let datamodel = {
     "properties": {
       "id": {
         "type": "string",
-        "documentation": "A unique id for the object"
+        "documentation": "A unique id for the object",
+        "inherited": "RiskObject"
       }
     }
   },
@@ -1767,6 +1788,11 @@ let datamodel = {
       },
       "age": {
         "type": "number"
+      },
+      "id": {
+        "type": "string",
+        "documentation": "A unique id for the object",
+        "inherited": "RiskObject"
       }
     }
   },
@@ -1987,6 +2013,11 @@ let datamodel = {
         "dimension": "distance",
         "unit": "meter",
         "documentation": "The lenght of the vehicle in meter"
+      },
+      "id": {
+        "type": "string",
+        "documentation": "A unique id for the object",
+        "inherited": "RiskObject"
       }
     }
   },

@@ -5,9 +5,9 @@ const DATA_MODEL_CONCERTO_PATH = `${__dirname}/../docs/concerto`;
 
 // document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
 
-
+console.log('...Building concerto')
 if (fs.existsSync(DATA_MODEL_CONCERTO_PATH)) {
-  fs.rmdirSync(DATA_MODEL_CONCERTO_PATH, { recursive: true });
+  fs.rmSync(DATA_MODEL_CONCERTO_PATH, { recursive: true });
 }
 
 fs.mkdirSync(DATA_MODEL_CONCERTO_PATH);
@@ -28,12 +28,9 @@ fs.writeFileSync(`${DATA_MODEL_CONCERTO_PATH}/insurance.cto`, output, 'utf8');
 
 
 function buildConcerto(file) {
-  console.log(`----
-  ${file.name}
-  `)
+
   let data = file.data;
 
-  console.log(JSON.stringify(data, null, 2));
 
   let output  = `
 `;

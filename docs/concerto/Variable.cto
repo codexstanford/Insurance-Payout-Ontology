@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept Variable extends Operable {
+  o String name
+}

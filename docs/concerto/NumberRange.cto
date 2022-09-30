@@ -1,0 +1,10 @@
+namespace undefined
+
+
+
+concept NumberRange extends Operable {
+  o Double from
+  o Double to
+  o Boolean fromIncluded
+  o Boolean toIncluded
+}

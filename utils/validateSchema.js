@@ -82,7 +82,7 @@ function checkRequiredProperties() {
       if (!objData.properties && !objData.isAbstract) {
         throw(`Error : Object ${file.name} defined in ${file.namespace}/${file.filename} 
         does not have a properties field`);
-      }
+      }414
     }
     if (objData.type == "enum") {
       if (!objData.values && !objData.isAbstract) {
@@ -93,7 +93,11 @@ function checkRequiredProperties() {
   }
 }
 
+console.log("Start Schema validation.")
+
 checkDoubleDefinitionAndIndex();
 checkWrongType();
 checkMissingObject();
 checkRequiredProperties();
+
+console.log("Schema validation succeed.")

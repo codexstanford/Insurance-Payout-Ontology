@@ -1,17 +1,19 @@
 const fs = require('fs');
 const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
+const injectInheritedProperties  = require('./lib/injectInheritedProperties.js');
+let objectsList = injectInheritedProperties(loadObjFromSrc());
 
-const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
+
 const DATA_MODEL_JSON_PATH = `${__dirname}/../datamodel-build/json`;
 const UTILS_ANNOTATION_PATH = `${__dirname}/annotationBuilder`;
 // document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
 
+console.log("...Building Json")
 
-let objectsList = loadObjFromSrc();
 
 // remove old build
 if (fs.existsSync(DATA_MODEL_JSON_PATH)) {
-  fs.rmdirSync(DATA_MODEL_JSON_PATH, { recursive: true });
+  fs.rmSync(DATA_MODEL_JSON_PATH, { recursive: true });
 }
 
 fs.mkdirSync(DATA_MODEL_JSON_PATH);
@@ -34,9 +36,6 @@ fs.writeFileSync(`${UTILS_ANNOTATION_PATH}/datamodel.js`, "let datamodel = " + J
 function buildJSON(file) {
   let fileName = file.name;
   let data = file.data;
-
-  console.log(JSON.stringify(data, null, 2));
-
 
   for (let ObjName in data) {
 

@@ -1,15 +1,19 @@
 const fs = require('fs');
 
 const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
+const injectInheritedProperties  = require('./lib/injectInheritedProperties.js');
+let objectsList = injectInheritedProperties(loadObjFromSrc());
+
 
 const DATA_MODEL_DOC_PATH = `${__dirname}/../docs`;
 const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 const DATA_MODEL_TPL_PATH = `${__dirname}/../data-model-web-doc-template`;
 
+console.log("...Building doc")
 
 // remove old build
 if (fs.existsSync(DATA_MODEL_DOC_PATH)) {
-  fs.rmdirSync(DATA_MODEL_DOC_PATH, { recursive: true });
+  fs.rmSync(DATA_MODEL_DOC_PATH, { recursive: true });
 }
 
 fs.mkdirSync(DATA_MODEL_DOC_PATH);
@@ -27,7 +31,6 @@ fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/index.html`, home);
 
 
 
-let objectsList = loadObjFromSrc();
 
 // first Index ALl
 let INDEX = {
@@ -54,7 +57,7 @@ function buildIndex() {
 
     index[file.namespace] += `<li><a href="${objName}.html" class="d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`;
   }
-  debugger;
+
   for (let catName in index) {
     DM_INDEX += `
     <li> <span class='d-inline-flex text-decoration-none menuCategory'>${catName}</span></li> 
@@ -158,7 +161,6 @@ function buildObjDoc(objName) {
 
   
 
-    console.log(JSON.stringify(data, null, 2));
     doc += "<div>";
 
     doc += "<h2>Properties</h2>"
@@ -171,7 +173,6 @@ function buildObjDoc(objName) {
   }
 
   if (data.type == 'enum') { 
-    console.log(JSON.stringify(data, null, 2));
     doc += "<div>";
     doc += "<h2>Values</h2>"
     doc += renderValuesDoc(data)
@@ -260,9 +261,17 @@ function renderPropertiesDoc(data) {
     
     doc += `
   <div id="${propertyName}">
-    <h3>${propertyName}</h3>
+    <h3>${propertyName}`;
+    
+    if (property.inherited) {
+      doc +=  ` <span class="inheritedTag">(inherited from ${property.inherited})</span>`;
+    }
+    if (property.overloaded) {
+      doc +=  ` <span  class="inheritedTag">(overloading from ${property.overloaded})</span>`;
+    }
+    doc += `</h3>
     <div class="" >
-`
+`;
 
     let type = property.type;
     

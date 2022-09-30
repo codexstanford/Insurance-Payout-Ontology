@@ -1,0 +1,10 @@
+namespace undefined
+
+enum UnitTimeEnum {
+  o day
+  o consecutiveDay
+  o night
+  o month
+  o year
+}
+

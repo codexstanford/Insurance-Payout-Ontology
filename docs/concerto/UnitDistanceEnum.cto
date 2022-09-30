@@ -1,0 +1,8 @@
+namespace undefined
+
+enum UnitDistanceEnum {
+  o meter
+  o kilometer
+  o miles
+}
+

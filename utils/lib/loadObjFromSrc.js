@@ -5,7 +5,7 @@ const DATA_MODEL_SRC_PATH = `${__dirname}/../../datamodel-src`;
 
 
 function loadObjFromSrc() {
-  // buidl individual docs
+  // build individual docs
   let mainList = fs.readdirSync(DATA_MODEL_SRC_PATH);
   let objectsList = [];
 
@@ -31,6 +31,5 @@ function loadObjFromSrc() {
 
   return objectsList;
 }
-
 
 module.exports = loadObjFromSrc;
