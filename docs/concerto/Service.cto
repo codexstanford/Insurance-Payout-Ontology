@@ -1,0 +1,48 @@
+namespace undefined
+
+import org.codex.insurance.core.Review from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Review.cto
+import org.codex.insurance.core.Audience from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Audience.cto
+import org.codex.insurance.core.string,string,PhysicalActivityCategory,Thing,CategoryCode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,PhysicalActivityCategory,Thing,CategoryCode.cto
+import org.codex.insurance.core.OpeningHoursSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/OpeningHoursSpecification.cto
+import org.codex.insurance.core.Offer,Demand from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Offer,Demand.cto
+import org.codex.insurance.core.Thing from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Thing.cto
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.Person,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Organization.cto
+import org.codex.insurance.core.AggregateRating from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AggregateRating.cto
+import org.codex.insurance.core.Service,Product from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Service,Product.cto
+import org.codex.insurance.core.ServiceChannel from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ServiceChannel.cto
+import org.codex.insurance.core.Organization,Brand from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Brand.cto
+import org.codex.insurance.core.string,ImageObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,ImageObject.cto
+import org.codex.insurance.core.GeoShape,AdministrativeArea,Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GeoShape,AdministrativeArea,Place.cto
+import org.codex.insurance.core.GovernmentBenefitsType,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GovernmentBenefitsType,string.cto
+import org.codex.insurance.core.AdministrativeArea,GeoShape,string,Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea,GeoShape,string,Place.cto
+import org.codex.insurance.core.OfferCatalog from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/OfferCatalog.cto
+
+
+concept Service extends Intangible {
+  o Review review
+  o String award
+  o Audience serviceAudience
+  o string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  o OpeningHoursSpecification hoursAvailable
+  o Audience audience
+  o Offer,Demand offers
+  o Thing serviceOutput
+  o Organization,Person provider
+  o string,string termsOfService
+  o String providerMobility
+  o Person,Organization broker
+  o AggregateRating aggregateRating
+  o Service,Product isSimilarTo
+  o ServiceChannel availableChannel
+  o String slogan
+  o Organization,Brand brand
+  o string,ImageObject logo
+  o Thing produces
+  o GeoShape,AdministrativeArea,Place serviceArea
+  o GovernmentBenefitsType,string serviceType
+  o AdministrativeArea,GeoShape,string,Place areaServed
+  o Service,Product isRelatedTo
+  o OfferCatalog hasOfferCatalog
+}

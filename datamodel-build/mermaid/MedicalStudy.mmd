@@ -1,0 +1,18 @@
+classDiagram
+  MedicalStudy -- MedicalCondition
+MedicalStudy -- string,EventStatusType,MedicalStudyStatus
+MedicalStudy -- MedicalEntity
+MedicalStudy -- AdministrativeArea
+MedicalStudy -- Organization,Person
+
+
+MedicalEntity <|-- MedicalStudy
+class MedicalStudy {
+
+  MedicalCondition healthCondition
+  string,EventStatusType,MedicalStudyStatus status
+  MedicalEntity studySubject
+  AdministrativeArea studyLocation
+  Organization,Person sponsor
+
+}

@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.Enumeration,Class,Property from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Enumeration,Class,Property.cto
+
+
+concept Class extends Intangible {
+  o Enumeration,Class,Property supersededBy
+}

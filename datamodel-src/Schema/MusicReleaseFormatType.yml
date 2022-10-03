@@ -1,0 +1,28 @@
+MusicReleaseFormatType:
+  type: enum
+  documentation:
+    en: Format of this release (the type of recording media used, ie. compact disc,
+      digital media, LP, etc.).
+  inherit: Enumeration
+  values:
+    CDFormat:
+      documentation:
+        en: CDFormat.
+    DigitalAudioTapeFormat:
+      documentation:
+        en: DigitalAudioTapeFormat.
+    DigitalFormat:
+      documentation:
+        en: DigitalFormat.
+    LaserDiscFormat:
+      documentation:
+        en: LaserDiscFormat.
+    VinylFormat:
+      documentation:
+        en: VinylFormat.
+    CassetteFormat:
+      documentation:
+        en: CassetteFormat.
+    DVDFormat:
+      documentation:
+        en: DVDFormat.

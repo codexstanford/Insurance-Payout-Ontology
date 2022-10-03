@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+
+
+concept ComicStory extends CreativeWork {
+  o Person letterer
+  o Person colorist
+  o Person inker
+  o Person penciler
+  o Person artist
+}

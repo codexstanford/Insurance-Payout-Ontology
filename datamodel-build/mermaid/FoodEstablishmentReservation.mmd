@@ -1,0 +1,13 @@
+classDiagram
+  FoodEstablishmentReservation -- number,QuantitativeValue
+FoodEstablishmentReservation -- dateTime,time
+
+
+Reservation <|-- FoodEstablishmentReservation
+class FoodEstablishmentReservation {
+
+  number,QuantitativeValue partySize
+  dateTime,time startTime
+  dateTime,time endTime
+
+}

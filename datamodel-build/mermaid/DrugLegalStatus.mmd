@@ -1,0 +1,10 @@
+classDiagram
+  DrugLegalStatus -- AdministrativeArea
+
+
+MedicalIntangible <|-- DrugLegalStatus
+class DrugLegalStatus {
+
+  AdministrativeArea applicableLocation
+
+}

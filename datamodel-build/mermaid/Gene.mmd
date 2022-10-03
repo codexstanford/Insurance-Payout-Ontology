@@ -1,0 +1,15 @@
+classDiagram
+  Gene -- Gene
+Gene -- BioChemEntity
+Gene -- AnatomicalStructure,BioChemEntity,DefinedTerm,AnatomicalSystem
+
+
+BioChemEntity <|-- Gene
+class Gene {
+
+  Gene alternativeOf
+  string hasBioPolymerSequence
+  BioChemEntity encodesBioChemEntity
+  AnatomicalStructure,BioChemEntity,DefinedTerm,AnatomicalSystem expressedIn
+
+}

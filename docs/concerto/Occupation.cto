@@ -1,0 +1,21 @@
+namespace undefined
+
+import org.codex.insurance.core.MonetaryAmountDistribution,MonetaryAmount,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MonetaryAmountDistribution,MonetaryAmount,number.cto
+import org.codex.insurance.core.AdministrativeArea from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea.cto
+import org.codex.insurance.core.string,OccupationalExperienceRequirements from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,OccupationalExperienceRequirements.cto
+import org.codex.insurance.core.EducationalOccupationalCredential,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/EducationalOccupationalCredential,string.cto
+import org.codex.insurance.core.string,DefinedTerm from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,DefinedTerm.cto
+import org.codex.insurance.core.string,EducationalOccupationalCredential from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,EducationalOccupationalCredential.cto
+import org.codex.insurance.core.CategoryCode,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CategoryCode,string.cto
+
+
+concept Occupation extends Intangible {
+  o MonetaryAmountDistribution,MonetaryAmount,number estimatedSalary
+  o String responsibilities
+  o AdministrativeArea occupationLocation
+  o string,OccupationalExperienceRequirements experienceRequirements
+  o EducationalOccupationalCredential,string educationRequirements
+  o string,DefinedTerm skills
+  o string,EducationalOccupationalCredential qualifications
+  o CategoryCode,string occupationalCategory
+}

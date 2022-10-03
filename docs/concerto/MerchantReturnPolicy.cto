@@ -1,0 +1,40 @@
+namespace undefined
+
+import org.codex.insurance.core.MerchantReturnEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MerchantReturnEnumeration.cto
+import org.codex.insurance.core.Country,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Country,string.cto
+import org.codex.insurance.core.MonetaryAmount,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MonetaryAmount,number.cto
+import org.codex.insurance.core.MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MonetaryAmount.cto
+import org.codex.insurance.core.ReturnFeesEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ReturnFeesEnumeration.cto
+import org.codex.insurance.core.OfferItemCondition from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/OfferItemCondition.cto
+import org.codex.insurance.core.ReturnLabelSourceEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ReturnLabelSourceEnumeration.cto
+import org.codex.insurance.core.RefundTypeEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/RefundTypeEnumeration.cto
+import org.codex.insurance.core.dateTime,number,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,number,date.cto
+import org.codex.insurance.core.ReturnMethodEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ReturnMethodEnumeration.cto
+import org.codex.insurance.core.PropertyValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PropertyValue.cto
+import org.codex.insurance.core.MerchantReturnPolicySeasonalOverride from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MerchantReturnPolicySeasonalOverride.cto
+import org.codex.insurance.core.string,Country from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Country.cto
+
+
+concept MerchantReturnPolicy extends Intangible {
+  o MerchantReturnEnumeration returnPolicyCategory
+  o Country,string returnPolicyCountry
+  o String merchantReturnLink
+  o MonetaryAmount,number restockingFee
+  o MonetaryAmount itemDefectReturnShippingFeesAmount
+  o ReturnFeesEnumeration itemDefectReturnFees
+  o Boolean inStoreReturnsOffered
+  o OfferItemCondition itemCondition
+  o ReturnLabelSourceEnumeration itemDefectReturnLabelSource
+  o ReturnLabelSourceEnumeration returnLabelSource
+  o MonetaryAmount customerRemorseReturnShippingFeesAmount
+  o RefundTypeEnumeration refundType
+  o MonetaryAmount returnShippingFeesAmount
+  o dateTime,number,date merchantReturnDays
+  o ReturnMethodEnumeration returnMethod
+  o PropertyValue additionalProperty
+  o ReturnLabelSourceEnumeration customerRemorseReturnLabelSource
+  o ReturnFeesEnumeration customerRemorseReturnFees
+  o MerchantReturnPolicySeasonalOverride returnPolicySeasonalOverride
+  o string,Country applicableCountry
+  o ReturnFeesEnumeration returnFees
+}

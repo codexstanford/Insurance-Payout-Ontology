@@ -1,0 +1,27 @@
+classDiagram
+  FloorPlan -- Accommodation
+FloorPlan -- QuantitativeValue,number
+FloorPlan -- QuantitativeValue
+FloorPlan -- LocationFeatureSpecification
+FloorPlan -- number,QuantitativeValue
+FloorPlan -- string,boolean
+FloorPlan -- ImageObject,string
+
+
+Intangible <|-- FloorPlan
+class FloorPlan {
+
+  Accommodation isPlanForApartment
+  number numberOfBathroomsTotal
+  QuantitativeValue,number numberOfRooms
+  QuantitativeValue numberOfAccommodationUnits
+  QuantitativeValue numberOfAvailableAccommodationUnits
+  LocationFeatureSpecification amenityFeature
+  number,QuantitativeValue numberOfBedrooms
+  number numberOfPartialBathrooms
+  QuantitativeValue floorSize
+  number numberOfFullBathrooms
+  string,boolean petsAllowed
+  ImageObject,string layoutImage
+
+}

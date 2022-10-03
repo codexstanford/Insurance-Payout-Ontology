@@ -1,0 +1,9 @@
+namespace undefined
+
+
+
+concept HealthPlanNetwork extends Intangible {
+  o String healthPlanNetworkId
+  o Boolean healthPlanCostSharing
+  o String healthPlanNetworkTier
+}

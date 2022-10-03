@@ -1,0 +1,126 @@
+Order:
+  type: object
+  documentation:
+    en: An order is a confirmation of a transaction (a receipt), which can contain
+      multiple line items, each represented by an Offer that has been accepted
+      by the customer.
+  inherit: Intangible
+  properties:
+    orderDelivery:
+      type: ParcelDelivery
+      documentation:
+        en: The delivery of the parcel related to this order or order item.
+    billingAddress:
+      type: PostalAddress
+      documentation:
+        en: The billing address for the order.
+    acceptedOffer:
+      type: Offer
+      documentation:
+        en: The offer(s) -- e.g., product, quantity and price combinations -- included
+          in the order.
+    merchant:
+      type:
+        - Organization
+        - Person
+      documentation:
+        en: "'merchant' is an out-dated term for 'seller'."
+    orderStatus:
+      type: OrderStatus
+      documentation:
+        en: The current status of the order.
+    confirmationNumber:
+      type: string
+      documentation:
+        en: A number that confirms the given order or payment has been received.
+    partOfInvoice:
+      type: Invoice
+      documentation:
+        en: The order is being paid as part of the referenced Invoice.
+    orderNumber:
+      type: string
+      documentation:
+        en: The identifier of the transaction.
+    seller:
+      type:
+        - Organization
+        - Person
+      documentation:
+        en: An entity which offers (sells / leases / lends / loans) the services /
+          goods.  A seller may also be a provider.
+    customer:
+      type:
+        - Organization
+        - Person
+      documentation:
+        en: Party placing the order or paying the invoice.
+    paymentDueDate:
+      type:
+        - dateTime
+        - date
+      documentation:
+        en: The date that payment is due.
+    broker:
+      type:
+        - Person
+        - Organization
+      documentation:
+        en: An entity that arranges for an exchange between a buyer and a seller.  In
+          most cases a broker never acquires or releases ownership of a product
+          or service involved in an exchange.  If it is not clear whether an
+          entity is a broker, seller, or buyer, the latter two terms are
+          preferred.
+    discountCode:
+      type: string
+      documentation:
+        en: Code used to redeem a discount.
+    discount:
+      type:
+        - string
+        - number
+      documentation:
+        en: Any discount applied (to an Order).
+    paymentMethodId:
+      type: string
+      documentation:
+        en: An identifier for the method of payment used (e.g. the last 4 digits of the
+          credit card).
+    paymentUrl:
+      type: string
+      documentation:
+        en: The URL for sending a payment.
+    discountCurrency:
+      type: string
+      documentation:
+        en: 'The currency of the discount.\n\nUse standard formats: [ISO 4217 currency
+          format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+          symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+          cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+          Tradings
+          Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+          (LETS) and other currency types e.g. "Ithaca HOUR".'
+    paymentDue:
+      type: dateTime
+      documentation:
+        en: The date that payment is due.
+    orderDate:
+      type:
+        - date
+        - dateTime
+      documentation:
+        en: Date order was placed.
+    isGift:
+      type: boolean
+      documentation:
+        en: Was the offer accepted as a gift for someone other than the buyer.
+    orderedItem:
+      type:
+        - Service
+        - OrderItem
+        - Product
+      documentation:
+        en: The item ordered.
+    paymentMethod:
+      type: PaymentMethod
+      documentation:
+        en: The name of the credit card or other method of payment for the order.

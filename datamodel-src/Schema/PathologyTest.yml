@@ -1,0 +1,11 @@
+PathologyTest:
+  type: object
+  documentation:
+    en: A medical test performed by a laboratory that typically involves examination
+      of a tissue sample by a pathologist.
+  inherit: MedicalTest
+  properties:
+    tissueSample:
+      type: string
+      documentation:
+        en: The type of tissue sample required for the test.

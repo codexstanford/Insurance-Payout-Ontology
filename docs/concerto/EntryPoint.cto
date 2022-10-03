@@ -1,0 +1,15 @@
+namespace undefined
+
+import org.codex.insurance.core.SoftwareApplication from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/SoftwareApplication.cto
+import org.codex.insurance.core.string,string,DigitalPlatformEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,DigitalPlatformEnumeration.cto
+
+
+concept EntryPoint extends Intangible {
+  o SoftwareApplication actionApplication
+  o SoftwareApplication application
+  o string,string,DigitalPlatformEnumeration actionPlatform
+  o String httpMethod
+  o String urlTemplate
+  o String encodingType
+  o String contentType
+}

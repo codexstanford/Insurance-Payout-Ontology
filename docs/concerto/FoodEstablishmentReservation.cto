@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.number,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,QuantitativeValue.cto
+import org.codex.insurance.core.dateTime,time from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,time.cto
+
+
+concept FoodEstablishmentReservation extends Reservation {
+  o number,QuantitativeValue partySize
+  o dateTime,time startTime
+  o dateTime,time endTime
+}

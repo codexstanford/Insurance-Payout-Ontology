@@ -1,0 +1,11 @@
+classDiagram
+  ReplaceAction -- Thing
+
+
+UpdateAction <|-- ReplaceAction
+class ReplaceAction {
+
+  Thing replacee
+  Thing replacer
+
+}

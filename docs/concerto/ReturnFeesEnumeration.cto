@@ -1,0 +1,10 @@
+namespace undefined
+
+enum ReturnFeesEnumeration {
+  o ReturnFeesCustomerResponsibility
+  o OriginalShippingFees
+  o ReturnShippingFees
+  o FreeReturn
+  o RestockingFees
+}
+

@@ -1,0 +1,15 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalProcedureType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalProcedureType.cto
+import org.codex.insurance.core.MedicalEntity,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalEntity,string.cto
+import org.codex.insurance.core.string,EventStatusType,MedicalStudyStatus from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,EventStatusType,MedicalStudyStatus.cto
+
+
+concept MedicalProcedure extends MedicalEntity {
+  o MedicalProcedureType procedureType
+  o MedicalEntity,string preparation
+  o String bodyLocation
+  o string,EventStatusType,MedicalStudyStatus status
+  o String howPerformed
+  o String followup
+}

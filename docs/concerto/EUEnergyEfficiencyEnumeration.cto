@@ -1,0 +1,15 @@
+namespace undefined
+
+enum EUEnergyEfficiencyEnumeration {
+  o EUEnergyEfficiencyCategoryD
+  o EUEnergyEfficiencyCategoryA2Plus
+  o EUEnergyEfficiencyCategoryE
+  o EUEnergyEfficiencyCategoryA3Plus
+  o EUEnergyEfficiencyCategoryA1Plus
+  o EUEnergyEfficiencyCategoryA
+  o EUEnergyEfficiencyCategoryB
+  o EUEnergyEfficiencyCategoryF
+  o EUEnergyEfficiencyCategoryC
+  o EUEnergyEfficiencyCategoryG
+}
+

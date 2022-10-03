@@ -1,0 +1,15 @@
+classDiagram
+  Property -- Class
+Property -- Enumeration,Class,Property
+Property -- Property
+
+
+Intangible <|-- Property
+class Property {
+
+  Class domainIncludes
+  Enumeration,Class,Property supersededBy
+  Class rangeIncludes
+  Property inverseOf
+
+}

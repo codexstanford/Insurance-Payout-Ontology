@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+
+
+concept CourseInstance extends Event {
+  o Person instructor
+  o String courseWorkload
+  o string,string courseMode
+}

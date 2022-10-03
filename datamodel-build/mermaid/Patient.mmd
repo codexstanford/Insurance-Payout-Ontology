@@ -1,0 +1,14 @@
+classDiagram
+  Patient -- MedicalCondition
+Patient -- Drug
+
+
+MedicalAudience <|-- Patient
+Person <|-- Patient
+class Patient {
+
+  MedicalCondition healthCondition
+  Drug drug
+  MedicalCondition diagnosis
+
+}

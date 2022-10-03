@@ -1,0 +1,10 @@
+ImagingTest:
+  type: object
+  documentation:
+    en: Any medical imaging modality typically used for diagnostic purposes.
+  inherit: MedicalTest
+  properties:
+    imagingTechnique:
+      type: MedicalImagingTechnique
+      documentation:
+        en: Imaging technique used.

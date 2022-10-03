@@ -1,0 +1,34 @@
+Diet:
+  type: object
+  documentation:
+    en: A strategy of regulating the intake of food to achieve or maintain a
+      specific health-related goal.
+  inherit:
+    - LifestyleModification
+    - CreativeWork
+  properties:
+    expertConsiderations:
+      type: string
+      documentation:
+        en: Medical expert advice related to the plan.
+    risks:
+      type: string
+      documentation:
+        en: Specific physiologic risks associated to the diet plan.
+    physiologicalBenefits:
+      type: string
+      documentation:
+        en: Specific physiologic benefits associated to the plan.
+    endorsers:
+      type:
+        - Person
+        - Organization
+      documentation:
+        en: People or organizations that endorse the plan.
+    dietFeatures:
+      type: string
+      documentation:
+        en: Nutritional information specific to the dietary plan. May include dietary
+          recommendations on what foods to avoid, what foods to consume, and
+          specific alterations/deviations from the USDA or other regulatory
+          body's approved dietary guidelines.

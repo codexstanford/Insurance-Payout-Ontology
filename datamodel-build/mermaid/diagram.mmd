@@ -12,18 +12,6 @@ class Amount {
 
 }
 
-Benefits -- InsurancePayout
-Benefits -- RiskChain
-
-
-class Benefits {
-
-  InsurancePayout[] payouts
-  RiskChain riskChain
-  string text
-
-}
-
 ChainCompositionOr -- RiskChain
 
 
@@ -58,6 +46,18 @@ class Chainable {
 
 }
 
+Coverage -- InsurancePayout
+Coverage -- RiskChain
+
+
+class Coverage {
+
+  InsurancePayout[] payouts
+  RiskChain riskChain
+  string text
+
+}
+
 InsurancePayout -- PayoutTypeEnum
 InsurancePayout -- Amount
 InsurancePayout -- Multiplier
@@ -72,6 +72,19 @@ class InsurancePayout {
   Multiplier multipliers
   RiskChain for
   boolean impactOtherConsumption
+
+}
+
+InsurancePolicy -- Coverage
+InsurancePolicy -- RiskObject
+InsurancePolicy -- Specific
+
+
+class InsurancePolicy {
+
+  Coverage[] coverages
+  RiskObject[] riskObjects
+  Specific[] specifics
 
 }
 
@@ -177,17 +190,6 @@ class PayoutTypeEnum {
   o . . . 4 more values
 }
 
-Product -- Benefits
-Product -- RiskObject
-
-
-class Product {
-
-  Benefits[] benefits
-  RiskObject[] riskObjects
-
-}
-
 
 
 class Relation {
@@ -229,6 +231,16 @@ class Situation {
   string event
   string location
   string period
+
+}
+
+Specific -- Amount
+
+
+class Specific {
+
+  string name
+  Amount value
 
 }
 
@@ -302,16 +314,31 @@ class Variable {
 
 }
 
-Person -- PersonRelationToPolicyHolderEnum
+InsurancePerson -- PersonRelationToPolicyHolderEnum
 
 
-RiskObject <|-- Person
-class Person {
+Person <|-- InsurancePerson
+class InsurancePerson {
 
   PersonRelationToPolicyHolderEnum relationToPolicyHolder
   string firstName
   string lastName
   number age
+
+}
+
+InsuranceVehicle -- Amount
+
+
+Vehicle <|-- InsuranceVehicle
+class InsuranceVehicle {
+
+  Amount productionYear
+  Amount age
+  Amount length
+  Amount weight
+  Amount height
+  Amount width
 
 }
 
@@ -324,19 +351,7057 @@ class PersonRelationToPolicyHolderEnum {
   o . . . 28 more values
 }
 
-Vehicle -- Amount
 
 
-RiskObject <|-- Vehicle
-class Vehicle {
+MediaObject <|-- 3DModel
+class 3DModel {
 
-  Amount productionYear
-  Amount age
-  Amount length
-  Amount weight
+  boolean isResizable
 
 }
 
+
+
+TechArticle <|-- APIReference
+class APIReference {
+
+  string assembly
+  string targetPlatform
+  string executableLibraryName
+  string programmingModel
+  string assemblyVersion
+
+}
+
+Accommodation -- QuantitativeValue,number
+Accommodation -- QuantitativeValue,Duration
+Accommodation -- LocationFeatureSpecification
+Accommodation -- number,QuantitativeValue
+Accommodation -- QuantitativeValue
+Accommodation -- FloorPlan
+Accommodation -- string,boolean
+
+
+Place <|-- Accommodation
+class Accommodation {
+
+  string floorLevel
+  number numberOfBathroomsTotal
+  QuantitativeValue,number numberOfRooms
+  QuantitativeValue,Duration leaseLength
+  number yearBuilt
+  string accommodationCategory
+  LocationFeatureSpecification amenityFeature
+  string tourBookingPage
+  number,QuantitativeValue numberOfBedrooms
+  number numberOfPartialBathrooms
+  QuantitativeValue floorSize
+  FloorPlan accommodationFloorPlan
+  number numberOfFullBathrooms
+  string permittedUsage
+  string,boolean petsAllowed
+
+}
+
+Action -- Organization,Person
+Action -- dateTime,time
+Action -- ActionStatusType
+Action -- Thing
+Action -- PostalAddress,string,Place,VirtualLocation
+Action -- EntryPoint
+
+
+Thing <|-- Action
+class Action {
+
+  Organization,Person agent
+  dateTime,time startTime
+  ActionStatusType actionStatus
+  Organization,Person provider
+  Thing result
+  PostalAddress,string,Place,VirtualLocation location
+  Thing object
+  EntryPoint target
+  dateTime,time endTime
+  Organization,Person participant
+  Thing instrument
+  Thing error
+
+}
+
+ActionAccessSpecification -- Offer
+ActionAccessSpecification -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+ActionAccessSpecification -- Place,string,GeoShape
+ActionAccessSpecification -- MediaSubscription,boolean
+ActionAccessSpecification -- date,dateTime,time
+ActionAccessSpecification -- GeoShape,string,Place
+ActionAccessSpecification -- time,dateTime,date
+
+
+Intangible <|-- ActionAccessSpecification
+class ActionAccessSpecification {
+
+  Offer expectsAcceptanceOf
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  Place,string,GeoShape ineligibleRegion
+  MediaSubscription,boolean requiresSubscription
+  date,dateTime,time availabilityEnds
+  GeoShape,string,Place eligibleRegion
+  time,dateTime,date availabilityStarts
+
+}
+
+StatusEnumeration o-- ActionStatusType
+  class ActionStatusType {
+<<enumeration>>
+  o PotentialActionStatus
+  o ActiveActionStatus
+  o FailedActionStatus
+  o CompletedActionStatus
+}
+
+Enumeration o-- AdultOrientedEnumeration
+  class AdultOrientedEnumeration {
+<<enumeration>>
+  o ReducedRelevanceForChildrenConsideration
+  o SexualContentConsideration
+  o UnclassifiedAdultConsideration
+  o HealthcareConsideration
+  o . . . 6 more values
+}
+
+AggregateOffer -- string,number
+AggregateOffer -- Offer,Demand
+
+
+Offer <|-- AggregateOffer
+class AggregateOffer {
+
+  string,number highPrice
+  Offer,Demand offers
+  string,number lowPrice
+  number offerCount
+
+}
+
+AggregateRating -- Thing
+
+
+Rating <|-- AggregateRating
+class AggregateRating {
+
+  Thing itemReviewed
+  number reviewCount
+  number ratingCount
+
+}
+
+Airline -- BoardingPolicyType
+
+
+Organization <|-- Airline
+class Airline {
+
+  string iataCode
+  BoardingPolicyType boardingPolicy
+
+}
+
+
+
+CivicStructure <|-- Airport
+class Airport {
+
+  string iataCode
+  string icaoCode
+
+}
+
+
+
+Intangible <|-- AlignmentObject
+class AlignmentObject {
+
+  string alignmentType
+  string educationalFramework
+  string targetDescription
+  string targetName
+  string targetUrl
+
+}
+
+AnatomicalStructure -- AnatomicalStructure
+AnatomicalStructure -- AnatomicalSystem
+AnatomicalStructure -- MedicalTherapy
+AnatomicalStructure -- ImageObject
+AnatomicalStructure -- MedicalCondition
+
+
+MedicalEntity <|-- AnatomicalStructure
+class AnatomicalStructure {
+
+  string bodyLocation
+  AnatomicalStructure connectedTo
+  AnatomicalSystem partOfSystem
+  MedicalTherapy relatedTherapy
+  ImageObject diagram
+  MedicalCondition relatedCondition
+  AnatomicalStructure subStructure
+  string associatedPathophysiology
+
+}
+
+AnatomicalSystem -- MedicalTherapy
+AnatomicalSystem -- MedicalCondition
+AnatomicalSystem -- AnatomicalStructure
+AnatomicalSystem -- AnatomicalStructure,AnatomicalSystem
+
+
+MedicalEntity <|-- AnatomicalSystem
+class AnatomicalSystem {
+
+  MedicalTherapy relatedTherapy
+  MedicalCondition relatedCondition
+  AnatomicalStructure relatedStructure
+  string associatedPathophysiology
+  AnatomicalStructure,AnatomicalSystem comprisedOf
+
+}
+
+Answer -- WebContent,Comment
+
+
+Comment <|-- Answer
+class Answer {
+
+  WebContent,Comment answerExplanation
+
+}
+
+Apartment -- QuantitativeValue,number
+Apartment -- QuantitativeValue
+
+
+Accommodation <|-- Apartment
+class Apartment {
+
+  QuantitativeValue,number numberOfRooms
+  QuantitativeValue occupancy
+
+}
+
+ApartmentComplex -- QuantitativeValue
+ApartmentComplex -- number,QuantitativeValue
+ApartmentComplex -- string,boolean
+
+
+Residence <|-- ApartmentComplex
+class ApartmentComplex {
+
+  QuantitativeValue numberOfAccommodationUnits
+  QuantitativeValue numberOfAvailableAccommodationUnits
+  string tourBookingPage
+  number,QuantitativeValue numberOfBedrooms
+  string,boolean petsAllowed
+
+}
+
+ArchiveComponent -- Place,string,PostalAddress
+
+
+CreativeWork <|-- ArchiveComponent
+class ArchiveComponent {
+
+  Place,string,PostalAddress [object Object]
+
+}
+
+ArchiveOrganization -- ArchiveComponent
+
+
+LocalBusiness <|-- ArchiveOrganization
+class ArchiveOrganization {
+
+  ArchiveComponent [object Object]
+
+}
+
+Artery -- AnatomicalStructure
+
+
+Vessel <|-- Artery
+class Artery {
+
+  AnatomicalStructure supplyTo
+  AnatomicalStructure arterialBranch
+
+}
+
+Article -- string,number
+Article -- string,CreativeWork
+Article -- string,SpeakableSpecification
+
+
+CreativeWork <|-- Article
+class Article {
+
+  string,number pageStart
+  string articleSection
+  string,number pageEnd
+  string,CreativeWork backstory
+  number wordCount
+  string articleBody
+  string,SpeakableSpecification speakable
+  string pagination
+
+}
+
+AskAction -- Question
+
+
+CommunicateAction <|-- AskAction
+class AskAction {
+
+  Question question
+
+}
+
+Audience -- AdministrativeArea
+
+
+Intangible <|-- Audience
+class Audience {
+
+  string audienceType
+  AdministrativeArea geographicArea
+
+}
+
+AudioObject -- string,MediaObject
+
+
+MediaObject <|-- AudioObject
+class AudioObject {
+
+  string embeddedTextCaption
+  string,MediaObject caption
+  string transcript
+
+}
+
+Audiobook -- Person
+Audiobook -- Duration
+
+
+AudioObject <|-- Audiobook
+Book <|-- Audiobook
+class Audiobook {
+
+  Person readBy
+  Duration duration
+
+}
+
+AuthorizeAction -- Person,Audience,ContactPoint,Organization
+
+
+AllocateAction <|-- AuthorizeAction
+class AuthorizeAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}
+
+BankAccount -- string,string
+BankAccount -- MonetaryAmount
+
+
+FinancialProduct <|-- BankAccount
+class BankAccount {
+
+  string,string bankAccountType
+  MonetaryAmount accountMinimumInflow
+  MonetaryAmount accountOverdraftLimit
+
+}
+
+BedDetails -- BedType,string
+
+
+Intangible <|-- BedDetails
+class BedDetails {
+
+  BedType,string typeOfBed
+  number numberOfBeds
+
+}
+
+BioChemEntity -- Grant
+BioChemEntity -- Gene
+BioChemEntity -- BioChemEntity
+BioChemEntity -- string,DefinedTerm,string,Taxon
+BioChemEntity -- PropertyValue,string,DefinedTerm
+BioChemEntity -- PropertyValue,DefinedTerm,string
+BioChemEntity -- string,PropertyValue,MedicalCondition
+BioChemEntity -- string,PropertyValue,string
+BioChemEntity -- DefinedTerm
+
+
+Thing <|-- BioChemEntity
+class BioChemEntity {
+
+  Grant funding
+  Gene isEncodedByBioChemEntity
+  BioChemEntity isPartOfBioChemEntity
+  string,DefinedTerm,string,Taxon taxonomicRange
+  PropertyValue,string,DefinedTerm isInvolvedInBiologicalProcess
+  PropertyValue,DefinedTerm,string isLocatedInSubcellularLocation
+  string,PropertyValue,MedicalCondition associatedDisease
+  PropertyValue,DefinedTerm,string hasMolecularFunction
+  BioChemEntity hasBioChemEntityPart
+  BioChemEntity bioChemInteraction
+  string,PropertyValue,string hasRepresentation
+  BioChemEntity bioChemSimilarity
+  DefinedTerm biologicalRole
+
+}
+
+Blog -- BlogPosting
+
+
+CreativeWork <|-- Blog
+class Blog {
+
+  BlogPosting blogPosts
+  string issn
+  BlogPosting blogPost
+
+}
+
+Enumeration o-- BoardingPolicyType
+  class BoardingPolicyType {
+<<enumeration>>
+  o GroupBoardingPolicy
+  o ZoneBoardingPolicy
+}
+
+BoatTrip -- BoatTerminal
+
+
+Trip <|-- BoatTrip
+class BoatTrip {
+
+  BoatTerminal arrivalBoatTerminal
+  BoatTerminal departureBoatTerminal
+
+}
+
+MeasurementTypeEnumeration o-- BodyMeasurementTypeEnumeration
+  class BodyMeasurementTypeEnumeration {
+<<enumeration>>
+  o BodyMeasurementHand
+  o BodyMeasurementHips
+  o BodyMeasurementUnderbust
+  o BodyMeasurementWeight
+  o . . . 9 more values
+}
+
+Book -- Person
+Book -- BookFormatType
+
+
+CreativeWork <|-- Book
+class Book {
+
+  string isbn
+  Person illustrator
+  number numberOfPages
+  boolean abridged
+  BookFormatType bookFormat
+  string bookEdition
+
+}
+
+Enumeration o-- BookFormatType
+  class BookFormatType {
+<<enumeration>>
+  o AudiobookFormat
+  o GraphicNovel
+  o Paperback
+  o Hardcover
+  o . . . 1 more values
+}
+
+BorrowAction -- Person,Organization
+
+
+TransferAction <|-- BorrowAction
+class BorrowAction {
+
+  Person,Organization lender
+
+}
+
+Brand -- Review
+Brand -- AggregateRating
+Brand -- string,ImageObject
+
+
+Intangible <|-- Brand
+class Brand {
+
+  Review review
+  AggregateRating aggregateRating
+  string slogan
+  string,ImageObject logo
+
+}
+
+BroadcastChannel -- string,string
+BroadcastChannel -- BroadcastFrequencySpecification,string
+BroadcastChannel -- BroadcastService
+BroadcastChannel -- CableOrSatelliteService
+
+
+Intangible <|-- BroadcastChannel
+class BroadcastChannel {
+
+  string,string genre
+  BroadcastFrequencySpecification,string broadcastFrequency
+  BroadcastService providesBroadcastService
+  string broadcastChannelId
+  CableOrSatelliteService inBroadcastLineup
+  string broadcastServiceTier
+
+}
+
+BroadcastEvent -- Language,string
+BroadcastEvent -- Event
+
+
+PublicationEvent <|-- BroadcastEvent
+class BroadcastEvent {
+
+  Language,string subtitleLanguage
+  string videoFormat
+  Event broadcastOfEvent
+  boolean isLiveBroadcast
+
+}
+
+BroadcastFrequencySpecification -- QualitativeValue,string
+BroadcastFrequencySpecification -- number,QuantitativeValue
+
+
+Intangible <|-- BroadcastFrequencySpecification
+class BroadcastFrequencySpecification {
+
+  string broadcastSubChannel
+  QualitativeValue,string broadcastSignalModulation
+  number,QuantitativeValue broadcastFrequencyValue
+
+}
+
+BroadcastService -- BroadcastService
+BroadcastService -- BroadcastFrequencySpecification,string
+BroadcastService -- string,Language
+BroadcastService -- BroadcastChannel
+BroadcastService -- Organization
+BroadcastService -- Place
+
+
+Service <|-- BroadcastService
+class BroadcastService {
+
+  BroadcastService parentService
+  string broadcastDisplayName
+  string videoFormat
+  string broadcastTimezone
+  BroadcastFrequencySpecification,string broadcastFrequency
+  string callSign
+  string,Language inLanguage
+  BroadcastChannel hasBroadcastChannel
+  Organization broadcaster
+  Organization broadcastAffiliateOf
+  Place area
+
+}
+
+BusOrCoach -- QuantitativeValue
+
+
+Vehicle <|-- BusOrCoach
+class BusOrCoach {
+
+  QuantitativeValue roofLoad
+  string acrissCode
+
+}
+
+BusTrip -- BusStop,BusStation
+BusTrip -- BusStation,BusStop
+
+
+Trip <|-- BusTrip
+class BusTrip {
+
+  BusStop,BusStation departureBusStop
+  string busName
+  BusStation,BusStop arrivalBusStop
+  string busNumber
+
+}
+
+BusinessAudience -- QuantitativeValue
+
+
+Audience <|-- BusinessAudience
+class BusinessAudience {
+
+  QuantitativeValue yearlyRevenue
+  QuantitativeValue numberOfEmployees
+  QuantitativeValue yearsInOperation
+
+}
+
+BuyAction -- WarrantyPromise
+BuyAction -- Organization,Person
+BuyAction -- Person,Organization
+
+
+TradeAction <|-- BuyAction
+class BuyAction {
+
+  WarrantyPromise warrantyPromise
+  Organization,Person seller
+  Person,Organization vendor
+
+}
+
+CDCPMDRecord -- dateTime,string
+CDCPMDRecord -- date,dateTime
+
+
+StructuredValue <|-- CDCPMDRecord
+class CDCPMDRecord {
+
+  number cvdNumBedsOcc
+  number cvdNumICUBedsOcc
+  number cvdNumVent
+  number cvdNumC19Died
+  number cvdNumTotBeds
+  string cvdFacilityCounty
+  number cvdNumICUBeds
+  dateTime,string cvdCollectionDate
+  number cvdNumC19HOPats
+  number cvdNumC19OFMechVentPats
+  string cvdFacilityId
+  number cvdNumVentUse
+  number cvdNumBeds
+  number cvdNumC19MechVentPats
+  date,dateTime datePosted
+  number cvdNumC19OverflowPats
+  number cvdNumC19HospPats
+
+}
+
+Car -- QuantitativeValue
+
+
+Vehicle <|-- Car
+class Car {
+
+  QuantitativeValue roofLoad
+  string acrissCode
+
+}
+
+Enumeration o-- CarUsageType
+  class CarUsageType {
+<<enumeration>>
+  o TaxiVehicleUsage
+  o DrivingSchoolVehicleUsage
+  o RentalVehicleUsage
+}
+
+CategoryCode -- CategoryCodeSet,string
+
+
+DefinedTerm <|-- CategoryCode
+class CategoryCode {
+
+  string codeValue
+  CategoryCodeSet,string inCodeSet
+
+}
+
+CategoryCodeSet -- CategoryCode
+
+
+DefinedTermSet <|-- CategoryCodeSet
+class CategoryCodeSet {
+
+  CategoryCode hasCategoryCode
+
+}
+
+Chapter -- string,number
+
+
+CreativeWork <|-- Chapter
+class Chapter {
+
+  string,number pageStart
+  string,number pageEnd
+  string pagination
+
+}
+
+ChemicalSubstance -- DefinedTerm
+
+
+BioChemEntity <|-- ChemicalSubstance
+class ChemicalSubstance {
+
+  string chemicalComposition
+  DefinedTerm potentialUse
+  DefinedTerm chemicalRole
+
+}
+
+ChooseAction -- string,Thing
+ChooseAction -- Thing,string
+
+
+AssessAction <|-- ChooseAction
+class ChooseAction {
+
+  string,Thing option
+  Thing,string actionOption
+
+}
+
+
+
+Place <|-- CivicStructure
+class CivicStructure {
+
+  string openingHours
+
+}
+
+Claim -- Person,Organization
+Claim -- CreativeWork
+
+
+CreativeWork <|-- Claim
+class Claim {
+
+  Person,Organization claimInterpreter
+  CreativeWork firstAppearance
+  CreativeWork appearance
+
+}
+
+
+
+Review <|-- ClaimReview
+class ClaimReview {
+
+  string claimReviewed
+
+}
+
+Class -- Enumeration,Class,Property
+
+
+Intangible <|-- Class
+class Class {
+
+  Enumeration,Class,Property supersededBy
+
+}
+
+Clip -- number,HyperTocEntry
+Clip -- Person
+Clip -- Episode
+Clip -- string,number
+Clip -- CreativeWorkSeries
+Clip -- CreativeWorkSeason
+Clip -- Person,MusicGroup
+
+
+CreativeWork <|-- Clip
+class Clip {
+
+  number,HyperTocEntry startOffset
+  number,HyperTocEntry endOffset
+  Person director
+  Person actor
+  Episode partOfEpisode
+  string,number clipNumber
+  CreativeWorkSeries partOfSeries
+  CreativeWorkSeason partOfSeason
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}
+
+
+
+CreativeWork <|-- Collection
+class Collection {
+
+  number [object Object]
+
+}
+
+ComicIssue -- Person
+
+
+PublicationIssue <|-- ComicIssue
+class ComicIssue {
+
+  Person letterer
+  Person colorist
+  string variantCover
+  Person inker
+  Person penciler
+  Person artist
+
+}
+
+ComicStory -- Person
+
+
+CreativeWork <|-- ComicStory
+class ComicStory {
+
+  Person letterer
+  Person colorist
+  Person inker
+  Person penciler
+  Person artist
+
+}
+
+Comment -- Comment
+
+
+CreativeWork <|-- Comment
+class Comment {
+
+  Comment parentItem
+  number downvoteCount
+  number upvoteCount
+
+}
+
+CommentAction -- Comment
+
+
+CommunicateAction <|-- CommentAction
+class CommentAction {
+
+  Comment resultComment
+
+}
+
+CommunicateAction -- Person,Audience,ContactPoint,Organization
+CommunicateAction -- string,Language
+CommunicateAction -- Language
+CommunicateAction -- Thing
+
+
+InteractAction <|-- CommunicateAction
+class CommunicateAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+  string,Language inLanguage
+  Language language
+  Thing about
+
+}
+
+CompoundPriceSpecification -- UnitPriceSpecification
+CompoundPriceSpecification -- PriceTypeEnumeration,string
+
+
+PriceSpecification <|-- CompoundPriceSpecification
+class CompoundPriceSpecification {
+
+  UnitPriceSpecification priceComponent
+  PriceTypeEnumeration,string priceType
+
+}
+
+ConsumeAction -- Offer
+ConsumeAction -- ActionAccessSpecification
+
+
+Action <|-- ConsumeAction
+class ConsumeAction {
+
+  Offer expectsAcceptanceOf
+  ActionAccessSpecification actionAccessibilityRequirement
+
+}
+
+ContactPoint -- OpeningHoursSpecification
+ContactPoint -- ContactPointOption
+ContactPoint -- string,Language
+ContactPoint -- GeoShape,AdministrativeArea,Place
+ContactPoint -- AdministrativeArea,GeoShape,string,Place
+ContactPoint -- string,Product
+
+
+StructuredValue <|-- ContactPoint
+class ContactPoint {
+
+  string telephone
+  OpeningHoursSpecification hoursAvailable
+  string email
+  ContactPointOption contactOption
+  string,Language availableLanguage
+  GeoShape,AdministrativeArea,Place serviceArea
+  AdministrativeArea,GeoShape,string,Place areaServed
+  string contactType
+  string,Product productSupported
+  string faxNumber
+
+}
+
+Enumeration o-- ContactPointOption
+  class ContactPointOption {
+<<enumeration>>
+  o HearingImpairedSupported
+  o TollFree
+}
+
+CookAction -- Recipe
+CookAction -- Place,FoodEstablishment
+CookAction -- FoodEvent
+
+
+CreateAction <|-- CookAction
+class CookAction {
+
+  Recipe recipe
+  Place,FoodEstablishment foodEstablishment
+  FoodEvent foodEvent
+
+}
+
+
+
+Organization <|-- Corporation
+class Corporation {
+
+  string tickerSymbol
+
+}
+
+Course -- string,AlignmentObject,Course
+Course -- string,EducationalOccupationalCredential,string
+Course -- number,StructuredValue
+Course -- EducationalOccupationalCredential,string,string
+Course -- CourseInstance
+
+
+LearningResource <|-- Course
+CreativeWork <|-- Course
+class Course {
+
+  string,AlignmentObject,Course coursePrerequisites
+  string,EducationalOccupationalCredential,string educationalCredentialAwarded
+  number,StructuredValue numberOfCredits
+  EducationalOccupationalCredential,string,string occupationalCredentialAwarded
+  string courseCode
+  CourseInstance hasCourseInstance
+
+}
+
+CourseInstance -- Person
+CourseInstance -- string,string
+
+
+Event <|-- CourseInstance
+class CourseInstance {
+
+  Person instructor
+  string courseWorkload
+  string,string courseMode
+
+}
+
+CreativeWork -- DefinedTerm,string
+CreativeWork -- string,DefinedTerm,string
+CreativeWork -- string,DefinedTerm
+CreativeWork -- date
+CreativeWork -- dateTime
+CreativeWork -- string,string,Product
+CreativeWork -- Review
+CreativeWork -- string,string
+CreativeWork -- Person,Organization
+CreativeWork -- Country
+CreativeWork -- Person
+CreativeWork -- Grant
+CreativeWork -- DefinedTerm,string,string
+CreativeWork -- number,string
+CreativeWork -- Audience
+CreativeWork -- Offer,Demand
+CreativeWork -- Place
+CreativeWork -- MediaObject
+CreativeWork -- QuantitativeValue,string
+CreativeWork -- Thing
+CreativeWork -- Organization,Person
+CreativeWork -- Organization
+CreativeWork -- CreativeWork
+CreativeWork -- CreativeWork,string
+CreativeWork -- Comment
+CreativeWork -- PublicationEvent
+CreativeWork -- AggregateRating
+CreativeWork -- Duration
+CreativeWork -- InteractionCounter
+CreativeWork -- CreativeWork,string,Product
+CreativeWork -- string,CreativeWork
+CreativeWork -- date,dateTime
+CreativeWork -- Event
+CreativeWork -- dateTime,date
+CreativeWork -- AlignmentObject
+CreativeWork -- string,string,CorrectionComment
+CreativeWork -- string,Rating
+CreativeWork -- QuantitativeValue,DefinedTerm,string,SizeSpecification
+CreativeWork -- dateTime,string
+CreativeWork -- string,Language
+CreativeWork -- string,CreativeWork,Product
+CreativeWork -- Claim
+CreativeWork -- WebPage,string
+CreativeWork -- AudioObject,MusicRecording,Clip
+CreativeWork -- ItemList
+CreativeWork -- string,dateTime,string
+CreativeWork -- Clip,VideoObject
+
+
+Thing <|-- CreativeWork
+class CreativeWork {
+
+  DefinedTerm,string teaches
+  string,DefinedTerm,string educationalLevel
+  string abstract
+  string,DefinedTerm creativeWorkStatus
+  date expires
+  dateTime contentReferenceTime
+  string,string,Product material
+  Review review
+  string,string fileFormat
+  string text
+  Person,Organization translator
+  string award
+  string,DefinedTerm assesses
+  string copyrightNotice
+  string,string schemaVersion
+  Country countryOfOrigin
+  DefinedTerm,string pattern
+  Person accountablePerson
+  Grant funding
+  DefinedTerm,string educationalUse
+  string,string genre
+  DefinedTerm,string,string keywords
+  number,string position
+  string accessibilityHazard
+  string alternativeHeadline
+  Audience audience
+  Offer,Demand offers
+  Place locationCreated
+  MediaObject associatedMedia
+  QuantitativeValue,string [object Object]
+  Thing mainEntity
+  Organization,Person copyrightHolder
+  string awards
+  Place contentLocation
+  date sdDatePublished
+  Organization,Person producer
+  Place spatial
+  Person,Organization publisher
+  Organization sourceOrganization
+  Person character
+  Organization,Person funder
+  CreativeWork exampleOfWork
+  CreativeWork,string usageInfo
+  Organization,Person provider
+  Organization,Person sdPublisher
+  Comment comment
+  string accessibilityFeature
+  PublicationEvent publication
+  CreativeWork translationOfWork
+  string interactivityType
+  number commentCount
+  string accessMode
+  AggregateRating aggregateRating
+  Duration timeRequired
+  string typicalAgeRange
+  InteractionCounter interactionStatistic
+  number copyrightYear
+  CreativeWork,string,Product isBasedOn
+  CreativeWork workExample
+  string,CreativeWork publishingPrinciples
+  string discussionUrl
+  PublicationEvent releasedEvent
+  date,dateTime dateCreated
+  CreativeWork workTranslation
+  Person editor
+  string creditText
+  Event recordedAt
+  string,string editEIDR
+  Person,Organization author
+  dateTime,date dateModified
+  Organization,Person sponsor
+  string accessibilitySummary
+  string,string encodingFormat
+  Person,Organization maintainer
+  AlignmentObject educationalAlignment
+  CreativeWork,string acquireLicensePage
+  boolean isAccessibleForFree
+  date,dateTime datePublished
+  Place spatialCoverage
+  CreativeWork,string sdLicense
+  string conditionsOfAccess
+  string,string,CorrectionComment correction
+  string,Rating contentRating
+  QuantitativeValue,DefinedTerm,string,SizeSpecification size
+  string,CreativeWork isPartOf
+  dateTime,string temporal
+  string thumbnailUrl
+  string,Language inLanguage
+  string,CreativeWork license
+  Organization,Person creator
+  Review reviews
+  Thing about
+  boolean isFamilyFriendly
+  string headline
+  string accessibilityAPI
+  Organization publisherImprint
+  string,CreativeWork,Product isBasedOnUrl
+  MediaObject encodings
+  Claim interpretedAsClaim
+  string accessibilityControl
+  CreativeWork,string citation
+  number,string version
+  WebPage,string archivedAt
+  DefinedTerm,string learningResourceType
+  MediaObject encoding
+  AudioObject,MusicRecording,Clip audio
+  Thing mentions
+  ItemList accessModeSufficient
+  CreativeWork hasPart
+  string,dateTime,string temporalCoverage
+  Organization,Person contributor
+  Clip,VideoObject video
+
+}
+
+CreativeWorkSeason -- dateTime,date
+CreativeWorkSeason -- Person
+CreativeWorkSeason -- VideoObject
+CreativeWorkSeason -- date,dateTime
+CreativeWorkSeason -- Episode
+CreativeWorkSeason -- CreativeWorkSeries
+CreativeWorkSeason -- Organization
+CreativeWorkSeason -- string,number
+
+
+CreativeWork <|-- CreativeWorkSeason
+class CreativeWorkSeason {
+
+  dateTime,date startDate
+  Person director
+  Person actor
+  VideoObject trailer
+  date,dateTime endDate
+  Episode episodes
+  number numberOfEpisodes
+  CreativeWorkSeries partOfSeries
+  Organization productionCompany
+  string,number seasonNumber
+  Episode episode
+
+}
+
+CreativeWorkSeries -- dateTime,date
+CreativeWorkSeries -- date,dateTime
+
+
+CreativeWork <|-- CreativeWorkSeries
+Series <|-- CreativeWorkSeries
+class CreativeWorkSeries {
+
+  dateTime,date startDate
+  date,dateTime endDate
+  string issn
+
+}
+
+DDxElement -- MedicalSignOrSymptom
+DDxElement -- MedicalCondition
+
+
+MedicalIntangible <|-- DDxElement
+class DDxElement {
+
+  MedicalSignOrSymptom distinguishingSign
+  MedicalCondition diagnosis
+
+}
+
+DataCatalog -- string,string
+DataCatalog -- Dataset
+
+
+CreativeWork <|-- DataCatalog
+class DataCatalog {
+
+  string,string measurementTechnique
+  Dataset dataset
+
+}
+
+DataDownload -- string,string
+
+
+MediaObject <|-- DataDownload
+class DataDownload {
+
+  string,string measurementTechnique
+
+}
+
+DataFeed -- Thing,DataFeedItem,string
+
+
+Dataset <|-- DataFeed
+class DataFeed {
+
+  Thing,DataFeedItem,string dataFeedElement
+
+}
+
+DataFeedItem -- dateTime,date
+DataFeedItem -- date,dateTime
+DataFeedItem -- Thing
+
+
+Intangible <|-- DataFeedItem
+class DataFeedItem {
+
+  dateTime,date dateDeleted
+  date,dateTime dateCreated
+  dateTime,date dateModified
+  Thing item
+
+}
+
+Dataset -- DataCatalog
+Dataset -- PropertyValue,string
+Dataset -- string,string
+Dataset -- dateTime
+Dataset -- DataDownload
+
+
+CreativeWork <|-- Dataset
+class Dataset {
+
+  DataCatalog catalog
+  DataCatalog includedDataCatalog
+  PropertyValue,string variableMeasured
+  string,string measurementTechnique
+  dateTime datasetTimeInterval
+  DataDownload distribution
+  string issn
+  DataCatalog includedInDataCatalog
+
+}
+
+DatedMoneySpecification -- dateTime,date
+DatedMoneySpecification -- date,dateTime
+DatedMoneySpecification -- number,MonetaryAmount
+
+
+StructuredValue <|-- DatedMoneySpecification
+class DatedMoneySpecification {
+
+  dateTime,date startDate
+  date,dateTime endDate
+  string currency
+  number,MonetaryAmount amount
+
+}
+
+Enumeration o-- DayOfWeek
+  class DayOfWeek {
+<<enumeration>>
+  o Thursday
+  o Saturday
+  o Tuesday
+  o Friday
+  o . . . 4 more values
+}
+
+DefinedRegion -- Country,string
+DefinedRegion -- PostalCodeRangeSpecification
+
+
+StructuredValue <|-- DefinedRegion
+class DefinedRegion {
+
+  Country,string addressCountry
+  string addressRegion
+  PostalCodeRangeSpecification postalCodeRange
+  string postalCodePrefix
+  string postalCode
+
+}
+
+DefinedTerm -- string,DefinedTermSet
+
+
+Intangible <|-- DefinedTerm
+class DefinedTerm {
+
+  string termCode
+  string,DefinedTermSet inDefinedTermSet
+
+}
+
+DefinedTermSet -- DefinedTerm
+
+
+CreativeWork <|-- DefinedTermSet
+class DefinedTermSet {
+
+  DefinedTerm hasDefinedTerm
+
+}
+
+DeliveryChargeSpecification -- Place,string,GeoShape
+DeliveryChargeSpecification -- GeoShape,string,Place
+DeliveryChargeSpecification -- AdministrativeArea,GeoShape,string,Place
+DeliveryChargeSpecification -- DeliveryMethod
+
+
+PriceSpecification <|-- DeliveryChargeSpecification
+class DeliveryChargeSpecification {
+
+  Place,string,GeoShape ineligibleRegion
+  GeoShape,string,Place eligibleRegion
+  AdministrativeArea,GeoShape,string,Place areaServed
+  DeliveryMethod appliesToDeliveryMethod
+
+}
+
+DeliveryEvent -- dateTime
+DeliveryEvent -- DeliveryMethod
+
+
+Event <|-- DeliveryEvent
+class DeliveryEvent {
+
+  string accessCode
+  dateTime availableThrough
+  DeliveryMethod hasDeliveryMethod
+  dateTime availableFrom
+
+}
+
+Enumeration o-- DeliveryMethod
+  class DeliveryMethod {
+<<enumeration>>
+  o ParcelService
+  o OnSitePickup
+  o LockerDelivery
+}
+
+DeliveryTimeSettings -- DefinedRegion
+DeliveryTimeSettings -- ShippingDeliveryTime
+
+
+StructuredValue <|-- DeliveryTimeSettings
+class DeliveryTimeSettings {
+
+  DefinedRegion shippingDestination
+  string transitTimeLabel
+  boolean isUnlabelledFallback
+  ShippingDeliveryTime deliveryTime
+
+}
+
+Demand -- Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service
+Demand -- TypeAndQuantityNode
+Demand -- BusinessFunction
+Demand -- OfferItemCondition
+Demand -- QuantitativeValue
+Demand -- LoanOrCredit,PaymentMethod
+Demand -- WarrantyPromise
+Demand -- Organization,Person
+Demand -- Place,string,GeoShape
+Demand -- DeliveryMethod
+Demand -- dateTime,date
+Demand -- date,dateTime,time
+Demand -- GeoShape,string,Place
+Demand -- PriceSpecification
+Demand -- AdministrativeArea,GeoShape,string,Place
+Demand -- BusinessEntityType
+Demand -- ItemAvailability
+Demand -- time,dateTime,date
+Demand -- Place
+
+
+Intangible <|-- Demand
+class Demand {
+
+  string gtin12
+  Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service itemOffered
+  string mpn
+  TypeAndQuantityNode includesObject
+  BusinessFunction businessFunction
+  OfferItemCondition itemCondition
+  string gtin
+  QuantitativeValue eligibleQuantity
+  LoanOrCredit,PaymentMethod acceptedPaymentMethod
+  WarrantyPromise warranty
+  Organization,Person seller
+  Place,string,GeoShape ineligibleRegion
+  QuantitativeValue deliveryLeadTime
+  DeliveryMethod availableDeliveryMethod
+  dateTime,date validFrom
+  date,dateTime,time availabilityEnds
+  GeoShape,string,Place eligibleRegion
+  string gtin8
+  QuantitativeValue inventoryLevel
+  string sku
+  QuantitativeValue advanceBookingRequirement
+  string gtin14
+  PriceSpecification eligibleTransactionVolume
+  AdministrativeArea,GeoShape,string,Place areaServed
+  BusinessEntityType eligibleCustomerType
+  ItemAvailability availability
+  string gtin13
+  dateTime,date validThrough
+  PriceSpecification priceSpecification
+  time,dateTime,date availabilityStarts
+  QuantitativeValue eligibleDuration
+  Place availableAtOrFrom
+  string serialNumber
+
+}
+
+DiagnosticLab -- MedicalTest
+
+
+MedicalOrganization <|-- DiagnosticLab
+class DiagnosticLab {
+
+  MedicalTest availableTest
+
+}
+
+Diet -- Person,Organization
+
+
+LifestyleModification <|-- Diet
+CreativeWork <|-- Diet
+class Diet {
+
+  string expertConsiderations
+  string risks
+  string physiologicalBenefits
+  Person,Organization endorsers
+  string dietFeatures
+
+}
+
+DietarySupplement -- RecommendedDoseSchedule
+DietarySupplement -- DrugLegalStatus,string,MedicalEnumeration
+DietarySupplement -- MaximumDoseSchedule
+DietarySupplement -- Organization
+
+
+Substance <|-- DietarySupplement
+class DietarySupplement {
+
+  string targetPopulation
+  RecommendedDoseSchedule recommendedIntake
+  DrugLegalStatus,string,MedicalEnumeration legalStatus
+  string mechanismOfAction
+  MaximumDoseSchedule maximumIntake
+  string activeIngredient
+  string proprietaryName
+  string nonProprietaryName
+  Organization manufacturer
+  boolean isProprietary
+  string safetyConsideration
+
+}
+
+DigitalDocument -- DigitalDocumentPermission
+
+
+CreativeWork <|-- DigitalDocument
+class DigitalDocument {
+
+  DigitalDocumentPermission hasDigitalDocumentPermission
+
+}
+
+DigitalDocumentPermission -- Person,Audience,ContactPoint,Organization
+DigitalDocumentPermission -- DigitalDocumentPermissionType
+
+
+Intangible <|-- DigitalDocumentPermission
+class DigitalDocumentPermission {
+
+  Person,Audience,ContactPoint,Organization grantee
+  DigitalDocumentPermissionType permissionType
+
+}
+
+Enumeration o-- DigitalDocumentPermissionType
+  class DigitalDocumentPermissionType {
+<<enumeration>>
+  o CommentPermission
+  o ReadPermission
+  o WritePermission
+}
+
+Enumeration o-- DigitalPlatformEnumeration
+  class DigitalPlatformEnumeration {
+<<enumeration>>
+  o MobileWebPlatform
+  o AndroidPlatform
+  o GenericWebPlatform
+  o DesktopWebPlatform
+  o . . . 1 more values
+}
+
+DonateAction -- Person,Audience,ContactPoint,Organization
+
+
+TradeAction <|-- DonateAction
+class DonateAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}
+
+DoseSchedule -- number,QualitativeValue
+
+
+MedicalIntangible <|-- DoseSchedule
+class DoseSchedule {
+
+  string targetPopulation
+  string frequency
+  string doseUnit
+  number,QualitativeValue doseValue
+
+}
+
+DriveWheelConfigurationValue -- schema:DriveWheelConfigurationValue
+
+
+QualitativeValue <|-- DriveWheelConfigurationValue
+class DriveWheelConfigurationValue {
+
+  schema:DriveWheelConfigurationValue FrontWheelDriveConfiguration
+  schema:DriveWheelConfigurationValue FourWheelDriveConfiguration
+  schema:DriveWheelConfigurationValue AllWheelDriveConfiguration
+  schema:DriveWheelConfigurationValue RearWheelDriveConfiguration
+
+}
+
+Drug -- DrugPregnancyCategory
+Drug -- DrugLegalStatus,string,MedicalEnumeration
+Drug -- Drug
+Drug -- MaximumDoseSchedule
+Drug -- string,string
+Drug -- DrugPrescriptionStatus,string
+Drug -- DrugClass
+Drug -- HealthInsurancePlan
+Drug -- Organization
+Drug -- DoseSchedule
+Drug -- DrugStrength
+
+
+Substance <|-- Drug
+class Drug {
+
+  DrugPregnancyCategory pregnancyCategory
+  string overdosage
+  DrugLegalStatus,string,MedicalEnumeration legalStatus
+  string mechanismOfAction
+  string clinicalPharmacology
+  string rxcui
+  Drug interactingDrug
+  string dosageForm
+  string labelDetails
+  MaximumDoseSchedule maximumIntake
+  string activeIngredient
+  Drug relatedDrug
+  string administrationRoute
+  string drugUnit
+  string foodWarning
+  string,string warning
+  DrugPrescriptionStatus,string prescriptionStatus
+  string proprietaryName
+  DrugClass drugClass
+  string prescribingInfo
+  HealthInsurancePlan includedInHealthInsurancePlan
+  string nonProprietaryName
+  Organization manufacturer
+  boolean isProprietary
+  string clincalPharmacology
+  boolean isAvailableGenerically
+  string breastfeedingWarning
+  string pregnancyWarning
+  string alcoholWarning
+  DoseSchedule doseSchedule
+  DrugStrength availableStrength
+
+}
+
+DrugClass -- Drug
+
+
+MedicalEntity <|-- DrugClass
+class DrugClass {
+
+  Drug drug
+
+}
+
+DrugCost -- AdministrativeArea
+DrugCost -- number,string,QualitativeValue
+DrugCost -- DrugCostCategory
+
+
+MedicalEntity <|-- DrugCost
+class DrugCost {
+
+  AdministrativeArea applicableLocation
+  number,string,QualitativeValue costPerUnit
+  DrugCostCategory costCategory
+  string drugUnit
+  string costCurrency
+  string costOrigin
+
+}
+
+MedicalEnumeration o-- DrugCostCategory
+  class DrugCostCategory {
+<<enumeration>>
+  o Wholesale
+  o ReimbursementCap
+  o Retail
+}
+
+DrugLegalStatus -- AdministrativeArea
+
+
+MedicalIntangible <|-- DrugLegalStatus
+class DrugLegalStatus {
+
+  AdministrativeArea applicableLocation
+
+}
+
+MedicalEnumeration o-- DrugPregnancyCategory
+  class DrugPregnancyCategory {
+<<enumeration>>
+  o FDAcategoryC
+  o FDAcategoryA
+  o FDAcategoryX
+  o FDAcategoryB
+  o . . . 2 more values
+}
+
+MedicalEnumeration o-- DrugPrescriptionStatus
+  class DrugPrescriptionStatus {
+<<enumeration>>
+  o OTC
+  o PrescriptionOnly
+}
+
+DrugStrength -- AdministrativeArea
+DrugStrength -- MaximumDoseSchedule
+
+
+MedicalIntangible <|-- DrugStrength
+class DrugStrength {
+
+  AdministrativeArea availableIn
+  string strengthUnit
+  MaximumDoseSchedule maximumIntake
+  string activeIngredient
+  number strengthValue
+
+}
+
+EnergyEfficiencyEnumeration o-- EUEnergyEfficiencyEnumeration
+  class EUEnergyEfficiencyEnumeration {
+<<enumeration>>
+  o EUEnergyEfficiencyCategoryD
+  o EUEnergyEfficiencyCategoryA2Plus
+  o EUEnergyEfficiencyCategoryE
+  o EUEnergyEfficiencyCategoryA3Plus
+  o . . . 6 more values
+}
+
+EducationEvent -- DefinedTerm,string
+EducationEvent -- string,DefinedTerm,string
+EducationEvent -- string,DefinedTerm
+
+
+Event <|-- EducationEvent
+class EducationEvent {
+
+  DefinedTerm,string teaches
+  string,DefinedTerm,string educationalLevel
+  string,DefinedTerm assesses
+
+}
+
+
+
+Audience <|-- EducationalAudience
+class EducationalAudience {
+
+  string educationalRole
+
+}
+
+EducationalOccupationalCredential -- Duration
+EducationalOccupationalCredential -- string,DefinedTerm,string
+EducationalOccupationalCredential -- Organization
+EducationalOccupationalCredential -- AdministrativeArea
+
+
+CreativeWork <|-- EducationalOccupationalCredential
+class EducationalOccupationalCredential {
+
+  Duration validFor
+  string,DefinedTerm,string educationalLevel
+  string,DefinedTerm,string credentialCategory
+  Organization recognizedBy
+  string,DefinedTerm,string competencyRequired
+  AdministrativeArea validIn
+
+}
+
+EducationalOccupationalProgram -- AlignmentObject,Course,EducationalOccupationalCredential,string
+EducationalOccupationalProgram -- Course
+EducationalOccupationalProgram -- dateTime,date
+EducationalOccupationalProgram -- MonetaryAmountDistribution
+EducationalOccupationalProgram -- DayOfWeek
+EducationalOccupationalProgram -- Offer,Demand
+EducationalOccupationalProgram -- number,StructuredValue
+EducationalOccupationalProgram -- date
+EducationalOccupationalProgram -- date,dateTime
+EducationalOccupationalProgram -- Organization,Person
+EducationalOccupationalProgram -- string,EducationalOccupationalCredential,string
+EducationalOccupationalProgram -- Duration
+EducationalOccupationalProgram -- EducationalOccupationalCredential,string,string
+EducationalOccupationalProgram -- string,string
+EducationalOccupationalProgram -- string,DefinedTerm
+EducationalOccupationalProgram -- CategoryCode,string
+
+
+Intangible <|-- EducationalOccupationalProgram
+class EducationalOccupationalProgram {
+
+  AlignmentObject,Course,EducationalOccupationalCredential,string programPrerequisites
+  Course hasCourse
+  dateTime,date startDate
+  MonetaryAmountDistribution salaryUponCompletion
+  number termsPerYear
+  DayOfWeek dayOfWeek
+  Offer,Demand offers
+  number,StructuredValue typicalCreditsPerTerm
+  date applicationStartDate
+  string timeOfDay
+  date,dateTime endDate
+  Organization,Person provider
+  MonetaryAmountDistribution trainingSalary
+  string,EducationalOccupationalCredential,string educationalCredentialAwarded
+  number,StructuredValue numberOfCredits
+  Duration timeToComplete
+  EducationalOccupationalCredential,string,string occupationalCredentialAwarded
+  Duration termDuration
+  string,string educationalProgramMode
+  string,DefinedTerm programType
+  number maximumEnrollment
+  string,DefinedTerm financialAidEligible
+  date applicationDeadline
+  CategoryCode,string occupationalCategory
+
+}
+
+EducationalOrganization -- Person
+
+
+CivicStructure <|-- EducationalOrganization
+Organization <|-- EducationalOrganization
+class EducationalOrganization {
+
+  Person alumni
+
+}
+
+EmployeeRole -- number,PriceSpecification,MonetaryAmount
+
+
+OrganizationRole <|-- EmployeeRole
+class EmployeeRole {
+
+  string salaryCurrency
+  number,PriceSpecification,MonetaryAmount baseSalary
+
+}
+
+EndorseAction -- Person,Organization
+
+
+ReactAction <|-- EndorseAction
+class EndorseAction {
+
+  Person,Organization endorsee
+
+}
+
+EnergyConsumptionDetails -- EUEnergyEfficiencyEnumeration
+EnergyConsumptionDetails -- EnergyEfficiencyEnumeration
+
+
+Intangible <|-- EnergyConsumptionDetails
+class EnergyConsumptionDetails {
+
+  EUEnergyEfficiencyEnumeration energyEfficiencyScaleMin
+  EnergyEfficiencyEnumeration hasEnergyEfficiencyCategory
+  EUEnergyEfficiencyEnumeration energyEfficiencyScaleMax
+
+}
+
+EnergyEfficiencyEnumeration o-- EnergyStarEnergyEfficiencyEnumeration
+  class EnergyStarEnergyEfficiencyEnumeration {
+<<enumeration>>
+  o EnergyStarCertified
+}
+
+EngineSpecification -- string,string,QualitativeValue
+EngineSpecification -- QuantitativeValue
+EngineSpecification -- QualitativeValue,string,string
+
+
+StructuredValue <|-- EngineSpecification
+class EngineSpecification {
+
+  string,string,QualitativeValue fuelType
+  QuantitativeValue torque
+  QuantitativeValue engineDisplacement
+  QuantitativeValue enginePower
+  QualitativeValue,string,string engineType
+
+}
+
+EntryPoint -- SoftwareApplication
+EntryPoint -- string,string,DigitalPlatformEnumeration
+
+
+Intangible <|-- EntryPoint
+class EntryPoint {
+
+  SoftwareApplication actionApplication
+  SoftwareApplication application
+  string,string,DigitalPlatformEnumeration actionPlatform
+  string httpMethod
+  string urlTemplate
+  string encodingType
+  string contentType
+
+}
+
+Enumeration -- Enumeration,Class,Property
+
+
+Intangible <|-- Enumeration
+class Enumeration {
+
+  Enumeration,Class,Property supersededBy
+
+}
+
+Episode -- number,string
+Episode -- Person
+Episode -- VideoObject
+Episode -- CreativeWorkSeries
+Episode -- Duration
+Episode -- CreativeWorkSeason
+Episode -- Organization
+Episode -- Person,MusicGroup
+
+
+CreativeWork <|-- Episode
+class Episode {
+
+  number,string episodeNumber
+  Person director
+  Person actor
+  VideoObject trailer
+  CreativeWorkSeries partOfSeries
+  Duration duration
+  CreativeWorkSeason partOfSeason
+  Organization productionCompany
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}
+
+Event -- Event
+Event -- EventAttendanceModeEnumeration
+Event -- Review
+Event -- Person,Organization
+Event -- dateTime,date
+Event -- Organization,Person
+Event -- Person
+Event -- Grant
+Event -- DefinedTerm,string,string
+Event -- Audience
+Event -- Offer,Demand
+Event -- EventStatusType
+Event -- date,dateTime
+Event -- AggregateRating
+Event -- PostalAddress,string,Place,VirtualLocation
+Event -- Duration
+Event -- date
+Event -- CreativeWork
+Event -- time,dateTime
+Event -- string,Language
+Event -- Thing
+Event -- Schedule
+
+
+Thing <|-- Event
+class Event {
+
+  Event superEvent
+  EventAttendanceModeEnumeration eventAttendanceMode
+  Review review
+  Person,Organization translator
+  dateTime,date startDate
+  Organization,Person composer
+  number maximumAttendeeCapacity
+  number maximumVirtualAttendeeCapacity
+  Person director
+  Grant funding
+  DefinedTerm,string,string keywords
+  Audience audience
+  Offer,Demand offers
+  Event subEvent
+  Person actor
+  EventStatusType eventStatus
+  date,dateTime endDate
+  Organization,Person funder
+  Organization,Person performer
+  AggregateRating aggregateRating
+  string typicalAgeRange
+  PostalAddress,string,Place,VirtualLocation location
+  Person,Organization performers
+  Duration duration
+  Person,Organization organizer
+  Organization,Person sponsor
+  date previousStartDate
+  boolean isAccessibleForFree
+  number remainingAttendeeCapacity
+  Event subEvents
+  CreativeWork workPerformed
+  time,dateTime doorTime
+  string,Language inLanguage
+  Thing about
+  CreativeWork recordedIn
+  number maximumPhysicalAttendeeCapacity
+  Person,Organization attendee
+  CreativeWork workFeatured
+  Schedule eventSchedule
+  Organization,Person contributor
+  Person,Organization attendees
+
+}
+
+Enumeration o-- EventAttendanceModeEnumeration
+  class EventAttendanceModeEnumeration {
+<<enumeration>>
+  o OfflineEventAttendanceMode
+  o MixedEventAttendanceMode
+  o OnlineEventAttendanceMode
+}
+
+StatusEnumeration o-- EventStatusType
+  class EventStatusType {
+<<enumeration>>
+  o EventCancelled
+  o EventScheduled
+  o EventRescheduled
+  o EventPostponed
+  o . . . 1 more values
+}
+
+ExchangeRateSpecification -- UnitPriceSpecification
+ExchangeRateSpecification -- number,MonetaryAmount
+
+
+StructuredValue <|-- ExchangeRateSpecification
+class ExchangeRateSpecification {
+
+  UnitPriceSpecification currentExchangeRate
+  number,MonetaryAmount exchangeRateSpread
+  string currency
+
+}
+
+ExerciseAction -- SportsTeam
+ExerciseAction -- Place
+ExerciseAction -- Diet
+ExerciseAction -- SportsActivityLocation
+ExerciseAction -- Distance
+ExerciseAction -- ExercisePlan
+ExerciseAction -- SportsEvent
+ExerciseAction -- Person
+
+
+PlayAction <|-- ExerciseAction
+class ExerciseAction {
+
+  SportsTeam sportsTeam
+  Place course
+  Place fromLocation
+  Diet diet
+  SportsActivityLocation sportsActivityLocation
+  Distance distance
+  ExercisePlan exercisePlan
+  SportsEvent sportsEvent
+  Diet exerciseRelatedDiet
+  Person opponent
+  Place exerciseCourse
+  Place toLocation
+  string exerciseType
+
+}
+
+ExercisePlan -- number,QuantitativeValue
+ExercisePlan -- QuantitativeValue,string
+ExercisePlan -- QuantitativeValue,Energy
+ExercisePlan -- Duration,QuantitativeValue
+ExercisePlan -- string,QuantitativeValue
+
+
+CreativeWork <|-- ExercisePlan
+PhysicalActivity <|-- ExercisePlan
+class ExercisePlan {
+
+  number,QuantitativeValue repetitions
+  QuantitativeValue,string intensity
+  QuantitativeValue,Energy workload
+  Duration,QuantitativeValue activityDuration
+  string,QuantitativeValue restPeriods
+  string,QuantitativeValue activityFrequency
+  string additionalVariable
+  string exerciseType
+
+}
+
+FinancialProduct -- number,QuantitativeValue
+FinancialProduct -- string,string
+
+
+Service <|-- FinancialProduct
+class FinancialProduct {
+
+  number,QuantitativeValue annualPercentageRate
+  string,string feesAndCommissionsSpecification
+  number,QuantitativeValue interestRate
+
+}
+
+FinancialService -- string,string
+
+
+LocalBusiness <|-- FinancialService
+class FinancialService {
+
+  string,string feesAndCommissionsSpecification
+
+}
+
+Flight -- Distance,string
+Flight -- dateTime
+Flight -- Vehicle,string
+Flight -- Organization,Person
+Flight -- Airport
+Flight -- Organization
+Flight -- string,Duration
+Flight -- BoardingPolicyType
+
+
+Trip <|-- Flight
+class Flight {
+
+  Distance,string flightDistance
+  dateTime webCheckinTime
+  Vehicle,string aircraft
+  Organization,Person seller
+  Airport arrivalAirport
+  string arrivalTerminal
+  Airport departureAirport
+  string arrivalGate
+  string departureTerminal
+  Organization carrier
+  string,Duration estimatedFlightDuration
+  string departureGate
+  string flightNumber
+  string mealService
+  BoardingPolicyType boardingPolicy
+
+}
+
+FlightReservation -- QualitativeValue,string
+
+
+Reservation <|-- FlightReservation
+class FlightReservation {
+
+  QualitativeValue,string passengerPriorityStatus
+  string boardingGroup
+  string securityScreening
+  string passengerSequenceNumber
+
+}
+
+FloorPlan -- Accommodation
+FloorPlan -- QuantitativeValue,number
+FloorPlan -- QuantitativeValue
+FloorPlan -- LocationFeatureSpecification
+FloorPlan -- number,QuantitativeValue
+FloorPlan -- string,boolean
+FloorPlan -- ImageObject,string
+
+
+Intangible <|-- FloorPlan
+class FloorPlan {
+
+  Accommodation isPlanForApartment
+  number numberOfBathroomsTotal
+  QuantitativeValue,number numberOfRooms
+  QuantitativeValue numberOfAccommodationUnits
+  QuantitativeValue numberOfAvailableAccommodationUnits
+  LocationFeatureSpecification amenityFeature
+  number,QuantitativeValue numberOfBedrooms
+  number numberOfPartialBathrooms
+  QuantitativeValue floorSize
+  number numberOfFullBathrooms
+  string,boolean petsAllowed
+  ImageObject,string layoutImage
+
+}
+
+FollowAction -- Organization,Person
+
+
+InteractAction <|-- FollowAction
+class FollowAction {
+
+  Organization,Person followee
+
+}
+
+FoodEstablishment -- Rating
+FoodEstablishment -- string,boolean,string
+FoodEstablishment -- string,string,Menu
+FoodEstablishment -- string,Menu,string
+
+
+LocalBusiness <|-- FoodEstablishment
+class FoodEstablishment {
+
+  Rating starRating
+  string servesCuisine
+  string,boolean,string acceptsReservations
+  string,string,Menu hasMenu
+  string,Menu,string menu
+
+}
+
+FoodEstablishmentReservation -- number,QuantitativeValue
+FoodEstablishmentReservation -- dateTime,time
+
+
+Reservation <|-- FoodEstablishmentReservation
+class FoodEstablishmentReservation {
+
+  number,QuantitativeValue partySize
+  dateTime,time startTime
+  dateTime,time endTime
+
+}
+
+Game -- Thing
+Game -- QuantitativeValue
+Game -- Place,string,PostalAddress
+
+
+CreativeWork <|-- Game
+class Game {
+
+  Thing characterAttribute
+  Thing gameItem
+  QuantitativeValue numberOfPlayers
+  Thing quest
+  Place,string,PostalAddress gameLocation
+
+}
+
+Enumeration o-- GameAvailabilityEnumeration
+  class GameAvailabilityEnumeration {
+<<enumeration>>
+  o FullGameAvailability
+  o DemoGameAvailability
+}
+
+Enumeration o-- GamePlayMode
+  class GamePlayMode {
+<<enumeration>>
+  o MultiPlayer
+  o CoOp
+  o SinglePlayer
+}
+
+GameServer -- GameServerStatus
+GameServer -- VideoGame
+
+
+Intangible <|-- GameServer
+class GameServer {
+
+  GameServerStatus serverStatus
+  VideoGame game
+  number playersOnline
+
+}
+
+StatusEnumeration o-- GameServerStatus
+  class GameServerStatus {
+<<enumeration>>
+  o OnlineFull
+  o OfflinePermanently
+  o Online
+  o OfflineTemporarily
+}
+
+Enumeration o-- GenderType
+  class GenderType {
+<<enumeration>>
+  o Male
+  o Female
+}
+
+Gene -- Gene
+Gene -- BioChemEntity
+Gene -- AnatomicalStructure,BioChemEntity,DefinedTerm,AnatomicalSystem
+
+
+BioChemEntity <|-- Gene
+class Gene {
+
+  Gene alternativeOf
+  string hasBioPolymerSequence
+  BioChemEntity encodesBioChemEntity
+  AnatomicalStructure,BioChemEntity,DefinedTerm,AnatomicalSystem expressedIn
+
+}
+
+GeoCircle -- number,string,Distance
+GeoCircle -- GeoCoordinates
+
+
+GeoShape <|-- GeoCircle
+class GeoCircle {
+
+  number,string,Distance geoRadius
+  GeoCoordinates geoMidpoint
+
+}
+
+GeoCoordinates -- Country,string
+GeoCoordinates -- string,number
+GeoCoordinates -- string,PostalAddress
+GeoCoordinates -- number,string
+
+
+StructuredValue <|-- GeoCoordinates
+class GeoCoordinates {
+
+  Country,string addressCountry
+  string,number latitude
+  string,PostalAddress address
+  string postalCode
+  string,number elevation
+  number,string longitude
+
+}
+
+GeoShape -- Country,string
+GeoShape -- string,PostalAddress
+GeoShape -- string,number
+
+
+StructuredValue <|-- GeoShape
+class GeoShape {
+
+  Country,string addressCountry
+  string circle
+  string line
+  string polygon
+  string,PostalAddress address
+  string postalCode
+  string,number elevation
+  string box
+
+}
+
+GeospatialGeometry -- Place,GeospatialGeometry
+GeospatialGeometry -- GeospatialGeometry,Place
+
+
+Intangible <|-- GeospatialGeometry
+class GeospatialGeometry {
+
+  Place,GeospatialGeometry geoContains
+  GeospatialGeometry,Place geoIntersects
+  Place,GeospatialGeometry geoTouches
+  Place,GeospatialGeometry geoCoveredBy
+  Place,GeospatialGeometry geoEquals
+  GeospatialGeometry,Place geoCrosses
+  GeospatialGeometry,Place geoCovers
+  Place,GeospatialGeometry geoWithin
+  GeospatialGeometry,Place geoDisjoint
+  GeospatialGeometry,Place geoOverlaps
+
+}
+
+GiveAction -- Person,Audience,ContactPoint,Organization
+
+
+TransferAction <|-- GiveAction
+class GiveAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}
+
+Enumeration o-- GovernmentBenefitsType
+  class GovernmentBenefitsType {
+<<enumeration>>
+  o HealthCare
+  o BusinessSupport
+  o OneTimePayments
+  o DisabilitySupport
+  o . . . 4 more values
+}
+
+GovernmentService -- string,AdministrativeArea
+GovernmentService -- Organization
+
+
+Service <|-- GovernmentService
+class GovernmentService {
+
+  string,AdministrativeArea jurisdiction
+  Organization serviceOperator
+
+}
+
+Grant -- Organization,Person
+Grant -- Product,Person,BioChemEntity,Event,MedicalEntity,CreativeWork,Organization
+
+
+Intangible <|-- Grant
+class Grant {
+
+  Organization,Person funder
+  Product,Person,BioChemEntity,Event,MedicalEntity,CreativeWork,Organization fundedItem
+  Organization,Person sponsor
+
+}
+
+
+
+CreativeWork <|-- Guide
+class Guide {
+
+  string reviewAspect
+
+}
+
+Enumeration o-- HealthAspectEnumeration
+  class HealthAspectEnumeration {
+<<enumeration>>
+  o SideEffectsHealthAspect
+  o AllergiesHealthAspect
+  o BenefitsHealthAspect
+  o SymptomsHealthAspect
+  o . . . 25 more values
+}
+
+HealthInsurancePlan -- HealthPlanFormulary
+HealthInsurancePlan -- ContactPoint
+HealthInsurancePlan -- string,string
+HealthInsurancePlan -- HealthPlanNetwork
+
+
+Intangible <|-- HealthInsurancePlan
+class HealthInsurancePlan {
+
+  HealthPlanFormulary includesHealthPlanFormulary
+  string benefitsSummaryUrl
+  string healthPlanDrugOption
+  string healthPlanDrugTier
+  string healthPlanId
+  ContactPoint contactPoint
+  string,string usesHealthPlanIdStandard
+  HealthPlanNetwork includesHealthPlanNetwork
+  string healthPlanMarketingUrl
+
+}
+
+HealthPlanCostSharingSpecification -- PriceSpecification
+
+
+Intangible <|-- HealthPlanCostSharingSpecification
+class HealthPlanCostSharingSpecification {
+
+  number healthPlanCoinsuranceRate
+  string healthPlanCoinsuranceOption
+  string healthPlanPharmacyCategory
+  PriceSpecification healthPlanCopay
+  string healthPlanCopayOption
+
+}
+
+
+
+Intangible <|-- HealthPlanFormulary
+class HealthPlanFormulary {
+
+  boolean offersPrescriptionByMail
+  string healthPlanDrugTier
+  boolean healthPlanCostSharing
+
+}
+
+
+
+Intangible <|-- HealthPlanNetwork
+class HealthPlanNetwork {
+
+  string healthPlanNetworkId
+  boolean healthPlanCostSharing
+  string healthPlanNetworkTier
+
+}
+
+HealthTopicContent -- HealthAspectEnumeration
+
+
+WebContent <|-- HealthTopicContent
+class HealthTopicContent {
+
+  HealthAspectEnumeration hasHealthAspect
+
+}
+
+Hospital -- MedicalTest,MedicalProcedure,MedicalTherapy
+Hospital -- Dataset,CDCPMDRecord
+Hospital -- MedicalSpecialty
+
+
+MedicalOrganization <|-- Hospital
+EmergencyService <|-- Hospital
+CivicStructure <|-- Hospital
+class Hospital {
+
+  MedicalTest,MedicalProcedure,MedicalTherapy availableService
+  Dataset,CDCPMDRecord healthcareReportingData
+  MedicalSpecialty medicalSpecialty
+
+}
+
+HotelRoom -- BedDetails,string,BedType
+HotelRoom -- QuantitativeValue
+
+
+Room <|-- HotelRoom
+class HotelRoom {
+
+  BedDetails,string,BedType bed
+  QuantitativeValue occupancy
+
+}
+
+House -- QuantitativeValue,number
+
+
+Accommodation <|-- House
+class House {
+
+  QuantitativeValue,number numberOfRooms
+
+}
+
+HowTo -- string,QuantitativeValue
+HowTo -- string,MonetaryAmount
+HowTo -- HowToSupply,string
+HowTo -- HowToStep,HowToSection,string,CreativeWork
+HowTo -- Duration
+HowTo -- HowToTool,string
+HowTo -- ItemList,CreativeWork,string
+
+
+CreativeWork <|-- HowTo
+class HowTo {
+
+  string,QuantitativeValue yield
+  string,MonetaryAmount estimatedCost
+  HowToSupply,string supply
+  HowToStep,HowToSection,string,CreativeWork step
+  Duration totalTime
+  HowToTool,string tool
+  Duration prepTime
+  ItemList,CreativeWork,string steps
+  Duration performTime
+
+}
+
+HowToDirection -- string,MediaObject
+HowToDirection -- HowToSupply,string
+HowToDirection -- Duration
+HowToDirection -- HowToTool,string
+
+
+ListItem <|-- HowToDirection
+CreativeWork <|-- HowToDirection
+class HowToDirection {
+
+  string,MediaObject afterMedia
+  HowToSupply,string supply
+  string,MediaObject duringMedia
+  Duration totalTime
+  string,MediaObject beforeMedia
+  HowToTool,string tool
+  Duration prepTime
+  Duration performTime
+
+}
+
+HowToItem -- QuantitativeValue,number,string
+
+
+ListItem <|-- HowToItem
+class HowToItem {
+
+  QuantitativeValue,number,string requiredQuantity
+
+}
+
+HowToSection -- ItemList,CreativeWork,string
+
+
+ListItem <|-- HowToSection
+CreativeWork <|-- HowToSection
+ItemList <|-- HowToSection
+class HowToSection {
+
+  ItemList,CreativeWork,string steps
+
+}
+
+HowToSupply -- string,MonetaryAmount
+
+
+HowToItem <|-- HowToSupply
+class HowToSupply {
+
+  string,MonetaryAmount estimatedCost
+
+}
+
+HyperToc -- HyperTocEntry
+HyperToc -- MediaObject
+
+
+CreativeWork <|-- HyperToc
+class HyperToc {
+
+  HyperTocEntry tocEntry
+  MediaObject associatedMedia
+
+}
+
+HyperTocEntry -- HyperTocEntry
+HyperTocEntry -- MediaObject
+
+
+CreativeWork <|-- HyperTocEntry
+class HyperTocEntry {
+
+  HyperTocEntry tocContinuation
+  MediaObject associatedMedia
+  string utterances
+
+}
+
+ImageObject -- string,MediaObject
+ImageObject -- ImageObject
+ImageObject -- PropertyValue,string
+
+
+MediaObject <|-- ImageObject
+class ImageObject {
+
+  string embeddedTextCaption
+  boolean representativeOfPage
+  string,MediaObject caption
+  ImageObject thumbnail
+  PropertyValue,string exifData
+
+}
+
+ImagingTest -- MedicalImagingTechnique
+
+
+MedicalTest <|-- ImagingTest
+class ImagingTest {
+
+  MedicalImagingTechnique imagingTechnique
+
+}
+
+
+
+Product <|-- IndividualProduct
+class IndividualProduct {
+
+  string serialNumber
+
+}
+
+MedicalEnumeration o-- InfectiousAgentClass
+  class InfectiousAgentClass {
+<<enumeration>>
+  o Bacteria
+  o Protozoa
+  o Fungus
+  o Virus
+  o . . . 2 more values
+}
+
+InfectiousDisease -- InfectiousAgentClass
+
+
+MedicalCondition <|-- InfectiousDisease
+class InfectiousDisease {
+
+  InfectiousAgentClass infectiousAgentClass
+  string infectiousAgent
+  string transmissionMethod
+
+}
+
+InformAction -- Event
+
+
+CommunicateAction <|-- InformAction
+class InformAction {
+
+  Event event
+
+}
+
+InsertAction -- Place
+
+
+AddAction <|-- InsertAction
+class InsertAction {
+
+  Place toLocation
+
+}
+
+InteractionCounter -- dateTime,time
+InteractionCounter -- PostalAddress,string,Place,VirtualLocation
+InteractionCounter -- Action
+InteractionCounter -- SoftwareApplication,WebSite
+
+
+StructuredValue <|-- InteractionCounter
+class InteractionCounter {
+
+  dateTime,time startTime
+  number userInteractionCount
+  PostalAddress,string,Place,VirtualLocation location
+  Action interactionType
+  SoftwareApplication,WebSite interactionService
+  dateTime,time endTime
+
+}
+
+InvestmentOrDeposit -- number,MonetaryAmount
+
+
+FinancialProduct <|-- InvestmentOrDeposit
+class InvestmentOrDeposit {
+
+  number,MonetaryAmount amount
+
+}
+
+InviteAction -- Event
+
+
+CommunicateAction <|-- InviteAction
+class InviteAction {
+
+  Event event
+
+}
+
+Invoice -- MonetaryAmount,PriceSpecification
+Invoice -- Duration
+Invoice -- Order
+Invoice -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+Invoice -- date
+Invoice -- Organization,Person
+Invoice -- dateTime,date
+Invoice -- Person,Organization
+Invoice -- PaymentStatusType,string
+Invoice -- dateTime
+Invoice -- PaymentMethod
+
+
+Intangible <|-- Invoice
+class Invoice {
+
+  MonetaryAmount,PriceSpecification totalPaymentDue
+  Duration billingPeriod
+  Order referencesOrder
+  string accountId
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  date scheduledPaymentDate
+  string confirmationNumber
+  Organization,Person customer
+  Organization,Person provider
+  MonetaryAmount,PriceSpecification minimumPaymentDue
+  dateTime,date paymentDueDate
+  Person,Organization broker
+  PaymentStatusType,string paymentStatus
+  string paymentMethodId
+  dateTime paymentDue
+  PaymentMethod paymentMethod
+
+}
+
+Enumeration o-- ItemAvailability
+  class ItemAvailability {
+<<enumeration>>
+  o OutOfStock
+  o Discontinued
+  o OnlineOnly
+  o InStock
+  o . . . 6 more values
+}
+
+ItemList -- Thing,ListItem,string
+ItemList -- string,ItemListOrderType
+
+
+Intangible <|-- ItemList
+class ItemList {
+
+  number numberOfItems
+  Thing,ListItem,string itemListElement
+  string,ItemListOrderType itemListOrder
+
+}
+
+Enumeration o-- ItemListOrderType
+  class ItemListOrderType {
+<<enumeration>>
+  o ItemListUnordered
+  o ItemListOrderDescending
+  o ItemListOrderAscending
+}
+
+JobPosting -- MonetaryAmountDistribution,MonetaryAmount,number
+JobPosting -- Place
+JobPosting -- string,string,DefinedTerm
+JobPosting -- DefinedTerm,string,string
+JobPosting -- AdministrativeArea
+JobPosting -- date,string
+JobPosting -- ContactPoint
+JobPosting -- Occupation
+JobPosting -- string,OccupationalExperienceRequirements
+JobPosting -- string,string
+JobPosting -- EducationalOccupationalCredential,string
+JobPosting -- DefinedTerm,string
+JobPosting -- number,PriceSpecification,MonetaryAmount
+JobPosting -- date,dateTime
+JobPosting -- string,DefinedTerm
+JobPosting -- Organization
+JobPosting -- dateTime,date
+JobPosting -- string,EducationalOccupationalCredential
+JobPosting -- CategoryCode,string
+
+
+Intangible <|-- JobPosting
+class JobPosting {
+
+  string employerOverview
+  MonetaryAmountDistribution,MonetaryAmount,number estimatedSalary
+  string jobLocationType
+  string responsibilities
+  Place jobLocation
+  string,string,DefinedTerm physicalRequirement
+  string incentives
+  boolean directApply
+  DefinedTerm,string,string sensoryRequirement
+  AdministrativeArea applicantLocationRequirements
+  string workHours
+  date,string jobStartDate
+  string employmentType
+  string specialCommitments
+  ContactPoint applicationContact
+  string incentiveCompensation
+  Occupation relevantOccupation
+  number totalJobOpenings
+  string,OccupationalExperienceRequirements experienceRequirements
+  string jobBenefits
+  string salaryCurrency
+  boolean experienceInPlaceOfEducation
+  string,string securityClearanceRequirement
+  string eligibilityToWorkRequirement
+  EducationalOccupationalCredential,string educationRequirements
+  string benefits
+  DefinedTerm,string industry
+  number,PriceSpecification,MonetaryAmount baseSalary
+  date,dateTime datePosted
+  string,DefinedTerm skills
+  string title
+  Organization hiringOrganization
+  boolean jobImmediateStart
+  dateTime,date validThrough
+  Organization employmentUnit
+  string,EducationalOccupationalCredential qualifications
+  CategoryCode,string occupationalCategory
+
+}
+
+JoinAction -- Event
+
+
+InteractAction <|-- JoinAction
+class JoinAction {
+
+  Event event
+
+}
+
+Joint -- string,MedicalEntity
+
+
+AnatomicalStructure <|-- Joint
+class Joint {
+
+  string structuralClass
+  string biomechnicalClass
+  string,MedicalEntity functionalClass
+
+}
+
+LearningResource -- DefinedTerm,string
+LearningResource -- string,DefinedTerm,string
+LearningResource -- string,DefinedTerm
+LearningResource -- AlignmentObject
+
+
+CreativeWork <|-- LearningResource
+class LearningResource {
+
+  DefinedTerm,string teaches
+  string,DefinedTerm,string educationalLevel
+  string,DefinedTerm assesses
+  DefinedTerm,string educationalUse
+  AlignmentObject educationalAlignment
+  string,DefinedTerm,string competencyRequired
+  DefinedTerm,string learningResourceType
+
+}
+
+LeaveAction -- Event
+
+
+InteractAction <|-- LeaveAction
+class LeaveAction {
+
+  Event event
+
+}
+
+StatusEnumeration o-- LegalForceStatus
+  class LegalForceStatus {
+<<enumeration>>
+  o NotInForce
+  o InForce
+  o PartiallyInForce
+}
+
+Enumeration o-- LegalValueLevel
+  class LegalValueLevel {
+<<enumeration>>
+  o DefinitiveLegalValue
+  o UnofficialLegalValue
+  o OfficialLegalValue
+  o AuthoritativeLegalValue
+}
+
+Legislation -- Legislation
+Legislation -- LegalForceStatus
+Legislation -- CategoryCode,string
+Legislation -- string,AdministrativeArea
+Legislation -- string,string
+Legislation -- Organization,Person
+Legislation -- AdministrativeArea,string
+Legislation -- date
+Legislation -- Person,Organization
+
+
+CreativeWork <|-- Legislation
+class Legislation {
+
+  Legislation legislationTransposes
+  LegalForceStatus legislationLegalForce
+  CategoryCode,string legislationType
+  string,AdministrativeArea jurisdiction
+  string,string legislationIdentifier
+  Legislation legislationChanges
+  Organization,Person legislationResponsible
+  AdministrativeArea,string legislationJurisdiction
+  date legislationDate
+  Person,Organization legislationPassedBy
+  Legislation legislationConsolidates
+  Legislation legislationApplies
+  date legislationDateVersion
+
+}
+
+LegislationObject -- LegalValueLevel
+
+
+Legislation <|-- LegislationObject
+MediaObject <|-- LegislationObject
+class LegislationObject {
+
+  LegalValueLevel legislationLegalValue
+
+}
+
+LendAction -- Person
+
+
+TransferAction <|-- LendAction
+class LendAction {
+
+  Person borrower
+
+}
+
+LinkRole -- string,Language
+
+
+Role <|-- LinkRole
+class LinkRole {
+
+  string linkRelationship
+  string,Language inLanguage
+
+}
+
+ListItem -- number,string
+ListItem -- ListItem
+ListItem -- Thing
+
+
+Intangible <|-- ListItem
+class ListItem {
+
+  number,string position
+  ListItem nextItem
+  Thing item
+  ListItem previousItem
+
+}
+
+LiveBlogPosting -- dateTime
+LiveBlogPosting -- BlogPosting
+
+
+BlogPosting <|-- LiveBlogPosting
+class LiveBlogPosting {
+
+  dateTime coverageEndTime
+  dateTime coverageStartTime
+  BlogPosting liveBlogUpdate
+
+}
+
+LoanOrCredit -- string,string
+LoanOrCredit -- QuantitativeValue
+LoanOrCredit -- Duration
+LoanOrCredit -- string,Thing
+LoanOrCredit -- number,MonetaryAmount
+LoanOrCredit -- RepaymentSpecification
+
+
+FinancialProduct <|-- LoanOrCredit
+class LoanOrCredit {
+
+  boolean renegotiableLoan
+  string,string loanType
+  boolean recourseLoan
+  QuantitativeValue loanTerm
+  Duration gracePeriod
+  string,Thing requiredCollateral
+  string currency
+  number,MonetaryAmount amount
+  RepaymentSpecification loanRepaymentForm
+
+}
+
+LocalBusiness -- Organization
+
+
+Organization <|-- LocalBusiness
+Place <|-- LocalBusiness
+class LocalBusiness {
+
+  Organization branchOf
+  string openingHours
+  string priceRange
+  string paymentAccepted
+  string currenciesAccepted
+
+}
+
+LocationFeatureSpecification -- OpeningHoursSpecification
+LocationFeatureSpecification -- dateTime,date
+
+
+PropertyValue <|-- LocationFeatureSpecification
+class LocationFeatureSpecification {
+
+  OpeningHoursSpecification hoursAvailable
+  dateTime,date validFrom
+  dateTime,date validThrough
+
+}
+
+LodgingBusiness -- QuantitativeValue,number
+LodgingBusiness -- Audience
+LodgingBusiness -- Rating
+LodgingBusiness -- LocationFeatureSpecification
+LodgingBusiness -- string,Language
+LodgingBusiness -- dateTime,time
+LodgingBusiness -- string,boolean
+
+
+LocalBusiness <|-- LodgingBusiness
+class LodgingBusiness {
+
+  QuantitativeValue,number numberOfRooms
+  Audience audience
+  Rating starRating
+  LocationFeatureSpecification amenityFeature
+  string,Language availableLanguage
+  dateTime,time checkoutTime
+  dateTime,time checkinTime
+  string,boolean petsAllowed
+
+}
+
+LodgingReservation -- QualitativeValue,string
+LodgingReservation -- dateTime,time
+LodgingReservation -- number,QuantitativeValue
+
+
+Reservation <|-- LodgingReservation
+class LodgingReservation {
+
+  QualitativeValue,string lodgingUnitType
+  string lodgingUnitDescription
+  dateTime,time checkoutTime
+  number,QuantitativeValue numAdults
+  dateTime,time checkinTime
+  number,QuantitativeValue numChildren
+
+}
+
+LoseAction -- Person
+
+
+AchieveAction <|-- LoseAction
+class LoseAction {
+
+  Person winner
+
+}
+
+LymphaticVessel -- Vessel
+LymphaticVessel -- AnatomicalSystem,AnatomicalStructure
+
+
+Vessel <|-- LymphaticVessel
+class LymphaticVessel {
+
+  Vessel runsTo
+  AnatomicalSystem,AnatomicalStructure regionDrained
+  Vessel originatesFrom
+
+}
+
+Map -- MapCategoryType
+
+
+CreativeWork <|-- Map
+class Map {
+
+  MapCategoryType mapType
+
+}
+
+Enumeration o-- MapCategoryType
+  class MapCategoryType {
+<<enumeration>>
+  o SeatingMap
+  o VenueMap
+  o ParkingMap
+  o TransitMap
+}
+
+MathSolver -- SolveMathAction,string
+
+
+CreativeWork <|-- MathSolver
+class MathSolver {
+
+  SolveMathAction,string mathExpression
+
+}
+
+Enumeration o-- MediaManipulationRatingEnumeration
+  class MediaManipulationRatingEnumeration {
+<<enumeration>>
+  o OriginalMediaContent
+  o SatireOrParodyContent
+  o EditedOrCroppedContent
+  o DecontextualizedContent
+  o . . . 2 more values
+}
+
+MediaObject -- QuantitativeValue,Distance
+MediaObject -- Distance,QuantitativeValue
+MediaObject -- Place
+MediaObject -- dateTime,time
+MediaObject -- NewsArticle
+MediaObject -- Place,string,GeoShape
+MediaObject -- MediaSubscription,boolean
+MediaObject -- CreativeWork
+MediaObject -- Duration
+MediaObject -- string,string
+MediaObject -- date
+MediaObject -- Organization
+MediaObject -- Claim
+
+
+CreativeWork <|-- MediaObject
+class MediaObject {
+
+  string contentSize
+  string contentUrl
+  QuantitativeValue,Distance width
+  Distance,QuantitativeValue height
+  Place regionsAllowed
+  dateTime,time startTime
+  NewsArticle associatedArticle
+  Place,string,GeoShape ineligibleRegion
+  MediaSubscription,boolean requiresSubscription
+  string playerType
+  CreativeWork encodesCreativeWork
+  Duration duration
+  string,string encodingFormat
+  date uploadDate
+  string embedUrl
+  string bitrate
+  dateTime,time endTime
+  Organization productionCompany
+  string sha256
+  Claim interpretedAsClaim
+
+}
+
+MediaReview -- MediaManipulationRatingEnumeration
+MediaReview -- string,MediaObject,WebPage
+
+
+Review <|-- MediaReview
+class MediaReview {
+
+  string originalMediaContextDescription
+  MediaManipulationRatingEnumeration mediaAuthenticityCategory
+  string,MediaObject,WebPage originalMediaLink
+
+}
+
+MediaReviewItem -- MediaObject
+
+
+CreativeWork <|-- MediaReviewItem
+class MediaReviewItem {
+
+  MediaObject mediaItemAppearance
+
+}
+
+MediaSubscription -- Offer
+MediaSubscription -- Organization
+
+
+Intangible <|-- MediaSubscription
+class MediaSubscription {
+
+  Offer expectsAcceptanceOf
+  Organization authenticator
+
+}
+
+MedicalEnumeration o-- MedicalAudienceType
+  class MedicalAudienceType {
+<<enumeration>>
+  o MedicalResearcher
+  o Clinician
+}
+
+MedicalCause -- MedicalEntity
+
+
+MedicalEntity <|-- MedicalCause
+class MedicalCause {
+
+  MedicalEntity causeOf
+
+}
+
+MedicalClinic -- MedicalTest,MedicalProcedure,MedicalTherapy
+MedicalClinic -- MedicalSpecialty
+
+
+MedicalOrganization <|-- MedicalClinic
+MedicalBusiness <|-- MedicalClinic
+class MedicalClinic {
+
+  MedicalTest,MedicalProcedure,MedicalTherapy availableService
+  MedicalSpecialty medicalSpecialty
+
+}
+
+
+
+MedicalIntangible <|-- MedicalCode
+CategoryCode <|-- MedicalCode
+class MedicalCode {
+
+  string codeValue
+  string codingSystem
+
+}
+
+MedicalCondition -- MedicalTherapy
+MedicalCondition -- string,EventStatusType,MedicalStudyStatus
+MedicalCondition -- DDxElement
+MedicalCondition -- MedicalConditionStage
+MedicalCondition -- Drug
+MedicalCondition -- AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy
+MedicalCondition -- MedicalSignOrSymptom
+MedicalCondition -- MedicalTest
+MedicalCondition -- MedicalRiskFactor
+
+
+MedicalEntity <|-- MedicalCondition
+class MedicalCondition {
+
+  string possibleComplication
+  string naturalProgression
+  MedicalTherapy primaryPrevention
+  string,EventStatusType,MedicalStudyStatus status
+  DDxElement differentialDiagnosis
+  MedicalConditionStage stage
+  string pathophysiology
+  Drug drug
+  MedicalTherapy secondaryPrevention
+  AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy associatedAnatomy
+  MedicalSignOrSymptom signOrSymptom
+  MedicalTest typicalTest
+  string epidemiology
+  MedicalRiskFactor riskFactor
+  string expectedPrognosis
+  MedicalTherapy possibleTreatment
+
+}
+
+
+
+MedicalIntangible <|-- MedicalConditionStage
+class MedicalConditionStage {
+
+  string subStageSuffix
+  number stageAsNumber
+
+}
+
+MedicalDevice -- MedicalEntity
+MedicalDevice -- string,MedicalContraindication
+
+
+MedicalEntity <|-- MedicalDevice
+class MedicalDevice {
+
+  MedicalEntity adverseOutcome
+  string preOp
+  MedicalEntity seriousAdverseOutcome
+  string postOp
+  string procedure
+  string,MedicalContraindication contraindication
+
+}
+
+MedicalEnumeration o-- MedicalDevicePurpose
+  class MedicalDevicePurpose {
+<<enumeration>>
+  o Therapeutic
+  o Diagnostic
+}
+
+MedicalEntity -- DrugLegalStatus,string,MedicalEnumeration
+MedicalEntity -- Grant
+MedicalEntity -- MedicalStudy
+MedicalEntity -- MedicalCode
+MedicalEntity -- MedicalGuideline
+MedicalEntity -- Organization
+MedicalEntity -- MedicineSystem
+MedicalEntity -- MedicalSpecialty
+
+
+Thing <|-- MedicalEntity
+class MedicalEntity {
+
+  DrugLegalStatus,string,MedicalEnumeration legalStatus
+  Grant funding
+  MedicalStudy study
+  MedicalCode code
+  MedicalGuideline guideline
+  Organization recognizingAuthority
+  MedicineSystem medicineSystem
+  MedicalSpecialty relevantSpecialty
+
+}
+
+MedicalEnumeration o-- MedicalEvidenceLevel
+  class MedicalEvidenceLevel {
+<<enumeration>>
+  o EvidenceLevelA
+  o EvidenceLevelB
+  o EvidenceLevelC
+}
+
+MedicalGuideline -- MedicalEvidenceLevel
+MedicalGuideline -- MedicalEntity
+MedicalGuideline -- date
+
+
+MedicalEntity <|-- MedicalGuideline
+class MedicalGuideline {
+
+  MedicalEvidenceLevel evidenceLevel
+  string evidenceOrigin
+  MedicalEntity guidelineSubject
+  date guidelineDate
+
+}
+
+
+
+MedicalGuideline <|-- MedicalGuidelineRecommendation
+class MedicalGuidelineRecommendation {
+
+  string recommendationStrength
+
+}
+
+MedicalEnumeration o-- MedicalImagingTechnique
+  class MedicalImagingTechnique {
+<<enumeration>>
+  o XRay
+  o PET
+  o MRI
+  o Ultrasound
+  o . . . 1 more values
+}
+
+MedicalObservationalStudy -- MedicalObservationalStudyDesign
+
+
+MedicalStudy <|-- MedicalObservationalStudy
+class MedicalObservationalStudy {
+
+  MedicalObservationalStudyDesign studyDesign
+
+}
+
+MedicalEnumeration o-- MedicalObservationalStudyDesign
+  class MedicalObservationalStudyDesign {
+<<enumeration>>
+  o Registry
+  o CohortStudy
+  o Observational
+  o CrossSectional
+  o . . . 2 more values
+}
+
+MedicalOrganization -- MedicalSpecialty
+
+
+Organization <|-- MedicalOrganization
+class MedicalOrganization {
+
+  boolean isAcceptingNewPatients
+  string healthPlanNetworkId
+  MedicalSpecialty medicalSpecialty
+
+}
+
+MedicalProcedure -- MedicalProcedureType
+MedicalProcedure -- MedicalEntity,string
+MedicalProcedure -- string,EventStatusType,MedicalStudyStatus
+
+
+MedicalEntity <|-- MedicalProcedure
+class MedicalProcedure {
+
+  MedicalProcedureType procedureType
+  MedicalEntity,string preparation
+  string bodyLocation
+  string,EventStatusType,MedicalStudyStatus status
+  string howPerformed
+  string followup
+
+}
+
+MedicalEnumeration o-- MedicalProcedureType
+  class MedicalProcedureType {
+<<enumeration>>
+  o PercutaneousProcedure
+  o NoninvasiveProcedure
+}
+
+MedicalRiskEstimator -- MedicalEntity
+MedicalRiskEstimator -- MedicalRiskFactor
+
+
+MedicalEntity <|-- MedicalRiskEstimator
+class MedicalRiskEstimator {
+
+  MedicalEntity estimatesRiskOf
+  MedicalRiskFactor includedRiskFactor
+
+}
+
+MedicalRiskFactor -- MedicalEntity
+
+
+MedicalEntity <|-- MedicalRiskFactor
+class MedicalRiskFactor {
+
+  MedicalEntity increasesRiskOf
+
+}
+
+
+
+MedicalRiskEstimator <|-- MedicalRiskScore
+class MedicalRiskScore {
+
+  string algorithm
+
+}
+
+
+
+ScholarlyArticle <|-- MedicalScholarlyArticle
+class MedicalScholarlyArticle {
+
+  string publicationType
+
+}
+
+MedicalSign -- MedicalTest
+MedicalSign -- PhysicalExam
+
+
+MedicalSignOrSymptom <|-- MedicalSign
+class MedicalSign {
+
+  MedicalTest identifyingTest
+  PhysicalExam identifyingExam
+
+}
+
+MedicalSignOrSymptom -- MedicalTherapy
+
+
+MedicalCondition <|-- MedicalSignOrSymptom
+class MedicalSignOrSymptom {
+
+  MedicalTherapy possibleTreatment
+
+}
+
+MedicalSpecialty -- schema:MedicalSpecialty
+
+
+Specialty <|-- MedicalSpecialty
+MedicalEnumeration <|-- MedicalSpecialty
+class MedicalSpecialty {
+
+  schema:MedicalSpecialty Cardiovascular
+  schema:MedicalSpecialty Renal
+  schema:MedicalSpecialty Nursing
+  schema:MedicalSpecialty Dermatologic
+  schema:MedicalSpecialty DietNutrition
+  schema:MedicalSpecialty PrimaryCare
+  schema:MedicalSpecialty Oncologic
+  schema:MedicalSpecialty Physiotherapy
+  schema:MedicalSpecialty Optometric
+  schema:MedicalSpecialty Gynecologic
+  schema:MedicalSpecialty Midwifery
+  schema:MedicalSpecialty SpeechPathology
+  schema:MedicalSpecialty CommunityHealth
+  schema:MedicalSpecialty Emergency
+  schema:MedicalSpecialty LaboratoryScience
+  schema:MedicalSpecialty Geriatric
+  schema:MedicalSpecialty Anesthesia
+  schema:MedicalSpecialty Endocrine
+  schema:MedicalSpecialty RespiratoryTherapy
+  schema:MedicalSpecialty Pediatric
+  schema:MedicalSpecialty Genetic
+  schema:MedicalSpecialty Infectious
+  schema:MedicalSpecialty Rheumatologic
+  schema:MedicalSpecialty Musculoskeletal
+  schema:MedicalSpecialty Podiatric
+  schema:MedicalSpecialty Obstetric
+  schema:MedicalSpecialty Pathology
+  schema:MedicalSpecialty Pulmonary
+  schema:MedicalSpecialty Dermatology
+  schema:MedicalSpecialty Dentistry
+  schema:MedicalSpecialty Gastroenterologic
+  schema:MedicalSpecialty PublicHealth
+  schema:MedicalSpecialty Psychiatric
+  schema:MedicalSpecialty PharmacySpecialty
+  schema:MedicalSpecialty Hematologic
+  schema:MedicalSpecialty Toxicologic
+  schema:MedicalSpecialty PlasticSurgery
+  schema:MedicalSpecialty Urologic
+  schema:MedicalSpecialty Neurologic
+  schema:MedicalSpecialty Otolaryngologic
+  schema:MedicalSpecialty Surgical
+
+}
+
+MedicalStudy -- MedicalCondition
+MedicalStudy -- string,EventStatusType,MedicalStudyStatus
+MedicalStudy -- MedicalEntity
+MedicalStudy -- AdministrativeArea
+MedicalStudy -- Organization,Person
+
+
+MedicalEntity <|-- MedicalStudy
+class MedicalStudy {
+
+  MedicalCondition healthCondition
+  string,EventStatusType,MedicalStudyStatus status
+  MedicalEntity studySubject
+  AdministrativeArea studyLocation
+  Organization,Person sponsor
+
+}
+
+MedicalEnumeration o-- MedicalStudyStatus
+  class MedicalStudyStatus {
+<<enumeration>>
+  o Recruiting
+  o NotYetRecruiting
+  o ResultsNotAvailable
+  o Suspended
+  o . . . 6 more values
+}
+
+MedicalTest -- MedicalCondition
+MedicalTest -- Drug
+MedicalTest -- string,MedicalEnumeration
+MedicalTest -- MedicalSign
+MedicalTest -- MedicalDevice
+
+
+MedicalEntity <|-- MedicalTest
+class MedicalTest {
+
+  MedicalCondition usedToDiagnose
+  Drug affectedBy
+  string,MedicalEnumeration normalRange
+  MedicalSign signDetected
+  MedicalDevice usesDevice
+
+}
+
+MedicalTestPanel -- MedicalTest
+
+
+MedicalTest <|-- MedicalTestPanel
+class MedicalTestPanel {
+
+  MedicalTest subTest
+
+}
+
+MedicalTherapy -- MedicalTherapy
+MedicalTherapy -- MedicalEntity
+MedicalTherapy -- string,MedicalContraindication
+
+
+TherapeuticProcedure <|-- MedicalTherapy
+class MedicalTherapy {
+
+  MedicalTherapy duplicateTherapy
+  MedicalEntity seriousAdverseOutcome
+  string,MedicalContraindication contraindication
+
+}
+
+MedicalTrial -- MedicalTrialDesign
+
+
+MedicalStudy <|-- MedicalTrial
+class MedicalTrial {
+
+  MedicalTrialDesign trialDesign
+
+}
+
+MedicalEnumeration o-- MedicalTrialDesign
+  class MedicalTrialDesign {
+<<enumeration>>
+  o PlaceboControlledTrial
+  o DoubleBlindedTrial
+  o MultiCenterTrial
+  o InternationalTrial
+  o . . . 5 more values
+}
+
+MedicalWebPage -- MedicalAudienceType,MedicalAudience
+
+
+WebPage <|-- MedicalWebPage
+class MedicalWebPage {
+
+  string aspect
+  MedicalAudienceType,MedicalAudience medicalAudience
+
+}
+
+MedicalEnumeration o-- MedicineSystem
+  class MedicineSystem {
+<<enumeration>>
+  o Homeopathic
+  o TraditionalChinese
+  o Chiropractic
+  o Osteopathic
+  o . . . 2 more values
+}
+
+Menu -- MenuSection
+Menu -- MenuItem
+
+
+CreativeWork <|-- Menu
+class Menu {
+
+  MenuSection hasMenuSection
+  MenuItem hasMenuItem
+
+}
+
+MenuItem -- MenuItem,MenuSection
+MenuItem -- Offer,Demand
+MenuItem -- RestrictedDiet
+MenuItem -- NutritionInformation
+
+
+Intangible <|-- MenuItem
+class MenuItem {
+
+  MenuItem,MenuSection menuAddOn
+  Offer,Demand offers
+  RestrictedDiet suitableForDiet
+  NutritionInformation nutrition
+
+}
+
+MenuSection -- MenuSection
+MenuSection -- MenuItem
+
+
+CreativeWork <|-- MenuSection
+class MenuSection {
+
+  MenuSection hasMenuSection
+  MenuItem hasMenuItem
+
+}
+
+Enumeration o-- MerchantReturnEnumeration
+  class MerchantReturnEnumeration {
+<<enumeration>>
+  o MerchantReturnNotPermitted
+  o MerchantReturnUnlimitedWindow
+  o MerchantReturnFiniteReturnWindow
+  o MerchantReturnUnspecified
+}
+
+MerchantReturnPolicy -- MerchantReturnEnumeration
+MerchantReturnPolicy -- Country,string
+MerchantReturnPolicy -- MonetaryAmount,number
+MerchantReturnPolicy -- MonetaryAmount
+MerchantReturnPolicy -- ReturnFeesEnumeration
+MerchantReturnPolicy -- OfferItemCondition
+MerchantReturnPolicy -- ReturnLabelSourceEnumeration
+MerchantReturnPolicy -- RefundTypeEnumeration
+MerchantReturnPolicy -- dateTime,number,date
+MerchantReturnPolicy -- ReturnMethodEnumeration
+MerchantReturnPolicy -- PropertyValue
+MerchantReturnPolicy -- MerchantReturnPolicySeasonalOverride
+MerchantReturnPolicy -- string,Country
+
+
+Intangible <|-- MerchantReturnPolicy
+class MerchantReturnPolicy {
+
+  MerchantReturnEnumeration returnPolicyCategory
+  Country,string returnPolicyCountry
+  string merchantReturnLink
+  MonetaryAmount,number restockingFee
+  MonetaryAmount itemDefectReturnShippingFeesAmount
+  ReturnFeesEnumeration itemDefectReturnFees
+  boolean inStoreReturnsOffered
+  OfferItemCondition itemCondition
+  ReturnLabelSourceEnumeration itemDefectReturnLabelSource
+  ReturnLabelSourceEnumeration returnLabelSource
+  MonetaryAmount customerRemorseReturnShippingFeesAmount
+  RefundTypeEnumeration refundType
+  MonetaryAmount returnShippingFeesAmount
+  dateTime,number,date merchantReturnDays
+  ReturnMethodEnumeration returnMethod
+  PropertyValue additionalProperty
+  ReturnLabelSourceEnumeration customerRemorseReturnLabelSource
+  ReturnFeesEnumeration customerRemorseReturnFees
+  MerchantReturnPolicySeasonalOverride returnPolicySeasonalOverride
+  string,Country applicableCountry
+  ReturnFeesEnumeration returnFees
+
+}
+
+MerchantReturnPolicySeasonalOverride -- MerchantReturnEnumeration
+MerchantReturnPolicySeasonalOverride -- dateTime,date
+MerchantReturnPolicySeasonalOverride -- date,dateTime
+MerchantReturnPolicySeasonalOverride -- dateTime,number,date
+
+
+Intangible <|-- MerchantReturnPolicySeasonalOverride
+class MerchantReturnPolicySeasonalOverride {
+
+  MerchantReturnEnumeration returnPolicyCategory
+  dateTime,date startDate
+  date,dateTime endDate
+  dateTime,number,date merchantReturnDays
+
+}
+
+Message -- Person,ContactPoint,Organization
+Message -- Person,Audience,ContactPoint,Organization
+Message -- dateTime
+Message -- Person,Organization,ContactPoint
+Message -- CreativeWork
+Message -- ContactPoint,Person,Audience,Organization
+Message -- date,dateTime
+Message -- Person,Audience,Organization
+
+
+CreativeWork <|-- Message
+class Message {
+
+  Person,ContactPoint,Organization bccRecipient
+  Person,Audience,ContactPoint,Organization recipient
+  dateTime dateReceived
+  Person,Organization,ContactPoint ccRecipient
+  CreativeWork messageAttachment
+  ContactPoint,Person,Audience,Organization toRecipient
+  dateTime dateSent
+  date,dateTime dateRead
+  Person,Audience,Organization sender
+
+}
+
+
+
+SoftwareApplication <|-- MobileApplication
+class MobileApplication {
+
+  string carrierRequirements
+
+}
+
+MolecularEntity -- string,QuantitativeValue
+MolecularEntity -- DefinedTerm
+MolecularEntity -- QuantitativeValue,string
+
+
+BioChemEntity <|-- MolecularEntity
+class MolecularEntity {
+
+  string inChIKey
+  string iupacName
+  string,QuantitativeValue monoisotopicMolecularWeight
+  string molecularFormula
+  DefinedTerm potentialUse
+  DefinedTerm chemicalRole
+  QuantitativeValue,string molecularWeight
+  string inChI
+  string smiles
+
+}
+
+MonetaryAmount -- dateTime,date
+MonetaryAmount -- string,number,StructuredValue,boolean
+
+
+StructuredValue <|-- MonetaryAmount
+class MonetaryAmount {
+
+  number maxValue
+  number minValue
+  dateTime,date validFrom
+  string,number,StructuredValue,boolean value
+  string currency
+  dateTime,date validThrough
+
+}
+
+
+
+QuantitativeValueDistribution <|-- MonetaryAmountDistribution
+class MonetaryAmountDistribution {
+
+  string currency
+
+}
+
+MonetaryGrant -- Organization,Person
+MonetaryGrant -- number,MonetaryAmount
+
+
+Grant <|-- MonetaryGrant
+class MonetaryGrant {
+
+  Organization,Person funder
+  number,MonetaryAmount amount
+
+}
+
+MoneyTransfer -- BankOrCreditUnion,string
+MoneyTransfer -- number,MonetaryAmount
+
+
+TransferAction <|-- MoneyTransfer
+class MoneyTransfer {
+
+  BankOrCreditUnion,string beneficiaryBank
+  number,MonetaryAmount amount
+
+}
+
+MortgageLoan -- MonetaryAmount
+
+
+LoanOrCredit <|-- MortgageLoan
+class MortgageLoan {
+
+  MonetaryAmount loanMortgageMandateAmount
+  boolean domiciledMortgage
+
+}
+
+MoveAction -- Place
+
+
+Action <|-- MoveAction
+class MoveAction {
+
+  Place fromLocation
+  Place toLocation
+
+}
+
+Movie -- Country
+Movie -- Person
+Movie -- string,string
+Movie -- Language,string
+Movie -- VideoObject
+Movie -- Duration
+Movie -- Organization
+Movie -- Person,MusicGroup
+
+
+CreativeWork <|-- Movie
+class Movie {
+
+  Country countryOfOrigin
+  Person director
+  string,string titleEIDR
+  Language,string subtitleLanguage
+  Person actor
+  VideoObject trailer
+  Duration duration
+  Organization productionCompany
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}
+
+MovieSeries -- Person
+MovieSeries -- VideoObject
+MovieSeries -- Organization
+MovieSeries -- Person,MusicGroup
+
+
+CreativeWorkSeries <|-- MovieSeries
+class MovieSeries {
+
+  Person director
+  Person actor
+  VideoObject trailer
+  Organization productionCompany
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}
+
+
+
+CivicStructure <|-- MovieTheater
+EntertainmentBusiness <|-- MovieTheater
+class MovieTheater {
+
+  number screenCount
+
+}
+
+Muscle -- AnatomicalStructure
+Muscle -- Muscle
+Muscle -- Nerve
+Muscle -- Vessel
+
+
+AnatomicalStructure <|-- Muscle
+class Muscle {
+
+  AnatomicalStructure insertion
+  Muscle antagonist
+  Nerve nerve
+  Vessel bloodSupply
+  string muscleAction
+
+}
+
+MusicAlbum -- MusicAlbumProductionType
+MusicAlbum -- MusicAlbumReleaseType
+MusicAlbum -- MusicRelease
+MusicAlbum -- Person,MusicGroup
+
+
+MusicPlaylist <|-- MusicAlbum
+class MusicAlbum {
+
+  MusicAlbumProductionType albumProductionType
+  MusicAlbumReleaseType albumReleaseType
+  MusicRelease albumRelease
+  Person,MusicGroup byArtist
+
+}
+
+Enumeration o-- MusicAlbumProductionType
+  class MusicAlbumProductionType {
+<<enumeration>>
+  o SoundtrackAlbum
+  o RemixAlbum
+  o SpokenWordAlbum
+  o MixtapeAlbum
+  o . . . 5 more values
+}
+
+Enumeration o-- MusicAlbumReleaseType
+  class MusicAlbumReleaseType {
+<<enumeration>>
+  o EPRelease
+  o BroadcastRelease
+  o SingleRelease
+  o AlbumRelease
+}
+
+MusicComposition -- Organization,Person
+MusicComposition -- MusicComposition
+MusicComposition -- MusicRecording
+MusicComposition -- Event
+MusicComposition -- CreativeWork
+MusicComposition -- Person
+
+
+CreativeWork <|-- MusicComposition
+class MusicComposition {
+
+  string iswcCode
+  Organization,Person composer
+  string musicCompositionForm
+  MusicComposition includedComposition
+  MusicRecording recordedAs
+  Event firstPerformance
+  MusicComposition musicArrangement
+  CreativeWork lyrics
+  string musicalKey
+  Person lyricist
+
+}
+
+MusicGroup -- MusicRecording
+MusicGroup -- string,string
+MusicGroup -- Person
+MusicGroup -- MusicAlbum
+MusicGroup -- ItemList,MusicRecording
+
+
+PerformingGroup <|-- MusicGroup
+class MusicGroup {
+
+  MusicRecording tracks
+  string,string genre
+  Person musicGroupMember
+  MusicAlbum albums
+  ItemList,MusicRecording track
+  MusicAlbum album
+
+}
+
+MusicPlaylist -- MusicRecording
+MusicPlaylist -- ItemList,MusicRecording
+
+
+CreativeWork <|-- MusicPlaylist
+class MusicPlaylist {
+
+  MusicRecording tracks
+  number numTracks
+  ItemList,MusicRecording track
+
+}
+
+MusicRecording -- MusicPlaylist
+MusicRecording -- MusicAlbum
+MusicRecording -- MusicComposition
+MusicRecording -- Duration
+MusicRecording -- Person,MusicGroup
+
+
+CreativeWork <|-- MusicRecording
+class MusicRecording {
+
+  string isrcCode
+  MusicPlaylist inPlaylist
+  MusicAlbum inAlbum
+  MusicComposition recordingOf
+  Duration duration
+  Person,MusicGroup byArtist
+
+}
+
+MusicRelease -- MusicAlbum
+MusicRelease -- MusicReleaseFormatType
+MusicRelease -- Duration
+MusicRelease -- Person,Organization
+MusicRelease -- Organization
+
+
+MusicPlaylist <|-- MusicRelease
+class MusicRelease {
+
+  MusicAlbum releaseOf
+  MusicReleaseFormatType musicReleaseFormat
+  Duration duration
+  Person,Organization creditedTo
+  Organization recordLabel
+  string catalogNumber
+
+}
+
+Enumeration o-- MusicReleaseFormatType
+  class MusicReleaseFormatType {
+<<enumeration>>
+  o CDFormat
+  o DigitalAudioTapeFormat
+  o DigitalFormat
+  o LaserDiscFormat
+  o . . . 3 more values
+}
+
+NLNonprofitType -- schema:NLNonprofitType
+
+
+NonprofitType <|-- NLNonprofitType
+class NLNonprofitType {
+
+  schema:NLNonprofitType NonprofitANBI
+  schema:NLNonprofitType NonprofitSBBI
+
+}
+
+Nerve -- SuperficialAnatomy,AnatomicalStructure
+Nerve -- AnatomicalStructure
+Nerve -- BrainStructure
+Nerve -- Muscle
+
+
+AnatomicalStructure <|-- Nerve
+class Nerve {
+
+  SuperficialAnatomy,AnatomicalStructure sensoryUnit
+  AnatomicalStructure branch
+  BrainStructure sourcedFrom
+  Muscle nerveMotor
+
+}
+
+
+
+Article <|-- NewsArticle
+class NewsArticle {
+
+  string printEdition
+  string printColumn
+  string printPage
+  string printSection
+  string dateline
+
+}
+
+NewsMediaOrganization -- string,AboutPage,string,CreativeWork
+NewsMediaOrganization -- string,CreativeWork
+NewsMediaOrganization -- string,Article
+NewsMediaOrganization -- CreativeWork,string
+
+
+Organization <|-- NewsMediaOrganization
+class NewsMediaOrganization {
+
+  string,AboutPage,string,CreativeWork ownershipFundingInfo
+  string,CreativeWork correctionsPolicy
+  string,Article diversityStaffingReport
+  CreativeWork,string diversityPolicy
+  string,CreativeWork ethicsPolicy
+  CreativeWork,string missionCoveragePrioritiesPolicy
+  string,CreativeWork actionableFeedbackPolicy
+  string,CreativeWork masthead
+  CreativeWork,string unnamedSourcesPolicy
+  string,CreativeWork verificationFactCheckingPolicy
+  CreativeWork,string noBylinesPolicy
+
+}
+
+NutritionInformation -- Mass
+NutritionInformation -- Energy
+
+
+StructuredValue <|-- NutritionInformation
+class NutritionInformation {
+
+  Mass fatContent
+  string servingSize
+  Mass proteinContent
+  Energy calories
+  Mass sodiumContent
+  Mass cholesterolContent
+  Mass sugarContent
+  Mass carbohydrateContent
+  Mass transFatContent
+  Mass fiberContent
+  Mass unsaturatedFatContent
+  Mass saturatedFatContent
+
+}
+
+Observation -- DataType
+Observation -- StatisticalPopulation
+Observation -- Property
+Observation -- dateTime
+Observation -- QuantitativeValue
+
+
+Intangible <|-- Observation
+class Observation {
+
+  DataType measuredValue
+  StatisticalPopulation observedNode
+  Property measuredProperty
+  dateTime observationDate
+  QuantitativeValue marginOfError
+
+}
+
+Occupation -- MonetaryAmountDistribution,MonetaryAmount,number
+Occupation -- AdministrativeArea
+Occupation -- string,OccupationalExperienceRequirements
+Occupation -- EducationalOccupationalCredential,string
+Occupation -- string,DefinedTerm
+Occupation -- string,EducationalOccupationalCredential
+Occupation -- CategoryCode,string
+
+
+Intangible <|-- Occupation
+class Occupation {
+
+  MonetaryAmountDistribution,MonetaryAmount,number estimatedSalary
+  string responsibilities
+  AdministrativeArea occupationLocation
+  string,OccupationalExperienceRequirements experienceRequirements
+  EducationalOccupationalCredential,string educationRequirements
+  string,DefinedTerm skills
+  string,EducationalOccupationalCredential qualifications
+  CategoryCode,string occupationalCategory
+
+}
+
+
+
+Intangible <|-- OccupationalExperienceRequirements
+class OccupationalExperienceRequirements {
+
+  number monthsOfExperience
+
+}
+
+Offer -- AdultOrientedEnumeration
+Offer -- Review
+Offer -- Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service
+Offer -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+Offer -- date
+Offer -- OfferShippingDetails
+Offer -- TypeAndQuantityNode
+Offer -- BusinessFunction
+Offer -- OfferItemCondition
+Offer -- QuantitativeValue
+Offer -- LoanOrCredit,PaymentMethod
+Offer -- WarrantyPromise
+Offer -- Organization,Person
+Offer -- Place,string,GeoShape
+Offer -- QuantitativeValue,Duration
+Offer -- AggregateRating
+Offer -- Person,Organization
+Offer -- DeliveryMethod
+Offer -- dateTime,date
+Offer -- date,dateTime,time
+Offer -- GeoShape,string,Place
+Offer -- Offer
+Offer -- MerchantReturnPolicy
+Offer -- PriceSpecification
+Offer -- AdministrativeArea,GeoShape,string,Place
+Offer -- BusinessEntityType
+Offer -- ItemAvailability
+Offer -- number,string
+Offer -- time,dateTime,date
+Offer -- Place
+
+
+Intangible <|-- Offer
+class Offer {
+
+  AdultOrientedEnumeration hasAdultConsideration
+  string gtin12
+  Review review
+  Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service itemOffered
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  date priceValidUntil
+  OfferShippingDetails shippingDetails
+  string mpn
+  TypeAndQuantityNode includesObject
+  BusinessFunction businessFunction
+  OfferItemCondition itemCondition
+  string gtin
+  QuantitativeValue eligibleQuantity
+  LoanOrCredit,PaymentMethod acceptedPaymentMethod
+  WarrantyPromise warranty
+  Organization,Person seller
+  Place,string,GeoShape ineligibleRegion
+  QuantitativeValue,Duration leaseLength
+  AggregateRating aggregateRating
+  Person,Organization offeredBy
+  QuantitativeValue deliveryLeadTime
+  DeliveryMethod availableDeliveryMethod
+  dateTime,date validFrom
+  date,dateTime,time availabilityEnds
+  GeoShape,string,Place eligibleRegion
+  QuantitativeValue hasMeasurement
+  string gtin8
+  QuantitativeValue inventoryLevel
+  string sku
+  Offer addOn
+  MerchantReturnPolicy hasMerchantReturnPolicy
+  QuantitativeValue advanceBookingRequirement
+  string gtin14
+  string priceCurrency
+  PriceSpecification eligibleTransactionVolume
+  AdministrativeArea,GeoShape,string,Place areaServed
+  BusinessEntityType eligibleCustomerType
+  ItemAvailability availability
+  string gtin13
+  Review reviews
+  boolean isFamilyFriendly
+  dateTime,date validThrough
+  PriceSpecification priceSpecification
+  number,string price
+  time,dateTime,date availabilityStarts
+  QuantitativeValue eligibleDuration
+  Place availableAtOrFrom
+  string serialNumber
+
+}
+
+Enumeration o-- OfferItemCondition
+  class OfferItemCondition {
+<<enumeration>>
+  o DamagedCondition
+  o RefurbishedCondition
+  o UsedCondition
+  o NewCondition
+}
+
+OfferShippingDetails -- DefinedRegion
+OfferShippingDetails -- ShippingDeliveryTime
+OfferShippingDetails -- MonetaryAmount
+
+
+StructuredValue <|-- OfferShippingDetails
+class OfferShippingDetails {
+
+  DefinedRegion shippingDestination
+  boolean doesNotShip
+  string shippingSettingsLink
+  string transitTimeLabel
+  string shippingLabel
+  ShippingDeliveryTime deliveryTime
+  MonetaryAmount shippingRate
+
+}
+
+OpeningHoursSpecification -- time
+OpeningHoursSpecification -- DayOfWeek
+OpeningHoursSpecification -- dateTime,date
+
+
+StructuredValue <|-- OpeningHoursSpecification
+class OpeningHoursSpecification {
+
+  time closes
+  DayOfWeek dayOfWeek
+  dateTime,date validFrom
+  time opens
+  dateTime,date validThrough
+
+}
+
+Order -- ParcelDelivery
+Order -- PostalAddress
+Order -- Offer
+Order -- Organization,Person
+Order -- OrderStatus
+Order -- Invoice
+Order -- dateTime,date
+Order -- Person,Organization
+Order -- string,number
+Order -- dateTime
+Order -- date,dateTime
+Order -- Service,OrderItem,Product
+Order -- PaymentMethod
+
+
+Intangible <|-- Order
+class Order {
+
+  ParcelDelivery orderDelivery
+  PostalAddress billingAddress
+  Offer acceptedOffer
+  Organization,Person merchant
+  OrderStatus orderStatus
+  string confirmationNumber
+  Invoice partOfInvoice
+  string orderNumber
+  Organization,Person seller
+  Organization,Person customer
+  dateTime,date paymentDueDate
+  Person,Organization broker
+  string discountCode
+  string,number discount
+  string paymentMethodId
+  string paymentUrl
+  string discountCurrency
+  dateTime paymentDue
+  date,dateTime orderDate
+  boolean isGift
+  Service,OrderItem,Product orderedItem
+  PaymentMethod paymentMethod
+
+}
+
+OrderAction -- DeliveryMethod
+
+
+TradeAction <|-- OrderAction
+class OrderAction {
+
+  DeliveryMethod deliveryMethod
+
+}
+
+OrderItem -- ParcelDelivery
+OrderItem -- OrderStatus
+OrderItem -- Service,OrderItem,Product
+
+
+Intangible <|-- OrderItem
+class OrderItem {
+
+  ParcelDelivery orderDelivery
+  OrderStatus orderItemStatus
+  number orderQuantity
+  string orderItemNumber
+  Service,OrderItem,Product orderedItem
+
+}
+
+StatusEnumeration o-- OrderStatus
+  class OrderStatus {
+<<enumeration>>
+  o OrderCancelled
+  o OrderProblem
+  o OrderDelivered
+  o OrderReturned
+  o . . . 4 more values
+}
+
+Organization -- string,AboutPage,string,CreativeWork
+Organization -- EducationalOccupationalCredential
+Organization -- Person
+Organization -- Review
+Organization -- string,string,Thing
+Organization -- Organization,Person
+Organization -- date
+Organization -- Grant
+Organization -- DefinedTerm,string,string
+Organization -- ContactPoint
+Organization -- Organization
+Organization -- QuantitativeValue
+Organization -- Offer
+Organization -- string,CreativeWork
+Organization -- AggregateRating
+Organization -- InteractionCounter
+Organization -- PostalAddress,string,Place,VirtualLocation
+Organization -- string,PostalAddress
+Organization -- ProgramMembership,Organization
+Organization -- string,Article
+Organization -- CreativeWork,string
+Organization -- NonprofitType
+Organization -- Organization,Brand
+Organization -- string,ImageObject
+Organization -- GeoShape,AdministrativeArea,Place
+Organization -- MerchantReturnPolicy
+Organization -- Place
+Organization -- AdministrativeArea,GeoShape,string,Place
+Organization -- Language,string
+Organization -- Demand
+Organization -- Product,OwnershipInfo
+Organization -- OfferCatalog
+Organization -- Person,Organization
+Organization -- Event
+
+
+Thing <|-- Organization
+class Organization {
+
+  string,AboutPage,string,CreativeWork ownershipFundingInfo
+  EducationalOccupationalCredential hasCredential
+  Person founders
+  string telephone
+  Review review
+  string,string,Thing knowsAbout
+  string award
+  Organization,Person member
+  Person employee
+  date dissolutionDate
+  Grant funding
+  string vatID
+  string globalLocationNumber
+  DefinedTerm,string,string keywords
+  ContactPoint contactPoints
+  Organization subOrganization
+  string awards
+  QuantitativeValue numberOfEmployees
+  Organization,Person funder
+  Offer makesOffer
+  string legalName
+  string,CreativeWork correctionsPolicy
+  AggregateRating aggregateRating
+  InteractionCounter interactionStatistic
+  PostalAddress,string,Place,VirtualLocation location
+  string,PostalAddress address
+  ProgramMembership,Organization memberOf
+  string,CreativeWork publishingPrinciples
+  string,Article diversityStaffingReport
+  CreativeWork,string diversityPolicy
+  string email
+  Person employees
+  NonprofitType nonprofitStatus
+  string slogan
+  string,CreativeWork ethicsPolicy
+  Organization,Brand brand
+  Organization,Person sponsor
+  string,ImageObject logo
+  string,CreativeWork actionableFeedbackPolicy
+  string naics
+  ContactPoint contactPoint
+  GeoShape,AdministrativeArea,Place serviceArea
+  string isicV4
+  MerchantReturnPolicy hasMerchantReturnPolicy
+  Place hasPOS
+  Person founder
+  CreativeWork,string unnamedSourcesPolicy
+  Place foundingLocation
+  string duns
+  Organization parentOrganization
+  Person alumni
+  string leiCode
+  AdministrativeArea,GeoShape,string,Place areaServed
+  date foundingDate
+  Language,string knowsLanguage
+  Review reviews
+  Demand seeks
+  string taxID
+  Product,OwnershipInfo owns
+  OfferCatalog hasOfferCatalog
+  Person,Organization members
+  Event events
+  string iso6523Code
+  Organization department
+  string faxNumber
+  Event event
+
+}
+
+
+
+Role <|-- OrganizationRole
+class OrganizationRole {
+
+  number numberedPosition
+
+}
+
+OwnershipInfo -- dateTime
+OwnershipInfo -- Product,Service
+OwnershipInfo -- Organization,Person
+
+
+StructuredValue <|-- OwnershipInfo
+class OwnershipInfo {
+
+  dateTime ownedFrom
+  Product,Service typeOfGood
+  Organization,Person acquiredFrom
+  dateTime ownedThrough
+
+}
+
+ParcelDelivery -- PostalAddress
+ParcelDelivery -- Product
+ParcelDelivery -- Organization,Person
+ParcelDelivery -- date,dateTime
+ParcelDelivery -- DeliveryEvent
+ParcelDelivery -- Organization
+ParcelDelivery -- DeliveryMethod
+ParcelDelivery -- Order
+
+
+Intangible <|-- ParcelDelivery
+class ParcelDelivery {
+
+  PostalAddress originAddress
+  string trackingNumber
+  Product itemShipped
+  Organization,Person provider
+  string trackingUrl
+  PostalAddress deliveryAddress
+  date,dateTime expectedArrivalUntil
+  DeliveryEvent deliveryStatus
+  date,dateTime expectedArrivalFrom
+  Organization carrier
+  DeliveryMethod hasDeliveryMethod
+  Order partOfOrder
+
+}
+
+
+
+PeopleAudience <|-- ParentAudience
+class ParentAudience {
+
+  number childMaxAge
+  number childMinAge
+
+}
+
+
+
+MedicalTest <|-- PathologyTest
+class PathologyTest {
+
+  string tissueSample
+
+}
+
+Patient -- MedicalCondition
+Patient -- Drug
+
+
+MedicalAudience <|-- Patient
+Person <|-- Patient
+class Patient {
+
+  MedicalCondition healthCondition
+  Drug drug
+  MedicalCondition diagnosis
+
+}
+
+PayAction -- Person,Audience,ContactPoint,Organization
+
+
+TradeAction <|-- PayAction
+class PayAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}
+
+PaymentCard -- number,boolean
+PaymentCard -- MonetaryAmount,number
+PaymentCard -- MonetaryAmount
+
+
+PaymentMethod <|-- PaymentCard
+FinancialProduct <|-- PaymentCard
+class PaymentCard {
+
+  number,boolean cashBack
+  MonetaryAmount,number monthlyMinimumRepaymentAmount
+  MonetaryAmount floorLimit
+  boolean contactlessPayment
+
+}
+
+PaymentChargeSpecification -- PaymentMethod
+PaymentChargeSpecification -- DeliveryMethod
+
+
+PriceSpecification <|-- PaymentChargeSpecification
+class PaymentChargeSpecification {
+
+  PaymentMethod appliesToPaymentMethod
+  DeliveryMethod appliesToDeliveryMethod
+
+}
+
+StatusEnumeration o-- PaymentStatusType
+  class PaymentStatusType {
+<<enumeration>>
+  o PaymentDue
+  o PaymentDeclined
+  o PaymentAutomaticallyApplied
+  o PaymentComplete
+  o . . . 1 more values
+}
+
+PeopleAudience -- MedicalCondition
+PeopleAudience -- QuantitativeValue
+PeopleAudience -- GenderType,string
+
+
+Audience <|-- PeopleAudience
+class PeopleAudience {
+
+  number requiredMinAge
+  number suggestedMaxAge
+  MedicalCondition healthCondition
+  QuantitativeValue suggestedMeasurement
+  QuantitativeValue suggestedAge
+  number requiredMaxAge
+  number suggestedMinAge
+  string requiredGender
+  GenderType,string suggestedGender
+
+}
+
+PerformAction -- EntertainmentBusiness
+
+
+PlayAction <|-- PerformAction
+class PerformAction {
+
+  EntertainmentBusiness entertainmentBusiness
+
+}
+
+
+
+Role <|-- PerformanceRole
+class PerformanceRole {
+
+  string characterName
+
+}
+
+Permit -- Duration
+Permit -- Organization
+Permit -- date
+Permit -- dateTime,date
+Permit -- Service
+Permit -- AdministrativeArea
+Permit -- Audience
+
+
+Intangible <|-- Permit
+class Permit {
+
+  Duration validFor
+  Organization issuedBy
+  date validUntil
+  dateTime,date validFrom
+  Service issuedThrough
+  AdministrativeArea validIn
+  Audience permitAudience
+
+}
+
+Person -- Person
+Person -- EducationalOccupationalCredential
+Person -- string,string,Thing
+Person -- Event
+Person -- MonetaryAmount,PriceSpecification
+Person -- Place,ContactPoint
+Person -- Place
+Person -- Grant
+Person -- Distance,QuantitativeValue
+Person -- ContactPoint
+Person -- Occupation
+Person -- GenderType,string
+Person -- string,DefinedTerm
+Person -- date
+Person -- Organization,Person
+Person -- Offer
+Person -- Organization
+Person -- InteractionCounter
+Person -- string,PostalAddress
+Person -- ProgramMembership,Organization
+Person -- string,CreativeWork
+Person -- Organization,Brand
+Person -- EducationalOrganization,Organization
+Person -- QuantitativeValue
+Person -- Language,string
+Person -- Person,string
+Person -- Demand
+Person -- Product,OwnershipInfo
+Person -- OfferCatalog
+Person -- Country
+
+
+Thing <|-- Person
+class Person {
+
+  Person spouse
+  string additionalName
+  EducationalOccupationalCredential hasCredential
+  string telephone
+  string honorificPrefix
+  Person parents
+  string familyName
+  string givenName
+  string,string,Thing knowsAbout
+  Event performerIn
+  MonetaryAmount,PriceSpecification netWorth
+  string award
+  Place,ContactPoint workLocation
+  string honorificSuffix
+  Place deathPlace
+  Place,ContactPoint homeLocation
+  Grant funding
+  string vatID
+  Distance,QuantitativeValue height
+  string globalLocationNumber
+  ContactPoint contactPoints
+  Occupation hasOccupation
+  GenderType,string gender
+  Person parent
+  string awards
+  Person sibling
+  string,DefinedTerm jobTitle
+  date birthDate
+  Organization,Person funder
+  Offer makesOffer
+  Person children
+  Organization worksFor
+  Person knows
+  InteractionCounter interactionStatistic
+  string,PostalAddress address
+  ProgramMembership,Organization memberOf
+  string,CreativeWork publishingPrinciples
+  Person colleagues
+  date deathDate
+  string email
+  Organization affiliation
+  Person siblings
+  Place birthPlace
+  Organization,Brand brand
+  Organization,Person sponsor
+  string naics
+  ContactPoint contactPoint
+  string callSign
+  string isicV4
+  Place hasPOS
+  EducationalOrganization,Organization alumniOf
+  string duns
+  QuantitativeValue weight
+  Language,string knowsLanguage
+  Person relatedTo
+  Person,string colleague
+  Demand seeks
+  string taxID
+  Product,OwnershipInfo owns
+  OfferCatalog hasOfferCatalog
+  Person follows
+  Country nationality
+  string faxNumber
+
+}
+
+PhysicalActivity -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+PhysicalActivity -- AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy
+
+
+LifestyleModification <|-- PhysicalActivity
+class PhysicalActivity {
+
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  string pathophysiology
+  AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy associatedAnatomy
+  string epidemiology
+
+}
+
+Enumeration o-- PhysicalActivityCategory
+  class PhysicalActivityCategory {
+<<enumeration>>
+  o Balance
+  o AnaerobicActivity
+  o Flexibility
+  o OccupationalActivity
+  o . . . 3 more values
+}
+
+PhysicalExam -- schema:PhysicalExam
+
+
+MedicalEnumeration <|-- PhysicalExam
+MedicalProcedure <|-- PhysicalExam
+class PhysicalExam {
+
+  schema:PhysicalExam Genitourinary
+  schema:PhysicalExam Abdomen
+  schema:PhysicalExam Appearance
+  schema:PhysicalExam CardiovascularExam
+  schema:PhysicalExam Skin
+  schema:PhysicalExam Lung
+  schema:PhysicalExam Neck
+  schema:PhysicalExam Ear
+  schema:PhysicalExam MusculoskeletalExam
+  schema:PhysicalExam Head
+  schema:PhysicalExam Eye
+  schema:PhysicalExam Throat
+  schema:PhysicalExam Neuro
+  schema:PhysicalExam Nose
+
+}
+
+Physician -- MedicalTest,MedicalProcedure,MedicalTherapy
+Physician -- MedicalSpecialty
+Physician -- Hospital
+
+
+MedicalOrganization <|-- Physician
+MedicalBusiness <|-- Physician
+class Physician {
+
+  MedicalTest,MedicalProcedure,MedicalTherapy availableService
+  MedicalSpecialty medicalSpecialty
+  Hospital hospitalAffiliation
+
+}
+
+Place -- Review
+Place -- Place,GeospatialGeometry
+Place -- Place
+Place -- DefinedTerm,string,string
+Place -- GeospatialGeometry,Place
+Place -- string,number
+Place -- AggregateRating
+Place -- string,PostalAddress
+Place -- LocationFeatureSpecification
+Place -- ImageObject,Photograph
+Place -- string,ImageObject
+Place -- PropertyValue
+Place -- OpeningHoursSpecification
+Place -- Photograph,ImageObject
+Place -- string,Map
+Place -- number,string
+Place -- GeoCoordinates,GeoShape
+Place -- Event
+
+
+Thing <|-- Place
+class Place {
+
+  string telephone
+  Review review
+  string maps
+  Place,GeospatialGeometry geoContains
+  number maximumAttendeeCapacity
+  Place containsPlace
+  boolean smokingAllowed
+  string globalLocationNumber
+  DefinedTerm,string,string keywords
+  GeospatialGeometry,Place geoIntersects
+  string,number latitude
+  Place,GeospatialGeometry geoTouches
+  Place,GeospatialGeometry geoCoveredBy
+  AggregateRating aggregateRating
+  string,PostalAddress address
+  Place,GeospatialGeometry geoEquals
+  string map
+  boolean publicAccess
+  GeospatialGeometry,Place geoCrosses
+  Place containedInPlace
+  LocationFeatureSpecification amenityFeature
+  string slogan
+  ImageObject,Photograph photos
+  GeospatialGeometry,Place geoCovers
+  Place containedIn
+  boolean hasDriveThroughService
+  string,ImageObject logo
+  boolean isAccessibleForFree
+  Place,GeospatialGeometry geoWithin
+  GeospatialGeometry,Place geoDisjoint
+  string tourBookingPage
+  string isicV4
+  GeospatialGeometry,Place geoOverlaps
+  string branchCode
+  PropertyValue additionalProperty
+  OpeningHoursSpecification openingHoursSpecification
+  Review reviews
+  Photograph,ImageObject photo
+  OpeningHoursSpecification specialOpeningHoursSpecification
+  string,Map hasMap
+  number,string longitude
+  GeoCoordinates,GeoShape geo
+  Event events
+  string faxNumber
+  Event event
+
+}
+
+PlanAction -- dateTime
+
+
+OrganizeAction <|-- PlanAction
+class PlanAction {
+
+  dateTime scheduledTime
+
+}
+
+PlayAction -- Audience
+PlayAction -- Event
+
+
+Action <|-- PlayAction
+class PlayAction {
+
+  Audience audience
+  Event event
+
+}
+
+PlayGameAction -- GameAvailabilityEnumeration,string
+
+
+ConsumeAction <|-- PlayGameAction
+class PlayGameAction {
+
+  GameAvailabilityEnumeration,string gameAvailabilityType
+
+}
+
+PodcastSeries -- Person
+PodcastSeries -- DataFeed,string
+
+
+CreativeWorkSeries <|-- PodcastSeries
+class PodcastSeries {
+
+  Person actor
+  DataFeed,string webFeed
+
+}
+
+PostalAddress -- Country,string
+
+
+ContactPoint <|-- PostalAddress
+class PostalAddress {
+
+  Country,string addressCountry
+  string addressRegion
+  string addressLocality
+  string postalCode
+  string postOfficeBoxNumber
+  string streetAddress
+
+}
+
+
+
+StructuredValue <|-- PostalCodeRangeSpecification
+class PostalCodeRangeSpecification {
+
+  string postalCodeEnd
+  string postalCodeBegin
+
+}
+
+Enumeration o-- PriceComponentTypeEnumeration
+  class PriceComponentTypeEnumeration {
+<<enumeration>>
+  o Subscription
+  o Installment
+  o ActivationFee
+  o Downpayment
+  o . . . 2 more values
+}
+
+PriceSpecification -- QuantitativeValue
+PriceSpecification -- dateTime,date
+PriceSpecification -- PriceSpecification
+PriceSpecification -- number,string
+
+
+StructuredValue <|-- PriceSpecification
+class PriceSpecification {
+
+  number minPrice
+  QuantitativeValue eligibleQuantity
+  dateTime,date validFrom
+  number maxPrice
+  string priceCurrency
+  boolean valueAddedTaxIncluded
+  PriceSpecification eligibleTransactionVolume
+  dateTime,date validThrough
+  number,string price
+
+}
+
+Enumeration o-- PriceTypeEnumeration
+  class PriceTypeEnumeration {
+<<enumeration>>
+  o SalePrice
+  o SRP
+  o ListPrice
+  o InvoicePrice
+  o . . . 2 more values
+}
+
+Product -- Product
+Product -- AdultOrientedEnumeration
+Product -- string,string,Product
+Product -- Review
+Product -- QuantitativeValue,Distance
+Product -- Country
+Product -- DefinedTerm,string
+Product -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+Product -- Grant
+Product -- Distance,QuantitativeValue
+Product -- DefinedTerm,string,string
+Product -- date
+Product -- EnergyConsumptionDetails
+Product -- Audience
+Product -- Offer,Demand
+Product -- OfferItemCondition
+Product -- AggregateRating
+Product -- Service,Product
+Product -- ProductModel,ProductGroup
+Product -- Organization,Brand
+Product -- Organization
+Product -- QuantitativeValue
+Product -- string,ImageObject
+Product -- ProductModel,string
+Product -- MerchantReturnPolicy
+Product -- QuantitativeValue,DefinedTerm,string,SizeSpecification
+Product -- PropertyValue
+
+
+Thing <|-- Product
+class Product {
+
+  Product isAccessoryOrSparePartFor
+  AdultOrientedEnumeration hasAdultConsideration
+  string gtin12
+  string nsn
+  string,string,Product material
+  Review review
+  string award
+  QuantitativeValue,Distance width
+  Country countryOfOrigin
+  DefinedTerm,string pattern
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  Grant funding
+  string mpn
+  Distance,QuantitativeValue height
+  DefinedTerm,string,string keywords
+  date purchaseDate
+  EnergyConsumptionDetails hasEnergyConsumptionDetails
+  Audience audience
+  Offer,Demand offers
+  date productionDate
+  OfferItemCondition itemCondition
+  string awards
+  string gtin
+  string productID
+  string countryOfAssembly
+  string color
+  AggregateRating aggregateRating
+  Service,Product isSimilarTo
+  Distance,QuantitativeValue depth
+  string countryOfLastProcessing
+  ProductModel,ProductGroup isVariantOf
+  string slogan
+  Organization,Brand brand
+  Organization manufacturer
+  QuantitativeValue hasMeasurement
+  Product isConsumableFor
+  string,ImageObject logo
+  string gtin8
+  string sku
+  string inProductGroupWithID
+  ProductModel,string model
+  MerchantReturnPolicy hasMerchantReturnPolicy
+  date releaseDate
+  string gtin14
+  QuantitativeValue weight
+  QuantitativeValue,DefinedTerm,string,SizeSpecification size
+  PropertyValue additionalProperty
+  string gtin13
+  Review reviews
+  boolean isFamilyFriendly
+  Service,Product isRelatedTo
+
+}
+
+ProductCollection -- TypeAndQuantityNode
+
+
+Product <|-- ProductCollection
+Collection <|-- ProductCollection
+class ProductCollection {
+
+  TypeAndQuantityNode includesObject
+
+}
+
+ProductGroup -- Product
+ProductGroup -- string,DefinedTerm
+
+
+Product <|-- ProductGroup
+class ProductGroup {
+
+  Product hasVariant
+  string productGroupID
+  string,DefinedTerm variesBy
+
+}
+
+ProductModel -- ProductModel
+ProductModel -- ProductModel,ProductGroup
+
+
+Product <|-- ProductModel
+class ProductModel {
+
+  ProductModel successorOf
+  ProductModel predecessorOf
+  ProductModel,ProductGroup isVariantOf
+
+}
+
+ProgramMembership -- number,QuantitativeValue
+ProgramMembership -- Organization,Person
+ProgramMembership -- Organization
+ProgramMembership -- Person,Organization
+
+
+Intangible <|-- ProgramMembership
+class ProgramMembership {
+
+  number,QuantitativeValue membershipPointsEarned
+  Organization,Person member
+  string membershipNumber
+  Organization hostingOrganization
+  string programName
+  Person,Organization members
+
+}
+
+PronounceableText -- string,Language
+
+
+Text <|-- PronounceableText
+class PronounceableText {
+
+  string phoneticText
+  string speechToTextMarkup
+  string textValue
+  string,Language inLanguage
+
+}
+
+Property -- Class
+Property -- Enumeration,Class,Property
+Property -- Property
+
+
+Intangible <|-- Property
+class Property {
+
+  Class domainIncludes
+  Enumeration,Class,Property supersededBy
+  Class rangeIncludes
+  Property inverseOf
+
+}
+
+PropertyValue -- Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue
+PropertyValue -- string,string
+PropertyValue -- string,number,StructuredValue,boolean
+
+
+StructuredValue <|-- PropertyValue
+class PropertyValue {
+
+  Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue valueReference
+  string,string propertyID
+  number maxValue
+  string unitText
+  string,string measurementTechnique
+  number minValue
+  string,number,StructuredValue,boolean value
+  string,string unitCode
+
+}
+
+PropertyValueSpecification -- string,Thing
+
+
+Intangible <|-- PropertyValueSpecification
+class PropertyValueSpecification {
+
+  number valueMaxLength
+  boolean readonlyValue
+  number maxValue
+  string valueName
+  string,Thing defaultValue
+  number valueMinLength
+  boolean valueRequired
+  number minValue
+  string valuePattern
+  number stepValue
+  boolean multipleValues
+
+}
+
+
+
+BioChemEntity <|-- Protein
+class Protein {
+
+  string hasBioPolymerSequence
+
+}
+
+PublicationEvent -- Organization,Person
+PublicationEvent -- BroadcastService
+
+
+Event <|-- PublicationEvent
+class PublicationEvent {
+
+  Organization,Person publishedBy
+  boolean free
+  BroadcastService publishedOn
+
+}
+
+PublicationIssue -- string,number
+PublicationIssue -- number,string
+
+
+CreativeWork <|-- PublicationIssue
+class PublicationIssue {
+
+  string,number pageStart
+  string,number pageEnd
+  number,string issueNumber
+  string pagination
+
+}
+
+PublicationVolume -- string,number
+PublicationVolume -- number,string
+
+
+CreativeWork <|-- PublicationVolume
+class PublicationVolume {
+
+  string,number pageStart
+  string,number pageEnd
+  number,string volumeNumber
+  string pagination
+
+}
+
+Enumeration o-- QualitativeValue
+  class QualitativeValue {
+<<enumeration>>
+  o valueReference
+  o greaterOrEqual
+  o nonEqual
+  o equal
+  o . . . 4 more values
+}
+
+QuantitativeValue -- Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue
+QuantitativeValue -- string,number,StructuredValue,boolean
+QuantitativeValue -- string,string
+QuantitativeValue -- PropertyValue
+
+
+StructuredValue <|-- QuantitativeValue
+class QuantitativeValue {
+
+  Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue valueReference
+  number maxValue
+  string unitText
+  number minValue
+  string,number,StructuredValue,boolean value
+  string,string unitCode
+  PropertyValue additionalProperty
+
+}
+
+QuantitativeValueDistribution -- Duration
+
+
+StructuredValue <|-- QuantitativeValueDistribution
+class QuantitativeValueDistribution {
+
+  number percentile75
+  number median
+  number percentile10
+  number percentile25
+  number percentile90
+  Duration duration
+
+}
+
+Question -- ItemList,Answer
+Question -- Answer,ItemList
+
+
+Comment <|-- Question
+class Question {
+
+  ItemList,Answer suggestedAnswer
+  Answer,ItemList acceptedAnswer
+  number answerCount
+  string eduQuestionType
+
+}
+
+Quotation -- Person,Organization
+
+
+CreativeWork <|-- Quotation
+class Quotation {
+
+  Person,Organization spokenByCharacter
+
+}
+
+RadioSeries -- string,CreativeWorkSeason
+RadioSeries -- CreativeWorkSeason
+RadioSeries -- Person
+RadioSeries -- VideoObject
+RadioSeries -- Episode
+RadioSeries -- Organization
+RadioSeries -- Person,MusicGroup
+
+
+CreativeWorkSeries <|-- RadioSeries
+class RadioSeries {
+
+  string,CreativeWorkSeason season
+  CreativeWorkSeason containsSeason
+  Person director
+  Person actor
+  VideoObject trailer
+  Episode episodes
+  number numberOfEpisodes
+  CreativeWorkSeason seasons
+  Organization productionCompany
+  Person actors
+  number numberOfSeasons
+  Person,MusicGroup musicBy
+  Episode episode
+  Person directors
+
+}
+
+Rating -- string,number
+Rating -- Person,Organization
+Rating -- number,string
+
+
+Intangible <|-- Rating
+class Rating {
+
+  string reviewAspect
+  string,number worstRating
+  Person,Organization author
+  string,number bestRating
+  number,string ratingValue
+  string ratingExplanation
+
+}
+
+RealEstateListing -- QuantitativeValue,Duration
+RealEstateListing -- date,dateTime
+
+
+WebPage <|-- RealEstateListing
+class RealEstateListing {
+
+  QuantitativeValue,Duration leaseLength
+  date,dateTime datePosted
+
+}
+
+ReceiveAction -- Person,Audience,Organization
+ReceiveAction -- DeliveryMethod
+
+
+TransferAction <|-- ReceiveAction
+class ReceiveAction {
+
+  Person,Audience,Organization sender
+  DeliveryMethod deliveryMethod
+
+}
+
+Recipe -- string,CreativeWork,ItemList
+Recipe -- RestrictedDiet
+Recipe -- NutritionInformation
+Recipe -- string,QuantitativeValue
+Recipe -- Duration
+
+
+HowTo <|-- Recipe
+class Recipe {
+
+  string,CreativeWork,ItemList recipeInstructions
+  string ingredients
+  string recipeCuisine
+  RestrictedDiet suitableForDiet
+  NutritionInformation nutrition
+  string cookingMethod
+  string recipeIngredient
+  string,QuantitativeValue recipeYield
+  Duration cookTime
+  string recipeCategory
+
+}
+
+Recommendation -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+
+
+Review <|-- Recommendation
+class Recommendation {
+
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+
+}
+
+Enumeration o-- RefundTypeEnumeration
+  class RefundTypeEnumeration {
+<<enumeration>>
+  o StoreCreditRefund
+  o ExchangeRefund
+  o FullRefund
+}
+
+RentAction -- Person,Organization
+RentAction -- RealEstateAgent
+
+
+TradeAction <|-- RentAction
+class RentAction {
+
+  Person,Organization landlord
+  RealEstateAgent realEstateAgent
+
+}
+
+RentalCarReservation -- Place
+RentalCarReservation -- dateTime
+
+
+Reservation <|-- RentalCarReservation
+class RentalCarReservation {
+
+  Place dropoffLocation
+  dateTime dropoffTime
+  dateTime pickupTime
+  Place pickupLocation
+
+}
+
+RepaymentSpecification -- MonetaryAmount
+RepaymentSpecification -- number,MonetaryAmount
+
+
+StructuredValue <|-- RepaymentSpecification
+class RepaymentSpecification {
+
+  number numberOfLoanPayments
+  MonetaryAmount earlyPrepaymentPenalty
+  MonetaryAmount loanPaymentAmount
+  number loanPaymentFrequency
+  number,MonetaryAmount downPayment
+
+}
+
+ReplaceAction -- Thing
+
+
+UpdateAction <|-- ReplaceAction
+class ReplaceAction {
+
+  Thing replacee
+  Thing replacer
+
+}
+
+ReplyAction -- Comment
+
+
+CommunicateAction <|-- ReplyAction
+class ReplyAction {
+
+  Comment resultComment
+
+}
+
+
+
+Article <|-- Report
+class Report {
+
+  string reportNumber
+
+}
+
+Reservation -- dateTime
+Reservation -- PriceSpecification,number,string
+Reservation -- Ticket
+Reservation -- ReservationStatusType
+Reservation -- Organization,Person
+Reservation -- Person,Organization
+Reservation -- ProgramMembership
+Reservation -- Thing
+
+
+Intangible <|-- Reservation
+class Reservation {
+
+  dateTime modifiedTime
+  PriceSpecification,number,string totalPrice
+  Ticket reservedTicket
+  ReservationStatusType reservationStatus
+  Organization,Person provider
+  Person,Organization broker
+  dateTime bookingTime
+  ProgramMembership programMembershipUsed
+  Person,Organization bookingAgent
+  string priceCurrency
+  string reservationId
+  Organization,Person underName
+  Thing reservationFor
+
+}
+
+ReservationPackage -- Reservation
+
+
+Reservation <|-- ReservationPackage
+class ReservationPackage {
+
+  Reservation subReservation
+
+}
+
+StatusEnumeration o-- ReservationStatusType
+  class ReservationStatusType {
+<<enumeration>>
+  o ReservationPending
+  o ReservationConfirmed
+  o ReservationCancelled
+  o ReservationHold
+}
+
+Residence -- FloorPlan
+
+
+Place <|-- Residence
+class Residence {
+
+  FloorPlan accommodationFloorPlan
+
+}
+
+Enumeration o-- RestrictedDiet
+  class RestrictedDiet {
+<<enumeration>>
+  o VeganDiet
+  o LowFatDiet
+  o KosherDiet
+  o HinduDiet
+  o . . . 7 more values
+}
+
+ReturnAction -- Person,Audience,ContactPoint,Organization
+
+
+TransferAction <|-- ReturnAction
+class ReturnAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}
+
+Enumeration o-- ReturnFeesEnumeration
+  class ReturnFeesEnumeration {
+<<enumeration>>
+  o ReturnFeesCustomerResponsibility
+  o OriginalShippingFees
+  o ReturnShippingFees
+  o FreeReturn
+  o . . . 1 more values
+}
+
+Enumeration o-- ReturnLabelSourceEnumeration
+  class ReturnLabelSourceEnumeration {
+<<enumeration>>
+  o ReturnLabelCustomerResponsibility
+  o ReturnLabelDownloadAndPrint
+  o ReturnLabelInBox
+}
+
+Enumeration o-- ReturnMethodEnumeration
+  class ReturnMethodEnumeration {
+<<enumeration>>
+  o ReturnByMail
+  o ReturnAtKiosk
+  o ReturnInStore
+}
+
+Review -- Rating
+Review -- Thing
+Review -- ListItem,string,WebContent,ItemList
+Review -- Review
+Review -- WebContent,string,ListItem,ItemList
+
+
+CreativeWork <|-- Review
+class Review {
+
+  Rating reviewRating
+  Thing itemReviewed
+  ListItem,string,WebContent,ItemList negativeNotes
+  string reviewAspect
+  Review associatedClaimReview
+  WebContent,string,ListItem,ItemList positiveNotes
+  Review associatedReview
+  Review associatedMediaReview
+  string reviewBody
+
+}
+
+ReviewAction -- Review
+
+
+AssessAction <|-- ReviewAction
+class ReviewAction {
+
+  Review resultReview
+
+}
+
+Role -- string,string
+Role -- dateTime,date
+Role -- date,dateTime
+
+
+Intangible <|-- Role
+class Role {
+
+  string,string namedPosition
+  dateTime,date startDate
+  date,dateTime endDate
+  string,string roleName
+
+}
+
+RsvpAction -- RsvpResponseType
+RsvpAction -- Comment
+
+
+InformAction <|-- RsvpAction
+class RsvpAction {
+
+  RsvpResponseType rsvpResponse
+  Comment comment
+  number additionalNumberOfGuests
+
+}
+
+Enumeration o-- RsvpResponseType
+  class RsvpResponseType {
+<<enumeration>>
+  o RsvpResponseNo
+  o RsvpResponseMaybe
+  o RsvpResponseYes
+}
+
+Schedule -- dateTime,date
+Schedule -- dateTime,time
+Schedule -- date,dateTime
+Schedule -- string,Duration
+Schedule -- Duration
+Schedule -- DayOfWeek,string
+
+
+Intangible <|-- Schedule
+class Schedule {
+
+  string scheduleTimezone
+  dateTime,date startDate
+  dateTime,date exceptDate
+  dateTime,time startTime
+  number repeatCount
+  date,dateTime endDate
+  string,Duration repeatFrequency
+  Duration duration
+  number byMonthDay
+  dateTime,time endTime
+  number byMonth
+  DayOfWeek,string byDay
+  number byMonthWeek
+
+}
+
+ScreeningEvent -- Language,string
+ScreeningEvent -- Movie
+
+
+Event <|-- ScreeningEvent
+class ScreeningEvent {
+
+  Language,string subtitleLanguage
+  string videoFormat
+  Movie workPresented
+
+}
+
+
+
+Action <|-- SearchAction
+class SearchAction {
+
+  string query
+
+}
+
+Seat -- QualitativeValue,string
+
+
+Intangible <|-- Seat
+class Seat {
+
+  QualitativeValue,string seatingType
+  string seatSection
+  string seatRow
+  string seatNumber
+
+}
+
+SeekToAction -- number,HyperTocEntry
+
+
+Action <|-- SeekToAction
+class SeekToAction {
+
+  number,HyperTocEntry startOffset
+
+}
+
+SellAction -- WarrantyPromise
+SellAction -- Person,Organization
+
+
+TradeAction <|-- SellAction
+class SellAction {
+
+  WarrantyPromise warrantyPromise
+  Person,Organization buyer
+
+}
+
+SendAction -- Person,Audience,ContactPoint,Organization
+SendAction -- DeliveryMethod
+
+
+TransferAction <|-- SendAction
+class SendAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+  DeliveryMethod deliveryMethod
+
+}
+
+Service -- Review
+Service -- Audience
+Service -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+Service -- OpeningHoursSpecification
+Service -- Offer,Demand
+Service -- Thing
+Service -- Organization,Person
+Service -- string,string
+Service -- Person,Organization
+Service -- AggregateRating
+Service -- Service,Product
+Service -- ServiceChannel
+Service -- Organization,Brand
+Service -- string,ImageObject
+Service -- GeoShape,AdministrativeArea,Place
+Service -- GovernmentBenefitsType,string
+Service -- AdministrativeArea,GeoShape,string,Place
+Service -- OfferCatalog
+
+
+Intangible <|-- Service
+class Service {
+
+  Review review
+  string award
+  Audience serviceAudience
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  OpeningHoursSpecification hoursAvailable
+  Audience audience
+  Offer,Demand offers
+  Thing serviceOutput
+  Organization,Person provider
+  string,string termsOfService
+  string providerMobility
+  Person,Organization broker
+  AggregateRating aggregateRating
+  Service,Product isSimilarTo
+  ServiceChannel availableChannel
+  string slogan
+  Organization,Brand brand
+  string,ImageObject logo
+  Thing produces
+  GeoShape,AdministrativeArea,Place serviceArea
+  GovernmentBenefitsType,string serviceType
+  AdministrativeArea,GeoShape,string,Place areaServed
+  Service,Product isRelatedTo
+  OfferCatalog hasOfferCatalog
+
+}
+
+ServiceChannel -- Service
+ServiceChannel -- ContactPoint
+ServiceChannel -- PostalAddress
+ServiceChannel -- string,Language
+ServiceChannel -- Duration
+ServiceChannel -- Place
+
+
+Intangible <|-- ServiceChannel
+class ServiceChannel {
+
+  Service providesService
+  ContactPoint serviceSmsNumber
+  PostalAddress servicePostalAddress
+  string serviceUrl
+  ContactPoint servicePhone
+  string,Language availableLanguage
+  Duration processingTime
+  Place serviceLocation
+
+}
+
+ShippingDeliveryTime -- QuantitativeValue
+ShippingDeliveryTime -- OpeningHoursSpecification
+ShippingDeliveryTime -- time
+
+
+StructuredValue <|-- ShippingDeliveryTime
+class ShippingDeliveryTime {
+
+  QuantitativeValue transitTime
+  OpeningHoursSpecification businessDays
+  QuantitativeValue handlingTime
+  time cutoffTime
+
+}
+
+ShippingRateSettings -- DefinedRegion
+ShippingRateSettings -- MonetaryAmount
+ShippingRateSettings -- MonetaryAmount,DeliveryChargeSpecification
+
+
+StructuredValue <|-- ShippingRateSettings
+class ShippingRateSettings {
+
+  DefinedRegion shippingDestination
+  boolean doesNotShip
+  string shippingLabel
+  boolean isUnlabelledFallback
+  MonetaryAmount shippingRate
+  MonetaryAmount,DeliveryChargeSpecification freeShippingThreshold
+
+}
+
+SingleFamilyResidence -- QuantitativeValue,number
+SingleFamilyResidence -- QuantitativeValue
+
+
+House <|-- SingleFamilyResidence
+class SingleFamilyResidence {
+
+  QuantitativeValue,number numberOfRooms
+  QuantitativeValue occupancy
+
+}
+
+SizeSpecification -- string,SizeGroupEnumeration
+SizeSpecification -- QuantitativeValue
+SizeSpecification -- string,SizeSystemEnumeration
+SizeSpecification -- GenderType,string
+
+
+QualitativeValue <|-- SizeSpecification
+class SizeSpecification {
+
+  string,SizeGroupEnumeration sizeGroup
+  QuantitativeValue suggestedMeasurement
+  QuantitativeValue suggestedAge
+  QuantitativeValue hasMeasurement
+  string,SizeSystemEnumeration sizeSystem
+  GenderType,string suggestedGender
+
+}
+
+Enumeration o-- SizeSystemEnumeration
+  class SizeSystemEnumeration {
+<<enumeration>>
+  o SizeSystemMetric
+  o SizeSystemImperial
+}
+
+SocialMediaPosting -- CreativeWork
+
+
+Article <|-- SocialMediaPosting
+class SocialMediaPosting {
+
+  CreativeWork sharedContent
+
+}
+
+SoftwareApplication -- string,string
+SoftwareApplication -- CreativeWork
+SoftwareApplication -- SoftwareApplication
+SoftwareApplication -- ImageObject,string
+SoftwareApplication -- DataFeed
+
+
+CreativeWork <|-- SoftwareApplication
+class SoftwareApplication {
+
+  string countriesSupported
+  string installUrl
+  string operatingSystem
+  string,string memoryRequirements
+  string softwareVersion
+  string,string storageRequirements
+  CreativeWork softwareHelp
+  string,string applicationSubCategory
+  string downloadUrl
+  string,string applicationCategory
+  string countriesNotSupported
+  string,string softwareRequirements
+  SoftwareApplication softwareAddOn
+  string applicationSuite
+  string,string requirements
+  string permissions
+  string processorRequirements
+  ImageObject,string screenshot
+  string,string featureList
+  string,string releaseNotes
+  DataFeed supportingData
+  string fileSize
+  string device
+  string availableOnDevice
+
+}
+
+SoftwareSourceCode -- string,ComputerLanguage
+SoftwareSourceCode -- SoftwareApplication
+
+
+CreativeWork <|-- SoftwareSourceCode
+class SoftwareSourceCode {
+
+  string,ComputerLanguage programmingLanguage
+  string sampleType
+  string runtimePlatform
+  string runtime
+  SoftwareApplication targetProduct
+  string codeRepository
+  string codeSampleType
+
+}
+
+
+
+Action <|-- SolveMathAction
+class SolveMathAction {
+
+  string eduQuestionType
+
+}
+
+SomeProducts -- QuantitativeValue
+
+
+Product <|-- SomeProducts
+class SomeProducts {
+
+  QuantitativeValue inventoryLevel
+
+}
+
+SpeakableSpecification -- CssSelectorType
+SpeakableSpecification -- XPathType
+
+
+Intangible <|-- SpeakableSpecification
+class SpeakableSpecification {
+
+  CssSelectorType cssSelector
+  XPathType xpath
+
+}
+
+SpecialAnnouncement -- GovernmentService
+SpecialAnnouncement -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+SpecialAnnouncement -- Dataset,Observation,WebContent,string
+SpecialAnnouncement -- WebContent,string
+SpecialAnnouncement -- CivicStructure,LocalBusiness
+SpecialAnnouncement -- string,WebContent
+SpecialAnnouncement -- date,dateTime
+SpecialAnnouncement -- DataFeed,string
+
+
+CreativeWork <|-- SpecialAnnouncement
+class SpecialAnnouncement {
+
+  GovernmentService governmentBenefitsInfo
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  Dataset,Observation,WebContent,string diseaseSpreadStatistics
+  WebContent,string gettingTestedInfo
+  CivicStructure,LocalBusiness announcementLocation
+  string,WebContent travelBans
+  string,WebContent diseasePreventionInfo
+  string,WebContent publicTransportClosuresInfo
+  WebContent,string schoolClosuresInfo
+  date,dateTime datePosted
+  string,WebContent newsUpdatesAndGuidelines
+  string,WebContent quarantineGuidelines
+  DataFeed,string webFeed
+
+}
+
+SportsEvent -- Person,SportsTeam
+SportsEvent -- SportsTeam,Person
+SportsEvent -- string,string
+
+
+Event <|-- SportsEvent
+class SportsEvent {
+
+  Person,SportsTeam homeTeam
+  SportsTeam,Person awayTeam
+  Person,SportsTeam competitor
+  string,string sport
+
+}
+
+SportsOrganization -- string,string
+
+
+Organization <|-- SportsOrganization
+class SportsOrganization {
+
+  string,string sport
+
+}
+
+SportsTeam -- Person
+SportsTeam -- GenderType,string
+
+
+SportsOrganization <|-- SportsTeam
+class SportsTeam {
+
+  Person athlete
+  GenderType,string gender
+  Person coach
+
+}
+
+StatisticalPopulation -- Class
+
+
+Intangible <|-- StatisticalPopulation
+class StatisticalPopulation {
+
+  Class populationType
+  number numConstraints
+  number constrainingProperty
+
+}
+
+SteeringPositionValue -- schema:SteeringPositionValue
+
+
+QualitativeValue <|-- SteeringPositionValue
+class SteeringPositionValue {
+
+  schema:SteeringPositionValue LeftHandDriving
+  schema:SteeringPositionValue RightHandDriving
+
+}
+
+Substance -- MaximumDoseSchedule
+
+
+MedicalEntity <|-- Substance
+class Substance {
+
+  MaximumDoseSchedule maximumIntake
+  string activeIngredient
+
+}
+
+Suite -- QuantitativeValue,number
+Suite -- BedDetails,string,BedType
+Suite -- QuantitativeValue
+
+
+Accommodation <|-- Suite
+class Suite {
+
+  QuantitativeValue,number numberOfRooms
+  BedDetails,string,BedType bed
+  QuantitativeValue occupancy
+
+}
+
+SuperficialAnatomy -- MedicalTherapy
+SuperficialAnatomy -- AnatomicalSystem,AnatomicalStructure
+SuperficialAnatomy -- MedicalCondition
+
+
+MedicalEntity <|-- SuperficialAnatomy
+class SuperficialAnatomy {
+
+  MedicalTherapy relatedTherapy
+  string significance
+  AnatomicalSystem,AnatomicalStructure relatedAnatomy
+  MedicalCondition relatedCondition
+  string associatedPathophysiology
+
+}
+
+TVClip -- TVSeries
+
+
+Clip <|-- TVClip
+class TVClip {
+
+  TVSeries partOfTVSeries
+
+}
+
+TVEpisode -- Country
+TVEpisode -- string,string
+TVEpisode -- Language,string
+TVEpisode -- TVSeries
+
+
+Episode <|-- TVEpisode
+class TVEpisode {
+
+  Country countryOfOrigin
+  string,string titleEIDR
+  Language,string subtitleLanguage
+  TVSeries partOfTVSeries
+
+}
+
+TVSeason -- Country
+TVSeason -- TVSeries
+
+
+CreativeWorkSeason <|-- TVSeason
+CreativeWork <|-- TVSeason
+class TVSeason {
+
+  Country countryOfOrigin
+  TVSeries partOfTVSeries
+
+}
+
+TVSeries -- string,CreativeWorkSeason
+TVSeries -- CreativeWorkSeason
+TVSeries -- Country
+TVSeries -- Person
+TVSeries -- VideoObject
+TVSeries -- Episode
+TVSeries -- Organization
+TVSeries -- Person,MusicGroup
+
+
+CreativeWorkSeries <|-- TVSeries
+CreativeWork <|-- TVSeries
+class TVSeries {
+
+  string,CreativeWorkSeason season
+  CreativeWorkSeason containsSeason
+  Country countryOfOrigin
+  Person director
+  Person actor
+  VideoObject trailer
+  Episode episodes
+  number numberOfEpisodes
+  CreativeWorkSeason seasons
+  Organization productionCompany
+  Person actors
+  number numberOfSeasons
+  Person,MusicGroup musicBy
+  Episode episode
+  Person directors
+
+}
+
+TaxiReservation -- number,QuantitativeValue
+TaxiReservation -- dateTime
+TaxiReservation -- Place
+
+
+Reservation <|-- TaxiReservation
+class TaxiReservation {
+
+  number,QuantitativeValue partySize
+  dateTime pickupTime
+  Place pickupLocation
+
+}
+
+Taxon -- string,Taxon,string
+Taxon -- PropertyValue,string,string
+Taxon -- DefinedTerm
+
+
+Thing <|-- Taxon
+class Taxon {
+
+  string,Taxon,string parentTaxon
+  PropertyValue,string,string taxonRank
+  string,Taxon,string childTaxon
+  DefinedTerm hasDefinedTerm
+
+}
+
+
+
+Article <|-- TechArticle
+class TechArticle {
+
+  string dependencies
+  string proficiencyLevel
+
+}
+
+TherapeuticProcedure -- MedicalEntity
+TherapeuticProcedure -- Drug
+TherapeuticProcedure -- DoseSchedule
+
+
+MedicalProcedure <|-- TherapeuticProcedure
+class TherapeuticProcedure {
+
+  MedicalEntity adverseOutcome
+  Drug drug
+  DoseSchedule doseSchedule
+
+}
+
+
+
+CreativeWork <|-- Thesis
+class Thesis {
+
+  string inSupportOf
+
+}
+
+Thing -- CreativeWork,string
+Thing -- Action
+Thing -- string,ImageObject
+Thing -- Event,CreativeWork
+Thing -- string,string,PropertyValue
+
+
+class Thing {
+
+  CreativeWork,string mainEntityOfPage
+  string alternateName
+  string name
+  Action potentialAction
+  string,ImageObject image
+  string url
+  string description
+  Event,CreativeWork subjectOf
+  string additionalType
+  string disambiguatingDescription
+  string sameAs
+  string,string,PropertyValue identifier
+
+}
+
+Ticket -- string,string
+Ticket -- Seat
+Ticket -- PriceSpecification,number,string
+Ticket -- Organization
+Ticket -- date,dateTime
+Ticket -- Organization,Person
+
+
+Intangible <|-- Ticket
+class Ticket {
+
+  string,string ticketToken
+  Seat ticketedSeat
+  PriceSpecification,number,string totalPrice
+  Organization issuedBy
+  string ticketNumber
+  date,dateTime dateIssued
+  string priceCurrency
+  Organization,Person underName
+
+}
+
+TipAction -- Person,Audience,ContactPoint,Organization
+
+
+TradeAction <|-- TipAction
+class TipAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}
+
+TouristAttraction -- Audience,string
+TouristAttraction -- string,Language
+
+
+Place <|-- TouristAttraction
+class TouristAttraction {
+
+  Audience,string touristType
+  string,Language availableLanguage
+
+}
+
+TouristDestination -- Audience,string
+TouristDestination -- TouristAttraction
+
+
+Place <|-- TouristDestination
+class TouristDestination {
+
+  Audience,string touristType
+  TouristAttraction includesAttraction
+
+}
+
+TouristTrip -- Audience,string
+
+
+Trip <|-- TouristTrip
+class TouristTrip {
+
+  Audience,string touristType
+
+}
+
+TrackAction -- DeliveryMethod
+
+
+FindAction <|-- TrackAction
+class TrackAction {
+
+  DeliveryMethod deliveryMethod
+
+}
+
+TradeAction -- PriceSpecification
+TradeAction -- number,string
+
+
+Action <|-- TradeAction
+class TradeAction {
+
+  string priceCurrency
+  PriceSpecification priceSpecification
+  number,string price
+
+}
+
+TrainTrip -- TrainStation
+
+
+Trip <|-- TrainTrip
+class TrainTrip {
+
+  string trainName
+  TrainStation departureStation
+  string departurePlatform
+  string trainNumber
+  string arrivalPlatform
+  TrainStation arrivalStation
+
+}
+
+TransferAction -- Place
+
+
+Action <|-- TransferAction
+class TransferAction {
+
+  Place fromLocation
+  Place toLocation
+
+}
+
+TravelAction -- Distance
+
+
+MoveAction <|-- TravelAction
+class TravelAction {
+
+  Distance distance
+
+}
+
+Trip -- time,dateTime
+Trip -- Offer,Demand
+Trip -- Organization,Person
+Trip -- Trip
+Trip -- ItemList,Place
+
+
+Intangible <|-- Trip
+class Trip {
+
+  time,dateTime arrivalTime
+  Offer,Demand offers
+  time,dateTime departureTime
+  Organization,Person provider
+  Trip subTrip
+  ItemList,Place itinerary
+  Trip partOfTrip
+
+}
+
+TypeAndQuantityNode -- BusinessFunction
+TypeAndQuantityNode -- Product,Service
+TypeAndQuantityNode -- string,string
+
+
+StructuredValue <|-- TypeAndQuantityNode
+class TypeAndQuantityNode {
+
+  string unitText
+  BusinessFunction businessFunction
+  Product,Service typeOfGood
+  number amountOfThisGood
+  string,string unitCode
+
+}
+
+UKNonprofitType -- schema:UKNonprofitType
+
+
+NonprofitType <|-- UKNonprofitType
+class UKNonprofitType {
+
+  schema:UKNonprofitType UnincorporatedAssociationCharity
+  schema:UKNonprofitType UKTrust
+  schema:UKNonprofitType CharitableIncorporatedOrganization
+  schema:UKNonprofitType LimitedByGuaranteeCharity
+
+}
+
+USNonprofitType -- schema:USNonprofitType
+
+
+NonprofitType <|-- USNonprofitType
+class USNonprofitType {
+
+  schema:USNonprofitType Nonprofit501c4
+  schema:USNonprofitType Nonprofit501c23
+  schema:USNonprofitType Nonprofit501k
+  schema:USNonprofitType Nonprofit501c1
+  schema:USNonprofitType Nonprofit501n
+  schema:USNonprofitType Nonprofit501c7
+  schema:USNonprofitType Nonprofit501c9
+  schema:USNonprofitType Nonprofit501c3
+  schema:USNonprofitType Nonprofit501c2
+  schema:USNonprofitType Nonprofit501a
+  schema:USNonprofitType Nonprofit501c21
+  schema:USNonprofitType Nonprofit501e
+  schema:USNonprofitType Nonprofit501c14
+  schema:USNonprofitType Nonprofit501c28
+  schema:USNonprofitType Nonprofit501c18
+  schema:USNonprofitType Nonprofit501c27
+  schema:USNonprofitType Nonprofit501d
+  schema:USNonprofitType Nonprofit501c25
+  schema:USNonprofitType Nonprofit501c15
+  schema:USNonprofitType Nonprofit501c12
+  schema:USNonprofitType Nonprofit501c13
+  schema:USNonprofitType Nonprofit501c26
+  schema:USNonprofitType Nonprofit501c8
+  schema:USNonprofitType Nonprofit501c10
+  schema:USNonprofitType Nonprofit501c11
+  schema:USNonprofitType Nonprofit501f
+  schema:USNonprofitType Nonprofit501c5
+  schema:USNonprofitType Nonprofit501c20
+  schema:USNonprofitType Nonprofit501c6
+  schema:USNonprofitType Nonprofit527
+  schema:USNonprofitType Nonprofit501c19
+  schema:USNonprofitType Nonprofit501c16
+  schema:USNonprofitType Nonprofit501c24
+  schema:USNonprofitType Nonprofit501q
+  schema:USNonprofitType Nonprofit501c22
+  schema:USNonprofitType Nonprofit501c17
+
+}
+
+UnitPriceSpecification -- PriceTypeEnumeration,string
+UnitPriceSpecification -- string,string
+UnitPriceSpecification -- Duration,QuantitativeValue,number
+UnitPriceSpecification -- QuantitativeValue
+UnitPriceSpecification -- PriceComponentTypeEnumeration
+
+
+PriceSpecification <|-- UnitPriceSpecification
+class UnitPriceSpecification {
+
+  PriceTypeEnumeration,string priceType
+  string unitText
+  number billingIncrement
+  string,string unitCode
+  Duration,QuantitativeValue,number billingDuration
+  QuantitativeValue referenceQuantity
+  PriceComponentTypeEnumeration priceComponentType
+  number billingStart
+
+}
+
+UpdateAction -- Thing
+
+
+Action <|-- UpdateAction
+class UpdateAction {
+
+  Thing targetCollection
+  Thing collection
+
+}
+
+UserComments -- CreativeWork
+UserComments -- dateTime,date
+UserComments -- Organization,Person
+
+
+UserInteraction <|-- UserComments
+class UserComments {
+
+  string replyToUrl
+  CreativeWork discusses
+  dateTime,date commentTime
+  string commentText
+  Organization,Person creator
+
+}
+
+Vehicle -- QuantitativeValue
+Vehicle -- EngineSpecification
+Vehicle -- date
+Vehicle -- QuantitativeValue,number
+Vehicle -- number,QuantitativeValue
+Vehicle -- SteeringPositionValue
+Vehicle -- string,number
+Vehicle -- string,string,QualitativeValue
+Vehicle -- string,QualitativeValue,string
+Vehicle -- string,DriveWheelConfigurationValue
+Vehicle -- QualitativeValue,string,string
+Vehicle -- CarUsageType,string
+
+
+Product <|-- Vehicle
+class Vehicle {
+
+  QuantitativeValue fuelCapacity
+  QuantitativeValue accelerationTime
+  QuantitativeValue speed
+  QuantitativeValue trailerWeight
+  EngineSpecification vehicleEngine
+  number emissionsCO2
+  date purchaseDate
+  QuantitativeValue,number numberOfForwardGears
+  QuantitativeValue weightTotal
+  date productionDate
+  number,QuantitativeValue numberOfPreviousOwners
+  SteeringPositionValue steeringPosition
+  QuantitativeValue wheelbase
+  string vehicleInteriorType
+  string,number numberOfAirbags
+  string,string,QualitativeValue fuelType
+  QuantitativeValue cargoVolume
+  string,QualitativeValue,string vehicleTransmission
+  QuantitativeValue payload
+  string,DriveWheelConfigurationValue driveWheelConfiguration
+  string knownVehicleDamages
+  QuantitativeValue fuelConsumption
+  string vehicleInteriorColor
+  number,QuantitativeValue numberOfAxles
+  date modelDate
+  QuantitativeValue,number numberOfDoors
+  QuantitativeValue,number vehicleSeatingCapacity
+  string callSign
+  QuantitativeValue tongueWeight
+  QuantitativeValue fuelEfficiency
+  date vehicleModelDate
+  string vehicleConfiguration
+  QuantitativeValue mileageFromOdometer
+  QuantitativeValue,number seatingCapacity
+  QualitativeValue,string,string bodyType
+  date dateVehicleFirstRegistered
+  string vehicleIdentificationNumber
+  string,string,QualitativeValue meetsEmissionStandard
+  CarUsageType,string vehicleSpecialUsage
+
+}
+
+Vein -- AnatomicalSystem,AnatomicalStructure
+Vein -- AnatomicalStructure
+Vein -- Vessel
+
+
+Vessel <|-- Vein
+class Vein {
+
+  AnatomicalSystem,AnatomicalStructure regionDrained
+  AnatomicalStructure tributary
+  Vessel drainsTo
+
+}
+
+VideoGame -- Person
+VideoGame -- VideoObject
+VideoGame -- CreativeWork
+VideoGame -- GameServer
+VideoGame -- GamePlayMode
+VideoGame -- string,string,Thing
+VideoGame -- Person,MusicGroup
+
+
+SoftwareApplication <|-- VideoGame
+Game <|-- VideoGame
+class VideoGame {
+
+  Person director
+  Person actor
+  VideoObject trailer
+  string gameEdition
+  CreativeWork cheatCode
+  GameServer gameServer
+  CreativeWork gameTip
+  Person actors
+  GamePlayMode playMode
+  string,string,Thing gamePlatform
+  Person,MusicGroup musicBy
+  Person directors
+
+}
+
+VideoGameSeries -- string,CreativeWorkSeason
+VideoGameSeries -- CreativeWorkSeason
+VideoGameSeries -- Person
+VideoGameSeries -- VideoObject
+VideoGameSeries -- Episode
+VideoGameSeries -- Thing
+VideoGameSeries -- CreativeWork
+VideoGameSeries -- Organization
+VideoGameSeries -- GamePlayMode
+VideoGameSeries -- string,string,Thing
+VideoGameSeries -- Person,MusicGroup
+VideoGameSeries -- QuantitativeValue
+VideoGameSeries -- Place,string,PostalAddress
+
+
+CreativeWorkSeries <|-- VideoGameSeries
+class VideoGameSeries {
+
+  string,CreativeWorkSeason season
+  CreativeWorkSeason containsSeason
+  Person director
+  Person actor
+  VideoObject trailer
+  Episode episodes
+  Thing characterAttribute
+  number numberOfEpisodes
+  CreativeWorkSeason seasons
+  CreativeWork cheatCode
+  Thing gameItem
+  Organization productionCompany
+  Person actors
+  GamePlayMode playMode
+  string,string,Thing gamePlatform
+  number numberOfSeasons
+  Person,MusicGroup musicBy
+  QuantitativeValue numberOfPlayers
+  Thing quest
+  Place,string,PostalAddress gameLocation
+  Episode episode
+  Person directors
+
+}
+
+VideoObject -- Person
+VideoObject -- string,MediaObject
+VideoObject -- ImageObject
+VideoObject -- Person,MusicGroup
+
+
+MediaObject <|-- VideoObject
+class VideoObject {
+
+  string embeddedTextCaption
+  Person director
+  Person actor
+  string,MediaObject caption
+  ImageObject thumbnail
+  string transcript
+  string videoQuality
+  string videoFrameSize
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}
+
+VisualArtwork -- QuantitativeValue,Distance
+VisualArtwork -- Person
+VisualArtwork -- Distance,QuantitativeValue
+VisualArtwork -- string,string
+VisualArtwork -- number,string
+
+
+CreativeWork <|-- VisualArtwork
+class VisualArtwork {
+
+  QuantitativeValue,Distance width
+  Person letterer
+  Distance,QuantitativeValue height
+  string,string surface
+  Person colorist
+  Person inker
+  string,string artform
+  string,string artworkSurface
+  number,string artEdition
+  Distance,QuantitativeValue depth
+  Person penciler
+  Person artist
+  string,string artMedium
+
+}
+
+VoteAction -- Person
+
+
+ChooseAction <|-- VoteAction
+class VoteAction {
+
+  Person candidate
+
+}
+
+WarrantyPromise -- WarrantyScope
+WarrantyPromise -- QuantitativeValue
+
+
+StructuredValue <|-- WarrantyPromise
+class WarrantyPromise {
+
+  WarrantyScope warrantyScope
+  QuantitativeValue durationOfWarranty
+
+}
+
+MeasurementTypeEnumeration o-- WearableMeasurementTypeEnumeration
+  class WearableMeasurementTypeEnumeration {
+<<enumeration>>
+  o WearableMeasurementSleeve
+  o WearableMeasurementChestOrBust
+  o WearableMeasurementOutsideLeg
+  o WearableMeasurementCup
+  o . . . 8 more values
+}
+
+SizeGroupEnumeration o-- WearableSizeGroupEnumeration
+  class WearableSizeGroupEnumeration {
+<<enumeration>>
+  o WearableSizeGroupShort
+  o WearableSizeGroupExtraTall
+  o WearableSizeGroupMaternity
+  o WearableSizeGroupWomens
+  o . . . 13 more values
+}
+
+SizeSystemEnumeration o-- WearableSizeSystemEnumeration
+  class WearableSizeSystemEnumeration {
+<<enumeration>>
+  o WearableSizeSystemJP
+  o WearableSizeSystemCN
+  o WearableSizeSystemDE
+  o WearableSizeSystemAU
+  o . . . 10 more values
+}
+
+WebAPI -- CreativeWork,string
+
+
+Service <|-- WebAPI
+class WebAPI {
+
+  CreativeWork,string documentation
+
+}
+
+
+
+SoftwareApplication <|-- WebApplication
+class WebApplication {
+
+  string browserRequirements
+
+}
+
+WebPage -- date
+WebPage -- Specialty
+WebPage -- ImageObject
+WebPage -- Organization,Person
+WebPage -- WebPageElement
+WebPage -- string,SpeakableSpecification
+WebPage -- BreadcrumbList,string
+
+
+CreativeWork <|-- WebPage
+class WebPage {
+
+  date lastReviewed
+  Specialty specialty
+  ImageObject primaryImageOfPage
+  string significantLink
+  Organization,Person reviewedBy
+  WebPageElement mainContentOfPage
+  string relatedLink
+  string,SpeakableSpecification speakable
+  BreadcrumbList,string breadcrumb
+  string significantLinks
+
+}
+
+WebPageElement -- CssSelectorType
+WebPageElement -- XPathType
+
+
+CreativeWork <|-- WebPageElement
+class WebPageElement {
+
+  CssSelectorType cssSelector
+  XPathType xpath
+
+}
+
+
+
+CreativeWork <|-- WebSite
+class WebSite {
+
+  string issn
+
+}
+
+WinAction -- Person
+
+
+AchieveAction <|-- WinAction
+class WinAction {
+
+  Person loser
+
+}
+
+WorkBasedProgram -- MonetaryAmountDistribution
+WorkBasedProgram -- CategoryCode,string
+
+
+EducationalOccupationalProgram <|-- WorkBasedProgram
+class WorkBasedProgram {
+
+  MonetaryAmountDistribution trainingSalary
+  CategoryCode,string occupationalCategory
+
+}
+
+WriteAction -- string,Language
+WriteAction -- Language
+
+
+CreateAction <|-- WriteAction
+class WriteAction {
+
+  string,Language inLanguage
+  Language language
+
+}
+
+undefined
+undefined
+undefined
 undefined
 undefined
 undefined

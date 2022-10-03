@@ -1,0 +1,14 @@
+classDiagram
+  EducationEvent -- DefinedTerm,string
+EducationEvent -- string,DefinedTerm,string
+EducationEvent -- string,DefinedTerm
+
+
+Event <|-- EducationEvent
+class EducationEvent {
+
+  DefinedTerm,string teaches
+  string,DefinedTerm,string educationalLevel
+  string,DefinedTerm assesses
+
+}

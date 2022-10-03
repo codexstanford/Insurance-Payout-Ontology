@@ -1,0 +1,10 @@
+classDiagram
+MedicalEnumeration o-- MedicalImagingTechnique
+  class MedicalImagingTechnique {
+<<enumeration>>
+  o XRay
+  o PET
+  o MRI
+  o Ultrasound
+  o . . . 1 more values
+}

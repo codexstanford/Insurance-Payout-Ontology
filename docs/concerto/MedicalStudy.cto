@@ -1,0 +1,16 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalCondition from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalCondition.cto
+import org.codex.insurance.core.string,EventStatusType,MedicalStudyStatus from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,EventStatusType,MedicalStudyStatus.cto
+import org.codex.insurance.core.MedicalEntity from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalEntity.cto
+import org.codex.insurance.core.AdministrativeArea from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea.cto
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+
+
+concept MedicalStudy extends MedicalEntity {
+  o MedicalCondition healthCondition
+  o string,EventStatusType,MedicalStudyStatus status
+  o MedicalEntity studySubject
+  o AdministrativeArea studyLocation
+  o Organization,Person sponsor
+}

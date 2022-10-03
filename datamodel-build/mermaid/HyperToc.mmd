@@ -1,0 +1,12 @@
+classDiagram
+  HyperToc -- HyperTocEntry
+HyperToc -- MediaObject
+
+
+CreativeWork <|-- HyperToc
+class HyperToc {
+
+  HyperTocEntry tocEntry
+  MediaObject associatedMedia
+
+}

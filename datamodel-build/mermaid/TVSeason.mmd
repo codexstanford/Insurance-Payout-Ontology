@@ -1,0 +1,13 @@
+classDiagram
+  TVSeason -- Country
+TVSeason -- TVSeries
+
+
+CreativeWorkSeason <|-- TVSeason
+CreativeWork <|-- TVSeason
+class TVSeason {
+
+  Country countryOfOrigin
+  TVSeries partOfTVSeries
+
+}

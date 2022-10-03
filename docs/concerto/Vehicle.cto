@@ -1,11 +1,57 @@
 namespace undefined
 
-import org.codex.insurance.core.Amount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Amount.cto
+import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
+import org.codex.insurance.core.EngineSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/EngineSpecification.cto
+import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
+import org.codex.insurance.core.QuantitativeValue,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue,number.cto
+import org.codex.insurance.core.number,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,QuantitativeValue.cto
+import org.codex.insurance.core.SteeringPositionValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/SteeringPositionValue.cto
+import org.codex.insurance.core.string,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,number.cto
+import org.codex.insurance.core.string,string,QualitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,QualitativeValue.cto
+import org.codex.insurance.core.string,QualitativeValue,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,QualitativeValue,string.cto
+import org.codex.insurance.core.string,DriveWheelConfigurationValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,DriveWheelConfigurationValue.cto
+import org.codex.insurance.core.QualitativeValue,string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QualitativeValue,string,string.cto
+import org.codex.insurance.core.CarUsageType,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CarUsageType,string.cto
 
 
-concept Vehicle extends RiskObject {
-  o Amount productionYear
-  o Amount age
-  o Amount length
-  o Amount weight
+concept Vehicle extends Product {
+  o QuantitativeValue fuelCapacity
+  o QuantitativeValue accelerationTime
+  o QuantitativeValue speed
+  o QuantitativeValue trailerWeight
+  o EngineSpecification vehicleEngine
+  o Double emissionsCO2
+  o date purchaseDate
+  o QuantitativeValue,number numberOfForwardGears
+  o QuantitativeValue weightTotal
+  o date productionDate
+  o number,QuantitativeValue numberOfPreviousOwners
+  o SteeringPositionValue steeringPosition
+  o QuantitativeValue wheelbase
+  o String vehicleInteriorType
+  o string,number numberOfAirbags
+  o string,string,QualitativeValue fuelType
+  o QuantitativeValue cargoVolume
+  o string,QualitativeValue,string vehicleTransmission
+  o QuantitativeValue payload
+  o string,DriveWheelConfigurationValue driveWheelConfiguration
+  o String knownVehicleDamages
+  o QuantitativeValue fuelConsumption
+  o String vehicleInteriorColor
+  o number,QuantitativeValue numberOfAxles
+  o date modelDate
+  o QuantitativeValue,number numberOfDoors
+  o QuantitativeValue,number vehicleSeatingCapacity
+  o String callSign
+  o QuantitativeValue tongueWeight
+  o QuantitativeValue fuelEfficiency
+  o date vehicleModelDate
+  o String vehicleConfiguration
+  o QuantitativeValue mileageFromOdometer
+  o QuantitativeValue,number seatingCapacity
+  o QualitativeValue,string,string bodyType
+  o date dateVehicleFirstRegistered
+  o String vehicleIdentificationNumber
+  o string,string,QualitativeValue meetsEmissionStandard
+  o CarUsageType,string vehicleSpecialUsage
 }

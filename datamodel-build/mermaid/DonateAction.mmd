@@ -1,0 +1,10 @@
+classDiagram
+  DonateAction -- Person,Audience,ContactPoint,Organization
+
+
+TradeAction <|-- DonateAction
+class DonateAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}

@@ -1,0 +1,10 @@
+classDiagram
+  AuthorizeAction -- Person,Audience,ContactPoint,Organization
+
+
+AllocateAction <|-- AuthorizeAction
+class AuthorizeAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}

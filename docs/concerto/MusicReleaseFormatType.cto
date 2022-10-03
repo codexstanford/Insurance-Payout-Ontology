@@ -1,0 +1,12 @@
+namespace undefined
+
+enum MusicReleaseFormatType {
+  o CDFormat
+  o DigitalAudioTapeFormat
+  o DigitalFormat
+  o LaserDiscFormat
+  o VinylFormat
+  o CassetteFormat
+  o DVDFormat
+}
+

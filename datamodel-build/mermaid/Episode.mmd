@@ -1,0 +1,27 @@
+classDiagram
+  Episode -- number,string
+Episode -- Person
+Episode -- VideoObject
+Episode -- CreativeWorkSeries
+Episode -- Duration
+Episode -- CreativeWorkSeason
+Episode -- Organization
+Episode -- Person,MusicGroup
+
+
+CreativeWork <|-- Episode
+class Episode {
+
+  number,string episodeNumber
+  Person director
+  Person actor
+  VideoObject trailer
+  CreativeWorkSeries partOfSeries
+  Duration duration
+  CreativeWorkSeason partOfSeason
+  Organization productionCompany
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}

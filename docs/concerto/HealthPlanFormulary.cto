@@ -1,0 +1,9 @@
+namespace undefined
+
+
+
+concept HealthPlanFormulary extends Intangible {
+  o Boolean offersPrescriptionByMail
+  o String healthPlanDrugTier
+  o Boolean healthPlanCostSharing
+}

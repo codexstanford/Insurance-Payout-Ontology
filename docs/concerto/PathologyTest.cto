@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept PathologyTest extends MedicalTest {
+  o String tissueSample
+}

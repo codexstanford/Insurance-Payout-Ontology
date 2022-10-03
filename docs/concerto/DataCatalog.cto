@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.Dataset from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Dataset.cto
+
+
+concept DataCatalog extends CreativeWork {
+  o string,string measurementTechnique
+  o Dataset dataset
+}

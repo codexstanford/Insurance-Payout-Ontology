@@ -1,0 +1,17 @@
+classDiagram
+  ShippingRateSettings -- DefinedRegion
+ShippingRateSettings -- MonetaryAmount
+ShippingRateSettings -- MonetaryAmount,DeliveryChargeSpecification
+
+
+StructuredValue <|-- ShippingRateSettings
+class ShippingRateSettings {
+
+  DefinedRegion shippingDestination
+  boolean doesNotShip
+  string shippingLabel
+  boolean isUnlabelledFallback
+  MonetaryAmount shippingRate
+  MonetaryAmount,DeliveryChargeSpecification freeShippingThreshold
+
+}

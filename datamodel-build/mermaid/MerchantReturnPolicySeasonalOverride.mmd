@@ -1,0 +1,16 @@
+classDiagram
+  MerchantReturnPolicySeasonalOverride -- MerchantReturnEnumeration
+MerchantReturnPolicySeasonalOverride -- dateTime,date
+MerchantReturnPolicySeasonalOverride -- date,dateTime
+MerchantReturnPolicySeasonalOverride -- dateTime,number,date
+
+
+Intangible <|-- MerchantReturnPolicySeasonalOverride
+class MerchantReturnPolicySeasonalOverride {
+
+  MerchantReturnEnumeration returnPolicyCategory
+  dateTime,date startDate
+  date,dateTime endDate
+  dateTime,number,date merchantReturnDays
+
+}

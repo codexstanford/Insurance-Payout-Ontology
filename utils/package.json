@@ -6,11 +6,11 @@
   "scripts": {
     "build": "node ./validateSchema.js; node ./toMermaid.js; node ./buildDoc.js; node ./toJson.js; node ./toTypescript.js; node ./toConcerto.js",
     "buildnomermaid": "node ./validateSchema.js; node ./buildDoc.js; node ./toJson.js; node ./toTypescript.js; node ./toConcerto.js"
-
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "csv-parser": "^3.0.0",
     "yaml": "^2.1.1"
   }

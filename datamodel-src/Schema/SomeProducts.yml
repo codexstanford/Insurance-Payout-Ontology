@@ -1,0 +1,10 @@
+SomeProducts:
+  type: object
+  documentation:
+    en: A placeholder for multiple similar products of the same kind.
+  inherit: Product
+  properties:
+    inventoryLevel:
+      type: QuantitativeValue
+      documentation:
+        en: The current approximate inventory level for the item or items.

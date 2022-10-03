@@ -1,0 +1,9 @@
+namespace undefined
+
+import org.codex.insurance.core.AdministrativeArea from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea.cto
+
+
+concept Audience extends Intangible {
+  o String audienceType
+  o AdministrativeArea geographicArea
+}

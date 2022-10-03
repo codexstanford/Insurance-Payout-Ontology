@@ -1,0 +1,13 @@
+classDiagram
+  MediaReview -- MediaManipulationRatingEnumeration
+MediaReview -- string,MediaObject,WebPage
+
+
+Review <|-- MediaReview
+class MediaReview {
+
+  string originalMediaContextDescription
+  MediaManipulationRatingEnumeration mediaAuthenticityCategory
+  string,MediaObject,WebPage originalMediaLink
+
+}

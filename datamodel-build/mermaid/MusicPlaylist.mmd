@@ -1,0 +1,13 @@
+classDiagram
+  MusicPlaylist -- MusicRecording
+MusicPlaylist -- ItemList,MusicRecording
+
+
+CreativeWork <|-- MusicPlaylist
+class MusicPlaylist {
+
+  MusicRecording tracks
+  number numTracks
+  ItemList,MusicRecording track
+
+}

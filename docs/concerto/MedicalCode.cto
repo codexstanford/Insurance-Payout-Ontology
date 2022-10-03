@@ -1,0 +1,8 @@
+namespace undefined
+
+
+
+concept MedicalCode extendsMedicalCodeMedicalCode {
+  o String codeValue
+  o String codingSystem
+}

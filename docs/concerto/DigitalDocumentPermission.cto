@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.Person,Audience,ContactPoint,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Audience,ContactPoint,Organization.cto
+import org.codex.insurance.core.DigitalDocumentPermissionType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DigitalDocumentPermissionType.cto
+
+
+concept DigitalDocumentPermission extends Intangible {
+  o Person,Audience,ContactPoint,Organization grantee
+  o DigitalDocumentPermissionType permissionType
+}

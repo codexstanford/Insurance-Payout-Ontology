@@ -1,0 +1,14 @@
+namespace undefined
+
+enum MedicalTrialDesign {
+  o PlaceboControlledTrial
+  o DoubleBlindedTrial
+  o MultiCenterTrial
+  o InternationalTrial
+  o TripleBlindedTrial
+  o OpenTrial
+  o RandomizedTrial
+  o SingleBlindedTrial
+  o SingleCenterTrial
+}
+

@@ -1,0 +1,12 @@
+classDiagram
+  SendAction -- Person,Audience,ContactPoint,Organization
+SendAction -- DeliveryMethod
+
+
+TransferAction <|-- SendAction
+class SendAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+  DeliveryMethod deliveryMethod
+
+}

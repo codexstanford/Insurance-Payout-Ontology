@@ -1,0 +1,22 @@
+Comment:
+  type: object
+  documentation:
+    en: A comment on an item - for example, a comment on a blog post. The comment's
+      content is expressed via the [[text]] property, and its topic via
+      [[about]], properties shared with all CreativeWorks.
+  inherit: CreativeWork
+  properties:
+    parentItem:
+      type: Comment
+      documentation:
+        en: The parent of a question, answer or item in general.
+    downvoteCount:
+      type: number
+      documentation:
+        en: The number of downvotes this question, answer or comment has received from
+          the community.
+    upvoteCount:
+      type: number
+      documentation:
+        en: The number of upvotes this question, answer or comment has received from the
+          community.

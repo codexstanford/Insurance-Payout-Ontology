@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.Coverage from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Coverage.cto
+import org.codex.insurance.core.RiskObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/RiskObject.cto
+import org.codex.insurance.core.Specific from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Specific.cto
+
+
+concept InsurancePolicy {
+  o Coverage[] coverages
+  o RiskObject[] riskObjects
+  o Specific[] specifics
+}

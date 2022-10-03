@@ -1,0 +1,12 @@
+classDiagram
+  MedicalRiskEstimator -- MedicalEntity
+MedicalRiskEstimator -- MedicalRiskFactor
+
+
+MedicalEntity <|-- MedicalRiskEstimator
+class MedicalRiskEstimator {
+
+  MedicalEntity estimatesRiskOf
+  MedicalRiskFactor includedRiskFactor
+
+}

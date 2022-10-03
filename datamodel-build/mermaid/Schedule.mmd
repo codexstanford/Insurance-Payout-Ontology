@@ -1,0 +1,27 @@
+classDiagram
+  Schedule -- dateTime,date
+Schedule -- dateTime,time
+Schedule -- date,dateTime
+Schedule -- string,Duration
+Schedule -- Duration
+Schedule -- DayOfWeek,string
+
+
+Intangible <|-- Schedule
+class Schedule {
+
+  string scheduleTimezone
+  dateTime,date startDate
+  dateTime,date exceptDate
+  dateTime,time startTime
+  number repeatCount
+  date,dateTime endDate
+  string,Duration repeatFrequency
+  Duration duration
+  number byMonthDay
+  dateTime,time endTime
+  number byMonth
+  DayOfWeek,string byDay
+  number byMonthWeek
+
+}

@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.HealthAspectEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/HealthAspectEnumeration.cto
+
+
+concept HealthTopicContent extends WebContent {
+  o HealthAspectEnumeration hasHealthAspect
+}

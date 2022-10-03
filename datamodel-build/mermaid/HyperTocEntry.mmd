@@ -1,0 +1,13 @@
+classDiagram
+  HyperTocEntry -- HyperTocEntry
+HyperTocEntry -- MediaObject
+
+
+CreativeWork <|-- HyperTocEntry
+class HyperTocEntry {
+
+  HyperTocEntry tocContinuation
+  MediaObject associatedMedia
+  string utterances
+
+}

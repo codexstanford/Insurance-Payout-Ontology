@@ -1,0 +1,12 @@
+classDiagram
+  DigitalDocumentPermission -- Person,Audience,ContactPoint,Organization
+DigitalDocumentPermission -- DigitalDocumentPermissionType
+
+
+Intangible <|-- DigitalDocumentPermission
+class DigitalDocumentPermission {
+
+  Person,Audience,ContactPoint,Organization grantee
+  DigitalDocumentPermissionType permissionType
+
+}

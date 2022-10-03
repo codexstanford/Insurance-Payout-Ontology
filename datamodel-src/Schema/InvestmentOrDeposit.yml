@@ -1,0 +1,14 @@
+InvestmentOrDeposit:
+  type: object
+  documentation:
+    en: A type of financial product that typically requires the client to transfer
+      funds to a financial service in return for potential beneficial financial
+      return.
+  inherit: FinancialProduct
+  properties:
+    amount:
+      type:
+        - number
+        - MonetaryAmount
+      documentation:
+        en: The amount of money.

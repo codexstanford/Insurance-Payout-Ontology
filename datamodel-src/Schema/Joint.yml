@@ -1,0 +1,20 @@
+Joint:
+  type: object
+  documentation:
+    en: The anatomical location at which two or more bones make contact.
+  inherit: AnatomicalStructure
+  properties:
+    structuralClass:
+      type: string
+      documentation:
+        en: The name given to how bone physically connects to each other.
+    biomechnicalClass:
+      type: string
+      documentation:
+        en: The biomechanical properties of the bone.
+    functionalClass:
+      type:
+        - string
+        - MedicalEntity
+      documentation:
+        en: The degree of mobility the joint allows.

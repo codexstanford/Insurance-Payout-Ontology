@@ -1,0 +1,8 @@
+namespace undefined
+
+
+
+concept PostalCodeRangeSpecification extends StructuredValue {
+  o String postalCodeEnd
+  o String postalCodeBegin
+}

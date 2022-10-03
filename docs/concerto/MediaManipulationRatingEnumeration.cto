@@ -1,0 +1,11 @@
+namespace undefined
+
+enum MediaManipulationRatingEnumeration {
+  o OriginalMediaContent
+  o SatireOrParodyContent
+  o EditedOrCroppedContent
+  o DecontextualizedContent
+  o StagedContent
+  o TransformedContent
+}
+

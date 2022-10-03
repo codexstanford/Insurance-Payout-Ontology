@@ -1,0 +1,28 @@
+classDiagram
+  VideoGame -- Person
+VideoGame -- VideoObject
+VideoGame -- CreativeWork
+VideoGame -- GameServer
+VideoGame -- GamePlayMode
+VideoGame -- string,string,Thing
+VideoGame -- Person,MusicGroup
+
+
+SoftwareApplication <|-- VideoGame
+Game <|-- VideoGame
+class VideoGame {
+
+  Person director
+  Person actor
+  VideoObject trailer
+  string gameEdition
+  CreativeWork cheatCode
+  GameServer gameServer
+  CreativeWork gameTip
+  Person actors
+  GamePlayMode playMode
+  string,string,Thing gamePlatform
+  Person,MusicGroup musicBy
+  Person directors
+
+}

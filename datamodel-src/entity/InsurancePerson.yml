@@ -1,0 +1,13 @@
+InsurancePerson:
+  type: object
+  inherit: Person
+  properties:
+    relationToPolicyHolder:
+      type: PersonRelationToPolicyHolderEnum
+    # KYC
+    firstName:
+      type: string
+    lastName:
+      type: string
+    age:
+      type: number

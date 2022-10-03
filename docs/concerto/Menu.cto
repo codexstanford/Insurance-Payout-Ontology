@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.MenuSection from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MenuSection.cto
+import org.codex.insurance.core.MenuItem from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MenuItem.cto
+
+
+concept Menu extends CreativeWork {
+  o MenuSection hasMenuSection
+  o MenuItem hasMenuItem
+}

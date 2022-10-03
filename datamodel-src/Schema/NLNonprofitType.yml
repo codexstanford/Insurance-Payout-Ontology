@@ -1,0 +1,17 @@
+NLNonprofitType:
+  type: object
+  documentation:
+    en: "NLNonprofitType: Non-profit organization type originating from the
+      Netherlands."
+  inherit: NonprofitType
+  properties:
+    NonprofitANBI:
+      type: schema:NLNonprofitType
+      documentation:
+        en: "NonprofitANBI: Non-profit type referring to a Public Benefit Organization
+          (NL)."
+    NonprofitSBBI:
+      type: schema:NLNonprofitType
+      documentation:
+        en: "NonprofitSBBI: Non-profit type referring to a Social Interest Promoting
+          Institution (NL)."

@@ -1,0 +1,12 @@
+namespace undefined
+
+enum PhysicalActivityCategory {
+  o Balance
+  o AnaerobicActivity
+  o Flexibility
+  o OccupationalActivity
+  o LeisureTimeActivity
+  o AerobicActivity
+  o StrengthTraining
+}
+

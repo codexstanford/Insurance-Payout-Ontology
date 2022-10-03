@@ -1,0 +1,26 @@
+Brand:
+  type: object
+  documentation:
+    en: A brand is a name used by an organization or business person for labeling a
+      product, product group, or similar.
+  inherit: Intangible
+  properties:
+    review:
+      type: Review
+      documentation:
+        en: A review of the item.
+    aggregateRating:
+      type: AggregateRating
+      documentation:
+        en: The overall rating, based on a collection of reviews or ratings, of the
+          item.
+    slogan:
+      type: string
+      documentation:
+        en: A slogan or motto associated with the item.
+    logo:
+      type:
+        - string
+        - ImageObject
+      documentation:
+        en: An associated logo.

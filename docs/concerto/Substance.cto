@@ -1,0 +1,9 @@
+namespace undefined
+
+import org.codex.insurance.core.MaximumDoseSchedule from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MaximumDoseSchedule.cto
+
+
+concept Substance extends MedicalEntity {
+  o MaximumDoseSchedule maximumIntake
+  o String activeIngredient
+}

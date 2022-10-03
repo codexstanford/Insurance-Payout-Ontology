@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.string,MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,MonetaryAmount.cto
+
+
+concept HowToSupply extends HowToItem {
+  o string,MonetaryAmount estimatedCost
+}

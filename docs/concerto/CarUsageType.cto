@@ -1,0 +1,8 @@
+namespace undefined
+
+enum CarUsageType {
+  o TaxiVehicleUsage
+  o DrivingSchoolVehicleUsage
+  o RentalVehicleUsage
+}
+

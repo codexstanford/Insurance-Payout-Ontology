@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
+import org.codex.insurance.core.DeliveryMethod from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DeliveryMethod.cto
+
+
+concept DeliveryEvent extends Event {
+  o String accessCode
+  o dateTime availableThrough
+  o DeliveryMethod hasDeliveryMethod
+  o dateTime availableFrom
+}

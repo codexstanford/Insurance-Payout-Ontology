@@ -1,0 +1,10 @@
+MedicalTestPanel:
+  type: object
+  documentation:
+    en: Any collection of tests commonly ordered together.
+  inherit: MedicalTest
+  properties:
+    subTest:
+      type: MedicalTest
+      documentation:
+        en: A component test of the panel.

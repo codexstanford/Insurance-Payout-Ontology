@@ -1,0 +1,10 @@
+classDiagram
+StatusEnumeration o-- EventStatusType
+  class EventStatusType {
+<<enumeration>>
+  o EventCancelled
+  o EventScheduled
+  o EventRescheduled
+  o EventPostponed
+  o . . . 1 more values
+}

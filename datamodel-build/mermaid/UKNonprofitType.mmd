@@ -1,0 +1,13 @@
+classDiagram
+  UKNonprofitType -- schema:UKNonprofitType
+
+
+NonprofitType <|-- UKNonprofitType
+class UKNonprofitType {
+
+  schema:UKNonprofitType UnincorporatedAssociationCharity
+  schema:UKNonprofitType UKTrust
+  schema:UKNonprofitType CharitableIncorporatedOrganization
+  schema:UKNonprofitType LimitedByGuaranteeCharity
+
+}

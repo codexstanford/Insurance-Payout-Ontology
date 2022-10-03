@@ -1,0 +1,24 @@
+classDiagram
+  MedicalEntity -- DrugLegalStatus,string,MedicalEnumeration
+MedicalEntity -- Grant
+MedicalEntity -- MedicalStudy
+MedicalEntity -- MedicalCode
+MedicalEntity -- MedicalGuideline
+MedicalEntity -- Organization
+MedicalEntity -- MedicineSystem
+MedicalEntity -- MedicalSpecialty
+
+
+Thing <|-- MedicalEntity
+class MedicalEntity {
+
+  DrugLegalStatus,string,MedicalEnumeration legalStatus
+  Grant funding
+  MedicalStudy study
+  MedicalCode code
+  MedicalGuideline guideline
+  Organization recognizingAuthority
+  MedicineSystem medicineSystem
+  MedicalSpecialty relevantSpecialty
+
+}

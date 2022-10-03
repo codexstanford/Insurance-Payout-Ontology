@@ -1,0 +1,30 @@
+classDiagram
+  BioChemEntity -- Grant
+BioChemEntity -- Gene
+BioChemEntity -- BioChemEntity
+BioChemEntity -- string,DefinedTerm,string,Taxon
+BioChemEntity -- PropertyValue,string,DefinedTerm
+BioChemEntity -- PropertyValue,DefinedTerm,string
+BioChemEntity -- string,PropertyValue,MedicalCondition
+BioChemEntity -- string,PropertyValue,string
+BioChemEntity -- DefinedTerm
+
+
+Thing <|-- BioChemEntity
+class BioChemEntity {
+
+  Grant funding
+  Gene isEncodedByBioChemEntity
+  BioChemEntity isPartOfBioChemEntity
+  string,DefinedTerm,string,Taxon taxonomicRange
+  PropertyValue,string,DefinedTerm isInvolvedInBiologicalProcess
+  PropertyValue,DefinedTerm,string isLocatedInSubcellularLocation
+  string,PropertyValue,MedicalCondition associatedDisease
+  PropertyValue,DefinedTerm,string hasMolecularFunction
+  BioChemEntity hasBioChemEntityPart
+  BioChemEntity bioChemInteraction
+  string,PropertyValue,string hasRepresentation
+  BioChemEntity bioChemSimilarity
+  DefinedTerm biologicalRole
+
+}

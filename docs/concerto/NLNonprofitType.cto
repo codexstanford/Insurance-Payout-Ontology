@@ -1,0 +1,9 @@
+namespace undefined
+
+import org.codex.insurance.core.schema:NLNonprofitType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/schema:NLNonprofitType.cto
+
+
+concept NLNonprofitType extends NonprofitType {
+  o schema:NLNonprofitType NonprofitANBI
+  o schema:NLNonprofitType NonprofitSBBI
+}

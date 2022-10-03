@@ -1,0 +1,12 @@
+classDiagram
+  WorkBasedProgram -- MonetaryAmountDistribution
+WorkBasedProgram -- CategoryCode,string
+
+
+EducationalOccupationalProgram <|-- WorkBasedProgram
+class WorkBasedProgram {
+
+  MonetaryAmountDistribution trainingSalary
+  CategoryCode,string occupationalCategory
+
+}

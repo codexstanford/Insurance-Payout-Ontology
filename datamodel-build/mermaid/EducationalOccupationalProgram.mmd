@@ -1,0 +1,48 @@
+classDiagram
+  EducationalOccupationalProgram -- AlignmentObject,Course,EducationalOccupationalCredential,string
+EducationalOccupationalProgram -- Course
+EducationalOccupationalProgram -- dateTime,date
+EducationalOccupationalProgram -- MonetaryAmountDistribution
+EducationalOccupationalProgram -- DayOfWeek
+EducationalOccupationalProgram -- Offer,Demand
+EducationalOccupationalProgram -- number,StructuredValue
+EducationalOccupationalProgram -- date
+EducationalOccupationalProgram -- date,dateTime
+EducationalOccupationalProgram -- Organization,Person
+EducationalOccupationalProgram -- string,EducationalOccupationalCredential,string
+EducationalOccupationalProgram -- Duration
+EducationalOccupationalProgram -- EducationalOccupationalCredential,string,string
+EducationalOccupationalProgram -- string,string
+EducationalOccupationalProgram -- string,DefinedTerm
+EducationalOccupationalProgram -- CategoryCode,string
+
+
+Intangible <|-- EducationalOccupationalProgram
+class EducationalOccupationalProgram {
+
+  AlignmentObject,Course,EducationalOccupationalCredential,string programPrerequisites
+  Course hasCourse
+  dateTime,date startDate
+  MonetaryAmountDistribution salaryUponCompletion
+  number termsPerYear
+  DayOfWeek dayOfWeek
+  Offer,Demand offers
+  number,StructuredValue typicalCreditsPerTerm
+  date applicationStartDate
+  string timeOfDay
+  date,dateTime endDate
+  Organization,Person provider
+  MonetaryAmountDistribution trainingSalary
+  string,EducationalOccupationalCredential,string educationalCredentialAwarded
+  number,StructuredValue numberOfCredits
+  Duration timeToComplete
+  EducationalOccupationalCredential,string,string occupationalCredentialAwarded
+  Duration termDuration
+  string,string educationalProgramMode
+  string,DefinedTerm programType
+  number maximumEnrollment
+  string,DefinedTerm financialAidEligible
+  date applicationDeadline
+  CategoryCode,string occupationalCategory
+
+}

@@ -1,0 +1,11 @@
+MedicalRiskFactor:
+  type: object
+  documentation:
+    en: A risk factor is anything that increases a person's likelihood of developing
+      or contracting a disease, medical condition, or complication.
+  inherit: MedicalEntity
+  properties:
+    increasesRiskOf:
+      type: MedicalEntity
+      documentation:
+        en: The condition, complication, etc. influenced by this factor.

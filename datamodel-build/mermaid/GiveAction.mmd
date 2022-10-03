@@ -1,0 +1,10 @@
+classDiagram
+  GiveAction -- Person,Audience,ContactPoint,Organization
+
+
+TransferAction <|-- GiveAction
+class GiveAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}

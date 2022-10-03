@@ -1,0 +1,23 @@
+AudioObject:
+  type: object
+  documentation:
+    en: An audio file.
+  inherit: MediaObject
+  properties:
+    embeddedTextCaption:
+      type: string
+      documentation:
+        en: Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
+    caption:
+      type:
+        - string
+        - MediaObject
+      documentation:
+        en: The caption for this object. For downloadable machine formats (closed
+          caption, subtitles etc.) use MediaObject and indicate the
+          [[encodingFormat]].
+    transcript:
+      type: string
+      documentation:
+        en: If this MediaObject is an AudioObject or VideoObject, the transcript of that
+          object.

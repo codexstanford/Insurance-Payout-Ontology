@@ -1,0 +1,9 @@
+namespace undefined
+
+import org.codex.insurance.core.BedType,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BedType,string.cto
+
+
+concept BedDetails extends Intangible {
+  o BedType,string typeOfBed
+  o Double numberOfBeds
+}

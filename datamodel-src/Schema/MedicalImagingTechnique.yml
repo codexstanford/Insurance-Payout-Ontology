@@ -1,0 +1,22 @@
+MedicalImagingTechnique:
+  type: enum
+  documentation:
+    en: Any medical imaging modality typically used for diagnostic purposes.
+      Enumerated type.
+  inherit: MedicalEnumeration
+  values:
+    XRay:
+      documentation:
+        en: X-ray imaging.
+    PET:
+      documentation:
+        en: Positron emission tomography imaging.
+    MRI:
+      documentation:
+        en: Magnetic resonance imaging.
+    Ultrasound:
+      documentation:
+        en: Ultrasound imaging.
+    CT:
+      documentation:
+        en: X-ray computed tomography imaging.

@@ -1,0 +1,13 @@
+namespace undefined
+
+import org.codex.insurance.core.string,Taxon,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Taxon,string.cto
+import org.codex.insurance.core.PropertyValue,string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PropertyValue,string,string.cto
+import org.codex.insurance.core.DefinedTerm from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedTerm.cto
+
+
+concept Taxon extends Thing {
+  o string,Taxon,string parentTaxon
+  o PropertyValue,string,string taxonRank
+  o string,Taxon,string childTaxon
+  o DefinedTerm hasDefinedTerm
+}

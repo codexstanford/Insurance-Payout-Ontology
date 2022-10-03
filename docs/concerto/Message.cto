@@ -1,0 +1,23 @@
+namespace undefined
+
+import org.codex.insurance.core.Person,ContactPoint,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,ContactPoint,Organization.cto
+import org.codex.insurance.core.Person,Audience,ContactPoint,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Audience,ContactPoint,Organization.cto
+import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
+import org.codex.insurance.core.Person,Organization,ContactPoint from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Organization,ContactPoint.cto
+import org.codex.insurance.core.CreativeWork from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWork.cto
+import org.codex.insurance.core.ContactPoint,Person,Audience,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ContactPoint,Person,Audience,Organization.cto
+import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
+import org.codex.insurance.core.Person,Audience,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Audience,Organization.cto
+
+
+concept Message extends CreativeWork {
+  o Person,ContactPoint,Organization bccRecipient
+  o Person,Audience,ContactPoint,Organization recipient
+  o dateTime dateReceived
+  o Person,Organization,ContactPoint ccRecipient
+  o CreativeWork messageAttachment
+  o ContactPoint,Person,Audience,Organization toRecipient
+  o dateTime dateSent
+  o date,dateTime dateRead
+  o Person,Audience,Organization sender
+}

@@ -1,0 +1,10 @@
+classDiagram
+  FollowAction -- Organization,Person
+
+
+InteractAction <|-- FollowAction
+class FollowAction {
+
+  Organization,Person followee
+
+}

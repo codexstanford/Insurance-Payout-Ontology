@@ -1,0 +1,23 @@
+BroadcastFrequencySpecification:
+  type: object
+  documentation:
+    en: The frequency in MHz and the modulation used for a particular
+      BroadcastService.
+  inherit: Intangible
+  properties:
+    broadcastSubChannel:
+      type: string
+      documentation:
+        en: The subchannel used for the broadcast.
+    broadcastSignalModulation:
+      type:
+        - QualitativeValue
+        - string
+      documentation:
+        en: The modulation (e.g. FM, AM, etc) used by a particular broadcast service.
+    broadcastFrequencyValue:
+      type:
+        - number
+        - QuantitativeValue
+      documentation:
+        en: The frequency in MHz for a particular broadcast.

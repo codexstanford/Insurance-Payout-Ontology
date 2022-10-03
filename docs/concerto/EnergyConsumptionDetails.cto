@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.EUEnergyEfficiencyEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/EUEnergyEfficiencyEnumeration.cto
+import org.codex.insurance.core.EnergyEfficiencyEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/EnergyEfficiencyEnumeration.cto
+
+
+concept EnergyConsumptionDetails extends Intangible {
+  o EUEnergyEfficiencyEnumeration energyEfficiencyScaleMin
+  o EnergyEfficiencyEnumeration hasEnergyEfficiencyCategory
+  o EUEnergyEfficiencyEnumeration energyEfficiencyScaleMax
+}

@@ -1,0 +1,13 @@
+classDiagram
+  Claim -- Person,Organization
+Claim -- CreativeWork
+
+
+CreativeWork <|-- Claim
+class Claim {
+
+  Person,Organization claimInterpreter
+  CreativeWork firstAppearance
+  CreativeWork appearance
+
+}

@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.Comment from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Comment.cto
+
+
+concept ReplyAction extends CommunicateAction {
+  o Comment resultComment
+}

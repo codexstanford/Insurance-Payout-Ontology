@@ -1,0 +1,18 @@
+classDiagram
+  ProgramMembership -- number,QuantitativeValue
+ProgramMembership -- Organization,Person
+ProgramMembership -- Organization
+ProgramMembership -- Person,Organization
+
+
+Intangible <|-- ProgramMembership
+class ProgramMembership {
+
+  number,QuantitativeValue membershipPointsEarned
+  Organization,Person member
+  string membershipNumber
+  Organization hostingOrganization
+  string programName
+  Person,Organization members
+
+}

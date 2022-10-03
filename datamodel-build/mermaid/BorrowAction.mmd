@@ -1,0 +1,10 @@
+classDiagram
+  BorrowAction -- Person,Organization
+
+
+TransferAction <|-- BorrowAction
+class BorrowAction {
+
+  Person,Organization lender
+
+}

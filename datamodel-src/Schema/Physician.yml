@@ -1,0 +1,23 @@
+Physician:
+  type: object
+  documentation:
+    en: A doctor's office.
+  inherit:
+    - MedicalOrganization
+    - MedicalBusiness
+  properties:
+    availableService:
+      type:
+        - MedicalTest
+        - MedicalProcedure
+        - MedicalTherapy
+      documentation:
+        en: A medical service available from this provider.
+    medicalSpecialty:
+      type: MedicalSpecialty
+      documentation:
+        en: A medical specialty of the provider.
+    hospitalAffiliation:
+      type: Hospital
+      documentation:
+        en: A hospital with which the physician or office is affiliated.

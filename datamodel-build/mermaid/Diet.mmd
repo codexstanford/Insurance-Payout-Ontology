@@ -1,0 +1,15 @@
+classDiagram
+  Diet -- Person,Organization
+
+
+LifestyleModification <|-- Diet
+CreativeWork <|-- Diet
+class Diet {
+
+  string expertConsiderations
+  string risks
+  string physiologicalBenefits
+  Person,Organization endorsers
+  string dietFeatures
+
+}

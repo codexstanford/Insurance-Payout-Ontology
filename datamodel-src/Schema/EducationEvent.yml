@@ -1,0 +1,29 @@
+EducationEvent:
+  type: object
+  documentation:
+    en: "Event type: Education event."
+  inherit: Event
+  properties:
+    teaches:
+      type:
+        - DefinedTerm
+        - string
+      documentation:
+        en: The item being described is intended to help a person learn the competency
+          or learning outcome defined by the referenced term.
+    educationalLevel:
+      type:
+        - string
+        - DefinedTerm
+        - string
+      documentation:
+        en: The level in terms of progression through an educational or training
+          context. Examples of educational levels include 'beginner',
+          'intermediate' or 'advanced', and formal sets of level indicators.
+    assesses:
+      type:
+        - string
+        - DefinedTerm
+      documentation:
+        en: The item being described is intended to assess the competency or learning
+          outcome defined by the referenced term.

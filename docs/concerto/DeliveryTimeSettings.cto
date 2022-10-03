@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.DefinedRegion from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedRegion.cto
+import org.codex.insurance.core.ShippingDeliveryTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ShippingDeliveryTime.cto
+
+
+concept DeliveryTimeSettings extends StructuredValue {
+  o DefinedRegion shippingDestination
+  o String transitTimeLabel
+  o Boolean isUnlabelledFallback
+  o ShippingDeliveryTime deliveryTime
+}

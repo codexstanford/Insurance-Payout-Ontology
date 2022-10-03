@@ -1,0 +1,54 @@
+NutritionInformation:
+  type: object
+  documentation:
+    en: Nutritional information about the recipe.
+  inherit: StructuredValue
+  properties:
+    fatContent:
+      type: Mass
+      documentation:
+        en: The number of grams of fat.
+    servingSize:
+      type: string
+      documentation:
+        en: The serving size, in terms of the number of volume or mass.
+    proteinContent:
+      type: Mass
+      documentation:
+        en: The number of grams of protein.
+    calories:
+      type: Energy
+      documentation:
+        en: The number of calories.
+    sodiumContent:
+      type: Mass
+      documentation:
+        en: The number of milligrams of sodium.
+    cholesterolContent:
+      type: Mass
+      documentation:
+        en: The number of milligrams of cholesterol.
+    sugarContent:
+      type: Mass
+      documentation:
+        en: The number of grams of sugar.
+    carbohydrateContent:
+      type: Mass
+      documentation:
+        en: The number of grams of carbohydrates.
+    transFatContent:
+      type: Mass
+      documentation:
+        en: The number of grams of trans fat.
+    fiberContent:
+      type: Mass
+      documentation:
+        en: The number of grams of fiber.
+    unsaturatedFatContent:
+      type: Mass
+      documentation:
+        en: The number of grams of unsaturated fat.
+    saturatedFatContent:
+      type: Mass
+      documentation:
+        en: The number of grams of saturated fat.

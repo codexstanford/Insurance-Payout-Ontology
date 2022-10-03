@@ -1,0 +1,24 @@
+TherapeuticProcedure:
+  type: object
+  documentation:
+    en: A medical procedure intended primarily for therapeutic purposes, aimed at
+      improving a health condition.
+  inherit: MedicalProcedure
+  properties:
+    adverseOutcome:
+      type: MedicalEntity
+      documentation:
+        en: A possible complication and/or side effect of this therapy. If it is known
+          that an adverse outcome is serious (resulting in death, disability, or
+          permanent damage; requiring hospitalization; or is otherwise
+          life-threatening or requires immediate medical attention), tag it as a
+          seriouseAdverseOutcome instead.
+    drug:
+      type: Drug
+      documentation:
+        en: Specifying a drug or medicine used in a medication procedure.
+    doseSchedule:
+      type: DoseSchedule
+      documentation:
+        en: A dosing schedule for the drug for a given population, either observed,
+          recommended, or maximum dose based on the type used.

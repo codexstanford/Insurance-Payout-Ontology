@@ -1,0 +1,58 @@
+WearableSizeGroupEnumeration:
+  type: enum
+  documentation:
+    en: Enumerates common size groups (also known as "size types") for wearable
+      products.
+  inherit: SizeGroupEnumeration
+  values:
+    WearableSizeGroupShort:
+      documentation:
+        en: Size group "Short" for wearables.
+    WearableSizeGroupExtraTall:
+      documentation:
+        en: Size group "Extra Tall" for wearables.
+    WearableSizeGroupMaternity:
+      documentation:
+        en: Size group "Maternity" for wearables.
+    WearableSizeGroupWomens:
+      documentation:
+        en: Size group "Womens" for wearables.
+    WearableSizeGroupBig:
+      documentation:
+        en: Size group "Big" for wearables.
+    WearableSizeGroupRegular:
+      documentation:
+        en: Size group "Regular" for wearables.
+    WearableSizeGroupMens:
+      documentation:
+        en: Size group "Mens" for wearables.
+    WearableSizeGroupMisses:
+      documentation:
+        en: Size group "Misses" (also known as "Missy") for wearables.
+    WearableSizeGroupHusky:
+      documentation:
+        en: Size group "Husky" (or "Stocky") for wearables.
+    WearableSizeGroupPetite:
+      documentation:
+        en: Size group "Petite" for wearables.
+    WearableSizeGroupInfants:
+      documentation:
+        en: Size group "Infants" for wearables.
+    WearableSizeGroupGirls:
+      documentation:
+        en: Size group "Girls" for wearables.
+    WearableSizeGroupPlus:
+      documentation:
+        en: Size group "Plus" for wearables.
+    WearableSizeGroupJuniors:
+      documentation:
+        en: Size group "Juniors" for wearables.
+    WearableSizeGroupTall:
+      documentation:
+        en: Size group "Tall" for wearables.
+    WearableSizeGroupExtraShort:
+      documentation:
+        en: Size group "Extra Short" for wearables.
+    WearableSizeGroupBoys:
+      documentation:
+        en: Size group "Boys" for wearables.

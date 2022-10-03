@@ -1,0 +1,21 @@
+MusicPlaylist:
+  type: object
+  documentation:
+    en: A collection of music tracks in playlist form.
+  inherit: CreativeWork
+  properties:
+    tracks:
+      type: MusicRecording
+      documentation:
+        en: A music recording (track)&#x2014;usually a single song.
+    numTracks:
+      type: number
+      documentation:
+        en: The number of tracks in this album or playlist.
+    track:
+      type:
+        - ItemList
+        - MusicRecording
+      documentation:
+        en: A music recording (track)&#x2014;usually a single song. If an ItemList is
+          given, the list should contain items of type MusicRecording.

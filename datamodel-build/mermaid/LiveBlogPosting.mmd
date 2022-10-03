@@ -1,0 +1,13 @@
+classDiagram
+  LiveBlogPosting -- dateTime
+LiveBlogPosting -- BlogPosting
+
+
+BlogPosting <|-- LiveBlogPosting
+class LiveBlogPosting {
+
+  dateTime coverageEndTime
+  dateTime coverageStartTime
+  BlogPosting liveBlogUpdate
+
+}

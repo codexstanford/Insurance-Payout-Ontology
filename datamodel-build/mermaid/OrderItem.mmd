@@ -1,0 +1,16 @@
+classDiagram
+  OrderItem -- ParcelDelivery
+OrderItem -- OrderStatus
+OrderItem -- Service,OrderItem,Product
+
+
+Intangible <|-- OrderItem
+class OrderItem {
+
+  ParcelDelivery orderDelivery
+  OrderStatus orderItemStatus
+  number orderQuantity
+  string orderItemNumber
+  Service,OrderItem,Product orderedItem
+
+}

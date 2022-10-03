@@ -1,0 +1,17 @@
+namespace undefined
+
+import org.codex.insurance.core.MusicPlaylist from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MusicPlaylist.cto
+import org.codex.insurance.core.MusicAlbum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MusicAlbum.cto
+import org.codex.insurance.core.MusicComposition from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MusicComposition.cto
+import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
+import org.codex.insurance.core.Person,MusicGroup from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,MusicGroup.cto
+
+
+concept MusicRecording extends CreativeWork {
+  o String isrcCode
+  o MusicPlaylist inPlaylist
+  o MusicAlbum inAlbum
+  o MusicComposition recordingOf
+  o Duration duration
+  o Person,MusicGroup byArtist
+}

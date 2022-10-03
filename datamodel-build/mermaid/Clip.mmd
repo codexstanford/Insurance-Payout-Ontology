@@ -1,0 +1,26 @@
+classDiagram
+  Clip -- number,HyperTocEntry
+Clip -- Person
+Clip -- Episode
+Clip -- string,number
+Clip -- CreativeWorkSeries
+Clip -- CreativeWorkSeason
+Clip -- Person,MusicGroup
+
+
+CreativeWork <|-- Clip
+class Clip {
+
+  number,HyperTocEntry startOffset
+  number,HyperTocEntry endOffset
+  Person director
+  Person actor
+  Episode partOfEpisode
+  string,number clipNumber
+  CreativeWorkSeries partOfSeries
+  CreativeWorkSeason partOfSeason
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}

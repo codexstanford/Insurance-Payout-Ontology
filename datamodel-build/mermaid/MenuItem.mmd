@@ -1,0 +1,16 @@
+classDiagram
+  MenuItem -- MenuItem,MenuSection
+MenuItem -- Offer,Demand
+MenuItem -- RestrictedDiet
+MenuItem -- NutritionInformation
+
+
+Intangible <|-- MenuItem
+class MenuItem {
+
+  MenuItem,MenuSection menuAddOn
+  Offer,Demand offers
+  RestrictedDiet suitableForDiet
+  NutritionInformation nutrition
+
+}

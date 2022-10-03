@@ -1,0 +1,48 @@
+namespace undefined
+
+import org.codex.insurance.core.schema:MedicalSpecialty from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/schema:MedicalSpecialty.cto
+
+
+concept MedicalSpecialty extendsMedicalSpecialtyMedicalSpecialty {
+  o schema:MedicalSpecialty Cardiovascular
+  o schema:MedicalSpecialty Renal
+  o schema:MedicalSpecialty Nursing
+  o schema:MedicalSpecialty Dermatologic
+  o schema:MedicalSpecialty DietNutrition
+  o schema:MedicalSpecialty PrimaryCare
+  o schema:MedicalSpecialty Oncologic
+  o schema:MedicalSpecialty Physiotherapy
+  o schema:MedicalSpecialty Optometric
+  o schema:MedicalSpecialty Gynecologic
+  o schema:MedicalSpecialty Midwifery
+  o schema:MedicalSpecialty SpeechPathology
+  o schema:MedicalSpecialty CommunityHealth
+  o schema:MedicalSpecialty Emergency
+  o schema:MedicalSpecialty LaboratoryScience
+  o schema:MedicalSpecialty Geriatric
+  o schema:MedicalSpecialty Anesthesia
+  o schema:MedicalSpecialty Endocrine
+  o schema:MedicalSpecialty RespiratoryTherapy
+  o schema:MedicalSpecialty Pediatric
+  o schema:MedicalSpecialty Genetic
+  o schema:MedicalSpecialty Infectious
+  o schema:MedicalSpecialty Rheumatologic
+  o schema:MedicalSpecialty Musculoskeletal
+  o schema:MedicalSpecialty Podiatric
+  o schema:MedicalSpecialty Obstetric
+  o schema:MedicalSpecialty Pathology
+  o schema:MedicalSpecialty Pulmonary
+  o schema:MedicalSpecialty Dermatology
+  o schema:MedicalSpecialty Dentistry
+  o schema:MedicalSpecialty Gastroenterologic
+  o schema:MedicalSpecialty PublicHealth
+  o schema:MedicalSpecialty Psychiatric
+  o schema:MedicalSpecialty PharmacySpecialty
+  o schema:MedicalSpecialty Hematologic
+  o schema:MedicalSpecialty Toxicologic
+  o schema:MedicalSpecialty PlasticSurgery
+  o schema:MedicalSpecialty Urologic
+  o schema:MedicalSpecialty Neurologic
+  o schema:MedicalSpecialty Otolaryngologic
+  o schema:MedicalSpecialty Surgical
+}

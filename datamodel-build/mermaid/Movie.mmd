@@ -1,0 +1,27 @@
+classDiagram
+  Movie -- Country
+Movie -- Person
+Movie -- string,string
+Movie -- Language,string
+Movie -- VideoObject
+Movie -- Duration
+Movie -- Organization
+Movie -- Person,MusicGroup
+
+
+CreativeWork <|-- Movie
+class Movie {
+
+  Country countryOfOrigin
+  Person director
+  string,string titleEIDR
+  Language,string subtitleLanguage
+  Person actor
+  VideoObject trailer
+  Duration duration
+  Organization productionCompany
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}

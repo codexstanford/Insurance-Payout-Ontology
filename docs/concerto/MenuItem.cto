@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.MenuItem,MenuSection from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MenuItem,MenuSection.cto
+import org.codex.insurance.core.Offer,Demand from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Offer,Demand.cto
+import org.codex.insurance.core.RestrictedDiet from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/RestrictedDiet.cto
+import org.codex.insurance.core.NutritionInformation from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/NutritionInformation.cto
+
+
+concept MenuItem extends Intangible {
+  o MenuItem,MenuSection menuAddOn
+  o Offer,Demand offers
+  o RestrictedDiet suitableForDiet
+  o NutritionInformation nutrition
+}

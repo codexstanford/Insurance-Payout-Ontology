@@ -1,0 +1,25 @@
+ReturnFeesEnumeration:
+  type: enum
+  documentation:
+    en: Enumerates several kinds of policies for product return fees.
+  inherit: Enumeration
+  values:
+    ReturnFeesCustomerResponsibility:
+      documentation:
+        en: Specifies that product returns must be paid for, and are the responsibility
+          of, the customer.
+    OriginalShippingFees:
+      documentation:
+        en: Specifies that the customer must pay the original shipping costs when
+          returning a product.
+    ReturnShippingFees:
+      documentation:
+        en: Specifies that the customer must pay the return shipping costs when
+          returning a product
+    FreeReturn:
+      documentation:
+        en: Specifies that product returns are free of charge for the customer.
+    RestockingFees:
+      documentation:
+        en: Specifies that the customer must pay a restocking fee when returning a
+          product

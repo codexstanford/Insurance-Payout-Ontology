@@ -1,0 +1,10 @@
+namespace undefined
+
+enum PaymentStatusType {
+  o PaymentDue
+  o PaymentDeclined
+  o PaymentAutomaticallyApplied
+  o PaymentComplete
+  o PaymentPastDue
+}
+

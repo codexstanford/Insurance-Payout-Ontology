@@ -1,0 +1,16 @@
+classDiagram
+  Book -- Person
+Book -- BookFormatType
+
+
+CreativeWork <|-- Book
+class Book {
+
+  string isbn
+  Person illustrator
+  number numberOfPages
+  boolean abridged
+  BookFormatType bookFormat
+  string bookEdition
+
+}

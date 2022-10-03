@@ -1,0 +1,10 @@
+classDiagram
+StatusEnumeration o-- PaymentStatusType
+  class PaymentStatusType {
+<<enumeration>>
+  o PaymentDue
+  o PaymentDeclined
+  o PaymentAutomaticallyApplied
+  o PaymentComplete
+  o . . . 1 more values
+}

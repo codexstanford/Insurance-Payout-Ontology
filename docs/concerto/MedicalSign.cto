@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalTest from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTest.cto
+import org.codex.insurance.core.PhysicalExam from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PhysicalExam.cto
+
+
+concept MedicalSign extends MedicalSignOrSymptom {
+  o MedicalTest identifyingTest
+  o PhysicalExam identifyingExam
+}

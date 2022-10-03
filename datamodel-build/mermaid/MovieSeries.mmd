@@ -1,0 +1,19 @@
+classDiagram
+  MovieSeries -- Person
+MovieSeries -- VideoObject
+MovieSeries -- Organization
+MovieSeries -- Person,MusicGroup
+
+
+CreativeWorkSeries <|-- MovieSeries
+class MovieSeries {
+
+  Person director
+  Person actor
+  VideoObject trailer
+  Organization productionCompany
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}

@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.WarrantyPromise from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/WarrantyPromise.cto
+import org.codex.insurance.core.Person,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Organization.cto
+
+
+concept SellAction extends TradeAction {
+  o WarrantyPromise warrantyPromise
+  o Person,Organization buyer
+}

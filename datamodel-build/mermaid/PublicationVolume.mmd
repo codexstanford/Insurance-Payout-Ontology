@@ -1,0 +1,14 @@
+classDiagram
+  PublicationVolume -- string,number
+PublicationVolume -- number,string
+
+
+CreativeWork <|-- PublicationVolume
+class PublicationVolume {
+
+  string,number pageStart
+  string,number pageEnd
+  number,string volumeNumber
+  string pagination
+
+}

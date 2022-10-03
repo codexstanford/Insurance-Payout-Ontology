@@ -1,0 +1,14 @@
+classDiagram
+  BusTrip -- BusStop,BusStation
+BusTrip -- BusStation,BusStop
+
+
+Trip <|-- BusTrip
+class BusTrip {
+
+  BusStop,BusStation departureBusStop
+  string busName
+  BusStation,BusStop arrivalBusStop
+  string busNumber
+
+}

@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept Collection extends CreativeWork {
+  o Double [object Object]
+}

@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.number,HyperTocEntry from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,HyperTocEntry.cto
+
+
+concept SeekToAction extends Action {
+  o number,HyperTocEntry startOffset
+}

@@ -1,0 +1,20 @@
+namespace undefined
+
+import org.codex.insurance.core.Mass from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Mass.cto
+import org.codex.insurance.core.Energy from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Energy.cto
+
+
+concept NutritionInformation extends StructuredValue {
+  o Mass fatContent
+  o String servingSize
+  o Mass proteinContent
+  o Energy calories
+  o Mass sodiumContent
+  o Mass cholesterolContent
+  o Mass sugarContent
+  o Mass carbohydrateContent
+  o Mass transFatContent
+  o Mass fiberContent
+  o Mass unsaturatedFatContent
+  o Mass saturatedFatContent
+}

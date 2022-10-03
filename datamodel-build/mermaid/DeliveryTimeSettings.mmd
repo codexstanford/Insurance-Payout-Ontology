@@ -1,0 +1,14 @@
+classDiagram
+  DeliveryTimeSettings -- DefinedRegion
+DeliveryTimeSettings -- ShippingDeliveryTime
+
+
+StructuredValue <|-- DeliveryTimeSettings
+class DeliveryTimeSettings {
+
+  DefinedRegion shippingDestination
+  string transitTimeLabel
+  boolean isUnlabelledFallback
+  ShippingDeliveryTime deliveryTime
+
+}

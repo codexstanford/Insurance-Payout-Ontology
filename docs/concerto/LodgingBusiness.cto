@@ -1,0 +1,21 @@
+namespace undefined
+
+import org.codex.insurance.core.QuantitativeValue,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue,number.cto
+import org.codex.insurance.core.Audience from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Audience.cto
+import org.codex.insurance.core.Rating from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Rating.cto
+import org.codex.insurance.core.LocationFeatureSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/LocationFeatureSpecification.cto
+import org.codex.insurance.core.string,Language from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Language.cto
+import org.codex.insurance.core.dateTime,time from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,time.cto
+import org.codex.insurance.core.string,boolean from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,boolean.cto
+
+
+concept LodgingBusiness extends LocalBusiness {
+  o QuantitativeValue,number numberOfRooms
+  o Audience audience
+  o Rating starRating
+  o LocationFeatureSpecification amenityFeature
+  o string,Language availableLanguage
+  o dateTime,time checkoutTime
+  o dateTime,time checkinTime
+  o string,boolean petsAllowed
+}

@@ -1,0 +1,15 @@
+Airline:
+  type: object
+  documentation:
+    en: An organization that provides flights for passengers.
+  inherit: Organization
+  properties:
+    iataCode:
+      type: string
+      documentation:
+        en: IATA identifier for an airline or airport.
+    boardingPolicy:
+      type: BoardingPolicyType
+      documentation:
+        en: The type of boarding policy used by the airline (e.g. zone-based or
+          group-based).

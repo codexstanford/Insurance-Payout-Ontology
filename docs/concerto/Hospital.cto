@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalTest,MedicalProcedure,MedicalTherapy from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTest,MedicalProcedure,MedicalTherapy.cto
+import org.codex.insurance.core.Dataset,CDCPMDRecord from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Dataset,CDCPMDRecord.cto
+import org.codex.insurance.core.MedicalSpecialty from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalSpecialty.cto
+
+
+concept Hospital extendsHospitalHospitalHospital {
+  o MedicalTest,MedicalProcedure,MedicalTherapy availableService
+  o Dataset,CDCPMDRecord healthcareReportingData
+  o MedicalSpecialty medicalSpecialty
+}

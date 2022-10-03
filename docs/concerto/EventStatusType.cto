@@ -1,0 +1,10 @@
+namespace undefined
+
+enum EventStatusType {
+  o EventCancelled
+  o EventScheduled
+  o EventRescheduled
+  o EventPostponed
+  o EventMovedOnline
+}
+

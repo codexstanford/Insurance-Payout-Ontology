@@ -1,0 +1,17 @@
+namespace undefined
+
+import org.codex.insurance.core.Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue.cto
+import org.codex.insurance.core.string,number,StructuredValue,boolean from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,number,StructuredValue,boolean.cto
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.PropertyValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PropertyValue.cto
+
+
+concept QuantitativeValue extends StructuredValue {
+  o Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue valueReference
+  o Double maxValue
+  o String unitText
+  o Double minValue
+  o string,number,StructuredValue,boolean value
+  o string,string unitCode
+  o PropertyValue additionalProperty
+}

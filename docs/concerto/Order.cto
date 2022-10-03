@@ -1,0 +1,41 @@
+namespace undefined
+
+import org.codex.insurance.core.ParcelDelivery from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ParcelDelivery.cto
+import org.codex.insurance.core.PostalAddress from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PostalAddress.cto
+import org.codex.insurance.core.Offer from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Offer.cto
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+import org.codex.insurance.core.OrderStatus from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/OrderStatus.cto
+import org.codex.insurance.core.Invoice from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Invoice.cto
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.Person,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Organization.cto
+import org.codex.insurance.core.string,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,number.cto
+import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
+import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
+import org.codex.insurance.core.Service,OrderItem,Product from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Service,OrderItem,Product.cto
+import org.codex.insurance.core.PaymentMethod from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PaymentMethod.cto
+
+
+concept Order extends Intangible {
+  o ParcelDelivery orderDelivery
+  o PostalAddress billingAddress
+  o Offer acceptedOffer
+  o Organization,Person merchant
+  o OrderStatus orderStatus
+  o String confirmationNumber
+  o Invoice partOfInvoice
+  o String orderNumber
+  o Organization,Person seller
+  o Organization,Person customer
+  o dateTime,date paymentDueDate
+  o Person,Organization broker
+  o String discountCode
+  o string,number discount
+  o String paymentMethodId
+  o String paymentUrl
+  o String discountCurrency
+  o dateTime paymentDue
+  o date,dateTime orderDate
+  o Boolean isGift
+  o Service,OrderItem,Product orderedItem
+  o PaymentMethod paymentMethod
+}

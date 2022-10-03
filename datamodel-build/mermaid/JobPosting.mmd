@@ -1,0 +1,64 @@
+classDiagram
+  JobPosting -- MonetaryAmountDistribution,MonetaryAmount,number
+JobPosting -- Place
+JobPosting -- string,string,DefinedTerm
+JobPosting -- DefinedTerm,string,string
+JobPosting -- AdministrativeArea
+JobPosting -- date,string
+JobPosting -- ContactPoint
+JobPosting -- Occupation
+JobPosting -- string,OccupationalExperienceRequirements
+JobPosting -- string,string
+JobPosting -- EducationalOccupationalCredential,string
+JobPosting -- DefinedTerm,string
+JobPosting -- number,PriceSpecification,MonetaryAmount
+JobPosting -- date,dateTime
+JobPosting -- string,DefinedTerm
+JobPosting -- Organization
+JobPosting -- dateTime,date
+JobPosting -- string,EducationalOccupationalCredential
+JobPosting -- CategoryCode,string
+
+
+Intangible <|-- JobPosting
+class JobPosting {
+
+  string employerOverview
+  MonetaryAmountDistribution,MonetaryAmount,number estimatedSalary
+  string jobLocationType
+  string responsibilities
+  Place jobLocation
+  string,string,DefinedTerm physicalRequirement
+  string incentives
+  boolean directApply
+  DefinedTerm,string,string sensoryRequirement
+  AdministrativeArea applicantLocationRequirements
+  string workHours
+  date,string jobStartDate
+  string employmentType
+  string specialCommitments
+  ContactPoint applicationContact
+  string incentiveCompensation
+  Occupation relevantOccupation
+  number totalJobOpenings
+  string,OccupationalExperienceRequirements experienceRequirements
+  string jobBenefits
+  string salaryCurrency
+  boolean experienceInPlaceOfEducation
+  string,string securityClearanceRequirement
+  string eligibilityToWorkRequirement
+  EducationalOccupationalCredential,string educationRequirements
+  string benefits
+  DefinedTerm,string industry
+  number,PriceSpecification,MonetaryAmount baseSalary
+  date,dateTime datePosted
+  string,DefinedTerm skills
+  string title
+  Organization hiringOrganization
+  boolean jobImmediateStart
+  dateTime,date validThrough
+  Organization employmentUnit
+  string,EducationalOccupationalCredential qualifications
+  CategoryCode,string occupationalCategory
+
+}

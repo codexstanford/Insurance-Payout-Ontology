@@ -1,0 +1,9 @@
+namespace undefined
+
+import org.codex.insurance.core.AnatomicalStructure from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AnatomicalStructure.cto
+
+
+concept Artery extends Vessel {
+  o AnatomicalStructure supplyTo
+  o AnatomicalStructure arterialBranch
+}

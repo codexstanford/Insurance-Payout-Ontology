@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalTherapy from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTherapy.cto
+import org.codex.insurance.core.AnatomicalSystem,AnatomicalStructure from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AnatomicalSystem,AnatomicalStructure.cto
+import org.codex.insurance.core.MedicalCondition from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalCondition.cto
+
+
+concept SuperficialAnatomy extends MedicalEntity {
+  o MedicalTherapy relatedTherapy
+  o String significance
+  o AnatomicalSystem,AnatomicalStructure relatedAnatomy
+  o MedicalCondition relatedCondition
+  o String associatedPathophysiology
+}

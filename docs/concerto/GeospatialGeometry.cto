@@ -1,0 +1,18 @@
+namespace undefined
+
+import org.codex.insurance.core.Place,GeospatialGeometry from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place,GeospatialGeometry.cto
+import org.codex.insurance.core.GeospatialGeometry,Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GeospatialGeometry,Place.cto
+
+
+concept GeospatialGeometry extends Intangible {
+  o Place,GeospatialGeometry geoContains
+  o GeospatialGeometry,Place geoIntersects
+  o Place,GeospatialGeometry geoTouches
+  o Place,GeospatialGeometry geoCoveredBy
+  o Place,GeospatialGeometry geoEquals
+  o GeospatialGeometry,Place geoCrosses
+  o GeospatialGeometry,Place geoCovers
+  o Place,GeospatialGeometry geoWithin
+  o GeospatialGeometry,Place geoDisjoint
+  o GeospatialGeometry,Place geoOverlaps
+}

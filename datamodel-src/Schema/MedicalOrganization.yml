@@ -1,0 +1,20 @@
+MedicalOrganization:
+  type: object
+  documentation:
+    en: A medical organization (physical or not), such as hospital, institution or
+      clinic.
+  inherit: Organization
+  properties:
+    isAcceptingNewPatients:
+      type: boolean
+      documentation:
+        en: Whether the provider is accepting new patients.
+    healthPlanNetworkId:
+      type: string
+      documentation:
+        en: Name or unique ID of network. (Networks are often reused across different
+          insurance plans).
+    medicalSpecialty:
+      type: MedicalSpecialty
+      documentation:
+        en: A medical specialty of the provider.

@@ -1,0 +1,21 @@
+namespace undefined
+
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.string,MediaObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,MediaObject.cto
+import org.codex.insurance.core.ImageObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ImageObject.cto
+import org.codex.insurance.core.Person,MusicGroup from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,MusicGroup.cto
+
+
+concept VideoObject extends MediaObject {
+  o String embeddedTextCaption
+  o Person director
+  o Person actor
+  o string,MediaObject caption
+  o ImageObject thumbnail
+  o String transcript
+  o String videoQuality
+  o String videoFrameSize
+  o Person actors
+  o Person,MusicGroup musicBy
+  o Person directors
+}

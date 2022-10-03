@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.Class from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Class.cto
+
+
+concept StatisticalPopulation extends Intangible {
+  o Class populationType
+  o Double numConstraints
+  o Double constrainingProperty
+}

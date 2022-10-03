@@ -1,0 +1,23 @@
+classDiagram
+  Recipe -- string,CreativeWork,ItemList
+Recipe -- RestrictedDiet
+Recipe -- NutritionInformation
+Recipe -- string,QuantitativeValue
+Recipe -- Duration
+
+
+HowTo <|-- Recipe
+class Recipe {
+
+  string,CreativeWork,ItemList recipeInstructions
+  string ingredients
+  string recipeCuisine
+  RestrictedDiet suitableForDiet
+  NutritionInformation nutrition
+  string cookingMethod
+  string recipeIngredient
+  string,QuantitativeValue recipeYield
+  Duration cookTime
+  string recipeCategory
+
+}

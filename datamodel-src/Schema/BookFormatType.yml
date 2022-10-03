@@ -1,0 +1,24 @@
+BookFormatType:
+  type: enum
+  documentation:
+    en: The publication format of the book.
+  inherit: Enumeration
+  values:
+    AudiobookFormat:
+      documentation:
+        en: "Book format: Audiobook. This is an enumerated value for use with the
+          bookFormat property. There is also a type 'Audiobook' in the bib
+          extension which includes Audiobook specific properties."
+    GraphicNovel:
+      documentation:
+        en: "Book format: GraphicNovel. May represent a bound collection of ComicIssue
+          instances."
+    Paperback:
+      documentation:
+        en: "Book format: Paperback."
+    Hardcover:
+      documentation:
+        en: "Book format: Hardcover."
+    EBook:
+      documentation:
+        en: "Book format: Ebook."

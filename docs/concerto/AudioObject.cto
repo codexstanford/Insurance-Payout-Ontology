@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.string,MediaObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,MediaObject.cto
+
+
+concept AudioObject extends MediaObject {
+  o String embeddedTextCaption
+  o string,MediaObject caption
+  o String transcript
+}

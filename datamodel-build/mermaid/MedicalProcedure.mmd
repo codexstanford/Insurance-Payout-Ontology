@@ -1,0 +1,17 @@
+classDiagram
+  MedicalProcedure -- MedicalProcedureType
+MedicalProcedure -- MedicalEntity,string
+MedicalProcedure -- string,EventStatusType,MedicalStudyStatus
+
+
+MedicalEntity <|-- MedicalProcedure
+class MedicalProcedure {
+
+  MedicalProcedureType procedureType
+  MedicalEntity,string preparation
+  string bodyLocation
+  string,EventStatusType,MedicalStudyStatus status
+  string howPerformed
+  string followup
+
+}

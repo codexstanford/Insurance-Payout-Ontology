@@ -1,0 +1,18 @@
+MerchantReturnEnumeration:
+  type: enum
+  documentation:
+    en: Enumerates several kinds of product return policies.
+  inherit: Enumeration
+  values:
+    MerchantReturnNotPermitted:
+      documentation:
+        en: Specifies that product returns are not permitted.
+    MerchantReturnUnlimitedWindow:
+      documentation:
+        en: Specifies that there is an unlimited window for product returns.
+    MerchantReturnFiniteReturnWindow:
+      documentation:
+        en: Specifies that there is a finite window for product returns.
+    MerchantReturnUnspecified:
+      documentation:
+        en: Specifies that a product return policy is not provided.

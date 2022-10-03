@@ -1,0 +1,12 @@
+classDiagram
+  Apartment -- QuantitativeValue,number
+Apartment -- QuantitativeValue
+
+
+Accommodation <|-- Apartment
+class Apartment {
+
+  QuantitativeValue,number numberOfRooms
+  QuantitativeValue occupancy
+
+}

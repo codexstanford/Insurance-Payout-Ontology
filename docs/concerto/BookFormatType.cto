@@ -1,0 +1,10 @@
+namespace undefined
+
+enum BookFormatType {
+  o AudiobookFormat
+  o GraphicNovel
+  o Paperback
+  o Hardcover
+  o EBook
+}
+

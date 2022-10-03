@@ -1,0 +1,19 @@
+namespace undefined
+
+import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.PriceSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PriceSpecification.cto
+import org.codex.insurance.core.number,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,string.cto
+
+
+concept PriceSpecification extends StructuredValue {
+  o Double minPrice
+  o QuantitativeValue eligibleQuantity
+  o dateTime,date validFrom
+  o Double maxPrice
+  o String priceCurrency
+  o Boolean valueAddedTaxIncluded
+  o PriceSpecification eligibleTransactionVolume
+  o dateTime,date validThrough
+  o number,string price
+}

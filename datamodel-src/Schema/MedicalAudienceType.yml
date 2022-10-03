@@ -1,0 +1,13 @@
+MedicalAudienceType:
+  type: enum
+  documentation:
+    en: Target audiences types for medical web pages. Enumerated type.
+  inherit: MedicalEnumeration
+  values:
+    MedicalResearcher:
+      documentation:
+        en: Medical researchers.
+    Clinician:
+      documentation:
+        en: Medical clinicians, including practicing physicians and other medical
+          professionals involved in clinical practice.

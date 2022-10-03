@@ -1,0 +1,13 @@
+classDiagram
+  PublicationEvent -- Organization,Person
+PublicationEvent -- BroadcastService
+
+
+Event <|-- PublicationEvent
+class PublicationEvent {
+
+  Organization,Person publishedBy
+  boolean free
+  BroadcastService publishedOn
+
+}

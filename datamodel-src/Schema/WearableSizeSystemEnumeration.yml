@@ -1,0 +1,48 @@
+WearableSizeSystemEnumeration:
+  type: enum
+  documentation:
+    en: Enumerates common size systems specific for wearable products
+  inherit: SizeSystemEnumeration
+  values:
+    WearableSizeSystemJP:
+      documentation:
+        en: Japanese size system for wearables.
+    WearableSizeSystemCN:
+      documentation:
+        en: Chinese size system for wearables.
+    WearableSizeSystemDE:
+      documentation:
+        en: German size system for wearables.
+    WearableSizeSystemAU:
+      documentation:
+        en: Australian size system for wearables.
+    WearableSizeSystemBR:
+      documentation:
+        en: Brazilian size system for wearables.
+    WearableSizeSystemEurope:
+      documentation:
+        en: European size system for wearables.
+    WearableSizeSystemGS1:
+      documentation:
+        en: GS1 (formerly NRF) size system for wearables.
+    WearableSizeSystemMX:
+      documentation:
+        en: Mexican size system for wearables.
+    WearableSizeSystemEN13402:
+      documentation:
+        en: EN 13402 (joint European standard for size labelling of clothes).
+    WearableSizeSystemUK:
+      documentation:
+        en: United Kingdom size system for wearables.
+    WearableSizeSystemUS:
+      documentation:
+        en: United States size system for wearables.
+    WearableSizeSystemIT:
+      documentation:
+        en: Italian size system for wearables.
+    WearableSizeSystemFR:
+      documentation:
+        en: French size system for wearables.
+    WearableSizeSystemContinental:
+      documentation:
+        en: Continental size system for wearables.

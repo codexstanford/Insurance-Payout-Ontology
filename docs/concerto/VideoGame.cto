@@ -1,0 +1,25 @@
+namespace undefined
+
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.VideoObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/VideoObject.cto
+import org.codex.insurance.core.CreativeWork from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWork.cto
+import org.codex.insurance.core.GameServer from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GameServer.cto
+import org.codex.insurance.core.GamePlayMode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GamePlayMode.cto
+import org.codex.insurance.core.string,string,Thing from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,Thing.cto
+import org.codex.insurance.core.Person,MusicGroup from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,MusicGroup.cto
+
+
+concept VideoGame extendsVideoGameVideoGame {
+  o Person director
+  o Person actor
+  o VideoObject trailer
+  o String gameEdition
+  o CreativeWork cheatCode
+  o GameServer gameServer
+  o CreativeWork gameTip
+  o Person actors
+  o GamePlayMode playMode
+  o string,string,Thing gamePlatform
+  o Person,MusicGroup musicBy
+  o Person directors
+}

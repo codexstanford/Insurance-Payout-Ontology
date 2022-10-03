@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept OrganizationRole extends Role {
+  o Double numberedPosition
+}

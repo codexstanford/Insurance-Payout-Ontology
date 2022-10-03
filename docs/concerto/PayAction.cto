@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.Person,Audience,ContactPoint,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Audience,ContactPoint,Organization.cto
+
+
+concept PayAction extends TradeAction {
+  o Person,Audience,ContactPoint,Organization recipient
+}

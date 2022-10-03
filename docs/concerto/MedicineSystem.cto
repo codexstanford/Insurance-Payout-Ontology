@@ -1,0 +1,11 @@
+namespace undefined
+
+enum MedicineSystem {
+  o Homeopathic
+  o TraditionalChinese
+  o Chiropractic
+  o Osteopathic
+  o WesternConventional
+  o Ayurvedic
+}
+

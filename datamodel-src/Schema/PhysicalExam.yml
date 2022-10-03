@@ -1,0 +1,64 @@
+PhysicalExam:
+  type: object
+  documentation:
+    en: "A type of physical examination of a patient performed by a physician. "
+  inherit:
+    - MedicalEnumeration
+    - MedicalProcedure
+  properties:
+    Genitourinary:
+      type: schema:PhysicalExam
+      documentation:
+        en: Genitourinary system function assessment with clinical examination.
+    Abdomen:
+      type: schema:PhysicalExam
+      documentation:
+        en: Abdomen clinical examination.
+    Appearance:
+      type: schema:PhysicalExam
+      documentation:
+        en: Appearance assessment with clinical examination.
+    CardiovascularExam:
+      type: schema:PhysicalExam
+      documentation:
+        en: Cardiovascular system assessment withclinical examination.
+    Skin:
+      type: schema:PhysicalExam
+      documentation:
+        en: Skin assessment with clinical examination.
+    Lung:
+      type: schema:PhysicalExam
+      documentation:
+        en: Lung and respiratory system clinical examination.
+    Neck:
+      type: schema:PhysicalExam
+      documentation:
+        en: Neck assessment with clinical examination.
+    Ear:
+      type: schema:PhysicalExam
+      documentation:
+        en: Ear function assessment with clinical examination.
+    MusculoskeletalExam:
+      type: schema:PhysicalExam
+      documentation:
+        en: Musculoskeletal system clinical examination.
+    Head:
+      type: schema:PhysicalExam
+      documentation:
+        en: Head assessment with clinical examination.
+    Eye:
+      type: schema:PhysicalExam
+      documentation:
+        en: Eye or ophtalmological function assessment with clinical examination.
+    Throat:
+      type: schema:PhysicalExam
+      documentation:
+        en: Throat assessment with  clinical examination.
+    Neuro:
+      type: schema:PhysicalExam
+      documentation:
+        en: Neurological system clinical examination.
+    Nose:
+      type: schema:PhysicalExam
+      documentation:
+        en: Nose function assessment with clinical examination.

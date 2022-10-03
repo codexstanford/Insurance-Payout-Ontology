@@ -1,0 +1,13 @@
+namespace undefined
+
+enum DayOfWeek {
+  o Thursday
+  o Saturday
+  o Tuesday
+  o Friday
+  o Monday
+  o Wednesday
+  o PublicHolidays
+  o Sunday
+}
+

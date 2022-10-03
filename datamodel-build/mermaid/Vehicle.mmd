@@ -1,13 +1,59 @@
 classDiagram
-  Vehicle -- Amount
+  Vehicle -- QuantitativeValue
+Vehicle -- EngineSpecification
+Vehicle -- date
+Vehicle -- QuantitativeValue,number
+Vehicle -- number,QuantitativeValue
+Vehicle -- SteeringPositionValue
+Vehicle -- string,number
+Vehicle -- string,string,QualitativeValue
+Vehicle -- string,QualitativeValue,string
+Vehicle -- string,DriveWheelConfigurationValue
+Vehicle -- QualitativeValue,string,string
+Vehicle -- CarUsageType,string
 
 
-RiskObject <|-- Vehicle
+Product <|-- Vehicle
 class Vehicle {
 
-  Amount productionYear
-  Amount age
-  Amount length
-  Amount weight
+  QuantitativeValue fuelCapacity
+  QuantitativeValue accelerationTime
+  QuantitativeValue speed
+  QuantitativeValue trailerWeight
+  EngineSpecification vehicleEngine
+  number emissionsCO2
+  date purchaseDate
+  QuantitativeValue,number numberOfForwardGears
+  QuantitativeValue weightTotal
+  date productionDate
+  number,QuantitativeValue numberOfPreviousOwners
+  SteeringPositionValue steeringPosition
+  QuantitativeValue wheelbase
+  string vehicleInteriorType
+  string,number numberOfAirbags
+  string,string,QualitativeValue fuelType
+  QuantitativeValue cargoVolume
+  string,QualitativeValue,string vehicleTransmission
+  QuantitativeValue payload
+  string,DriveWheelConfigurationValue driveWheelConfiguration
+  string knownVehicleDamages
+  QuantitativeValue fuelConsumption
+  string vehicleInteriorColor
+  number,QuantitativeValue numberOfAxles
+  date modelDate
+  QuantitativeValue,number numberOfDoors
+  QuantitativeValue,number vehicleSeatingCapacity
+  string callSign
+  QuantitativeValue tongueWeight
+  QuantitativeValue fuelEfficiency
+  date vehicleModelDate
+  string vehicleConfiguration
+  QuantitativeValue mileageFromOdometer
+  QuantitativeValue,number seatingCapacity
+  QualitativeValue,string,string bodyType
+  date dateVehicleFirstRegistered
+  string vehicleIdentificationNumber
+  string,string,QualitativeValue meetsEmissionStandard
+  CarUsageType,string vehicleSpecialUsage
 
 }

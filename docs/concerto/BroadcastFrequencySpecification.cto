@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.QualitativeValue,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QualitativeValue,string.cto
+import org.codex.insurance.core.number,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,QuantitativeValue.cto
+
+
+concept BroadcastFrequencySpecification extends Intangible {
+  o String broadcastSubChannel
+  o QualitativeValue,string broadcastSignalModulation
+  o number,QuantitativeValue broadcastFrequencyValue
+}

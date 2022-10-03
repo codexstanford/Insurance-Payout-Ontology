@@ -1,0 +1,23 @@
+classDiagram
+  Occupation -- MonetaryAmountDistribution,MonetaryAmount,number
+Occupation -- AdministrativeArea
+Occupation -- string,OccupationalExperienceRequirements
+Occupation -- EducationalOccupationalCredential,string
+Occupation -- string,DefinedTerm
+Occupation -- string,EducationalOccupationalCredential
+Occupation -- CategoryCode,string
+
+
+Intangible <|-- Occupation
+class Occupation {
+
+  MonetaryAmountDistribution,MonetaryAmount,number estimatedSalary
+  string responsibilities
+  AdministrativeArea occupationLocation
+  string,OccupationalExperienceRequirements experienceRequirements
+  EducationalOccupationalCredential,string educationRequirements
+  string,DefinedTerm skills
+  string,EducationalOccupationalCredential qualifications
+  CategoryCode,string occupationalCategory
+
+}

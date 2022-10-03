@@ -1,0 +1,13 @@
+classDiagram
+  FinancialProduct -- number,QuantitativeValue
+FinancialProduct -- string,string
+
+
+Service <|-- FinancialProduct
+class FinancialProduct {
+
+  number,QuantitativeValue annualPercentageRate
+  string,string feesAndCommissionsSpecification
+  number,QuantitativeValue interestRate
+
+}

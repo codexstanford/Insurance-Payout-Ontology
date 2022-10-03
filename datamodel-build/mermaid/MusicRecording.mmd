@@ -1,0 +1,19 @@
+classDiagram
+  MusicRecording -- MusicPlaylist
+MusicRecording -- MusicAlbum
+MusicRecording -- MusicComposition
+MusicRecording -- Duration
+MusicRecording -- Person,MusicGroup
+
+
+CreativeWork <|-- MusicRecording
+class MusicRecording {
+
+  string isrcCode
+  MusicPlaylist inPlaylist
+  MusicAlbum inAlbum
+  MusicComposition recordingOf
+  Duration duration
+  Person,MusicGroup byArtist
+
+}

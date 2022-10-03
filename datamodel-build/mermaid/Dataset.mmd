@@ -1,0 +1,21 @@
+classDiagram
+  Dataset -- DataCatalog
+Dataset -- PropertyValue,string
+Dataset -- string,string
+Dataset -- dateTime
+Dataset -- DataDownload
+
+
+CreativeWork <|-- Dataset
+class Dataset {
+
+  DataCatalog catalog
+  DataCatalog includedDataCatalog
+  PropertyValue,string variableMeasured
+  string,string measurementTechnique
+  dateTime datasetTimeInterval
+  DataDownload distribution
+  string issn
+  DataCatalog includedInDataCatalog
+
+}

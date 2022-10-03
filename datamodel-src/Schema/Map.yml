@@ -1,0 +1,10 @@
+Map:
+  type: object
+  documentation:
+    en: A map.
+  inherit: CreativeWork
+  properties:
+    mapType:
+      type: MapCategoryType
+      documentation:
+        en: Indicates the kind of Map, from the MapCategoryType Enumeration.

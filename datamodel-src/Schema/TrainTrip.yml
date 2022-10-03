@@ -1,0 +1,30 @@
+TrainTrip:
+  type: object
+  documentation:
+    en: A trip on a commercial train line.
+  inherit: Trip
+  properties:
+    trainName:
+      type: string
+      documentation:
+        en: The name of the train (e.g. The Orient Express).
+    departureStation:
+      type: TrainStation
+      documentation:
+        en: The station from which the train departs.
+    departurePlatform:
+      type: string
+      documentation:
+        en: The platform from which the train departs.
+    trainNumber:
+      type: string
+      documentation:
+        en: The unique identifier for the train.
+    arrivalPlatform:
+      type: string
+      documentation:
+        en: The platform where the train arrives.
+    arrivalStation:
+      type: TrainStation
+      documentation:
+        en: The station where the train trip ends.

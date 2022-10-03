@@ -1,0 +1,29 @@
+classDiagram
+  RadioSeries -- string,CreativeWorkSeason
+RadioSeries -- CreativeWorkSeason
+RadioSeries -- Person
+RadioSeries -- VideoObject
+RadioSeries -- Episode
+RadioSeries -- Organization
+RadioSeries -- Person,MusicGroup
+
+
+CreativeWorkSeries <|-- RadioSeries
+class RadioSeries {
+
+  string,CreativeWorkSeason season
+  CreativeWorkSeason containsSeason
+  Person director
+  Person actor
+  VideoObject trailer
+  Episode episodes
+  number numberOfEpisodes
+  CreativeWorkSeason seasons
+  Organization productionCompany
+  Person actors
+  number numberOfSeasons
+  Person,MusicGroup musicBy
+  Episode episode
+  Person directors
+
+}

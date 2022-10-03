@@ -1,0 +1,23 @@
+classDiagram
+  LodgingBusiness -- QuantitativeValue,number
+LodgingBusiness -- Audience
+LodgingBusiness -- Rating
+LodgingBusiness -- LocationFeatureSpecification
+LodgingBusiness -- string,Language
+LodgingBusiness -- dateTime,time
+LodgingBusiness -- string,boolean
+
+
+LocalBusiness <|-- LodgingBusiness
+class LodgingBusiness {
+
+  QuantitativeValue,number numberOfRooms
+  Audience audience
+  Rating starRating
+  LocationFeatureSpecification amenityFeature
+  string,Language availableLanguage
+  dateTime,time checkoutTime
+  dateTime,time checkinTime
+  string,boolean petsAllowed
+
+}

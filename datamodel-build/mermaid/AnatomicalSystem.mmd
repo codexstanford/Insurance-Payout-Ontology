@@ -1,0 +1,17 @@
+classDiagram
+  AnatomicalSystem -- MedicalTherapy
+AnatomicalSystem -- MedicalCondition
+AnatomicalSystem -- AnatomicalStructure
+AnatomicalSystem -- AnatomicalStructure,AnatomicalSystem
+
+
+MedicalEntity <|-- AnatomicalSystem
+class AnatomicalSystem {
+
+  MedicalTherapy relatedTherapy
+  MedicalCondition relatedCondition
+  AnatomicalStructure relatedStructure
+  string associatedPathophysiology
+  AnatomicalStructure,AnatomicalSystem comprisedOf
+
+}

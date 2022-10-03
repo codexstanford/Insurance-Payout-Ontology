@@ -1,0 +1,12 @@
+classDiagram
+  MonetaryGrant -- Organization,Person
+MonetaryGrant -- number,MonetaryAmount
+
+
+Grant <|-- MonetaryGrant
+class MonetaryGrant {
+
+  Organization,Person funder
+  number,MonetaryAmount amount
+
+}

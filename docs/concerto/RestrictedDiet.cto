@@ -1,0 +1,16 @@
+namespace undefined
+
+enum RestrictedDiet {
+  o VeganDiet
+  o LowFatDiet
+  o KosherDiet
+  o HinduDiet
+  o HalalDiet
+  o VegetarianDiet
+  o LowSaltDiet
+  o LowCalorieDiet
+  o LowLactoseDiet
+  o GlutenFreeDiet
+  o DiabeticDiet
+}
+

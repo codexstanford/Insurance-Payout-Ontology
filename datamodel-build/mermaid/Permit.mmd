@@ -1,0 +1,22 @@
+classDiagram
+  Permit -- Duration
+Permit -- Organization
+Permit -- date
+Permit -- dateTime,date
+Permit -- Service
+Permit -- AdministrativeArea
+Permit -- Audience
+
+
+Intangible <|-- Permit
+class Permit {
+
+  Duration validFor
+  Organization issuedBy
+  date validUntil
+  dateTime,date validFrom
+  Service issuedThrough
+  AdministrativeArea validIn
+  Audience permitAudience
+
+}

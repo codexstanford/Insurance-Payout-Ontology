@@ -1,0 +1,63 @@
+VideoObject:
+  type: object
+  documentation:
+    en: A video file.
+  inherit: MediaObject
+  properties:
+    embeddedTextCaption:
+      type: string
+      documentation:
+        en: Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
+    director:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video gaming etc. content, or of an
+          event. Directors can be associated with individual items or with a
+          series, episode, clip.
+    actor:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors
+          can be associated with individual items or with a series, episode,
+          clip.
+    caption:
+      type:
+        - string
+        - MediaObject
+      documentation:
+        en: The caption for this object. For downloadable machine formats (closed
+          caption, subtitles etc.) use MediaObject and indicate the
+          [[encodingFormat]].
+    thumbnail:
+      type: ImageObject
+      documentation:
+        en: Thumbnail image for an image or video.
+    transcript:
+      type: string
+      documentation:
+        en: If this MediaObject is an AudioObject or VideoObject, the transcript of that
+          object.
+    videoQuality:
+      type: string
+      documentation:
+        en: The quality of the video.
+    videoFrameSize:
+      type: string
+      documentation:
+        en: The frame size of the video.
+    actors:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+          associated with individual items or with a series, episode, clip.
+    musicBy:
+      type:
+        - Person
+        - MusicGroup
+      documentation:
+        en: The composer of the soundtrack.
+    directors:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video games etc. content. Directors can
+          be associated with individual items or with a series, episode, clip.

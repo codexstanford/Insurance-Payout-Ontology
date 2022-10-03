@@ -1,0 +1,11 @@
+classDiagram
+  EmployeeRole -- number,PriceSpecification,MonetaryAmount
+
+
+OrganizationRole <|-- EmployeeRole
+class EmployeeRole {
+
+  string salaryCurrency
+  number,PriceSpecification,MonetaryAmount baseSalary
+
+}

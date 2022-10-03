@@ -1,0 +1,15 @@
+ParentAudience:
+  type: object
+  documentation:
+    en: A set of characteristics describing parents, who can be interested in
+      viewing some content.
+  inherit: PeopleAudience
+  properties:
+    childMaxAge:
+      type: number
+      documentation:
+        en: Maximal age of the child.
+    childMinAge:
+      type: number
+      documentation:
+        en: Minimal age of the child.

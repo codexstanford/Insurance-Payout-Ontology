@@ -1,0 +1,11 @@
+classDiagram
+  Artery -- AnatomicalStructure
+
+
+Vessel <|-- Artery
+class Artery {
+
+  AnatomicalStructure supplyTo
+  AnatomicalStructure arterialBranch
+
+}

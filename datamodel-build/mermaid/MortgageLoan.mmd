@@ -1,0 +1,11 @@
+classDiagram
+  MortgageLoan -- MonetaryAmount
+
+
+LoanOrCredit <|-- MortgageLoan
+class MortgageLoan {
+
+  MonetaryAmount loanMortgageMandateAmount
+  boolean domiciledMortgage
+
+}

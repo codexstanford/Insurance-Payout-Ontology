@@ -1,0 +1,9 @@
+namespace undefined
+
+import org.codex.insurance.core.Amount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Amount.cto
+
+
+concept Specific {
+  o String name
+  o Amount value
+}

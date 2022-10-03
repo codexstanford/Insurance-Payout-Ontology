@@ -13,9 +13,11 @@ function loadObjFromSrc() {
     if (dirname[0] == '.') {
       continue;
     }
+
     let fileList = fs.readdirSync(`${DATA_MODEL_SRC_PATH}/${dirname}`);
+
     for (let fileName of fileList) {
-      if (fileName[0] != '.') {
+      if (fileName[0] != '.') {console.log(`"parsing ${DATA_MODEL_SRC_PATH}/${dirname}/${fileName} "`)
         let data = yaml.parse(fs.readFileSync(`${DATA_MODEL_SRC_PATH}/${dirname}/${fileName}`, 'utf-8'));
         let objName =  Object.keys(data)[0];
         objectsList.push({
@@ -25,7 +27,6 @@ function loadObjFromSrc() {
           namespace: dirname
         })
       }
-    
     }
   }
 

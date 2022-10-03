@@ -1,0 +1,27 @@
+namespace undefined
+
+import org.codex.insurance.core.GovernmentService from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GovernmentService.cto
+import org.codex.insurance.core.string,string,PhysicalActivityCategory,Thing,CategoryCode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,PhysicalActivityCategory,Thing,CategoryCode.cto
+import org.codex.insurance.core.Dataset,Observation,WebContent,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Dataset,Observation,WebContent,string.cto
+import org.codex.insurance.core.WebContent,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/WebContent,string.cto
+import org.codex.insurance.core.CivicStructure,LocalBusiness from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CivicStructure,LocalBusiness.cto
+import org.codex.insurance.core.string,WebContent from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,WebContent.cto
+import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
+import org.codex.insurance.core.DataFeed,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DataFeed,string.cto
+
+
+concept SpecialAnnouncement extends CreativeWork {
+  o GovernmentService governmentBenefitsInfo
+  o string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  o Dataset,Observation,WebContent,string diseaseSpreadStatistics
+  o WebContent,string gettingTestedInfo
+  o CivicStructure,LocalBusiness announcementLocation
+  o string,WebContent travelBans
+  o string,WebContent diseasePreventionInfo
+  o string,WebContent publicTransportClosuresInfo
+  o WebContent,string schoolClosuresInfo
+  o date,dateTime datePosted
+  o string,WebContent newsUpdatesAndGuidelines
+  o string,WebContent quarantineGuidelines
+  o DataFeed,string webFeed
+}

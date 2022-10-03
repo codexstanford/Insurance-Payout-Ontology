@@ -1,0 +1,18 @@
+classDiagram
+  GeoCoordinates -- Country,string
+GeoCoordinates -- string,number
+GeoCoordinates -- string,PostalAddress
+GeoCoordinates -- number,string
+
+
+StructuredValue <|-- GeoCoordinates
+class GeoCoordinates {
+
+  Country,string addressCountry
+  string,number latitude
+  string,PostalAddress address
+  string postalCode
+  string,number elevation
+  number,string longitude
+
+}

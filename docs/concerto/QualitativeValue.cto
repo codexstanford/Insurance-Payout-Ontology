@@ -1,0 +1,13 @@
+namespace undefined
+
+enum QualitativeValue {
+  o valueReference
+  o greaterOrEqual
+  o nonEqual
+  o equal
+  o lesser
+  o greater
+  o additionalProperty
+  o lesserOrEqual
+}
+

@@ -1,0 +1,184 @@
+USNonprofitType:
+  type: object
+  documentation:
+    en: "USNonprofitType: Non-profit organization type originating from the United
+      States."
+  inherit: NonprofitType
+  properties:
+    Nonprofit501c4:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c4: Non-profit type referring to Civic Leagues, Social Welfare
+          Organizations, and Local Associations of Employees."
+    Nonprofit501c23:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c23: Non-profit type referring to Veterans Organizations."
+    Nonprofit501k:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501k: Non-profit type referring to Child Care Organizations."
+    Nonprofit501c1:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c1: Non-profit type referring to Corporations Organized Under
+          Act of Congress, including Federal Credit Unions and National Farm
+          Loan Associations."
+    Nonprofit501n:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501n: Non-profit type referring to Charitable Risk Pools."
+    Nonprofit501c7:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c7: Non-profit type referring to Social and Recreational
+          Clubs."
+    Nonprofit501c9:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c9: Non-profit type referring to Voluntary Employee Beneficiary
+          Associations."
+    Nonprofit501c3:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c3: Non-profit type referring to Religious, Educational,
+          Charitable, Scientific, Literary, Testing for Public Safety, to Foster
+          National or International Amateur Sports Competition, or Prevention of
+          Cruelty to Children or Animals Organizations."
+    Nonprofit501c2:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c2: Non-profit type referring to Title-holding Corporations for
+          Exempt Organizations."
+    Nonprofit501a:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501a: Non-profit type referring to Farmers’ Cooperative
+          Associations."
+    Nonprofit501c21:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c21: Non-profit type referring to Black Lung Benefit Trusts."
+    Nonprofit501e:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501e: Non-profit type referring to Cooperative Hospital Service
+          Organizations."
+    Nonprofit501c14:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c14: Non-profit type referring to State-Chartered Credit
+          Unions, Mutual Reserve Funds."
+    Nonprofit501c28:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c28: Non-profit type referring to National Railroad Retirement
+          Investment Trusts."
+    Nonprofit501c18:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c18: Non-profit type referring to Employee Funded Pension Trust
+          (created before 25 June 1959)."
+    Nonprofit501c27:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c27: Non-profit type referring to State-Sponsored Workers'
+          Compensation Reinsurance Organizations."
+    Nonprofit501d:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501d: Non-profit type referring to Religious and Apostolic
+          Associations."
+    Nonprofit501c25:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c25: Non-profit type referring to Real Property Title-Holding
+          Corporations or Trusts with Multiple Parents."
+    Nonprofit501c15:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c15: Non-profit type referring to Mutual Insurance Companies or
+          Associations."
+    Nonprofit501c12:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c12: Non-profit type referring to Benevolent Life Insurance
+          Associations, Mutual Ditch or Irrigation Companies, Mutual or
+          Cooperative Telephone Companies."
+    Nonprofit501c13:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c13: Non-profit type referring to Cemetery Companies."
+    Nonprofit501c26:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c26: Non-profit type referring to State-Sponsored Organizations
+          Providing Health Coverage for High-Risk Individuals."
+    Nonprofit501c8:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c8: Non-profit type referring to Fraternal Beneficiary
+          Societies and Associations."
+    Nonprofit501c10:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c10: Non-profit type referring to Domestic Fraternal Societies
+          and Associations."
+    Nonprofit501c11:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c11: Non-profit type referring to Teachers' Retirement Fund
+          Associations."
+    Nonprofit501f:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501f: Non-profit type referring to Cooperative Service
+          Organizations."
+    Nonprofit501c5:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c5: Non-profit type referring to Labor, Agricultural and
+          Horticultural Organizations."
+    Nonprofit501c20:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c20: Non-profit type referring to Group Legal Services Plan
+          Organizations."
+    Nonprofit501c6:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c6: Non-profit type referring to Business Leagues, Chambers of
+          Commerce, Real Estate Boards."
+    Nonprofit527:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit527: Non-profit type referring to Political organizations."
+    Nonprofit501c19:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c19: Non-profit type referring to Post or Organization of Past
+          or Present Members of the Armed Forces."
+    Nonprofit501c16:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c16: Non-profit type referring to Cooperative Organizations to
+          Finance Crop Operations."
+    Nonprofit501c24:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c24: Non-profit type referring to Section 4049 ERISA Trusts."
+    Nonprofit501q:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501q: Non-profit type referring to Credit Counseling
+          Organizations."
+    Nonprofit501c22:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c22: Non-profit type referring to Withdrawal Liability Payment
+          Funds."
+    Nonprofit501c17:
+      type: schema:USNonprofitType
+      documentation:
+        en: "Nonprofit501c17: Non-profit type referring to Supplemental Unemployment
+          Benefit Trusts."

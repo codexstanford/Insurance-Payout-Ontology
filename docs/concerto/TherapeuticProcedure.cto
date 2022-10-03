@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalEntity from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalEntity.cto
+import org.codex.insurance.core.Drug from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Drug.cto
+import org.codex.insurance.core.DoseSchedule from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DoseSchedule.cto
+
+
+concept TherapeuticProcedure extends MedicalProcedure {
+  o MedicalEntity adverseOutcome
+  o Drug drug
+  o DoseSchedule doseSchedule
+}

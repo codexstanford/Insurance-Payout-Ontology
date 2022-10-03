@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.Place,string,PostalAddress from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place,string,PostalAddress.cto
+
+
+concept ArchiveComponent extends CreativeWork {
+  o Place,string,PostalAddress [object Object]
+}

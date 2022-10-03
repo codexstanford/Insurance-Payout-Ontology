@@ -1,0 +1,21 @@
+namespace undefined
+
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
+import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
+import org.codex.insurance.core.string,Thing from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Thing.cto
+import org.codex.insurance.core.number,MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,MonetaryAmount.cto
+import org.codex.insurance.core.RepaymentSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/RepaymentSpecification.cto
+
+
+concept LoanOrCredit extends FinancialProduct {
+  o Boolean renegotiableLoan
+  o string,string loanType
+  o Boolean recourseLoan
+  o QuantitativeValue loanTerm
+  o Duration gracePeriod
+  o string,Thing requiredCollateral
+  o String currency
+  o number,MonetaryAmount amount
+  o RepaymentSpecification loanRepaymentForm
+}

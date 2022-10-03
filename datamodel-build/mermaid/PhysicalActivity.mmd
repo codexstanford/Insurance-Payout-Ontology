@@ -1,0 +1,14 @@
+classDiagram
+  PhysicalActivity -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+PhysicalActivity -- AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy
+
+
+LifestyleModification <|-- PhysicalActivity
+class PhysicalActivity {
+
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  string pathophysiology
+  AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy associatedAnatomy
+  string epidemiology
+
+}

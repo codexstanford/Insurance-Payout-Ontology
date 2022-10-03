@@ -1,0 +1,110 @@
+HealthAspectEnumeration:
+  type: enum
+  documentation:
+    en: HealthAspectEnumeration enumerates several aspects of health content online,
+      each of which might be described using [[hasHealthAspect]] and
+      [[HealthTopicContent]].
+  inherit: Enumeration
+  values:
+    SideEffectsHealthAspect:
+      documentation:
+        en: Side effects that can be observed from the usage of the topic.
+    AllergiesHealthAspect:
+      documentation:
+        en: Content about the allergy-related aspects of a health topic.
+    BenefitsHealthAspect:
+      documentation:
+        en: Content about the benefits and advantages of usage or utilization of topic.
+    SymptomsHealthAspect:
+      documentation:
+        en: Symptoms or related symptoms of a Topic.
+    StagesHealthAspect:
+      documentation:
+        en: Stages that can be observed from a topic.
+    PrognosisHealthAspect:
+      documentation:
+        en: Typical progression and happenings of life course of the topic.
+    HowItWorksHealthAspect:
+      documentation:
+        en: Content that discusses and explains how a particular health-related topic
+          works, e.g. in terms of mechanisms and underlying science.
+    PregnancyHealthAspect:
+      documentation:
+        en: Content discussing pregnancy-related aspects of a health topic.
+    SelfCareHealthAspect:
+      documentation:
+        en: Self care actions or measures that can be taken to sooth, health or avoid a
+          topic. This may be carried at home and can be carried/managed by the
+          person itself.
+    SeeDoctorHealthAspect:
+      documentation:
+        en: Information about questions that may be asked, when to see a professional,
+          measures before seeing a doctor or content about the first
+          consultation.
+    TreatmentsHealthAspect:
+      documentation:
+        en: Treatments or related therapies for a Topic.
+    HowOrWhereHealthAspect:
+      documentation:
+        en: Information about how or where to find a topic. Also may contain location
+          data that can be used for where to look for help if the topic is
+          observed.
+    OverviewHealthAspect:
+      documentation:
+        en: Overview of the content. Contains a summarized view of the topic with the
+          most relevant information for an introduction.
+    EffectivenessHealthAspect:
+      documentation:
+        en: Content about the effectiveness-related aspects of a health topic.
+    TypesHealthAspect:
+      documentation:
+        en: Categorization and other types related to a topic.
+    ContagiousnessHealthAspect:
+      documentation:
+        en: Content about contagion mechanisms and contagiousness information over the
+          topic.
+    SafetyHealthAspect:
+      documentation:
+        en: Content about the safety-related aspects of a health topic.
+    PreventionHealthAspect:
+      documentation:
+        en: Information about actions or measures that can be taken to avoid getting the
+          topic or reaching a critical situation related to the topic.
+    LivingWithHealthAspect:
+      documentation:
+        en: Information about coping or life related to the topic.
+    ScreeningHealthAspect:
+      documentation:
+        en: Content about how to screen or further filter a topic.
+    MayTreatHealthAspect:
+      documentation:
+        en: Related topics may be treated by a Topic.
+    UsageOrScheduleHealthAspect:
+      documentation:
+        en: Content about how, when, frequency and dosage of a topic.
+    RisksOrComplicationsHealthAspect:
+      documentation:
+        en: Information about the risk factors and possible complications that may
+          follow a topic.
+    IngredientsHealthAspect:
+      documentation:
+        en: Content discussing ingredients-related aspects of a health topic.
+    CausesHealthAspect:
+      documentation:
+        en: Information about the causes and main actions that gave rise to the topic.
+    GettingAccessHealthAspect:
+      documentation:
+        en: Content that discusses practical and policy aspects for getting access to
+          specific kinds of healthcare (e.g. distribution mechanisms for
+          vaccines).
+    PatientExperienceHealthAspect:
+      documentation:
+        en: Content about the real life experience of patients or people that have lived
+          a similar experience about the topic. May be forums, topics, Q-and-A
+          and related material.
+    RelatedTopicsHealthAspect:
+      documentation:
+        en: Other prominent or relevant topics tied to the main topic.
+    MisconceptionsHealthAspect:
+      documentation:
+        en: Content about common misconceptions and myths that are related to a topic.

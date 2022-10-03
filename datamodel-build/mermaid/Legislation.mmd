@@ -1,0 +1,30 @@
+classDiagram
+  Legislation -- Legislation
+Legislation -- LegalForceStatus
+Legislation -- CategoryCode,string
+Legislation -- string,AdministrativeArea
+Legislation -- string,string
+Legislation -- Organization,Person
+Legislation -- AdministrativeArea,string
+Legislation -- date
+Legislation -- Person,Organization
+
+
+CreativeWork <|-- Legislation
+class Legislation {
+
+  Legislation legislationTransposes
+  LegalForceStatus legislationLegalForce
+  CategoryCode,string legislationType
+  string,AdministrativeArea jurisdiction
+  string,string legislationIdentifier
+  Legislation legislationChanges
+  Organization,Person legislationResponsible
+  AdministrativeArea,string legislationJurisdiction
+  date legislationDate
+  Person,Organization legislationPassedBy
+  Legislation legislationConsolidates
+  Legislation legislationApplies
+  date legislationDateVersion
+
+}

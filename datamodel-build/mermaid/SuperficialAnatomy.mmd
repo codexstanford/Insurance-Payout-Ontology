@@ -1,0 +1,16 @@
+classDiagram
+  SuperficialAnatomy -- MedicalTherapy
+SuperficialAnatomy -- AnatomicalSystem,AnatomicalStructure
+SuperficialAnatomy -- MedicalCondition
+
+
+MedicalEntity <|-- SuperficialAnatomy
+class SuperficialAnatomy {
+
+  MedicalTherapy relatedTherapy
+  string significance
+  AnatomicalSystem,AnatomicalStructure relatedAnatomy
+  MedicalCondition relatedCondition
+  string associatedPathophysiology
+
+}

@@ -1,0 +1,43 @@
+LodgingReservation:
+  type: object
+  documentation:
+    en: "A reservation for lodging at a hotel, motel, inn, etc.\\n\\nNote: This type
+      is for information about actual reservations, e.g. in confirmation emails
+      or HTML pages with individual confirmations of reservations."
+  inherit: Reservation
+  properties:
+    lodgingUnitType:
+      type:
+        - QualitativeValue
+        - string
+      documentation:
+        en: Textual description of the unit type (including suite vs. room, size of bed,
+          etc.).
+    lodgingUnitDescription:
+      type: string
+      documentation:
+        en: A full description of the lodging unit.
+    checkoutTime:
+      type:
+        - dateTime
+        - time
+      documentation:
+        en: The latest someone may check out of a lodging establishment.
+    numAdults:
+      type:
+        - number
+        - QuantitativeValue
+      documentation:
+        en: The number of adults staying in the unit.
+    checkinTime:
+      type:
+        - dateTime
+        - time
+      documentation:
+        en: The earliest someone may check into a lodging establishment.
+    numChildren:
+      type:
+        - number
+        - QuantitativeValue
+      documentation:
+        en: The number of children staying in the unit.

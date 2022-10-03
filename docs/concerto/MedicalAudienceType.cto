@@ -1,0 +1,7 @@
+namespace undefined
+
+enum MedicalAudienceType {
+  o MedicalResearcher
+  o Clinician
+}
+

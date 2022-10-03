@@ -1,0 +1,16 @@
+classDiagram
+  TVEpisode -- Country
+TVEpisode -- string,string
+TVEpisode -- Language,string
+TVEpisode -- TVSeries
+
+
+Episode <|-- TVEpisode
+class TVEpisode {
+
+  Country countryOfOrigin
+  string,string titleEIDR
+  Language,string subtitleLanguage
+  TVSeries partOfTVSeries
+
+}

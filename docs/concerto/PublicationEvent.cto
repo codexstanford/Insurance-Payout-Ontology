@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+import org.codex.insurance.core.BroadcastService from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BroadcastService.cto
+
+
+concept PublicationEvent extends Event {
+  o Organization,Person publishedBy
+  o Boolean free
+  o BroadcastService publishedOn
+}

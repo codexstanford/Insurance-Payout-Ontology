@@ -1,0 +1,13 @@
+MediaReviewItem:
+  type: object
+  documentation:
+    en: Represents an item or group of closely related items treated as a unit for
+      the sake of evaluation in a [[MediaReview]]. Authorship etc. apply to the
+      items rather than to the curation/grouping or reviewing party.
+  inherit: CreativeWork
+  properties:
+    mediaItemAppearance:
+      type: MediaObject
+      documentation:
+        en: In the context of a [[MediaReview]], indicates specific media item(s) that
+          are grouped using a [[MediaReviewItem]].

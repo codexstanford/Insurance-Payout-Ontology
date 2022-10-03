@@ -1,0 +1,15 @@
+namespace undefined
+
+import org.codex.insurance.core.DefinedRegion from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedRegion.cto
+import org.codex.insurance.core.MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MonetaryAmount.cto
+import org.codex.insurance.core.MonetaryAmount,DeliveryChargeSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MonetaryAmount,DeliveryChargeSpecification.cto
+
+
+concept ShippingRateSettings extends StructuredValue {
+  o DefinedRegion shippingDestination
+  o Boolean doesNotShip
+  o String shippingLabel
+  o Boolean isUnlabelledFallback
+  o MonetaryAmount shippingRate
+  o MonetaryAmount,DeliveryChargeSpecification freeShippingThreshold
+}

@@ -1,0 +1,14 @@
+Artery:
+  type: object
+  documentation:
+    en: A type of blood vessel that specifically carries blood away from the heart.
+  inherit: Vessel
+  properties:
+    supplyTo:
+      type: AnatomicalStructure
+      documentation:
+        en: The area to which the artery supplies blood.
+    arterialBranch:
+      type: AnatomicalStructure
+      documentation:
+        en: The branches that comprise the arterial structure.

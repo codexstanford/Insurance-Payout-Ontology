@@ -1,0 +1,13 @@
+namespace undefined
+
+import org.codex.insurance.core.Gene from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Gene.cto
+import org.codex.insurance.core.BioChemEntity from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BioChemEntity.cto
+import org.codex.insurance.core.AnatomicalStructure,BioChemEntity,DefinedTerm,AnatomicalSystem from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AnatomicalStructure,BioChemEntity,DefinedTerm,AnatomicalSystem.cto
+
+
+concept Gene extends BioChemEntity {
+  o Gene alternativeOf
+  o String hasBioPolymerSequence
+  o BioChemEntity encodesBioChemEntity
+  o AnatomicalStructure,BioChemEntity,DefinedTerm,AnatomicalSystem expressedIn
+}

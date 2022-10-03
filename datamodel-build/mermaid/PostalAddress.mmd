@@ -1,0 +1,15 @@
+classDiagram
+  PostalAddress -- Country,string
+
+
+ContactPoint <|-- PostalAddress
+class PostalAddress {
+
+  Country,string addressCountry
+  string addressRegion
+  string addressLocality
+  string postalCode
+  string postOfficeBoxNumber
+  string streetAddress
+
+}

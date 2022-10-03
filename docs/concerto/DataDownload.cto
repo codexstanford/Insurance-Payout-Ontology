@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+
+
+concept DataDownload extends MediaObject {
+  o string,string measurementTechnique
+}

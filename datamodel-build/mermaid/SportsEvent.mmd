@@ -1,0 +1,15 @@
+classDiagram
+  SportsEvent -- Person,SportsTeam
+SportsEvent -- SportsTeam,Person
+SportsEvent -- string,string
+
+
+Event <|-- SportsEvent
+class SportsEvent {
+
+  Person,SportsTeam homeTeam
+  SportsTeam,Person awayTeam
+  Person,SportsTeam competitor
+  string,string sport
+
+}

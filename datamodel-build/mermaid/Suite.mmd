@@ -1,0 +1,14 @@
+classDiagram
+  Suite -- QuantitativeValue,number
+Suite -- BedDetails,string,BedType
+Suite -- QuantitativeValue
+
+
+Accommodation <|-- Suite
+class Suite {
+
+  QuantitativeValue,number numberOfRooms
+  BedDetails,string,BedType bed
+  QuantitativeValue occupancy
+
+}

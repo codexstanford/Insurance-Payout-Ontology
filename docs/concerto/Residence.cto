@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.FloorPlan from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/FloorPlan.cto
+
+
+concept Residence extends Place {
+  o FloorPlan accommodationFloorPlan
+}

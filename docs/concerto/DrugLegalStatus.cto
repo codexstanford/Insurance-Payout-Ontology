@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.AdministrativeArea from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea.cto
+
+
+concept DrugLegalStatus extends MedicalIntangible {
+  o AdministrativeArea applicableLocation
+}

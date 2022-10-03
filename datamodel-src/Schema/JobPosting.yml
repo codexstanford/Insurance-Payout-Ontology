@@ -1,0 +1,234 @@
+JobPosting:
+  type: object
+  documentation:
+    en: A listing that describes a job opening in a certain organization.
+  inherit: Intangible
+  properties:
+    employerOverview:
+      type: string
+      documentation:
+        en: A description of the employer, career opportunities and work environment for
+          this position.
+    estimatedSalary:
+      type:
+        - MonetaryAmountDistribution
+        - MonetaryAmount
+        - number
+      documentation:
+        en: An estimated salary for a job posting or occupation, based on a variety of
+          variables including, but not limited to industry, job title, and
+          location. Estimated salaries  are often computed by outside
+          organizations rather than the hiring organization, who may not have
+          committed to the estimated value.
+    jobLocationType:
+      type: string
+      documentation:
+        en: A description of the job location (e.g TELECOMMUTE for telecommute jobs).
+    responsibilities:
+      type: string
+      documentation:
+        en: Responsibilities associated with this role or Occupation.
+    jobLocation:
+      type: Place
+      documentation:
+        en: A (typically single) geographic location associated with the job position.
+    physicalRequirement:
+      type:
+        - string
+        - string
+        - DefinedTerm
+      documentation:
+        en: A description of the types of physical activity associated with the job.
+          Defined terms such as those in O*net may be used, but note that there
+          is no way to specify the level of ability as well as its nature when
+          using a defined term.
+    incentives:
+      type: string
+      documentation:
+        en: Description of bonus and commission compensation aspects of the job.
+    directApply:
+      type: boolean
+      documentation:
+        en: Indicates whether an [[url]] that is associated with a [[JobPosting]]
+          enables direct application for the job, via the posting website. A job
+          posting is considered to have directApply of [[True]] if an
+          application process for the specified job can be directly initiated
+          via the url(s) given (noting that e.g. multiple internet domains might
+          nevertheless be involved at an implementation level). A value of
+          [[False]] is appropriate if there is no clear path to applying
+          directly online for the specified job, navigating directly from the
+          JobPosting url(s) supplied.
+    sensoryRequirement:
+      type:
+        - DefinedTerm
+        - string
+        - string
+      documentation:
+        en: A description of any sensory requirements and levels necessary to function
+          on the job, including hearing and vision. Defined terms such as those
+          in O*net may be used, but note that there is no way to specify the
+          level of ability as well as its nature when using a defined term.
+    applicantLocationRequirements:
+      type: AdministrativeArea
+      documentation:
+        en: "The location(s) applicants can apply from. This is usually used for
+          telecommuting jobs where the applicant does not need to be in a
+          physical office. Note: This should not be used for citizenship or work
+          visa requirements."
+    workHours:
+      type: string
+      documentation:
+        en: The typical working hours for this job (e.g. 1st shift, night shift,
+          8am-5pm).
+    jobStartDate:
+      type:
+        - date
+        - string
+      documentation:
+        en: The date on which a successful applicant for this job would be expected to
+          start work. Choose a specific date in the future or use the
+          jobImmediateStart property to indicate the position is to be filled as
+          soon as possible.
+    employmentType:
+      type: string
+      documentation:
+        en: Type of employment (e.g. full-time, part-time, contract, temporary,
+          seasonal, internship).
+    specialCommitments:
+      type: string
+      documentation:
+        en: Any special commitments associated with this job posting. Valid entries
+          include VeteranCommit, MilitarySpouseCommit, etc.
+    applicationContact:
+      type: ContactPoint
+      documentation:
+        en: Contact details for further information relevant to this job posting.
+    incentiveCompensation:
+      type: string
+      documentation:
+        en: Description of bonus and commission compensation aspects of the job.
+    relevantOccupation:
+      type: Occupation
+      documentation:
+        en: The Occupation for the JobPosting.
+    totalJobOpenings:
+      type: number
+      documentation:
+        en: The number of positions open for this job posting. Use a positive integer.
+          Do not use if the number of positions is unclear or not known.
+    experienceRequirements:
+      type:
+        - string
+        - OccupationalExperienceRequirements
+      documentation:
+        en: Description of skills and experience needed for the position or Occupation.
+    jobBenefits:
+      type: string
+      documentation:
+        en: Description of benefits associated with the job.
+    salaryCurrency:
+      type: string
+      documentation:
+        en: The currency (coded using [ISO 4217](http://en.wikipedia.org/wiki/ISO_4217)
+          ) used for the main salary information in this job posting or for this
+          employee.
+    experienceInPlaceOfEducation:
+      type: boolean
+      documentation:
+        en: Indicates whether a [[JobPosting]] will accept experience (as indicated by
+          [[OccupationalExperienceRequirements]]) in place of its formal
+          educational qualifications (as indicated by
+          [[educationRequirements]]). If true, indicates that satisfying one of
+          these requirements is sufficient.
+    securityClearanceRequirement:
+      type:
+        - string
+        - string
+      documentation:
+        en: A description of any security clearance requirements of the job.
+    eligibilityToWorkRequirement:
+      type: string
+      documentation:
+        en: The legal requirements such as citizenship, visa and other documentation
+          required for an applicant to this job.
+    educationRequirements:
+      type:
+        - EducationalOccupationalCredential
+        - string
+      documentation:
+        en: Educational background needed for the position or Occupation.
+    benefits:
+      type: string
+      documentation:
+        en: Description of benefits associated with the job.
+    industry:
+      type:
+        - DefinedTerm
+        - string
+      documentation:
+        en: The industry associated with the job position.
+    baseSalary:
+      type:
+        - number
+        - PriceSpecification
+        - MonetaryAmount
+      documentation:
+        en: The base salary of the job or of an employee in an EmployeeRole.
+    datePosted:
+      type:
+        - date
+        - dateTime
+      documentation:
+        en: Publication date of an online listing.
+    skills:
+      type:
+        - string
+        - DefinedTerm
+      documentation:
+        en: A statement of knowledge, skill, ability, task or any other assertion
+          expressing a competency that is desired or required to fulfill this
+          role or to work in this occupation.
+    title:
+      type: string
+      documentation:
+        en: The title of the job.
+    hiringOrganization:
+      type: Organization
+      documentation:
+        en: Organization offering the job position.
+    jobImmediateStart:
+      type: boolean
+      documentation:
+        en: An indicator as to whether a position is available for an immediate start.
+    validThrough:
+      type:
+        - dateTime
+        - date
+      documentation:
+        en: The date after when the item is not valid. For example the end of an offer,
+          salary period, or a period of opening hours.
+    employmentUnit:
+      type: Organization
+      documentation:
+        en: Indicates the department, unit and/or facility where the employee reports
+          and/or in which the job is to be performed.
+    qualifications:
+      type:
+        - string
+        - EducationalOccupationalCredential
+      documentation:
+        en: Specific qualifications required for this role or Occupation.
+    occupationalCategory:
+      type:
+        - CategoryCode
+        - string
+      documentation:
+        en: >-
+          A category describing the job, preferably using a term from a taxonomy such
+          as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html),
+          [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/)
+          or similar, with the property repeated for each applicable value.
+          Ideally the taxonomy should be identified, and both the textual label
+          and formal code for the category should be provided.\n
+
+          Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.

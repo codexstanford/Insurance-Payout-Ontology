@@ -1,0 +1,65 @@
+ParcelDelivery:
+  type: object
+  documentation:
+    en: The delivery of a parcel either via the postal service or a commercial
+      service.
+  inherit: Intangible
+  properties:
+    originAddress:
+      type: PostalAddress
+      documentation:
+        en: Shipper's address.
+    trackingNumber:
+      type: string
+      documentation:
+        en: Shipper tracking number.
+    itemShipped:
+      type: Product
+      documentation:
+        en: Item(s) being shipped.
+    provider:
+      type:
+        - Organization
+        - Person
+      documentation:
+        en: The service provider, service operator, or service performer; the goods
+          producer. Another party (a seller) may offer those services or goods
+          on behalf of the provider. A provider may also serve as the seller.
+    trackingUrl:
+      type: string
+      documentation:
+        en: Tracking url for the parcel delivery.
+    deliveryAddress:
+      type: PostalAddress
+      documentation:
+        en: Destination address.
+    expectedArrivalUntil:
+      type:
+        - date
+        - dateTime
+      documentation:
+        en: The latest date the package may arrive.
+    deliveryStatus:
+      type: DeliveryEvent
+      documentation:
+        en: New entry added as the package passes through each leg of its journey (from
+          shipment to final delivery).
+    expectedArrivalFrom:
+      type:
+        - date
+        - dateTime
+      documentation:
+        en: The earliest date the package may arrive.
+    carrier:
+      type: Organization
+      documentation:
+        en: "'carrier' is an out-dated term indicating the 'provider' for parcel
+          delivery and flights."
+    hasDeliveryMethod:
+      type: DeliveryMethod
+      documentation:
+        en: Method used for delivery or shipping.
+    partOfOrder:
+      type: Order
+      documentation:
+        en: The overall order the items in this delivery were included in.

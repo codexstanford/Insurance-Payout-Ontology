@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.Country from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Country.cto
+import org.codex.insurance.core.TVSeries from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/TVSeries.cto
+
+
+concept TVSeason extendsTVSeasonTVSeason {
+  o Country countryOfOrigin
+  o TVSeries partOfTVSeries
+}

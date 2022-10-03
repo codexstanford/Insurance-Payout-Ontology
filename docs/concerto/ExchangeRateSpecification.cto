@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.UnitPriceSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/UnitPriceSpecification.cto
+import org.codex.insurance.core.number,MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,MonetaryAmount.cto
+
+
+concept ExchangeRateSpecification extends StructuredValue {
+  o UnitPriceSpecification currentExchangeRate
+  o number,MonetaryAmount exchangeRateSpread
+  o String currency
+}

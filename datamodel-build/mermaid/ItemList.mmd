@@ -1,0 +1,13 @@
+classDiagram
+  ItemList -- Thing,ListItem,string
+ItemList -- string,ItemListOrderType
+
+
+Intangible <|-- ItemList
+class ItemList {
+
+  number numberOfItems
+  Thing,ListItem,string itemListElement
+  string,ItemListOrderType itemListOrder
+
+}

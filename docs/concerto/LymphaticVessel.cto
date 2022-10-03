@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.Vessel from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Vessel.cto
+import org.codex.insurance.core.AnatomicalSystem,AnatomicalStructure from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AnatomicalSystem,AnatomicalStructure.cto
+
+
+concept LymphaticVessel extends Vessel {
+  o Vessel runsTo
+  o AnatomicalSystem,AnatomicalStructure regionDrained
+  o Vessel originatesFrom
+}

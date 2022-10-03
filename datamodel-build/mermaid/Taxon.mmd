@@ -1,0 +1,15 @@
+classDiagram
+  Taxon -- string,Taxon,string
+Taxon -- PropertyValue,string,string
+Taxon -- DefinedTerm
+
+
+Thing <|-- Taxon
+class Taxon {
+
+  string,Taxon,string parentTaxon
+  PropertyValue,string,string taxonRank
+  string,Taxon,string childTaxon
+  DefinedTerm hasDefinedTerm
+
+}

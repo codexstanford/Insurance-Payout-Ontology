@@ -1,0 +1,13 @@
+classDiagram
+  RsvpAction -- RsvpResponseType
+RsvpAction -- Comment
+
+
+InformAction <|-- RsvpAction
+class RsvpAction {
+
+  RsvpResponseType rsvpResponse
+  Comment comment
+  number additionalNumberOfGuests
+
+}

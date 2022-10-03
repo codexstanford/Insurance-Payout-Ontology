@@ -1,0 +1,20 @@
+InsurancePolicy:
+  type: object
+  documentation:
+    en: "Represent an Insurance product."
+  properties:
+    coverages:
+      type: List
+      of: Coverage
+      documentation:
+        en: "A product contain one or multiple coverage, describing what is the insurer promise in what situation"
+    riskObjects:
+      type: List
+      of: RiskObject
+      documentation:
+        en: "Risk objects describe what specific things are insured in the contract."
+    specifics:
+      type: List
+      of: Specific
+      documentation:
+        en: "The specific named values that have been underwritten in the product. Ex : InsuredHomeValue"

@@ -1,0 +1,14 @@
+HowToSupply:
+  type: object
+  documentation:
+    en: A supply consumed when performing the instructions for how to achieve a
+      result.
+  inherit: HowToItem
+  properties:
+    estimatedCost:
+      type:
+        - string
+        - MonetaryAmount
+      documentation:
+        en: The estimated cost of the supply or supplies consumed when performing
+          instructions.

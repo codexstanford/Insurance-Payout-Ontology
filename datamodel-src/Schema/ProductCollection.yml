@@ -1,0 +1,14 @@
+ProductCollection:
+  type: object
+  documentation:
+    en: A set of products (either [[ProductGroup]]s or specific variants) that are
+      listed together e.g. in an [[Offer]].
+  inherit:
+    - Product
+    - Collection
+  properties:
+    includesObject:
+      type: TypeAndQuantityNode
+      documentation:
+        en: This links to a node or nodes indicating the exact quantity of the products
+          included in  an [[Offer]] or [[ProductCollection]].

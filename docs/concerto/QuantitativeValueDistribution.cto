@@ -1,0 +1,13 @@
+namespace undefined
+
+import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
+
+
+concept QuantitativeValueDistribution extends StructuredValue {
+  o Double percentile75
+  o Double median
+  o Double percentile10
+  o Double percentile25
+  o Double percentile90
+  o Duration duration
+}

@@ -1,0 +1,21 @@
+classDiagram
+  AnatomicalStructure -- AnatomicalStructure
+AnatomicalStructure -- AnatomicalSystem
+AnatomicalStructure -- MedicalTherapy
+AnatomicalStructure -- ImageObject
+AnatomicalStructure -- MedicalCondition
+
+
+MedicalEntity <|-- AnatomicalStructure
+class AnatomicalStructure {
+
+  string bodyLocation
+  AnatomicalStructure connectedTo
+  AnatomicalSystem partOfSystem
+  MedicalTherapy relatedTherapy
+  ImageObject diagram
+  MedicalCondition relatedCondition
+  AnatomicalStructure subStructure
+  string associatedPathophysiology
+
+}

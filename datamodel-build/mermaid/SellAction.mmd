@@ -1,0 +1,12 @@
+classDiagram
+  SellAction -- WarrantyPromise
+SellAction -- Person,Organization
+
+
+TradeAction <|-- SellAction
+class SellAction {
+
+  WarrantyPromise warrantyPromise
+  Person,Organization buyer
+
+}

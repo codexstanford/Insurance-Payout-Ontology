@@ -1,0 +1,14 @@
+classDiagram
+  CookAction -- Recipe
+CookAction -- Place,FoodEstablishment
+CookAction -- FoodEvent
+
+
+CreateAction <|-- CookAction
+class CookAction {
+
+  Recipe recipe
+  Place,FoodEstablishment foodEstablishment
+  FoodEvent foodEvent
+
+}

@@ -1,0 +1,13 @@
+classDiagram
+  InsurancePerson -- PersonRelationToPolicyHolderEnum
+
+
+Person <|-- InsurancePerson
+class InsurancePerson {
+
+  PersonRelationToPolicyHolderEnum relationToPolicyHolder
+  string firstName
+  string lastName
+  number age
+
+}

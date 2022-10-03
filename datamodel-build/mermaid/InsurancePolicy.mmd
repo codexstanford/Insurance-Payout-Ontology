@@ -1,0 +1,13 @@
+classDiagram
+  InsurancePolicy -- Coverage
+InsurancePolicy -- RiskObject
+InsurancePolicy -- Specific
+
+
+class InsurancePolicy {
+
+  Coverage[] coverages
+  RiskObject[] riskObjects
+  Specific[] specifics
+
+}

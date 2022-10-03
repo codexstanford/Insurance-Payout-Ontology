@@ -1,0 +1,33 @@
+classDiagram
+  MedicalCondition -- MedicalTherapy
+MedicalCondition -- string,EventStatusType,MedicalStudyStatus
+MedicalCondition -- DDxElement
+MedicalCondition -- MedicalConditionStage
+MedicalCondition -- Drug
+MedicalCondition -- AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy
+MedicalCondition -- MedicalSignOrSymptom
+MedicalCondition -- MedicalTest
+MedicalCondition -- MedicalRiskFactor
+
+
+MedicalEntity <|-- MedicalCondition
+class MedicalCondition {
+
+  string possibleComplication
+  string naturalProgression
+  MedicalTherapy primaryPrevention
+  string,EventStatusType,MedicalStudyStatus status
+  DDxElement differentialDiagnosis
+  MedicalConditionStage stage
+  string pathophysiology
+  Drug drug
+  MedicalTherapy secondaryPrevention
+  AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy associatedAnatomy
+  MedicalSignOrSymptom signOrSymptom
+  MedicalTest typicalTest
+  string epidemiology
+  MedicalRiskFactor riskFactor
+  string expectedPrognosis
+  MedicalTherapy possibleTreatment
+
+}

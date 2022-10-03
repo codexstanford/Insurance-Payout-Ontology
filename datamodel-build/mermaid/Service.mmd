@@ -1,0 +1,50 @@
+classDiagram
+  Service -- Review
+Service -- Audience
+Service -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+Service -- OpeningHoursSpecification
+Service -- Offer,Demand
+Service -- Thing
+Service -- Organization,Person
+Service -- string,string
+Service -- Person,Organization
+Service -- AggregateRating
+Service -- Service,Product
+Service -- ServiceChannel
+Service -- Organization,Brand
+Service -- string,ImageObject
+Service -- GeoShape,AdministrativeArea,Place
+Service -- GovernmentBenefitsType,string
+Service -- AdministrativeArea,GeoShape,string,Place
+Service -- OfferCatalog
+
+
+Intangible <|-- Service
+class Service {
+
+  Review review
+  string award
+  Audience serviceAudience
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  OpeningHoursSpecification hoursAvailable
+  Audience audience
+  Offer,Demand offers
+  Thing serviceOutput
+  Organization,Person provider
+  string,string termsOfService
+  string providerMobility
+  Person,Organization broker
+  AggregateRating aggregateRating
+  Service,Product isSimilarTo
+  ServiceChannel availableChannel
+  string slogan
+  Organization,Brand brand
+  string,ImageObject logo
+  Thing produces
+  GeoShape,AdministrativeArea,Place serviceArea
+  GovernmentBenefitsType,string serviceType
+  AdministrativeArea,GeoShape,string,Place areaServed
+  Service,Product isRelatedTo
+  OfferCatalog hasOfferCatalog
+
+}

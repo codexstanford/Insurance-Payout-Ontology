@@ -1,0 +1,7 @@
+namespace undefined
+
+enum GameAvailabilityEnumeration {
+  o FullGameAvailability
+  o DemoGameAvailability
+}
+

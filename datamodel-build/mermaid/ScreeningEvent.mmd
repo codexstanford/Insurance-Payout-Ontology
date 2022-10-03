@@ -1,0 +1,13 @@
+classDiagram
+  ScreeningEvent -- Language,string
+ScreeningEvent -- Movie
+
+
+Event <|-- ScreeningEvent
+class ScreeningEvent {
+
+  Language,string subtitleLanguage
+  string videoFormat
+  Movie workPresented
+
+}

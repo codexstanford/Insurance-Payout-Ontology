@@ -1,0 +1,12 @@
+classDiagram
+  MedicalOrganization -- MedicalSpecialty
+
+
+Organization <|-- MedicalOrganization
+class MedicalOrganization {
+
+  boolean isAcceptingNewPatients
+  string healthPlanNetworkId
+  MedicalSpecialty medicalSpecialty
+
+}

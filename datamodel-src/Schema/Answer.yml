@@ -1,0 +1,15 @@
+Answer:
+  type: object
+  documentation:
+    en: An answer offered to a question; perhaps correct, perhaps opinionated or
+      wrong.
+  inherit: Comment
+  properties:
+    answerExplanation:
+      type:
+        - WebContent
+        - Comment
+      documentation:
+        en: "A step-by-step or full explanation about Answer. Can outline how this
+          Answer was achieved or contain more broad clarification or statement
+          about it. "

@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept Protein extends BioChemEntity {
+  o String hasBioPolymerSequence
+}

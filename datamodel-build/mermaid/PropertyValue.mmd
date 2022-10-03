@@ -1,0 +1,19 @@
+classDiagram
+  PropertyValue -- Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue
+PropertyValue -- string,string
+PropertyValue -- string,number,StructuredValue,boolean
+
+
+StructuredValue <|-- PropertyValue
+class PropertyValue {
+
+  Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue valueReference
+  string,string propertyID
+  number maxValue
+  string unitText
+  string,string measurementTechnique
+  number minValue
+  string,number,StructuredValue,boolean value
+  string,string unitCode
+
+}

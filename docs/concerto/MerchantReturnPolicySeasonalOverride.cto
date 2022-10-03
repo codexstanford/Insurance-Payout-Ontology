@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.MerchantReturnEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MerchantReturnEnumeration.cto
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
+import org.codex.insurance.core.dateTime,number,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,number,date.cto
+
+
+concept MerchantReturnPolicySeasonalOverride extends Intangible {
+  o MerchantReturnEnumeration returnPolicyCategory
+  o dateTime,date startDate
+  o date,dateTime endDate
+  o dateTime,number,date merchantReturnDays
+}

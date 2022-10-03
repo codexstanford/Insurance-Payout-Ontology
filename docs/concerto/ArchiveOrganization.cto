@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.ArchiveComponent from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ArchiveComponent.cto
+
+
+concept ArchiveOrganization extends LocalBusiness {
+  o ArchiveComponent [object Object]
+}

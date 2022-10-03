@@ -1,0 +1,34 @@
+namespace undefined
+
+enum HealthAspectEnumeration {
+  o SideEffectsHealthAspect
+  o AllergiesHealthAspect
+  o BenefitsHealthAspect
+  o SymptomsHealthAspect
+  o StagesHealthAspect
+  o PrognosisHealthAspect
+  o HowItWorksHealthAspect
+  o PregnancyHealthAspect
+  o SelfCareHealthAspect
+  o SeeDoctorHealthAspect
+  o TreatmentsHealthAspect
+  o HowOrWhereHealthAspect
+  o OverviewHealthAspect
+  o EffectivenessHealthAspect
+  o TypesHealthAspect
+  o ContagiousnessHealthAspect
+  o SafetyHealthAspect
+  o PreventionHealthAspect
+  o LivingWithHealthAspect
+  o ScreeningHealthAspect
+  o MayTreatHealthAspect
+  o UsageOrScheduleHealthAspect
+  o RisksOrComplicationsHealthAspect
+  o IngredientsHealthAspect
+  o CausesHealthAspect
+  o GettingAccessHealthAspect
+  o PatientExperienceHealthAspect
+  o RelatedTopicsHealthAspect
+  o MisconceptionsHealthAspect
+}
+

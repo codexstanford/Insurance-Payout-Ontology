@@ -1,0 +1,13 @@
+MedicalDevicePurpose:
+  type: enum
+  documentation:
+    en: Categories of medical devices, organized by the purpose or intended use of
+      the device.
+  inherit: MedicalEnumeration
+  values:
+    Therapeutic:
+      documentation:
+        en: A medical device used for therapeutic purposes.
+    Diagnostic:
+      documentation:
+        en: A medical device used for diagnostic purposes.

@@ -1,0 +1,19 @@
+classDiagram
+  LearningResource -- DefinedTerm,string
+LearningResource -- string,DefinedTerm,string
+LearningResource -- string,DefinedTerm
+LearningResource -- AlignmentObject
+
+
+CreativeWork <|-- LearningResource
+class LearningResource {
+
+  DefinedTerm,string teaches
+  string,DefinedTerm,string educationalLevel
+  string,DefinedTerm assesses
+  DefinedTerm,string educationalUse
+  AlignmentObject educationalAlignment
+  string,DefinedTerm,string competencyRequired
+  DefinedTerm,string learningResourceType
+
+}

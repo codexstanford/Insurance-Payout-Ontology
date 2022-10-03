@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.string,string,PhysicalActivityCategory,Thing,CategoryCode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,PhysicalActivityCategory,Thing,CategoryCode.cto
+import org.codex.insurance.core.AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy.cto
+
+
+concept PhysicalActivity extends LifestyleModification {
+  o string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  o String pathophysiology
+  o AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy associatedAnatomy
+  o String epidemiology
+}

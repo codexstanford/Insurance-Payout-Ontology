@@ -1,0 +1,10 @@
+classDiagram
+  PayAction -- Person,Audience,ContactPoint,Organization
+
+
+TradeAction <|-- PayAction
+class PayAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}

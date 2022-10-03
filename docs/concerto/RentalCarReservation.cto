@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place.cto
+import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
+
+
+concept RentalCarReservation extends Reservation {
+  o Place dropoffLocation
+  o dateTime dropoffTime
+  o dateTime pickupTime
+  o Place pickupLocation
+}

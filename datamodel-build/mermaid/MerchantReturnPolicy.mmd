@@ -1,0 +1,42 @@
+classDiagram
+  MerchantReturnPolicy -- MerchantReturnEnumeration
+MerchantReturnPolicy -- Country,string
+MerchantReturnPolicy -- MonetaryAmount,number
+MerchantReturnPolicy -- MonetaryAmount
+MerchantReturnPolicy -- ReturnFeesEnumeration
+MerchantReturnPolicy -- OfferItemCondition
+MerchantReturnPolicy -- ReturnLabelSourceEnumeration
+MerchantReturnPolicy -- RefundTypeEnumeration
+MerchantReturnPolicy -- dateTime,number,date
+MerchantReturnPolicy -- ReturnMethodEnumeration
+MerchantReturnPolicy -- PropertyValue
+MerchantReturnPolicy -- MerchantReturnPolicySeasonalOverride
+MerchantReturnPolicy -- string,Country
+
+
+Intangible <|-- MerchantReturnPolicy
+class MerchantReturnPolicy {
+
+  MerchantReturnEnumeration returnPolicyCategory
+  Country,string returnPolicyCountry
+  string merchantReturnLink
+  MonetaryAmount,number restockingFee
+  MonetaryAmount itemDefectReturnShippingFeesAmount
+  ReturnFeesEnumeration itemDefectReturnFees
+  boolean inStoreReturnsOffered
+  OfferItemCondition itemCondition
+  ReturnLabelSourceEnumeration itemDefectReturnLabelSource
+  ReturnLabelSourceEnumeration returnLabelSource
+  MonetaryAmount customerRemorseReturnShippingFeesAmount
+  RefundTypeEnumeration refundType
+  MonetaryAmount returnShippingFeesAmount
+  dateTime,number,date merchantReturnDays
+  ReturnMethodEnumeration returnMethod
+  PropertyValue additionalProperty
+  ReturnLabelSourceEnumeration customerRemorseReturnLabelSource
+  ReturnFeesEnumeration customerRemorseReturnFees
+  MerchantReturnPolicySeasonalOverride returnPolicySeasonalOverride
+  string,Country applicableCountry
+  ReturnFeesEnumeration returnFees
+
+}

@@ -1,0 +1,24 @@
+InfectiousDisease:
+  type: object
+  documentation:
+    en: An infectious disease is a clinically evident human disease resulting from
+      the presence of pathogenic microbial agents, like pathogenic viruses,
+      pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions.
+      To be considered an infectious disease, such pathogens are known to be
+      able to cause this disease.
+  inherit: MedicalCondition
+  properties:
+    infectiousAgentClass:
+      type: InfectiousAgentClass
+      documentation:
+        en: The class of infectious agent (bacteria, prion, etc.) that causes the
+          disease.
+    infectiousAgent:
+      type: string
+      documentation:
+        en: The actual infectious agent, such as a specific bacterium.
+    transmissionMethod:
+      type: string
+      documentation:
+        en: How the disease spreads, either as a route or vector, for example 'direct
+          contact', 'Aedes aegypti', etc.

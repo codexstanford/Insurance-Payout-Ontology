@@ -1,0 +1,17 @@
+namespace undefined
+
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.VideoObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/VideoObject.cto
+import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
+import org.codex.insurance.core.Person,MusicGroup from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,MusicGroup.cto
+
+
+concept MovieSeries extends CreativeWorkSeries {
+  o Person director
+  o Person actor
+  o VideoObject trailer
+  o Organization productionCompany
+  o Person actors
+  o Person,MusicGroup musicBy
+  o Person directors
+}

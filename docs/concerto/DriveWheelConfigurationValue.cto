@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.schema:DriveWheelConfigurationValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/schema:DriveWheelConfigurationValue.cto
+
+
+concept DriveWheelConfigurationValue extends QualitativeValue {
+  o schema:DriveWheelConfigurationValue FrontWheelDriveConfiguration
+  o schema:DriveWheelConfigurationValue FourWheelDriveConfiguration
+  o schema:DriveWheelConfigurationValue AllWheelDriveConfiguration
+  o schema:DriveWheelConfigurationValue RearWheelDriveConfiguration
+}

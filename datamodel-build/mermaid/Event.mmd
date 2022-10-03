@@ -1,0 +1,71 @@
+classDiagram
+  Event -- Event
+Event -- EventAttendanceModeEnumeration
+Event -- Review
+Event -- Person,Organization
+Event -- dateTime,date
+Event -- Organization,Person
+Event -- Person
+Event -- Grant
+Event -- DefinedTerm,string,string
+Event -- Audience
+Event -- Offer,Demand
+Event -- EventStatusType
+Event -- date,dateTime
+Event -- AggregateRating
+Event -- PostalAddress,string,Place,VirtualLocation
+Event -- Duration
+Event -- date
+Event -- CreativeWork
+Event -- time,dateTime
+Event -- string,Language
+Event -- Thing
+Event -- Schedule
+
+
+Thing <|-- Event
+class Event {
+
+  Event superEvent
+  EventAttendanceModeEnumeration eventAttendanceMode
+  Review review
+  Person,Organization translator
+  dateTime,date startDate
+  Organization,Person composer
+  number maximumAttendeeCapacity
+  number maximumVirtualAttendeeCapacity
+  Person director
+  Grant funding
+  DefinedTerm,string,string keywords
+  Audience audience
+  Offer,Demand offers
+  Event subEvent
+  Person actor
+  EventStatusType eventStatus
+  date,dateTime endDate
+  Organization,Person funder
+  Organization,Person performer
+  AggregateRating aggregateRating
+  string typicalAgeRange
+  PostalAddress,string,Place,VirtualLocation location
+  Person,Organization performers
+  Duration duration
+  Person,Organization organizer
+  Organization,Person sponsor
+  date previousStartDate
+  boolean isAccessibleForFree
+  number remainingAttendeeCapacity
+  Event subEvents
+  CreativeWork workPerformed
+  time,dateTime doorTime
+  string,Language inLanguage
+  Thing about
+  CreativeWork recordedIn
+  number maximumPhysicalAttendeeCapacity
+  Person,Organization attendee
+  CreativeWork workFeatured
+  Schedule eventSchedule
+  Organization,Person contributor
+  Person,Organization attendees
+
+}

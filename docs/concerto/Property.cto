@@ -1,0 +1,13 @@
+namespace undefined
+
+import org.codex.insurance.core.Class from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Class.cto
+import org.codex.insurance.core.Enumeration,Class,Property from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Enumeration,Class,Property.cto
+import org.codex.insurance.core.Property from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Property.cto
+
+
+concept Property extends Intangible {
+  o Class domainIncludes
+  o Enumeration,Class,Property supersededBy
+  o Class rangeIncludes
+  o Property inverseOf
+}

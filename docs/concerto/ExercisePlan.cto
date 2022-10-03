@@ -1,0 +1,19 @@
+namespace undefined
+
+import org.codex.insurance.core.number,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,QuantitativeValue.cto
+import org.codex.insurance.core.QuantitativeValue,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue,string.cto
+import org.codex.insurance.core.QuantitativeValue,Energy from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue,Energy.cto
+import org.codex.insurance.core.Duration,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration,QuantitativeValue.cto
+import org.codex.insurance.core.string,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,QuantitativeValue.cto
+
+
+concept ExercisePlan extendsExercisePlanExercisePlan {
+  o number,QuantitativeValue repetitions
+  o QuantitativeValue,string intensity
+  o QuantitativeValue,Energy workload
+  o Duration,QuantitativeValue activityDuration
+  o string,QuantitativeValue restPeriods
+  o string,QuantitativeValue activityFrequency
+  o String additionalVariable
+  o String exerciseType
+}

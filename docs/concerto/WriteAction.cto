@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.string,Language from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Language.cto
+import org.codex.insurance.core.Language from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Language.cto
+
+
+concept WriteAction extends CreateAction {
+  o string,Language inLanguage
+  o Language language
+}

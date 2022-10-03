@@ -1,0 +1,12 @@
+classDiagram
+  WebPageElement -- CssSelectorType
+WebPageElement -- XPathType
+
+
+CreativeWork <|-- WebPageElement
+class WebPageElement {
+
+  CssSelectorType cssSelector
+  XPathType xpath
+
+}

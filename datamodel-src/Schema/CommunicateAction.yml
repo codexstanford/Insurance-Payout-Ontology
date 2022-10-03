@@ -1,0 +1,33 @@
+CommunicateAction:
+  type: object
+  documentation:
+    en: The act of conveying information to another person via a communication
+      medium (instrument) such as speech, email, or telephone conversation.
+  inherit: InteractAction
+  properties:
+    recipient:
+      type:
+        - Person
+        - Audience
+        - ContactPoint
+        - Organization
+      documentation:
+        en: A sub property of participant. The participant who is at the receiving end
+          of the action.
+    inLanguage:
+      type:
+        - string
+        - Language
+      documentation:
+        en: The language of the content or performance or used in an action. Please use
+          one of the language codes from the [IETF BCP 47
+          standard](http://tools.ietf.org/html/bcp47). See also
+          [[availableLanguage]].
+    language:
+      type: Language
+      documentation:
+        en: A sub property of instrument. The language used on this action.
+    about:
+      type: Thing
+      documentation:
+        en: The subject matter of the content.

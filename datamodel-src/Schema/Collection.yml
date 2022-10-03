@@ -1,0 +1,12 @@
+Collection:
+  type: object
+  documentation:
+    en: A collection of items e.g. creative works or products.
+  inherit: CreativeWork
+  properties:
+    "[object Object]":
+      type: number
+      documentation:
+        en:
+          "@language": en
+          "@value": The number of items in the [[Collection]].

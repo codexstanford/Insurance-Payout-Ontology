@@ -1,0 +1,12 @@
+classDiagram
+  DDxElement -- MedicalSignOrSymptom
+DDxElement -- MedicalCondition
+
+
+MedicalIntangible <|-- DDxElement
+class DDxElement {
+
+  MedicalSignOrSymptom distinguishingSign
+  MedicalCondition diagnosis
+
+}

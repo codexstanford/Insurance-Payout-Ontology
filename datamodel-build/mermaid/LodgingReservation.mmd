@@ -1,0 +1,17 @@
+classDiagram
+  LodgingReservation -- QualitativeValue,string
+LodgingReservation -- dateTime,time
+LodgingReservation -- number,QuantitativeValue
+
+
+Reservation <|-- LodgingReservation
+class LodgingReservation {
+
+  QualitativeValue,string lodgingUnitType
+  string lodgingUnitDescription
+  dateTime,time checkoutTime
+  number,QuantitativeValue numAdults
+  dateTime,time checkinTime
+  number,QuantitativeValue numChildren
+
+}

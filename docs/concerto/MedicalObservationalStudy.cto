@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalObservationalStudyDesign from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalObservationalStudyDesign.cto
+
+
+concept MedicalObservationalStudy extends MedicalStudy {
+  o MedicalObservationalStudyDesign studyDesign
+}

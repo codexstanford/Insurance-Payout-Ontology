@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalTherapy from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTherapy.cto
+import org.codex.insurance.core.MedicalEntity from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalEntity.cto
+import org.codex.insurance.core.string,MedicalContraindication from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,MedicalContraindication.cto
+
+
+concept MedicalTherapy extends TherapeuticProcedure {
+  o MedicalTherapy duplicateTherapy
+  o MedicalEntity seriousAdverseOutcome
+  o string,MedicalContraindication contraindication
+}

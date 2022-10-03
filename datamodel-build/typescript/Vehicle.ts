@@ -6,6 +6,8 @@ export class Vehicle extends RiskObject {
   age: Amount;
   length: Amount;
   weight: Amount;
+  height: Amount;
+  width: Amount;
 
 
 }

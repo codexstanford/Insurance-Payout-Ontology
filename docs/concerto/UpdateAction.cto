@@ -1,0 +1,9 @@
+namespace undefined
+
+import org.codex.insurance.core.Thing from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Thing.cto
+
+
+concept UpdateAction extends Action {
+  o Thing targetCollection
+  o Thing collection
+}

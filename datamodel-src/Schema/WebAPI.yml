@@ -1,0 +1,13 @@
+WebAPI:
+  type: object
+  documentation:
+    en: An application programming interface accessible over Web/Internet
+      technologies.
+  inherit: Service
+  properties:
+    documentation:
+      type:
+        - CreativeWork
+        - string
+      documentation:
+        en: Further documentation describing the Web API in more detail.

@@ -1,0 +1,13 @@
+classDiagram
+  Grant -- Organization,Person
+Grant -- Product,Person,BioChemEntity,Event,MedicalEntity,CreativeWork,Organization
+
+
+Intangible <|-- Grant
+class Grant {
+
+  Organization,Person funder
+  Product,Person,BioChemEntity,Event,MedicalEntity,CreativeWork,Organization fundedItem
+  Organization,Person sponsor
+
+}

@@ -1,0 +1,15 @@
+MedicalSign:
+  type: object
+  documentation:
+    en: Any physical manifestation of a person's medical condition discoverable by
+      objective diagnostic tests or physical examination.
+  inherit: MedicalSignOrSymptom
+  properties:
+    identifyingTest:
+      type: MedicalTest
+      documentation:
+        en: A diagnostic test that can identify this sign.
+    identifyingExam:
+      type: PhysicalExam
+      documentation:
+        en: A physical examination that can identify this sign.

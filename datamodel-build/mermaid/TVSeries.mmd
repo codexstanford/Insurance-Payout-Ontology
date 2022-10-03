@@ -1,0 +1,32 @@
+classDiagram
+  TVSeries -- string,CreativeWorkSeason
+TVSeries -- CreativeWorkSeason
+TVSeries -- Country
+TVSeries -- Person
+TVSeries -- VideoObject
+TVSeries -- Episode
+TVSeries -- Organization
+TVSeries -- Person,MusicGroup
+
+
+CreativeWorkSeries <|-- TVSeries
+CreativeWork <|-- TVSeries
+class TVSeries {
+
+  string,CreativeWorkSeason season
+  CreativeWorkSeason containsSeason
+  Country countryOfOrigin
+  Person director
+  Person actor
+  VideoObject trailer
+  Episode episodes
+  number numberOfEpisodes
+  CreativeWorkSeason seasons
+  Organization productionCompany
+  Person actors
+  number numberOfSeasons
+  Person,MusicGroup musicBy
+  Episode episode
+  Person directors
+
+}

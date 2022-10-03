@@ -1,0 +1,14 @@
+classDiagram
+  TherapeuticProcedure -- MedicalEntity
+TherapeuticProcedure -- Drug
+TherapeuticProcedure -- DoseSchedule
+
+
+MedicalProcedure <|-- TherapeuticProcedure
+class TherapeuticProcedure {
+
+  MedicalEntity adverseOutcome
+  Drug drug
+  DoseSchedule doseSchedule
+
+}

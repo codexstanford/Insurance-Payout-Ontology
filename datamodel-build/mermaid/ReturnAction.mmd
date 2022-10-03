@@ -1,0 +1,10 @@
+classDiagram
+  ReturnAction -- Person,Audience,ContactPoint,Organization
+
+
+TransferAction <|-- ReturnAction
+class ReturnAction {
+
+  Person,Audience,ContactPoint,Organization recipient
+
+}

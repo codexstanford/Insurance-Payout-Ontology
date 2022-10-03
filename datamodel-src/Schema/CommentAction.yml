@@ -1,0 +1,11 @@
+CommentAction:
+  type: object
+  documentation:
+    en: The act of generating a comment about a subject.
+  inherit: CommunicateAction
+  properties:
+    resultComment:
+      type: Comment
+      documentation:
+        en: A sub property of result. The Comment created or sent as a result of this
+          action.

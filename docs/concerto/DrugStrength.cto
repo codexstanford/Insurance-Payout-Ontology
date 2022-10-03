@@ -1,0 +1,13 @@
+namespace undefined
+
+import org.codex.insurance.core.AdministrativeArea from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea.cto
+import org.codex.insurance.core.MaximumDoseSchedule from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MaximumDoseSchedule.cto
+
+
+concept DrugStrength extends MedicalIntangible {
+  o AdministrativeArea availableIn
+  o String strengthUnit
+  o MaximumDoseSchedule maximumIntake
+  o String activeIngredient
+  o Double strengthValue
+}

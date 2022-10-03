@@ -1,0 +1,43 @@
+SoftwareSourceCode:
+  type: object
+  documentation:
+    en: "Computer programming source code. Example: Full (compile ready) solutions,
+      code snippet samples, scripts, templates."
+  inherit: CreativeWork
+  properties:
+    programmingLanguage:
+      type:
+        - string
+        - ComputerLanguage
+      documentation:
+        en: The computer programming language.
+    sampleType:
+      type: string
+      documentation:
+        en: "What type of code sample: full (compile ready) solution, code snippet,
+          inline code, scripts, template."
+    runtimePlatform:
+      type: string
+      documentation:
+        en: Runtime platform or script interpreter dependencies (Example - Java v1,
+          Python2.3, .Net Framework 3.0).
+    runtime:
+      type: string
+      documentation:
+        en: Runtime platform or script interpreter dependencies (Example - Java v1,
+          Python2.3, .Net Framework 3.0).
+    targetProduct:
+      type: SoftwareApplication
+      documentation:
+        en: Target Operating System / Product to which the code applies.  If applies to
+          several versions, just the product name can be used.
+    codeRepository:
+      type: string
+      documentation:
+        en: Link to the repository where the un-compiled, human readable code and
+          related code is located (SVN, github, CodePlex).
+    codeSampleType:
+      type: string
+      documentation:
+        en: "What type of code sample: full (compile ready) solution, code snippet,
+          inline code, scripts, template."

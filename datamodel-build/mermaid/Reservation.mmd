@@ -1,0 +1,29 @@
+classDiagram
+  Reservation -- dateTime
+Reservation -- PriceSpecification,number,string
+Reservation -- Ticket
+Reservation -- ReservationStatusType
+Reservation -- Organization,Person
+Reservation -- Person,Organization
+Reservation -- ProgramMembership
+Reservation -- Thing
+
+
+Intangible <|-- Reservation
+class Reservation {
+
+  dateTime modifiedTime
+  PriceSpecification,number,string totalPrice
+  Ticket reservedTicket
+  ReservationStatusType reservationStatus
+  Organization,Person provider
+  Person,Organization broker
+  dateTime bookingTime
+  ProgramMembership programMembershipUsed
+  Person,Organization bookingAgent
+  string priceCurrency
+  string reservationId
+  Organization,Person underName
+  Thing reservationFor
+
+}

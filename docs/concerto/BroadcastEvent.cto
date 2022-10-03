@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.Language,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Language,string.cto
+import org.codex.insurance.core.Event from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Event.cto
+
+
+concept BroadcastEvent extends PublicationEvent {
+  o Language,string subtitleLanguage
+  o String videoFormat
+  o Event broadcastOfEvent
+  o Boolean isLiveBroadcast
+}

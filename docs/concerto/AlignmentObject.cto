@@ -1,0 +1,11 @@
+namespace undefined
+
+
+
+concept AlignmentObject extends Intangible {
+  o String alignmentType
+  o String educationalFramework
+  o String targetDescription
+  o String targetName
+  o String targetUrl
+}

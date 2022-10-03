@@ -1,0 +1,13 @@
+namespace undefined
+
+enum OrderStatus {
+  o OrderCancelled
+  o OrderProblem
+  o OrderDelivered
+  o OrderReturned
+  o OrderPaymentDue
+  o OrderInTransit
+  o OrderProcessing
+  o OrderPickupAvailable
+}
+

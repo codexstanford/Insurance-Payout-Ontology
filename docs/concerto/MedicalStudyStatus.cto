@@ -1,0 +1,15 @@
+namespace undefined
+
+enum MedicalStudyStatus {
+  o Recruiting
+  o NotYetRecruiting
+  o ResultsNotAvailable
+  o Suspended
+  o ActiveNotRecruiting
+  o EnrollingByInvitation
+  o Completed
+  o ResultsAvailable
+  o Terminated
+  o Withdrawn
+}
+

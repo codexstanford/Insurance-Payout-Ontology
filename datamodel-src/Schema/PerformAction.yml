@@ -1,0 +1,11 @@
+PerformAction:
+  type: object
+  documentation:
+    en: The act of participating in performance arts.
+  inherit: PlayAction
+  properties:
+    entertainmentBusiness:
+      type: EntertainmentBusiness
+      documentation:
+        en: A sub property of location. The entertainment business where the action
+          occurred.

@@ -1,0 +1,58 @@
+namespace undefined
+
+import org.codex.insurance.core.Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service.cto
+import org.codex.insurance.core.TypeAndQuantityNode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/TypeAndQuantityNode.cto
+import org.codex.insurance.core.BusinessFunction from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BusinessFunction.cto
+import org.codex.insurance.core.OfferItemCondition from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/OfferItemCondition.cto
+import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
+import org.codex.insurance.core.LoanOrCredit,PaymentMethod from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/LoanOrCredit,PaymentMethod.cto
+import org.codex.insurance.core.WarrantyPromise from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/WarrantyPromise.cto
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+import org.codex.insurance.core.Place,string,GeoShape from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place,string,GeoShape.cto
+import org.codex.insurance.core.DeliveryMethod from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DeliveryMethod.cto
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.date,dateTime,time from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime,time.cto
+import org.codex.insurance.core.GeoShape,string,Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GeoShape,string,Place.cto
+import org.codex.insurance.core.PriceSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PriceSpecification.cto
+import org.codex.insurance.core.AdministrativeArea,GeoShape,string,Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea,GeoShape,string,Place.cto
+import org.codex.insurance.core.BusinessEntityType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BusinessEntityType.cto
+import org.codex.insurance.core.ItemAvailability from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ItemAvailability.cto
+import org.codex.insurance.core.time,dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/time,dateTime,date.cto
+import org.codex.insurance.core.Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place.cto
+
+
+concept Demand extends Intangible {
+  o String gtin12
+  o Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service itemOffered
+  o String mpn
+  o TypeAndQuantityNode includesObject
+  o BusinessFunction businessFunction
+  o OfferItemCondition itemCondition
+  o String gtin
+  o QuantitativeValue eligibleQuantity
+  o LoanOrCredit,PaymentMethod acceptedPaymentMethod
+  o WarrantyPromise warranty
+  o Organization,Person seller
+  o Place,string,GeoShape ineligibleRegion
+  o QuantitativeValue deliveryLeadTime
+  o DeliveryMethod availableDeliveryMethod
+  o dateTime,date validFrom
+  o date,dateTime,time availabilityEnds
+  o GeoShape,string,Place eligibleRegion
+  o String gtin8
+  o QuantitativeValue inventoryLevel
+  o String sku
+  o QuantitativeValue advanceBookingRequirement
+  o String gtin14
+  o PriceSpecification eligibleTransactionVolume
+  o AdministrativeArea,GeoShape,string,Place areaServed
+  o BusinessEntityType eligibleCustomerType
+  o ItemAvailability availability
+  o String gtin13
+  o dateTime,date validThrough
+  o PriceSpecification priceSpecification
+  o time,dateTime,date availabilityStarts
+  o QuantitativeValue eligibleDuration
+  o Place availableAtOrFrom
+  o String serialNumber
+}

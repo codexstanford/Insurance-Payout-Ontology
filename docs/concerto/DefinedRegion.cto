@@ -1,0 +1,13 @@
+namespace undefined
+
+import org.codex.insurance.core.Country,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Country,string.cto
+import org.codex.insurance.core.PostalCodeRangeSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PostalCodeRangeSpecification.cto
+
+
+concept DefinedRegion extends StructuredValue {
+  o Country,string addressCountry
+  o String addressRegion
+  o PostalCodeRangeSpecification postalCodeRange
+  o String postalCodePrefix
+  o String postalCode
+}

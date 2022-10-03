@@ -1,0 +1,15 @@
+namespace undefined
+
+import org.codex.insurance.core.Rating from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Rating.cto
+import org.codex.insurance.core.string,boolean,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,boolean,string.cto
+import org.codex.insurance.core.string,string,Menu from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,Menu.cto
+import org.codex.insurance.core.string,Menu,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Menu,string.cto
+
+
+concept FoodEstablishment extends LocalBusiness {
+  o Rating starRating
+  o String servesCuisine
+  o string,boolean,string acceptsReservations
+  o string,string,Menu hasMenu
+  o string,Menu,string menu
+}

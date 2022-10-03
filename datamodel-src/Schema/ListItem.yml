@@ -1,0 +1,25 @@
+ListItem:
+  type: object
+  documentation:
+    en: An list item, e.g. a step in a checklist or how-to description.
+  inherit: Intangible
+  properties:
+    position:
+      type:
+        - number
+        - string
+      documentation:
+        en: The position of an item in a series or sequence of items.
+    nextItem:
+      type: ListItem
+      documentation:
+        en: A link to the ListItem that follows the current one.
+    item:
+      type: Thing
+      documentation:
+        en: An entity represented by an entry in a list or data feed (e.g. an 'artist'
+          in a list of 'artists')’.
+    previousItem:
+      type: ListItem
+      documentation:
+        en: A link to the ListItem that preceeds the current one.

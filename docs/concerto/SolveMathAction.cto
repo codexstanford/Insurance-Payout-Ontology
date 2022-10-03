@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept SolveMathAction extends Action {
+  o String eduQuestionType
+}

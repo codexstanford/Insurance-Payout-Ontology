@@ -1,0 +1,16 @@
+classDiagram
+  PaymentCard -- number,boolean
+PaymentCard -- MonetaryAmount,number
+PaymentCard -- MonetaryAmount
+
+
+PaymentMethod <|-- PaymentCard
+FinancialProduct <|-- PaymentCard
+class PaymentCard {
+
+  number,boolean cashBack
+  MonetaryAmount,number monthlyMinimumRepaymentAmount
+  MonetaryAmount floorLimit
+  boolean contactlessPayment
+
+}

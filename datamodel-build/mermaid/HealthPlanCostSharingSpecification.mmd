@@ -1,0 +1,14 @@
+classDiagram
+  HealthPlanCostSharingSpecification -- PriceSpecification
+
+
+Intangible <|-- HealthPlanCostSharingSpecification
+class HealthPlanCostSharingSpecification {
+
+  number healthPlanCoinsuranceRate
+  string healthPlanCoinsuranceOption
+  string healthPlanPharmacyCategory
+  PriceSpecification healthPlanCopay
+  string healthPlanCopayOption
+
+}

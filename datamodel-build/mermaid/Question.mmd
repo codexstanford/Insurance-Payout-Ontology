@@ -1,0 +1,14 @@
+classDiagram
+  Question -- ItemList,Answer
+Question -- Answer,ItemList
+
+
+Comment <|-- Question
+class Question {
+
+  ItemList,Answer suggestedAnswer
+  Answer,ItemList acceptedAnswer
+  number answerCount
+  string eduQuestionType
+
+}

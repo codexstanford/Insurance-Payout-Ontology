@@ -1,0 +1,18 @@
+classDiagram
+  OfferShippingDetails -- DefinedRegion
+OfferShippingDetails -- ShippingDeliveryTime
+OfferShippingDetails -- MonetaryAmount
+
+
+StructuredValue <|-- OfferShippingDetails
+class OfferShippingDetails {
+
+  DefinedRegion shippingDestination
+  boolean doesNotShip
+  string shippingSettingsLink
+  string transitTimeLabel
+  string shippingLabel
+  ShippingDeliveryTime deliveryTime
+  MonetaryAmount shippingRate
+
+}

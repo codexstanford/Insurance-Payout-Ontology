@@ -1,0 +1,16 @@
+TechArticle:
+  type: object
+  documentation:
+    en: "A technical article - Example: How-to (task) topics, step-by-step,
+      procedural troubleshooting, specifications, etc."
+  inherit: Article
+  properties:
+    dependencies:
+      type: string
+      documentation:
+        en: Prerequisites needed to fulfill steps in article.
+    proficiencyLevel:
+      type: string
+      documentation:
+        en: "Proficiency needed for this content; expected values: 'Beginner',
+          'Expert'."

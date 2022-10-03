@@ -1,0 +1,11 @@
+classDiagram
+  Substance -- MaximumDoseSchedule
+
+
+MedicalEntity <|-- Substance
+class Substance {
+
+  MaximumDoseSchedule maximumIntake
+  string activeIngredient
+
+}

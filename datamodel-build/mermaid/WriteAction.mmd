@@ -1,0 +1,12 @@
+classDiagram
+  WriteAction -- string,Language
+WriteAction -- Language
+
+
+CreateAction <|-- WriteAction
+class WriteAction {
+
+  string,Language inLanguage
+  Language language
+
+}

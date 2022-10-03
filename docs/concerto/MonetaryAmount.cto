@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.string,number,StructuredValue,boolean from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,number,StructuredValue,boolean.cto
+
+
+concept MonetaryAmount extends StructuredValue {
+  o Double maxValue
+  o Double minValue
+  o dateTime,date validFrom
+  o string,number,StructuredValue,boolean value
+  o String currency
+  o dateTime,date validThrough
+}

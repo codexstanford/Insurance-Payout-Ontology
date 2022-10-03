@@ -1,0 +1,25 @@
+namespace undefined
+
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.dateTime,time from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,time.cto
+import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
+import org.codex.insurance.core.string,Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Duration.cto
+import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
+import org.codex.insurance.core.DayOfWeek,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DayOfWeek,string.cto
+
+
+concept Schedule extends Intangible {
+  o String scheduleTimezone
+  o dateTime,date startDate
+  o dateTime,date exceptDate
+  o dateTime,time startTime
+  o Double repeatCount
+  o date,dateTime endDate
+  o string,Duration repeatFrequency
+  o Duration duration
+  o Double byMonthDay
+  o dateTime,time endTime
+  o Double byMonth
+  o DayOfWeek,string byDay
+  o Double byMonthWeek
+}

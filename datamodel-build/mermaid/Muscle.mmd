@@ -1,0 +1,17 @@
+classDiagram
+  Muscle -- AnatomicalStructure
+Muscle -- Muscle
+Muscle -- Nerve
+Muscle -- Vessel
+
+
+AnatomicalStructure <|-- Muscle
+class Muscle {
+
+  AnatomicalStructure insertion
+  Muscle antagonist
+  Nerve nerve
+  Vessel bloodSupply
+  string muscleAction
+
+}

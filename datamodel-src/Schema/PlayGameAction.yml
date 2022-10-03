@@ -1,0 +1,13 @@
+PlayGameAction:
+  type: object
+  documentation:
+    en: The act of playing a video game.
+  inherit: ConsumeAction
+  properties:
+    gameAvailabilityType:
+      type:
+        - GameAvailabilityEnumeration
+        - string
+      documentation:
+        en: Indicates the availability type of the game content associated with this
+          action, such as whether it is a full version or a demo.

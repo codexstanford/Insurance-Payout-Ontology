@@ -1,0 +1,30 @@
+OrderStatus:
+  type: enum
+  documentation:
+    en: Enumerated status values for Order.
+  inherit: StatusEnumeration
+  values:
+    OrderCancelled:
+      documentation:
+        en: OrderStatus representing cancellation of an order.
+    OrderProblem:
+      documentation:
+        en: OrderStatus representing that there is a problem with the order.
+    OrderDelivered:
+      documentation:
+        en: OrderStatus representing successful delivery of an order.
+    OrderReturned:
+      documentation:
+        en: OrderStatus representing that an order has been returned.
+    OrderPaymentDue:
+      documentation:
+        en: OrderStatus representing that payment is due on an order.
+    OrderInTransit:
+      documentation:
+        en: OrderStatus representing that an order is in transit.
+    OrderProcessing:
+      documentation:
+        en: OrderStatus representing that an order is being processed.
+    OrderPickupAvailable:
+      documentation:
+        en: OrderStatus representing availability of an order for pickup.

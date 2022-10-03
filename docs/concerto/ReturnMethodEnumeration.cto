@@ -1,0 +1,8 @@
+namespace undefined
+
+enum ReturnMethodEnumeration {
+  o ReturnByMail
+  o ReturnAtKiosk
+  o ReturnInStore
+}
+

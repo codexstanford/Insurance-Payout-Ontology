@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalTest from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTest.cto
+
+
+concept DiagnosticLab extends MedicalOrganization {
+  o MedicalTest availableTest
+}

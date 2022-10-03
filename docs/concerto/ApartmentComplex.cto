@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
+import org.codex.insurance.core.number,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,QuantitativeValue.cto
+import org.codex.insurance.core.string,boolean from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,boolean.cto
+
+
+concept ApartmentComplex extends Residence {
+  o QuantitativeValue numberOfAccommodationUnits
+  o QuantitativeValue numberOfAvailableAccommodationUnits
+  o String tourBookingPage
+  o number,QuantitativeValue numberOfBedrooms
+  o string,boolean petsAllowed
+}

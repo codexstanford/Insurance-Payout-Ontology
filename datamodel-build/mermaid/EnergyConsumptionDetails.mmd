@@ -1,0 +1,13 @@
+classDiagram
+  EnergyConsumptionDetails -- EUEnergyEfficiencyEnumeration
+EnergyConsumptionDetails -- EnergyEfficiencyEnumeration
+
+
+Intangible <|-- EnergyConsumptionDetails
+class EnergyConsumptionDetails {
+
+  EUEnergyEfficiencyEnumeration energyEfficiencyScaleMin
+  EnergyEfficiencyEnumeration hasEnergyEfficiencyCategory
+  EUEnergyEfficiencyEnumeration energyEfficiencyScaleMax
+
+}

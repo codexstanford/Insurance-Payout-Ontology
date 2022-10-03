@@ -1,0 +1,30 @@
+classDiagram
+  Accommodation -- QuantitativeValue,number
+Accommodation -- QuantitativeValue,Duration
+Accommodation -- LocationFeatureSpecification
+Accommodation -- number,QuantitativeValue
+Accommodation -- QuantitativeValue
+Accommodation -- FloorPlan
+Accommodation -- string,boolean
+
+
+Place <|-- Accommodation
+class Accommodation {
+
+  string floorLevel
+  number numberOfBathroomsTotal
+  QuantitativeValue,number numberOfRooms
+  QuantitativeValue,Duration leaseLength
+  number yearBuilt
+  string accommodationCategory
+  LocationFeatureSpecification amenityFeature
+  string tourBookingPage
+  number,QuantitativeValue numberOfBedrooms
+  number numberOfPartialBathrooms
+  QuantitativeValue floorSize
+  FloorPlan accommodationFloorPlan
+  number numberOfFullBathrooms
+  string permittedUsage
+  string,boolean petsAllowed
+
+}

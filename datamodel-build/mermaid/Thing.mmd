@@ -1,0 +1,24 @@
+classDiagram
+  Thing -- CreativeWork,string
+Thing -- Action
+Thing -- string,ImageObject
+Thing -- Event,CreativeWork
+Thing -- string,string,PropertyValue
+
+
+class Thing {
+
+  CreativeWork,string mainEntityOfPage
+  string alternateName
+  string name
+  Action potentialAction
+  string,ImageObject image
+  string url
+  string description
+  Event,CreativeWork subjectOf
+  string additionalType
+  string disambiguatingDescription
+  string sameAs
+  string,string,PropertyValue identifier
+
+}

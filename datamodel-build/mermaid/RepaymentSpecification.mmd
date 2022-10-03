@@ -1,0 +1,15 @@
+classDiagram
+  RepaymentSpecification -- MonetaryAmount
+RepaymentSpecification -- number,MonetaryAmount
+
+
+StructuredValue <|-- RepaymentSpecification
+class RepaymentSpecification {
+
+  number numberOfLoanPayments
+  MonetaryAmount earlyPrepaymentPenalty
+  MonetaryAmount loanPaymentAmount
+  number loanPaymentFrequency
+  number,MonetaryAmount downPayment
+
+}

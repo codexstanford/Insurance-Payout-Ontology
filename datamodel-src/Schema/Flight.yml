@@ -1,0 +1,79 @@
+Flight:
+  type: object
+  documentation:
+    en: An airline flight.
+  inherit: Trip
+  properties:
+    flightDistance:
+      type:
+        - Distance
+        - string
+      documentation:
+        en: The distance of the flight.
+    webCheckinTime:
+      type: dateTime
+      documentation:
+        en: The time when a passenger can check into the flight online.
+    aircraft:
+      type:
+        - Vehicle
+        - string
+      documentation:
+        en: The kind of aircraft (e.g., "Boeing 747").
+    seller:
+      type:
+        - Organization
+        - Person
+      documentation:
+        en: An entity which offers (sells / leases / lends / loans) the services /
+          goods.  A seller may also be a provider.
+    arrivalAirport:
+      type: Airport
+      documentation:
+        en: The airport where the flight terminates.
+    arrivalTerminal:
+      type: string
+      documentation:
+        en: Identifier of the flight's arrival terminal.
+    departureAirport:
+      type: Airport
+      documentation:
+        en: The airport where the flight originates.
+    arrivalGate:
+      type: string
+      documentation:
+        en: Identifier of the flight's arrival gate.
+    departureTerminal:
+      type: string
+      documentation:
+        en: Identifier of the flight's departure terminal.
+    carrier:
+      type: Organization
+      documentation:
+        en: "'carrier' is an out-dated term indicating the 'provider' for parcel
+          delivery and flights."
+    estimatedFlightDuration:
+      type:
+        - string
+        - Duration
+      documentation:
+        en: The estimated time the flight will take.
+    departureGate:
+      type: string
+      documentation:
+        en: Identifier of the flight's departure gate.
+    flightNumber:
+      type: string
+      documentation:
+        en: The unique identifier for a flight including the airline IATA code. For
+          example, if describing United flight 110, where the IATA code for
+          United is 'UA', the flightNumber is 'UA110'.
+    mealService:
+      type: string
+      documentation:
+        en: Description of the meals that will be provided or available for purchase.
+    boardingPolicy:
+      type: BoardingPolicyType
+      documentation:
+        en: The type of boarding policy used by the airline (e.g. zone-based or
+          group-based).

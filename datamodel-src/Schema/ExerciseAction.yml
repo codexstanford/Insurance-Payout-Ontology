@@ -1,0 +1,64 @@
+ExerciseAction:
+  type: object
+  documentation:
+    en: The act of participating in exertive activity for the purposes of improving
+      health and fitness.
+  inherit: PlayAction
+  properties:
+    sportsTeam:
+      type: SportsTeam
+      documentation:
+        en: A sub property of participant. The sports team that participated on this
+          action.
+    course:
+      type: Place
+      documentation:
+        en: A sub property of location. The course where this action was taken.
+    fromLocation:
+      type: Place
+      documentation:
+        en: A sub property of location. The original location of the object or the agent
+          before the action.
+    diet:
+      type: Diet
+      documentation:
+        en: A sub property of instrument. The diet used in this action.
+    sportsActivityLocation:
+      type: SportsActivityLocation
+      documentation:
+        en: A sub property of location. The sports activity location where this action
+          occurred.
+    distance:
+      type: Distance
+      documentation:
+        en: The distance travelled, e.g. exercising or travelling.
+    exercisePlan:
+      type: ExercisePlan
+      documentation:
+        en: A sub property of instrument. The exercise plan used on this action.
+    sportsEvent:
+      type: SportsEvent
+      documentation:
+        en: A sub property of location. The sports event where this action occurred.
+    exerciseRelatedDiet:
+      type: Diet
+      documentation:
+        en: A sub property of instrument. The diet used in this action.
+    opponent:
+      type: Person
+      documentation:
+        en: A sub property of participant. The opponent on this action.
+    exerciseCourse:
+      type: Place
+      documentation:
+        en: A sub property of location. The course where this action was taken.
+    toLocation:
+      type: Place
+      documentation:
+        en: A sub property of location. The final location of the object or the agent
+          after the action.
+    exerciseType:
+      type: string
+      documentation:
+        en: Type(s) of exercise or activity, such as strength training, flexibility
+          training, aerobics, cardiac rehabilitation, etc.

@@ -1,0 +1,71 @@
+classDiagram
+  Place -- Review
+Place -- Place,GeospatialGeometry
+Place -- Place
+Place -- DefinedTerm,string,string
+Place -- GeospatialGeometry,Place
+Place -- string,number
+Place -- AggregateRating
+Place -- string,PostalAddress
+Place -- LocationFeatureSpecification
+Place -- ImageObject,Photograph
+Place -- string,ImageObject
+Place -- PropertyValue
+Place -- OpeningHoursSpecification
+Place -- Photograph,ImageObject
+Place -- string,Map
+Place -- number,string
+Place -- GeoCoordinates,GeoShape
+Place -- Event
+
+
+Thing <|-- Place
+class Place {
+
+  string telephone
+  Review review
+  string maps
+  Place,GeospatialGeometry geoContains
+  number maximumAttendeeCapacity
+  Place containsPlace
+  boolean smokingAllowed
+  string globalLocationNumber
+  DefinedTerm,string,string keywords
+  GeospatialGeometry,Place geoIntersects
+  string,number latitude
+  Place,GeospatialGeometry geoTouches
+  Place,GeospatialGeometry geoCoveredBy
+  AggregateRating aggregateRating
+  string,PostalAddress address
+  Place,GeospatialGeometry geoEquals
+  string map
+  boolean publicAccess
+  GeospatialGeometry,Place geoCrosses
+  Place containedInPlace
+  LocationFeatureSpecification amenityFeature
+  string slogan
+  ImageObject,Photograph photos
+  GeospatialGeometry,Place geoCovers
+  Place containedIn
+  boolean hasDriveThroughService
+  string,ImageObject logo
+  boolean isAccessibleForFree
+  Place,GeospatialGeometry geoWithin
+  GeospatialGeometry,Place geoDisjoint
+  string tourBookingPage
+  string isicV4
+  GeospatialGeometry,Place geoOverlaps
+  string branchCode
+  PropertyValue additionalProperty
+  OpeningHoursSpecification openingHoursSpecification
+  Review reviews
+  Photograph,ImageObject photo
+  OpeningHoursSpecification specialOpeningHoursSpecification
+  string,Map hasMap
+  number,string longitude
+  GeoCoordinates,GeoShape geo
+  Event events
+  string faxNumber
+  Event event
+
+}

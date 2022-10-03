@@ -1,0 +1,48 @@
+namespace undefined
+
+import org.codex.insurance.core.DrugPregnancyCategory from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DrugPregnancyCategory.cto
+import org.codex.insurance.core.DrugLegalStatus,string,MedicalEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DrugLegalStatus,string,MedicalEnumeration.cto
+import org.codex.insurance.core.Drug from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Drug.cto
+import org.codex.insurance.core.MaximumDoseSchedule from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MaximumDoseSchedule.cto
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.DrugPrescriptionStatus,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DrugPrescriptionStatus,string.cto
+import org.codex.insurance.core.DrugClass from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DrugClass.cto
+import org.codex.insurance.core.HealthInsurancePlan from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/HealthInsurancePlan.cto
+import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
+import org.codex.insurance.core.DoseSchedule from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DoseSchedule.cto
+import org.codex.insurance.core.DrugStrength from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DrugStrength.cto
+
+
+concept Drug extends Substance {
+  o DrugPregnancyCategory pregnancyCategory
+  o String overdosage
+  o DrugLegalStatus,string,MedicalEnumeration legalStatus
+  o String mechanismOfAction
+  o String clinicalPharmacology
+  o String rxcui
+  o Drug interactingDrug
+  o String dosageForm
+  o String labelDetails
+  o MaximumDoseSchedule maximumIntake
+  o String activeIngredient
+  o Drug relatedDrug
+  o String administrationRoute
+  o String drugUnit
+  o String foodWarning
+  o string,string warning
+  o DrugPrescriptionStatus,string prescriptionStatus
+  o String proprietaryName
+  o DrugClass drugClass
+  o String prescribingInfo
+  o HealthInsurancePlan includedInHealthInsurancePlan
+  o String nonProprietaryName
+  o Organization manufacturer
+  o Boolean isProprietary
+  o String clincalPharmacology
+  o Boolean isAvailableGenerically
+  o String breastfeedingWarning
+  o String pregnancyWarning
+  o String alcoholWarning
+  o DoseSchedule doseSchedule
+  o DrugStrength availableStrength
+}

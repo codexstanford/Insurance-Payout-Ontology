@@ -1,0 +1,72 @@
+VideoGame:
+  type: object
+  documentation:
+    en: A video game is an electronic game that involves human interaction with a
+      user interface to generate visual feedback on a video device.
+  inherit:
+    - SoftwareApplication
+    - Game
+  properties:
+    director:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video gaming etc. content, or of an
+          event. Directors can be associated with individual items or with a
+          series, episode, clip.
+    actor:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors
+          can be associated with individual items or with a series, episode,
+          clip.
+    trailer:
+      type: VideoObject
+      documentation:
+        en: The trailer of a movie or tv/radio series, season, episode, etc.
+    gameEdition:
+      type: string
+      documentation:
+        en: The edition of a video game.
+    cheatCode:
+      type: CreativeWork
+      documentation:
+        en: Cheat codes to the game.
+    gameServer:
+      type: GameServer
+      documentation:
+        en: The server on which  it is possible to play the game.
+    gameTip:
+      type: CreativeWork
+      documentation:
+        en: Links to tips, tactics, etc.
+    actors:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+          associated with individual items or with a series, episode, clip.
+    playMode:
+      type: GamePlayMode
+      documentation:
+        en: Indicates whether this game is multi-player, co-op or single-player.  The
+          game can be marked as multi-player, co-op and single-player at the
+          same time.
+    gamePlatform:
+      type:
+        - string
+        - string
+        - Thing
+      documentation:
+        en: The electronic systems used to play <a
+          href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
+          games</a>.
+    musicBy:
+      type:
+        - Person
+        - MusicGroup
+      documentation:
+        en: The composer of the soundtrack.
+    directors:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video games etc. content. Directors can
+          be associated with individual items or with a series, episode, clip.

@@ -1,0 +1,20 @@
+classDiagram
+  PropertyValueSpecification -- string,Thing
+
+
+Intangible <|-- PropertyValueSpecification
+class PropertyValueSpecification {
+
+  number valueMaxLength
+  boolean readonlyValue
+  number maxValue
+  string valueName
+  string,Thing defaultValue
+  number valueMinLength
+  boolean valueRequired
+  number minValue
+  string valuePattern
+  number stepValue
+  boolean multipleValues
+
+}

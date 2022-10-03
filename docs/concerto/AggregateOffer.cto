@@ -1,0 +1,12 @@
+namespace undefined
+
+import org.codex.insurance.core.string,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,number.cto
+import org.codex.insurance.core.Offer,Demand from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Offer,Demand.cto
+
+
+concept AggregateOffer extends Offer {
+  o string,number highPrice
+  o Offer,Demand offers
+  o string,number lowPrice
+  o Double offerCount
+}

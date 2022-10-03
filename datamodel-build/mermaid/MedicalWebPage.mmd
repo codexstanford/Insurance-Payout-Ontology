@@ -1,0 +1,11 @@
+classDiagram
+  MedicalWebPage -- MedicalAudienceType,MedicalAudience
+
+
+WebPage <|-- MedicalWebPage
+class MedicalWebPage {
+
+  string aspect
+  MedicalAudienceType,MedicalAudience medicalAudience
+
+}

@@ -1,0 +1,15 @@
+PayAction:
+  type: object
+  documentation:
+    en: An agent pays a price to a participant.
+  inherit: TradeAction
+  properties:
+    recipient:
+      type:
+        - Person
+        - Audience
+        - ContactPoint
+        - Organization
+      documentation:
+        en: A sub property of participant. The participant who is at the receiving end
+          of the action.

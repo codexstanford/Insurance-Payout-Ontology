@@ -1,0 +1,18 @@
+namespace undefined
+
+enum BodyMeasurementTypeEnumeration {
+  o BodyMeasurementHand
+  o BodyMeasurementHips
+  o BodyMeasurementUnderbust
+  o BodyMeasurementWeight
+  o BodyMeasurementHeight
+  o BodyMeasurementChest
+  o BodyMeasurementFoot
+  o BodyMeasurementHead
+  o BodyMeasurementNeck
+  o BodyMeasurementBust
+  o BodyMeasurementInsideLeg
+  o BodyMeasurementWaist
+  o BodyMeasurementArm
+}
+

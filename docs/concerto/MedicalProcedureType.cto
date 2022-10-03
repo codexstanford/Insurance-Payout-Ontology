@@ -1,0 +1,7 @@
+namespace undefined
+
+enum MedicalProcedureType {
+  o PercutaneousProcedure
+  o NoninvasiveProcedure
+}
+

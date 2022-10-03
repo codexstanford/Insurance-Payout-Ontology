@@ -1,0 +1,23 @@
+classDiagram
+  VideoObject -- Person
+VideoObject -- string,MediaObject
+VideoObject -- ImageObject
+VideoObject -- Person,MusicGroup
+
+
+MediaObject <|-- VideoObject
+class VideoObject {
+
+  string embeddedTextCaption
+  Person director
+  Person actor
+  string,MediaObject caption
+  ImageObject thumbnail
+  string transcript
+  string videoQuality
+  string videoFrameSize
+  Person actors
+  Person,MusicGroup musicBy
+  Person directors
+
+}

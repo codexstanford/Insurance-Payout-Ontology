@@ -1,0 +1,15 @@
+namespace undefined
+
+import org.codex.insurance.core.QualitativeValue,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QualitativeValue,string.cto
+import org.codex.insurance.core.dateTime,time from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,time.cto
+import org.codex.insurance.core.number,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,QuantitativeValue.cto
+
+
+concept LodgingReservation extends Reservation {
+  o QualitativeValue,string lodgingUnitType
+  o String lodgingUnitDescription
+  o dateTime,time checkoutTime
+  o number,QuantitativeValue numAdults
+  o dateTime,time checkinTime
+  o number,QuantitativeValue numChildren
+}

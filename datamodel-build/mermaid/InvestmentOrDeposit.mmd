@@ -1,0 +1,10 @@
+classDiagram
+  InvestmentOrDeposit -- number,MonetaryAmount
+
+
+FinancialProduct <|-- InvestmentOrDeposit
+class InvestmentOrDeposit {
+
+  number,MonetaryAmount amount
+
+}

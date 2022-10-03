@@ -153,7 +153,12 @@ function buildObjDoc(objName) {
 
   
   if (data.type !== 'system') {
-    doc += fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`,'utf8')
+    if (!fs.existsSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`)) {
+      console.warn(`Missing svg schema : ${DATA_MODEL_MERMAID_PATH}/${name}.svg}`);
+    }
+    else {
+      doc += fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`,'utf8')
+    }
   }
 
   let PROP_MENU = "";

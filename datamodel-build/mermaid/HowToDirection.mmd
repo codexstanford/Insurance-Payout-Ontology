@@ -1,0 +1,21 @@
+classDiagram
+  HowToDirection -- string,MediaObject
+HowToDirection -- HowToSupply,string
+HowToDirection -- Duration
+HowToDirection -- HowToTool,string
+
+
+ListItem <|-- HowToDirection
+CreativeWork <|-- HowToDirection
+class HowToDirection {
+
+  string,MediaObject afterMedia
+  HowToSupply,string supply
+  string,MediaObject duringMedia
+  Duration totalTime
+  string,MediaObject beforeMedia
+  HowToTool,string tool
+  Duration prepTime
+  Duration performTime
+
+}

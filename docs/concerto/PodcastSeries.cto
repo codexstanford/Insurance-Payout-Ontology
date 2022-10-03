@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.DataFeed,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DataFeed,string.cto
+
+
+concept PodcastSeries extends CreativeWorkSeries {
+  o Person actor
+  o DataFeed,string webFeed
+}

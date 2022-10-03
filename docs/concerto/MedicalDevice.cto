@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalEntity from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalEntity.cto
+import org.codex.insurance.core.string,MedicalContraindication from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,MedicalContraindication.cto
+
+
+concept MedicalDevice extends MedicalEntity {
+  o MedicalEntity adverseOutcome
+  o String preOp
+  o MedicalEntity seriousAdverseOutcome
+  o String postOp
+  o String procedure
+  o string,MedicalContraindication contraindication
+}

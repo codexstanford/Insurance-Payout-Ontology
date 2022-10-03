@@ -1,9 +1,0 @@
-Product:
-  type: object
-  properties:
-    benefits:
-      type: List
-      of: Benefits
-    riskObjects:
-      type: List
-      of: RiskObject

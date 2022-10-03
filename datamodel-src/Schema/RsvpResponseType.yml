@@ -1,0 +1,16 @@
+RsvpResponseType:
+  type: enum
+  documentation:
+    en: RsvpResponseType is an enumeration type whose instances represent responding
+      to an RSVP request.
+  inherit: Enumeration
+  values:
+    RsvpResponseNo:
+      documentation:
+        en: The invitee will not attend.
+    RsvpResponseMaybe:
+      documentation:
+        en: The invitee may or may not attend.
+    RsvpResponseYes:
+      documentation:
+        en: The invitee will attend.

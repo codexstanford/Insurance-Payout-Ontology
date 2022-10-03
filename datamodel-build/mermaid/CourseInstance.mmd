@@ -1,0 +1,13 @@
+classDiagram
+  CourseInstance -- Person
+CourseInstance -- string,string
+
+
+Event <|-- CourseInstance
+class CourseInstance {
+
+  Person instructor
+  string courseWorkload
+  string,string courseMode
+
+}

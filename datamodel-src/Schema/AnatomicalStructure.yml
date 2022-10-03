@@ -1,0 +1,42 @@
+AnatomicalStructure:
+  type: object
+  documentation:
+    en: Any part of the human body, typically a component of an anatomical system.
+      Organs, tissues, and cells are all anatomical structures.
+  inherit: MedicalEntity
+  properties:
+    bodyLocation:
+      type: string
+      documentation:
+        en: Location in the body of the anatomical structure.
+    connectedTo:
+      type: AnatomicalStructure
+      documentation:
+        en: Other anatomical structures to which this structure is connected.
+    partOfSystem:
+      type: AnatomicalSystem
+      documentation:
+        en: The anatomical or organ system that this structure is part of.
+    relatedTherapy:
+      type: MedicalTherapy
+      documentation:
+        en: A medical therapy related to this anatomy.
+    diagram:
+      type: ImageObject
+      documentation:
+        en: An image containing a diagram that illustrates the structure and/or its
+          component substructures and/or connections with other structures.
+    relatedCondition:
+      type: MedicalCondition
+      documentation:
+        en: A medical condition associated with this anatomy.
+    subStructure:
+      type: AnatomicalStructure
+      documentation:
+        en: Component (sub-)structure(s) that comprise this anatomical structure.
+    associatedPathophysiology:
+      type: string
+      documentation:
+        en: If applicable, a description of the pathophysiology associated with the
+          anatomical system, including potential abnormal changes in the
+          mechanical, physical, and biochemical functions of the system.

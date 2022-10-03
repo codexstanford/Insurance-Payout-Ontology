@@ -1,0 +1,20 @@
+classDiagram
+  Trip -- time,dateTime
+Trip -- Offer,Demand
+Trip -- Organization,Person
+Trip -- Trip
+Trip -- ItemList,Place
+
+
+Intangible <|-- Trip
+class Trip {
+
+  time,dateTime arrivalTime
+  Offer,Demand offers
+  time,dateTime departureTime
+  Organization,Person provider
+  Trip subTrip
+  ItemList,Place itinerary
+  Trip partOfTrip
+
+}

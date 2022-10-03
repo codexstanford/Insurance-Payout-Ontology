@@ -1,0 +1,12 @@
+classDiagram
+  ChemicalSubstance -- DefinedTerm
+
+
+BioChemEntity <|-- ChemicalSubstance
+class ChemicalSubstance {
+
+  string chemicalComposition
+  DefinedTerm potentialUse
+  DefinedTerm chemicalRole
+
+}

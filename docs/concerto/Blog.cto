@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.BlogPosting from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BlogPosting.cto
+
+
+concept Blog extends CreativeWork {
+  o BlogPosting blogPosts
+  o String issn
+  o BlogPosting blogPost
+}

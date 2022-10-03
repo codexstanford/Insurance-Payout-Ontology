@@ -1,0 +1,12 @@
+EndorseAction:
+  type: object
+  documentation:
+    en: An agent approves/certifies/likes/supports/sanction an object.
+  inherit: ReactAction
+  properties:
+    endorsee:
+      type:
+        - Person
+        - Organization
+      documentation:
+        en: A sub property of participant. The person/organization being supported.

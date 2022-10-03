@@ -1,0 +1,21 @@
+classDiagram
+  UnitPriceSpecification -- PriceTypeEnumeration,string
+UnitPriceSpecification -- string,string
+UnitPriceSpecification -- Duration,QuantitativeValue,number
+UnitPriceSpecification -- QuantitativeValue
+UnitPriceSpecification -- PriceComponentTypeEnumeration
+
+
+PriceSpecification <|-- UnitPriceSpecification
+class UnitPriceSpecification {
+
+  PriceTypeEnumeration,string priceType
+  string unitText
+  number billingIncrement
+  string,string unitCode
+  Duration,QuantitativeValue,number billingDuration
+  QuantitativeValue referenceQuantity
+  PriceComponentTypeEnumeration priceComponentType
+  number billingStart
+
+}

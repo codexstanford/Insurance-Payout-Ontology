@@ -1,0 +1,15 @@
+DigitalDocumentPermissionType:
+  type: enum
+  documentation:
+    en: A type of permission which can be granted for accessing a digital document.
+  inherit: Enumeration
+  values:
+    CommentPermission:
+      documentation:
+        en: Permission to add comments to the document.
+    ReadPermission:
+      documentation:
+        en: Permission to read or view the document.
+    WritePermission:
+      documentation:
+        en: Permission to write or edit the document.

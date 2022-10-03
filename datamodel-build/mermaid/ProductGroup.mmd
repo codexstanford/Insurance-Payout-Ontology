@@ -1,0 +1,13 @@
+classDiagram
+  ProductGroup -- Product
+ProductGroup -- string,DefinedTerm
+
+
+Product <|-- ProductGroup
+class ProductGroup {
+
+  Product hasVariant
+  string productGroupID
+  string,DefinedTerm variesBy
+
+}

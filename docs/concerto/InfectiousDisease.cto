@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.InfectiousAgentClass from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/InfectiousAgentClass.cto
+
+
+concept InfectiousDisease extends MedicalCondition {
+  o InfectiousAgentClass infectiousAgentClass
+  o String infectiousAgent
+  o String transmissionMethod
+}

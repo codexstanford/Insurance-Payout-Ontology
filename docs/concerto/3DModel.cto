@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept 3DModel extends MediaObject {
+  o Boolean isResizable
+}

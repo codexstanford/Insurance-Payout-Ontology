@@ -1,0 +1,12 @@
+MovieTheater:
+  type: object
+  documentation:
+    en: A movie theater.
+  inherit:
+    - CivicStructure
+    - EntertainmentBusiness
+  properties:
+    screenCount:
+      type: number
+      documentation:
+        en: The number of screens in the movie theater.

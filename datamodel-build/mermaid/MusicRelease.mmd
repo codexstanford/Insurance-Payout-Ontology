@@ -1,0 +1,19 @@
+classDiagram
+  MusicRelease -- MusicAlbum
+MusicRelease -- MusicReleaseFormatType
+MusicRelease -- Duration
+MusicRelease -- Person,Organization
+MusicRelease -- Organization
+
+
+MusicPlaylist <|-- MusicRelease
+class MusicRelease {
+
+  MusicAlbum releaseOf
+  MusicReleaseFormatType musicReleaseFormat
+  Duration duration
+  Person,Organization creditedTo
+  Organization recordLabel
+  string catalogNumber
+
+}

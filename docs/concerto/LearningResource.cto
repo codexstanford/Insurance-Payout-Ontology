@@ -1,0 +1,17 @@
+namespace undefined
+
+import org.codex.insurance.core.DefinedTerm,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedTerm,string.cto
+import org.codex.insurance.core.string,DefinedTerm,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,DefinedTerm,string.cto
+import org.codex.insurance.core.string,DefinedTerm from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,DefinedTerm.cto
+import org.codex.insurance.core.AlignmentObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AlignmentObject.cto
+
+
+concept LearningResource extends CreativeWork {
+  o DefinedTerm,string teaches
+  o string,DefinedTerm,string educationalLevel
+  o string,DefinedTerm assesses
+  o DefinedTerm,string educationalUse
+  o AlignmentObject educationalAlignment
+  o string,DefinedTerm,string competencyRequired
+  o DefinedTerm,string learningResourceType
+}

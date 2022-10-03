@@ -1,0 +1,12 @@
+classDiagram
+  PlayAction -- Audience
+PlayAction -- Event
+
+
+Action <|-- PlayAction
+class PlayAction {
+
+  Audience audience
+  Event event
+
+}

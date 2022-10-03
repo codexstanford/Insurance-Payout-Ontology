@@ -1,0 +1,19 @@
+classDiagram
+  Article -- string,number
+Article -- string,CreativeWork
+Article -- string,SpeakableSpecification
+
+
+CreativeWork <|-- Article
+class Article {
+
+  string,number pageStart
+  string articleSection
+  string,number pageEnd
+  string,CreativeWork backstory
+  number wordCount
+  string articleBody
+  string,SpeakableSpecification speakable
+  string pagination
+
+}

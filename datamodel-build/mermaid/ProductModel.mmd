@@ -1,0 +1,13 @@
+classDiagram
+  ProductModel -- ProductModel
+ProductModel -- ProductModel,ProductGroup
+
+
+Product <|-- ProductModel
+class ProductModel {
+
+  ProductModel successorOf
+  ProductModel predecessorOf
+  ProductModel,ProductGroup isVariantOf
+
+}

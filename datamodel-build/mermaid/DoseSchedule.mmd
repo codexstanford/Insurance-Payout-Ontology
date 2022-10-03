@@ -1,0 +1,13 @@
+classDiagram
+  DoseSchedule -- number,QualitativeValue
+
+
+MedicalIntangible <|-- DoseSchedule
+class DoseSchedule {
+
+  string targetPopulation
+  string frequency
+  string doseUnit
+  number,QualitativeValue doseValue
+
+}

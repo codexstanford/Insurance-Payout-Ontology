@@ -1,0 +1,20 @@
+HealthPlanFormulary:
+  type: object
+  documentation:
+    en: "For a given health insurance plan, the specification for costs and coverage
+      of prescription drugs. "
+  inherit: Intangible
+  properties:
+    offersPrescriptionByMail:
+      type: boolean
+      documentation:
+        en: Whether prescriptions can be delivered by mail.
+    healthPlanDrugTier:
+      type: string
+      documentation:
+        en: The tier(s) of drugs offered by this formulary or insurance plan.
+    healthPlanCostSharing:
+      type: boolean
+      documentation:
+        en: Whether The costs to the patient for services under this network or
+          formulary.

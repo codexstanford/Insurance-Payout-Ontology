@@ -1,0 +1,17 @@
+namespace undefined
+
+import org.codex.insurance.core.MusicRecording from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MusicRecording.cto
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.MusicAlbum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MusicAlbum.cto
+import org.codex.insurance.core.ItemList,MusicRecording from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ItemList,MusicRecording.cto
+
+
+concept MusicGroup extends PerformingGroup {
+  o MusicRecording tracks
+  o string,string genre
+  o Person musicGroupMember
+  o MusicAlbum albums
+  o ItemList,MusicRecording track
+  o MusicAlbum album
+}

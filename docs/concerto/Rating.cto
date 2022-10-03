@@ -1,0 +1,15 @@
+namespace undefined
+
+import org.codex.insurance.core.string,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,number.cto
+import org.codex.insurance.core.Person,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Organization.cto
+import org.codex.insurance.core.number,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,string.cto
+
+
+concept Rating extends Intangible {
+  o String reviewAspect
+  o string,number worstRating
+  o Person,Organization author
+  o string,number bestRating
+  o number,string ratingValue
+  o String ratingExplanation
+}

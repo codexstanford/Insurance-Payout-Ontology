@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.DefinedTerm from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedTerm.cto
+
+
+concept ChemicalSubstance extends BioChemEntity {
+  o String chemicalComposition
+  o DefinedTerm potentialUse
+  o DefinedTerm chemicalRole
+}

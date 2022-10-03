@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+import org.codex.insurance.core.number,MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,MonetaryAmount.cto
+
+
+concept MonetaryGrant extends Grant {
+  o Organization,Person funder
+  o number,MonetaryAmount amount
+}

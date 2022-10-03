@@ -1,0 +1,28 @@
+namespace undefined
+
+import org.codex.insurance.core.Legislation from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Legislation.cto
+import org.codex.insurance.core.LegalForceStatus from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/LegalForceStatus.cto
+import org.codex.insurance.core.CategoryCode,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CategoryCode,string.cto
+import org.codex.insurance.core.string,AdministrativeArea from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,AdministrativeArea.cto
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+import org.codex.insurance.core.AdministrativeArea,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea,string.cto
+import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
+import org.codex.insurance.core.Person,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Organization.cto
+
+
+concept Legislation extends CreativeWork {
+  o Legislation legislationTransposes
+  o LegalForceStatus legislationLegalForce
+  o CategoryCode,string legislationType
+  o string,AdministrativeArea jurisdiction
+  o string,string legislationIdentifier
+  o Legislation legislationChanges
+  o Organization,Person legislationResponsible
+  o AdministrativeArea,string legislationJurisdiction
+  o date legislationDate
+  o Person,Organization legislationPassedBy
+  o Legislation legislationConsolidates
+  o Legislation legislationApplies
+  o date legislationDateVersion
+}

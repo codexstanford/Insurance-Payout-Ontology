@@ -1,0 +1,16 @@
+namespace undefined
+
+import org.codex.insurance.core.DefinedRegion from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedRegion.cto
+import org.codex.insurance.core.ShippingDeliveryTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ShippingDeliveryTime.cto
+import org.codex.insurance.core.MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MonetaryAmount.cto
+
+
+concept OfferShippingDetails extends StructuredValue {
+  o DefinedRegion shippingDestination
+  o Boolean doesNotShip
+  o String shippingSettingsLink
+  o String transitTimeLabel
+  o String shippingLabel
+  o ShippingDeliveryTime deliveryTime
+  o MonetaryAmount shippingRate
+}

@@ -1,0 +1,31 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalTherapy from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTherapy.cto
+import org.codex.insurance.core.string,EventStatusType,MedicalStudyStatus from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,EventStatusType,MedicalStudyStatus.cto
+import org.codex.insurance.core.DDxElement from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DDxElement.cto
+import org.codex.insurance.core.MedicalConditionStage from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalConditionStage.cto
+import org.codex.insurance.core.Drug from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Drug.cto
+import org.codex.insurance.core.AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy.cto
+import org.codex.insurance.core.MedicalSignOrSymptom from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalSignOrSymptom.cto
+import org.codex.insurance.core.MedicalTest from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTest.cto
+import org.codex.insurance.core.MedicalRiskFactor from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalRiskFactor.cto
+
+
+concept MedicalCondition extends MedicalEntity {
+  o String possibleComplication
+  o String naturalProgression
+  o MedicalTherapy primaryPrevention
+  o string,EventStatusType,MedicalStudyStatus status
+  o DDxElement differentialDiagnosis
+  o MedicalConditionStage stage
+  o String pathophysiology
+  o Drug drug
+  o MedicalTherapy secondaryPrevention
+  o AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy associatedAnatomy
+  o MedicalSignOrSymptom signOrSymptom
+  o MedicalTest typicalTest
+  o String epidemiology
+  o MedicalRiskFactor riskFactor
+  o String expectedPrognosis
+  o MedicalTherapy possibleTreatment
+}

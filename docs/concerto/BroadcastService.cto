@@ -1,0 +1,23 @@
+namespace undefined
+
+import org.codex.insurance.core.BroadcastService from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BroadcastService.cto
+import org.codex.insurance.core.BroadcastFrequencySpecification,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BroadcastFrequencySpecification,string.cto
+import org.codex.insurance.core.string,Language from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Language.cto
+import org.codex.insurance.core.BroadcastChannel from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BroadcastChannel.cto
+import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
+import org.codex.insurance.core.Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place.cto
+
+
+concept BroadcastService extends Service {
+  o BroadcastService parentService
+  o String broadcastDisplayName
+  o String videoFormat
+  o String broadcastTimezone
+  o BroadcastFrequencySpecification,string broadcastFrequency
+  o String callSign
+  o string,Language inLanguage
+  o BroadcastChannel hasBroadcastChannel
+  o Organization broadcaster
+  o Organization broadcastAffiliateOf
+  o Place area
+}

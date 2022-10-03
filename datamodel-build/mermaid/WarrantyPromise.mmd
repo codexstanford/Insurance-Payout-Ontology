@@ -1,0 +1,12 @@
+classDiagram
+  WarrantyPromise -- WarrantyScope
+WarrantyPromise -- QuantitativeValue
+
+
+StructuredValue <|-- WarrantyPromise
+class WarrantyPromise {
+
+  WarrantyScope warrantyScope
+  QuantitativeValue durationOfWarranty
+
+}

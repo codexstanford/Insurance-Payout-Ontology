@@ -1,0 +1,12 @@
+classDiagram
+  HowToSection -- ItemList,CreativeWork,string
+
+
+ListItem <|-- HowToSection
+CreativeWork <|-- HowToSection
+ItemList <|-- HowToSection
+class HowToSection {
+
+  ItemList,CreativeWork,string steps
+
+}

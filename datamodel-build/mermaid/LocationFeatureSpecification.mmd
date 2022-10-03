@@ -1,0 +1,13 @@
+classDiagram
+  LocationFeatureSpecification -- OpeningHoursSpecification
+LocationFeatureSpecification -- dateTime,date
+
+
+PropertyValue <|-- LocationFeatureSpecification
+class LocationFeatureSpecification {
+
+  OpeningHoursSpecification hoursAvailable
+  dateTime,date validFrom
+  dateTime,date validThrough
+
+}

@@ -1,0 +1,26 @@
+namespace undefined
+
+import org.codex.insurance.core.PostalAddress from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PostalAddress.cto
+import org.codex.insurance.core.Product from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Product.cto
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
+import org.codex.insurance.core.DeliveryEvent from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DeliveryEvent.cto
+import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
+import org.codex.insurance.core.DeliveryMethod from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DeliveryMethod.cto
+import org.codex.insurance.core.Order from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Order.cto
+
+
+concept ParcelDelivery extends Intangible {
+  o PostalAddress originAddress
+  o String trackingNumber
+  o Product itemShipped
+  o Organization,Person provider
+  o String trackingUrl
+  o PostalAddress deliveryAddress
+  o date,dateTime expectedArrivalUntil
+  o DeliveryEvent deliveryStatus
+  o date,dateTime expectedArrivalFrom
+  o Organization carrier
+  o DeliveryMethod hasDeliveryMethod
+  o Order partOfOrder
+}

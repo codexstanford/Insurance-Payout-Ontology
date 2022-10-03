@@ -1,0 +1,20 @@
+classDiagram
+  Course -- string,AlignmentObject,Course
+Course -- string,EducationalOccupationalCredential,string
+Course -- number,StructuredValue
+Course -- EducationalOccupationalCredential,string,string
+Course -- CourseInstance
+
+
+LearningResource <|-- Course
+CreativeWork <|-- Course
+class Course {
+
+  string,AlignmentObject,Course coursePrerequisites
+  string,EducationalOccupationalCredential,string educationalCredentialAwarded
+  number,StructuredValue numberOfCredits
+  EducationalOccupationalCredential,string,string occupationalCredentialAwarded
+  string courseCode
+  CourseInstance hasCourseInstance
+
+}

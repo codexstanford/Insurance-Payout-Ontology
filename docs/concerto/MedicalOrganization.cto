@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalSpecialty from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalSpecialty.cto
+
+
+concept MedicalOrganization extends Organization {
+  o Boolean isAcceptingNewPatients
+  o String healthPlanNetworkId
+  o MedicalSpecialty medicalSpecialty
+}

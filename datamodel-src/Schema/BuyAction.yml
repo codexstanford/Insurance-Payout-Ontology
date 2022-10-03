@@ -1,0 +1,25 @@
+BuyAction:
+  type: object
+  documentation:
+    en: The act of giving money to a seller in exchange for goods or services
+      rendered. An agent buys an object, product, or service from a seller for a
+      price. Reciprocal of SellAction.
+  inherit: TradeAction
+  properties:
+    warrantyPromise:
+      type: WarrantyPromise
+      documentation:
+        en: The warranty promise(s) included in the offer.
+    seller:
+      type:
+        - Organization
+        - Person
+      documentation:
+        en: An entity which offers (sells / leases / lends / loans) the services /
+          goods.  A seller may also be a provider.
+    vendor:
+      type:
+        - Person
+        - Organization
+      documentation:
+        en: "'vendor' is an earlier term for 'seller'."

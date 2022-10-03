@@ -1,0 +1,17 @@
+classDiagram
+  SoftwareSourceCode -- string,ComputerLanguage
+SoftwareSourceCode -- SoftwareApplication
+
+
+CreativeWork <|-- SoftwareSourceCode
+class SoftwareSourceCode {
+
+  string,ComputerLanguage programmingLanguage
+  string sampleType
+  string runtimePlatform
+  string runtime
+  SoftwareApplication targetProduct
+  string codeRepository
+  string codeSampleType
+
+}

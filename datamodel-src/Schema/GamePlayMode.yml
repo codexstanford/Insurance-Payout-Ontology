@@ -1,0 +1,17 @@
+GamePlayMode:
+  type: enum
+  documentation:
+    en: Indicates whether this game is multi-player, co-op or single-player.
+  inherit: Enumeration
+  values:
+    MultiPlayer:
+      documentation:
+        en: "Play mode: MultiPlayer. Requiring or allowing multiple human players to
+          play simultaneously."
+    CoOp:
+      documentation:
+        en: "Play mode: CoOp. Co-operative games, where you play on the same team with
+          friends."
+    SinglePlayer:
+      documentation:
+        en: "Play mode: SinglePlayer. Which is played by a lone player."

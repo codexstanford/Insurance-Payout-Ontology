@@ -1,0 +1,16 @@
+namespace undefined
+
+import org.codex.insurance.core.string,SizeGroupEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,SizeGroupEnumeration.cto
+import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
+import org.codex.insurance.core.string,SizeSystemEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,SizeSystemEnumeration.cto
+import org.codex.insurance.core.GenderType,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GenderType,string.cto
+
+
+concept SizeSpecification extends QualitativeValue {
+  o string,SizeGroupEnumeration sizeGroup
+  o QuantitativeValue suggestedMeasurement
+  o QuantitativeValue suggestedAge
+  o QuantitativeValue hasMeasurement
+  o string,SizeSystemEnumeration sizeSystem
+  o GenderType,string suggestedGender
+}

@@ -1,0 +1,12 @@
+classDiagram
+  CompoundPriceSpecification -- UnitPriceSpecification
+CompoundPriceSpecification -- PriceTypeEnumeration,string
+
+
+PriceSpecification <|-- CompoundPriceSpecification
+class CompoundPriceSpecification {
+
+  UnitPriceSpecification priceComponent
+  PriceTypeEnumeration,string priceType
+
+}

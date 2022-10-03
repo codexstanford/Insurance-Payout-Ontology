@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept MedicalRiskScore extends MedicalRiskEstimator {
+  o String algorithm
+}

@@ -1,0 +1,18 @@
+classDiagram
+  BroadcastChannel -- string,string
+BroadcastChannel -- BroadcastFrequencySpecification,string
+BroadcastChannel -- BroadcastService
+BroadcastChannel -- CableOrSatelliteService
+
+
+Intangible <|-- BroadcastChannel
+class BroadcastChannel {
+
+  string,string genre
+  BroadcastFrequencySpecification,string broadcastFrequency
+  BroadcastService providesBroadcastService
+  string broadcastChannelId
+  CableOrSatelliteService inBroadcastLineup
+  string broadcastServiceTier
+
+}

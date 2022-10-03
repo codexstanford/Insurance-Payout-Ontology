@@ -1,0 +1,25 @@
+namespace undefined
+
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.VideoObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/VideoObject.cto
+import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
+import org.codex.insurance.core.Episode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Episode.cto
+import org.codex.insurance.core.CreativeWorkSeries from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWorkSeries.cto
+import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
+import org.codex.insurance.core.string,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,number.cto
+
+
+concept CreativeWorkSeason extends CreativeWork {
+  o dateTime,date startDate
+  o Person director
+  o Person actor
+  o VideoObject trailer
+  o date,dateTime endDate
+  o Episode episodes
+  o Double numberOfEpisodes
+  o CreativeWorkSeries partOfSeries
+  o Organization productionCompany
+  o string,number seasonNumber
+  o Episode episode
+}

@@ -1,0 +1,11 @@
+namespace undefined
+
+enum DrugPregnancyCategory {
+  o FDAcategoryC
+  o FDAcategoryA
+  o FDAcategoryX
+  o FDAcategoryB
+  o FDAcategoryD
+  o FDAnotEvaluated
+}
+

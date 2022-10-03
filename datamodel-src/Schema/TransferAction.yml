@@ -1,0 +1,17 @@
+TransferAction:
+  type: object
+  documentation:
+    en: The act of transferring/moving (abstract or concrete) animate or inanimate
+      objects from one place to another.
+  inherit: Action
+  properties:
+    fromLocation:
+      type: Place
+      documentation:
+        en: A sub property of location. The original location of the object or the agent
+          before the action.
+    toLocation:
+      type: Place
+      documentation:
+        en: A sub property of location. The final location of the object or the agent
+          after the action.

@@ -1,0 +1,27 @@
+Hospital:
+  type: object
+  documentation:
+    en: A hospital.
+  inherit:
+    - MedicalOrganization
+    - EmergencyService
+    - CivicStructure
+  properties:
+    availableService:
+      type:
+        - MedicalTest
+        - MedicalProcedure
+        - MedicalTherapy
+      documentation:
+        en: A medical service available from this provider.
+    healthcareReportingData:
+      type:
+        - Dataset
+        - CDCPMDRecord
+      documentation:
+        en: Indicates data describing a hospital, e.g. a CDC [[CDCPMDRecord]] or as some
+          kind of [[Dataset]].
+    medicalSpecialty:
+      type: MedicalSpecialty
+      documentation:
+        en: A medical specialty of the provider.

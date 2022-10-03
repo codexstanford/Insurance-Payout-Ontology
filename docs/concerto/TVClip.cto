@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.TVSeries from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/TVSeries.cto
+
+
+concept TVClip extends Clip {
+  o TVSeries partOfTVSeries
+}

@@ -1,0 +1,10 @@
+namespace undefined
+
+enum DigitalPlatformEnumeration {
+  o MobileWebPlatform
+  o AndroidPlatform
+  o GenericWebPlatform
+  o DesktopWebPlatform
+  o IOSPlatform
+}
+

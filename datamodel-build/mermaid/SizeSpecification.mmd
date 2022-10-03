@@ -1,0 +1,18 @@
+classDiagram
+  SizeSpecification -- string,SizeGroupEnumeration
+SizeSpecification -- QuantitativeValue
+SizeSpecification -- string,SizeSystemEnumeration
+SizeSpecification -- GenderType,string
+
+
+QualitativeValue <|-- SizeSpecification
+class SizeSpecification {
+
+  string,SizeGroupEnumeration sizeGroup
+  QuantitativeValue suggestedMeasurement
+  QuantitativeValue suggestedAge
+  QuantitativeValue hasMeasurement
+  string,SizeSystemEnumeration sizeSystem
+  GenderType,string suggestedGender
+
+}

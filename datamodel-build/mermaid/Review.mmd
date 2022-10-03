@@ -1,0 +1,22 @@
+classDiagram
+  Review -- Rating
+Review -- Thing
+Review -- ListItem,string,WebContent,ItemList
+Review -- Review
+Review -- WebContent,string,ListItem,ItemList
+
+
+CreativeWork <|-- Review
+class Review {
+
+  Rating reviewRating
+  Thing itemReviewed
+  ListItem,string,WebContent,ItemList negativeNotes
+  string reviewAspect
+  Review associatedClaimReview
+  WebContent,string,ListItem,ItemList positiveNotes
+  Review associatedReview
+  Review associatedMediaReview
+  string reviewBody
+
+}

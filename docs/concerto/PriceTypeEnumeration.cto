@@ -1,0 +1,11 @@
+namespace undefined
+
+enum PriceTypeEnumeration {
+  o SalePrice
+  o SRP
+  o ListPrice
+  o InvoicePrice
+  o MinimumAdvertisedPrice
+  o MSRP
+}
+

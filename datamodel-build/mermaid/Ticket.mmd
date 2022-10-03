@@ -1,0 +1,22 @@
+classDiagram
+  Ticket -- string,string
+Ticket -- Seat
+Ticket -- PriceSpecification,number,string
+Ticket -- Organization
+Ticket -- date,dateTime
+Ticket -- Organization,Person
+
+
+Intangible <|-- Ticket
+class Ticket {
+
+  string,string ticketToken
+  Seat ticketedSeat
+  PriceSpecification,number,string totalPrice
+  Organization issuedBy
+  string ticketNumber
+  date,dateTime dateIssued
+  string priceCurrency
+  Organization,Person underName
+
+}

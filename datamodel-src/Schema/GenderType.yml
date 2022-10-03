@@ -1,0 +1,12 @@
+GenderType:
+  type: enum
+  documentation:
+    en: An enumeration of genders.
+  inherit: Enumeration
+  values:
+    Male:
+      documentation:
+        en: The male gender.
+    Female:
+      documentation:
+        en: The female gender.

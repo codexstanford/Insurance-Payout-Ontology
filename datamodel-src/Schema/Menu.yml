@@ -1,0 +1,15 @@
+Menu:
+  type: object
+  documentation:
+    en: A structured representation of food or drink items available from a
+      FoodEstablishment.
+  inherit: CreativeWork
+  properties:
+    hasMenuSection:
+      type: MenuSection
+      documentation:
+        en: A subgrouping of the menu (by dishes, course, serving time period, etc.).
+    hasMenuItem:
+      type: MenuItem
+      documentation:
+        en: A food or drink item contained in a menu or menu section.

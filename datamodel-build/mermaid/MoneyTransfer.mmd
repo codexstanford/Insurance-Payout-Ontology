@@ -1,0 +1,12 @@
+classDiagram
+  MoneyTransfer -- BankOrCreditUnion,string
+MoneyTransfer -- number,MonetaryAmount
+
+
+TransferAction <|-- MoneyTransfer
+class MoneyTransfer {
+
+  BankOrCreditUnion,string beneficiaryBank
+  number,MonetaryAmount amount
+
+}

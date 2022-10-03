@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept CivicStructure extends Place {
+  o String openingHours
+}

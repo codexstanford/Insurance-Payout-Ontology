@@ -1,0 +1,9 @@
+namespace undefined
+
+enum GameServerStatus {
+  o OnlineFull
+  o OfflinePermanently
+  o Online
+  o OfflineTemporarily
+}
+

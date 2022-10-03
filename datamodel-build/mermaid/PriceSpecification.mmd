@@ -1,0 +1,21 @@
+classDiagram
+  PriceSpecification -- QuantitativeValue
+PriceSpecification -- dateTime,date
+PriceSpecification -- PriceSpecification
+PriceSpecification -- number,string
+
+
+StructuredValue <|-- PriceSpecification
+class PriceSpecification {
+
+  number minPrice
+  QuantitativeValue eligibleQuantity
+  dateTime,date validFrom
+  number maxPrice
+  string priceCurrency
+  boolean valueAddedTaxIncluded
+  PriceSpecification eligibleTransactionVolume
+  dateTime,date validThrough
+  number,string price
+
+}

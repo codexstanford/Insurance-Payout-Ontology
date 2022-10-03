@@ -1,0 +1,11 @@
+namespace undefined
+
+enum PriceComponentTypeEnumeration {
+  o Subscription
+  o Installment
+  o ActivationFee
+  o Downpayment
+  o CleaningFee
+  o DistanceFee
+}
+

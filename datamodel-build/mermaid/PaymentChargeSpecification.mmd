@@ -1,0 +1,12 @@
+classDiagram
+  PaymentChargeSpecification -- PaymentMethod
+PaymentChargeSpecification -- DeliveryMethod
+
+
+PriceSpecification <|-- PaymentChargeSpecification
+class PaymentChargeSpecification {
+
+  PaymentMethod appliesToPaymentMethod
+  DeliveryMethod appliesToDeliveryMethod
+
+}

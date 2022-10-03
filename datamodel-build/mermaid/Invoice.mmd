@@ -1,0 +1,35 @@
+classDiagram
+  Invoice -- MonetaryAmount,PriceSpecification
+Invoice -- Duration
+Invoice -- Order
+Invoice -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+Invoice -- date
+Invoice -- Organization,Person
+Invoice -- dateTime,date
+Invoice -- Person,Organization
+Invoice -- PaymentStatusType,string
+Invoice -- dateTime
+Invoice -- PaymentMethod
+
+
+Intangible <|-- Invoice
+class Invoice {
+
+  MonetaryAmount,PriceSpecification totalPaymentDue
+  Duration billingPeriod
+  Order referencesOrder
+  string accountId
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  date scheduledPaymentDate
+  string confirmationNumber
+  Organization,Person customer
+  Organization,Person provider
+  MonetaryAmount,PriceSpecification minimumPaymentDue
+  dateTime,date paymentDueDate
+  Person,Organization broker
+  PaymentStatusType,string paymentStatus
+  string paymentMethodId
+  dateTime paymentDue
+  PaymentMethod paymentMethod
+
+}

@@ -1,0 +1,11 @@
+namespace undefined
+
+enum InfectiousAgentClass {
+  o Bacteria
+  o Protozoa
+  o Fungus
+  o Virus
+  o Prion
+  o MulticellularParasite
+}
+

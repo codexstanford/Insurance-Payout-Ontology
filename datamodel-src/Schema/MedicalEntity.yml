@@ -1,0 +1,47 @@
+MedicalEntity:
+  type: object
+  documentation:
+    en: The most generic type of entity related to health and the practice of
+      medicine.
+  inherit: Thing
+  properties:
+    legalStatus:
+      type:
+        - DrugLegalStatus
+        - string
+        - MedicalEnumeration
+      documentation:
+        en: The drug or supplement's legal status, including any controlled substance
+          schedules that apply.
+    funding:
+      type: Grant
+      documentation:
+        en: A [[Grant]] that directly or indirectly provide funding or sponsorship for
+          this item. See also [[ownershipFundingInfo]].
+    study:
+      type: MedicalStudy
+      documentation:
+        en: A medical study or trial related to this entity.
+    code:
+      type: MedicalCode
+      documentation:
+        en: A medical code for the entity, taken from a controlled vocabulary or
+          ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
+    guideline:
+      type: MedicalGuideline
+      documentation:
+        en: A medical guideline related to this entity.
+    recognizingAuthority:
+      type: Organization
+      documentation:
+        en: If applicable, the organization that officially recognizes this entity as
+          part of its endorsed system of medicine.
+    medicineSystem:
+      type: MedicineSystem
+      documentation:
+        en: The system of medicine that includes this MedicalEntity, for example
+          'evidence-based', 'homeopathic', 'chiropractic', etc.
+    relevantSpecialty:
+      type: MedicalSpecialty
+      documentation:
+        en: If applicable, a medical specialty in which this entity is relevant.

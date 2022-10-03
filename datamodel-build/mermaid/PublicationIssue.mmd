@@ -1,0 +1,14 @@
+classDiagram
+  PublicationIssue -- string,number
+PublicationIssue -- number,string
+
+
+CreativeWork <|-- PublicationIssue
+class PublicationIssue {
+
+  string,number pageStart
+  string,number pageEnd
+  number,string issueNumber
+  string pagination
+
+}

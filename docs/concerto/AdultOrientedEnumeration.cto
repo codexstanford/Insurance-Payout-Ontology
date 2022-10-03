@@ -1,0 +1,15 @@
+namespace undefined
+
+enum AdultOrientedEnumeration {
+  o ReducedRelevanceForChildrenConsideration
+  o SexualContentConsideration
+  o UnclassifiedAdultConsideration
+  o HealthcareConsideration
+  o NarcoticConsideration
+  o WeaponConsideration
+  o TobaccoNicotineConsideration
+  o AlcoholConsideration
+  o DangerousGoodConsideration
+  o ViolenceConsideration
+}
+

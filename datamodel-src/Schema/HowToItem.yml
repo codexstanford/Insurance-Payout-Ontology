@@ -1,0 +1,14 @@
+HowToItem:
+  type: object
+  documentation:
+    en: An item used as either a tool or supply when performing the instructions for
+      how to to achieve a result.
+  inherit: ListItem
+  properties:
+    requiredQuantity:
+      type:
+        - QuantitativeValue
+        - number
+        - string
+      documentation:
+        en: The required quantity of the item(s).

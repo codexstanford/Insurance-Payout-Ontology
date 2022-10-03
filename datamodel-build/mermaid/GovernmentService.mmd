@@ -1,0 +1,12 @@
+classDiagram
+  GovernmentService -- string,AdministrativeArea
+GovernmentService -- Organization
+
+
+Service <|-- GovernmentService
+class GovernmentService {
+
+  string,AdministrativeArea jurisdiction
+  Organization serviceOperator
+
+}

@@ -1,0 +1,87 @@
+TVSeries:
+  type: object
+  documentation:
+    en: CreativeWorkSeries dedicated to TV broadcast and associated online delivery.
+  inherit:
+    - CreativeWorkSeries
+    - CreativeWork
+  properties:
+    season:
+      type:
+        - string
+        - CreativeWorkSeason
+      documentation:
+        en: A season in a media series.
+    containsSeason:
+      type: CreativeWorkSeason
+      documentation:
+        en: A season that is part of the media series.
+    countryOfOrigin:
+      type: Country
+      documentation:
+        en: >-
+          The country of origin of something, including products as well as
+          creative  works such as movie and TV content.
+
+
+          In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
+
+
+          In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.
+    director:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video gaming etc. content, or of an
+          event. Directors can be associated with individual items or with a
+          series, episode, clip.
+    actor:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors
+          can be associated with individual items or with a series, episode,
+          clip.
+    trailer:
+      type: VideoObject
+      documentation:
+        en: The trailer of a movie or tv/radio series, season, episode, etc.
+    episodes:
+      type: Episode
+      documentation:
+        en: An episode of a TV/radio series or season.
+    numberOfEpisodes:
+      type: number
+      documentation:
+        en: The number of episodes in this season or series.
+    seasons:
+      type: CreativeWorkSeason
+      documentation:
+        en: A season in a media series.
+    productionCompany:
+      type: Organization
+      documentation:
+        en: The production company or studio responsible for the item e.g. series, video
+          game, episode etc.
+    actors:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+          associated with individual items or with a series, episode, clip.
+    numberOfSeasons:
+      type: number
+      documentation:
+        en: The number of seasons in this series.
+    musicBy:
+      type:
+        - Person
+        - MusicGroup
+      documentation:
+        en: The composer of the soundtrack.
+    episode:
+      type: Episode
+      documentation:
+        en: An episode of a tv, radio or game media within a series or season.
+    directors:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video games etc. content. Directors can
+          be associated with individual items or with a series, episode, clip.

@@ -1,0 +1,17 @@
+classDiagram
+  FoodEstablishment -- Rating
+FoodEstablishment -- string,boolean,string
+FoodEstablishment -- string,string,Menu
+FoodEstablishment -- string,Menu,string
+
+
+LocalBusiness <|-- FoodEstablishment
+class FoodEstablishment {
+
+  Rating starRating
+  string servesCuisine
+  string,boolean,string acceptsReservations
+  string,string,Menu hasMenu
+  string,Menu,string menu
+
+}

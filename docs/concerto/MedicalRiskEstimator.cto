@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalEntity from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalEntity.cto
+import org.codex.insurance.core.MedicalRiskFactor from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalRiskFactor.cto
+
+
+concept MedicalRiskEstimator extends MedicalEntity {
+  o MedicalEntity estimatesRiskOf
+  o MedicalRiskFactor includedRiskFactor
+}

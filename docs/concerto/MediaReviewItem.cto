@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.MediaObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MediaObject.cto
+
+
+concept MediaReviewItem extends CreativeWork {
+  o MediaObject mediaItemAppearance
+}

@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.BookFormatType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BookFormatType.cto
+
+
+concept Book extends CreativeWork {
+  o String isbn
+  o Person illustrator
+  o Double numberOfPages
+  o Boolean abridged
+  o BookFormatType bookFormat
+  o String bookEdition
+}

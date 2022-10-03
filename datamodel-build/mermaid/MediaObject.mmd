@@ -1,0 +1,41 @@
+classDiagram
+  MediaObject -- QuantitativeValue,Distance
+MediaObject -- Distance,QuantitativeValue
+MediaObject -- Place
+MediaObject -- dateTime,time
+MediaObject -- NewsArticle
+MediaObject -- Place,string,GeoShape
+MediaObject -- MediaSubscription,boolean
+MediaObject -- CreativeWork
+MediaObject -- Duration
+MediaObject -- string,string
+MediaObject -- date
+MediaObject -- Organization
+MediaObject -- Claim
+
+
+CreativeWork <|-- MediaObject
+class MediaObject {
+
+  string contentSize
+  string contentUrl
+  QuantitativeValue,Distance width
+  Distance,QuantitativeValue height
+  Place regionsAllowed
+  dateTime,time startTime
+  NewsArticle associatedArticle
+  Place,string,GeoShape ineligibleRegion
+  MediaSubscription,boolean requiresSubscription
+  string playerType
+  CreativeWork encodesCreativeWork
+  Duration duration
+  string,string encodingFormat
+  date uploadDate
+  string embedUrl
+  string bitrate
+  dateTime,time endTime
+  Organization productionCompany
+  string sha256
+  Claim interpretedAsClaim
+
+}

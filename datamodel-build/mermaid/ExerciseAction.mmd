@@ -1,0 +1,29 @@
+classDiagram
+  ExerciseAction -- SportsTeam
+ExerciseAction -- Place
+ExerciseAction -- Diet
+ExerciseAction -- SportsActivityLocation
+ExerciseAction -- Distance
+ExerciseAction -- ExercisePlan
+ExerciseAction -- SportsEvent
+ExerciseAction -- Person
+
+
+PlayAction <|-- ExerciseAction
+class ExerciseAction {
+
+  SportsTeam sportsTeam
+  Place course
+  Place fromLocation
+  Diet diet
+  SportsActivityLocation sportsActivityLocation
+  Distance distance
+  ExercisePlan exercisePlan
+  SportsEvent sportsEvent
+  Diet exerciseRelatedDiet
+  Person opponent
+  Place exerciseCourse
+  Place toLocation
+  string exerciseType
+
+}

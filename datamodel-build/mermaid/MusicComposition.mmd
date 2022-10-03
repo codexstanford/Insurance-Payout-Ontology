@@ -1,0 +1,24 @@
+classDiagram
+  MusicComposition -- Organization,Person
+MusicComposition -- MusicComposition
+MusicComposition -- MusicRecording
+MusicComposition -- Event
+MusicComposition -- CreativeWork
+MusicComposition -- Person
+
+
+CreativeWork <|-- MusicComposition
+class MusicComposition {
+
+  string iswcCode
+  Organization,Person composer
+  string musicCompositionForm
+  MusicComposition includedComposition
+  MusicRecording recordedAs
+  Event firstPerformance
+  MusicComposition musicArrangement
+  CreativeWork lyrics
+  string musicalKey
+  Person lyricist
+
+}

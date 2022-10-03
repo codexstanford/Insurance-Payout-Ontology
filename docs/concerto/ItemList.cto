@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.Thing,ListItem,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Thing,ListItem,string.cto
+import org.codex.insurance.core.string,ItemListOrderType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,ItemListOrderType.cto
+
+
+concept ItemList extends Intangible {
+  o Double numberOfItems
+  o Thing,ListItem,string itemListElement
+  o string,ItemListOrderType itemListOrder
+}

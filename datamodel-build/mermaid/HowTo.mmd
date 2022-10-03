@@ -1,0 +1,24 @@
+classDiagram
+  HowTo -- string,QuantitativeValue
+HowTo -- string,MonetaryAmount
+HowTo -- HowToSupply,string
+HowTo -- HowToStep,HowToSection,string,CreativeWork
+HowTo -- Duration
+HowTo -- HowToTool,string
+HowTo -- ItemList,CreativeWork,string
+
+
+CreativeWork <|-- HowTo
+class HowTo {
+
+  string,QuantitativeValue yield
+  string,MonetaryAmount estimatedCost
+  HowToSupply,string supply
+  HowToStep,HowToSection,string,CreativeWork step
+  Duration totalTime
+  HowToTool,string tool
+  Duration prepTime
+  ItemList,CreativeWork,string steps
+  Duration performTime
+
+}

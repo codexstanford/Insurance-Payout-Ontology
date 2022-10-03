@@ -1,0 +1,14 @@
+MedicalConditionStage:
+  type: object
+  documentation:
+    en: A stage of a medical condition, such as 'Stage IIIa'.
+  inherit: MedicalIntangible
+  properties:
+    subStageSuffix:
+      type: string
+      documentation:
+        en: The substage, e.g. 'a' for Stage IIIa.
+    stageAsNumber:
+      type: number
+      documentation:
+        en: The stage represented as a number, e.g. 3.

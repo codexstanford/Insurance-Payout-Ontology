@@ -1,0 +1,9 @@
+namespace undefined
+
+enum ActionStatusType {
+  o PotentialActionStatus
+  o ActiveActionStatus
+  o FailedActionStatus
+  o CompletedActionStatus
+}
+

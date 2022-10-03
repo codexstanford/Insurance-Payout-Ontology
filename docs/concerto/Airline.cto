@@ -1,0 +1,9 @@
+namespace undefined
+
+import org.codex.insurance.core.BoardingPolicyType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BoardingPolicyType.cto
+
+
+concept Airline extends Organization {
+  o String iataCode
+  o BoardingPolicyType boardingPolicy
+}

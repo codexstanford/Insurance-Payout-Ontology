@@ -1,0 +1,15 @@
+classDiagram
+  LocalBusiness -- Organization
+
+
+Organization <|-- LocalBusiness
+Place <|-- LocalBusiness
+class LocalBusiness {
+
+  Organization branchOf
+  string openingHours
+  string priceRange
+  string paymentAccepted
+  string currenciesAccepted
+
+}

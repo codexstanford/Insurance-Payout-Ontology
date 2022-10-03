@@ -1,0 +1,27 @@
+namespace undefined
+
+import org.codex.insurance.core.string,CreativeWorkSeason from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,CreativeWorkSeason.cto
+import org.codex.insurance.core.CreativeWorkSeason from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWorkSeason.cto
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.VideoObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/VideoObject.cto
+import org.codex.insurance.core.Episode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Episode.cto
+import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
+import org.codex.insurance.core.Person,MusicGroup from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,MusicGroup.cto
+
+
+concept RadioSeries extends CreativeWorkSeries {
+  o string,CreativeWorkSeason season
+  o CreativeWorkSeason containsSeason
+  o Person director
+  o Person actor
+  o VideoObject trailer
+  o Episode episodes
+  o Double numberOfEpisodes
+  o CreativeWorkSeason seasons
+  o Organization productionCompany
+  o Person actors
+  o Double numberOfSeasons
+  o Person,MusicGroup musicBy
+  o Episode episode
+  o Person directors
+}

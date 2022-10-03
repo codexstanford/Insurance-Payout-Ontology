@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalImagingTechnique from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalImagingTechnique.cto
+
+
+concept ImagingTest extends MedicalTest {
+  o MedicalImagingTechnique imagingTechnique
+}

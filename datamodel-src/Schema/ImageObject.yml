@@ -1,0 +1,32 @@
+ImageObject:
+  type: object
+  documentation:
+    en: An image file.
+  inherit: MediaObject
+  properties:
+    embeddedTextCaption:
+      type: string
+      documentation:
+        en: Represents textual captioning from a [[MediaObject]], e.g. text of a 'meme'.
+    representativeOfPage:
+      type: boolean
+      documentation:
+        en: Indicates whether this image is representative of the content of the page.
+    caption:
+      type:
+        - string
+        - MediaObject
+      documentation:
+        en: The caption for this object. For downloadable machine formats (closed
+          caption, subtitles etc.) use MediaObject and indicate the
+          [[encodingFormat]].
+    thumbnail:
+      type: ImageObject
+      documentation:
+        en: Thumbnail image for an image or video.
+    exifData:
+      type:
+        - PropertyValue
+        - string
+      documentation:
+        en: exif data for this object.

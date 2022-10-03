@@ -1,0 +1,16 @@
+CategoryCode:
+  type: object
+  documentation:
+    en: A Category Code.
+  inherit: DefinedTerm
+  properties:
+    codeValue:
+      type: string
+      documentation:
+        en: A short textual code that uniquely identifies the value.
+    inCodeSet:
+      type:
+        - CategoryCodeSet
+        - string
+      documentation:
+        en: A [[CategoryCodeSet]] that contains this category code.

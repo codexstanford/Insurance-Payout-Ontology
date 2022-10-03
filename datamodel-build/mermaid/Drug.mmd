@@ -1,0 +1,50 @@
+classDiagram
+  Drug -- DrugPregnancyCategory
+Drug -- DrugLegalStatus,string,MedicalEnumeration
+Drug -- Drug
+Drug -- MaximumDoseSchedule
+Drug -- string,string
+Drug -- DrugPrescriptionStatus,string
+Drug -- DrugClass
+Drug -- HealthInsurancePlan
+Drug -- Organization
+Drug -- DoseSchedule
+Drug -- DrugStrength
+
+
+Substance <|-- Drug
+class Drug {
+
+  DrugPregnancyCategory pregnancyCategory
+  string overdosage
+  DrugLegalStatus,string,MedicalEnumeration legalStatus
+  string mechanismOfAction
+  string clinicalPharmacology
+  string rxcui
+  Drug interactingDrug
+  string dosageForm
+  string labelDetails
+  MaximumDoseSchedule maximumIntake
+  string activeIngredient
+  Drug relatedDrug
+  string administrationRoute
+  string drugUnit
+  string foodWarning
+  string,string warning
+  DrugPrescriptionStatus,string prescriptionStatus
+  string proprietaryName
+  DrugClass drugClass
+  string prescribingInfo
+  HealthInsurancePlan includedInHealthInsurancePlan
+  string nonProprietaryName
+  Organization manufacturer
+  boolean isProprietary
+  string clincalPharmacology
+  boolean isAvailableGenerically
+  string breastfeedingWarning
+  string pregnancyWarning
+  string alcoholWarning
+  DoseSchedule doseSchedule
+  DrugStrength availableStrength
+
+}

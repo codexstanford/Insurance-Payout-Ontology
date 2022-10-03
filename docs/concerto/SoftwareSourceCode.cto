@@ -1,0 +1,15 @@
+namespace undefined
+
+import org.codex.insurance.core.string,ComputerLanguage from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,ComputerLanguage.cto
+import org.codex.insurance.core.SoftwareApplication from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/SoftwareApplication.cto
+
+
+concept SoftwareSourceCode extends CreativeWork {
+  o string,ComputerLanguage programmingLanguage
+  o String sampleType
+  o String runtimePlatform
+  o String runtime
+  o SoftwareApplication targetProduct
+  o String codeRepository
+  o String codeSampleType
+}

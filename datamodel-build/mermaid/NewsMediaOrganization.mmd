@@ -1,0 +1,23 @@
+classDiagram
+  NewsMediaOrganization -- string,AboutPage,string,CreativeWork
+NewsMediaOrganization -- string,CreativeWork
+NewsMediaOrganization -- string,Article
+NewsMediaOrganization -- CreativeWork,string
+
+
+Organization <|-- NewsMediaOrganization
+class NewsMediaOrganization {
+
+  string,AboutPage,string,CreativeWork ownershipFundingInfo
+  string,CreativeWork correctionsPolicy
+  string,Article diversityStaffingReport
+  CreativeWork,string diversityPolicy
+  string,CreativeWork ethicsPolicy
+  CreativeWork,string missionCoveragePrioritiesPolicy
+  string,CreativeWork actionableFeedbackPolicy
+  string,CreativeWork masthead
+  CreativeWork,string unnamedSourcesPolicy
+  string,CreativeWork verificationFactCheckingPolicy
+  CreativeWork,string noBylinesPolicy
+
+}

@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept SearchAction extends Action {
+  o String query
+}

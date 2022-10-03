@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.ParcelDelivery from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ParcelDelivery.cto
+import org.codex.insurance.core.OrderStatus from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/OrderStatus.cto
+import org.codex.insurance.core.Service,OrderItem,Product from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Service,OrderItem,Product.cto
+
+
+concept OrderItem extends Intangible {
+  o ParcelDelivery orderDelivery
+  o OrderStatus orderItemStatus
+  o Double orderQuantity
+  o String orderItemNumber
+  o Service,OrderItem,Product orderedItem
+}

@@ -1,0 +1,6 @@
+namespace undefined
+
+enum EnergyStarEnergyEfficiencyEnumeration {
+  o EnergyStarCertified
+}
+

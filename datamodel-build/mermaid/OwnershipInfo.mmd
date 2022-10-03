@@ -1,0 +1,15 @@
+classDiagram
+  OwnershipInfo -- dateTime
+OwnershipInfo -- Product,Service
+OwnershipInfo -- Organization,Person
+
+
+StructuredValue <|-- OwnershipInfo
+class OwnershipInfo {
+
+  dateTime ownedFrom
+  Product,Service typeOfGood
+  Organization,Person acquiredFrom
+  dateTime ownedThrough
+
+}

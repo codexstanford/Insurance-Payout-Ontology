@@ -1,11 +1,86 @@
 classDiagram
-  Product -- Benefits
-Product -- RiskObject
+  Product -- Product
+Product -- AdultOrientedEnumeration
+Product -- string,string,Product
+Product -- Review
+Product -- QuantitativeValue,Distance
+Product -- Country
+Product -- DefinedTerm,string
+Product -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+Product -- Grant
+Product -- Distance,QuantitativeValue
+Product -- DefinedTerm,string,string
+Product -- date
+Product -- EnergyConsumptionDetails
+Product -- Audience
+Product -- Offer,Demand
+Product -- OfferItemCondition
+Product -- AggregateRating
+Product -- Service,Product
+Product -- ProductModel,ProductGroup
+Product -- Organization,Brand
+Product -- Organization
+Product -- QuantitativeValue
+Product -- string,ImageObject
+Product -- ProductModel,string
+Product -- MerchantReturnPolicy
+Product -- QuantitativeValue,DefinedTerm,string,SizeSpecification
+Product -- PropertyValue
 
 
+Thing <|-- Product
 class Product {
 
-  Benefits[] benefits
-  RiskObject[] riskObjects
+  Product isAccessoryOrSparePartFor
+  AdultOrientedEnumeration hasAdultConsideration
+  string gtin12
+  string nsn
+  string,string,Product material
+  Review review
+  string award
+  QuantitativeValue,Distance width
+  Country countryOfOrigin
+  DefinedTerm,string pattern
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  Grant funding
+  string mpn
+  Distance,QuantitativeValue height
+  DefinedTerm,string,string keywords
+  date purchaseDate
+  EnergyConsumptionDetails hasEnergyConsumptionDetails
+  Audience audience
+  Offer,Demand offers
+  date productionDate
+  OfferItemCondition itemCondition
+  string awards
+  string gtin
+  string productID
+  string countryOfAssembly
+  string color
+  AggregateRating aggregateRating
+  Service,Product isSimilarTo
+  Distance,QuantitativeValue depth
+  string countryOfLastProcessing
+  ProductModel,ProductGroup isVariantOf
+  string slogan
+  Organization,Brand brand
+  Organization manufacturer
+  QuantitativeValue hasMeasurement
+  Product isConsumableFor
+  string,ImageObject logo
+  string gtin8
+  string sku
+  string inProductGroupWithID
+  ProductModel,string model
+  MerchantReturnPolicy hasMerchantReturnPolicy
+  date releaseDate
+  string gtin14
+  QuantitativeValue weight
+  QuantitativeValue,DefinedTerm,string,SizeSpecification size
+  PropertyValue additionalProperty
+  string gtin13
+  Review reviews
+  boolean isFamilyFriendly
+  Service,Product isRelatedTo
 
 }

@@ -1,0 +1,62 @@
+namespace undefined
+
+import org.codex.insurance.core.MonetaryAmountDistribution,MonetaryAmount,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MonetaryAmountDistribution,MonetaryAmount,number.cto
+import org.codex.insurance.core.Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place.cto
+import org.codex.insurance.core.string,string,DefinedTerm from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,DefinedTerm.cto
+import org.codex.insurance.core.DefinedTerm,string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedTerm,string,string.cto
+import org.codex.insurance.core.AdministrativeArea from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea.cto
+import org.codex.insurance.core.date,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,string.cto
+import org.codex.insurance.core.ContactPoint from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ContactPoint.cto
+import org.codex.insurance.core.Occupation from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Occupation.cto
+import org.codex.insurance.core.string,OccupationalExperienceRequirements from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,OccupationalExperienceRequirements.cto
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.EducationalOccupationalCredential,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/EducationalOccupationalCredential,string.cto
+import org.codex.insurance.core.DefinedTerm,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedTerm,string.cto
+import org.codex.insurance.core.number,PriceSpecification,MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,PriceSpecification,MonetaryAmount.cto
+import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
+import org.codex.insurance.core.string,DefinedTerm from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,DefinedTerm.cto
+import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.string,EducationalOccupationalCredential from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,EducationalOccupationalCredential.cto
+import org.codex.insurance.core.CategoryCode,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CategoryCode,string.cto
+
+
+concept JobPosting extends Intangible {
+  o String employerOverview
+  o MonetaryAmountDistribution,MonetaryAmount,number estimatedSalary
+  o String jobLocationType
+  o String responsibilities
+  o Place jobLocation
+  o string,string,DefinedTerm physicalRequirement
+  o String incentives
+  o Boolean directApply
+  o DefinedTerm,string,string sensoryRequirement
+  o AdministrativeArea applicantLocationRequirements
+  o String workHours
+  o date,string jobStartDate
+  o String employmentType
+  o String specialCommitments
+  o ContactPoint applicationContact
+  o String incentiveCompensation
+  o Occupation relevantOccupation
+  o Double totalJobOpenings
+  o string,OccupationalExperienceRequirements experienceRequirements
+  o String jobBenefits
+  o String salaryCurrency
+  o Boolean experienceInPlaceOfEducation
+  o string,string securityClearanceRequirement
+  o String eligibilityToWorkRequirement
+  o EducationalOccupationalCredential,string educationRequirements
+  o String benefits
+  o DefinedTerm,string industry
+  o number,PriceSpecification,MonetaryAmount baseSalary
+  o date,dateTime datePosted
+  o string,DefinedTerm skills
+  o String title
+  o Organization hiringOrganization
+  o Boolean jobImmediateStart
+  o dateTime,date validThrough
+  o Organization employmentUnit
+  o string,EducationalOccupationalCredential qualifications
+  o CategoryCode,string occupationalCategory
+}

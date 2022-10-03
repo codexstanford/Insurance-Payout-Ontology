@@ -1,0 +1,13 @@
+classDiagram
+  Audiobook -- Person
+Audiobook -- Duration
+
+
+AudioObject <|-- Audiobook
+Book <|-- Audiobook
+class Audiobook {
+
+  Person readBy
+  Duration duration
+
+}

@@ -1,0 +1,12 @@
+classDiagram
+  RealEstateListing -- QuantitativeValue,Duration
+RealEstateListing -- date,dateTime
+
+
+WebPage <|-- RealEstateListing
+class RealEstateListing {
+
+  QuantitativeValue,Duration leaseLength
+  date,dateTime datePosted
+
+}

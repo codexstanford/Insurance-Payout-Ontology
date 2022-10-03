@@ -1,0 +1,7 @@
+namespace undefined
+
+enum BoardingPolicyType {
+  o GroupBoardingPolicy
+  o ZoneBoardingPolicy
+}
+

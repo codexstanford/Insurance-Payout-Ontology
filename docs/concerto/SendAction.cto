@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.Person,Audience,ContactPoint,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Audience,ContactPoint,Organization.cto
+import org.codex.insurance.core.DeliveryMethod from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DeliveryMethod.cto
+
+
+concept SendAction extends TransferAction {
+  o Person,Audience,ContactPoint,Organization recipient
+  o DeliveryMethod deliveryMethod
+}

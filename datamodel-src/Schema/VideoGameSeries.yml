@@ -1,0 +1,118 @@
+VideoGameSeries:
+  type: object
+  documentation:
+    en: A video game series.
+  inherit: CreativeWorkSeries
+  properties:
+    season:
+      type:
+        - string
+        - CreativeWorkSeason
+      documentation:
+        en: A season in a media series.
+    containsSeason:
+      type: CreativeWorkSeason
+      documentation:
+        en: A season that is part of the media series.
+    director:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video gaming etc. content, or of an
+          event. Directors can be associated with individual items or with a
+          series, episode, clip.
+    actor:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors
+          can be associated with individual items or with a series, episode,
+          clip.
+    trailer:
+      type: VideoObject
+      documentation:
+        en: The trailer of a movie or tv/radio series, season, episode, etc.
+    episodes:
+      type: Episode
+      documentation:
+        en: An episode of a TV/radio series or season.
+    characterAttribute:
+      type: Thing
+      documentation:
+        en: A piece of data that represents a particular aspect of a fictional character
+          (skill, power, character points, advantage, disadvantage).
+    numberOfEpisodes:
+      type: number
+      documentation:
+        en: The number of episodes in this season or series.
+    seasons:
+      type: CreativeWorkSeason
+      documentation:
+        en: A season in a media series.
+    cheatCode:
+      type: CreativeWork
+      documentation:
+        en: Cheat codes to the game.
+    gameItem:
+      type: Thing
+      documentation:
+        en: An item is an object within the game world that can be collected by a player
+          or, occasionally, a non-player character.
+    productionCompany:
+      type: Organization
+      documentation:
+        en: The production company or studio responsible for the item e.g. series, video
+          game, episode etc.
+    actors:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+          associated with individual items or with a series, episode, clip.
+    playMode:
+      type: GamePlayMode
+      documentation:
+        en: Indicates whether this game is multi-player, co-op or single-player.  The
+          game can be marked as multi-player, co-op and single-player at the
+          same time.
+    gamePlatform:
+      type:
+        - string
+        - string
+        - Thing
+      documentation:
+        en: The electronic systems used to play <a
+          href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video
+          games</a>.
+    numberOfSeasons:
+      type: number
+      documentation:
+        en: The number of seasons in this series.
+    musicBy:
+      type:
+        - Person
+        - MusicGroup
+      documentation:
+        en: The composer of the soundtrack.
+    numberOfPlayers:
+      type: QuantitativeValue
+      documentation:
+        en: Indicate how many people can play this game (minimum, maximum, or range).
+    quest:
+      type: Thing
+      documentation:
+        en: The task that a player-controlled character, or group of characters may
+          complete in order to gain a reward.
+    gameLocation:
+      type:
+        - Place
+        - string
+        - PostalAddress
+      documentation:
+        en: Real or fictional location of the game (or part of game).
+    episode:
+      type: Episode
+      documentation:
+        en: An episode of a tv, radio or game media within a series or season.
+    directors:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video games etc. content. Directors can
+          be associated with individual items or with a series, episode, clip.

@@ -1,0 +1,11 @@
+classDiagram
+  CategoryCode -- CategoryCodeSet,string
+
+
+DefinedTerm <|-- CategoryCode
+class CategoryCode {
+
+  string codeValue
+  CategoryCodeSet,string inCodeSet
+
+}

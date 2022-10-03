@@ -1,0 +1,89 @@
+BioChemEntity:
+  type: object
+  documentation:
+    en: "Any biological, chemical, or biochemical thing. For example: a protein; a
+      gene; a chemical; a synthetic chemical."
+  inherit: Thing
+  properties:
+    funding:
+      type: Grant
+      documentation:
+        en: A [[Grant]] that directly or indirectly provide funding or sponsorship for
+          this item. See also [[ownershipFundingInfo]].
+    isEncodedByBioChemEntity:
+      type: Gene
+      documentation:
+        en: Another BioChemEntity encoding by this one.
+    isPartOfBioChemEntity:
+      type: BioChemEntity
+      documentation:
+        en: "Indicates a BioChemEntity that is (in some sense) a part of this
+          BioChemEntity. "
+    taxonomicRange:
+      type:
+        - string
+        - DefinedTerm
+        - string
+        - Taxon
+      documentation:
+        en: The taxonomic grouping of the organism that expresses, encodes, or in
+          someway related to the BioChemEntity.
+    isInvolvedInBiologicalProcess:
+      type:
+        - PropertyValue
+        - string
+        - DefinedTerm
+      documentation:
+        en: Biological process this BioChemEntity is involved in; please use
+          PropertyValue if you want to include any evidence.
+    isLocatedInSubcellularLocation:
+      type:
+        - PropertyValue
+        - DefinedTerm
+        - string
+      documentation:
+        en: Subcellular location where this BioChemEntity is located; please use
+          PropertyValue if you want to include any evidence.
+    associatedDisease:
+      type:
+        - string
+        - PropertyValue
+        - MedicalCondition
+      documentation:
+        en: Disease associated to this BioChemEntity. Such disease can be a
+          MedicalCondition or a URL. If you want to add an evidence supporting
+          the association, please use PropertyValue.
+    hasMolecularFunction:
+      type:
+        - PropertyValue
+        - DefinedTerm
+        - string
+      documentation:
+        en: Molecular function performed by this BioChemEntity; please use PropertyValue
+          if you want to include any evidence.
+    hasBioChemEntityPart:
+      type: BioChemEntity
+      documentation:
+        en: "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a
+          part. "
+    bioChemInteraction:
+      type: BioChemEntity
+      documentation:
+        en: A BioChemEntity that is known to interact with this item.
+    hasRepresentation:
+      type:
+        - string
+        - PropertyValue
+        - string
+      documentation:
+        en: A common representation such as a protein sequence or chemical structure for
+          this entity. For images use schema.org/image.
+    bioChemSimilarity:
+      type: BioChemEntity
+      documentation:
+        en: A similar BioChemEntity, e.g., obtained by fingerprint similarity
+          algorithms.
+    biologicalRole:
+      type: DefinedTerm
+      documentation:
+        en: A role played by the BioChemEntity within a biological context.

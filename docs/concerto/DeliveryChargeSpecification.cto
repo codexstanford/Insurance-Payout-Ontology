@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.Place,string,GeoShape from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place,string,GeoShape.cto
+import org.codex.insurance.core.GeoShape,string,Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GeoShape,string,Place.cto
+import org.codex.insurance.core.AdministrativeArea,GeoShape,string,Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea,GeoShape,string,Place.cto
+import org.codex.insurance.core.DeliveryMethod from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DeliveryMethod.cto
+
+
+concept DeliveryChargeSpecification extends PriceSpecification {
+  o Place,string,GeoShape ineligibleRegion
+  o GeoShape,string,Place eligibleRegion
+  o AdministrativeArea,GeoShape,string,Place areaServed
+  o DeliveryMethod appliesToDeliveryMethod
+}

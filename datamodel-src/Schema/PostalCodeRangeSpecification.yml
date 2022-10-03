@@ -1,0 +1,16 @@
+PostalCodeRangeSpecification:
+  type: object
+  documentation:
+    en: Indicates a range of postalcodes, usually defined as the set of valid codes
+      between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.
+  inherit: StructuredValue
+  properties:
+    postalCodeEnd:
+      type: string
+      documentation:
+        en: Last postal code in the range (included). Needs to be after
+          [[postalCodeBegin]].
+    postalCodeBegin:
+      type: string
+      documentation:
+        en: First postal code in a range (included).

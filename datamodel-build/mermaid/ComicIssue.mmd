@@ -1,0 +1,15 @@
+classDiagram
+  ComicIssue -- Person
+
+
+PublicationIssue <|-- ComicIssue
+class ComicIssue {
+
+  Person letterer
+  Person colorist
+  string variantCover
+  Person inker
+  Person penciler
+  Person artist
+
+}

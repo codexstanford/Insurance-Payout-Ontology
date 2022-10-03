@@ -1,0 +1,20 @@
+namespace undefined
+
+import org.codex.insurance.core.Service from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Service.cto
+import org.codex.insurance.core.ContactPoint from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ContactPoint.cto
+import org.codex.insurance.core.PostalAddress from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PostalAddress.cto
+import org.codex.insurance.core.string,Language from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Language.cto
+import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
+import org.codex.insurance.core.Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place.cto
+
+
+concept ServiceChannel extends Intangible {
+  o Service providesService
+  o ContactPoint serviceSmsNumber
+  o PostalAddress servicePostalAddress
+  o String serviceUrl
+  o ContactPoint servicePhone
+  o string,Language availableLanguage
+  o Duration processingTime
+  o Place serviceLocation
+}

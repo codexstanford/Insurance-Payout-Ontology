@@ -1,0 +1,14 @@
+ReplaceAction:
+  type: object
+  documentation:
+    en: The act of editing a recipient by replacing an old object with a new object.
+  inherit: UpdateAction
+  properties:
+    replacee:
+      type: Thing
+      documentation:
+        en: A sub property of object. The object that is being replaced.
+    replacer:
+      type: Thing
+      documentation:
+        en: A sub property of object. The object that replaces.

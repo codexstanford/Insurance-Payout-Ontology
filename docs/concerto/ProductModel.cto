@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.ProductModel from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ProductModel.cto
+import org.codex.insurance.core.ProductModel,ProductGroup from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ProductModel,ProductGroup.cto
+
+
+concept ProductModel extends Product {
+  o ProductModel successorOf
+  o ProductModel predecessorOf
+  o ProductModel,ProductGroup isVariantOf
+}

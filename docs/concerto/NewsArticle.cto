@@ -1,0 +1,11 @@
+namespace undefined
+
+
+
+concept NewsArticle extends Article {
+  o String printEdition
+  o String printColumn
+  o String printPage
+  o String printSection
+  o String dateline
+}

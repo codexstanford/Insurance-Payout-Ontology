@@ -1,0 +1,86 @@
+classDiagram
+  Offer -- AdultOrientedEnumeration
+Offer -- Review
+Offer -- Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service
+Offer -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+Offer -- date
+Offer -- OfferShippingDetails
+Offer -- TypeAndQuantityNode
+Offer -- BusinessFunction
+Offer -- OfferItemCondition
+Offer -- QuantitativeValue
+Offer -- LoanOrCredit,PaymentMethod
+Offer -- WarrantyPromise
+Offer -- Organization,Person
+Offer -- Place,string,GeoShape
+Offer -- QuantitativeValue,Duration
+Offer -- AggregateRating
+Offer -- Person,Organization
+Offer -- DeliveryMethod
+Offer -- dateTime,date
+Offer -- date,dateTime,time
+Offer -- GeoShape,string,Place
+Offer -- Offer
+Offer -- MerchantReturnPolicy
+Offer -- PriceSpecification
+Offer -- AdministrativeArea,GeoShape,string,Place
+Offer -- BusinessEntityType
+Offer -- ItemAvailability
+Offer -- number,string
+Offer -- time,dateTime,date
+Offer -- Place
+
+
+Intangible <|-- Offer
+class Offer {
+
+  AdultOrientedEnumeration hasAdultConsideration
+  string gtin12
+  Review review
+  Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service itemOffered
+  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  date priceValidUntil
+  OfferShippingDetails shippingDetails
+  string mpn
+  TypeAndQuantityNode includesObject
+  BusinessFunction businessFunction
+  OfferItemCondition itemCondition
+  string gtin
+  QuantitativeValue eligibleQuantity
+  LoanOrCredit,PaymentMethod acceptedPaymentMethod
+  WarrantyPromise warranty
+  Organization,Person seller
+  Place,string,GeoShape ineligibleRegion
+  QuantitativeValue,Duration leaseLength
+  AggregateRating aggregateRating
+  Person,Organization offeredBy
+  QuantitativeValue deliveryLeadTime
+  DeliveryMethod availableDeliveryMethod
+  dateTime,date validFrom
+  date,dateTime,time availabilityEnds
+  GeoShape,string,Place eligibleRegion
+  QuantitativeValue hasMeasurement
+  string gtin8
+  QuantitativeValue inventoryLevel
+  string sku
+  Offer addOn
+  MerchantReturnPolicy hasMerchantReturnPolicy
+  QuantitativeValue advanceBookingRequirement
+  string gtin14
+  string priceCurrency
+  PriceSpecification eligibleTransactionVolume
+  AdministrativeArea,GeoShape,string,Place areaServed
+  BusinessEntityType eligibleCustomerType
+  ItemAvailability availability
+  string gtin13
+  Review reviews
+  boolean isFamilyFriendly
+  dateTime,date validThrough
+  PriceSpecification priceSpecification
+  number,string price
+  time,dateTime,date availabilityStarts
+  QuantitativeValue eligibleDuration
+  Place availableAtOrFrom
+  string serialNumber
+
+}

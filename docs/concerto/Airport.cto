@@ -1,0 +1,8 @@
+namespace undefined
+
+
+
+concept Airport extends CivicStructure {
+  o String iataCode
+  o String icaoCode
+}

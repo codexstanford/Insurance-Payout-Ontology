@@ -1,0 +1,24 @@
+namespace undefined
+
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+import org.codex.insurance.core.dateTime,time from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,time.cto
+import org.codex.insurance.core.ActionStatusType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ActionStatusType.cto
+import org.codex.insurance.core.Thing from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Thing.cto
+import org.codex.insurance.core.PostalAddress,string,Place,VirtualLocation from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PostalAddress,string,Place,VirtualLocation.cto
+import org.codex.insurance.core.EntryPoint from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/EntryPoint.cto
+
+
+concept Action extends Thing {
+  o Organization,Person agent
+  o dateTime,time startTime
+  o ActionStatusType actionStatus
+  o Organization,Person provider
+  o Thing result
+  o PostalAddress,string,Place,VirtualLocation location
+  o Thing object
+  o EntryPoint target
+  o dateTime,time endTime
+  o Organization,Person participant
+  o Thing instrument
+  o Thing error
+}

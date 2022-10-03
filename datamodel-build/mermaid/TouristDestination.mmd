@@ -1,0 +1,12 @@
+classDiagram
+  TouristDestination -- Audience,string
+TouristDestination -- TouristAttraction
+
+
+Place <|-- TouristDestination
+class TouristDestination {
+
+  Audience,string touristType
+  TouristAttraction includesAttraction
+
+}

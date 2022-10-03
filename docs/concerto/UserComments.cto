@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.CreativeWork from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWork.cto
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+
+
+concept UserComments extends UserInteraction {
+  o String replyToUrl
+  o CreativeWork discusses
+  o dateTime,date commentTime
+  o String commentText
+  o Organization,Person creator
+}

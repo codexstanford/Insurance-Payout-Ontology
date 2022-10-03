@@ -1,0 +1,34 @@
+MusicAlbumProductionType:
+  type: enum
+  documentation:
+    en: "Classification of the album by it's type of content: soundtrack, live
+      album, studio album, etc."
+  inherit: Enumeration
+  values:
+    SoundtrackAlbum:
+      documentation:
+        en: SoundtrackAlbum.
+    RemixAlbum:
+      documentation:
+        en: RemixAlbum.
+    SpokenWordAlbum:
+      documentation:
+        en: SpokenWordAlbum.
+    MixtapeAlbum:
+      documentation:
+        en: MixtapeAlbum.
+    CompilationAlbum:
+      documentation:
+        en: CompilationAlbum.
+    DJMixAlbum:
+      documentation:
+        en: DJMixAlbum.
+    LiveAlbum:
+      documentation:
+        en: LiveAlbum.
+    DemoAlbum:
+      documentation:
+        en: DemoAlbum.
+    StudioAlbum:
+      documentation:
+        en: StudioAlbum.

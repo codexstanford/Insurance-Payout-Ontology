@@ -1,0 +1,23 @@
+classDiagram
+  DietarySupplement -- RecommendedDoseSchedule
+DietarySupplement -- DrugLegalStatus,string,MedicalEnumeration
+DietarySupplement -- MaximumDoseSchedule
+DietarySupplement -- Organization
+
+
+Substance <|-- DietarySupplement
+class DietarySupplement {
+
+  string targetPopulation
+  RecommendedDoseSchedule recommendedIntake
+  DrugLegalStatus,string,MedicalEnumeration legalStatus
+  string mechanismOfAction
+  MaximumDoseSchedule maximumIntake
+  string activeIngredient
+  string proprietaryName
+  string nonProprietaryName
+  Organization manufacturer
+  boolean isProprietary
+  string safetyConsideration
+
+}

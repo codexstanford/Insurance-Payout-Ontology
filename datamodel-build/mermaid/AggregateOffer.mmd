@@ -1,0 +1,14 @@
+classDiagram
+  AggregateOffer -- string,number
+AggregateOffer -- Offer,Demand
+
+
+Offer <|-- AggregateOffer
+class AggregateOffer {
+
+  string,number highPrice
+  Offer,Demand offers
+  string,number lowPrice
+  number offerCount
+
+}

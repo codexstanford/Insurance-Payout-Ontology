@@ -1,0 +1,8 @@
+namespace undefined
+
+
+
+concept ParentAudience extends PeopleAudience {
+  o Double childMaxAge
+  o Double childMinAge
+}

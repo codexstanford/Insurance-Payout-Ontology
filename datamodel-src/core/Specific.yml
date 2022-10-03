@@ -1,0 +1,7 @@
+Specific:
+  type: object
+  properties:
+    name:
+      type: string
+    value:
+      type: Amount

@@ -1,0 +1,14 @@
+namespace undefined
+
+import org.codex.insurance.core.Country from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Country.cto
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.Language,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Language,string.cto
+import org.codex.insurance.core.TVSeries from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/TVSeries.cto
+
+
+concept TVEpisode extends Episode {
+  o Country countryOfOrigin
+  o string,string titleEIDR
+  o Language,string subtitleLanguage
+  o TVSeries partOfTVSeries
+}

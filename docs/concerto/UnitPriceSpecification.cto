@@ -1,0 +1,19 @@
+namespace undefined
+
+import org.codex.insurance.core.PriceTypeEnumeration,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PriceTypeEnumeration,string.cto
+import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
+import org.codex.insurance.core.Duration,QuantitativeValue,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration,QuantitativeValue,number.cto
+import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
+import org.codex.insurance.core.PriceComponentTypeEnumeration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PriceComponentTypeEnumeration.cto
+
+
+concept UnitPriceSpecification extends PriceSpecification {
+  o PriceTypeEnumeration,string priceType
+  o String unitText
+  o Double billingIncrement
+  o string,string unitCode
+  o Duration,QuantitativeValue,number billingDuration
+  o QuantitativeValue referenceQuantity
+  o PriceComponentTypeEnumeration priceComponentType
+  o Double billingStart
+}

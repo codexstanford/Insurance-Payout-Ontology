@@ -1,0 +1,15 @@
+classDiagram
+  Brand -- Review
+Brand -- AggregateRating
+Brand -- string,ImageObject
+
+
+Intangible <|-- Brand
+class Brand {
+
+  Review review
+  AggregateRating aggregateRating
+  string slogan
+  string,ImageObject logo
+
+}

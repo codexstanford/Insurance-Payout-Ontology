@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.MedicalCondition from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalCondition.cto
+import org.codex.insurance.core.Drug from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Drug.cto
+
+
+concept Patient extendsPatientPatient {
+  o MedicalCondition healthCondition
+  o Drug drug
+  o MedicalCondition diagnosis
+}

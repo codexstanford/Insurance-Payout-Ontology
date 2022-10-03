@@ -1,0 +1,48 @@
+HealthInsurancePlan:
+  type: object
+  documentation:
+    en: "A US-style health insurance plan, including PPOs, EPOs, and HMOs. "
+  inherit: Intangible
+  properties:
+    includesHealthPlanFormulary:
+      type: HealthPlanFormulary
+      documentation:
+        en: Formularies covered by this plan.
+    benefitsSummaryUrl:
+      type: string
+      documentation:
+        en: The URL that goes directly to the summary of benefits and coverage for the
+          specific standard plan or plan variation.
+    healthPlanDrugOption:
+      type: string
+      documentation:
+        en: TODO.
+    healthPlanDrugTier:
+      type: string
+      documentation:
+        en: The tier(s) of drugs offered by this formulary or insurance plan.
+    healthPlanId:
+      type: string
+      documentation:
+        en: The 14-character, HIOS-generated Plan ID number. (Plan IDs must be unique,
+          even across different markets.)
+    contactPoint:
+      type: ContactPoint
+      documentation:
+        en: A contact point for a person or organization.
+    usesHealthPlanIdStandard:
+      type:
+        - string
+        - string
+      documentation:
+        en: The standard for interpreting thePlan ID. The preferred is "HIOS". See the
+          Centers for Medicare & Medicaid Services for more details.
+    includesHealthPlanNetwork:
+      type: HealthPlanNetwork
+      documentation:
+        en: Networks covered by this plan.
+    healthPlanMarketingUrl:
+      type: string
+      documentation:
+        en: The URL that goes directly to the plan brochure for the specific standard
+          plan or plan variation.

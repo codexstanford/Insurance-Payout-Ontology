@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.CreativeWork,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWork,string.cto
+
+
+concept WebAPI extends Service {
+  o CreativeWork,string documentation
+}

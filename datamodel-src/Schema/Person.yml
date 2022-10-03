@@ -1,0 +1,339 @@
+Person:
+  type: object
+  documentation:
+    en: A person (alive, dead, undead, or fictional).
+  inherit: Thing
+  properties:
+    spouse:
+      type: Person
+      documentation:
+        en: The person's spouse.
+    additionalName:
+      type: string
+      documentation:
+        en: An additional name for a Person, can be used for a middle name.
+    hasCredential:
+      type: EducationalOccupationalCredential
+      documentation:
+        en: A credential awarded to the Person or Organization.
+    telephone:
+      type: string
+      documentation:
+        en: The telephone number.
+    honorificPrefix:
+      type: string
+      documentation:
+        en: An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.
+    parents:
+      type: Person
+      documentation:
+        en: A parents of the person.
+    familyName:
+      type: string
+      documentation:
+        en: Family name. In the U.S., the last name of a Person.
+    givenName:
+      type: string
+      documentation:
+        en: Given name. In the U.S., the first name of a Person.
+    knowsAbout:
+      type:
+        - string
+        - string
+        - Thing
+      documentation:
+        en: Of a [[Person]], and less typically of an [[Organization]], to indicate a
+          topic that is known about - suggesting possible expertise but not
+          implying it. We do not distinguish skill levels here, or relate this
+          to educational content, events, objectives or [[JobPosting]]
+          descriptions.
+    performerIn:
+      type: Event
+      documentation:
+        en: Event that this person is a performer or participant in.
+    netWorth:
+      type:
+        - MonetaryAmount
+        - PriceSpecification
+      documentation:
+        en: The total financial value of the person as calculated by subtracting assets
+          from liabilities.
+    award:
+      type: string
+      documentation:
+        en: An award won by or for this item.
+    workLocation:
+      type:
+        - Place
+        - ContactPoint
+      documentation:
+        en: A contact location for a person's place of work.
+    honorificSuffix:
+      type: string
+      documentation:
+        en: An honorific suffix following a Person's name such as M.D. /PhD/MSCSW.
+    deathPlace:
+      type: Place
+      documentation:
+        en: The place where the person died.
+    homeLocation:
+      type:
+        - Place
+        - ContactPoint
+      documentation:
+        en: A contact location for a person's residence.
+    funding:
+      type: Grant
+      documentation:
+        en: A [[Grant]] that directly or indirectly provide funding or sponsorship for
+          this item. See also [[ownershipFundingInfo]].
+    vatID:
+      type: string
+      documentation:
+        en: The Value-added Tax ID of the organization or person.
+    height:
+      type:
+        - Distance
+        - QuantitativeValue
+      documentation:
+        en: The height of the item.
+    globalLocationNumber:
+      type: string
+      documentation:
+        en: The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also
+          referred to as International Location Number or ILN) of the respective
+          organization, person, or place. The GLN is a 13-digit number used to
+          identify parties and physical locations.
+    contactPoints:
+      type: ContactPoint
+      documentation:
+        en: A contact point for a person or organization.
+    hasOccupation:
+      type: Occupation
+      documentation:
+        en: The Person's occupation. For past professions, use Role for expressing
+          dates.
+    gender:
+      type:
+        - GenderType
+        - string
+      documentation:
+        en: Gender of something, typically a [[Person]], but possibly also fictional
+          characters, animals, etc. While https://schema.org/Male and
+          https://schema.org/Female may be used, text strings are also
+          acceptable for people who do not identify as a binary gender. The
+          [[gender]] property can also be used in an extended sense to cover
+          e.g. the gender of sports teams. As with the gender of individuals, we
+          do not try to enumerate all possibilities. A mixed-gender
+          [[SportsTeam]] can be indicated with a text value of "Mixed".
+    parent:
+      type: Person
+      documentation:
+        en: A parent of this person.
+    awards:
+      type: string
+      documentation:
+        en: Awards won by or for this item.
+    sibling:
+      type: Person
+      documentation:
+        en: A sibling of the person.
+    jobTitle:
+      type:
+        - string
+        - DefinedTerm
+      documentation:
+        en: The job title of the person (for example, Financial Manager).
+    birthDate:
+      type: date
+      documentation:
+        en: Date of birth.
+    funder:
+      type:
+        - Organization
+        - Person
+      documentation:
+        en: A person or organization that supports (sponsors) something through some
+          kind of financial contribution.
+    makesOffer:
+      type: Offer
+      documentation:
+        en: A pointer to products or services offered by the organization or person.
+    children:
+      type: Person
+      documentation:
+        en: A child of the person.
+    worksFor:
+      type: Organization
+      documentation:
+        en: Organizations that the person works for.
+    knows:
+      type: Person
+      documentation:
+        en: The most generic bi-directional social/work relation.
+    interactionStatistic:
+      type: InteractionCounter
+      documentation:
+        en: The number of interactions for the CreativeWork using the WebSite or
+          SoftwareApplication. The most specific child type of
+          InteractionCounter should be used.
+    address:
+      type:
+        - string
+        - PostalAddress
+      documentation:
+        en: Physical address of the item.
+    memberOf:
+      type:
+        - ProgramMembership
+        - Organization
+      documentation:
+        en: An Organization (or ProgramMembership) to which this Person or Organization
+          belongs.
+    publishingPrinciples:
+      type:
+        - string
+        - CreativeWork
+      documentation:
+        en: >
+          The publishingPrinciples property indicates (typically via [[URL]]) a
+          document describing the editorial principles of an [[Organization]]
+          (or individual e.g. a [[Person]] writing a blog) that relate to their
+          activities as a publisher, e.g. ethics or diversity policies. When
+          applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles
+          are those of the party primarily responsible for the creation of the
+          [[CreativeWork]].
+
+
+          While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
+    colleagues:
+      type: Person
+      documentation:
+        en: A colleague of the person.
+    deathDate:
+      type: date
+      documentation:
+        en: Date of death.
+    email:
+      type: string
+      documentation:
+        en: Email address.
+    affiliation:
+      type: Organization
+      documentation:
+        en: An organization that this person is affiliated with. For example, a
+          school/university, a club, or a team.
+    siblings:
+      type: Person
+      documentation:
+        en: A sibling of the person.
+    birthPlace:
+      type: Place
+      documentation:
+        en: The place where the person was born.
+    brand:
+      type:
+        - Organization
+        - Brand
+      documentation:
+        en: The brand(s) associated with a product or service, or the brand(s)
+          maintained by an organization or business person.
+    sponsor:
+      type:
+        - Organization
+        - Person
+      documentation:
+        en: A person or organization that supports a thing through a pledge, promise, or
+          financial contribution. e.g. a sponsor of a Medical Study or a
+          corporate sponsor of an event.
+    naics:
+      type: string
+      documentation:
+        en: The North American Industry Classification System (NAICS) code for a
+          particular organization or business person.
+    contactPoint:
+      type: ContactPoint
+      documentation:
+        en: A contact point for a person or organization.
+    callSign:
+      type: string
+      documentation:
+        en: A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in
+          broadcasting and radio communications to identify people, radio and TV
+          stations, or vehicles.
+    isicV4:
+      type: string
+      documentation:
+        en: The International Standard of Industrial Classification of All Economic
+          Activities (ISIC), Revision 4 code for a particular organization,
+          business person, or place.
+    hasPOS:
+      type: Place
+      documentation:
+        en: Points-of-Sales operated by the organization or person.
+    alumniOf:
+      type:
+        - EducationalOrganization
+        - Organization
+      documentation:
+        en: An organization that the person is an alumni of.
+    duns:
+      type: string
+      documentation:
+        en: The Dun & Bradstreet DUNS number for identifying an organization or business
+          person.
+    weight:
+      type: QuantitativeValue
+      documentation:
+        en: The weight of the product or person.
+    knowsLanguage:
+      type:
+        - Language
+        - string
+      documentation:
+        en: Of a [[Person]], and less typically of an [[Organization]], to indicate a
+          known language. We do not distinguish skill levels or
+          reading/writing/speaking/signing here. Use language codes from the
+          [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
+    relatedTo:
+      type: Person
+      documentation:
+        en: The most generic familial relation.
+    colleague:
+      type:
+        - Person
+        - string
+      documentation:
+        en: A colleague of the person.
+    seeks:
+      type: Demand
+      documentation:
+        en: A pointer to products or services sought by the organization or person
+          (demand).
+    taxID:
+      type: string
+      documentation:
+        en: The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or
+          the CIF/NIF in Spain.
+    owns:
+      type:
+        - Product
+        - OwnershipInfo
+      documentation:
+        en: Products owned by the organization or person.
+    hasOfferCatalog:
+      type: OfferCatalog
+      documentation:
+        en: Indicates an OfferCatalog listing for this Organization, Person, or Service.
+    follows:
+      type: Person
+      documentation:
+        en: The most generic uni-directional social relation.
+    nationality:
+      type: Country
+      documentation:
+        en: Nationality of the person.
+    faxNumber:
+      type: string
+      documentation:
+        en: The fax number.

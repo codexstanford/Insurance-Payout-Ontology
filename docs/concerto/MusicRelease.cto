@@ -1,0 +1,17 @@
+namespace undefined
+
+import org.codex.insurance.core.MusicAlbum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MusicAlbum.cto
+import org.codex.insurance.core.MusicReleaseFormatType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MusicReleaseFormatType.cto
+import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
+import org.codex.insurance.core.Person,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Organization.cto
+import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
+
+
+concept MusicRelease extends MusicPlaylist {
+  o MusicAlbum releaseOf
+  o MusicReleaseFormatType musicReleaseFormat
+  o Duration duration
+  o Person,Organization creditedTo
+  o Organization recordLabel
+  o String catalogNumber
+}

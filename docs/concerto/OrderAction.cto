@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.DeliveryMethod from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DeliveryMethod.cto
+
+
+concept OrderAction extends TradeAction {
+  o DeliveryMethod deliveryMethod
+}

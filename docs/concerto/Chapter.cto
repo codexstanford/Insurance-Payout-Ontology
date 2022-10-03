@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.string,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,number.cto
+
+
+concept Chapter extends CreativeWork {
+  o string,number pageStart
+  o string,number pageEnd
+  o String pagination
+}

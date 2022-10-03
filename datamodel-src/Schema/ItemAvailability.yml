@@ -1,0 +1,37 @@
+ItemAvailability:
+  type: enum
+  documentation:
+    en: A list of possible product availability options.
+  inherit: Enumeration
+  values:
+    OutOfStock:
+      documentation:
+        en: Indicates that the item is out of stock.
+    Discontinued:
+      documentation:
+        en: Indicates that the item has been discontinued.
+    OnlineOnly:
+      documentation:
+        en: Indicates that the item is available only online.
+    InStock:
+      documentation:
+        en: Indicates that the item is in stock.
+    InStoreOnly:
+      documentation:
+        en: Indicates that the item is available only at physical locations.
+    SoldOut:
+      documentation:
+        en: Indicates that the item has sold out.
+    PreSale:
+      documentation:
+        en: Indicates that the item is available for ordering and delivery before
+          general availability.
+    BackOrder:
+      documentation:
+        en: Indicates that the item is available on back order.
+    PreOrder:
+      documentation:
+        en: Indicates that the item is available for pre-order.
+    LimitedAvailability:
+      documentation:
+        en: Indicates that the item has limited availability.

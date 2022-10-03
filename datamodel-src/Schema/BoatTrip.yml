@@ -1,0 +1,14 @@
+BoatTrip:
+  type: object
+  documentation:
+    en: A trip on a commercial ferry line.
+  inherit: Trip
+  properties:
+    arrivalBoatTerminal:
+      type: BoatTerminal
+      documentation:
+        en: The terminal or port from which the boat arrives.
+    departureBoatTerminal:
+      type: BoatTerminal
+      documentation:
+        en: The terminal or port from which the boat departs.

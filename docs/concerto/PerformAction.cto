@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.EntertainmentBusiness from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/EntertainmentBusiness.cto
+
+
+concept PerformAction extends PlayAction {
+  o EntertainmentBusiness entertainmentBusiness
+}

@@ -1,0 +1,10 @@
+CategoryCodeSet:
+  type: object
+  documentation:
+    en: A set of Category Code values.
+  inherit: DefinedTermSet
+  properties:
+    hasCategoryCode:
+      type: CategoryCode
+      documentation:
+        en: A Category code contained in this code set.

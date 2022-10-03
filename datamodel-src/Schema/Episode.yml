@@ -1,0 +1,63 @@
+Episode:
+  type: object
+  documentation:
+    en: A media episode (e.g. TV, radio, video game) which can be part of a series
+      or season.
+  inherit: CreativeWork
+  properties:
+    episodeNumber:
+      type:
+        - number
+        - string
+      documentation:
+        en: Position of the episode within an ordered group of episodes.
+    director:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video gaming etc. content, or of an
+          event. Directors can be associated with individual items or with a
+          series, episode, clip.
+    actor:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc., or in an event. Actors
+          can be associated with individual items or with a series, episode,
+          clip.
+    trailer:
+      type: VideoObject
+      documentation:
+        en: The trailer of a movie or tv/radio series, season, episode, etc.
+    partOfSeries:
+      type: CreativeWorkSeries
+      documentation:
+        en: The series to which this episode or season belongs.
+    duration:
+      type: Duration
+      documentation:
+        en: The duration of the item (movie, audio recording, event, etc.) in [ISO 8601
+          date format](http://en.wikipedia.org/wiki/ISO_8601).
+    partOfSeason:
+      type: CreativeWorkSeason
+      documentation:
+        en: The season to which this episode belongs.
+    productionCompany:
+      type: Organization
+      documentation:
+        en: The production company or studio responsible for the item e.g. series, video
+          game, episode etc.
+    actors:
+      type: Person
+      documentation:
+        en: An actor, e.g. in tv, radio, movie, video games etc. Actors can be
+          associated with individual items or with a series, episode, clip.
+    musicBy:
+      type:
+        - Person
+        - MusicGroup
+      documentation:
+        en: The composer of the soundtrack.
+    directors:
+      type: Person
+      documentation:
+        en: A director of e.g. tv, radio, movie, video games etc. content. Directors can
+          be associated with individual items or with a series, episode, clip.

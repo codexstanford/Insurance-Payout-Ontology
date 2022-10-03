@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
+
+
+concept FollowAction extends InteractAction {
+  o Organization,Person followee
+}

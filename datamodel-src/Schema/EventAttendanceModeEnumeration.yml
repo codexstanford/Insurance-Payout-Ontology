@@ -1,0 +1,18 @@
+EventAttendanceModeEnumeration:
+  type: enum
+  documentation:
+    en: An EventAttendanceModeEnumeration value is one of potentially several modes
+      of organising an event, relating to whether it is online or offline.
+  inherit: Enumeration
+  values:
+    OfflineEventAttendanceMode:
+      documentation:
+        en: "OfflineEventAttendanceMode - an event that is primarily conducted offline.
+          "
+    MixedEventAttendanceMode:
+      documentation:
+        en: MixedEventAttendanceMode - an event that is conducted as a combination of
+          both offline and online modes.
+    OnlineEventAttendanceMode:
+      documentation:
+        en: "OnlineEventAttendanceMode - an event that is primarily conducted online. "

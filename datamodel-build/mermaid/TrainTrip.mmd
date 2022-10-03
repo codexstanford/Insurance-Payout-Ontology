@@ -1,0 +1,15 @@
+classDiagram
+  TrainTrip -- TrainStation
+
+
+Trip <|-- TrainTrip
+class TrainTrip {
+
+  string trainName
+  TrainStation departureStation
+  string departurePlatform
+  string trainNumber
+  string arrivalPlatform
+  TrainStation arrivalStation
+
+}

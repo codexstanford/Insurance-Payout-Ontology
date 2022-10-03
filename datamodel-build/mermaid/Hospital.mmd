@@ -1,0 +1,16 @@
+classDiagram
+  Hospital -- MedicalTest,MedicalProcedure,MedicalTherapy
+Hospital -- Dataset,CDCPMDRecord
+Hospital -- MedicalSpecialty
+
+
+MedicalOrganization <|-- Hospital
+EmergencyService <|-- Hospital
+CivicStructure <|-- Hospital
+class Hospital {
+
+  MedicalTest,MedicalProcedure,MedicalTherapy availableService
+  Dataset,CDCPMDRecord healthcareReportingData
+  MedicalSpecialty medicalSpecialty
+
+}

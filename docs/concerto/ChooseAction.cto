@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.string,Thing from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Thing.cto
+import org.codex.insurance.core.Thing,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Thing,string.cto
+
+
+concept ChooseAction extends AssessAction {
+  o string,Thing option
+  o Thing,string actionOption
+}

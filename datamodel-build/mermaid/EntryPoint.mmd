@@ -1,0 +1,17 @@
+classDiagram
+  EntryPoint -- SoftwareApplication
+EntryPoint -- string,string,DigitalPlatformEnumeration
+
+
+Intangible <|-- EntryPoint
+class EntryPoint {
+
+  SoftwareApplication actionApplication
+  SoftwareApplication application
+  string,string,DigitalPlatformEnumeration actionPlatform
+  string httpMethod
+  string urlTemplate
+  string encodingType
+  string contentType
+
+}

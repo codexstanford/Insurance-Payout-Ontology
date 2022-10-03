@@ -1,0 +1,26 @@
+APIReference:
+  type: object
+  documentation:
+    en: Reference documentation for application programming interfaces (APIs).
+  inherit: TechArticle
+  properties:
+    assembly:
+      type: string
+      documentation:
+        en: Library file name e.g., mscorlib.dll, system.web.dll.
+    targetPlatform:
+      type: string
+      documentation:
+        en: "Type of app development: phone, Metro style, desktop, XBox, etc."
+    executableLibraryName:
+      type: string
+      documentation:
+        en: Library file name e.g., mscorlib.dll, system.web.dll.
+    programmingModel:
+      type: string
+      documentation:
+        en: Indicates whether API is managed or unmanaged.
+    assemblyVersion:
+      type: string
+      documentation:
+        en: Associated product/technology version. e.g., .NET Framework 4.5.

@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.string,MedicalEntity from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,MedicalEntity.cto
+
+
+concept Joint extends AnatomicalStructure {
+  o String structuralClass
+  o String biomechnicalClass
+  o string,MedicalEntity functionalClass
+}

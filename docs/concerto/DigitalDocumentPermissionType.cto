@@ -1,0 +1,8 @@
+namespace undefined
+
+enum DigitalDocumentPermissionType {
+  o CommentPermission
+  o ReadPermission
+  o WritePermission
+}
+

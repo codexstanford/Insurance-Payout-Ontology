@@ -1,0 +1,8 @@
+namespace undefined
+
+import org.codex.insurance.core.Audience,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Audience,string.cto
+
+
+concept TouristTrip extends Trip {
+  o Audience,string touristType
+}

@@ -1,0 +1,12 @@
+classDiagram
+  SpeakableSpecification -- CssSelectorType
+SpeakableSpecification -- XPathType
+
+
+Intangible <|-- SpeakableSpecification
+class SpeakableSpecification {
+
+  CssSelectorType cssSelector
+  XPathType xpath
+
+}

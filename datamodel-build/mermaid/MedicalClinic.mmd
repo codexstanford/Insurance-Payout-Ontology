@@ -1,0 +1,13 @@
+classDiagram
+  MedicalClinic -- MedicalTest,MedicalProcedure,MedicalTherapy
+MedicalClinic -- MedicalSpecialty
+
+
+MedicalOrganization <|-- MedicalClinic
+MedicalBusiness <|-- MedicalClinic
+class MedicalClinic {
+
+  MedicalTest,MedicalProcedure,MedicalTherapy availableService
+  MedicalSpecialty medicalSpecialty
+
+}

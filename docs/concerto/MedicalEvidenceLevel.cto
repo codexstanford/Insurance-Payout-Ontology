@@ -1,0 +1,8 @@
+namespace undefined
+
+enum MedicalEvidenceLevel {
+  o EvidenceLevelA
+  o EvidenceLevelB
+  o EvidenceLevelC
+}
+

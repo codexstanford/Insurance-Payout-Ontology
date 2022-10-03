@@ -1,0 +1,10 @@
+namespace undefined
+
+import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
+
+
+concept BusinessAudience extends Audience {
+  o QuantitativeValue yearlyRevenue
+  o QuantitativeValue numberOfEmployees
+  o QuantitativeValue yearsInOperation
+}

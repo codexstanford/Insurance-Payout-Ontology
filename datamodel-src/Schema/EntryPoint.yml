@@ -1,0 +1,41 @@
+EntryPoint:
+  type: object
+  documentation:
+    en: An entry point, within some Web-based protocol.
+  inherit: Intangible
+  properties:
+    actionApplication:
+      type: SoftwareApplication
+      documentation:
+        en: An application that can complete the request.
+    application:
+      type: SoftwareApplication
+      documentation:
+        en: An application that can complete the request.
+    actionPlatform:
+      type:
+        - string
+        - string
+        - DigitalPlatformEnumeration
+      documentation:
+        en: The high level platform(s) where the Action can be performed for the given
+          URL. To specify a specific application or operating system instance,
+          use actionApplication.
+    httpMethod:
+      type: string
+      documentation:
+        en: An HTTP method that specifies the appropriate HTTP method for a request to
+          an HTTP EntryPoint. Values are capitalized strings as used in HTTP.
+    urlTemplate:
+      type: string
+      documentation:
+        en: An url template (RFC6570) that will be used to construct the target of the
+          execution of the action.
+    encodingType:
+      type: string
+      documentation:
+        en: The supported encoding type(s) for an EntryPoint request.
+    contentType:
+      type: string
+      documentation:
+        en: The supported content type(s) for an EntryPoint response.

@@ -1,0 +1,11 @@
+TravelAction:
+  type: object
+  documentation:
+    en: The act of traveling from an fromLocation to a destination by a specified
+      mode of transport, optionally with participants.
+  inherit: MoveAction
+  properties:
+    distance:
+      type: Distance
+      documentation:
+        en: The distance travelled, e.g. exercising or travelling.

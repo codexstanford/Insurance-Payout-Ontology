@@ -1,0 +1,12 @@
+classDiagram
+  TouristAttraction -- Audience,string
+TouristAttraction -- string,Language
+
+
+Place <|-- TouristAttraction
+class TouristAttraction {
+
+  Audience,string touristType
+  string,Language availableLanguage
+
+}

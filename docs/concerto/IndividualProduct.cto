@@ -1,0 +1,7 @@
+namespace undefined
+
+
+
+concept IndividualProduct extends Product {
+  o String serialNumber
+}

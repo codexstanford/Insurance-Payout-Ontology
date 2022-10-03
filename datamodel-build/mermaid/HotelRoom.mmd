@@ -1,0 +1,12 @@
+classDiagram
+  HotelRoom -- BedDetails,string,BedType
+HotelRoom -- QuantitativeValue
+
+
+Room <|-- HotelRoom
+class HotelRoom {
+
+  BedDetails,string,BedType bed
+  QuantitativeValue occupancy
+
+}

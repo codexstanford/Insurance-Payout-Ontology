@@ -1,0 +1,11 @@
+namespace undefined
+
+import org.codex.insurance.core.QualitativeValue,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QualitativeValue,string.cto
+
+
+concept FlightReservation extends Reservation {
+  o QualitativeValue,string passengerPriorityStatus
+  o String boardingGroup
+  o String securityScreening
+  o String passengerSequenceNumber
+}

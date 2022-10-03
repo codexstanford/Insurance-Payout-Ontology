@@ -1,0 +1,15 @@
+Audience:
+  type: object
+  documentation:
+    en: Intended audience for an item, i.e. the group for whom the item was created.
+  inherit: Intangible
+  properties:
+    audienceType:
+      type: string
+      documentation:
+        en: The target group associated with a given audience (e.g. veterans, car
+          owners, musicians, etc.).
+    geographicArea:
+      type: AdministrativeArea
+      documentation:
+        en: The geographic area associated with the audience.

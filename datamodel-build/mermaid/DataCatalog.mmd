@@ -1,0 +1,12 @@
+classDiagram
+  DataCatalog -- string,string
+DataCatalog -- Dataset
+
+
+CreativeWork <|-- DataCatalog
+class DataCatalog {
+
+  string,string measurementTechnique
+  Dataset dataset
+
+}

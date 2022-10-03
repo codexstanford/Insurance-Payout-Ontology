@@ -1,0 +1,16 @@
+classDiagram
+  MonetaryAmount -- dateTime,date
+MonetaryAmount -- string,number,StructuredValue,boolean
+
+
+StructuredValue <|-- MonetaryAmount
+class MonetaryAmount {
+
+  number maxValue
+  number minValue
+  dateTime,date validFrom
+  string,number,StructuredValue,boolean value
+  string currency
+  dateTime,date validThrough
+
+}

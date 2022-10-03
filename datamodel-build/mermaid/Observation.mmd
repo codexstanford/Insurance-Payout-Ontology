@@ -1,0 +1,18 @@
+classDiagram
+  Observation -- DataType
+Observation -- StatisticalPopulation
+Observation -- Property
+Observation -- dateTime
+Observation -- QuantitativeValue
+
+
+Intangible <|-- Observation
+class Observation {
+
+  DataType measuredValue
+  StatisticalPopulation observedNode
+  Property measuredProperty
+  dateTime observationDate
+  QuantitativeValue marginOfError
+
+}

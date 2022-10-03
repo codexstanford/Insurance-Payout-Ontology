@@ -1,0 +1,12 @@
+classDiagram
+  PodcastSeries -- Person
+PodcastSeries -- DataFeed,string
+
+
+CreativeWorkSeries <|-- PodcastSeries
+class PodcastSeries {
+
+  Person actor
+  DataFeed,string webFeed
+
+}

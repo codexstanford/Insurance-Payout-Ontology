@@ -1,0 +1,24 @@
+namespace undefined
+
+import org.codex.insurance.core.number,HyperTocEntry from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,HyperTocEntry.cto
+import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
+import org.codex.insurance.core.Episode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Episode.cto
+import org.codex.insurance.core.string,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,number.cto
+import org.codex.insurance.core.CreativeWorkSeries from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWorkSeries.cto
+import org.codex.insurance.core.CreativeWorkSeason from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWorkSeason.cto
+import org.codex.insurance.core.Person,MusicGroup from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,MusicGroup.cto
+
+
+concept Clip extends CreativeWork {
+  o number,HyperTocEntry startOffset
+  o number,HyperTocEntry endOffset
+  o Person director
+  o Person actor
+  o Episode partOfEpisode
+  o string,number clipNumber
+  o CreativeWorkSeries partOfSeries
+  o CreativeWorkSeason partOfSeason
+  o Person actors
+  o Person,MusicGroup musicBy
+  o Person directors
+}

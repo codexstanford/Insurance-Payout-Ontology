@@ -1,0 +1,13 @@
+namespace undefined
+
+import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
+import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
+import org.codex.insurance.core.Thing from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Thing.cto
+
+
+concept DataFeedItem extends Intangible {
+  o dateTime,date dateDeleted
+  o date,dateTime dateCreated
+  o dateTime,date dateModified
+  o Thing item
+}

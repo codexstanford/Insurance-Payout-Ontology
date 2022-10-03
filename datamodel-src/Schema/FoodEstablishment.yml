@@ -1,0 +1,42 @@
+FoodEstablishment:
+  type: object
+  documentation:
+    en: A food-related business.
+  inherit: LocalBusiness
+  properties:
+    starRating:
+      type: Rating
+      documentation:
+        en: An official rating for a lodging business or food establishment, e.g. from
+          national associations or standards bodies. Use the author property to
+          indicate the rating organization, e.g. as an Organization with name
+          such as (e.g. HOTREC, DEHOGA, WHR, or Hotelstars).
+    servesCuisine:
+      type: string
+      documentation:
+        en: The cuisine of the restaurant.
+    acceptsReservations:
+      type:
+        - string
+        - boolean
+        - string
+      documentation:
+        en: Indicates whether a FoodEstablishment accepts reservations. Values can be
+          Boolean, an URL at which reservations can be made or (for backwards
+          compatibility) the strings ```Yes``` or ```No```.
+    hasMenu:
+      type:
+        - string
+        - string
+        - Menu
+      documentation:
+        en: Either the actual menu as a structured representation, as text, or a URL of
+          the menu.
+    menu:
+      type:
+        - string
+        - Menu
+        - string
+      documentation:
+        en: Either the actual menu as a structured representation, as text, or a URL of
+          the menu.

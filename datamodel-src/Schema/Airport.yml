@@ -1,0 +1,14 @@
+Airport:
+  type: object
+  documentation:
+    en: An airport.
+  inherit: CivicStructure
+  properties:
+    iataCode:
+      type: string
+      documentation:
+        en: IATA identifier for an airline or airport.
+    icaoCode:
+      type: string
+      documentation:
+        en: ICAO identifier for an airport.

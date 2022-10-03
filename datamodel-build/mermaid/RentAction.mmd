@@ -1,0 +1,12 @@
+classDiagram
+  RentAction -- Person,Organization
+RentAction -- RealEstateAgent
+
+
+TradeAction <|-- RentAction
+class RentAction {
+
+  Person,Organization landlord
+  RealEstateAgent realEstateAgent
+
+}

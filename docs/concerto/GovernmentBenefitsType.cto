@@ -1,0 +1,13 @@
+namespace undefined
+
+enum GovernmentBenefitsType {
+  o HealthCare
+  o BusinessSupport
+  o OneTimePayments
+  o DisabilitySupport
+  o ParentalSupport
+  o UnemploymentSupport
+  o PaidLeave
+  o BasicIncome
+}
+
