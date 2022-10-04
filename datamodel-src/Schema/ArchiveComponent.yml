@@ -1,11 +1,8 @@
 ArchiveComponent:
   type: object
   documentation:
-    en:
-      "@language": en
-      "@value": An intangible type to be applied to any archive content, carrying with
-        it a set of properties required to describe archival items and
-        collections.
+    en: An intangible type to be applied to any archive content, carrying with it a
+      set of properties required to describe archival items and collections.
   inherit: CreativeWork
   properties:
     "[object Object]":
@@ -14,6 +11,4 @@ ArchiveComponent:
         - string
         - PostalAddress
       documentation:
-        en:
-          "@language": en
-          "@value": Current location of the item.
+        en: Current location of the item.

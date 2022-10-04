@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.27.2",
     "csv-parser": "^3.0.0",
+    "escape-html": "^1.0.3",
     "yaml": "^2.1.1"
   }
 }

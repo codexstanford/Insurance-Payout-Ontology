@@ -122,7 +122,7 @@ concept Relation {
 
 concept RiskChain {
   o Chainable[] chain
-  o RiskObject[] actors
+  o Thing[] actors
   o Relation[] relations
 }
 

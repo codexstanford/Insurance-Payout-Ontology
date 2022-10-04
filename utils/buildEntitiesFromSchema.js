@@ -125,6 +125,16 @@ function render(itemName) {
   }
 }
 
+function sanitizeRdfsComment(comment) {
+  if (!comment) {
+    return "";
+  }
+  if (comment["@value"]) {
+    comment = comment["@value"];
+  }
+  return comment;
+}
+
 function renderEnum(itemName) {
   let obj = CLASS_INDEX[itemName];
 
@@ -132,7 +142,7 @@ function renderEnum(itemName) {
   outObj[itemName.replace("schema:", "")] = {
     type : "enum",
     documentation: {
-      en: obj["rdfs:comment"]  || ""
+      en: sanitizeRdfsComment(obj["rdfs:comment"])
     },
   };
   let outContent = outObj[itemName.replace("schema:", "")];
@@ -159,7 +169,7 @@ function renderEnum(itemName) {
     
     let propObj = {
       documentation: {
-        en : property["rdfs:comment"]  || ""
+        en : sanitizeRdfsComment(property["rdfs:comment"])
       }
     };
     outContent.values[label] = propObj;
@@ -178,7 +188,7 @@ function renderObject(itemName) {
   outObj[itemName.replace("schema:", "")] = {
     type : "object",
     documentation: {
-      en: obj["rdfs:comment"]  || ""
+      en: sanitizeRdfsComment(obj["rdfs:comment"])
     },
   };
   let outContent = outObj[itemName.replace("schema:", "")];
@@ -224,7 +234,7 @@ function renderObject(itemName) {
     let propObj = {
       type: propType,
       documentation: {
-        en : property["rdfs:comment"]  || ""
+        en : sanitizeRdfsComment(property["rdfs:comment"])
       }
     };
 

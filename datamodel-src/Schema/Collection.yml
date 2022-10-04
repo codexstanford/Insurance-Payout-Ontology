@@ -7,6 +7,4 @@ Collection:
     "[object Object]":
       type: number
       documentation:
-        en:
-          "@language": en
-          "@value": The number of items in the [[Collection]].
+        en: The number of items in the [[Collection]].

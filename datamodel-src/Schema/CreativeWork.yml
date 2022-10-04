@@ -212,10 +212,8 @@ CreativeWork:
         - QuantitativeValue
         - string
       documentation:
-        en:
-          "@language": en
-          "@value": The quantity of the materials being described or an expression of the
-            physical space they occupy.
+        en: The quantity of the materials being described or an expression of the
+          physical space they occupy.
     mainEntity:
       type: Thing
       documentation:

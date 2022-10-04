@@ -39,7 +39,7 @@
     </div>
     <script>
       
-      let startPoint = "Benefits";
+      let startPoint = "Coverage";
 
       function annotate() {
         let annotations = document.getElementsByClassName('annotationInput');
@@ -104,7 +104,21 @@
 
 
 
-      function buildAnnotator(target, path, preset) {
+      function buildAnnotator(target, path, preset, past) {
+        if (Array.isArray(target)) {
+          let div = document.createElement('div');
+          if (!past) {
+            past = [];
+          }
+          for (let targetItem of target) {
+            console.log(targetItem, past);
+            if (past.indexOf(targetItem) == -1) {
+              past.push(targetItem);
+              div.appendChild(buildAnnotator(targetItem, path, preset, past));
+            }
+          }
+          return div;
+        }
         if (target == "string") {
           let input = document.createElement('input');
           if (preset) {

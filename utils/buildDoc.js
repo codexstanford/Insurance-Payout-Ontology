@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+const escape = require('escape-html');
+
 const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
 const injectInheritedProperties  = require('./lib/injectInheritedProperties.js');
 let objectsList = injectInheritedProperties(loadObjFromSrc());
@@ -24,7 +26,7 @@ let template = fs.readFileSync(`${DATA_MODEL_TPL_PATH}/index.html`, 'utf-8');
 // build home
 
 let home = fs.readFileSync(`${DATA_MODEL_TPL_PATH}/home.html`, 'utf-8');
-home = template.replace('$$CONTENT', home);
+home = template.replace('<!--$$_CONTENT_-->', home);
 home = home.replace('MAIN_SVG_DIAGRAM_IMG', fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.svg`, 'utf8'));
 
 fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/index.html`, home);
@@ -113,10 +115,15 @@ for (let key in INDEX) {
   buildObjDoc(key);
 }
 
-
+function toHTML(text) {
+  return text
+    .replace('$$$', ' $ $ $ ')
+    .replace(/\\n/g, "<br/>")
+}
 
 function getText(item, field) {
   // Todo make it configurable
+
   let lang = "en";
   if (!item[field]) {
     return `Todo: describe ${field}`;
@@ -126,10 +133,13 @@ function getText(item, field) {
     if (!item[field][lang]) {
       return `Missing transaltion for ${field}`;
     }
-    return item[field][lang];
+   
+    return toHTML(item[field][lang]);
   }
 
-  return item[field];
+  
+
+  return toHTML(item[field]);
 
 }
 
@@ -191,7 +201,8 @@ function buildObjDoc(objName) {
     doc += "</div>";
 
     for (let prop in data.properties) {
-      PROP_MENU += `<li><a href="${objName}.html#${prop}" class="d-inline-flex text-decoration-none subLink2">${prop}</a></li>`
+      PROP_MENU += `
+<li><a href="${objName}.html#${prop}" class="d-inline-flex text-decoration-none subLink2">${prop}</a></li>`
     }
   }
 
@@ -224,10 +235,10 @@ function buildObjDoc(objName) {
   
   fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
   template
-    .replace('$$CONTENT', doc)
-    .replace('<!--$$DM_INDEX-->', CAT_INDEX[data.namespace])
+    .replace('<!--$$_CONTENT_-->', "<!--contentInhjection-->" + doc)
+    .replace('<!--$$DM_INDEX-->', "<!--DM_INDEX-->" + CAT_INDEX[data.namespace])
     .replace(`namedLink${name}`, 'activeLink')
-    .replace(`<!--SUBMENU_${name}-->`, PROP_MENU)
+    .replace(`<!--SUBMENU_${name}-->`, "<!--$$SUBMENU_-->" +   PROP_MENU)
     , 
   'utf-8');
 

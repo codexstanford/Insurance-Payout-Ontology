@@ -16,9 +16,10 @@ function inheritParentProperties(data, parentObjectName, chain) {
   }
   if (data.type == 'object') {
     for (let property in parentObj.properties) {
-      if (!data.properties[property]) {
-        parentObj.properties[property].inherited = parentObjectName;
-        data.properties[property] = parentObj.properties[property];
+      if (!data.properties[property] && !property.inherited) {
+      //  parentObj.properties[property].inherited = parentObjectName;
+        data.properties[property] = {...parentObj.properties[property]};
+        data.properties[property].inherited = parentObjectName;
       }
     }
   }
