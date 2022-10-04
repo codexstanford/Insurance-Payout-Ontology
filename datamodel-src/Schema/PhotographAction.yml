@@ -1,0 +1,6 @@
+PhotographAction:
+  type: object
+  documentation:
+    en: The act of capturing still images of objects using a camera.
+  inherit: CreateAction
+  properties: {}

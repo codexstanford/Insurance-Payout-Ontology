@@ -1,0 +1,6 @@
+ListenAction:
+  type: object
+  documentation:
+    en: The act of consuming audio content.
+  inherit: ConsumeAction
+  properties: {}

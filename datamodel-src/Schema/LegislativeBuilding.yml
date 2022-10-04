@@ -1,0 +1,6 @@
+LegislativeBuilding:
+  type: object
+  documentation:
+    en: A legislative building&#x2014;for example, the state capitol.
+  inherit: GovernmentBuilding
+  properties: {}

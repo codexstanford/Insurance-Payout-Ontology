@@ -1,0 +1,6 @@
+TouristInformationCenter:
+  type: object
+  documentation:
+    en: A tourist information center.
+  inherit: LocalBusiness
+  properties: {}

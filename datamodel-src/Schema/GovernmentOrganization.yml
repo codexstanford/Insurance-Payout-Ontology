@@ -1,0 +1,6 @@
+GovernmentOrganization:
+  type: object
+  documentation:
+    en: A governmental organization or agency.
+  inherit: Organization
+  properties: {}

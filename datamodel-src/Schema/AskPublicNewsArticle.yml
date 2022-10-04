@@ -1,0 +1,8 @@
+AskPublicNewsArticle:
+  type: object
+  documentation:
+    en: A [[NewsArticle]] expressing an open call by a [[NewsMediaOrganization]]
+      asking the public for input, insights, clarifications, anecdotes,
+      documentation, etc., on an issue, for reporting purposes.
+  inherit: NewsArticle
+  properties: {}

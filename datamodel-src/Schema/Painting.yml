@@ -1,0 +1,6 @@
+Painting:
+  type: object
+  documentation:
+    en: A painting.
+  inherit: CreativeWork
+  properties: {}

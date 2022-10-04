@@ -1,0 +1,6 @@
+AppendAction:
+  type: object
+  documentation:
+    en: The act of inserting at the end if an ordered collection.
+  inherit: InsertAction
+  properties: {}

@@ -1,0 +1,6 @@
+Park:
+  type: object
+  documentation:
+    en: A park.
+  inherit: CivicStructure
+  properties: {}

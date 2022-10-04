@@ -1,0 +1,7 @@
+Bone:
+  type: object
+  documentation:
+    en: Rigid connective tissue that comprises up the skeletal structure of the
+      human body.
+  inherit: AnatomicalStructure
+  properties: {}

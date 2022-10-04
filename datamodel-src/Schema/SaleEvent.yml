@@ -1,0 +1,6 @@
+SaleEvent:
+  type: object
+  documentation:
+    en: "Event type: Sales event."
+  inherit: Event
+  properties: {}

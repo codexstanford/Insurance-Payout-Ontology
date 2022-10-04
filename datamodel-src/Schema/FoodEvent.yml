@@ -1,0 +1,6 @@
+FoodEvent:
+  type: object
+  documentation:
+    en: "Event type: Food event."
+  inherit: Event
+  properties: {}

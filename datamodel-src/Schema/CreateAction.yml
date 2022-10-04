@@ -1,0 +1,7 @@
+CreateAction:
+  type: object
+  documentation:
+    en: The act of deliberately creating/producing/generating/building a result out
+      of the agent.
+  inherit: Action
+  properties: {}

@@ -1,0 +1,6 @@
+FoodService:
+  type: object
+  documentation:
+    en: A food service, like breakfast, lunch, or dinner.
+  inherit: Service
+  properties: {}

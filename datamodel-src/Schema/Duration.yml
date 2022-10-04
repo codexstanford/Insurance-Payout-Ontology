@@ -1,0 +1,7 @@
+Duration:
+  type: object
+  documentation:
+    en: "Quantity: Duration (use [ISO 8601 duration
+      format](http://en.wikipedia.org/wiki/ISO_8601))."
+  inherit: Quantity
+  properties: {}

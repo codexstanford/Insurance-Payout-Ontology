@@ -1,0 +1,6 @@
+Bridge:
+  type: object
+  documentation:
+    en: A bridge.
+  inherit: CivicStructure
+  properties: {}

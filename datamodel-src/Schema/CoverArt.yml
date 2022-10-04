@@ -1,0 +1,6 @@
+CoverArt:
+  type: object
+  documentation:
+    en: The artwork on the outer surface of a CreativeWork.
+  inherit: VisualArtwork
+  properties: {}

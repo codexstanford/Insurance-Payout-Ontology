@@ -1,0 +1,6 @@
+ShoppingCenter:
+  type: object
+  documentation:
+    en: A shopping center or mall.
+  inherit: LocalBusiness
+  properties: {}

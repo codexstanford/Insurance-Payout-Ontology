@@ -1,0 +1,6 @@
+SeaBodyOfWater:
+  type: object
+  documentation:
+    en: A sea (for example, the Caspian sea).
+  inherit: BodyOfWater
+  properties: {}

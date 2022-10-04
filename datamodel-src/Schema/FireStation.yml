@@ -1,0 +1,8 @@
+FireStation:
+  type: object
+  documentation:
+    en: A fire station. With firemen.
+  inherit:
+    - CivicStructure
+    - EmergencyService
+  properties: {}

@@ -1,0 +1,6 @@
+State:
+  type: object
+  documentation:
+    en: A state or province of a country.
+  inherit: AdministrativeArea
+  properties: {}

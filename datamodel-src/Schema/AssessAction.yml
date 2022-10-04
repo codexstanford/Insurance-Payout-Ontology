@@ -1,0 +1,6 @@
+AssessAction:
+  type: object
+  documentation:
+    en: The act of forming one's opinion, reaction or sentiment.
+  inherit: Action
+  properties: {}

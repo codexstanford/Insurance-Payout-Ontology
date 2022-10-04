@@ -1,0 +1,6 @@
+PodcastEpisode:
+  type: object
+  documentation:
+    en: A single episode of a podcast series.
+  inherit: Episode
+  properties: {}

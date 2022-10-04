@@ -1,0 +1,6 @@
+Float:
+  type: object
+  documentation:
+    en: "Data type: Floating number."
+  inherit: Number
+  properties: {}

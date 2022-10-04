@@ -1,0 +1,6 @@
+DryCleaningOrLaundry:
+  type: object
+  documentation:
+    en: A dry-cleaning business.
+  inherit: LocalBusiness
+  properties: {}

@@ -1,0 +1,6 @@
+AutomotiveBusiness:
+  type: object
+  documentation:
+    en: Car repair, sales, or parts.
+  inherit: LocalBusiness
+  properties: {}

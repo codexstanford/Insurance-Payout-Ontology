@@ -1,0 +1,9 @@
+Dentist:
+  type: object
+  documentation:
+    en: A dentist.
+  inherit:
+    - MedicalOrganization
+    - MedicalBusiness
+    - LocalBusiness
+  properties: {}

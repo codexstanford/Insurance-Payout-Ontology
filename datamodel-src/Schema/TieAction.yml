@@ -1,0 +1,6 @@
+TieAction:
+  type: object
+  documentation:
+    en: The act of reaching a draw in a competitive activity.
+  inherit: AchieveAction
+  properties: {}

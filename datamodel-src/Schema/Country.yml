@@ -1,0 +1,6 @@
+Country:
+  type: object
+  documentation:
+    en: A country.
+  inherit: AdministrativeArea
+  properties: {}

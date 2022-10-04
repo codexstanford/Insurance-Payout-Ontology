@@ -1,0 +1,6 @@
+JewelryStore:
+  type: object
+  documentation:
+    en: A jewelry store.
+  inherit: Store
+  properties: {}

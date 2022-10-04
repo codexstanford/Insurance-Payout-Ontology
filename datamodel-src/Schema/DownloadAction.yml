@@ -1,0 +1,6 @@
+DownloadAction:
+  type: object
+  documentation:
+    en: The act of downloading an object.
+  inherit: TransferAction
+  properties: {}

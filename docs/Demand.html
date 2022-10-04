@@ -122,8 +122,7 @@
         }
 
         .inheritedTag {
-          color : #888;
-          font-style: italic;
+          font-size: 16px;
         }
 
         .with-prop {
@@ -248,7 +247,7 @@
   <div id="itemOffered">
     <h3>itemOffered</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service.html"> Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="Trip.html"> Trip</a>, <a href="Event.html"> Event</a>, <a href="Product.html"> Product</a>, <a href="AggregateOffer.html"> AggregateOffer</a>, <a href="CreativeWork.html"> CreativeWork</a>, <a href="MenuItem.html"> MenuItem</a>, <a href="Service.html"> Service</a></div><p class="documentation">
     An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
     </p>   
 </div></div>
@@ -298,7 +297,7 @@
   <div id="acceptedPaymentMethod">
     <h3>acceptedPaymentMethod</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="LoanOrCredit,PaymentMethod.html"> LoanOrCredit,PaymentMethod</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="LoanOrCredit.html"> LoanOrCredit</a>, <a href="PaymentMethod.html"> PaymentMethod</a></div><p class="documentation">
     The payment method(s) accepted by seller for this offer.
     </p>   
 </div></div>
@@ -312,14 +311,14 @@
   <div id="seller">
     <h3>seller</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="Organization,Person.html"> Organization,Person</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="Organization.html"> Organization</a>, <a href="Person.html"> Person</a></div><p class="documentation">
     An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
     </p>   
 </div></div>
   <div id="ineligibleRegion">
     <h3>ineligibleRegion</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="Place,string,GeoShape.html"> Place,string,GeoShape</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="Place.html"> Place</a>, <a href="string.html"> string</a>, <a href="GeoShape.html"> GeoShape</a></div><p class="documentation">
     The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.\n\nSee also [[eligibleRegion]].
       
     </p>   
@@ -341,21 +340,21 @@
   <div id="validFrom">
     <h3>validFrom</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="dateTime,date.html"> dateTime,date</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="dateTime.html"> dateTime</a>, <a href="date.html"> date</a></div><p class="documentation">
     The date when the item becomes valid.
     </p>   
 </div></div>
   <div id="availabilityEnds">
     <h3>availabilityEnds</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="date,dateTime,time.html"> date,dateTime,time</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="date.html"> date</a>, <a href="dateTime.html"> dateTime</a>, <a href="time.html"> time</a></div><p class="documentation">
     The end of the availability of the product or service included in the offer.
     </p>   
 </div></div>
   <div id="eligibleRegion">
     <h3>eligibleRegion</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="GeoShape,string,Place.html"> GeoShape,string,Place</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="GeoShape.html"> GeoShape</a>, <a href="string.html"> string</a>, <a href="Place.html"> Place</a></div><p class="documentation">
     The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region(s) for which the offer or delivery charge specification is valid.\n\nSee also [[ineligibleRegion]].
     
     </p>   
@@ -405,7 +404,7 @@
   <div id="areaServed">
     <h3>areaServed</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="AdministrativeArea,GeoShape,string,Place.html"> AdministrativeArea,GeoShape,string,Place</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="AdministrativeArea.html"> AdministrativeArea</a>, <a href="GeoShape.html"> GeoShape</a>, <a href="string.html"> string</a>, <a href="Place.html"> Place</a></div><p class="documentation">
     The geographic area where a service or offered item is provided.
     </p>   
 </div></div>
@@ -433,7 +432,7 @@
   <div id="validThrough">
     <h3>validThrough</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="dateTime,date.html"> dateTime,date</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="dateTime.html"> dateTime</a>, <a href="date.html"> date</a></div><p class="documentation">
     The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
     </p>   
 </div></div>
@@ -447,7 +446,7 @@
   <div id="availabilityStarts">
     <h3>availabilityStarts</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="time,dateTime,date.html"> time,dateTime,date</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="time.html"> time</a>, <a href="dateTime.html"> dateTime</a>, <a href="date.html"> date</a></div><p class="documentation">
     The beginning of the availability of the product or service included in the offer.
     </p>   
 </div></div>

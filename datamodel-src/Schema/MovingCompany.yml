@@ -1,0 +1,6 @@
+MovingCompany:
+  type: object
+  documentation:
+    en: A moving company.
+  inherit: HomeAndConstructionBusiness
+  properties: {}

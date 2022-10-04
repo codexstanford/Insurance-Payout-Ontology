@@ -1,0 +1,6 @@
+BookmarkAction:
+  type: object
+  documentation:
+    en: An agent bookmarks/flags/labels/tags/marks an object.
+  inherit: OrganizeAction
+  properties: {}

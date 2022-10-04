@@ -1,0 +1,6 @@
+VisualArtsEvent:
+  type: object
+  documentation:
+    en: "Event type: Visual arts event."
+  inherit: Event
+  properties: {}

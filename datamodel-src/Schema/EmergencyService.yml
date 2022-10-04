@@ -1,0 +1,6 @@
+EmergencyService:
+  type: object
+  documentation:
+    en: An emergency service, such as a fire station or ER.
+  inherit: LocalBusiness
+  properties: {}

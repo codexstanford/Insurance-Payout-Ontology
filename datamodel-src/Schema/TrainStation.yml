@@ -1,0 +1,6 @@
+TrainStation:
+  type: object
+  documentation:
+    en: A train station.
+  inherit: CivicStructure
+  properties: {}

@@ -1,0 +1,7 @@
+IgnoreAction:
+  type: object
+  documentation:
+    en: The act of intentionally disregarding the object. An agent ignores an
+      object.
+  inherit: AssessAction
+  properties: {}

@@ -1,0 +1,6 @@
+Researcher:
+  type: object
+  documentation:
+    en: Researchers.
+  inherit: Audience
+  properties: {}

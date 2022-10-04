@@ -1,0 +1,6 @@
+TextDigitalDocument:
+  type: object
+  documentation:
+    en: A file composed primarily of text.
+  inherit: DigitalDocument
+  properties: {}

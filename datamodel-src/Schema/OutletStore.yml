@@ -1,0 +1,6 @@
+OutletStore:
+  type: object
+  documentation:
+    en: An outlet store.
+  inherit: Store
+  properties: {}

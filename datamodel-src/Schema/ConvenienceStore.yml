@@ -1,0 +1,6 @@
+ConvenienceStore:
+  type: object
+  documentation:
+    en: A convenience store.
+  inherit: Store
+  properties: {}

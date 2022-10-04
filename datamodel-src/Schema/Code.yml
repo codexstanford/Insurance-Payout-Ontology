@@ -1,0 +1,7 @@
+Code:
+  type: object
+  documentation:
+    en: "Computer programming source code. Example: Full (compile ready) solutions,
+      code snippet samples, scripts, templates."
+  inherit: CreativeWork
+  properties: {}

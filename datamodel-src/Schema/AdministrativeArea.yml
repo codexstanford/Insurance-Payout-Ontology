@@ -1,0 +1,7 @@
+AdministrativeArea:
+  type: object
+  documentation:
+    en: A geographical region, typically under the jurisdiction of a particular
+      government.
+  inherit: Place
+  properties: {}

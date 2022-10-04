@@ -32,7 +32,6 @@ async function run() {
     }  
   }
 
-
  
   // index Properties
   for (let item of originalData["@graph"]) {
@@ -112,6 +111,9 @@ function transformType(type) {
 }
 
 function render(itemName) {
+  console.log(`render ${itemName}`);
+
+
   if (CLASS_INDEX[itemName]["rdfs:subClassOf"] && CLASS_INDEX[itemName]["rdfs:subClassOf"]["@id"] && CLASS_INDEX[itemName]["rdfs:subClassOf"]["@id"].indexOf("Enumeration") != -1) {
     renderEnum(itemName);
   }
@@ -159,9 +161,9 @@ function renderEnum(itemName) {
     };
     outContent.values[label] = propObj;
 
-    fs.writeFileSync(`${SCHEMA_DATA_MODEL_SRC_PATH}/${itemName.replace("schema:", "")}.yml`, yaml.stringify(outObj), 'utf-8');
+   
   }
-
+  fs.writeFileSync(`${SCHEMA_DATA_MODEL_SRC_PATH}/${itemName.replace("schema:", "")}.yml`, yaml.stringify(outObj), 'utf-8');
 }
 
 function renderObject(itemName) {
@@ -227,10 +229,10 @@ function renderObject(itemName) {
 
     outContent.properties[label] = propObj;
 
-    fs.writeFileSync(`${SCHEMA_DATA_MODEL_SRC_PATH}/${itemName.replace("schema:", "")}.yml`, yaml.stringify(outObj), 'utf-8');
+    
   }
 
-
+  fs.writeFileSync(`${SCHEMA_DATA_MODEL_SRC_PATH}/${itemName.replace("schema:", "")}.yml`, yaml.stringify(outObj), 'utf-8');
 }
  
 run();

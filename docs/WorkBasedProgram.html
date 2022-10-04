@@ -122,8 +122,7 @@
         }
 
         .inheritedTag {
-          color : #888;
-          font-style: italic;
+          font-size: 16px;
         }
 
         .with-prop {
@@ -248,161 +247,161 @@
   <div id="occupationalCategory">
     <h3>occupationalCategory</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="CategoryCode,string.html"> CategoryCode,string</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="CategoryCode.html"> CategoryCode</a>, <a href="string.html"> string</a></div><p class="documentation">
     A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
 Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
     </p>   
 </div></div>
   <div id="programPrerequisites">
-    <h3>programPrerequisites <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>programPrerequisites <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="AlignmentObject,Course,EducationalOccupationalCredential,string.html"> AlignmentObject,Course,EducationalOccupationalCredential,string</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="AlignmentObject.html"> AlignmentObject</a>, <a href="Course.html"> Course</a>, <a href="EducationalOccupationalCredential.html"> EducationalOccupationalCredential</a>, <a href="string.html"> string</a></div><p class="documentation">
     Prerequisites for enrolling in the program.
     </p>   
 </div></div>
   <div id="hasCourse">
-    <h3>hasCourse <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>hasCourse <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Course.html"> Course</a></div><p class="documentation">
     A course or class that is one of the learning opportunities that constitute an educational / occupational program. No information is implied about whether the course is mandatory or optional; no guarantee is implied about whether the course will be available to everyone on the program.
     </p>   
 </div></div>
   <div id="startDate">
-    <h3>startDate <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>startDate <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="dateTime,date.html"> dateTime,date</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="dateTime.html"> dateTime</a>, <a href="date.html"> date</a></div><p class="documentation">
     The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
     </p>   
 </div></div>
   <div id="salaryUponCompletion">
-    <h3>salaryUponCompletion <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>salaryUponCompletion <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="MonetaryAmountDistribution.html"> MonetaryAmountDistribution</a></div><p class="documentation">
     The expected salary upon completing the training.
     </p>   
 </div></div>
   <div id="termsPerYear">
-    <h3>termsPerYear <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>termsPerYear <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="number.html"> number</a></div><p class="documentation">
     The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example, if the student can only take 2 semesters for the program in one year, then termsPerYear should be 2.
     </p>   
 </div></div>
   <div id="dayOfWeek">
-    <h3>dayOfWeek <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>dayOfWeek <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="DayOfWeek.html"> DayOfWeek</a></div><p class="documentation">
     The day of the week for which these opening hours are valid.
     </p>   
 </div></div>
   <div id="offers">
-    <h3>offers <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>offers <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="Offer,Demand.html"> Offer,Demand</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="Offer.html"> Offer</a>, <a href="Demand.html"> Demand</a></div><p class="documentation">
     An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
       
     </p>   
 </div></div>
   <div id="typicalCreditsPerTerm">
-    <h3>typicalCreditsPerTerm <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>typicalCreditsPerTerm <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="number,StructuredValue.html"> number,StructuredValue</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="number.html"> number</a>, <a href="StructuredValue.html"> StructuredValue</a></div><p class="documentation">
     The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined by the institution.
     </p>   
 </div></div>
   <div id="applicationStartDate">
-    <h3>applicationStartDate <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>applicationStartDate <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="date.html"> date</a></div><p class="documentation">
     The date at which the program begins collecting applications for the next enrollment cycle.
     </p>   
 </div></div>
   <div id="timeOfDay">
-    <h3>timeOfDay <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>timeOfDay <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a></div><p class="documentation">
     The time of day the program normally runs. For example, "evenings".
     </p>   
 </div></div>
   <div id="endDate">
-    <h3>endDate <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>endDate <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="date,dateTime.html"> date,dateTime</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="date.html"> date</a>, <a href="dateTime.html"> dateTime</a></div><p class="documentation">
     The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
     </p>   
 </div></div>
   <div id="provider">
-    <h3>provider <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>provider <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="Organization,Person.html"> Organization,Person</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="Organization.html"> Organization</a>, <a href="Person.html"> Person</a></div><p class="documentation">
     The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
     </p>   
 </div></div>
   <div id="educationalCredentialAwarded">
-    <h3>educationalCredentialAwarded <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>educationalCredentialAwarded <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="string,EducationalOccupationalCredential,string.html"> string,EducationalOccupationalCredential,string</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="EducationalOccupationalCredential.html"> EducationalOccupationalCredential</a>, <a href="string.html"> string</a></div><p class="documentation">
     A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.
     </p>   
 </div></div>
   <div id="numberOfCredits">
-    <h3>numberOfCredits <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>numberOfCredits <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="number,StructuredValue.html"> number,StructuredValue</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="number.html"> number</a>, <a href="StructuredValue.html"> StructuredValue</a></div><p class="documentation">
     The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.
     </p>   
 </div></div>
   <div id="timeToComplete">
-    <h3>timeToComplete <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>timeToComplete <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Duration.html"> Duration</a></div><p class="documentation">
     The expected length of time to complete the program if attending full-time.
     </p>   
 </div></div>
   <div id="occupationalCredentialAwarded">
-    <h3>occupationalCredentialAwarded <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>occupationalCredentialAwarded <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="EducationalOccupationalCredential,string,string.html"> EducationalOccupationalCredential,string,string</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="EducationalOccupationalCredential.html"> EducationalOccupationalCredential</a>, <a href="string.html"> string</a>, <a href="string.html"> string</a></div><p class="documentation">
     A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.
     </p>   
 </div></div>
   <div id="termDuration">
-    <h3>termDuration <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>termDuration <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Duration.html"> Duration</a></div><p class="documentation">
     The amount of time in a term as defined by the institution. A term is a length of time where students take one or more classes. Semesters and quarters are common units for term.
     </p>   
 </div></div>
   <div id="educationalProgramMode">
-    <h3>educationalProgramMode <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>educationalProgramMode <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="string,string.html"> string,string</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a></div><p class="documentation">
     Similar to courseMode, The medium or means of delivery of the program as a whole. The value may either be a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
     </p>   
 </div></div>
   <div id="programType">
-    <h3>programType <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>programType <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="string,DefinedTerm.html"> string,DefinedTerm</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="DefinedTerm.html"> DefinedTerm</a></div><p class="documentation">
     The type of educational or occupational program. For example, classroom, internship, alternance, etc..
     </p>   
 </div></div>
   <div id="maximumEnrollment">
-    <h3>maximumEnrollment <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>maximumEnrollment <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="number.html"> number</a></div><p class="documentation">
     The maximum number of students who may be enrolled in the program.
     </p>   
 </div></div>
   <div id="financialAidEligible">
-    <h3>financialAidEligible <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>financialAidEligible <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="string,DefinedTerm.html"> string,DefinedTerm</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="DefinedTerm.html"> DefinedTerm</a></div><p class="documentation">
     A financial aid type or program which students may use to pay for tuition or fees associated with the program.
     </p>   
 </div></div>
   <div id="applicationDeadline">
-    <h3>applicationDeadline <span class="inheritedTag">(inherited from EducationalOccupationalProgram)</span></h3>
+    <h3>applicationDeadline <span class="inheritedTag">inherited from <a href="EducationalOccupationalProgram.html"> EducationalOccupationalProgram </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="date.html"> date</a></div><p class="documentation">
     The date at which the program stops collecting applications for the next enrollment cycle.

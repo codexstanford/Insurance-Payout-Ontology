@@ -1,0 +1,7 @@
+TelevisionChannel:
+  type: object
+  documentation:
+    en: A unique instance of a television BroadcastService on a
+      CableOrSatelliteService lineup.
+  inherit: BroadcastChannel
+  properties: {}

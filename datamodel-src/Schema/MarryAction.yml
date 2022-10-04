@@ -1,0 +1,6 @@
+MarryAction:
+  type: object
+  documentation:
+    en: The act of marrying a person.
+  inherit: InteractAction
+  properties: {}

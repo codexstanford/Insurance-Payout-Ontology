@@ -1,0 +1,6 @@
+DepartmentStore:
+  type: object
+  documentation:
+    en: A department store.
+  inherit: Store
+  properties: {}

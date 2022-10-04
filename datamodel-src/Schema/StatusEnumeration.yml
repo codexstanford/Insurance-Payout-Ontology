@@ -1,0 +1,6 @@
+StatusEnumeration:
+  type: enum
+  documentation:
+    en: Lists or enumerations dealing with status types.
+  inherit: Enumeration
+  values: {}

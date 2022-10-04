@@ -1,0 +1,6 @@
+BowlingAlley:
+  type: object
+  documentation:
+    en: A bowling alley.
+  inherit: SportsActivityLocation
+  properties: {}

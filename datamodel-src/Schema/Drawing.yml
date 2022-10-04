@@ -1,0 +1,6 @@
+Drawing:
+  type: object
+  documentation:
+    en: A picture or diagram made with a pencil, pen, or crayon rather than paint.
+  inherit: CreativeWork
+  properties: {}

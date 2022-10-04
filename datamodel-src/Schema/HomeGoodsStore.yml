@@ -1,0 +1,6 @@
+HomeGoodsStore:
+  type: object
+  documentation:
+    en: A home goods store.
+  inherit: Store
+  properties: {}

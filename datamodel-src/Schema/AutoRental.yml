@@ -1,0 +1,6 @@
+AutoRental:
+  type: object
+  documentation:
+    en: A car rental business.
+  inherit: AutomotiveBusiness
+  properties: {}

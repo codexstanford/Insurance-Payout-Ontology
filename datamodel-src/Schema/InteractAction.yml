@@ -1,0 +1,6 @@
+InteractAction:
+  type: object
+  documentation:
+    en: The act of interacting with another person or organization.
+  inherit: Action
+  properties: {}

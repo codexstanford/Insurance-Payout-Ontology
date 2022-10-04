@@ -1,0 +1,6 @@
+DiscoverAction:
+  type: object
+  documentation:
+    en: The act of discovering/finding an object.
+  inherit: FindAction
+  properties: {}

@@ -122,8 +122,7 @@
         }
 
         .inheritedTag {
-          color : #888;
-          font-style: italic;
+          font-size: 16px;
         }
 
         .with-prop {
@@ -241,7 +240,7 @@
   <div id="priceType">
     <h3>priceType</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="PriceTypeEnumeration,string.html"> PriceTypeEnumeration,string</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="PriceTypeEnumeration.html"> PriceTypeEnumeration</a>, <a href="string.html"> string</a></div><p class="documentation">
     Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
     </p>   
 </div></div>
@@ -263,14 +262,14 @@
   <div id="unitCode">
     <h3>unitCode</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="string,string.html"> string,string</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a></div><p class="documentation">
     The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
     </p>   
 </div></div>
   <div id="billingDuration">
     <h3>billingDuration</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="Duration,QuantitativeValue,number.html"> Duration,QuantitativeValue,number</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="Duration.html"> Duration</a>, <a href="QuantitativeValue.html"> QuantitativeValue</a>, <a href="number.html"> number</a></div><p class="documentation">
     Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan. Type can be either a Duration or a Number (in which case the unit of measurement, for example month, is specified by the unitCode property).
     </p>   
 </div></div>
@@ -296,65 +295,65 @@
     </p>   
 </div></div>
   <div id="minPrice">
-    <h3>minPrice <span class="inheritedTag">(inherited from PriceSpecification)</span></h3>
+    <h3>minPrice <span class="inheritedTag">inherited from <a href="PriceSpecification.html"> PriceSpecification </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="number.html"> number</a></div><p class="documentation">
     The lowest price if the price is a range.
     </p>   
 </div></div>
   <div id="eligibleQuantity">
-    <h3>eligibleQuantity <span class="inheritedTag">(inherited from PriceSpecification)</span></h3>
+    <h3>eligibleQuantity <span class="inheritedTag">inherited from <a href="PriceSpecification.html"> PriceSpecification </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="QuantitativeValue.html"> QuantitativeValue</a></div><p class="documentation">
     The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.
     </p>   
 </div></div>
   <div id="validFrom">
-    <h3>validFrom <span class="inheritedTag">(inherited from PriceSpecification)</span></h3>
+    <h3>validFrom <span class="inheritedTag">inherited from <a href="PriceSpecification.html"> PriceSpecification </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="dateTime,date.html"> dateTime,date</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="dateTime.html"> dateTime</a>, <a href="date.html"> date</a></div><p class="documentation">
     The date when the item becomes valid.
     </p>   
 </div></div>
   <div id="maxPrice">
-    <h3>maxPrice <span class="inheritedTag">(inherited from PriceSpecification)</span></h3>
+    <h3>maxPrice <span class="inheritedTag">inherited from <a href="PriceSpecification.html"> PriceSpecification </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="number.html"> number</a></div><p class="documentation">
     The highest price if the price is a range.
     </p>   
 </div></div>
   <div id="priceCurrency">
-    <h3>priceCurrency <span class="inheritedTag">(inherited from PriceSpecification)</span></h3>
+    <h3>priceCurrency <span class="inheritedTag">inherited from <a href="PriceSpecification.html"> PriceSpecification </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a></div><p class="documentation">
     The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies e.g. "BTC"; well known names for [Local Exchange Tradings Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types e.g. "Ithaca HOUR".
     </p>   
 </div></div>
   <div id="valueAddedTaxIncluded">
-    <h3>valueAddedTaxIncluded <span class="inheritedTag">(inherited from PriceSpecification)</span></h3>
+    <h3>valueAddedTaxIncluded <span class="inheritedTag">inherited from <a href="PriceSpecification.html"> PriceSpecification </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="boolean.html"> boolean</a></div><p class="documentation">
     Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.
     </p>   
 </div></div>
   <div id="eligibleTransactionVolume">
-    <h3>eligibleTransactionVolume <span class="inheritedTag">(inherited from PriceSpecification)</span></h3>
+    <h3>eligibleTransactionVolume <span class="inheritedTag">inherited from <a href="PriceSpecification.html"> PriceSpecification </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="PriceSpecification.html"> PriceSpecification</a></div><p class="documentation">
     The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.
     </p>   
 </div></div>
   <div id="validThrough">
-    <h3>validThrough <span class="inheritedTag">(inherited from PriceSpecification)</span></h3>
+    <h3>validThrough <span class="inheritedTag">inherited from <a href="PriceSpecification.html"> PriceSpecification </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="dateTime,date.html"> dateTime,date</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="dateTime.html"> dateTime</a>, <a href="date.html"> date</a></div><p class="documentation">
     The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
     </p>   
 </div></div>
   <div id="price">
-    <h3>price <span class="inheritedTag">(inherited from PriceSpecification)</span></h3>
+    <h3>price <span class="inheritedTag">inherited from <a href="PriceSpecification.html"> PriceSpecification </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="number,string.html"> number,string</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="number.html"> number</a>, <a href="string.html"> string</a></div><p class="documentation">
     The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies e.g. "BTC"; well known names for [Local Exchange Tradings Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '
   
         </div>

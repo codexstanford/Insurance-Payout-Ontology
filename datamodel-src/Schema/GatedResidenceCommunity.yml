@@ -1,0 +1,6 @@
+GatedResidenceCommunity:
+  type: object
+  documentation:
+    en: "Residence type: Gated community."
+  inherit: Residence
+  properties: {}

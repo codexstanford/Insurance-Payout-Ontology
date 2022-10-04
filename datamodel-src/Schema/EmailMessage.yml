@@ -1,0 +1,6 @@
+EmailMessage:
+  type: object
+  documentation:
+    en: An email message.
+  inherit: Message
+  properties: {}

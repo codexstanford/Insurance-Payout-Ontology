@@ -1,0 +1,6 @@
+FMRadioChannel:
+  type: object
+  documentation:
+    en: A radio channel that uses FM.
+  inherit: RadioChannel
+  properties: {}

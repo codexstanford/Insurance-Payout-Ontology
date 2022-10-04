@@ -1,0 +1,7 @@
+PhysicalTherapy:
+  type: object
+  documentation:
+    en: A process of progressive physical care and rehabilitation aimed at improving
+      a health condition.
+  inherit: MedicalTherapy
+  properties: {}

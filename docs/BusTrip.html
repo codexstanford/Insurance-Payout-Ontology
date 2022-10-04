@@ -122,8 +122,7 @@
         }
 
         .inheritedTag {
-          color : #888;
-          font-style: italic;
+          font-size: 16px;
         }
 
         .with-prop {
@@ -241,7 +240,7 @@
   <div id="departureBusStop">
     <h3>departureBusStop</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="BusStop,BusStation.html"> BusStop,BusStation</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="BusStop.html"> BusStop</a>, <a href="BusStation.html"> BusStation</a></div><p class="documentation">
     The stop or station from which the bus departs.
     </p>   
 </div></div>
@@ -255,7 +254,7 @@
   <div id="arrivalBusStop">
     <h3>arrivalBusStop</h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="BusStation,BusStop.html"> BusStation,BusStop</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="BusStation.html"> BusStation</a>, <a href="BusStop.html"> BusStop</a></div><p class="documentation">
     The stop or station from which the bus arrives.
     </p>   
 </div></div>
@@ -267,50 +266,50 @@
     </p>   
 </div></div>
   <div id="arrivalTime">
-    <h3>arrivalTime <span class="inheritedTag">(inherited from Trip)</span></h3>
+    <h3>arrivalTime <span class="inheritedTag">inherited from <a href="Trip.html"> Trip </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="time,dateTime.html"> time,dateTime</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="time.html"> time</a>, <a href="dateTime.html"> dateTime</a></div><p class="documentation">
     The expected arrival time.
     </p>   
 </div></div>
   <div id="offers">
-    <h3>offers <span class="inheritedTag">(inherited from Trip)</span></h3>
+    <h3>offers <span class="inheritedTag">inherited from <a href="Trip.html"> Trip </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="Offer,Demand.html"> Offer,Demand</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="Offer.html"> Offer</a>, <a href="Demand.html"> Demand</a></div><p class="documentation">
     An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
       
     </p>   
 </div></div>
   <div id="departureTime">
-    <h3>departureTime <span class="inheritedTag">(inherited from Trip)</span></h3>
+    <h3>departureTime <span class="inheritedTag">inherited from <a href="Trip.html"> Trip </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="time,dateTime.html"> time,dateTime</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="time.html"> time</a>, <a href="dateTime.html"> dateTime</a></div><p class="documentation">
     The expected departure time.
     </p>   
 </div></div>
   <div id="provider">
-    <h3>provider <span class="inheritedTag">(inherited from Trip)</span></h3>
+    <h3>provider <span class="inheritedTag">inherited from <a href="Trip.html"> Trip </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="Organization,Person.html"> Organization,Person</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="Organization.html"> Organization</a>, <a href="Person.html"> Person</a></div><p class="documentation">
     The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
     </p>   
 </div></div>
   <div id="subTrip">
-    <h3>subTrip <span class="inheritedTag">(inherited from Trip)</span></h3>
+    <h3>subTrip <span class="inheritedTag">inherited from <a href="Trip.html"> Trip </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Trip.html"> Trip</a></div><p class="documentation">
     Identifies a [[Trip]] that is a subTrip of this Trip.  For example Day 1, Day 2, etc. of a multi-day trip.
     </p>   
 </div></div>
   <div id="itinerary">
-    <h3>itinerary <span class="inheritedTag">(inherited from Trip)</span></h3>
+    <h3>itinerary <span class="inheritedTag">inherited from <a href="Trip.html"> Trip </a></span></h3>
     <div class="" >
-<div class="type-info"><b>Type</b> <a href="ItemList,Place.html"> ItemList,Place</a></div><p class="documentation">
+<div class="type-info"><b>Type</b> <a href="ItemList.html"> ItemList</a>, <a href="Place.html"> Place</a></div><p class="documentation">
     Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination order is important use [[ItemList]] to specify that order (see examples).
     </p>   
 </div></div>
   <div id="partOfTrip">
-    <h3>partOfTrip <span class="inheritedTag">(inherited from Trip)</span></h3>
+    <h3>partOfTrip <span class="inheritedTag">inherited from <a href="Trip.html"> Trip </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Trip.html"> Trip</a></div><p class="documentation">
     Identifies that this [[Trip]] is a subTrip of another Trip.  For example Day 1, Day 2, etc. of a multi-day trip.

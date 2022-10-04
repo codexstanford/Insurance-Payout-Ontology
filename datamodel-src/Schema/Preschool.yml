@@ -1,0 +1,6 @@
+Preschool:
+  type: object
+  documentation:
+    en: A preschool.
+  inherit: EducationalOrganization
+  properties: {}

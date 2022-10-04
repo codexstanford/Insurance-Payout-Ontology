@@ -1,0 +1,6 @@
+TattooParlor:
+  type: object
+  documentation:
+    en: A tattoo parlor.
+  inherit: HealthAndBeautyBusiness
+  properties: {}

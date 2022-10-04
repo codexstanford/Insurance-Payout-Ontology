@@ -1,0 +1,6 @@
+ControlAction:
+  type: object
+  documentation:
+    en: An agent controls a device or application.
+  inherit: Action
+  properties: {}

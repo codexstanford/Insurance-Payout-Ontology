@@ -1,0 +1,6 @@
+GroceryStore:
+  type: object
+  documentation:
+    en: A grocery store.
+  inherit: Store
+  properties: {}

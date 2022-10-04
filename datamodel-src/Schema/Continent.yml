@@ -1,0 +1,6 @@
+Continent:
+  type: object
+  documentation:
+    en: One of the continents (for example, Europe or Africa).
+  inherit: Landform
+  properties: {}

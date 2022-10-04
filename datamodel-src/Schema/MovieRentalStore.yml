@@ -1,0 +1,6 @@
+MovieRentalStore:
+  type: object
+  documentation:
+    en: A movie rental store.
+  inherit: Store
+  properties: {}

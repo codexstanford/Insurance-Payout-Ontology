@@ -1,0 +1,8 @@
+PoliceStation:
+  type: object
+  documentation:
+    en: A police station.
+  inherit:
+    - CivicStructure
+    - EmergencyService
+  properties: {}

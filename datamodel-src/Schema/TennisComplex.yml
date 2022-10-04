@@ -1,0 +1,6 @@
+TennisComplex:
+  type: object
+  documentation:
+    en: A tennis complex.
+  inherit: SportsActivityLocation
+  properties: {}

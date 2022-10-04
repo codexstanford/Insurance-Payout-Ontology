@@ -1,0 +1,7 @@
+FAQPage:
+  type: object
+  documentation:
+    en: A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked
+      questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).
+  inherit: WebPage
+  properties: {}

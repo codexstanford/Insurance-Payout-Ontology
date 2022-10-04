@@ -1,0 +1,6 @@
+TaxiStand:
+  type: object
+  documentation:
+    en: A taxi stand.
+  inherit: CivicStructure
+  properties: {}

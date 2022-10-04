@@ -1,0 +1,6 @@
+ElementarySchool:
+  type: object
+  documentation:
+    en: An elementary school.
+  inherit: EducationalOrganization
+  properties: {}

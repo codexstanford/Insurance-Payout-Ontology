@@ -1,0 +1,6 @@
+Pond:
+  type: object
+  documentation:
+    en: A pond.
+  inherit: BodyOfWater
+  properties: {}

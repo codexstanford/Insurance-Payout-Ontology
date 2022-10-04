@@ -1,0 +1,6 @@
+CurrencyConversionService:
+  type: object
+  documentation:
+    en: A service to convert funds from one currency to another currency.
+  inherit: FinancialProduct
+  properties: {}

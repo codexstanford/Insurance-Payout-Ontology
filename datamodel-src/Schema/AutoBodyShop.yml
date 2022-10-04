@@ -1,0 +1,6 @@
+AutoBodyShop:
+  type: object
+  documentation:
+    en: Auto body shop.
+  inherit: AutomotiveBusiness
+  properties: {}

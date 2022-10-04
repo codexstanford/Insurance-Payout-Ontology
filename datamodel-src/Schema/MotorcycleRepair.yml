@@ -1,0 +1,6 @@
+MotorcycleRepair:
+  type: object
+  documentation:
+    en: A motorcycle repair shop.
+  inherit: AutomotiveBusiness
+  properties: {}

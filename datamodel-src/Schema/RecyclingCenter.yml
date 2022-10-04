@@ -1,0 +1,6 @@
+RecyclingCenter:
+  type: object
+  documentation:
+    en: A recycling center.
+  inherit: LocalBusiness
+  properties: {}

@@ -1,0 +1,7 @@
+AchieveAction:
+  type: object
+  documentation:
+    en: The act of accomplishing something via previous efforts. It is an
+      instantaneous action rather than an ongoing process.
+  inherit: Action
+  properties: {}

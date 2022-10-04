@@ -1,0 +1,6 @@
+CatholicChurch:
+  type: object
+  documentation:
+    en: A Catholic church.
+  inherit: Church
+  properties: {}

@@ -1,0 +1,6 @@
+DataType:
+  type: object
+  documentation:
+    en: The basic data types such as Integers, Strings, etc.
+  inherit: rdfs:Class
+  properties: {}

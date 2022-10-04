@@ -1,0 +1,6 @@
+BoatTerminal:
+  type: object
+  documentation:
+    en: A terminal for boats, ships, and other water vessels.
+  inherit: CivicStructure
+  properties: {}

@@ -1,0 +1,6 @@
+Motorcycle:
+  type: object
+  documentation:
+    en: A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.
+  inherit: Vehicle
+  properties: {}

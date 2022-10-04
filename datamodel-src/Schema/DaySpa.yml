@@ -1,0 +1,6 @@
+DaySpa:
+  type: object
+  documentation:
+    en: A day spa.
+  inherit: HealthAndBeautyBusiness
+  properties: {}

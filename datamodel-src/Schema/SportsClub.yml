@@ -1,0 +1,6 @@
+SportsClub:
+  type: object
+  documentation:
+    en: A sports club.
+  inherit: SportsActivityLocation
+  properties: {}

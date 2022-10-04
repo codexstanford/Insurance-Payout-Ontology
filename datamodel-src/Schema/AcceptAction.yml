@@ -1,0 +1,7 @@
+AcceptAction:
+  type: object
+  documentation:
+    en: "The act of committing to/adopting an object.\\n\\nRelated actions:\\n\\n*
+      [[RejectAction]]: The antonym of AcceptAction."
+  inherit: AllocateAction
+  properties: {}

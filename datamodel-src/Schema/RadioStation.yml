@@ -1,0 +1,6 @@
+RadioStation:
+  type: object
+  documentation:
+    en: A radio station.
+  inherit: LocalBusiness
+  properties: {}

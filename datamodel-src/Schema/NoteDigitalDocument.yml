@@ -1,0 +1,6 @@
+NoteDigitalDocument:
+  type: object
+  documentation:
+    en: A file containing a note, primarily for the author.
+  inherit: DigitalDocument
+  properties: {}

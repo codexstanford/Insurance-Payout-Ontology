@@ -1,0 +1,6 @@
+VeterinaryCare:
+  type: object
+  documentation:
+    en: A vet's office.
+  inherit: MedicalOrganization
+  properties: {}

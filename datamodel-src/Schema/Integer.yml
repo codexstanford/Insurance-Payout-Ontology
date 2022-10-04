@@ -1,0 +1,6 @@
+Integer:
+  type: object
+  documentation:
+    en: "Data type: Integer."
+  inherit: Number
+  properties: {}

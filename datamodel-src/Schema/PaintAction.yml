@@ -1,0 +1,7 @@
+PaintAction:
+  type: object
+  documentation:
+    en: The act of producing a painting, typically with paint and canvas as
+      instruments.
+  inherit: CreateAction
+  properties: {}

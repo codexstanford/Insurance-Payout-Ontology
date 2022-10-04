@@ -1,0 +1,6 @@
+Mosque:
+  type: object
+  documentation:
+    en: A mosque.
+  inherit: PlaceOfWorship
+  properties: {}

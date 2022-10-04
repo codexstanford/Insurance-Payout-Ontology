@@ -1,0 +1,6 @@
+RadioClip:
+  type: object
+  documentation:
+    en: A short radio program or a segment/part of a radio program.
+  inherit: Clip
+  properties: {}

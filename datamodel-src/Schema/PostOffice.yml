@@ -1,0 +1,6 @@
+PostOffice:
+  type: object
+  documentation:
+    en: A post office.
+  inherit: GovernmentOffice
+  properties: {}

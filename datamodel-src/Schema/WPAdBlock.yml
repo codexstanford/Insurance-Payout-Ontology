@@ -1,0 +1,6 @@
+WPAdBlock:
+  type: object
+  documentation:
+    en: An advertising section of the page.
+  inherit: WebPageElement
+  properties: {}

@@ -1,0 +1,6 @@
+HairSalon:
+  type: object
+  documentation:
+    en: A hair salon.
+  inherit: HealthAndBeautyBusiness
+  properties: {}

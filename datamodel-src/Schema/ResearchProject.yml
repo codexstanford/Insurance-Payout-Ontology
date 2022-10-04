@@ -1,0 +1,6 @@
+ResearchProject:
+  type: object
+  documentation:
+    en: A Research project.
+  inherit: Project
+  properties: {}

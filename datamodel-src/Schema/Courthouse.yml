@@ -1,0 +1,6 @@
+Courthouse:
+  type: object
+  documentation:
+    en: A courthouse.
+  inherit: GovernmentBuilding
+  properties: {}

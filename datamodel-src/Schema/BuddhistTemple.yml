@@ -1,0 +1,6 @@
+BuddhistTemple:
+  type: object
+  documentation:
+    en: A Buddhist temple.
+  inherit: PlaceOfWorship
+  properties: {}

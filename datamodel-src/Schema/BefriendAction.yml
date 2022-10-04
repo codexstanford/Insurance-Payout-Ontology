@@ -1,0 +1,9 @@
+BefriendAction:
+  type: object
+  documentation:
+    en: "The act of forming a personal connection with someone (object)
+      mutually/bidirectionally/symmetrically.\\n\\nRelated actions:\\n\\n*
+      [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the
+      connection is reciprocal."
+  inherit: InteractAction
+  properties: {}

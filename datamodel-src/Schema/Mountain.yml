@@ -1,0 +1,6 @@
+Mountain:
+  type: object
+  documentation:
+    en: A mountain, like Mount Whitney or Mount Everest.
+  inherit: Landform
+  properties: {}

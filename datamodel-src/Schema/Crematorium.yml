@@ -1,0 +1,6 @@
+Crematorium:
+  type: object
+  documentation:
+    en: A crematorium.
+  inherit: CivicStructure
+  properties: {}

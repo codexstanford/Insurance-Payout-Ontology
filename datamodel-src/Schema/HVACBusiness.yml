@@ -1,0 +1,6 @@
+HVACBusiness:
+  type: object
+  documentation:
+    en: A business that provide Heating, Ventilation and Air Conditioning services.
+  inherit: HomeAndConstructionBusiness
+  properties: {}

@@ -1,0 +1,6 @@
+FastFoodRestaurant:
+  type: object
+  documentation:
+    en: A fast-food restaurant.
+  inherit: FoodEstablishment
+  properties: {}

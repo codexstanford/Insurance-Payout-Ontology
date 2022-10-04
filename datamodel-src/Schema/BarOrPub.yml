@@ -1,0 +1,6 @@
+BarOrPub:
+  type: object
+  documentation:
+    en: A bar or pub.
+  inherit: FoodEstablishment
+  properties: {}

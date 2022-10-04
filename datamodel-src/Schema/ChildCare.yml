@@ -1,0 +1,6 @@
+ChildCare:
+  type: object
+  documentation:
+    en: A Childcare center.
+  inherit: LocalBusiness
+  properties: {}

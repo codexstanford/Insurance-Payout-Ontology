@@ -1,0 +1,6 @@
+BlogPosting:
+  type: object
+  documentation:
+    en: A blog post.
+  inherit: SocialMediaPosting
+  properties: {}

@@ -1,0 +1,6 @@
+LandmarksOrHistoricalBuildings:
+  type: object
+  documentation:
+    en: An historical landmark or building.
+  inherit: Place
+  properties: {}

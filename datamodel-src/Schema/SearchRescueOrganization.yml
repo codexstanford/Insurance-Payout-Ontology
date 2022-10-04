@@ -1,0 +1,6 @@
+SearchRescueOrganization:
+  type: object
+  documentation:
+    en: A Search and Rescue organization of some kind.
+  inherit: Organization
+  properties: {}

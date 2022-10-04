@@ -1,0 +1,6 @@
+Cemetery:
+  type: object
+  documentation:
+    en: A graveyard.
+  inherit: CivicStructure
+  properties: {}

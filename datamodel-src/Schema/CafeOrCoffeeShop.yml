@@ -1,0 +1,6 @@
+CafeOrCoffeeShop:
+  type: object
+  documentation:
+    en: A cafe or coffee shop.
+  inherit: FoodEstablishment
+  properties: {}

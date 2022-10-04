@@ -1,0 +1,6 @@
+Church:
+  type: object
+  documentation:
+    en: A church.
+  inherit: PlaceOfWorship
+  properties: {}

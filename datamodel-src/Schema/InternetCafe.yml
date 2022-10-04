@@ -1,0 +1,6 @@
+InternetCafe:
+  type: object
+  documentation:
+    en: An internet cafe.
+  inherit: LocalBusiness
+  properties: {}

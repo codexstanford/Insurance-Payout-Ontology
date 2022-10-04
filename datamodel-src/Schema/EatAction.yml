@@ -1,0 +1,6 @@
+EatAction:
+  type: object
+  documentation:
+    en: The act of swallowing solid objects.
+  inherit: ConsumeAction
+  properties: {}

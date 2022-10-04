@@ -1,0 +1,6 @@
+RadioSeason:
+  type: object
+  documentation:
+    en: Season dedicated to radio broadcast and associated online delivery.
+  inherit: CreativeWorkSeason
+  properties: {}

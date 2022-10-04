@@ -1,0 +1,6 @@
+RiverBodyOfWater:
+  type: object
+  documentation:
+    en: A river (for example, the broad majestic Shannon).
+  inherit: BodyOfWater
+  properties: {}

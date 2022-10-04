@@ -1,0 +1,6 @@
+MovieClip:
+  type: object
+  documentation:
+    en: A short segment/part of a movie.
+  inherit: Clip
+  properties: {}

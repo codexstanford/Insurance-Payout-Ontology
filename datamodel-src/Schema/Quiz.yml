@@ -1,0 +1,6 @@
+Quiz:
+  type: object
+  documentation:
+    en: "Quiz: A test of knowledge, skills and abilities."
+  inherit: LearningResource
+  properties: {}

@@ -1,0 +1,6 @@
+Notary:
+  type: object
+  documentation:
+    en: A notary.
+  inherit: LegalService
+  properties: {}

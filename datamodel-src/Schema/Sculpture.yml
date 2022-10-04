@@ -1,0 +1,6 @@
+Sculpture:
+  type: object
+  documentation:
+    en: A piece of sculpture.
+  inherit: CreativeWork
+  properties: {}

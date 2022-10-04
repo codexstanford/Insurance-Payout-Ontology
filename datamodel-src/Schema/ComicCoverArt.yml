@@ -1,0 +1,8 @@
+ComicCoverArt:
+  type: object
+  documentation:
+    en: The artwork on the cover of a comic.
+  inherit:
+    - ComicStory
+    - CoverArt
+  properties: {}

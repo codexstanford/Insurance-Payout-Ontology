@@ -1,0 +1,6 @@
+City:
+  type: object
+  documentation:
+    en: A city or town.
+  inherit: AdministrativeArea
+  properties: {}

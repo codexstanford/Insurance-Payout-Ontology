@@ -1,0 +1,6 @@
+VideoGallery:
+  type: object
+  documentation:
+    en: "Web page type: Video gallery page."
+  inherit: MediaGallery
+  properties: {}

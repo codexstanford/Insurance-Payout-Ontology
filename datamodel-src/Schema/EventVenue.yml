@@ -1,0 +1,6 @@
+EventVenue:
+  type: object
+  documentation:
+    en: An event venue.
+  inherit: CivicStructure
+  properties: {}

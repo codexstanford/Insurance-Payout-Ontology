@@ -1,0 +1,6 @@
+EmploymentAgency:
+  type: object
+  documentation:
+    en: An employment agency.
+  inherit: LocalBusiness
+  properties: {}

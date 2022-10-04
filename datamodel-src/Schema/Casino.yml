@@ -1,0 +1,6 @@
+Casino:
+  type: object
+  documentation:
+    en: A casino.
+  inherit: EntertainmentBusiness
+  properties: {}

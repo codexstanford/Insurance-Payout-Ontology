@@ -1,0 +1,6 @@
+WPFooter:
+  type: object
+  documentation:
+    en: The footer section of the page.
+  inherit: WebPageElement
+  properties: {}

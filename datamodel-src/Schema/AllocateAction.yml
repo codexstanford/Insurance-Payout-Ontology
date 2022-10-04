@@ -1,0 +1,6 @@
+AllocateAction:
+  type: object
+  documentation:
+    en: The act of organizing tasks/objects/events by associating resources to it.
+  inherit: OrganizeAction
+  properties: {}

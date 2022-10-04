@@ -278,10 +278,10 @@ function renderPropertiesDoc(data) {
     <h3>${propertyName}`;
     
     if (property.inherited) {
-      doc +=  ` <span class="inheritedTag">(inherited from ${property.inherited})</span>`;
+      doc +=  ` <span class="inheritedTag">inherited from <a href="${property.inherited}.html"> ${property.inherited} </a></span>`;
     }
     if (property.overloaded) {
-      doc +=  ` <span  class="inheritedTag">(overloading from ${property.overloaded})</span>`;
+      doc +=  ` <span  class="inheritedTag">overloading from ${property.overloaded}</span>`;
     }
     doc += `</h3>
     <div class="" >
@@ -289,13 +289,28 @@ function renderPropertiesDoc(data) {
 
     let type = property.type;
     
-    switch(type) {
-      case "List":
-        doc += `<div class="type-info"> <b>Type</b> List of <a href="${property.of}.html">${property.of}</a></div>`
-      break;
-      default:
-        doc +=  `<div class="type-info"><b>Type</b> <a href="${property.type}.html"> ${property.type}</a></div>`
+    if (Array.isArray(type)) {
+
+      doc +=  `<div class="type-info"><b>Type</b> `
+      let tArray = [];
+      for (let ttype of type) {
+        tArray.push(`<a href="${ttype}.html"> ${ttype}</a>`);
+      }
+      doc += tArray.join(", ");
+      
+      doc += "</div>";
+
     }
+    else {
+      switch(type) {
+        case "List":
+          doc += `<div class="type-info"> <b>Type</b> List of <a href="${property.of}.html">${property.of}</a></div>`
+        break;
+        default:
+          doc +=  `<div class="type-info"><b>Type</b> <a href="${property.type}.html"> ${property.type}</a></div>`
+      }
+    }
+    
    
     if (property.with) {
       doc += `<div class="type-info"> <b>with:</b>`

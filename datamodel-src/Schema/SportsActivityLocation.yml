@@ -1,0 +1,6 @@
+SportsActivityLocation:
+  type: object
+  documentation:
+    en: A sports location, such as a playing field.
+  inherit: LocalBusiness
+  properties: {}

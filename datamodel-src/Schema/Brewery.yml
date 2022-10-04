@@ -1,0 +1,6 @@
+Brewery:
+  type: object
+  documentation:
+    en: Brewery.
+  inherit: FoodEstablishment
+  properties: {}

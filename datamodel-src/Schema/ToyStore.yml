@@ -1,0 +1,6 @@
+ToyStore:
+  type: object
+  documentation:
+    en: A toy store.
+  inherit: Store
+  properties: {}

@@ -1,0 +1,6 @@
+ViewAction:
+  type: object
+  documentation:
+    en: The act of consuming static visual content.
+  inherit: ConsumeAction
+  properties: {}

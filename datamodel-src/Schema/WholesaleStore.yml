@@ -1,0 +1,6 @@
+WholesaleStore:
+  type: object
+  documentation:
+    en: A wholesale store.
+  inherit: Store
+  properties: {}

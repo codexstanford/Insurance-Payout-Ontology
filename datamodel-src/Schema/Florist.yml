@@ -1,0 +1,6 @@
+Florist:
+  type: object
+  documentation:
+    en: A florist.
+  inherit: Store
+  properties: {}

@@ -1,0 +1,6 @@
+AutoRepair:
+  type: object
+  documentation:
+    en: Car repair business.
+  inherit: AutomotiveBusiness
+  properties: {}

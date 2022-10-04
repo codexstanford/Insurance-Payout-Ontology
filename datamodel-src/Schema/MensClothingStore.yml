@@ -1,0 +1,6 @@
+MensClothingStore:
+  type: object
+  documentation:
+    en: A men's clothing store.
+  inherit: Store
+  properties: {}

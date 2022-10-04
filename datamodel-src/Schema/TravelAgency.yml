@@ -1,0 +1,6 @@
+TravelAgency:
+  type: object
+  documentation:
+    en: A travel agency.
+  inherit: LocalBusiness
+  properties: {}

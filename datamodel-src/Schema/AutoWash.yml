@@ -1,0 +1,6 @@
+AutoWash:
+  type: object
+  documentation:
+    en: A car wash business.
+  inherit: AutomotiveBusiness
+  properties: {}

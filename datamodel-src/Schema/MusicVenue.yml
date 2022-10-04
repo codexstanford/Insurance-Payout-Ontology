@@ -1,0 +1,6 @@
+MusicVenue:
+  type: object
+  documentation:
+    en: A music venue.
+  inherit: CivicStructure
+  properties: {}

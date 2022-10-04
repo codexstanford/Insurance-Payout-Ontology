@@ -1,0 +1,6 @@
+SportingGoodsStore:
+  type: object
+  documentation:
+    en: A sporting goods store.
+  inherit: Store
+  properties: {}

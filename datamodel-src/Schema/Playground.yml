@@ -1,0 +1,6 @@
+Playground:
+  type: object
+  documentation:
+    en: A playground.
+  inherit: CivicStructure
+  properties: {}

@@ -1,0 +1,6 @@
+SiteNavigationElement:
+  type: object
+  documentation:
+    en: A navigation element of the page.
+  inherit: WebPageElement
+  properties: {}
