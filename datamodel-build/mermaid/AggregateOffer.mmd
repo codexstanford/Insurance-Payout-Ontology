@@ -1,14 +1,16 @@
 classDiagram
-  AggregateOffer -- string,number
-AggregateOffer -- Offer,Demand
+  AggregateOffer -- Offer
+  AggregateOffer -- Demand
 
 
-Offer <|-- AggregateOffer
 class AggregateOffer {
 
-  string,number highPrice
-  Offer,Demand offers
-  string,number lowPrice
+  string highPrice
+  number highPrice
+  Offer offers
+  Demand offers
+  string lowPrice
+  number lowPrice
   number offerCount
 
-}
+ }

@@ -1,16 +1,17 @@
 classDiagram
   MusicAlbum -- MusicAlbumProductionType
-MusicAlbum -- MusicAlbumReleaseType
-MusicAlbum -- MusicRelease
-MusicAlbum -- Person,MusicGroup
+  MusicAlbum -- MusicAlbumReleaseType
+  MusicAlbum -- MusicRelease
+  MusicAlbum -- Person
+  MusicAlbum -- MusicGroup
 
 
-MusicPlaylist <|-- MusicAlbum
 class MusicAlbum {
 
   MusicAlbumProductionType albumProductionType
   MusicAlbumReleaseType albumReleaseType
   MusicRelease albumRelease
-  Person,MusicGroup byArtist
+  Person byArtist
+  MusicGroup byArtist
 
-}
+ }

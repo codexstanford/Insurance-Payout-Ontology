@@ -1,30 +1,33 @@
 classDiagram
   Legislation -- Legislation
-Legislation -- LegalForceStatus
-Legislation -- CategoryCode,string
-Legislation -- string,AdministrativeArea
-Legislation -- string,string
-Legislation -- Organization,Person
-Legislation -- AdministrativeArea,string
-Legislation -- date
-Legislation -- Person,Organization
+  Legislation -- LegalForceStatus
+  Legislation -- CategoryCode
+  Legislation -- AdministrativeArea
+  Legislation -- Organization
+  Legislation -- Person
+  Legislation -- date
 
 
-CreativeWork <|-- Legislation
 class Legislation {
 
   Legislation legislationTransposes
   LegalForceStatus legislationLegalForce
-  CategoryCode,string legislationType
-  string,AdministrativeArea jurisdiction
-  string,string legislationIdentifier
+  CategoryCode legislationType
+  string legislationType
+  string jurisdiction
+  AdministrativeArea jurisdiction
+  string legislationIdentifier
+  string legislationIdentifier
   Legislation legislationChanges
-  Organization,Person legislationResponsible
-  AdministrativeArea,string legislationJurisdiction
+  Organization legislationResponsible
+  Person legislationResponsible
+  AdministrativeArea legislationJurisdiction
+  string legislationJurisdiction
   date legislationDate
-  Person,Organization legislationPassedBy
+  Person legislationPassedBy
+  Organization legislationPassedBy
   Legislation legislationConsolidates
   Legislation legislationApplies
   date legislationDateVersion
 
-}
+ }

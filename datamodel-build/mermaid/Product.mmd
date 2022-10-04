@@ -1,55 +1,66 @@
 classDiagram
   Product -- Product
-Product -- AdultOrientedEnumeration
-Product -- string,string,Product
-Product -- Review
-Product -- QuantitativeValue,Distance
-Product -- Country
-Product -- DefinedTerm,string
-Product -- string,string,PhysicalActivityCategory,Thing,CategoryCode
-Product -- Grant
-Product -- Distance,QuantitativeValue
-Product -- DefinedTerm,string,string
-Product -- date
-Product -- EnergyConsumptionDetails
-Product -- Audience
-Product -- Offer,Demand
-Product -- OfferItemCondition
-Product -- AggregateRating
-Product -- Service,Product
-Product -- ProductModel,ProductGroup
-Product -- Organization,Brand
-Product -- Organization
-Product -- QuantitativeValue
-Product -- string,ImageObject
-Product -- ProductModel,string
-Product -- MerchantReturnPolicy
-Product -- QuantitativeValue,DefinedTerm,string,SizeSpecification
-Product -- PropertyValue
+  Product -- AdultOrientedEnumeration
+  Product -- Review
+  Product -- QuantitativeValue
+  Product -- Distance
+  Product -- Country
+  Product -- DefinedTerm
+  Product -- PhysicalActivityCategory
+  Product -- Thing
+  Product -- CategoryCode
+  Product -- Grant
+  Product -- date
+  Product -- EnergyConsumptionDetails
+  Product -- Audience
+  Product -- Offer
+  Product -- Demand
+  Product -- OfferItemCondition
+  Product -- AggregateRating
+  Product -- Service
+  Product -- ProductModel
+  Product -- ProductGroup
+  Product -- Organization
+  Product -- Brand
+  Product -- ImageObject
+  Product -- MerchantReturnPolicy
+  Product -- SizeSpecification
+  Product -- PropertyValue
 
 
-Thing <|-- Product
 class Product {
 
   Product isAccessoryOrSparePartFor
   AdultOrientedEnumeration hasAdultConsideration
   string gtin12
   string nsn
-  string,string,Product material
+  string material
+  string material
+  Product material
   Review review
   string award
-  QuantitativeValue,Distance width
+  QuantitativeValue width
+  Distance width
   Country countryOfOrigin
-  DefinedTerm,string pattern
-  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  DefinedTerm pattern
+  string pattern
+  string category
+  string category
+  PhysicalActivityCategory category
+  Thing category
+  CategoryCode category
   Grant funding
   string mpn
-  Distance,QuantitativeValue height
-  DefinedTerm,string,string keywords
+  Distance height
+  QuantitativeValue height
+  DefinedTerm keywords
+  string keywords
+  string keywords
   date purchaseDate
   EnergyConsumptionDetails hasEnergyConsumptionDetails
   Audience audience
-  Offer,Demand offers
+  Offer offers
+  Demand offers
   date productionDate
   OfferItemCondition itemCondition
   string awards
@@ -58,29 +69,39 @@ class Product {
   string countryOfAssembly
   string color
   AggregateRating aggregateRating
-  Service,Product isSimilarTo
-  Distance,QuantitativeValue depth
+  Service isSimilarTo
+  Product isSimilarTo
+  Distance depth
+  QuantitativeValue depth
   string countryOfLastProcessing
-  ProductModel,ProductGroup isVariantOf
+  ProductModel isVariantOf
+  ProductGroup isVariantOf
   string slogan
-  Organization,Brand brand
+  Organization brand
+  Brand brand
   Organization manufacturer
   QuantitativeValue hasMeasurement
   Product isConsumableFor
-  string,ImageObject logo
+  string logo
+  ImageObject logo
   string gtin8
   string sku
   string inProductGroupWithID
-  ProductModel,string model
+  ProductModel model
+  string model
   MerchantReturnPolicy hasMerchantReturnPolicy
   date releaseDate
   string gtin14
   QuantitativeValue weight
-  QuantitativeValue,DefinedTerm,string,SizeSpecification size
+  QuantitativeValue size
+  DefinedTerm size
+  string size
+  SizeSpecification size
   PropertyValue additionalProperty
   string gtin13
   Review reviews
   boolean isFamilyFriendly
-  Service,Product isRelatedTo
+  Service isRelatedTo
+  Product isRelatedTo
 
-}
+ }

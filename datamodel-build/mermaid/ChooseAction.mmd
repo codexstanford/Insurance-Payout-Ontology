@@ -1,12 +1,12 @@
 classDiagram
-  ChooseAction -- string,Thing
-ChooseAction -- Thing,string
+  ChooseAction -- Thing
 
 
-AssessAction <|-- ChooseAction
 class ChooseAction {
 
-  string,Thing option
-  Thing,string actionOption
+  string option
+  Thing option
+  Thing actionOption
+  string actionOption
 
-}
+ }

@@ -1,9 +1,8 @@
 classDiagram
   DeliveryEvent -- dateTime
-DeliveryEvent -- DeliveryMethod
+  DeliveryEvent -- DeliveryMethod
 
 
-Event <|-- DeliveryEvent
 class DeliveryEvent {
 
   string accessCode
@@ -11,4 +10,4 @@ class DeliveryEvent {
   DeliveryMethod hasDeliveryMethod
   dateTime availableFrom
 
-}
+ }

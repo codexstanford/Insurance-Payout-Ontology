@@ -1,13 +1,16 @@
 classDiagram
-  ItemList -- Thing,ListItem,string
-ItemList -- string,ItemListOrderType
+  ItemList -- Thing
+  ItemList -- ListItem
+  ItemList -- ItemListOrderType
 
 
-Intangible <|-- ItemList
 class ItemList {
 
   number numberOfItems
-  Thing,ListItem,string itemListElement
-  string,ItemListOrderType itemListOrder
+  Thing itemListElement
+  ListItem itemListElement
+  string itemListElement
+  string itemListOrder
+  ItemListOrderType itemListOrder
 
-}
+ }

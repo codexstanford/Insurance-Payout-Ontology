@@ -1,13 +1,12 @@
 classDiagram
-  BankAccount -- string,string
-BankAccount -- MonetaryAmount
+  BankAccount -- MonetaryAmount
 
 
-FinancialProduct <|-- BankAccount
 class BankAccount {
 
-  string,string bankAccountType
+  string bankAccountType
+  string bankAccountType
   MonetaryAmount accountMinimumInflow
   MonetaryAmount accountOverdraftLimit
 
-}
+ }

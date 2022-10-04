@@ -1,19 +1,13 @@
 classDiagram
   Vehicle -- QuantitativeValue
-Vehicle -- EngineSpecification
-Vehicle -- date
-Vehicle -- QuantitativeValue,number
-Vehicle -- number,QuantitativeValue
-Vehicle -- SteeringPositionValue
-Vehicle -- string,number
-Vehicle -- string,string,QualitativeValue
-Vehicle -- string,QualitativeValue,string
-Vehicle -- string,DriveWheelConfigurationValue
-Vehicle -- QualitativeValue,string,string
-Vehicle -- CarUsageType,string
+  Vehicle -- EngineSpecification
+  Vehicle -- date
+  Vehicle -- SteeringPositionValue
+  Vehicle -- QualitativeValue
+  Vehicle -- DriveWheelConfigurationValue
+  Vehicle -- CarUsageType
 
 
-Product <|-- Vehicle
 class Vehicle {
 
   QuantitativeValue fuelCapacity
@@ -23,37 +17,54 @@ class Vehicle {
   EngineSpecification vehicleEngine
   number emissionsCO2
   date purchaseDate
-  QuantitativeValue,number numberOfForwardGears
+  QuantitativeValue numberOfForwardGears
+  number numberOfForwardGears
   QuantitativeValue weightTotal
   date productionDate
-  number,QuantitativeValue numberOfPreviousOwners
+  number numberOfPreviousOwners
+  QuantitativeValue numberOfPreviousOwners
   SteeringPositionValue steeringPosition
   QuantitativeValue wheelbase
   string vehicleInteriorType
-  string,number numberOfAirbags
-  string,string,QualitativeValue fuelType
+  string numberOfAirbags
+  number numberOfAirbags
+  string fuelType
+  string fuelType
+  QualitativeValue fuelType
   QuantitativeValue cargoVolume
-  string,QualitativeValue,string vehicleTransmission
+  string vehicleTransmission
+  QualitativeValue vehicleTransmission
+  string vehicleTransmission
   QuantitativeValue payload
-  string,DriveWheelConfigurationValue driveWheelConfiguration
+  string driveWheelConfiguration
+  DriveWheelConfigurationValue driveWheelConfiguration
   string knownVehicleDamages
   QuantitativeValue fuelConsumption
   string vehicleInteriorColor
-  number,QuantitativeValue numberOfAxles
+  number numberOfAxles
+  QuantitativeValue numberOfAxles
   date modelDate
-  QuantitativeValue,number numberOfDoors
-  QuantitativeValue,number vehicleSeatingCapacity
+  QuantitativeValue numberOfDoors
+  number numberOfDoors
+  QuantitativeValue vehicleSeatingCapacity
+  number vehicleSeatingCapacity
   string callSign
   QuantitativeValue tongueWeight
   QuantitativeValue fuelEfficiency
   date vehicleModelDate
   string vehicleConfiguration
   QuantitativeValue mileageFromOdometer
-  QuantitativeValue,number seatingCapacity
-  QualitativeValue,string,string bodyType
+  QuantitativeValue seatingCapacity
+  number seatingCapacity
+  QualitativeValue bodyType
+  string bodyType
+  string bodyType
   date dateVehicleFirstRegistered
   string vehicleIdentificationNumber
-  string,string,QualitativeValue meetsEmissionStandard
-  CarUsageType,string vehicleSpecialUsage
+  string meetsEmissionStandard
+  string meetsEmissionStandard
+  QualitativeValue meetsEmissionStandard
+  CarUsageType vehicleSpecialUsage
+  string vehicleSpecialUsage
 
-}
+ }

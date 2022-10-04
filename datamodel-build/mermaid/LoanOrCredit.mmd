@@ -1,23 +1,24 @@
 classDiagram
-  LoanOrCredit -- string,string
-LoanOrCredit -- QuantitativeValue
-LoanOrCredit -- Duration
-LoanOrCredit -- string,Thing
-LoanOrCredit -- number,MonetaryAmount
-LoanOrCredit -- RepaymentSpecification
+  LoanOrCredit -- QuantitativeValue
+  LoanOrCredit -- Duration
+  LoanOrCredit -- Thing
+  LoanOrCredit -- MonetaryAmount
+  LoanOrCredit -- RepaymentSpecification
 
 
-FinancialProduct <|-- LoanOrCredit
 class LoanOrCredit {
 
   boolean renegotiableLoan
-  string,string loanType
+  string loanType
+  string loanType
   boolean recourseLoan
   QuantitativeValue loanTerm
   Duration gracePeriod
-  string,Thing requiredCollateral
+  string requiredCollateral
+  Thing requiredCollateral
   string currency
-  number,MonetaryAmount amount
+  number amount
+  MonetaryAmount amount
   RepaymentSpecification loanRepaymentForm
 
-}
+ }

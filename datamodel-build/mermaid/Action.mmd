@@ -1,26 +1,37 @@
 classDiagram
-  Action -- Organization,Person
-Action -- dateTime,time
-Action -- ActionStatusType
-Action -- Thing
-Action -- PostalAddress,string,Place,VirtualLocation
-Action -- EntryPoint
+  Action -- Organization
+  Action -- Person
+  Action -- dateTime
+  Action -- time
+  Action -- ActionStatusType
+  Action -- Thing
+  Action -- PostalAddress
+  Action -- Place
+  Action -- VirtualLocation
+  Action -- EntryPoint
 
 
-Thing <|-- Action
 class Action {
 
-  Organization,Person agent
-  dateTime,time startTime
+  Organization agent
+  Person agent
+  dateTime startTime
+  time startTime
   ActionStatusType actionStatus
-  Organization,Person provider
+  Organization provider
+  Person provider
   Thing result
-  PostalAddress,string,Place,VirtualLocation location
+  PostalAddress location
+  string location
+  Place location
+  VirtualLocation location
   Thing object
   EntryPoint target
-  dateTime,time endTime
-  Organization,Person participant
+  dateTime endTime
+  time endTime
+  Organization participant
+  Person participant
   Thing instrument
   Thing error
 
-}
+ }

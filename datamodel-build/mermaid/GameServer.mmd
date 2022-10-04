@@ -1,13 +1,12 @@
 classDiagram
   GameServer -- GameServerStatus
-GameServer -- VideoGame
+  GameServer -- VideoGame
 
 
-Intangible <|-- GameServer
 class GameServer {
 
   GameServerStatus serverStatus
   VideoGame game
   number playersOnline
 
-}
+ }

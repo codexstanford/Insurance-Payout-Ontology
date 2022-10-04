@@ -1,12 +1,11 @@
 classDiagram
   Observation -- DataType
-Observation -- StatisticalPopulation
-Observation -- Property
-Observation -- dateTime
-Observation -- QuantitativeValue
+  Observation -- StatisticalPopulation
+  Observation -- Property
+  Observation -- dateTime
+  Observation -- QuantitativeValue
 
 
-Intangible <|-- Observation
 class Observation {
 
   DataType measuredValue
@@ -15,4 +14,4 @@ class Observation {
   dateTime observationDate
   QuantitativeValue marginOfError
 
-}
+ }

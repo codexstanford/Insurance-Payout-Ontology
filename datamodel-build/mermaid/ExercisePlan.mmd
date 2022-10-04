@@ -1,22 +1,24 @@
 classDiagram
-  ExercisePlan -- number,QuantitativeValue
-ExercisePlan -- QuantitativeValue,string
-ExercisePlan -- QuantitativeValue,Energy
-ExercisePlan -- Duration,QuantitativeValue
-ExercisePlan -- string,QuantitativeValue
+  ExercisePlan -- QuantitativeValue
+  ExercisePlan -- Energy
+  ExercisePlan -- Duration
 
 
-CreativeWork <|-- ExercisePlan
-PhysicalActivity <|-- ExercisePlan
 class ExercisePlan {
 
-  number,QuantitativeValue repetitions
-  QuantitativeValue,string intensity
-  QuantitativeValue,Energy workload
-  Duration,QuantitativeValue activityDuration
-  string,QuantitativeValue restPeriods
-  string,QuantitativeValue activityFrequency
+  number repetitions
+  QuantitativeValue repetitions
+  QuantitativeValue intensity
+  string intensity
+  QuantitativeValue workload
+  Energy workload
+  Duration activityDuration
+  QuantitativeValue activityDuration
+  string restPeriods
+  QuantitativeValue restPeriods
+  string activityFrequency
+  QuantitativeValue activityFrequency
   string additionalVariable
   string exerciseType
 
-}
+ }

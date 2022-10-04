@@ -1,22 +1,28 @@
 classDiagram
   Review -- Rating
-Review -- Thing
-Review -- ListItem,string,WebContent,ItemList
-Review -- Review
-Review -- WebContent,string,ListItem,ItemList
+  Review -- Thing
+  Review -- ListItem
+  Review -- WebContent
+  Review -- ItemList
+  Review -- Review
 
 
-CreativeWork <|-- Review
 class Review {
 
   Rating reviewRating
   Thing itemReviewed
-  ListItem,string,WebContent,ItemList negativeNotes
+  ListItem negativeNotes
+  string negativeNotes
+  WebContent negativeNotes
+  ItemList negativeNotes
   string reviewAspect
   Review associatedClaimReview
-  WebContent,string,ListItem,ItemList positiveNotes
+  WebContent positiveNotes
+  string positiveNotes
+  ListItem positiveNotes
+  ItemList positiveNotes
   Review associatedReview
   Review associatedMediaReview
   string reviewBody
 
-}
+ }

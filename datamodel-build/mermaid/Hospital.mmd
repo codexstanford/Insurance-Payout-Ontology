@@ -1,16 +1,19 @@
 classDiagram
-  Hospital -- MedicalTest,MedicalProcedure,MedicalTherapy
-Hospital -- Dataset,CDCPMDRecord
-Hospital -- MedicalSpecialty
+  Hospital -- MedicalTest
+  Hospital -- MedicalProcedure
+  Hospital -- MedicalTherapy
+  Hospital -- Dataset
+  Hospital -- CDCPMDRecord
+  Hospital -- MedicalSpecialty
 
 
-MedicalOrganization <|-- Hospital
-EmergencyService <|-- Hospital
-CivicStructure <|-- Hospital
 class Hospital {
 
-  MedicalTest,MedicalProcedure,MedicalTherapy availableService
-  Dataset,CDCPMDRecord healthcareReportingData
+  MedicalTest availableService
+  MedicalProcedure availableService
+  MedicalTherapy availableService
+  Dataset healthcareReportingData
+  CDCPMDRecord healthcareReportingData
   MedicalSpecialty medicalSpecialty
 
-}
+ }

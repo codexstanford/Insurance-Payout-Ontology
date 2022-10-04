@@ -1,14 +1,23 @@
 classDiagram
-  PhysicalActivity -- string,string,PhysicalActivityCategory,Thing,CategoryCode
-PhysicalActivity -- AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy
+  PhysicalActivity -- PhysicalActivityCategory
+  PhysicalActivity -- Thing
+  PhysicalActivity -- CategoryCode
+  PhysicalActivity -- AnatomicalStructure
+  PhysicalActivity -- AnatomicalSystem
+  PhysicalActivity -- SuperficialAnatomy
 
 
-LifestyleModification <|-- PhysicalActivity
 class PhysicalActivity {
 
-  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  string category
+  string category
+  PhysicalActivityCategory category
+  Thing category
+  CategoryCode category
   string pathophysiology
-  AnatomicalStructure,AnatomicalSystem,SuperficialAnatomy associatedAnatomy
+  AnatomicalStructure associatedAnatomy
+  AnatomicalSystem associatedAnatomy
+  SuperficialAnatomy associatedAnatomy
   string epidemiology
 
-}
+ }

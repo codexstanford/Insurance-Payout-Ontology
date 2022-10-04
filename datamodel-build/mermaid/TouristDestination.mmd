@@ -1,12 +1,12 @@
 classDiagram
-  TouristDestination -- Audience,string
-TouristDestination -- TouristAttraction
+  TouristDestination -- Audience
+  TouristDestination -- TouristAttraction
 
 
-Place <|-- TouristDestination
 class TouristDestination {
 
-  Audience,string touristType
+  Audience touristType
+  string touristType
   TouristAttraction includesAttraction
 
-}
+ }

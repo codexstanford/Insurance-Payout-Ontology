@@ -1,18 +1,19 @@
 classDiagram
-  ProgramMembership -- number,QuantitativeValue
-ProgramMembership -- Organization,Person
-ProgramMembership -- Organization
-ProgramMembership -- Person,Organization
+  ProgramMembership -- QuantitativeValue
+  ProgramMembership -- Organization
+  ProgramMembership -- Person
 
 
-Intangible <|-- ProgramMembership
 class ProgramMembership {
 
-  number,QuantitativeValue membershipPointsEarned
-  Organization,Person member
+  number membershipPointsEarned
+  QuantitativeValue membershipPointsEarned
+  Organization member
+  Person member
   string membershipNumber
   Organization hostingOrganization
   string programName
-  Person,Organization members
+  Person members
+  Organization members
 
-}
+ }

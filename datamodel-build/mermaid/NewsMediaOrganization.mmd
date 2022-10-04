@@ -1,23 +1,34 @@
 classDiagram
-  NewsMediaOrganization -- string,AboutPage,string,CreativeWork
-NewsMediaOrganization -- string,CreativeWork
-NewsMediaOrganization -- string,Article
-NewsMediaOrganization -- CreativeWork,string
+  NewsMediaOrganization -- AboutPage
+  NewsMediaOrganization -- CreativeWork
+  NewsMediaOrganization -- Article
 
 
-Organization <|-- NewsMediaOrganization
 class NewsMediaOrganization {
 
-  string,AboutPage,string,CreativeWork ownershipFundingInfo
-  string,CreativeWork correctionsPolicy
-  string,Article diversityStaffingReport
-  CreativeWork,string diversityPolicy
-  string,CreativeWork ethicsPolicy
-  CreativeWork,string missionCoveragePrioritiesPolicy
-  string,CreativeWork actionableFeedbackPolicy
-  string,CreativeWork masthead
-  CreativeWork,string unnamedSourcesPolicy
-  string,CreativeWork verificationFactCheckingPolicy
-  CreativeWork,string noBylinesPolicy
+  string ownershipFundingInfo
+  AboutPage ownershipFundingInfo
+  string ownershipFundingInfo
+  CreativeWork ownershipFundingInfo
+  string correctionsPolicy
+  CreativeWork correctionsPolicy
+  string diversityStaffingReport
+  Article diversityStaffingReport
+  CreativeWork diversityPolicy
+  string diversityPolicy
+  string ethicsPolicy
+  CreativeWork ethicsPolicy
+  CreativeWork missionCoveragePrioritiesPolicy
+  string missionCoveragePrioritiesPolicy
+  string actionableFeedbackPolicy
+  CreativeWork actionableFeedbackPolicy
+  string masthead
+  CreativeWork masthead
+  CreativeWork unnamedSourcesPolicy
+  string unnamedSourcesPolicy
+  string verificationFactCheckingPolicy
+  CreativeWork verificationFactCheckingPolicy
+  CreativeWork noBylinesPolicy
+  string noBylinesPolicy
 
-}
+ }

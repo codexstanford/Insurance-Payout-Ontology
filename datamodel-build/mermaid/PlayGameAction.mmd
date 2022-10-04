@@ -1,10 +1,10 @@
 classDiagram
-  PlayGameAction -- GameAvailabilityEnumeration,string
+  PlayGameAction -- GameAvailabilityEnumeration
 
 
-ConsumeAction <|-- PlayGameAction
 class PlayGameAction {
 
-  GameAvailabilityEnumeration,string gameAvailabilityType
+  GameAvailabilityEnumeration gameAvailabilityType
+  string gameAvailabilityType
 
-}
+ }

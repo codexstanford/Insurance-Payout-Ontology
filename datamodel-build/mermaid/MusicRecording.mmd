@@ -1,12 +1,12 @@
 classDiagram
   MusicRecording -- MusicPlaylist
-MusicRecording -- MusicAlbum
-MusicRecording -- MusicComposition
-MusicRecording -- Duration
-MusicRecording -- Person,MusicGroup
+  MusicRecording -- MusicAlbum
+  MusicRecording -- MusicComposition
+  MusicRecording -- Duration
+  MusicRecording -- Person
+  MusicRecording -- MusicGroup
 
 
-CreativeWork <|-- MusicRecording
 class MusicRecording {
 
   string isrcCode
@@ -14,6 +14,7 @@ class MusicRecording {
   MusicAlbum inAlbum
   MusicComposition recordingOf
   Duration duration
-  Person,MusicGroup byArtist
+  Person byArtist
+  MusicGroup byArtist
 
-}
+ }

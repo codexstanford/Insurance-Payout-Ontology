@@ -1,19 +1,19 @@
 classDiagram
   MusicGroup -- MusicRecording
-MusicGroup -- string,string
-MusicGroup -- Person
-MusicGroup -- MusicAlbum
-MusicGroup -- ItemList,MusicRecording
+  MusicGroup -- Person
+  MusicGroup -- MusicAlbum
+  MusicGroup -- ItemList
 
 
-PerformingGroup <|-- MusicGroup
 class MusicGroup {
 
   MusicRecording tracks
-  string,string genre
+  string genre
+  string genre
   Person musicGroupMember
   MusicAlbum albums
-  ItemList,MusicRecording track
+  ItemList track
+  MusicRecording track
   MusicAlbum album
 
-}
+ }

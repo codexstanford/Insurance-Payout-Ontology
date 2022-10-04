@@ -1,11 +1,10 @@
 classDiagram
   Muscle -- AnatomicalStructure
-Muscle -- Muscle
-Muscle -- Nerve
-Muscle -- Vessel
+  Muscle -- Muscle
+  Muscle -- Nerve
+  Muscle -- Vessel
 
 
-AnatomicalStructure <|-- Muscle
 class Muscle {
 
   AnatomicalStructure insertion
@@ -14,4 +13,4 @@ class Muscle {
   Vessel bloodSupply
   string muscleAction
 
-}
+ }

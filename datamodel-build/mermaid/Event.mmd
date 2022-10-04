@@ -1,71 +1,91 @@
 classDiagram
   Event -- Event
-Event -- EventAttendanceModeEnumeration
-Event -- Review
-Event -- Person,Organization
-Event -- dateTime,date
-Event -- Organization,Person
-Event -- Person
-Event -- Grant
-Event -- DefinedTerm,string,string
-Event -- Audience
-Event -- Offer,Demand
-Event -- EventStatusType
-Event -- date,dateTime
-Event -- AggregateRating
-Event -- PostalAddress,string,Place,VirtualLocation
-Event -- Duration
-Event -- date
-Event -- CreativeWork
-Event -- time,dateTime
-Event -- string,Language
-Event -- Thing
-Event -- Schedule
+  Event -- EventAttendanceModeEnumeration
+  Event -- Review
+  Event -- Person
+  Event -- Organization
+  Event -- dateTime
+  Event -- date
+  Event -- Grant
+  Event -- DefinedTerm
+  Event -- Audience
+  Event -- Offer
+  Event -- Demand
+  Event -- EventStatusType
+  Event -- AggregateRating
+  Event -- PostalAddress
+  Event -- Place
+  Event -- VirtualLocation
+  Event -- Duration
+  Event -- CreativeWork
+  Event -- time
+  Event -- Language
+  Event -- Thing
+  Event -- Schedule
 
 
-Thing <|-- Event
 class Event {
 
   Event superEvent
   EventAttendanceModeEnumeration eventAttendanceMode
   Review review
-  Person,Organization translator
-  dateTime,date startDate
-  Organization,Person composer
+  Person translator
+  Organization translator
+  dateTime startDate
+  date startDate
+  Organization composer
+  Person composer
   number maximumAttendeeCapacity
   number maximumVirtualAttendeeCapacity
   Person director
   Grant funding
-  DefinedTerm,string,string keywords
+  DefinedTerm keywords
+  string keywords
+  string keywords
   Audience audience
-  Offer,Demand offers
+  Offer offers
+  Demand offers
   Event subEvent
   Person actor
   EventStatusType eventStatus
-  date,dateTime endDate
-  Organization,Person funder
-  Organization,Person performer
+  date endDate
+  dateTime endDate
+  Organization funder
+  Person funder
+  Organization performer
+  Person performer
   AggregateRating aggregateRating
   string typicalAgeRange
-  PostalAddress,string,Place,VirtualLocation location
-  Person,Organization performers
+  PostalAddress location
+  string location
+  Place location
+  VirtualLocation location
+  Person performers
+  Organization performers
   Duration duration
-  Person,Organization organizer
-  Organization,Person sponsor
+  Person organizer
+  Organization organizer
+  Organization sponsor
+  Person sponsor
   date previousStartDate
   boolean isAccessibleForFree
   number remainingAttendeeCapacity
   Event subEvents
   CreativeWork workPerformed
-  time,dateTime doorTime
-  string,Language inLanguage
+  time doorTime
+  dateTime doorTime
+  string inLanguage
+  Language inLanguage
   Thing about
   CreativeWork recordedIn
   number maximumPhysicalAttendeeCapacity
-  Person,Organization attendee
+  Person attendee
+  Organization attendee
   CreativeWork workFeatured
   Schedule eventSchedule
-  Organization,Person contributor
-  Person,Organization attendees
+  Organization contributor
+  Person contributor
+  Person attendees
+  Organization attendees
 
-}
+ }

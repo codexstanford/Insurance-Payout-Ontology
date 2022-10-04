@@ -1,16 +1,15 @@
 classDiagram
   ApartmentComplex -- QuantitativeValue
-ApartmentComplex -- number,QuantitativeValue
-ApartmentComplex -- string,boolean
 
 
-Residence <|-- ApartmentComplex
 class ApartmentComplex {
 
   QuantitativeValue numberOfAccommodationUnits
   QuantitativeValue numberOfAvailableAccommodationUnits
   string tourBookingPage
-  number,QuantitativeValue numberOfBedrooms
-  string,boolean petsAllowed
+  number numberOfBedrooms
+  QuantitativeValue numberOfBedrooms
+  string petsAllowed
+  boolean petsAllowed
 
-}
+ }

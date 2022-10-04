@@ -1,16 +1,22 @@
 classDiagram
-  DeliveryChargeSpecification -- Place,string,GeoShape
-DeliveryChargeSpecification -- GeoShape,string,Place
-DeliveryChargeSpecification -- AdministrativeArea,GeoShape,string,Place
-DeliveryChargeSpecification -- DeliveryMethod
+  DeliveryChargeSpecification -- Place
+  DeliveryChargeSpecification -- GeoShape
+  DeliveryChargeSpecification -- AdministrativeArea
+  DeliveryChargeSpecification -- DeliveryMethod
 
 
-PriceSpecification <|-- DeliveryChargeSpecification
 class DeliveryChargeSpecification {
 
-  Place,string,GeoShape ineligibleRegion
-  GeoShape,string,Place eligibleRegion
-  AdministrativeArea,GeoShape,string,Place areaServed
+  Place ineligibleRegion
+  string ineligibleRegion
+  GeoShape ineligibleRegion
+  GeoShape eligibleRegion
+  string eligibleRegion
+  Place eligibleRegion
+  AdministrativeArea areaServed
+  GeoShape areaServed
+  string areaServed
+  Place areaServed
   DeliveryMethod appliesToDeliveryMethod
 
-}
+ }

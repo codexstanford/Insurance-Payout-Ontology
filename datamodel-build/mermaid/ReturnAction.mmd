@@ -1,10 +1,15 @@
 classDiagram
-  ReturnAction -- Person,Audience,ContactPoint,Organization
+  ReturnAction -- Person
+  ReturnAction -- Audience
+  ReturnAction -- ContactPoint
+  ReturnAction -- Organization
 
 
-TransferAction <|-- ReturnAction
 class ReturnAction {
 
-  Person,Audience,ContactPoint,Organization recipient
+  Person recipient
+  Audience recipient
+  ContactPoint recipient
+  Organization recipient
 
-}
+ }

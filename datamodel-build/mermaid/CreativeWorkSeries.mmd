@@ -1,14 +1,14 @@
 classDiagram
-  CreativeWorkSeries -- dateTime,date
-CreativeWorkSeries -- date,dateTime
+  CreativeWorkSeries -- dateTime
+  CreativeWorkSeries -- date
 
 
-CreativeWork <|-- CreativeWorkSeries
-Series <|-- CreativeWorkSeries
 class CreativeWorkSeries {
 
-  dateTime,date startDate
-  date,dateTime endDate
+  dateTime startDate
+  date startDate
+  date endDate
+  dateTime endDate
   string issn
 
-}
+ }

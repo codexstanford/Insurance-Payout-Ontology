@@ -1,108 +1,137 @@
 classDiagram
-  Organization -- string,AboutPage,string,CreativeWork
-Organization -- EducationalOccupationalCredential
-Organization -- Person
-Organization -- Review
-Organization -- string,string,Thing
-Organization -- Organization,Person
-Organization -- date
-Organization -- Grant
-Organization -- DefinedTerm,string,string
-Organization -- ContactPoint
-Organization -- Organization
-Organization -- QuantitativeValue
-Organization -- Offer
-Organization -- string,CreativeWork
-Organization -- AggregateRating
-Organization -- InteractionCounter
-Organization -- PostalAddress,string,Place,VirtualLocation
-Organization -- string,PostalAddress
-Organization -- ProgramMembership,Organization
-Organization -- string,Article
-Organization -- CreativeWork,string
-Organization -- NonprofitType
-Organization -- Organization,Brand
-Organization -- string,ImageObject
-Organization -- GeoShape,AdministrativeArea,Place
-Organization -- MerchantReturnPolicy
-Organization -- Place
-Organization -- AdministrativeArea,GeoShape,string,Place
-Organization -- Language,string
-Organization -- Demand
-Organization -- Product,OwnershipInfo
-Organization -- OfferCatalog
-Organization -- Person,Organization
-Organization -- Event
+  Organization -- AboutPage
+  Organization -- CreativeWork
+  Organization -- EducationalOccupationalCredential
+  Organization -- Person
+  Organization -- Review
+  Organization -- Thing
+  Organization -- Organization
+  Organization -- date
+  Organization -- Grant
+  Organization -- DefinedTerm
+  Organization -- ContactPoint
+  Organization -- QuantitativeValue
+  Organization -- Offer
+  Organization -- AggregateRating
+  Organization -- InteractionCounter
+  Organization -- PostalAddress
+  Organization -- Place
+  Organization -- VirtualLocation
+  Organization -- ProgramMembership
+  Organization -- Article
+  Organization -- NonprofitType
+  Organization -- Brand
+  Organization -- ImageObject
+  Organization -- GeoShape
+  Organization -- AdministrativeArea
+  Organization -- MerchantReturnPolicy
+  Organization -- Language
+  Organization -- Demand
+  Organization -- Product
+  Organization -- OwnershipInfo
+  Organization -- OfferCatalog
+  Organization -- Event
 
 
-Thing <|-- Organization
 class Organization {
 
-  string,AboutPage,string,CreativeWork ownershipFundingInfo
+  string ownershipFundingInfo
+  AboutPage ownershipFundingInfo
+  string ownershipFundingInfo
+  CreativeWork ownershipFundingInfo
   EducationalOccupationalCredential hasCredential
   Person founders
   string telephone
   Review review
-  string,string,Thing knowsAbout
+  string knowsAbout
+  string knowsAbout
+  Thing knowsAbout
   string award
-  Organization,Person member
+  Organization member
+  Person member
   Person employee
   date dissolutionDate
   Grant funding
   string vatID
   string globalLocationNumber
-  DefinedTerm,string,string keywords
+  DefinedTerm keywords
+  string keywords
+  string keywords
   ContactPoint contactPoints
   Organization subOrganization
   string awards
   QuantitativeValue numberOfEmployees
-  Organization,Person funder
+  Organization funder
+  Person funder
   Offer makesOffer
   string legalName
-  string,CreativeWork correctionsPolicy
+  string correctionsPolicy
+  CreativeWork correctionsPolicy
   AggregateRating aggregateRating
   InteractionCounter interactionStatistic
-  PostalAddress,string,Place,VirtualLocation location
-  string,PostalAddress address
-  ProgramMembership,Organization memberOf
-  string,CreativeWork publishingPrinciples
-  string,Article diversityStaffingReport
-  CreativeWork,string diversityPolicy
+  PostalAddress location
+  string location
+  Place location
+  VirtualLocation location
+  string address
+  PostalAddress address
+  ProgramMembership memberOf
+  Organization memberOf
+  string publishingPrinciples
+  CreativeWork publishingPrinciples
+  string diversityStaffingReport
+  Article diversityStaffingReport
+  CreativeWork diversityPolicy
+  string diversityPolicy
   string email
   Person employees
   NonprofitType nonprofitStatus
   string slogan
-  string,CreativeWork ethicsPolicy
-  Organization,Brand brand
-  Organization,Person sponsor
-  string,ImageObject logo
-  string,CreativeWork actionableFeedbackPolicy
+  string ethicsPolicy
+  CreativeWork ethicsPolicy
+  Organization brand
+  Brand brand
+  Organization sponsor
+  Person sponsor
+  string logo
+  ImageObject logo
+  string actionableFeedbackPolicy
+  CreativeWork actionableFeedbackPolicy
   string naics
   ContactPoint contactPoint
-  GeoShape,AdministrativeArea,Place serviceArea
+  GeoShape serviceArea
+  AdministrativeArea serviceArea
+  Place serviceArea
   string isicV4
   MerchantReturnPolicy hasMerchantReturnPolicy
   Place hasPOS
   Person founder
-  CreativeWork,string unnamedSourcesPolicy
+  CreativeWork unnamedSourcesPolicy
+  string unnamedSourcesPolicy
   Place foundingLocation
   string duns
   Organization parentOrganization
   Person alumni
   string leiCode
-  AdministrativeArea,GeoShape,string,Place areaServed
+  AdministrativeArea areaServed
+  GeoShape areaServed
+  string areaServed
+  Place areaServed
   date foundingDate
-  Language,string knowsLanguage
+  Language knowsLanguage
+  string knowsLanguage
   Review reviews
   Demand seeks
   string taxID
-  Product,OwnershipInfo owns
+  Product owns
+  OwnershipInfo owns
   OfferCatalog hasOfferCatalog
-  Person,Organization members
+  Person members
+  Organization members
   Event events
   string iso6523Code
   Organization department
   string faxNumber
   Event event
 
-}
+ }

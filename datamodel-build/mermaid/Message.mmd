@@ -1,25 +1,36 @@
 classDiagram
-  Message -- Person,ContactPoint,Organization
-Message -- Person,Audience,ContactPoint,Organization
-Message -- dateTime
-Message -- Person,Organization,ContactPoint
-Message -- CreativeWork
-Message -- ContactPoint,Person,Audience,Organization
-Message -- date,dateTime
-Message -- Person,Audience,Organization
+  Message -- Person
+  Message -- ContactPoint
+  Message -- Organization
+  Message -- Audience
+  Message -- dateTime
+  Message -- CreativeWork
+  Message -- date
 
 
-CreativeWork <|-- Message
 class Message {
 
-  Person,ContactPoint,Organization bccRecipient
-  Person,Audience,ContactPoint,Organization recipient
+  Person bccRecipient
+  ContactPoint bccRecipient
+  Organization bccRecipient
+  Person recipient
+  Audience recipient
+  ContactPoint recipient
+  Organization recipient
   dateTime dateReceived
-  Person,Organization,ContactPoint ccRecipient
+  Person ccRecipient
+  Organization ccRecipient
+  ContactPoint ccRecipient
   CreativeWork messageAttachment
-  ContactPoint,Person,Audience,Organization toRecipient
+  ContactPoint toRecipient
+  Person toRecipient
+  Audience toRecipient
+  Organization toRecipient
   dateTime dateSent
-  date,dateTime dateRead
-  Person,Audience,Organization sender
+  date dateRead
+  dateTime dateRead
+  Person sender
+  Audience sender
+  Organization sender
 
-}
+ }

@@ -1,23 +1,24 @@
 classDiagram
   VideoObject -- Person
-VideoObject -- string,MediaObject
-VideoObject -- ImageObject
-VideoObject -- Person,MusicGroup
+  VideoObject -- MediaObject
+  VideoObject -- ImageObject
+  VideoObject -- MusicGroup
 
 
-MediaObject <|-- VideoObject
 class VideoObject {
 
   string embeddedTextCaption
   Person director
   Person actor
-  string,MediaObject caption
+  string caption
+  MediaObject caption
   ImageObject thumbnail
   string transcript
   string videoQuality
   string videoFrameSize
   Person actors
-  Person,MusicGroup musicBy
+  Person musicBy
+  MusicGroup musicBy
   Person directors
 
-}
+ }

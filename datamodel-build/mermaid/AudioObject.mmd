@@ -1,12 +1,12 @@
 classDiagram
-  AudioObject -- string,MediaObject
+  AudioObject -- MediaObject
 
 
-MediaObject <|-- AudioObject
 class AudioObject {
 
   string embeddedTextCaption
-  string,MediaObject caption
+  string caption
+  MediaObject caption
   string transcript
 
-}
+ }

@@ -1,9 +1,8 @@
 classDiagram
   RentalCarReservation -- Place
-RentalCarReservation -- dateTime
+  RentalCarReservation -- dateTime
 
 
-Reservation <|-- RentalCarReservation
 class RentalCarReservation {
 
   Place dropoffLocation
@@ -11,4 +10,4 @@ class RentalCarReservation {
   dateTime pickupTime
   Place pickupLocation
 
-}
+ }

@@ -1,43 +1,51 @@
 classDiagram
   Order -- ParcelDelivery
-Order -- PostalAddress
-Order -- Offer
-Order -- Organization,Person
-Order -- OrderStatus
-Order -- Invoice
-Order -- dateTime,date
-Order -- Person,Organization
-Order -- string,number
-Order -- dateTime
-Order -- date,dateTime
-Order -- Service,OrderItem,Product
-Order -- PaymentMethod
+  Order -- PostalAddress
+  Order -- Offer
+  Order -- Organization
+  Order -- Person
+  Order -- OrderStatus
+  Order -- Invoice
+  Order -- dateTime
+  Order -- date
+  Order -- Service
+  Order -- OrderItem
+  Order -- Product
+  Order -- PaymentMethod
 
 
-Intangible <|-- Order
 class Order {
 
   ParcelDelivery orderDelivery
   PostalAddress billingAddress
   Offer acceptedOffer
-  Organization,Person merchant
+  Organization merchant
+  Person merchant
   OrderStatus orderStatus
   string confirmationNumber
   Invoice partOfInvoice
   string orderNumber
-  Organization,Person seller
-  Organization,Person customer
-  dateTime,date paymentDueDate
-  Person,Organization broker
+  Organization seller
+  Person seller
+  Organization customer
+  Person customer
+  dateTime paymentDueDate
+  date paymentDueDate
+  Person broker
+  Organization broker
   string discountCode
-  string,number discount
+  string discount
+  number discount
   string paymentMethodId
   string paymentUrl
   string discountCurrency
   dateTime paymentDue
-  date,dateTime orderDate
+  date orderDate
+  dateTime orderDate
   boolean isGift
-  Service,OrderItem,Product orderedItem
+  Service orderedItem
+  OrderItem orderedItem
+  Product orderedItem
   PaymentMethod paymentMethod
 
-}
+ }

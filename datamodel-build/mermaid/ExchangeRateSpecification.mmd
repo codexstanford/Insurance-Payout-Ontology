@@ -1,13 +1,13 @@
 classDiagram
   ExchangeRateSpecification -- UnitPriceSpecification
-ExchangeRateSpecification -- number,MonetaryAmount
+  ExchangeRateSpecification -- MonetaryAmount
 
 
-StructuredValue <|-- ExchangeRateSpecification
 class ExchangeRateSpecification {
 
   UnitPriceSpecification currentExchangeRate
-  number,MonetaryAmount exchangeRateSpread
+  number exchangeRateSpread
+  MonetaryAmount exchangeRateSpread
   string currency
 
-}
+ }

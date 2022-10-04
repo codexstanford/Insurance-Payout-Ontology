@@ -1,10 +1,15 @@
 classDiagram
-  PayAction -- Person,Audience,ContactPoint,Organization
+  PayAction -- Person
+  PayAction -- Audience
+  PayAction -- ContactPoint
+  PayAction -- Organization
 
 
-TradeAction <|-- PayAction
 class PayAction {
 
-  Person,Audience,ContactPoint,Organization recipient
+  Person recipient
+  Audience recipient
+  ContactPoint recipient
+  Organization recipient
 
-}
+ }

@@ -1,25 +1,28 @@
 classDiagram
   WebPage -- date
-WebPage -- Specialty
-WebPage -- ImageObject
-WebPage -- Organization,Person
-WebPage -- WebPageElement
-WebPage -- string,SpeakableSpecification
-WebPage -- BreadcrumbList,string
+  WebPage -- Specialty
+  WebPage -- ImageObject
+  WebPage -- Organization
+  WebPage -- Person
+  WebPage -- WebPageElement
+  WebPage -- SpeakableSpecification
+  WebPage -- BreadcrumbList
 
 
-CreativeWork <|-- WebPage
 class WebPage {
 
   date lastReviewed
   Specialty specialty
   ImageObject primaryImageOfPage
   string significantLink
-  Organization,Person reviewedBy
+  Organization reviewedBy
+  Person reviewedBy
   WebPageElement mainContentOfPage
   string relatedLink
-  string,SpeakableSpecification speakable
-  BreadcrumbList,string breadcrumb
+  string speakable
+  SpeakableSpecification speakable
+  BreadcrumbList breadcrumb
+  string breadcrumb
   string significantLinks
 
-}
+ }

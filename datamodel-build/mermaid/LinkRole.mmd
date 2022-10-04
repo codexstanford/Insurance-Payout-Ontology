@@ -1,11 +1,11 @@
 classDiagram
-  LinkRole -- string,Language
+  LinkRole -- Language
 
 
-Role <|-- LinkRole
 class LinkRole {
 
   string linkRelationship
-  string,Language inLanguage
+  string inLanguage
+  Language inLanguage
 
-}
+ }

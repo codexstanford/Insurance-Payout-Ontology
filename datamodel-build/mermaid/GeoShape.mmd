@@ -1,19 +1,20 @@
 classDiagram
-  GeoShape -- Country,string
-GeoShape -- string,PostalAddress
-GeoShape -- string,number
+  GeoShape -- Country
+  GeoShape -- PostalAddress
 
 
-StructuredValue <|-- GeoShape
 class GeoShape {
 
-  Country,string addressCountry
+  Country addressCountry
+  string addressCountry
   string circle
   string line
   string polygon
-  string,PostalAddress address
+  string address
+  PostalAddress address
   string postalCode
-  string,number elevation
+  string elevation
+  number elevation
   string box
 
-}
+ }

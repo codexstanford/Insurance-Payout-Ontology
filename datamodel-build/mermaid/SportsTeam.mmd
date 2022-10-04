@@ -1,13 +1,13 @@
 classDiagram
   SportsTeam -- Person
-SportsTeam -- GenderType,string
+  SportsTeam -- GenderType
 
 
-SportsOrganization <|-- SportsTeam
 class SportsTeam {
 
   Person athlete
-  GenderType,string gender
+  GenderType gender
+  string gender
   Person coach
 
-}
+ }

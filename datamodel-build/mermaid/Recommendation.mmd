@@ -1,10 +1,15 @@
 classDiagram
-  Recommendation -- string,string,PhysicalActivityCategory,Thing,CategoryCode
+  Recommendation -- PhysicalActivityCategory
+  Recommendation -- Thing
+  Recommendation -- CategoryCode
 
 
-Review <|-- Recommendation
 class Recommendation {
 
-  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  string category
+  string category
+  PhysicalActivityCategory category
+  Thing category
+  CategoryCode category
 
-}
+ }

@@ -1,25 +1,26 @@
 classDiagram
   BroadcastService -- BroadcastService
-BroadcastService -- BroadcastFrequencySpecification,string
-BroadcastService -- string,Language
-BroadcastService -- BroadcastChannel
-BroadcastService -- Organization
-BroadcastService -- Place
+  BroadcastService -- BroadcastFrequencySpecification
+  BroadcastService -- Language
+  BroadcastService -- BroadcastChannel
+  BroadcastService -- Organization
+  BroadcastService -- Place
 
 
-Service <|-- BroadcastService
 class BroadcastService {
 
   BroadcastService parentService
   string broadcastDisplayName
   string videoFormat
   string broadcastTimezone
-  BroadcastFrequencySpecification,string broadcastFrequency
+  BroadcastFrequencySpecification broadcastFrequency
+  string broadcastFrequency
   string callSign
-  string,Language inLanguage
+  string inLanguage
+  Language inLanguage
   BroadcastChannel hasBroadcastChannel
   Organization broadcaster
   Organization broadcastAffiliateOf
   Place area
 
-}
+ }

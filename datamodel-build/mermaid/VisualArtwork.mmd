@@ -1,26 +1,31 @@
 classDiagram
-  VisualArtwork -- QuantitativeValue,Distance
-VisualArtwork -- Person
-VisualArtwork -- Distance,QuantitativeValue
-VisualArtwork -- string,string
-VisualArtwork -- number,string
+  VisualArtwork -- QuantitativeValue
+  VisualArtwork -- Distance
+  VisualArtwork -- Person
 
 
-CreativeWork <|-- VisualArtwork
 class VisualArtwork {
 
-  QuantitativeValue,Distance width
+  QuantitativeValue width
+  Distance width
   Person letterer
-  Distance,QuantitativeValue height
-  string,string surface
+  Distance height
+  QuantitativeValue height
+  string surface
+  string surface
   Person colorist
   Person inker
-  string,string artform
-  string,string artworkSurface
-  number,string artEdition
-  Distance,QuantitativeValue depth
+  string artform
+  string artform
+  string artworkSurface
+  string artworkSurface
+  number artEdition
+  string artEdition
+  Distance depth
+  QuantitativeValue depth
   Person penciler
   Person artist
-  string,string artMedium
+  string artMedium
+  string artMedium
 
-}
+ }

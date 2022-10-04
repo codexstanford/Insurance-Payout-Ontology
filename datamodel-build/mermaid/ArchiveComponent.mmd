@@ -1,10 +1,12 @@
 classDiagram
-  ArchiveComponent -- Place,string,PostalAddress
+  ArchiveComponent -- Place
+  ArchiveComponent -- PostalAddress
 
 
-CreativeWork <|-- ArchiveComponent
 class ArchiveComponent {
 
-  Place,string,PostalAddress [object Object]
+  Place [object Object]
+  string [object Object]
+  PostalAddress [object Object]
 
-}
+ }

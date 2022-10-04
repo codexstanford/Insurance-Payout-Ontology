@@ -1,12 +1,12 @@
 classDiagram
   WorkBasedProgram -- MonetaryAmountDistribution
-WorkBasedProgram -- CategoryCode,string
+  WorkBasedProgram -- CategoryCode
 
 
-EducationalOccupationalProgram <|-- WorkBasedProgram
 class WorkBasedProgram {
 
   MonetaryAmountDistribution trainingSalary
-  CategoryCode,string occupationalCategory
+  CategoryCode occupationalCategory
+  string occupationalCategory
 
-}
+ }

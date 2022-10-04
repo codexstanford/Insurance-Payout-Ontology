@@ -1,12 +1,12 @@
 classDiagram
-  GovernmentService -- string,AdministrativeArea
-GovernmentService -- Organization
+  GovernmentService -- AdministrativeArea
+  GovernmentService -- Organization
 
 
-Service <|-- GovernmentService
 class GovernmentService {
 
-  string,AdministrativeArea jurisdiction
+  string jurisdiction
+  AdministrativeArea jurisdiction
   Organization serviceOperator
 
-}
+ }

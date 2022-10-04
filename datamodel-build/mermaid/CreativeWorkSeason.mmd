@@ -1,27 +1,28 @@
 classDiagram
-  CreativeWorkSeason -- dateTime,date
-CreativeWorkSeason -- Person
-CreativeWorkSeason -- VideoObject
-CreativeWorkSeason -- date,dateTime
-CreativeWorkSeason -- Episode
-CreativeWorkSeason -- CreativeWorkSeries
-CreativeWorkSeason -- Organization
-CreativeWorkSeason -- string,number
+  CreativeWorkSeason -- dateTime
+  CreativeWorkSeason -- date
+  CreativeWorkSeason -- Person
+  CreativeWorkSeason -- VideoObject
+  CreativeWorkSeason -- Episode
+  CreativeWorkSeason -- CreativeWorkSeries
+  CreativeWorkSeason -- Organization
 
 
-CreativeWork <|-- CreativeWorkSeason
 class CreativeWorkSeason {
 
-  dateTime,date startDate
+  dateTime startDate
+  date startDate
   Person director
   Person actor
   VideoObject trailer
-  date,dateTime endDate
+  date endDate
+  dateTime endDate
   Episode episodes
   number numberOfEpisodes
   CreativeWorkSeries partOfSeries
   Organization productionCompany
-  string,number seasonNumber
+  string seasonNumber
+  number seasonNumber
   Episode episode
 
-}
+ }

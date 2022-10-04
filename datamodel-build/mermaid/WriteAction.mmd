@@ -1,12 +1,11 @@
 classDiagram
-  WriteAction -- string,Language
-WriteAction -- Language
+  WriteAction -- Language
 
 
-CreateAction <|-- WriteAction
 class WriteAction {
 
-  string,Language inLanguage
+  string inLanguage
+  Language inLanguage
   Language language
 
-}
+ }

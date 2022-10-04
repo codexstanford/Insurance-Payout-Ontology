@@ -1,20 +1,28 @@
 classDiagram
-  Trip -- time,dateTime
-Trip -- Offer,Demand
-Trip -- Organization,Person
-Trip -- Trip
-Trip -- ItemList,Place
+  Trip -- time
+  Trip -- dateTime
+  Trip -- Offer
+  Trip -- Demand
+  Trip -- Organization
+  Trip -- Person
+  Trip -- Trip
+  Trip -- ItemList
+  Trip -- Place
 
 
-Intangible <|-- Trip
 class Trip {
 
-  time,dateTime arrivalTime
-  Offer,Demand offers
-  time,dateTime departureTime
-  Organization,Person provider
+  time arrivalTime
+  dateTime arrivalTime
+  Offer offers
+  Demand offers
+  time departureTime
+  dateTime departureTime
+  Organization provider
+  Person provider
   Trip subTrip
-  ItemList,Place itinerary
+  ItemList itinerary
+  Place itinerary
   Trip partOfTrip
 
-}
+ }

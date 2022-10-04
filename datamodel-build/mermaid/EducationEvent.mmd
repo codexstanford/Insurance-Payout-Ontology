@@ -1,14 +1,15 @@
 classDiagram
-  EducationEvent -- DefinedTerm,string
-EducationEvent -- string,DefinedTerm,string
-EducationEvent -- string,DefinedTerm
+  EducationEvent -- DefinedTerm
 
 
-Event <|-- EducationEvent
 class EducationEvent {
 
-  DefinedTerm,string teaches
-  string,DefinedTerm,string educationalLevel
-  string,DefinedTerm assesses
+  DefinedTerm teaches
+  string teaches
+  string educationalLevel
+  DefinedTerm educationalLevel
+  string educationalLevel
+  string assesses
+  DefinedTerm assesses
 
-}
+ }

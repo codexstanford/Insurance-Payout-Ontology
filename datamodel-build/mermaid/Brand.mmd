@@ -1,15 +1,15 @@
 classDiagram
   Brand -- Review
-Brand -- AggregateRating
-Brand -- string,ImageObject
+  Brand -- AggregateRating
+  Brand -- ImageObject
 
 
-Intangible <|-- Brand
 class Brand {
 
   Review review
   AggregateRating aggregateRating
   string slogan
-  string,ImageObject logo
+  string logo
+  ImageObject logo
 
-}
+ }

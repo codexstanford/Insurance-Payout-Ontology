@@ -1,28 +1,31 @@
 classDiagram
   ParcelDelivery -- PostalAddress
-ParcelDelivery -- Product
-ParcelDelivery -- Organization,Person
-ParcelDelivery -- date,dateTime
-ParcelDelivery -- DeliveryEvent
-ParcelDelivery -- Organization
-ParcelDelivery -- DeliveryMethod
-ParcelDelivery -- Order
+  ParcelDelivery -- Product
+  ParcelDelivery -- Organization
+  ParcelDelivery -- Person
+  ParcelDelivery -- date
+  ParcelDelivery -- dateTime
+  ParcelDelivery -- DeliveryEvent
+  ParcelDelivery -- DeliveryMethod
+  ParcelDelivery -- Order
 
 
-Intangible <|-- ParcelDelivery
 class ParcelDelivery {
 
   PostalAddress originAddress
   string trackingNumber
   Product itemShipped
-  Organization,Person provider
+  Organization provider
+  Person provider
   string trackingUrl
   PostalAddress deliveryAddress
-  date,dateTime expectedArrivalUntil
+  date expectedArrivalUntil
+  dateTime expectedArrivalUntil
   DeliveryEvent deliveryStatus
-  date,dateTime expectedArrivalFrom
+  date expectedArrivalFrom
+  dateTime expectedArrivalFrom
   Organization carrier
   DeliveryMethod hasDeliveryMethod
   Order partOfOrder
 
-}
+ }

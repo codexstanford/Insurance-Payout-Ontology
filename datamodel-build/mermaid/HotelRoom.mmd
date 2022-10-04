@@ -1,12 +1,14 @@
 classDiagram
-  HotelRoom -- BedDetails,string,BedType
-HotelRoom -- QuantitativeValue
+  HotelRoom -- BedDetails
+  HotelRoom -- BedType
+  HotelRoom -- QuantitativeValue
 
 
-Room <|-- HotelRoom
 class HotelRoom {
 
-  BedDetails,string,BedType bed
+  BedDetails bed
+  string bed
+  BedType bed
   QuantitativeValue occupancy
 
-}
+ }

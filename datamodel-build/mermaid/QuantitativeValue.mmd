@@ -1,19 +1,32 @@
 classDiagram
-  QuantitativeValue -- Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue
-QuantitativeValue -- string,number,StructuredValue,boolean
-QuantitativeValue -- string,string
-QuantitativeValue -- PropertyValue
+  QuantitativeValue -- Enumeration
+  QuantitativeValue -- DefinedTerm
+  QuantitativeValue -- MeasurementTypeEnumeration
+  QuantitativeValue -- QualitativeValue
+  QuantitativeValue -- StructuredValue
+  QuantitativeValue -- PropertyValue
+  QuantitativeValue -- QuantitativeValue
 
 
-StructuredValue <|-- QuantitativeValue
 class QuantitativeValue {
 
-  Enumeration,DefinedTerm,string,MeasurementTypeEnumeration,QualitativeValue,StructuredValue,PropertyValue,QuantitativeValue valueReference
+  Enumeration valueReference
+  DefinedTerm valueReference
+  string valueReference
+  MeasurementTypeEnumeration valueReference
+  QualitativeValue valueReference
+  StructuredValue valueReference
+  PropertyValue valueReference
+  QuantitativeValue valueReference
   number maxValue
   string unitText
   number minValue
-  string,number,StructuredValue,boolean value
-  string,string unitCode
+  string value
+  number value
+  StructuredValue value
+  boolean value
+  string unitCode
+  string unitCode
   PropertyValue additionalProperty
 
-}
+ }

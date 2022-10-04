@@ -1,17 +1,17 @@
 classDiagram
-  MusicComposition -- Organization,Person
-MusicComposition -- MusicComposition
-MusicComposition -- MusicRecording
-MusicComposition -- Event
-MusicComposition -- CreativeWork
-MusicComposition -- Person
+  MusicComposition -- Organization
+  MusicComposition -- Person
+  MusicComposition -- MusicComposition
+  MusicComposition -- MusicRecording
+  MusicComposition -- Event
+  MusicComposition -- CreativeWork
 
 
-CreativeWork <|-- MusicComposition
 class MusicComposition {
 
   string iswcCode
-  Organization,Person composer
+  Organization composer
+  Person composer
   string musicCompositionForm
   MusicComposition includedComposition
   MusicRecording recordedAs
@@ -21,4 +21,4 @@ class MusicComposition {
   string musicalKey
   Person lyricist
 
-}
+ }

@@ -1,15 +1,14 @@
 classDiagram
-  ListItem -- number,string
-ListItem -- ListItem
-ListItem -- Thing
+  ListItem -- ListItem
+  ListItem -- Thing
 
 
-Intangible <|-- ListItem
 class ListItem {
 
-  number,string position
+  number position
+  string position
   ListItem nextItem
   Thing item
   ListItem previousItem
 
-}
+ }

@@ -1,101 +1,113 @@
 classDiagram
-  CreativeWork -- DefinedTerm,string
-CreativeWork -- string,DefinedTerm,string
-CreativeWork -- string,DefinedTerm
-CreativeWork -- date
-CreativeWork -- dateTime
-CreativeWork -- string,string,Product
-CreativeWork -- Review
-CreativeWork -- string,string
-CreativeWork -- Person,Organization
-CreativeWork -- Country
-CreativeWork -- Person
-CreativeWork -- Grant
-CreativeWork -- DefinedTerm,string,string
-CreativeWork -- number,string
-CreativeWork -- Audience
-CreativeWork -- Offer,Demand
-CreativeWork -- Place
-CreativeWork -- MediaObject
-CreativeWork -- QuantitativeValue,string
-CreativeWork -- Thing
-CreativeWork -- Organization,Person
-CreativeWork -- Organization
-CreativeWork -- CreativeWork
-CreativeWork -- CreativeWork,string
-CreativeWork -- Comment
-CreativeWork -- PublicationEvent
-CreativeWork -- AggregateRating
-CreativeWork -- Duration
-CreativeWork -- InteractionCounter
-CreativeWork -- CreativeWork,string,Product
-CreativeWork -- string,CreativeWork
-CreativeWork -- date,dateTime
-CreativeWork -- Event
-CreativeWork -- dateTime,date
-CreativeWork -- AlignmentObject
-CreativeWork -- string,string,CorrectionComment
-CreativeWork -- string,Rating
-CreativeWork -- QuantitativeValue,DefinedTerm,string,SizeSpecification
-CreativeWork -- dateTime,string
-CreativeWork -- string,Language
-CreativeWork -- string,CreativeWork,Product
-CreativeWork -- Claim
-CreativeWork -- WebPage,string
-CreativeWork -- AudioObject,MusicRecording,Clip
-CreativeWork -- ItemList
-CreativeWork -- string,dateTime,string
-CreativeWork -- Clip,VideoObject
+  CreativeWork -- DefinedTerm
+  CreativeWork -- date
+  CreativeWork -- dateTime
+  CreativeWork -- Product
+  CreativeWork -- Review
+  CreativeWork -- Person
+  CreativeWork -- Organization
+  CreativeWork -- Country
+  CreativeWork -- Grant
+  CreativeWork -- Audience
+  CreativeWork -- Offer
+  CreativeWork -- Demand
+  CreativeWork -- Place
+  CreativeWork -- MediaObject
+  CreativeWork -- QuantitativeValue
+  CreativeWork -- Thing
+  CreativeWork -- CreativeWork
+  CreativeWork -- Comment
+  CreativeWork -- PublicationEvent
+  CreativeWork -- AggregateRating
+  CreativeWork -- Duration
+  CreativeWork -- InteractionCounter
+  CreativeWork -- Event
+  CreativeWork -- AlignmentObject
+  CreativeWork -- CorrectionComment
+  CreativeWork -- Rating
+  CreativeWork -- SizeSpecification
+  CreativeWork -- Language
+  CreativeWork -- Claim
+  CreativeWork -- WebPage
+  CreativeWork -- AudioObject
+  CreativeWork -- MusicRecording
+  CreativeWork -- Clip
+  CreativeWork -- ItemList
+  CreativeWork -- VideoObject
 
 
-Thing <|-- CreativeWork
 class CreativeWork {
 
-  DefinedTerm,string teaches
-  string,DefinedTerm,string educationalLevel
+  DefinedTerm teaches
+  string teaches
+  string educationalLevel
+  DefinedTerm educationalLevel
+  string educationalLevel
   string abstract
-  string,DefinedTerm creativeWorkStatus
+  string creativeWorkStatus
+  DefinedTerm creativeWorkStatus
   date expires
   dateTime contentReferenceTime
-  string,string,Product material
+  string material
+  string material
+  Product material
   Review review
-  string,string fileFormat
+  string fileFormat
+  string fileFormat
   string text
-  Person,Organization translator
+  Person translator
+  Organization translator
   string award
-  string,DefinedTerm assesses
+  string assesses
+  DefinedTerm assesses
   string copyrightNotice
-  string,string schemaVersion
+  string schemaVersion
+  string schemaVersion
   Country countryOfOrigin
-  DefinedTerm,string pattern
+  DefinedTerm pattern
+  string pattern
   Person accountablePerson
   Grant funding
-  DefinedTerm,string educationalUse
-  string,string genre
-  DefinedTerm,string,string keywords
-  number,string position
+  DefinedTerm educationalUse
+  string educationalUse
+  string genre
+  string genre
+  DefinedTerm keywords
+  string keywords
+  string keywords
+  number position
+  string position
   string accessibilityHazard
   string alternativeHeadline
   Audience audience
-  Offer,Demand offers
+  Offer offers
+  Demand offers
   Place locationCreated
   MediaObject associatedMedia
-  QuantitativeValue,string [object Object]
+  QuantitativeValue [object Object]
+  string [object Object]
   Thing mainEntity
-  Organization,Person copyrightHolder
+  Organization copyrightHolder
+  Person copyrightHolder
   string awards
   Place contentLocation
   date sdDatePublished
-  Organization,Person producer
+  Organization producer
+  Person producer
   Place spatial
-  Person,Organization publisher
+  Person publisher
+  Organization publisher
   Organization sourceOrganization
   Person character
-  Organization,Person funder
+  Organization funder
+  Person funder
   CreativeWork exampleOfWork
-  CreativeWork,string usageInfo
-  Organization,Person provider
-  Organization,Person sdPublisher
+  CreativeWork usageInfo
+  string usageInfo
+  Organization provider
+  Person provider
+  Organization sdPublisher
+  Person sdPublisher
   Comment comment
   string accessibilityFeature
   PublicationEvent publication
@@ -108,60 +120,96 @@ class CreativeWork {
   string typicalAgeRange
   InteractionCounter interactionStatistic
   number copyrightYear
-  CreativeWork,string,Product isBasedOn
+  CreativeWork isBasedOn
+  string isBasedOn
+  Product isBasedOn
   CreativeWork workExample
-  string,CreativeWork publishingPrinciples
+  string publishingPrinciples
+  CreativeWork publishingPrinciples
   string discussionUrl
   PublicationEvent releasedEvent
-  date,dateTime dateCreated
+  date dateCreated
+  dateTime dateCreated
   CreativeWork workTranslation
   Person editor
   string creditText
   Event recordedAt
-  string,string editEIDR
-  Person,Organization author
-  dateTime,date dateModified
-  Organization,Person sponsor
+  string editEIDR
+  string editEIDR
+  Person author
+  Organization author
+  dateTime dateModified
+  date dateModified
+  Organization sponsor
+  Person sponsor
   string accessibilitySummary
-  string,string encodingFormat
-  Person,Organization maintainer
+  string encodingFormat
+  string encodingFormat
+  Person maintainer
+  Organization maintainer
   AlignmentObject educationalAlignment
-  CreativeWork,string acquireLicensePage
+  CreativeWork acquireLicensePage
+  string acquireLicensePage
   boolean isAccessibleForFree
-  date,dateTime datePublished
+  date datePublished
+  dateTime datePublished
   Place spatialCoverage
-  CreativeWork,string sdLicense
+  CreativeWork sdLicense
+  string sdLicense
   string conditionsOfAccess
-  string,string,CorrectionComment correction
-  string,Rating contentRating
-  QuantitativeValue,DefinedTerm,string,SizeSpecification size
-  string,CreativeWork isPartOf
-  dateTime,string temporal
+  string correction
+  string correction
+  CorrectionComment correction
+  string contentRating
+  Rating contentRating
+  QuantitativeValue size
+  DefinedTerm size
+  string size
+  SizeSpecification size
+  string isPartOf
+  CreativeWork isPartOf
+  dateTime temporal
+  string temporal
   string thumbnailUrl
-  string,Language inLanguage
-  string,CreativeWork license
-  Organization,Person creator
+  string inLanguage
+  Language inLanguage
+  string license
+  CreativeWork license
+  Organization creator
+  Person creator
   Review reviews
   Thing about
   boolean isFamilyFriendly
   string headline
   string accessibilityAPI
   Organization publisherImprint
-  string,CreativeWork,Product isBasedOnUrl
+  string isBasedOnUrl
+  CreativeWork isBasedOnUrl
+  Product isBasedOnUrl
   MediaObject encodings
   Claim interpretedAsClaim
   string accessibilityControl
-  CreativeWork,string citation
-  number,string version
-  WebPage,string archivedAt
-  DefinedTerm,string learningResourceType
+  CreativeWork citation
+  string citation
+  number version
+  string version
+  WebPage archivedAt
+  string archivedAt
+  DefinedTerm learningResourceType
+  string learningResourceType
   MediaObject encoding
-  AudioObject,MusicRecording,Clip audio
+  AudioObject audio
+  MusicRecording audio
+  Clip audio
   Thing mentions
   ItemList accessModeSufficient
   CreativeWork hasPart
-  string,dateTime,string temporalCoverage
-  Organization,Person contributor
-  Clip,VideoObject video
+  string temporalCoverage
+  dateTime temporalCoverage
+  string temporalCoverage
+  Organization contributor
+  Person contributor
+  Clip video
+  VideoObject video
 
-}
+ }

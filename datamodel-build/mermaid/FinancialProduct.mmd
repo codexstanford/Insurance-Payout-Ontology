@@ -1,13 +1,14 @@
 classDiagram
-  FinancialProduct -- number,QuantitativeValue
-FinancialProduct -- string,string
+  FinancialProduct -- QuantitativeValue
 
 
-Service <|-- FinancialProduct
 class FinancialProduct {
 
-  number,QuantitativeValue annualPercentageRate
-  string,string feesAndCommissionsSpecification
-  number,QuantitativeValue interestRate
+  number annualPercentageRate
+  QuantitativeValue annualPercentageRate
+  string feesAndCommissionsSpecification
+  string feesAndCommissionsSpecification
+  number interestRate
+  QuantitativeValue interestRate
 
-}
+ }

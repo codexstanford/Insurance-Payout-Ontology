@@ -1,10 +1,15 @@
 classDiagram
-  DonateAction -- Person,Audience,ContactPoint,Organization
+  DonateAction -- Person
+  DonateAction -- Audience
+  DonateAction -- ContactPoint
+  DonateAction -- Organization
 
 
-TradeAction <|-- DonateAction
 class DonateAction {
 
-  Person,Audience,ContactPoint,Organization recipient
+  Person recipient
+  Audience recipient
+  ContactPoint recipient
+  Organization recipient
 
-}
+ }

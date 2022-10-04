@@ -1,10 +1,9 @@
 classDiagram
   ShippingRateSettings -- DefinedRegion
-ShippingRateSettings -- MonetaryAmount
-ShippingRateSettings -- MonetaryAmount,DeliveryChargeSpecification
+  ShippingRateSettings -- MonetaryAmount
+  ShippingRateSettings -- DeliveryChargeSpecification
 
 
-StructuredValue <|-- ShippingRateSettings
 class ShippingRateSettings {
 
   DefinedRegion shippingDestination
@@ -12,6 +11,7 @@ class ShippingRateSettings {
   string shippingLabel
   boolean isUnlabelledFallback
   MonetaryAmount shippingRate
-  MonetaryAmount,DeliveryChargeSpecification freeShippingThreshold
+  MonetaryAmount freeShippingThreshold
+  DeliveryChargeSpecification freeShippingThreshold
 
-}
+ }

@@ -1,12 +1,11 @@
 classDiagram
   AnatomicalStructure -- AnatomicalStructure
-AnatomicalStructure -- AnatomicalSystem
-AnatomicalStructure -- MedicalTherapy
-AnatomicalStructure -- ImageObject
-AnatomicalStructure -- MedicalCondition
+  AnatomicalStructure -- AnatomicalSystem
+  AnatomicalStructure -- MedicalTherapy
+  AnatomicalStructure -- ImageObject
+  AnatomicalStructure -- MedicalCondition
 
 
-MedicalEntity <|-- AnatomicalStructure
 class AnatomicalStructure {
 
   string bodyLocation
@@ -18,4 +17,4 @@ class AnatomicalStructure {
   AnatomicalStructure subStructure
   string associatedPathophysiology
 
-}
+ }

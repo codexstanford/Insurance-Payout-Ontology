@@ -1,12 +1,11 @@
 classDiagram
   MedicalSign -- MedicalTest
-MedicalSign -- PhysicalExam
+  MedicalSign -- PhysicalExam
 
 
-MedicalSignOrSymptom <|-- MedicalSign
 class MedicalSign {
 
   MedicalTest identifyingTest
   PhysicalExam identifyingExam
 
-}
+ }

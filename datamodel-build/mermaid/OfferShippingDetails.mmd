@@ -1,10 +1,9 @@
 classDiagram
   OfferShippingDetails -- DefinedRegion
-OfferShippingDetails -- ShippingDeliveryTime
-OfferShippingDetails -- MonetaryAmount
+  OfferShippingDetails -- ShippingDeliveryTime
+  OfferShippingDetails -- MonetaryAmount
 
 
-StructuredValue <|-- OfferShippingDetails
 class OfferShippingDetails {
 
   DefinedRegion shippingDestination
@@ -15,4 +14,4 @@ class OfferShippingDetails {
   ShippingDeliveryTime deliveryTime
   MonetaryAmount shippingRate
 
-}
+ }

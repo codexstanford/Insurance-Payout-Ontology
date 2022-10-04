@@ -1,14 +1,15 @@
 classDiagram
   BuyAction -- WarrantyPromise
-BuyAction -- Organization,Person
-BuyAction -- Person,Organization
+  BuyAction -- Organization
+  BuyAction -- Person
 
 
-TradeAction <|-- BuyAction
 class BuyAction {
 
   WarrantyPromise warrantyPromise
-  Organization,Person seller
-  Person,Organization vendor
+  Organization seller
+  Person seller
+  Person vendor
+  Organization vendor
 
-}
+ }

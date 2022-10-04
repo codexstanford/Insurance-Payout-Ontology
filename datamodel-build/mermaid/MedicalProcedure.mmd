@@ -1,17 +1,20 @@
 classDiagram
   MedicalProcedure -- MedicalProcedureType
-MedicalProcedure -- MedicalEntity,string
-MedicalProcedure -- string,EventStatusType,MedicalStudyStatus
+  MedicalProcedure -- MedicalEntity
+  MedicalProcedure -- EventStatusType
+  MedicalProcedure -- MedicalStudyStatus
 
 
-MedicalEntity <|-- MedicalProcedure
 class MedicalProcedure {
 
   MedicalProcedureType procedureType
-  MedicalEntity,string preparation
+  MedicalEntity preparation
+  string preparation
   string bodyLocation
-  string,EventStatusType,MedicalStudyStatus status
+  string status
+  EventStatusType status
+  MedicalStudyStatus status
   string howPerformed
   string followup
 
-}
+ }

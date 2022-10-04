@@ -1,12 +1,12 @@
 classDiagram
-  SoftwareSourceCode -- string,ComputerLanguage
-SoftwareSourceCode -- SoftwareApplication
+  SoftwareSourceCode -- ComputerLanguage
+  SoftwareSourceCode -- SoftwareApplication
 
 
-CreativeWork <|-- SoftwareSourceCode
 class SoftwareSourceCode {
 
-  string,ComputerLanguage programmingLanguage
+  string programmingLanguage
+  ComputerLanguage programmingLanguage
   string sampleType
   string runtimePlatform
   string runtime
@@ -14,4 +14,4 @@ class SoftwareSourceCode {
   string codeRepository
   string codeSampleType
 
-}
+ }

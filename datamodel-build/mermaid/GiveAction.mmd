@@ -1,10 +1,15 @@
 classDiagram
-  GiveAction -- Person,Audience,ContactPoint,Organization
+  GiveAction -- Person
+  GiveAction -- Audience
+  GiveAction -- ContactPoint
+  GiveAction -- Organization
 
 
-TransferAction <|-- GiveAction
 class GiveAction {
 
-  Person,Audience,ContactPoint,Organization recipient
+  Person recipient
+  Audience recipient
+  ContactPoint recipient
+  Organization recipient
 
-}
+ }

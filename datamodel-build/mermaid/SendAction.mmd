@@ -1,12 +1,17 @@
 classDiagram
-  SendAction -- Person,Audience,ContactPoint,Organization
-SendAction -- DeliveryMethod
+  SendAction -- Person
+  SendAction -- Audience
+  SendAction -- ContactPoint
+  SendAction -- Organization
+  SendAction -- DeliveryMethod
 
 
-TransferAction <|-- SendAction
 class SendAction {
 
-  Person,Audience,ContactPoint,Organization recipient
+  Person recipient
+  Audience recipient
+  ContactPoint recipient
+  Organization recipient
   DeliveryMethod deliveryMethod
 
-}
+ }

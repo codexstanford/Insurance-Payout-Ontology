@@ -1,15 +1,13 @@
 classDiagram
   VideoGame -- Person
-VideoGame -- VideoObject
-VideoGame -- CreativeWork
-VideoGame -- GameServer
-VideoGame -- GamePlayMode
-VideoGame -- string,string,Thing
-VideoGame -- Person,MusicGroup
+  VideoGame -- VideoObject
+  VideoGame -- CreativeWork
+  VideoGame -- GameServer
+  VideoGame -- GamePlayMode
+  VideoGame -- Thing
+  VideoGame -- MusicGroup
 
 
-SoftwareApplication <|-- VideoGame
-Game <|-- VideoGame
 class VideoGame {
 
   Person director
@@ -21,8 +19,11 @@ class VideoGame {
   CreativeWork gameTip
   Person actors
   GamePlayMode playMode
-  string,string,Thing gamePlatform
-  Person,MusicGroup musicBy
+  string gamePlatform
+  string gamePlatform
+  Thing gamePlatform
+  Person musicBy
+  MusicGroup musicBy
   Person directors
 
-}
+ }

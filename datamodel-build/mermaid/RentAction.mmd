@@ -1,12 +1,13 @@
 classDiagram
-  RentAction -- Person,Organization
-RentAction -- RealEstateAgent
+  RentAction -- Person
+  RentAction -- Organization
+  RentAction -- RealEstateAgent
 
 
-TradeAction <|-- RentAction
 class RentAction {
 
-  Person,Organization landlord
+  Person landlord
+  Organization landlord
   RealEstateAgent realEstateAgent
 
-}
+ }

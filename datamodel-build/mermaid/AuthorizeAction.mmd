@@ -1,10 +1,15 @@
 classDiagram
-  AuthorizeAction -- Person,Audience,ContactPoint,Organization
+  AuthorizeAction -- Person
+  AuthorizeAction -- Audience
+  AuthorizeAction -- ContactPoint
+  AuthorizeAction -- Organization
 
 
-AllocateAction <|-- AuthorizeAction
 class AuthorizeAction {
 
-  Person,Audience,ContactPoint,Organization recipient
+  Person recipient
+  Audience recipient
+  ContactPoint recipient
+  Organization recipient
 
-}
+ }

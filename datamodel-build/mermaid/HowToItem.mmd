@@ -1,10 +1,11 @@
 classDiagram
-  HowToItem -- QuantitativeValue,number,string
+  HowToItem -- QuantitativeValue
 
 
-ListItem <|-- HowToItem
 class HowToItem {
 
-  QuantitativeValue,number,string requiredQuantity
+  QuantitativeValue requiredQuantity
+  number requiredQuantity
+  string requiredQuantity
 
-}
+ }

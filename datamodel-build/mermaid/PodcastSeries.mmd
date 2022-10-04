@@ -1,12 +1,12 @@
 classDiagram
   PodcastSeries -- Person
-PodcastSeries -- DataFeed,string
+  PodcastSeries -- DataFeed
 
 
-CreativeWorkSeries <|-- PodcastSeries
 class PodcastSeries {
 
   Person actor
-  DataFeed,string webFeed
+  DataFeed webFeed
+  string webFeed
 
-}
+ }

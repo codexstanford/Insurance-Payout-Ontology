@@ -1,13 +1,14 @@
 classDiagram
-  Claim -- Person,Organization
-Claim -- CreativeWork
+  Claim -- Person
+  Claim -- Organization
+  Claim -- CreativeWork
 
 
-CreativeWork <|-- Claim
 class Claim {
 
-  Person,Organization claimInterpreter
+  Person claimInterpreter
+  Organization claimInterpreter
   CreativeWork firstAppearance
   CreativeWork appearance
 
-}
+ }

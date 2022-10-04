@@ -1,10 +1,15 @@
 classDiagram
-  TipAction -- Person,Audience,ContactPoint,Organization
+  TipAction -- Person
+  TipAction -- Audience
+  TipAction -- ContactPoint
+  TipAction -- Organization
 
 
-TradeAction <|-- TipAction
 class TipAction {
 
-  Person,Audience,ContactPoint,Organization recipient
+  Person recipient
+  Audience recipient
+  ContactPoint recipient
+  Organization recipient
 
-}
+ }

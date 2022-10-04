@@ -1,10 +1,9 @@
 classDiagram
   MedicalGuideline -- MedicalEvidenceLevel
-MedicalGuideline -- MedicalEntity
-MedicalGuideline -- date
+  MedicalGuideline -- MedicalEntity
+  MedicalGuideline -- date
 
 
-MedicalEntity <|-- MedicalGuideline
 class MedicalGuideline {
 
   MedicalEvidenceLevel evidenceLevel
@@ -12,4 +11,4 @@ class MedicalGuideline {
   MedicalEntity guidelineSubject
   date guidelineDate
 
-}
+ }

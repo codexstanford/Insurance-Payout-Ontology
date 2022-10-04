@@ -1,44 +1,59 @@
 classDiagram
   Offer -- AdultOrientedEnumeration
-Offer -- Review
-Offer -- Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service
-Offer -- string,string,PhysicalActivityCategory,Thing,CategoryCode
-Offer -- date
-Offer -- OfferShippingDetails
-Offer -- TypeAndQuantityNode
-Offer -- BusinessFunction
-Offer -- OfferItemCondition
-Offer -- QuantitativeValue
-Offer -- LoanOrCredit,PaymentMethod
-Offer -- WarrantyPromise
-Offer -- Organization,Person
-Offer -- Place,string,GeoShape
-Offer -- QuantitativeValue,Duration
-Offer -- AggregateRating
-Offer -- Person,Organization
-Offer -- DeliveryMethod
-Offer -- dateTime,date
-Offer -- date,dateTime,time
-Offer -- GeoShape,string,Place
-Offer -- Offer
-Offer -- MerchantReturnPolicy
-Offer -- PriceSpecification
-Offer -- AdministrativeArea,GeoShape,string,Place
-Offer -- BusinessEntityType
-Offer -- ItemAvailability
-Offer -- number,string
-Offer -- time,dateTime,date
-Offer -- Place
+  Offer -- Review
+  Offer -- Trip
+  Offer -- Event
+  Offer -- Product
+  Offer -- AggregateOffer
+  Offer -- CreativeWork
+  Offer -- MenuItem
+  Offer -- Service
+  Offer -- PhysicalActivityCategory
+  Offer -- Thing
+  Offer -- CategoryCode
+  Offer -- date
+  Offer -- OfferShippingDetails
+  Offer -- TypeAndQuantityNode
+  Offer -- BusinessFunction
+  Offer -- OfferItemCondition
+  Offer -- QuantitativeValue
+  Offer -- LoanOrCredit
+  Offer -- PaymentMethod
+  Offer -- WarrantyPromise
+  Offer -- Organization
+  Offer -- Person
+  Offer -- Place
+  Offer -- GeoShape
+  Offer -- Duration
+  Offer -- AggregateRating
+  Offer -- DeliveryMethod
+  Offer -- dateTime
+  Offer -- time
+  Offer -- Offer
+  Offer -- MerchantReturnPolicy
+  Offer -- PriceSpecification
+  Offer -- AdministrativeArea
+  Offer -- BusinessEntityType
+  Offer -- ItemAvailability
 
 
-Intangible <|-- Offer
 class Offer {
 
   AdultOrientedEnumeration hasAdultConsideration
   string gtin12
   Review review
-  Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service itemOffered
-  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  Trip itemOffered
+  Event itemOffered
+  Product itemOffered
+  AggregateOffer itemOffered
+  CreativeWork itemOffered
+  MenuItem itemOffered
+  Service itemOffered
+  string category
+  string category
+  PhysicalActivityCategory category
+  Thing category
+  CategoryCode category
   date priceValidUntil
   OfferShippingDetails shippingDetails
   string mpn
@@ -47,18 +62,29 @@ class Offer {
   OfferItemCondition itemCondition
   string gtin
   QuantitativeValue eligibleQuantity
-  LoanOrCredit,PaymentMethod acceptedPaymentMethod
+  LoanOrCredit acceptedPaymentMethod
+  PaymentMethod acceptedPaymentMethod
   WarrantyPromise warranty
-  Organization,Person seller
-  Place,string,GeoShape ineligibleRegion
-  QuantitativeValue,Duration leaseLength
+  Organization seller
+  Person seller
+  Place ineligibleRegion
+  string ineligibleRegion
+  GeoShape ineligibleRegion
+  QuantitativeValue leaseLength
+  Duration leaseLength
   AggregateRating aggregateRating
-  Person,Organization offeredBy
+  Person offeredBy
+  Organization offeredBy
   QuantitativeValue deliveryLeadTime
   DeliveryMethod availableDeliveryMethod
-  dateTime,date validFrom
-  date,dateTime,time availabilityEnds
-  GeoShape,string,Place eligibleRegion
+  dateTime validFrom
+  date validFrom
+  date availabilityEnds
+  dateTime availabilityEnds
+  time availabilityEnds
+  GeoShape eligibleRegion
+  string eligibleRegion
+  Place eligibleRegion
   QuantitativeValue hasMeasurement
   string gtin8
   QuantitativeValue inventoryLevel
@@ -69,18 +95,25 @@ class Offer {
   string gtin14
   string priceCurrency
   PriceSpecification eligibleTransactionVolume
-  AdministrativeArea,GeoShape,string,Place areaServed
+  AdministrativeArea areaServed
+  GeoShape areaServed
+  string areaServed
+  Place areaServed
   BusinessEntityType eligibleCustomerType
   ItemAvailability availability
   string gtin13
   Review reviews
   boolean isFamilyFriendly
-  dateTime,date validThrough
+  dateTime validThrough
+  date validThrough
   PriceSpecification priceSpecification
-  number,string price
-  time,dateTime,date availabilityStarts
+  number price
+  string price
+  time availabilityStarts
+  dateTime availabilityStarts
+  date availabilityStarts
   QuantitativeValue eligibleDuration
   Place availableAtOrFrom
   string serialNumber
 
-}
+ }

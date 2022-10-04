@@ -1,12 +1,15 @@
 classDiagram
-  ReceiveAction -- Person,Audience,Organization
-ReceiveAction -- DeliveryMethod
+  ReceiveAction -- Person
+  ReceiveAction -- Audience
+  ReceiveAction -- Organization
+  ReceiveAction -- DeliveryMethod
 
 
-TransferAction <|-- ReceiveAction
 class ReceiveAction {
 
-  Person,Audience,Organization sender
+  Person sender
+  Audience sender
+  Organization sender
   DeliveryMethod deliveryMethod
 
-}
+ }

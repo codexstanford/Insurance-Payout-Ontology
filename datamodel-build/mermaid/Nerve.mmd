@@ -1,16 +1,16 @@
 classDiagram
-  Nerve -- SuperficialAnatomy,AnatomicalStructure
-Nerve -- AnatomicalStructure
-Nerve -- BrainStructure
-Nerve -- Muscle
+  Nerve -- SuperficialAnatomy
+  Nerve -- AnatomicalStructure
+  Nerve -- BrainStructure
+  Nerve -- Muscle
 
 
-AnatomicalStructure <|-- Nerve
 class Nerve {
 
-  SuperficialAnatomy,AnatomicalStructure sensoryUnit
+  SuperficialAnatomy sensoryUnit
+  AnatomicalStructure sensoryUnit
   AnatomicalStructure branch
   BrainStructure sourcedFrom
   Muscle nerveMotor
 
-}
+ }

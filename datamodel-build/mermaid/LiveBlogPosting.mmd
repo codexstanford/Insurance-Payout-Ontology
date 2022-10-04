@@ -1,13 +1,12 @@
 classDiagram
   LiveBlogPosting -- dateTime
-LiveBlogPosting -- BlogPosting
+  LiveBlogPosting -- BlogPosting
 
 
-BlogPosting <|-- LiveBlogPosting
 class LiveBlogPosting {
 
   dateTime coverageEndTime
   dateTime coverageStartTime
   BlogPosting liveBlogUpdate
 
-}
+ }

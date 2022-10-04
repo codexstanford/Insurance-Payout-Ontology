@@ -1,15 +1,15 @@
 classDiagram
-  DefinedRegion -- Country,string
-DefinedRegion -- PostalCodeRangeSpecification
+  DefinedRegion -- Country
+  DefinedRegion -- PostalCodeRangeSpecification
 
 
-StructuredValue <|-- DefinedRegion
 class DefinedRegion {
 
-  Country,string addressCountry
+  Country addressCountry
+  string addressCountry
   string addressRegion
   PostalCodeRangeSpecification postalCodeRange
   string postalCodePrefix
   string postalCode
 
-}
+ }

@@ -1,12 +1,12 @@
 classDiagram
-  Joint -- string,MedicalEntity
+  Joint -- MedicalEntity
 
 
-AnatomicalStructure <|-- Joint
 class Joint {
 
   string structuralClass
   string biomechnicalClass
-  string,MedicalEntity functionalClass
+  string functionalClass
+  MedicalEntity functionalClass
 
-}
+ }

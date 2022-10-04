@@ -1,16 +1,17 @@
 classDiagram
-  ImageObject -- string,MediaObject
-ImageObject -- ImageObject
-ImageObject -- PropertyValue,string
+  ImageObject -- MediaObject
+  ImageObject -- ImageObject
+  ImageObject -- PropertyValue
 
 
-MediaObject <|-- ImageObject
 class ImageObject {
 
   string embeddedTextCaption
   boolean representativeOfPage
-  string,MediaObject caption
+  string caption
+  MediaObject caption
   ImageObject thumbnail
-  PropertyValue,string exifData
+  PropertyValue exifData
+  string exifData
 
-}
+ }

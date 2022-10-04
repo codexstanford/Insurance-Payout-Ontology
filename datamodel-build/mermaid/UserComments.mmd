@@ -1,16 +1,19 @@
 classDiagram
   UserComments -- CreativeWork
-UserComments -- dateTime,date
-UserComments -- Organization,Person
+  UserComments -- dateTime
+  UserComments -- date
+  UserComments -- Organization
+  UserComments -- Person
 
 
-UserInteraction <|-- UserComments
 class UserComments {
 
   string replyToUrl
   CreativeWork discusses
-  dateTime,date commentTime
+  dateTime commentTime
+  date commentTime
   string commentText
-  Organization,Person creator
+  Organization creator
+  Person creator
 
-}
+ }

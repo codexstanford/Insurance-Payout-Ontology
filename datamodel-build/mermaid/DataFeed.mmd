@@ -1,10 +1,12 @@
 classDiagram
-  DataFeed -- Thing,DataFeedItem,string
+  DataFeed -- Thing
+  DataFeed -- DataFeedItem
 
 
-Dataset <|-- DataFeed
 class DataFeed {
 
-  Thing,DataFeedItem,string dataFeedElement
+  Thing dataFeedElement
+  DataFeedItem dataFeedElement
+  string dataFeedElement
 
-}
+ }

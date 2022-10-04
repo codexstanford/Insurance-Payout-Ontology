@@ -1,10 +1,11 @@
 classDiagram
-  Quotation -- Person,Organization
+  Quotation -- Person
+  Quotation -- Organization
 
 
-CreativeWork <|-- Quotation
 class Quotation {
 
-  Person,Organization spokenByCharacter
+  Person spokenByCharacter
+  Organization spokenByCharacter
 
-}
+ }

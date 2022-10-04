@@ -1,14 +1,14 @@
 classDiagram
-  BroadcastEvent -- Language,string
-BroadcastEvent -- Event
+  BroadcastEvent -- Language
+  BroadcastEvent -- Event
 
 
-PublicationEvent <|-- BroadcastEvent
 class BroadcastEvent {
 
-  Language,string subtitleLanguage
+  Language subtitleLanguage
+  string subtitleLanguage
   string videoFormat
   Event broadcastOfEvent
   boolean isLiveBroadcast
 
-}
+ }

@@ -1,35 +1,47 @@
 classDiagram
-  Invoice -- MonetaryAmount,PriceSpecification
-Invoice -- Duration
-Invoice -- Order
-Invoice -- string,string,PhysicalActivityCategory,Thing,CategoryCode
-Invoice -- date
-Invoice -- Organization,Person
-Invoice -- dateTime,date
-Invoice -- Person,Organization
-Invoice -- PaymentStatusType,string
-Invoice -- dateTime
-Invoice -- PaymentMethod
+  Invoice -- MonetaryAmount
+  Invoice -- PriceSpecification
+  Invoice -- Duration
+  Invoice -- Order
+  Invoice -- PhysicalActivityCategory
+  Invoice -- Thing
+  Invoice -- CategoryCode
+  Invoice -- date
+  Invoice -- Organization
+  Invoice -- Person
+  Invoice -- dateTime
+  Invoice -- PaymentStatusType
+  Invoice -- PaymentMethod
 
 
-Intangible <|-- Invoice
 class Invoice {
 
-  MonetaryAmount,PriceSpecification totalPaymentDue
+  MonetaryAmount totalPaymentDue
+  PriceSpecification totalPaymentDue
   Duration billingPeriod
   Order referencesOrder
   string accountId
-  string,string,PhysicalActivityCategory,Thing,CategoryCode category
+  string category
+  string category
+  PhysicalActivityCategory category
+  Thing category
+  CategoryCode category
   date scheduledPaymentDate
   string confirmationNumber
-  Organization,Person customer
-  Organization,Person provider
-  MonetaryAmount,PriceSpecification minimumPaymentDue
-  dateTime,date paymentDueDate
-  Person,Organization broker
-  PaymentStatusType,string paymentStatus
+  Organization customer
+  Person customer
+  Organization provider
+  Person provider
+  MonetaryAmount minimumPaymentDue
+  PriceSpecification minimumPaymentDue
+  dateTime paymentDueDate
+  date paymentDueDate
+  Person broker
+  Organization broker
+  PaymentStatusType paymentStatus
+  string paymentStatus
   string paymentMethodId
   dateTime paymentDue
   PaymentMethod paymentMethod
 
-}
+ }

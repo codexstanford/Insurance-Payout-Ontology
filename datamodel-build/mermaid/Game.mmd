@@ -1,16 +1,18 @@
 classDiagram
   Game -- Thing
-Game -- QuantitativeValue
-Game -- Place,string,PostalAddress
+  Game -- QuantitativeValue
+  Game -- Place
+  Game -- PostalAddress
 
 
-CreativeWork <|-- Game
 class Game {
 
   Thing characterAttribute
   Thing gameItem
   QuantitativeValue numberOfPlayers
   Thing quest
-  Place,string,PostalAddress gameLocation
+  Place gameLocation
+  string gameLocation
+  PostalAddress gameLocation
 
-}
+ }

@@ -1,9 +1,8 @@
 classDiagram
   MedicalDevice -- MedicalEntity
-MedicalDevice -- string,MedicalContraindication
+  MedicalDevice -- MedicalContraindication
 
 
-MedicalEntity <|-- MedicalDevice
 class MedicalDevice {
 
   MedicalEntity adverseOutcome
@@ -11,6 +10,7 @@ class MedicalDevice {
   MedicalEntity seriousAdverseOutcome
   string postOp
   string procedure
-  string,MedicalContraindication contraindication
+  string contraindication
+  MedicalContraindication contraindication
 
-}
+ }

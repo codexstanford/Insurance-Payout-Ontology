@@ -1,60 +1,87 @@
 classDiagram
-  Demand -- Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service
-Demand -- TypeAndQuantityNode
-Demand -- BusinessFunction
-Demand -- OfferItemCondition
-Demand -- QuantitativeValue
-Demand -- LoanOrCredit,PaymentMethod
-Demand -- WarrantyPromise
-Demand -- Organization,Person
-Demand -- Place,string,GeoShape
-Demand -- DeliveryMethod
-Demand -- dateTime,date
-Demand -- date,dateTime,time
-Demand -- GeoShape,string,Place
-Demand -- PriceSpecification
-Demand -- AdministrativeArea,GeoShape,string,Place
-Demand -- BusinessEntityType
-Demand -- ItemAvailability
-Demand -- time,dateTime,date
-Demand -- Place
+  Demand -- Trip
+  Demand -- Event
+  Demand -- Product
+  Demand -- AggregateOffer
+  Demand -- CreativeWork
+  Demand -- MenuItem
+  Demand -- Service
+  Demand -- TypeAndQuantityNode
+  Demand -- BusinessFunction
+  Demand -- OfferItemCondition
+  Demand -- QuantitativeValue
+  Demand -- LoanOrCredit
+  Demand -- PaymentMethod
+  Demand -- WarrantyPromise
+  Demand -- Organization
+  Demand -- Person
+  Demand -- Place
+  Demand -- GeoShape
+  Demand -- DeliveryMethod
+  Demand -- dateTime
+  Demand -- date
+  Demand -- time
+  Demand -- PriceSpecification
+  Demand -- AdministrativeArea
+  Demand -- BusinessEntityType
+  Demand -- ItemAvailability
 
 
-Intangible <|-- Demand
 class Demand {
 
   string gtin12
-  Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service itemOffered
+  Trip itemOffered
+  Event itemOffered
+  Product itemOffered
+  AggregateOffer itemOffered
+  CreativeWork itemOffered
+  MenuItem itemOffered
+  Service itemOffered
   string mpn
   TypeAndQuantityNode includesObject
   BusinessFunction businessFunction
   OfferItemCondition itemCondition
   string gtin
   QuantitativeValue eligibleQuantity
-  LoanOrCredit,PaymentMethod acceptedPaymentMethod
+  LoanOrCredit acceptedPaymentMethod
+  PaymentMethod acceptedPaymentMethod
   WarrantyPromise warranty
-  Organization,Person seller
-  Place,string,GeoShape ineligibleRegion
+  Organization seller
+  Person seller
+  Place ineligibleRegion
+  string ineligibleRegion
+  GeoShape ineligibleRegion
   QuantitativeValue deliveryLeadTime
   DeliveryMethod availableDeliveryMethod
-  dateTime,date validFrom
-  date,dateTime,time availabilityEnds
-  GeoShape,string,Place eligibleRegion
+  dateTime validFrom
+  date validFrom
+  date availabilityEnds
+  dateTime availabilityEnds
+  time availabilityEnds
+  GeoShape eligibleRegion
+  string eligibleRegion
+  Place eligibleRegion
   string gtin8
   QuantitativeValue inventoryLevel
   string sku
   QuantitativeValue advanceBookingRequirement
   string gtin14
   PriceSpecification eligibleTransactionVolume
-  AdministrativeArea,GeoShape,string,Place areaServed
+  AdministrativeArea areaServed
+  GeoShape areaServed
+  string areaServed
+  Place areaServed
   BusinessEntityType eligibleCustomerType
   ItemAvailability availability
   string gtin13
-  dateTime,date validThrough
+  dateTime validThrough
+  date validThrough
   PriceSpecification priceSpecification
-  time,dateTime,date availabilityStarts
+  time availabilityStarts
+  dateTime availabilityStarts
+  date availabilityStarts
   QuantitativeValue eligibleDuration
   Place availableAtOrFrom
   string serialNumber
 
-}
+ }

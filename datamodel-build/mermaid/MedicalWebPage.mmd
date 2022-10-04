@@ -1,11 +1,12 @@
 classDiagram
-  MedicalWebPage -- MedicalAudienceType,MedicalAudience
+  MedicalWebPage -- MedicalAudienceType
+  MedicalWebPage -- MedicalAudience
 
 
-WebPage <|-- MedicalWebPage
 class MedicalWebPage {
 
   string aspect
-  MedicalAudienceType,MedicalAudience medicalAudience
+  MedicalAudienceType medicalAudience
+  MedicalAudience medicalAudience
 
-}
+ }

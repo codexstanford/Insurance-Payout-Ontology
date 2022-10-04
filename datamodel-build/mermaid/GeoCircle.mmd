@@ -1,12 +1,13 @@
 classDiagram
-  GeoCircle -- number,string,Distance
-GeoCircle -- GeoCoordinates
+  GeoCircle -- Distance
+  GeoCircle -- GeoCoordinates
 
 
-GeoShape <|-- GeoCircle
 class GeoCircle {
 
-  number,string,Distance geoRadius
+  number geoRadius
+  string geoRadius
+  Distance geoRadius
   GeoCoordinates geoMidpoint
 
-}
+ }

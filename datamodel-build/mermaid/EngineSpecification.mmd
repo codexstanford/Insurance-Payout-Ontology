@@ -1,16 +1,18 @@
 classDiagram
-  EngineSpecification -- string,string,QualitativeValue
-EngineSpecification -- QuantitativeValue
-EngineSpecification -- QualitativeValue,string,string
+  EngineSpecification -- QualitativeValue
+  EngineSpecification -- QuantitativeValue
 
 
-StructuredValue <|-- EngineSpecification
 class EngineSpecification {
 
-  string,string,QualitativeValue fuelType
+  string fuelType
+  string fuelType
+  QualitativeValue fuelType
   QuantitativeValue torque
   QuantitativeValue engineDisplacement
   QuantitativeValue enginePower
-  QualitativeValue,string,string engineType
+  QualitativeValue engineType
+  string engineType
+  string engineType
 
-}
+ }

@@ -1,0 +1,16 @@
+export enum WearableSizeSystemEnumeration {
+  WearableSizeSystemJP,
+  WearableSizeSystemCN,
+  WearableSizeSystemDE,
+  WearableSizeSystemAU,
+  WearableSizeSystemBR,
+  WearableSizeSystemEurope,
+  WearableSizeSystemGS1,
+  WearableSizeSystemMX,
+  WearableSizeSystemEN13402,
+  WearableSizeSystemUK,
+  WearableSizeSystemUS,
+  WearableSizeSystemIT,
+  WearableSizeSystemFR,
+  WearableSizeSystemContinental,
+}

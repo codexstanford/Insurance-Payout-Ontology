@@ -1,13 +1,13 @@
 classDiagram
-  PronounceableText -- string,Language
+  PronounceableText -- Language
 
 
-Text <|-- PronounceableText
 class PronounceableText {
 
   string phoneticText
   string speechToTextMarkup
   string textValue
-  string,Language inLanguage
+  string inLanguage
+  Language inLanguage
 
-}
+ }

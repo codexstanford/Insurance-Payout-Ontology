@@ -1,10 +1,10 @@
 classDiagram
-  HowToSupply -- string,MonetaryAmount
+  HowToSupply -- MonetaryAmount
 
 
-HowToItem <|-- HowToSupply
 class HowToSupply {
 
-  string,MonetaryAmount estimatedCost
+  string estimatedCost
+  MonetaryAmount estimatedCost
 
-}
+ }

@@ -1,13 +1,14 @@
 classDiagram
-  BroadcastFrequencySpecification -- QualitativeValue,string
-BroadcastFrequencySpecification -- number,QuantitativeValue
+  BroadcastFrequencySpecification -- QualitativeValue
+  BroadcastFrequencySpecification -- QuantitativeValue
 
 
-Intangible <|-- BroadcastFrequencySpecification
 class BroadcastFrequencySpecification {
 
   string broadcastSubChannel
-  QualitativeValue,string broadcastSignalModulation
-  number,QuantitativeValue broadcastFrequencyValue
+  QualitativeValue broadcastSignalModulation
+  string broadcastSignalModulation
+  number broadcastFrequencyValue
+  QuantitativeValue broadcastFrequencyValue
 
-}
+ }

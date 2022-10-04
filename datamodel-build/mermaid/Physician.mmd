@@ -1,15 +1,17 @@
 classDiagram
-  Physician -- MedicalTest,MedicalProcedure,MedicalTherapy
-Physician -- MedicalSpecialty
-Physician -- Hospital
+  Physician -- MedicalTest
+  Physician -- MedicalProcedure
+  Physician -- MedicalTherapy
+  Physician -- MedicalSpecialty
+  Physician -- Hospital
 
 
-MedicalOrganization <|-- Physician
-MedicalBusiness <|-- Physician
 class Physician {
 
-  MedicalTest,MedicalProcedure,MedicalTherapy availableService
+  MedicalTest availableService
+  MedicalProcedure availableService
+  MedicalTherapy availableService
   MedicalSpecialty medicalSpecialty
   Hospital hospitalAffiliation
 
-}
+ }

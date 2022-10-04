@@ -1,12 +1,13 @@
 classDiagram
-  TouristAttraction -- Audience,string
-TouristAttraction -- string,Language
+  TouristAttraction -- Audience
+  TouristAttraction -- Language
 
 
-Place <|-- TouristAttraction
 class TouristAttraction {
 
-  Audience,string touristType
-  string,Language availableLanguage
+  Audience touristType
+  string touristType
+  string availableLanguage
+  Language availableLanguage
 
-}
+ }

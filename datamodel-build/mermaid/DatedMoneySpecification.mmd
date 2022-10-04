@@ -1,15 +1,17 @@
 classDiagram
-  DatedMoneySpecification -- dateTime,date
-DatedMoneySpecification -- date,dateTime
-DatedMoneySpecification -- number,MonetaryAmount
+  DatedMoneySpecification -- dateTime
+  DatedMoneySpecification -- date
+  DatedMoneySpecification -- MonetaryAmount
 
 
-StructuredValue <|-- DatedMoneySpecification
 class DatedMoneySpecification {
 
-  dateTime,date startDate
-  date,dateTime endDate
+  dateTime startDate
+  date startDate
+  date endDate
+  dateTime endDate
   string currency
-  number,MonetaryAmount amount
+  number amount
+  MonetaryAmount amount
 
-}
+ }

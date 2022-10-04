@@ -1,14 +1,14 @@
 classDiagram
   MedicalTherapy -- MedicalTherapy
-MedicalTherapy -- MedicalEntity
-MedicalTherapy -- string,MedicalContraindication
+  MedicalTherapy -- MedicalEntity
+  MedicalTherapy -- MedicalContraindication
 
 
-TherapeuticProcedure <|-- MedicalTherapy
 class MedicalTherapy {
 
   MedicalTherapy duplicateTherapy
   MedicalEntity seriousAdverseOutcome
-  string,MedicalContraindication contraindication
+  string contraindication
+  MedicalContraindication contraindication
 
-}
+ }

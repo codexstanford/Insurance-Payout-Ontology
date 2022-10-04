@@ -1,21 +1,24 @@
 classDiagram
-  HowToDirection -- string,MediaObject
-HowToDirection -- HowToSupply,string
-HowToDirection -- Duration
-HowToDirection -- HowToTool,string
+  HowToDirection -- MediaObject
+  HowToDirection -- HowToSupply
+  HowToDirection -- Duration
+  HowToDirection -- HowToTool
 
 
-ListItem <|-- HowToDirection
-CreativeWork <|-- HowToDirection
 class HowToDirection {
 
-  string,MediaObject afterMedia
-  HowToSupply,string supply
-  string,MediaObject duringMedia
+  string afterMedia
+  MediaObject afterMedia
+  HowToSupply supply
+  string supply
+  string duringMedia
+  MediaObject duringMedia
   Duration totalTime
-  string,MediaObject beforeMedia
-  HowToTool,string tool
+  string beforeMedia
+  MediaObject beforeMedia
+  HowToTool tool
+  string tool
   Duration prepTime
   Duration performTime
 
-}
+ }

@@ -1,12 +1,11 @@
 classDiagram
-  SingleFamilyResidence -- QuantitativeValue,number
-SingleFamilyResidence -- QuantitativeValue
+  SingleFamilyResidence -- QuantitativeValue
 
 
-House <|-- SingleFamilyResidence
 class SingleFamilyResidence {
 
-  QuantitativeValue,number numberOfRooms
+  QuantitativeValue numberOfRooms
+  number numberOfRooms
   QuantitativeValue occupancy
 
-}
+ }

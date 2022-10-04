@@ -1,24 +1,31 @@
 classDiagram
   ContactPoint -- OpeningHoursSpecification
-ContactPoint -- ContactPointOption
-ContactPoint -- string,Language
-ContactPoint -- GeoShape,AdministrativeArea,Place
-ContactPoint -- AdministrativeArea,GeoShape,string,Place
-ContactPoint -- string,Product
+  ContactPoint -- ContactPointOption
+  ContactPoint -- Language
+  ContactPoint -- GeoShape
+  ContactPoint -- AdministrativeArea
+  ContactPoint -- Place
+  ContactPoint -- Product
 
 
-StructuredValue <|-- ContactPoint
 class ContactPoint {
 
   string telephone
   OpeningHoursSpecification hoursAvailable
   string email
   ContactPointOption contactOption
-  string,Language availableLanguage
-  GeoShape,AdministrativeArea,Place serviceArea
-  AdministrativeArea,GeoShape,string,Place areaServed
+  string availableLanguage
+  Language availableLanguage
+  GeoShape serviceArea
+  AdministrativeArea serviceArea
+  Place serviceArea
+  AdministrativeArea areaServed
+  GeoShape areaServed
+  string areaServed
+  Place areaServed
   string contactType
-  string,Product productSupported
+  string productSupported
+  Product productSupported
   string faxNumber
 
-}
+ }

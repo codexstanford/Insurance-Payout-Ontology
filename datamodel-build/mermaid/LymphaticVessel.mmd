@@ -1,13 +1,14 @@
 classDiagram
   LymphaticVessel -- Vessel
-LymphaticVessel -- AnatomicalSystem,AnatomicalStructure
+  LymphaticVessel -- AnatomicalSystem
+  LymphaticVessel -- AnatomicalStructure
 
 
-Vessel <|-- LymphaticVessel
 class LymphaticVessel {
 
   Vessel runsTo
-  AnatomicalSystem,AnatomicalStructure regionDrained
+  AnatomicalSystem regionDrained
+  AnatomicalStructure regionDrained
   Vessel originatesFrom
 
-}
+ }

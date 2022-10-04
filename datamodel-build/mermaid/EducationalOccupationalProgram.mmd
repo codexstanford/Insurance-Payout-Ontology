@@ -1,48 +1,63 @@
 classDiagram
-  EducationalOccupationalProgram -- AlignmentObject,Course,EducationalOccupationalCredential,string
-EducationalOccupationalProgram -- Course
-EducationalOccupationalProgram -- dateTime,date
-EducationalOccupationalProgram -- MonetaryAmountDistribution
-EducationalOccupationalProgram -- DayOfWeek
-EducationalOccupationalProgram -- Offer,Demand
-EducationalOccupationalProgram -- number,StructuredValue
-EducationalOccupationalProgram -- date
-EducationalOccupationalProgram -- date,dateTime
-EducationalOccupationalProgram -- Organization,Person
-EducationalOccupationalProgram -- string,EducationalOccupationalCredential,string
-EducationalOccupationalProgram -- Duration
-EducationalOccupationalProgram -- EducationalOccupationalCredential,string,string
-EducationalOccupationalProgram -- string,string
-EducationalOccupationalProgram -- string,DefinedTerm
-EducationalOccupationalProgram -- CategoryCode,string
+  EducationalOccupationalProgram -- AlignmentObject
+  EducationalOccupationalProgram -- Course
+  EducationalOccupationalProgram -- EducationalOccupationalCredential
+  EducationalOccupationalProgram -- dateTime
+  EducationalOccupationalProgram -- date
+  EducationalOccupationalProgram -- MonetaryAmountDistribution
+  EducationalOccupationalProgram -- DayOfWeek
+  EducationalOccupationalProgram -- Offer
+  EducationalOccupationalProgram -- Demand
+  EducationalOccupationalProgram -- StructuredValue
+  EducationalOccupationalProgram -- Organization
+  EducationalOccupationalProgram -- Person
+  EducationalOccupationalProgram -- Duration
+  EducationalOccupationalProgram -- DefinedTerm
+  EducationalOccupationalProgram -- CategoryCode
 
 
-Intangible <|-- EducationalOccupationalProgram
 class EducationalOccupationalProgram {
 
-  AlignmentObject,Course,EducationalOccupationalCredential,string programPrerequisites
+  AlignmentObject programPrerequisites
+  Course programPrerequisites
+  EducationalOccupationalCredential programPrerequisites
+  string programPrerequisites
   Course hasCourse
-  dateTime,date startDate
+  dateTime startDate
+  date startDate
   MonetaryAmountDistribution salaryUponCompletion
   number termsPerYear
   DayOfWeek dayOfWeek
-  Offer,Demand offers
-  number,StructuredValue typicalCreditsPerTerm
+  Offer offers
+  Demand offers
+  number typicalCreditsPerTerm
+  StructuredValue typicalCreditsPerTerm
   date applicationStartDate
   string timeOfDay
-  date,dateTime endDate
-  Organization,Person provider
+  date endDate
+  dateTime endDate
+  Organization provider
+  Person provider
   MonetaryAmountDistribution trainingSalary
-  string,EducationalOccupationalCredential,string educationalCredentialAwarded
-  number,StructuredValue numberOfCredits
+  string educationalCredentialAwarded
+  EducationalOccupationalCredential educationalCredentialAwarded
+  string educationalCredentialAwarded
+  number numberOfCredits
+  StructuredValue numberOfCredits
   Duration timeToComplete
-  EducationalOccupationalCredential,string,string occupationalCredentialAwarded
+  EducationalOccupationalCredential occupationalCredentialAwarded
+  string occupationalCredentialAwarded
+  string occupationalCredentialAwarded
   Duration termDuration
-  string,string educationalProgramMode
-  string,DefinedTerm programType
+  string educationalProgramMode
+  string educationalProgramMode
+  string programType
+  DefinedTerm programType
   number maximumEnrollment
-  string,DefinedTerm financialAidEligible
+  string financialAidEligible
+  DefinedTerm financialAidEligible
   date applicationDeadline
-  CategoryCode,string occupationalCategory
+  CategoryCode occupationalCategory
+  string occupationalCategory
 
-}
+ }

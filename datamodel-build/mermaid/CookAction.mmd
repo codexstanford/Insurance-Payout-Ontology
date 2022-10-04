@@ -1,14 +1,15 @@
 classDiagram
   CookAction -- Recipe
-CookAction -- Place,FoodEstablishment
-CookAction -- FoodEvent
+  CookAction -- Place
+  CookAction -- FoodEstablishment
+  CookAction -- FoodEvent
 
 
-CreateAction <|-- CookAction
 class CookAction {
 
   Recipe recipe
-  Place,FoodEstablishment foodEstablishment
+  Place foodEstablishment
+  FoodEstablishment foodEstablishment
   FoodEvent foodEvent
 
-}
+ }

@@ -1,17 +1,18 @@
 classDiagram
   DrugCost -- AdministrativeArea
-DrugCost -- number,string,QualitativeValue
-DrugCost -- DrugCostCategory
+  DrugCost -- QualitativeValue
+  DrugCost -- DrugCostCategory
 
 
-MedicalEntity <|-- DrugCost
 class DrugCost {
 
   AdministrativeArea applicableLocation
-  number,string,QualitativeValue costPerUnit
+  number costPerUnit
+  string costPerUnit
+  QualitativeValue costPerUnit
   DrugCostCategory costCategory
   string drugUnit
   string costCurrency
   string costOrigin
 
-}
+ }

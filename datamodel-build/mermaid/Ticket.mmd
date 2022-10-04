@@ -1,22 +1,26 @@
 classDiagram
-  Ticket -- string,string
-Ticket -- Seat
-Ticket -- PriceSpecification,number,string
-Ticket -- Organization
-Ticket -- date,dateTime
-Ticket -- Organization,Person
+  Ticket -- Seat
+  Ticket -- PriceSpecification
+  Ticket -- Organization
+  Ticket -- date
+  Ticket -- dateTime
+  Ticket -- Person
 
 
-Intangible <|-- Ticket
 class Ticket {
 
-  string,string ticketToken
+  string ticketToken
+  string ticketToken
   Seat ticketedSeat
-  PriceSpecification,number,string totalPrice
+  PriceSpecification totalPrice
+  number totalPrice
+  string totalPrice
   Organization issuedBy
   string ticketNumber
-  date,dateTime dateIssued
+  date dateIssued
+  dateTime dateIssued
   string priceCurrency
-  Organization,Person underName
+  Organization underName
+  Person underName
 
-}
+ }

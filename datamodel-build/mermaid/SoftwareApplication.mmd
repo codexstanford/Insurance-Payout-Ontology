@@ -1,37 +1,44 @@
 classDiagram
-  SoftwareApplication -- string,string
-SoftwareApplication -- CreativeWork
-SoftwareApplication -- SoftwareApplication
-SoftwareApplication -- ImageObject,string
-SoftwareApplication -- DataFeed
+  SoftwareApplication -- CreativeWork
+  SoftwareApplication -- SoftwareApplication
+  SoftwareApplication -- ImageObject
+  SoftwareApplication -- DataFeed
 
 
-CreativeWork <|-- SoftwareApplication
 class SoftwareApplication {
 
   string countriesSupported
   string installUrl
   string operatingSystem
-  string,string memoryRequirements
+  string memoryRequirements
+  string memoryRequirements
   string softwareVersion
-  string,string storageRequirements
+  string storageRequirements
+  string storageRequirements
   CreativeWork softwareHelp
-  string,string applicationSubCategory
+  string applicationSubCategory
+  string applicationSubCategory
   string downloadUrl
-  string,string applicationCategory
+  string applicationCategory
+  string applicationCategory
   string countriesNotSupported
-  string,string softwareRequirements
+  string softwareRequirements
+  string softwareRequirements
   SoftwareApplication softwareAddOn
   string applicationSuite
-  string,string requirements
+  string requirements
+  string requirements
   string permissions
   string processorRequirements
-  ImageObject,string screenshot
-  string,string featureList
-  string,string releaseNotes
+  ImageObject screenshot
+  string screenshot
+  string featureList
+  string featureList
+  string releaseNotes
+  string releaseNotes
   DataFeed supportingData
   string fileSize
   string device
   string availableOnDevice
 
-}
+ }

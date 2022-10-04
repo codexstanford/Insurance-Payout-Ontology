@@ -1,11 +1,10 @@
 classDiagram
   MovieSeries -- Person
-MovieSeries -- VideoObject
-MovieSeries -- Organization
-MovieSeries -- Person,MusicGroup
+  MovieSeries -- VideoObject
+  MovieSeries -- Organization
+  MovieSeries -- MusicGroup
 
 
-CreativeWorkSeries <|-- MovieSeries
 class MovieSeries {
 
   Person director
@@ -13,7 +12,8 @@ class MovieSeries {
   VideoObject trailer
   Organization productionCompany
   Person actors
-  Person,MusicGroup musicBy
+  Person musicBy
+  MusicGroup musicBy
   Person directors
 
-}
+ }

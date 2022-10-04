@@ -36,6 +36,10 @@ fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/index.html`, home);
 let INDEX = {
     
 };
+
+let CAT_INDEX = {
+    
+};
 let DM_INDEX = "";
 
 function buildIndex() {
@@ -43,7 +47,9 @@ function buildIndex() {
   let index = {
 
   }
+  let indexToFile = {
 
+  };
   for (let file of objectsList) {
 
     let data = file.data;
@@ -51,8 +57,11 @@ function buildIndex() {
     
     INDEX[objName] = data[objName];
 
+    INDEX[objName].namespace = file.namespace;
+
     if (!index[file.namespace]) {
       index[file.namespace] = "";
+      indexToFile[file.namespace] = objName;
     }
 
     index[file.namespace] += `<li><a href="${objName}.html" class="d-inline-flex text-decoration-none subLink namedLink${objName}">${objName}</a></li><!--SUBMENU_${objName}-->`;
@@ -62,6 +71,15 @@ function buildIndex() {
     DM_INDEX += `
     <li> <span class='d-inline-flex text-decoration-none menuCategory'>${catName}</span></li> 
     ${index[catName]}`;
+    CAT_INDEX[catName] = '';
+    for (let allCatName in index) {
+      CAT_INDEX[catName] += `
+      <li> <a  href="${indexToFile[allCatName]}.html" class='d-inline-flex text-decoration-none menuCategory'>${allCatName}</a></li>`
+      if (allCatName == catName) {
+        CAT_INDEX[catName] += `${index[catName]}`;
+      }
+
+    }
   }
  
 
@@ -207,7 +225,7 @@ function buildObjDoc(objName) {
   fs.writeFileSync(`${DATA_MODEL_DOC_PATH}/${name}.html`, 
   template
     .replace('$$CONTENT', doc)
-    .replace('<!--$$DM_INDEX-->', DM_INDEX)
+    .replace('<!--$$DM_INDEX-->', CAT_INDEX[data.namespace])
     .replace(`namedLink${name}`, 'activeLink')
     .replace(`<!--SUBMENU_${name}-->`, PROP_MENU)
     , 

@@ -1,12 +1,17 @@
 classDiagram
-  DigitalDocumentPermission -- Person,Audience,ContactPoint,Organization
-DigitalDocumentPermission -- DigitalDocumentPermissionType
+  DigitalDocumentPermission -- Person
+  DigitalDocumentPermission -- Audience
+  DigitalDocumentPermission -- ContactPoint
+  DigitalDocumentPermission -- Organization
+  DigitalDocumentPermission -- DigitalDocumentPermissionType
 
 
-Intangible <|-- DigitalDocumentPermission
 class DigitalDocumentPermission {
 
-  Person,Audience,ContactPoint,Organization grantee
+  Person grantee
+  Audience grantee
+  ContactPoint grantee
+  Organization grantee
   DigitalDocumentPermissionType permissionType
 
-}
+ }

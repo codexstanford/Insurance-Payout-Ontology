@@ -1,6 +1,7 @@
 const fs = require('fs');
 const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
 
+const exec = require('child_process').exec;
 const execSync = require('child_process').execSync;
 const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 
@@ -9,6 +10,7 @@ const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 // todo add it as an argument
 const REDO_ALL = true;
 
+let renderQueue = [];
 
 // remove old build
 if (REDO_ALL) {
@@ -27,7 +29,11 @@ let output = "classDiagram";
 
 for (let file of objectsList) {
 
-  output += buildMermaid(file) || "";
+  let data = buildMermaid(file);
+
+  if (data && data != "undefined") {
+    output += data;
+  }
 }
 
   fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.mmd`, output, 'utf8');
@@ -45,7 +51,7 @@ ${output.replace(/</g, '&lt').replace(/>/g, '&gt')}
 </div>
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
-mermaid.initialize({startOnLoad:true});
+mermaid.initialize({startOnLoad:true,   maxTextSize: 9000000});
 </script>
 
 
@@ -107,14 +113,14 @@ function renderObject(name, data) {
 
   let output = "";
 
-  if (data.inherit) {
+  if (data.inherit == "string") {
     if (typeof data.inherit == "string") {
-      output += `${data.inherit} <|-- ${name}
+      output += `  ${data.inherit} <|-- ${name}
 `;
     }
-    else {
+    else if (data.inherit) {
       for (let inherit of data.inherit) {
-        output += `${inherit} <|-- ${name}
+        output += `  ${inherit} <|-- ${name}
 `;
       }
     }
@@ -143,9 +149,18 @@ function renderObject(name, data) {
         typeList[property.of] = true;
       }
       else {
-        output += `
+        if (Array.isArray(property.type)) {
+          for (let pType of property.type) {
+            output += `
+  ${pType} ${propertyName}`;
+            typeList[pType] = true;
+          }
+        }
+        else {
+          output += `
   ${property.type} ${propertyName}`;
-      typeList[property.type] = true;
+              typeList[property.type] = true;
+        }
       }
     }
   }
@@ -165,7 +180,7 @@ function renderObject(name, data) {
     if (systemType[type]) {
       continue;
     }
-    importStmt += `${name} -- ${type}
+    importStmt += `  ${name} -- ${type}
 `;
   }
 
@@ -173,23 +188,29 @@ function renderObject(name, data) {
 
 ${output}
 
-}
+ }
 `
 
   fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.mmd`, `classDiagram
-  ${output}`);
-execSync(`mmdc -i ${DATA_MODEL_MERMAID_PATH}/${name}.mmd -o ${DATA_MODEL_MERMAID_PATH}/${name}.svg`);
-fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, styleIt(
-  fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, 'utf8')
-));
+${output}`);
+  renderFarm(name);
   return output;
 }
 
 function renderEnum(name, data) {
   let output = "";
-  if (data.inherit) {
-    output += `${data.inherit} o-- ${name}
-  `;
+  if (data.inherit == "string") {
+    if (typeof data.inherit == "string") {
+      output += `${data.inherit} <|-- ${name}
+`;
+    }
+    else if (data.inherit) {
+      for (let inherit of data.inherit) {
+        output += `${inherit} <|-- ${name}
+`;
+      }
+    }
+
   }
   output += `class ${name} {
 <<enumeration>>
@@ -212,21 +233,36 @@ function renderEnum(name, data) {
 `
   }
 
-  output += `}
+  output += ` }
 `;
 
 
-fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.mmd`, `classDiagram
-${output}`);
-execSync(`mmdc -i ${DATA_MODEL_MERMAID_PATH}/${name}.mmd -o ${DATA_MODEL_MERMAID_PATH}/${name}.svg`);
+  fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.mmd`, `classDiagram
+  ${output}`);
 
-fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, styleIt(
-  fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, 'utf8')
-));
+  renderFarm(name);
 
- // fs.writeFileSync(`${DATA_MODEL_TS_PATH}/${name}.ts`, output, 'utf8');
 
   return output;
+}
+
+
+
+function renderFarm(name) {
+  renderQueue.push(name);
+}
+
+async function renderWorker(inputName) {
+  console.log(`...rendering ${inputName}`);
+  let name = inputName;
+  function callback() {
+    fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, styleIt(
+      fs.readFileSync(`${DATA_MODEL_MERMAID_PATH}/${name}.svg`, 'utf8')
+    ));
+    // setTimeout to destroy the callStack;
+    setTimeout(nextJob, 1);
+  }
+  exec(`mmdc -i ${DATA_MODEL_MERMAID_PATH}/${name}.mmd -o ${DATA_MODEL_MERMAID_PATH}/${name}.svg`, callback);
 }
 
 function styleIt(svg) {
@@ -236,4 +272,18 @@ function styleIt(svg) {
   svg = svg.replace(/9370DB/g, "222222");
 
   return svg;
+}
+
+function nextJob() {
+  if (!renderQueue.length) {
+    return;
+  }
+
+  let item = renderQueue.pop();
+  renderWorker(item);
+}
+
+WORKER_COUNT = 5;
+for (let i = 0; i < WORKER_COUNT; ++i) {
+  nextJob();
 }

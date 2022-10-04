@@ -1,20 +1,20 @@
 classDiagram
-  MolecularEntity -- string,QuantitativeValue
-MolecularEntity -- DefinedTerm
-MolecularEntity -- QuantitativeValue,string
+  MolecularEntity -- QuantitativeValue
+  MolecularEntity -- DefinedTerm
 
 
-BioChemEntity <|-- MolecularEntity
 class MolecularEntity {
 
   string inChIKey
   string iupacName
-  string,QuantitativeValue monoisotopicMolecularWeight
+  string monoisotopicMolecularWeight
+  QuantitativeValue monoisotopicMolecularWeight
   string molecularFormula
   DefinedTerm potentialUse
   DefinedTerm chemicalRole
-  QuantitativeValue,string molecularWeight
+  QuantitativeValue molecularWeight
+  string molecularWeight
   string inChI
   string smiles
 
-}
+ }

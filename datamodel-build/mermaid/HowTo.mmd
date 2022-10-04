@@ -1,24 +1,34 @@
 classDiagram
-  HowTo -- string,QuantitativeValue
-HowTo -- string,MonetaryAmount
-HowTo -- HowToSupply,string
-HowTo -- HowToStep,HowToSection,string,CreativeWork
-HowTo -- Duration
-HowTo -- HowToTool,string
-HowTo -- ItemList,CreativeWork,string
+  HowTo -- QuantitativeValue
+  HowTo -- MonetaryAmount
+  HowTo -- HowToSupply
+  HowTo -- HowToStep
+  HowTo -- HowToSection
+  HowTo -- CreativeWork
+  HowTo -- Duration
+  HowTo -- HowToTool
+  HowTo -- ItemList
 
 
-CreativeWork <|-- HowTo
 class HowTo {
 
-  string,QuantitativeValue yield
-  string,MonetaryAmount estimatedCost
-  HowToSupply,string supply
-  HowToStep,HowToSection,string,CreativeWork step
+  string yield
+  QuantitativeValue yield
+  string estimatedCost
+  MonetaryAmount estimatedCost
+  HowToSupply supply
+  string supply
+  HowToStep step
+  HowToSection step
+  string step
+  CreativeWork step
   Duration totalTime
-  HowToTool,string tool
+  HowToTool tool
+  string tool
   Duration prepTime
-  ItemList,CreativeWork,string steps
+  ItemList steps
+  CreativeWork steps
+  string steps
   Duration performTime
 
-}
+ }

@@ -1,37 +1,35 @@
 classDiagram
   Person -- Person
-Person -- EducationalOccupationalCredential
-Person -- string,string,Thing
-Person -- Event
-Person -- MonetaryAmount,PriceSpecification
-Person -- Place,ContactPoint
-Person -- Place
-Person -- Grant
-Person -- Distance,QuantitativeValue
-Person -- ContactPoint
-Person -- Occupation
-Person -- GenderType,string
-Person -- string,DefinedTerm
-Person -- date
-Person -- Organization,Person
-Person -- Offer
-Person -- Organization
-Person -- InteractionCounter
-Person -- string,PostalAddress
-Person -- ProgramMembership,Organization
-Person -- string,CreativeWork
-Person -- Organization,Brand
-Person -- EducationalOrganization,Organization
-Person -- QuantitativeValue
-Person -- Language,string
-Person -- Person,string
-Person -- Demand
-Person -- Product,OwnershipInfo
-Person -- OfferCatalog
-Person -- Country
+  Person -- EducationalOccupationalCredential
+  Person -- Thing
+  Person -- Event
+  Person -- MonetaryAmount
+  Person -- PriceSpecification
+  Person -- Place
+  Person -- ContactPoint
+  Person -- Grant
+  Person -- Distance
+  Person -- QuantitativeValue
+  Person -- Occupation
+  Person -- GenderType
+  Person -- DefinedTerm
+  Person -- date
+  Person -- Organization
+  Person -- Offer
+  Person -- InteractionCounter
+  Person -- PostalAddress
+  Person -- ProgramMembership
+  Person -- CreativeWork
+  Person -- Brand
+  Person -- EducationalOrganization
+  Person -- Language
+  Person -- Demand
+  Person -- Product
+  Person -- OwnershipInfo
+  Person -- OfferCatalog
+  Person -- Country
 
 
-Thing <|-- Person
 class Person {
 
   Person spouse
@@ -42,60 +40,78 @@ class Person {
   Person parents
   string familyName
   string givenName
-  string,string,Thing knowsAbout
+  string knowsAbout
+  string knowsAbout
+  Thing knowsAbout
   Event performerIn
-  MonetaryAmount,PriceSpecification netWorth
+  MonetaryAmount netWorth
+  PriceSpecification netWorth
   string award
-  Place,ContactPoint workLocation
+  Place workLocation
+  ContactPoint workLocation
   string honorificSuffix
   Place deathPlace
-  Place,ContactPoint homeLocation
+  Place homeLocation
+  ContactPoint homeLocation
   Grant funding
   string vatID
-  Distance,QuantitativeValue height
+  Distance height
+  QuantitativeValue height
   string globalLocationNumber
   ContactPoint contactPoints
   Occupation hasOccupation
-  GenderType,string gender
+  GenderType gender
+  string gender
   Person parent
   string awards
   Person sibling
-  string,DefinedTerm jobTitle
+  string jobTitle
+  DefinedTerm jobTitle
   date birthDate
-  Organization,Person funder
+  Organization funder
+  Person funder
   Offer makesOffer
   Person children
   Organization worksFor
   Person knows
   InteractionCounter interactionStatistic
-  string,PostalAddress address
-  ProgramMembership,Organization memberOf
-  string,CreativeWork publishingPrinciples
+  string address
+  PostalAddress address
+  ProgramMembership memberOf
+  Organization memberOf
+  string publishingPrinciples
+  CreativeWork publishingPrinciples
   Person colleagues
   date deathDate
   string email
   Organization affiliation
   Person siblings
   Place birthPlace
-  Organization,Brand brand
-  Organization,Person sponsor
+  Organization brand
+  Brand brand
+  Organization sponsor
+  Person sponsor
   string naics
   ContactPoint contactPoint
   string callSign
   string isicV4
   Place hasPOS
-  EducationalOrganization,Organization alumniOf
+  EducationalOrganization alumniOf
+  Organization alumniOf
   string duns
   QuantitativeValue weight
-  Language,string knowsLanguage
+  Language knowsLanguage
+  string knowsLanguage
   Person relatedTo
-  Person,string colleague
+  Person colleague
+  string colleague
   Demand seeks
   string taxID
-  Product,OwnershipInfo owns
+  Product owns
+  OwnershipInfo owns
   OfferCatalog hasOfferCatalog
   Person follows
   Country nationality
   string faxNumber
 
-}
+ }

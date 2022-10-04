@@ -1,20 +1,25 @@
 classDiagram
-  Course -- string,AlignmentObject,Course
-Course -- string,EducationalOccupationalCredential,string
-Course -- number,StructuredValue
-Course -- EducationalOccupationalCredential,string,string
-Course -- CourseInstance
+  Course -- AlignmentObject
+  Course -- Course
+  Course -- EducationalOccupationalCredential
+  Course -- StructuredValue
+  Course -- CourseInstance
 
 
-LearningResource <|-- Course
-CreativeWork <|-- Course
 class Course {
 
-  string,AlignmentObject,Course coursePrerequisites
-  string,EducationalOccupationalCredential,string educationalCredentialAwarded
-  number,StructuredValue numberOfCredits
-  EducationalOccupationalCredential,string,string occupationalCredentialAwarded
+  string coursePrerequisites
+  AlignmentObject coursePrerequisites
+  Course coursePrerequisites
+  string educationalCredentialAwarded
+  EducationalOccupationalCredential educationalCredentialAwarded
+  string educationalCredentialAwarded
+  number numberOfCredits
+  StructuredValue numberOfCredits
+  EducationalOccupationalCredential occupationalCredentialAwarded
+  string occupationalCredentialAwarded
+  string occupationalCredentialAwarded
   string courseCode
   CourseInstance hasCourseInstance
 
-}
+ }

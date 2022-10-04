@@ -1,13 +1,13 @@
 classDiagram
-  Seat -- QualitativeValue,string
+  Seat -- QualitativeValue
 
 
-Intangible <|-- Seat
 class Seat {
 
-  QualitativeValue,string seatingType
+  QualitativeValue seatingType
+  string seatingType
   string seatSection
   string seatRow
   string seatNumber
 
-}
+ }

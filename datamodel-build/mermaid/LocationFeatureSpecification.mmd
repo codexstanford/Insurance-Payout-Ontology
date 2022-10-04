@@ -1,13 +1,15 @@
 classDiagram
   LocationFeatureSpecification -- OpeningHoursSpecification
-LocationFeatureSpecification -- dateTime,date
+  LocationFeatureSpecification -- dateTime
+  LocationFeatureSpecification -- date
 
 
-PropertyValue <|-- LocationFeatureSpecification
 class LocationFeatureSpecification {
 
   OpeningHoursSpecification hoursAvailable
-  dateTime,date validFrom
-  dateTime,date validThrough
+  dateTime validFrom
+  date validFrom
+  dateTime validThrough
+  date validThrough
 
-}
+ }

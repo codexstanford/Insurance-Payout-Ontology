@@ -1,12 +1,11 @@
 classDiagram
   ConsumeAction -- Offer
-ConsumeAction -- ActionAccessSpecification
+  ConsumeAction -- ActionAccessSpecification
 
 
-Action <|-- ConsumeAction
 class ConsumeAction {
 
   Offer expectsAcceptanceOf
   ActionAccessSpecification actionAccessibilityRequirement
 
-}
+ }

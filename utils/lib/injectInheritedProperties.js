@@ -19,8 +19,6 @@ function inheritParentProperties(data, parentObjectName, chain) {
       if (!data.properties[property]) {
         parentObj.properties[property].inherited = parentObjectName;
         data.properties[property] = parentObj.properties[property];
-      } else {
-        data.properties[property].overloaded = parentObjectName;
       }
     }
   }

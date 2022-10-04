@@ -1,15 +1,14 @@
 classDiagram
   ExerciseAction -- SportsTeam
-ExerciseAction -- Place
-ExerciseAction -- Diet
-ExerciseAction -- SportsActivityLocation
-ExerciseAction -- Distance
-ExerciseAction -- ExercisePlan
-ExerciseAction -- SportsEvent
-ExerciseAction -- Person
+  ExerciseAction -- Place
+  ExerciseAction -- Diet
+  ExerciseAction -- SportsActivityLocation
+  ExerciseAction -- Distance
+  ExerciseAction -- ExercisePlan
+  ExerciseAction -- SportsEvent
+  ExerciseAction -- Person
 
 
-PlayAction <|-- ExerciseAction
 class ExerciseAction {
 
   SportsTeam sportsTeam
@@ -26,4 +25,4 @@ class ExerciseAction {
   Place toLocation
   string exerciseType
 
-}
+ }

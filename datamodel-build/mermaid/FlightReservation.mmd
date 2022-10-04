@@ -1,13 +1,13 @@
 classDiagram
-  FlightReservation -- QualitativeValue,string
+  FlightReservation -- QualitativeValue
 
 
-Reservation <|-- FlightReservation
 class FlightReservation {
 
-  QualitativeValue,string passengerPriorityStatus
+  QualitativeValue passengerPriorityStatus
+  string passengerPriorityStatus
   string boardingGroup
   string securityScreening
   string passengerSequenceNumber
 
-}
+ }

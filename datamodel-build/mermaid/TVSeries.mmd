@@ -1,19 +1,17 @@
 classDiagram
-  TVSeries -- string,CreativeWorkSeason
-TVSeries -- CreativeWorkSeason
-TVSeries -- Country
-TVSeries -- Person
-TVSeries -- VideoObject
-TVSeries -- Episode
-TVSeries -- Organization
-TVSeries -- Person,MusicGroup
+  TVSeries -- CreativeWorkSeason
+  TVSeries -- Country
+  TVSeries -- Person
+  TVSeries -- VideoObject
+  TVSeries -- Episode
+  TVSeries -- Organization
+  TVSeries -- MusicGroup
 
 
-CreativeWorkSeries <|-- TVSeries
-CreativeWork <|-- TVSeries
 class TVSeries {
 
-  string,CreativeWorkSeason season
+  string season
+  CreativeWorkSeason season
   CreativeWorkSeason containsSeason
   Country countryOfOrigin
   Person director
@@ -25,8 +23,9 @@ class TVSeries {
   Organization productionCompany
   Person actors
   number numberOfSeasons
-  Person,MusicGroup musicBy
+  Person musicBy
+  MusicGroup musicBy
   Episode episode
   Person directors
 
-}
+ }

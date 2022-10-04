@@ -1,10 +1,11 @@
 classDiagram
-  EndorseAction -- Person,Organization
+  EndorseAction -- Person
+  EndorseAction -- Organization
 
 
-ReactAction <|-- EndorseAction
 class EndorseAction {
 
-  Person,Organization endorsee
+  Person endorsee
+  Organization endorsee
 
-}
+ }

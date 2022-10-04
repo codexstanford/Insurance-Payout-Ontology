@@ -1,23 +1,22 @@
 classDiagram
-  VideoGameSeries -- string,CreativeWorkSeason
-VideoGameSeries -- CreativeWorkSeason
-VideoGameSeries -- Person
-VideoGameSeries -- VideoObject
-VideoGameSeries -- Episode
-VideoGameSeries -- Thing
-VideoGameSeries -- CreativeWork
-VideoGameSeries -- Organization
-VideoGameSeries -- GamePlayMode
-VideoGameSeries -- string,string,Thing
-VideoGameSeries -- Person,MusicGroup
-VideoGameSeries -- QuantitativeValue
-VideoGameSeries -- Place,string,PostalAddress
+  VideoGameSeries -- CreativeWorkSeason
+  VideoGameSeries -- Person
+  VideoGameSeries -- VideoObject
+  VideoGameSeries -- Episode
+  VideoGameSeries -- Thing
+  VideoGameSeries -- CreativeWork
+  VideoGameSeries -- Organization
+  VideoGameSeries -- GamePlayMode
+  VideoGameSeries -- MusicGroup
+  VideoGameSeries -- QuantitativeValue
+  VideoGameSeries -- Place
+  VideoGameSeries -- PostalAddress
 
 
-CreativeWorkSeries <|-- VideoGameSeries
 class VideoGameSeries {
 
-  string,CreativeWorkSeason season
+  string season
+  CreativeWorkSeason season
   CreativeWorkSeason containsSeason
   Person director
   Person actor
@@ -31,13 +30,18 @@ class VideoGameSeries {
   Organization productionCompany
   Person actors
   GamePlayMode playMode
-  string,string,Thing gamePlatform
+  string gamePlatform
+  string gamePlatform
+  Thing gamePlatform
   number numberOfSeasons
-  Person,MusicGroup musicBy
+  Person musicBy
+  MusicGroup musicBy
   QuantitativeValue numberOfPlayers
   Thing quest
-  Place,string,PostalAddress gameLocation
+  Place gameLocation
+  string gameLocation
+  PostalAddress gameLocation
   Episode episode
   Person directors
 
-}
+ }

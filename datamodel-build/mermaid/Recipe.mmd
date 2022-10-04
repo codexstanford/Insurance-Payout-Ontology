@@ -1,23 +1,26 @@
 classDiagram
-  Recipe -- string,CreativeWork,ItemList
-Recipe -- RestrictedDiet
-Recipe -- NutritionInformation
-Recipe -- string,QuantitativeValue
-Recipe -- Duration
+  Recipe -- CreativeWork
+  Recipe -- ItemList
+  Recipe -- RestrictedDiet
+  Recipe -- NutritionInformation
+  Recipe -- QuantitativeValue
+  Recipe -- Duration
 
 
-HowTo <|-- Recipe
 class Recipe {
 
-  string,CreativeWork,ItemList recipeInstructions
+  string recipeInstructions
+  CreativeWork recipeInstructions
+  ItemList recipeInstructions
   string ingredients
   string recipeCuisine
   RestrictedDiet suitableForDiet
   NutritionInformation nutrition
   string cookingMethod
   string recipeIngredient
-  string,QuantitativeValue recipeYield
+  string recipeYield
+  QuantitativeValue recipeYield
   Duration cookTime
   string recipeCategory
 
-}
+ }

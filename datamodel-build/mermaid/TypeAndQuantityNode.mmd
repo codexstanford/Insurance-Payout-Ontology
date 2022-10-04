@@ -1,16 +1,17 @@
 classDiagram
   TypeAndQuantityNode -- BusinessFunction
-TypeAndQuantityNode -- Product,Service
-TypeAndQuantityNode -- string,string
+  TypeAndQuantityNode -- Product
+  TypeAndQuantityNode -- Service
 
 
-StructuredValue <|-- TypeAndQuantityNode
 class TypeAndQuantityNode {
 
   string unitText
   BusinessFunction businessFunction
-  Product,Service typeOfGood
+  Product typeOfGood
+  Service typeOfGood
   number amountOfThisGood
-  string,string unitCode
+  string unitCode
+  string unitCode
 
-}
+ }

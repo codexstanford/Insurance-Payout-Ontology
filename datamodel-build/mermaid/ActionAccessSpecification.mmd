@@ -1,22 +1,37 @@
 classDiagram
   ActionAccessSpecification -- Offer
-ActionAccessSpecification -- string,string,PhysicalActivityCategory,Thing,CategoryCode
-ActionAccessSpecification -- Place,string,GeoShape
-ActionAccessSpecification -- MediaSubscription,boolean
-ActionAccessSpecification -- date,dateTime,time
-ActionAccessSpecification -- GeoShape,string,Place
-ActionAccessSpecification -- time,dateTime,date
+  ActionAccessSpecification -- PhysicalActivityCategory
+  ActionAccessSpecification -- Thing
+  ActionAccessSpecification -- CategoryCode
+  ActionAccessSpecification -- Place
+  ActionAccessSpecification -- GeoShape
+  ActionAccessSpecification -- MediaSubscription
+  ActionAccessSpecification -- date
+  ActionAccessSpecification -- dateTime
+  ActionAccessSpecification -- time
 
 
-Intangible <|-- ActionAccessSpecification
 class ActionAccessSpecification {
 
   Offer expectsAcceptanceOf
-  string,string,PhysicalActivityCategory,Thing,CategoryCode category
-  Place,string,GeoShape ineligibleRegion
-  MediaSubscription,boolean requiresSubscription
-  date,dateTime,time availabilityEnds
-  GeoShape,string,Place eligibleRegion
-  time,dateTime,date availabilityStarts
+  string category
+  string category
+  PhysicalActivityCategory category
+  Thing category
+  CategoryCode category
+  Place ineligibleRegion
+  string ineligibleRegion
+  GeoShape ineligibleRegion
+  MediaSubscription requiresSubscription
+  boolean requiresSubscription
+  date availabilityEnds
+  dateTime availabilityEnds
+  time availabilityEnds
+  GeoShape eligibleRegion
+  string eligibleRegion
+  Place eligibleRegion
+  time availabilityStarts
+  dateTime availabilityStarts
+  date availabilityStarts
 
-}
+ }

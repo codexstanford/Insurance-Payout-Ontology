@@ -1,27 +1,28 @@
 classDiagram
   Movie -- Country
-Movie -- Person
-Movie -- string,string
-Movie -- Language,string
-Movie -- VideoObject
-Movie -- Duration
-Movie -- Organization
-Movie -- Person,MusicGroup
+  Movie -- Person
+  Movie -- Language
+  Movie -- VideoObject
+  Movie -- Duration
+  Movie -- Organization
+  Movie -- MusicGroup
 
 
-CreativeWork <|-- Movie
 class Movie {
 
   Country countryOfOrigin
   Person director
-  string,string titleEIDR
-  Language,string subtitleLanguage
+  string titleEIDR
+  string titleEIDR
+  Language subtitleLanguage
+  string subtitleLanguage
   Person actor
   VideoObject trailer
   Duration duration
   Organization productionCompany
   Person actors
-  Person,MusicGroup musicBy
+  Person musicBy
+  MusicGroup musicBy
   Person directors
 
-}
+ }

@@ -1,11 +1,11 @@
 classDiagram
-  DefinedTerm -- string,DefinedTermSet
+  DefinedTerm -- DefinedTermSet
 
 
-Intangible <|-- DefinedTerm
 class DefinedTerm {
 
   string termCode
-  string,DefinedTermSet inDefinedTermSet
+  string inDefinedTermSet
+  DefinedTermSet inDefinedTermSet
 
-}
+ }

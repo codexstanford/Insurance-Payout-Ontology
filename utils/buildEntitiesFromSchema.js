@@ -122,7 +122,6 @@ function render(itemName) {
 
 function renderEnum(itemName) {
   let obj = CLASS_INDEX[itemName];
-  console.log(obj);
 
   let outObj = {};
   outObj[itemName.replace("schema:", "")] = {
@@ -136,7 +135,9 @@ function renderEnum(itemName) {
     if (Array.isArray(obj["rdfs:subClassOf"])) {
       let inheritList = [];
       for (let item of obj["rdfs:subClassOf"]) {
-        inheritList.push(item["@id"].replace("schema:", ""));
+        if (inheritList.indexOf(item["@id"].replace("schema:", "")) == -1) {
+          inheritList.push(item["@id"].replace("schema:", ""));
+        }
       }
       outContent.inherit = inheritList;
     }
@@ -182,7 +183,9 @@ function renderObject(itemName) {
     if (Array.isArray(obj["rdfs:subClassOf"])) {
       let inheritList = [];
       for (let item of obj["rdfs:subClassOf"]) {
-        inheritList.push(item["@id"].replace("schema:", ""));
+        if (inheritList.indexOf(item["@id"].replace("schema:", "")) == -1) {
+          inheritList.push(item["@id"].replace("schema:", ""));
+        }
       }
       outContent.inherit = inheritList;
     }

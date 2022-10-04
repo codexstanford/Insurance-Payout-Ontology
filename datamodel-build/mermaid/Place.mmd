@@ -1,71 +1,87 @@
 classDiagram
   Place -- Review
-Place -- Place,GeospatialGeometry
-Place -- Place
-Place -- DefinedTerm,string,string
-Place -- GeospatialGeometry,Place
-Place -- string,number
-Place -- AggregateRating
-Place -- string,PostalAddress
-Place -- LocationFeatureSpecification
-Place -- ImageObject,Photograph
-Place -- string,ImageObject
-Place -- PropertyValue
-Place -- OpeningHoursSpecification
-Place -- Photograph,ImageObject
-Place -- string,Map
-Place -- number,string
-Place -- GeoCoordinates,GeoShape
-Place -- Event
+  Place -- Place
+  Place -- GeospatialGeometry
+  Place -- DefinedTerm
+  Place -- AggregateRating
+  Place -- PostalAddress
+  Place -- LocationFeatureSpecification
+  Place -- ImageObject
+  Place -- Photograph
+  Place -- PropertyValue
+  Place -- OpeningHoursSpecification
+  Place -- Map
+  Place -- GeoCoordinates
+  Place -- GeoShape
+  Place -- Event
 
 
-Thing <|-- Place
 class Place {
 
   string telephone
   Review review
   string maps
-  Place,GeospatialGeometry geoContains
+  Place geoContains
+  GeospatialGeometry geoContains
   number maximumAttendeeCapacity
   Place containsPlace
   boolean smokingAllowed
   string globalLocationNumber
-  DefinedTerm,string,string keywords
-  GeospatialGeometry,Place geoIntersects
-  string,number latitude
-  Place,GeospatialGeometry geoTouches
-  Place,GeospatialGeometry geoCoveredBy
+  DefinedTerm keywords
+  string keywords
+  string keywords
+  GeospatialGeometry geoIntersects
+  Place geoIntersects
+  string latitude
+  number latitude
+  Place geoTouches
+  GeospatialGeometry geoTouches
+  Place geoCoveredBy
+  GeospatialGeometry geoCoveredBy
   AggregateRating aggregateRating
-  string,PostalAddress address
-  Place,GeospatialGeometry geoEquals
+  string address
+  PostalAddress address
+  Place geoEquals
+  GeospatialGeometry geoEquals
   string map
   boolean publicAccess
-  GeospatialGeometry,Place geoCrosses
+  GeospatialGeometry geoCrosses
+  Place geoCrosses
   Place containedInPlace
   LocationFeatureSpecification amenityFeature
   string slogan
-  ImageObject,Photograph photos
-  GeospatialGeometry,Place geoCovers
+  ImageObject photos
+  Photograph photos
+  GeospatialGeometry geoCovers
+  Place geoCovers
   Place containedIn
   boolean hasDriveThroughService
-  string,ImageObject logo
+  string logo
+  ImageObject logo
   boolean isAccessibleForFree
-  Place,GeospatialGeometry geoWithin
-  GeospatialGeometry,Place geoDisjoint
+  Place geoWithin
+  GeospatialGeometry geoWithin
+  GeospatialGeometry geoDisjoint
+  Place geoDisjoint
   string tourBookingPage
   string isicV4
-  GeospatialGeometry,Place geoOverlaps
+  GeospatialGeometry geoOverlaps
+  Place geoOverlaps
   string branchCode
   PropertyValue additionalProperty
   OpeningHoursSpecification openingHoursSpecification
   Review reviews
-  Photograph,ImageObject photo
+  Photograph photo
+  ImageObject photo
   OpeningHoursSpecification specialOpeningHoursSpecification
-  string,Map hasMap
-  number,string longitude
-  GeoCoordinates,GeoShape geo
+  string hasMap
+  Map hasMap
+  number longitude
+  string longitude
+  GeoCoordinates geo
+  GeoShape geo
   Event events
   string faxNumber
   Event event
 
-}
+ }

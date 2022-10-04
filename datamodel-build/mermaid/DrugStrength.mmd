@@ -1,9 +1,8 @@
 classDiagram
   DrugStrength -- AdministrativeArea
-DrugStrength -- MaximumDoseSchedule
+  DrugStrength -- MaximumDoseSchedule
 
 
-MedicalIntangible <|-- DrugStrength
 class DrugStrength {
 
   AdministrativeArea availableIn
@@ -12,4 +11,4 @@ class DrugStrength {
   string activeIngredient
   number strengthValue
 
-}
+ }

@@ -1,26 +1,26 @@
 classDiagram
   MerchantReturnPolicy -- MerchantReturnEnumeration
-MerchantReturnPolicy -- Country,string
-MerchantReturnPolicy -- MonetaryAmount,number
-MerchantReturnPolicy -- MonetaryAmount
-MerchantReturnPolicy -- ReturnFeesEnumeration
-MerchantReturnPolicy -- OfferItemCondition
-MerchantReturnPolicy -- ReturnLabelSourceEnumeration
-MerchantReturnPolicy -- RefundTypeEnumeration
-MerchantReturnPolicy -- dateTime,number,date
-MerchantReturnPolicy -- ReturnMethodEnumeration
-MerchantReturnPolicy -- PropertyValue
-MerchantReturnPolicy -- MerchantReturnPolicySeasonalOverride
-MerchantReturnPolicy -- string,Country
+  MerchantReturnPolicy -- Country
+  MerchantReturnPolicy -- MonetaryAmount
+  MerchantReturnPolicy -- ReturnFeesEnumeration
+  MerchantReturnPolicy -- OfferItemCondition
+  MerchantReturnPolicy -- ReturnLabelSourceEnumeration
+  MerchantReturnPolicy -- RefundTypeEnumeration
+  MerchantReturnPolicy -- dateTime
+  MerchantReturnPolicy -- date
+  MerchantReturnPolicy -- ReturnMethodEnumeration
+  MerchantReturnPolicy -- PropertyValue
+  MerchantReturnPolicy -- MerchantReturnPolicySeasonalOverride
 
 
-Intangible <|-- MerchantReturnPolicy
 class MerchantReturnPolicy {
 
   MerchantReturnEnumeration returnPolicyCategory
-  Country,string returnPolicyCountry
+  Country returnPolicyCountry
+  string returnPolicyCountry
   string merchantReturnLink
-  MonetaryAmount,number restockingFee
+  MonetaryAmount restockingFee
+  number restockingFee
   MonetaryAmount itemDefectReturnShippingFeesAmount
   ReturnFeesEnumeration itemDefectReturnFees
   boolean inStoreReturnsOffered
@@ -30,13 +30,16 @@ class MerchantReturnPolicy {
   MonetaryAmount customerRemorseReturnShippingFeesAmount
   RefundTypeEnumeration refundType
   MonetaryAmount returnShippingFeesAmount
-  dateTime,number,date merchantReturnDays
+  dateTime merchantReturnDays
+  number merchantReturnDays
+  date merchantReturnDays
   ReturnMethodEnumeration returnMethod
   PropertyValue additionalProperty
   ReturnLabelSourceEnumeration customerRemorseReturnLabelSource
   ReturnFeesEnumeration customerRemorseReturnFees
   MerchantReturnPolicySeasonalOverride returnPolicySeasonalOverride
-  string,Country applicableCountry
+  string applicableCountry
+  Country applicableCountry
   ReturnFeesEnumeration returnFees
 
-}
+ }

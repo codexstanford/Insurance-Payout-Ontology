@@ -1,9 +1,8 @@
 classDiagram
-  CDCPMDRecord -- dateTime,string
-CDCPMDRecord -- date,dateTime
+  CDCPMDRecord -- dateTime
+  CDCPMDRecord -- date
 
 
-StructuredValue <|-- CDCPMDRecord
 class CDCPMDRecord {
 
   number cvdNumBedsOcc
@@ -13,15 +12,17 @@ class CDCPMDRecord {
   number cvdNumTotBeds
   string cvdFacilityCounty
   number cvdNumICUBeds
-  dateTime,string cvdCollectionDate
+  dateTime cvdCollectionDate
+  string cvdCollectionDate
   number cvdNumC19HOPats
   number cvdNumC19OFMechVentPats
   string cvdFacilityId
   number cvdNumVentUse
   number cvdNumBeds
   number cvdNumC19MechVentPats
-  date,dateTime datePosted
+  date datePosted
+  dateTime datePosted
   number cvdNumC19OverflowPats
   number cvdNumC19HospPats
 
-}
+ }

@@ -1,10 +1,13 @@
 classDiagram
-  Enumeration -- Enumeration,Class,Property
+  Enumeration -- Enumeration
+  Enumeration -- Class
+  Enumeration -- Property
 
 
-Intangible <|-- Enumeration
 class Enumeration {
 
-  Enumeration,Class,Property supersededBy
+  Enumeration supersededBy
+  Class supersededBy
+  Property supersededBy
 
-}
+ }

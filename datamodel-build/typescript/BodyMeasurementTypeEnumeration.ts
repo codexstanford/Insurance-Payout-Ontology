@@ -1,0 +1,15 @@
+export enum BodyMeasurementTypeEnumeration {
+  BodyMeasurementHand,
+  BodyMeasurementHips,
+  BodyMeasurementUnderbust,
+  BodyMeasurementWeight,
+  BodyMeasurementHeight,
+  BodyMeasurementChest,
+  BodyMeasurementFoot,
+  BodyMeasurementHead,
+  BodyMeasurementNeck,
+  BodyMeasurementBust,
+  BodyMeasurementInsideLeg,
+  BodyMeasurementWaist,
+  BodyMeasurementArm,
+}

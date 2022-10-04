@@ -1,10 +1,9 @@
 classDiagram
   ShippingDeliveryTime -- QuantitativeValue
-ShippingDeliveryTime -- OpeningHoursSpecification
-ShippingDeliveryTime -- time
+  ShippingDeliveryTime -- OpeningHoursSpecification
+  ShippingDeliveryTime -- time
 
 
-StructuredValue <|-- ShippingDeliveryTime
 class ShippingDeliveryTime {
 
   QuantitativeValue transitTime
@@ -12,4 +11,4 @@ class ShippingDeliveryTime {
   QuantitativeValue handlingTime
   time cutoffTime
 
-}
+ }

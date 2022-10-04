@@ -1,15 +1,17 @@
 classDiagram
-  DataFeedItem -- dateTime,date
-DataFeedItem -- date,dateTime
-DataFeedItem -- Thing
+  DataFeedItem -- dateTime
+  DataFeedItem -- date
+  DataFeedItem -- Thing
 
 
-Intangible <|-- DataFeedItem
 class DataFeedItem {
 
-  dateTime,date dateDeleted
-  date,dateTime dateCreated
-  dateTime,date dateModified
+  dateTime dateDeleted
+  date dateDeleted
+  date dateCreated
+  dateTime dateCreated
+  dateTime dateModified
+  date dateModified
   Thing item
 
-}
+ }

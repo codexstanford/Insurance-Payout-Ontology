@@ -1,23 +1,24 @@
 classDiagram
   Drug -- DrugPregnancyCategory
-Drug -- DrugLegalStatus,string,MedicalEnumeration
-Drug -- Drug
-Drug -- MaximumDoseSchedule
-Drug -- string,string
-Drug -- DrugPrescriptionStatus,string
-Drug -- DrugClass
-Drug -- HealthInsurancePlan
-Drug -- Organization
-Drug -- DoseSchedule
-Drug -- DrugStrength
+  Drug -- DrugLegalStatus
+  Drug -- MedicalEnumeration
+  Drug -- Drug
+  Drug -- MaximumDoseSchedule
+  Drug -- DrugPrescriptionStatus
+  Drug -- DrugClass
+  Drug -- HealthInsurancePlan
+  Drug -- Organization
+  Drug -- DoseSchedule
+  Drug -- DrugStrength
 
 
-Substance <|-- Drug
 class Drug {
 
   DrugPregnancyCategory pregnancyCategory
   string overdosage
-  DrugLegalStatus,string,MedicalEnumeration legalStatus
+  DrugLegalStatus legalStatus
+  string legalStatus
+  MedicalEnumeration legalStatus
   string mechanismOfAction
   string clinicalPharmacology
   string rxcui
@@ -30,8 +31,10 @@ class Drug {
   string administrationRoute
   string drugUnit
   string foodWarning
-  string,string warning
-  DrugPrescriptionStatus,string prescriptionStatus
+  string warning
+  string warning
+  DrugPrescriptionStatus prescriptionStatus
+  string prescriptionStatus
   string proprietaryName
   DrugClass drugClass
   string prescribingInfo
@@ -47,4 +50,4 @@ class Drug {
   DoseSchedule doseSchedule
   DrugStrength availableStrength
 
-}
+ }

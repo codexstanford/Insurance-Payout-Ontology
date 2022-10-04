@@ -1,10 +1,11 @@
 classDiagram
-  Answer -- WebContent,Comment
+  Answer -- WebContent
+  Answer -- Comment
 
 
-Comment <|-- Answer
 class Answer {
 
-  WebContent,Comment answerExplanation
+  WebContent answerExplanation
+  Comment answerExplanation
 
-}
+ }

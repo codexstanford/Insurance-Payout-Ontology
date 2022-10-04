@@ -1,15 +1,17 @@
 classDiagram
-  Role -- string,string
-Role -- dateTime,date
-Role -- date,dateTime
+  Role -- dateTime
+  Role -- date
 
 
-Intangible <|-- Role
 class Role {
 
-  string,string namedPosition
-  dateTime,date startDate
-  date,dateTime endDate
-  string,string roleName
+  string namedPosition
+  string namedPosition
+  dateTime startDate
+  date startDate
+  date endDate
+  dateTime endDate
+  string roleName
+  string roleName
 
-}
+ }

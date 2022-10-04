@@ -1,17 +1,19 @@
 classDiagram
-  Rating -- string,number
-Rating -- Person,Organization
-Rating -- number,string
+  Rating -- Person
+  Rating -- Organization
 
 
-Intangible <|-- Rating
 class Rating {
 
   string reviewAspect
-  string,number worstRating
-  Person,Organization author
-  string,number bestRating
-  number,string ratingValue
+  string worstRating
+  number worstRating
+  Person author
+  Organization author
+  string bestRating
+  number bestRating
+  number ratingValue
+  string ratingValue
   string ratingExplanation
 
-}
+ }

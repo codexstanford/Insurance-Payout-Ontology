@@ -1,14 +1,14 @@
 classDiagram
-  TaxiReservation -- number,QuantitativeValue
-TaxiReservation -- dateTime
-TaxiReservation -- Place
+  TaxiReservation -- QuantitativeValue
+  TaxiReservation -- dateTime
+  TaxiReservation -- Place
 
 
-Reservation <|-- TaxiReservation
 class TaxiReservation {
 
-  number,QuantitativeValue partySize
+  number partySize
+  QuantitativeValue partySize
   dateTime pickupTime
   Place pickupLocation
 
-}
+ }

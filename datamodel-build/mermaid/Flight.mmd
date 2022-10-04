@@ -1,31 +1,34 @@
 classDiagram
-  Flight -- Distance,string
-Flight -- dateTime
-Flight -- Vehicle,string
-Flight -- Organization,Person
-Flight -- Airport
-Flight -- Organization
-Flight -- string,Duration
-Flight -- BoardingPolicyType
+  Flight -- Distance
+  Flight -- dateTime
+  Flight -- Vehicle
+  Flight -- Organization
+  Flight -- Person
+  Flight -- Airport
+  Flight -- Duration
+  Flight -- BoardingPolicyType
 
 
-Trip <|-- Flight
 class Flight {
 
-  Distance,string flightDistance
+  Distance flightDistance
+  string flightDistance
   dateTime webCheckinTime
-  Vehicle,string aircraft
-  Organization,Person seller
+  Vehicle aircraft
+  string aircraft
+  Organization seller
+  Person seller
   Airport arrivalAirport
   string arrivalTerminal
   Airport departureAirport
   string arrivalGate
   string departureTerminal
   Organization carrier
-  string,Duration estimatedFlightDuration
+  string estimatedFlightDuration
+  Duration estimatedFlightDuration
   string departureGate
   string flightNumber
   string mealService
   BoardingPolicyType boardingPolicy
 
-}
+ }

@@ -1,16 +1,18 @@
 classDiagram
   OpeningHoursSpecification -- time
-OpeningHoursSpecification -- DayOfWeek
-OpeningHoursSpecification -- dateTime,date
+  OpeningHoursSpecification -- DayOfWeek
+  OpeningHoursSpecification -- dateTime
+  OpeningHoursSpecification -- date
 
 
-StructuredValue <|-- OpeningHoursSpecification
 class OpeningHoursSpecification {
 
   time closes
   DayOfWeek dayOfWeek
-  dateTime,date validFrom
+  dateTime validFrom
+  date validFrom
   time opens
-  dateTime,date validThrough
+  dateTime validThrough
+  date validThrough
 
-}
+ }

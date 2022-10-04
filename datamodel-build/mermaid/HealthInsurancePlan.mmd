@@ -1,11 +1,9 @@
 classDiagram
   HealthInsurancePlan -- HealthPlanFormulary
-HealthInsurancePlan -- ContactPoint
-HealthInsurancePlan -- string,string
-HealthInsurancePlan -- HealthPlanNetwork
+  HealthInsurancePlan -- ContactPoint
+  HealthInsurancePlan -- HealthPlanNetwork
 
 
-Intangible <|-- HealthInsurancePlan
 class HealthInsurancePlan {
 
   HealthPlanFormulary includesHealthPlanFormulary
@@ -14,8 +12,9 @@ class HealthInsurancePlan {
   string healthPlanDrugTier
   string healthPlanId
   ContactPoint contactPoint
-  string,string usesHealthPlanIdStandard
+  string usesHealthPlanIdStandard
+  string usesHealthPlanIdStandard
   HealthPlanNetwork includesHealthPlanNetwork
   string healthPlanMarketingUrl
 
-}
+ }

@@ -1,30 +1,40 @@
 classDiagram
   BioChemEntity -- Grant
-BioChemEntity -- Gene
-BioChemEntity -- BioChemEntity
-BioChemEntity -- string,DefinedTerm,string,Taxon
-BioChemEntity -- PropertyValue,string,DefinedTerm
-BioChemEntity -- PropertyValue,DefinedTerm,string
-BioChemEntity -- string,PropertyValue,MedicalCondition
-BioChemEntity -- string,PropertyValue,string
-BioChemEntity -- DefinedTerm
+  BioChemEntity -- Gene
+  BioChemEntity -- BioChemEntity
+  BioChemEntity -- DefinedTerm
+  BioChemEntity -- Taxon
+  BioChemEntity -- PropertyValue
+  BioChemEntity -- MedicalCondition
 
 
-Thing <|-- BioChemEntity
 class BioChemEntity {
 
   Grant funding
   Gene isEncodedByBioChemEntity
   BioChemEntity isPartOfBioChemEntity
-  string,DefinedTerm,string,Taxon taxonomicRange
-  PropertyValue,string,DefinedTerm isInvolvedInBiologicalProcess
-  PropertyValue,DefinedTerm,string isLocatedInSubcellularLocation
-  string,PropertyValue,MedicalCondition associatedDisease
-  PropertyValue,DefinedTerm,string hasMolecularFunction
+  string taxonomicRange
+  DefinedTerm taxonomicRange
+  string taxonomicRange
+  Taxon taxonomicRange
+  PropertyValue isInvolvedInBiologicalProcess
+  string isInvolvedInBiologicalProcess
+  DefinedTerm isInvolvedInBiologicalProcess
+  PropertyValue isLocatedInSubcellularLocation
+  DefinedTerm isLocatedInSubcellularLocation
+  string isLocatedInSubcellularLocation
+  string associatedDisease
+  PropertyValue associatedDisease
+  MedicalCondition associatedDisease
+  PropertyValue hasMolecularFunction
+  DefinedTerm hasMolecularFunction
+  string hasMolecularFunction
   BioChemEntity hasBioChemEntityPart
   BioChemEntity bioChemInteraction
-  string,PropertyValue,string hasRepresentation
+  string hasRepresentation
+  PropertyValue hasRepresentation
+  string hasRepresentation
   BioChemEntity bioChemSimilarity
   DefinedTerm biologicalRole
 
-}
+ }

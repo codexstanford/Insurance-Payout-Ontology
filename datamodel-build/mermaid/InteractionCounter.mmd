@@ -1,18 +1,27 @@
 classDiagram
-  InteractionCounter -- dateTime,time
-InteractionCounter -- PostalAddress,string,Place,VirtualLocation
-InteractionCounter -- Action
-InteractionCounter -- SoftwareApplication,WebSite
+  InteractionCounter -- dateTime
+  InteractionCounter -- time
+  InteractionCounter -- PostalAddress
+  InteractionCounter -- Place
+  InteractionCounter -- VirtualLocation
+  InteractionCounter -- Action
+  InteractionCounter -- SoftwareApplication
+  InteractionCounter -- WebSite
 
 
-StructuredValue <|-- InteractionCounter
 class InteractionCounter {
 
-  dateTime,time startTime
+  dateTime startTime
+  time startTime
   number userInteractionCount
-  PostalAddress,string,Place,VirtualLocation location
+  PostalAddress location
+  string location
+  Place location
+  VirtualLocation location
   Action interactionType
-  SoftwareApplication,WebSite interactionService
-  dateTime,time endTime
+  SoftwareApplication interactionService
+  WebSite interactionService
+  dateTime endTime
+  time endTime
 
-}
+ }

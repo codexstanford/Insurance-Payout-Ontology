@@ -1,10 +1,11 @@
 classDiagram
-  BorrowAction -- Person,Organization
+  BorrowAction -- Person
+  BorrowAction -- Organization
 
 
-TransferAction <|-- BorrowAction
 class BorrowAction {
 
-  Person,Organization lender
+  Person lender
+  Organization lender
 
-}
+ }

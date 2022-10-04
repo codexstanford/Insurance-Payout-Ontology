@@ -1,12 +1,11 @@
 classDiagram
   MediaSubscription -- Offer
-MediaSubscription -- Organization
+  MediaSubscription -- Organization
 
 
-Intangible <|-- MediaSubscription
 class MediaSubscription {
 
   Offer expectsAcceptanceOf
   Organization authenticator
 
-}
+ }

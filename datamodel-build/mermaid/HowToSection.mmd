@@ -1,12 +1,12 @@
 classDiagram
-  HowToSection -- ItemList,CreativeWork,string
+  HowToSection -- ItemList
+  HowToSection -- CreativeWork
 
 
-ListItem <|-- HowToSection
-CreativeWork <|-- HowToSection
-ItemList <|-- HowToSection
 class HowToSection {
 
-  ItemList,CreativeWork,string steps
+  ItemList steps
+  CreativeWork steps
+  string steps
 
-}
+ }

@@ -1,15 +1,15 @@
 classDiagram
-  PropertyValueSpecification -- string,Thing
+  PropertyValueSpecification -- Thing
 
 
-Intangible <|-- PropertyValueSpecification
 class PropertyValueSpecification {
 
   number valueMaxLength
   boolean readonlyValue
   number maxValue
   string valueName
-  string,Thing defaultValue
+  string defaultValue
+  Thing defaultValue
   number valueMinLength
   boolean valueRequired
   number minValue
@@ -17,4 +17,4 @@ class PropertyValueSpecification {
   number stepValue
   boolean multipleValues
 
-}
+ }

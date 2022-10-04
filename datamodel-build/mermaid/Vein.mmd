@@ -1,14 +1,14 @@
 classDiagram
-  Vein -- AnatomicalSystem,AnatomicalStructure
-Vein -- AnatomicalStructure
-Vein -- Vessel
+  Vein -- AnatomicalSystem
+  Vein -- AnatomicalStructure
+  Vein -- Vessel
 
 
-Vessel <|-- Vein
 class Vein {
 
-  AnatomicalSystem,AnatomicalStructure regionDrained
+  AnatomicalSystem regionDrained
+  AnatomicalStructure regionDrained
   AnatomicalStructure tributary
   Vessel drainsTo
 
-}
+ }

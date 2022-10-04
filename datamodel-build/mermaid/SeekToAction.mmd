@@ -1,10 +1,10 @@
 classDiagram
-  SeekToAction -- number,HyperTocEntry
+  SeekToAction -- HyperTocEntry
 
 
-Action <|-- SeekToAction
 class SeekToAction {
 
-  number,HyperTocEntry startOffset
+  number startOffset
+  HyperTocEntry startOffset
 
-}
+ }

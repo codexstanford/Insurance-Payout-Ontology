@@ -1,13 +1,12 @@
 classDiagram
   TradeAction -- PriceSpecification
-TradeAction -- number,string
 
 
-Action <|-- TradeAction
 class TradeAction {
 
   string priceCurrency
   PriceSpecification priceSpecification
-  number,string price
+  number price
+  string price
 
-}
+ }
