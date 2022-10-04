@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept Periodical extends CreativeWorkSeries {
+}

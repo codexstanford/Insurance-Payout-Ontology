@@ -2,5 +2,5 @@ Integer:
   type: object
   documentation:
     en: "Data type: Integer."
-  inherit: Number
+  inherit: number
   properties: {}

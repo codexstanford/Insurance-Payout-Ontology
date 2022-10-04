@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept Aquarium extends CivicStructure {
+}

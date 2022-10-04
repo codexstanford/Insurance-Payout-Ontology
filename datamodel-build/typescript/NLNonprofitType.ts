@@ -1,9 +1,9 @@
-import { schema:NLNonprofitType } from "./schema:NLNonprofitType";
+import { NLNonprofitType } from "./NLNonprofitType";
 
 
 export class NLNonprofitType extends NonprofitType {
-  NonprofitANBI: schema:NLNonprofitType;
-  NonprofitSBBI: schema:NLNonprofitType;
+  NonprofitANBI: NLNonprofitType;
+  NonprofitSBBI: NLNonprofitType;
 
 
 }

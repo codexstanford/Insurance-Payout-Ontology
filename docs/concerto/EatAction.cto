@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept EatAction extends ConsumeAction {
+}

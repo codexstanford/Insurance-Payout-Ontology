@@ -1,21 +1,21 @@
 namespace undefined
 
-import org.codex.insurance.core.schema:PhysicalExam from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/schema:PhysicalExam.cto
+import org.codex.insurance.core.PhysicalExam from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PhysicalExam.cto
 
 
 concept PhysicalExam extendsPhysicalExamPhysicalExam {
-  o schema:PhysicalExam Genitourinary
-  o schema:PhysicalExam Abdomen
-  o schema:PhysicalExam Appearance
-  o schema:PhysicalExam CardiovascularExam
-  o schema:PhysicalExam Skin
-  o schema:PhysicalExam Lung
-  o schema:PhysicalExam Neck
-  o schema:PhysicalExam Ear
-  o schema:PhysicalExam MusculoskeletalExam
-  o schema:PhysicalExam Head
-  o schema:PhysicalExam Eye
-  o schema:PhysicalExam Throat
-  o schema:PhysicalExam Neuro
-  o schema:PhysicalExam Nose
+  o PhysicalExam Genitourinary
+  o PhysicalExam Abdomen
+  o PhysicalExam Appearance
+  o PhysicalExam CardiovascularExam
+  o PhysicalExam Skin
+  o PhysicalExam Lung
+  o PhysicalExam Neck
+  o PhysicalExam Ear
+  o PhysicalExam MusculoskeletalExam
+  o PhysicalExam Head
+  o PhysicalExam Eye
+  o PhysicalExam Throat
+  o PhysicalExam Neuro
+  o PhysicalExam Nose
 }

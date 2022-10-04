@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept DataType extends string {
+}

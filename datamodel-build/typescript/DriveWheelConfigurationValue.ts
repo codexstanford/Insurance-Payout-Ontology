@@ -1,11 +1,11 @@
-import { schema:DriveWheelConfigurationValue } from "./schema:DriveWheelConfigurationValue";
+import { DriveWheelConfigurationValue } from "./DriveWheelConfigurationValue";
 
 
 export class DriveWheelConfigurationValue extends QualitativeValue {
-  FrontWheelDriveConfiguration: schema:DriveWheelConfigurationValue;
-  FourWheelDriveConfiguration: schema:DriveWheelConfigurationValue;
-  AllWheelDriveConfiguration: schema:DriveWheelConfigurationValue;
-  RearWheelDriveConfiguration: schema:DriveWheelConfigurationValue;
+  FrontWheelDriveConfiguration: DriveWheelConfigurationValue;
+  FourWheelDriveConfiguration: DriveWheelConfigurationValue;
+  AllWheelDriveConfiguration: DriveWheelConfigurationValue;
+  RearWheelDriveConfiguration: DriveWheelConfigurationValue;
 
 
 }

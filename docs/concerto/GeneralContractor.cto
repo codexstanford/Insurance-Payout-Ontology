@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept GeneralContractor extends HomeAndConstructionBusiness {
+}

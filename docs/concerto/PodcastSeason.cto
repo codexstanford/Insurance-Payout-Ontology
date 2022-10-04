@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept PodcastSeason extends CreativeWorkSeason {
+}

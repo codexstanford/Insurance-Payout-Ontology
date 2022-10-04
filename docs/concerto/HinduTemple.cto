@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept HinduTemple extends PlaceOfWorship {
+}

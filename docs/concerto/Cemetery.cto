@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept Cemetery extends CivicStructure {
+}

@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept ResearchOrganization extends Organization {
+}

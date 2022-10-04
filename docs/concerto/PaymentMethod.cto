@@ -1,0 +1,5 @@
+namespace undefined
+
+enum PaymentMethod {
+}
+

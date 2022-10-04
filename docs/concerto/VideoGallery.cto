@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept VideoGallery extends MediaGallery {
+}

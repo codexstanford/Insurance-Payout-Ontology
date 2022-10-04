@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept ActivateAction extends ControlAction {
+}

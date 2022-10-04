@@ -2,5 +2,5 @@ URL:
   type: object
   documentation:
     en: "Data type: URL."
-  inherit: Text
+  inherit: string
   properties: {}

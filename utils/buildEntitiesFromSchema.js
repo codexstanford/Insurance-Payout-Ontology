@@ -104,6 +104,9 @@ function transformType(type) {
     case "URL":
       type = "string";
     break;
+    case "rdfs:Class":
+      type = "string";
+    break;
   }
 
   return type;
@@ -186,13 +189,13 @@ function renderObject(itemName) {
       let inheritList = [];
       for (let item of obj["rdfs:subClassOf"]) {
         if (inheritList.indexOf(item["@id"].replace("schema:", "")) == -1) {
-          inheritList.push(item["@id"].replace("schema:", ""));
+          inheritList.push(transformType(item["@id"].replace("schema:", "")));
         }
       }
       outContent.inherit = inheritList;
     }
     else {
-      outContent.inherit = obj["rdfs:subClassOf"]["@id"].replace("schema:", "");
+      outContent.inherit = transformType(obj["rdfs:subClassOf"]["@id"].replace("schema:", ""));
     }
   }
 
@@ -202,7 +205,7 @@ function renderObject(itemName) {
     let property = obj.properties[propertyName];
     let label = property["rdfs:label"] || propertyName.replace("schema:", "");
 
-    let propType = property["@type"];
+    let propType = property["@type"].replace("schema:", "");
     if ( property["schema:rangeIncludes"]) {
       if (Array.isArray(property["schema:rangeIncludes"])) {
         // Todo multiple prop type

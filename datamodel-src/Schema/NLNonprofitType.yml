@@ -6,12 +6,12 @@ NLNonprofitType:
   inherit: NonprofitType
   properties:
     NonprofitANBI:
-      type: schema:NLNonprofitType
+      type: NLNonprofitType
       documentation:
         en: "NonprofitANBI: Non-profit type referring to a Public Benefit Organization
           (NL)."
     NonprofitSBBI:
-      type: schema:NLNonprofitType
+      type: NLNonprofitType
       documentation:
         en: "NonprofitSBBI: Non-profit type referring to a Social Interest Promoting
           Institution (NL)."

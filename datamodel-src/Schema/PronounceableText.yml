@@ -2,7 +2,7 @@ PronounceableText:
   type: object
   documentation:
     en: "Data type: PronounceableText."
-  inherit: Text
+  inherit: string
   properties:
     phoneticText:
       type: string

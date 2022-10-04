@@ -1,6 +1,23 @@
 namespace undefined
 
+import org.codex.insurance.core.CreativeWork,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWork,string.cto
+import org.codex.insurance.core.Action from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Action.cto
+import org.codex.insurance.core.string,ImageObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,ImageObject.cto
+import org.codex.insurance.core.Event,CreativeWork from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Event,CreativeWork.cto
+import org.codex.insurance.core.string,string,PropertyValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,PropertyValue.cto
 
 
 concept Thing {
+  o CreativeWork,string mainEntityOfPage
+  o String alternateName
+  o String name
+  o Action potentialAction
+  o string,ImageObject image
+  o String url
+  o String description
+  o Event,CreativeWork subjectOf
+  o String additionalType
+  o String disambiguatingDescription
+  o String sameAs
+  o string,string,PropertyValue identifier
 }

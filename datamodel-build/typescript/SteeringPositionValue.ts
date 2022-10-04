@@ -1,9 +1,9 @@
-import { schema:SteeringPositionValue } from "./schema:SteeringPositionValue";
+import { SteeringPositionValue } from "./SteeringPositionValue";
 
 
 export class SteeringPositionValue extends QualitativeValue {
-  LeftHandDriving: schema:SteeringPositionValue;
-  RightHandDriving: schema:SteeringPositionValue;
+  LeftHandDriving: SteeringPositionValue;
+  RightHandDriving: SteeringPositionValue;
 
 
 }

@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept OnDemandEvent extends PublicationEvent {
+}

@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept LakeBodyOfWater extends BodyOfWater {
+}

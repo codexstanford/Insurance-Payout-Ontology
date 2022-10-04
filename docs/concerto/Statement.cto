@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept Statement extends CreativeWork {
+}

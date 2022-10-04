@@ -6,21 +6,21 @@ UKNonprofitType:
   inherit: NonprofitType
   properties:
     UnincorporatedAssociationCharity:
-      type: schema:UKNonprofitType
+      type: UKNonprofitType
       documentation:
         en: "UnincorporatedAssociationCharity: Non-profit type referring to a charitable
           company that is not incorporated (UK)."
     UKTrust:
-      type: schema:UKNonprofitType
+      type: UKNonprofitType
       documentation:
         en: "UKTrust: Non-profit type referring to a UK trust."
     CharitableIncorporatedOrganization:
-      type: schema:UKNonprofitType
+      type: UKNonprofitType
       documentation:
         en: "CharitableIncorporatedOrganization: Non-profit type referring to a
           Charitable Incorporated Organization (UK)."
     LimitedByGuaranteeCharity:
-      type: schema:UKNonprofitType
+      type: UKNonprofitType
       documentation:
         en: "LimitedByGuaranteeCharity: Non-profit type referring to a charitable
           company that is limited by guarantee (UK)."

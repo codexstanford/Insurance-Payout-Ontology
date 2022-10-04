@@ -1,6 +1,6 @@
 
 
-export class Intangible {
+export class Intangible extends Thing {
 
 
 }

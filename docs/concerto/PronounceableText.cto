@@ -3,7 +3,7 @@ namespace undefined
 import org.codex.insurance.core.string,Language from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Language.cto
 
 
-concept PronounceableText extends Text {
+concept PronounceableText extends string {
   o String phoneticText
   o String speechToTextMarkup
   o String textValue

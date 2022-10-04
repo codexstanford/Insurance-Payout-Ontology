@@ -32,7 +32,16 @@ function checkWrongType() {
   }
   
   for (let file of objectsList) {
-    if (!authorizedTopType[file.data[file.name].type]) {
+    if (Array.isArray(file.data[file.name].type)) {
+      for (let ttype of file.data[file.name].type) {
+        if (!authorizedTopType[ttype]) {
+
+          throw(`Error : Object ${file.name} defined in ${file.namespace}/${file.filename} 
+      use a non valid top type ${ttype}. Authorized value are : ${Object.keys(authorizedTopType).join(", ")}`);
+        }
+      }
+    }
+    else if (!authorizedTopType[file.data[file.name].type]) {
 
       throw(`Error : Object ${file.name} defined in ${file.namespace}/${file.filename} 
   use a non valid top type ${file.data[file.name].type}. Authorized value are : ${Object.keys(authorizedTopType).join(", ")}`);
@@ -49,7 +58,14 @@ function checkMissingObject() {
 
     // inheritance
     if (objData.inherit) {
-      if (!INDEX[objData.inherit]) {
+      if (Array.isArray(objData.inherit)) {
+        for (let inherit of objData.inherit) {
+          if (!INDEX[inherit]) {
+            throw(`Error : Object ${file.name} defined in ${file.namespace}/${file.filename} 
+      inherit a non existing object ${inherit}`);
+          }
+        }
+      } else if (!INDEX[objData.inherit]) {
         throw(`Error : Object ${file.name} defined in ${file.namespace}/${file.filename} 
   inherit a non existing object ${objData.inherit}`);
       }
@@ -63,7 +79,15 @@ function checkMissingObject() {
         if (type == "List") {
           type = property.of;
         }
-        if (!INDEX[type]) {
+        if (Array.isArray(type)) {
+          for (let ttype of type) {
+            if (!INDEX[ttype]) {
+              throw(`Error : Object ${file.name} defined in ${file.namespace}/${file.filename} 
+      has a property ${propertyName} of a non existing type ${ttype}`);
+            }
+          }
+        }
+        else if (!INDEX[type]) {
           throw(`Error : Object ${file.name} defined in ${file.namespace}/${file.filename} 
   has a property ${propertyName} of a non existing type ${type}`);
         }

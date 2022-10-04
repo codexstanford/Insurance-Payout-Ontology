@@ -437,12 +437,21 @@ concept 3DModel extends MediaObject {
   o Boolean isResizable
 }
 
+concept AMRadioChannel extends RadioChannel {
+}
+
 concept APIReference extends TechArticle {
   o String assembly
   o String targetPlatform
   o String executableLibraryName
   o String programmingModel
   o String assemblyVersion
+}
+
+concept AboutPage extends WebPage {
+}
+
+concept AcceptAction extends AllocateAction {
 }
 
 concept Accommodation extends Place {
@@ -461,6 +470,12 @@ concept Accommodation extends Place {
   o Double numberOfFullBathrooms
   o String permittedUsage
   o string,boolean petsAllowed
+}
+
+concept AccountingService extends FinancialService {
+}
+
+concept AchieveAction extends Action {
 }
 
 concept Action extends Thing {
@@ -495,6 +510,18 @@ enum ActionStatusType {
   o CompletedActionStatus
 }
 
+concept ActivateAction extends ControlAction {
+}
+
+concept AddAction extends UpdateAction {
+}
+
+concept AdministrativeArea extends Place {
+}
+
+concept AdultEntertainment extends EntertainmentBusiness {
+}
+
 enum AdultOrientedEnumeration {
   o ReducedRelevanceForChildrenConsideration
   o SexualContentConsideration
@@ -508,6 +535,9 @@ enum AdultOrientedEnumeration {
   o ViolenceConsideration
 }
 
+concept AdvertiserContentArticle extends Article {
+}
+
 concept AggregateOffer extends Offer {
   o string,number highPrice
   o Offer,Demand offers
@@ -519,6 +549,9 @@ concept AggregateRating extends Rating {
   o Thing itemReviewed
   o Double reviewCount
   o Double ratingCount
+}
+
+concept AgreeAction extends ReactAction {
 }
 
 concept Airline extends Organization {
@@ -537,6 +570,18 @@ concept AlignmentObject extends Intangible {
   o String targetDescription
   o String targetName
   o String targetUrl
+}
+
+concept AllocateAction extends OrganizeAction {
+}
+
+concept AmpStory extendsAmpStoryAmpStory {
+}
+
+concept AmusementPark extends EntertainmentBusiness {
+}
+
+concept AnalysisNewsArticle extends NewsArticle {
 }
 
 concept AnatomicalStructure extends MedicalEntity {
@@ -558,6 +603,9 @@ concept AnatomicalSystem extends MedicalEntity {
   o AnatomicalStructure,AnatomicalSystem comprisedOf
 }
 
+concept AnimalShelter extends LocalBusiness {
+}
+
 concept Answer extends Comment {
   o WebContent,Comment answerExplanation
 }
@@ -575,12 +623,30 @@ concept ApartmentComplex extends Residence {
   o string,boolean petsAllowed
 }
 
+concept AppendAction extends InsertAction {
+}
+
+concept ApplyAction extends OrganizeAction {
+}
+
+concept ApprovedIndication extends MedicalIndication {
+}
+
+concept Aquarium extends CivicStructure {
+}
+
 concept ArchiveComponent extends CreativeWork {
   o Place,string,PostalAddress [object Object]
 }
 
 concept ArchiveOrganization extends LocalBusiness {
   o ArchiveComponent [object Object]
+}
+
+concept ArriveAction extends MoveAction {
+}
+
+concept ArtGallery extends EntertainmentBusiness {
 }
 
 concept Artery extends Vessel {
@@ -603,6 +669,21 @@ concept AskAction extends CommunicateAction {
   o Question question
 }
 
+concept AskPublicNewsArticle extends NewsArticle {
+}
+
+concept AssessAction extends Action {
+}
+
+concept AssignAction extends AllocateAction {
+}
+
+concept Atlas extends CreativeWork {
+}
+
+concept Attorney extends LegalService {
+}
+
 concept Audience extends Intangible {
   o String audienceType
   o AdministrativeArea geographicArea
@@ -614,6 +695,9 @@ concept AudioObject extends MediaObject {
   o String transcript
 }
 
+concept AudioObjectSnapshot extends AudioObject {
+}
+
 concept Audiobook extendsAudiobookAudiobook {
   o Person readBy
   o Duration duration
@@ -623,15 +707,72 @@ concept AuthorizeAction extends AllocateAction {
   o Person,Audience,ContactPoint,Organization recipient
 }
 
+concept AutoBodyShop extends AutomotiveBusiness {
+}
+
+concept AutoDealer extends AutomotiveBusiness {
+}
+
+concept AutoPartsStore extendsAutoPartsStoreAutoPartsStore {
+}
+
+concept AutoRental extends AutomotiveBusiness {
+}
+
+concept AutoRepair extends AutomotiveBusiness {
+}
+
+concept AutoWash extends AutomotiveBusiness {
+}
+
+concept AutomatedTeller extends FinancialService {
+}
+
+concept AutomotiveBusiness extends LocalBusiness {
+}
+
+concept BackgroundNewsArticle extends NewsArticle {
+}
+
+concept Bakery extends FoodEstablishment {
+}
+
 concept BankAccount extends FinancialProduct {
   o string,string bankAccountType
   o MonetaryAmount accountMinimumInflow
   o MonetaryAmount accountOverdraftLimit
 }
 
+concept BankOrCreditUnion extends FinancialService {
+}
+
+concept BarOrPub extends FoodEstablishment {
+}
+
+concept Barcode extends ImageObject {
+}
+
+concept Beach extends CivicStructure {
+}
+
+concept BeautySalon extends HealthAndBeautyBusiness {
+}
+
+concept BedAndBreakfast extends LodgingBusiness {
+}
+
 concept BedDetails extends Intangible {
   o BedType,string typeOfBed
   o Double numberOfBeds
+}
+
+concept BedType extends QualitativeValue {
+}
+
+concept BefriendAction extends InteractAction {
+}
+
+concept BikeStore extends Store {
 }
 
 concept BioChemEntity extends Thing {
@@ -656,9 +797,21 @@ concept Blog extends CreativeWork {
   o BlogPosting blogPost
 }
 
+concept BlogPosting extends SocialMediaPosting {
+}
+
+concept BloodTest extends MedicalTest {
+}
+
 enum BoardingPolicyType {
   o GroupBoardingPolicy
   o ZoneBoardingPolicy
+}
+
+concept BoatReservation extends Reservation {
+}
+
+concept BoatTerminal extends CivicStructure {
 }
 
 concept BoatTrip extends Trip {
@@ -682,6 +835,12 @@ enum BodyMeasurementTypeEnumeration {
   o BodyMeasurementArm
 }
 
+concept BodyOfWater extends Landform {
+}
+
+concept Bone extends AnatomicalStructure {
+}
+
 concept Book extends CreativeWork {
   o String isbn
   o Person illustrator
@@ -699,8 +858,23 @@ enum BookFormatType {
   o EBook
 }
 
+concept BookSeries extends CreativeWorkSeries {
+}
+
+concept BookStore extends Store {
+}
+
+concept BookmarkAction extends OrganizeAction {
+}
+
 concept BorrowAction extends TransferAction {
   o Person,Organization lender
+}
+
+concept BowlingAlley extends SportsActivityLocation {
+}
+
+concept BrainStructure extends AnatomicalStructure {
 }
 
 concept Brand extends Intangible {
@@ -708,6 +882,15 @@ concept Brand extends Intangible {
   o AggregateRating aggregateRating
   o String slogan
   o string,ImageObject logo
+}
+
+concept BreadcrumbList extends ItemList {
+}
+
+concept Brewery extends FoodEstablishment {
+}
+
+concept Bridge extends CivicStructure {
 }
 
 concept BroadcastChannel extends Intangible {
@@ -746,9 +929,24 @@ concept BroadcastService extends Service {
   o Place area
 }
 
+concept BrokerageAccount extends InvestmentOrDeposit {
+}
+
+concept BuddhistTemple extends PlaceOfWorship {
+}
+
 concept BusOrCoach extends Vehicle {
   o QuantitativeValue roofLoad
   o String acrissCode
+}
+
+concept BusReservation extends Reservation {
+}
+
+concept BusStation extends CivicStructure {
+}
+
+concept BusStop extends CivicStructure {
 }
 
 concept BusTrip extends Trip {
@@ -762,6 +960,15 @@ concept BusinessAudience extends Audience {
   o QuantitativeValue yearlyRevenue
   o QuantitativeValue numberOfEmployees
   o QuantitativeValue yearsInOperation
+}
+
+enum BusinessEntityType {
+}
+
+concept BusinessEvent extends Event {
+}
+
+enum BusinessFunction {
 }
 
 concept BuyAction extends TradeAction {
@@ -790,6 +997,24 @@ concept CDCPMDRecord extends StructuredValue {
   o Double cvdNumC19HospPats
 }
 
+concept CableOrSatelliteService extends Service {
+}
+
+concept CafeOrCoffeeShop extends FoodEstablishment {
+}
+
+concept Campground extendsCampgroundCampground {
+}
+
+concept CampingPitch extends Accommodation {
+}
+
+concept Canal extends BodyOfWater {
+}
+
+concept CancelAction extends PlanAction {
+}
+
 concept Car extends Vehicle {
   o QuantitativeValue roofLoad
   o String acrissCode
@@ -801,6 +1026,9 @@ enum CarUsageType {
   o RentalVehicleUsage
 }
 
+concept Casino extends EntertainmentBusiness {
+}
+
 concept CategoryCode extends DefinedTerm {
   o String codeValue
   o CategoryCodeSet,string inCodeSet
@@ -810,10 +1038,28 @@ concept CategoryCodeSet extends DefinedTermSet {
   o CategoryCode hasCategoryCode
 }
 
+concept CatholicChurch extends Church {
+}
+
+concept Cemetery extends CivicStructure {
+}
+
 concept Chapter extends CreativeWork {
   o string,number pageStart
   o string,number pageEnd
   o String pagination
+}
+
+concept CheckAction extends FindAction {
+}
+
+concept CheckInAction extends CommunicateAction {
+}
+
+concept CheckOutAction extends CommunicateAction {
+}
+
+concept CheckoutPage extends WebPage {
 }
 
 concept ChemicalSubstance extends BioChemEntity {
@@ -822,9 +1068,24 @@ concept ChemicalSubstance extends BioChemEntity {
   o DefinedTerm chemicalRole
 }
 
+concept ChildCare extends LocalBusiness {
+}
+
+concept ChildrensEvent extends Event {
+}
+
 concept ChooseAction extends AssessAction {
   o string,Thing option
   o Thing,string actionOption
+}
+
+concept Church extends PlaceOfWorship {
+}
+
+concept City extends AdministrativeArea {
+}
+
+concept CityHall extends GovernmentBuilding {
 }
 
 concept CivicStructure extends Place {
@@ -859,8 +1120,29 @@ concept Clip extends CreativeWork {
   o Person directors
 }
 
+concept ClothingStore extends Store {
+}
+
+concept Code extends CreativeWork {
+}
+
 concept Collection extends CreativeWork {
   o Double [object Object]
+}
+
+concept CollectionPage extends WebPage {
+}
+
+concept CollegeOrUniversity extends EducationalOrganization {
+}
+
+concept ComedyClub extends EntertainmentBusiness {
+}
+
+concept ComedyEvent extends Event {
+}
+
+concept ComicCoverArt extendsComicCoverArtComicCoverArt {
 }
 
 concept ComicIssue extends PublicationIssue {
@@ -870,6 +1152,9 @@ concept ComicIssue extends PublicationIssue {
   o Person inker
   o Person penciler
   o Person artist
+}
+
+concept ComicSeries extends Periodical {
 }
 
 concept ComicStory extends CreativeWork {
@@ -897,14 +1182,32 @@ concept CommunicateAction extends InteractAction {
   o Thing about
 }
 
+concept CompleteDataFeed extends DataFeed {
+}
+
 concept CompoundPriceSpecification extends PriceSpecification {
   o UnitPriceSpecification priceComponent
   o PriceTypeEnumeration,string priceType
 }
 
+concept ComputerLanguage extends Intangible {
+}
+
+concept ComputerStore extends Store {
+}
+
+concept ConfirmAction extends InformAction {
+}
+
+concept Consortium extends Organization {
+}
+
 concept ConsumeAction extends Action {
   o Offer expectsAcceptanceOf
   o ActionAccessSpecification actionAccessibilityRequirement
+}
+
+concept ContactPage extends WebPage {
 }
 
 concept ContactPoint extends StructuredValue {
@@ -925,6 +1228,18 @@ enum ContactPointOption {
   o TollFree
 }
 
+concept Continent extends Landform {
+}
+
+concept ControlAction extends Action {
+}
+
+concept ConvenienceStore extends Store {
+}
+
+concept Conversation extends CreativeWork {
+}
+
 concept CookAction extends CreateAction {
   o Recipe recipe
   o Place,FoodEstablishment foodEstablishment
@@ -933,6 +1248,12 @@ concept CookAction extends CreateAction {
 
 concept Corporation extends Organization {
   o String tickerSymbol
+}
+
+concept CorrectionComment extends Comment {
+}
+
+concept Country extends AdministrativeArea {
 }
 
 concept Course extendsCourseCourse {
@@ -948,6 +1269,18 @@ concept CourseInstance extends Event {
   o Person instructor
   o String courseWorkload
   o string,string courseMode
+}
+
+concept Courthouse extends GovernmentBuilding {
+}
+
+concept CoverArt extends VisualArtwork {
+}
+
+concept CovidTestingFacility extends MedicalClinic {
+}
+
+concept CreateAction extends Action {
 }
 
 concept CreativeWork extends Thing {
@@ -1085,9 +1418,30 @@ concept CreativeWorkSeries extendsCreativeWorkSeriesCreativeWorkSeries {
   o String issn
 }
 
+concept CreditCard extendsCreditCardCreditCard {
+}
+
+concept Crematorium extends CivicStructure {
+}
+
+concept CriticReview extends Review {
+}
+
+concept CssSelectorType extends string {
+}
+
+concept CurrencyConversionService extends FinancialProduct {
+}
+
 concept DDxElement extends MedicalIntangible {
   o MedicalSignOrSymptom distinguishingSign
   o MedicalCondition diagnosis
+}
+
+concept DanceEvent extends Event {
+}
+
+concept DanceGroup extends PerformingGroup {
 }
 
 concept DataCatalog extends CreativeWork {
@@ -1108,6 +1462,9 @@ concept DataFeedItem extends Intangible {
   o date,dateTime dateCreated
   o dateTime,date dateModified
   o Thing item
+}
+
+concept DataType extends string {
 }
 
 concept Dataset extends CreativeWork {
@@ -1139,6 +1496,15 @@ enum DayOfWeek {
   o Sunday
 }
 
+concept DaySpa extends HealthAndBeautyBusiness {
+}
+
+concept DeactivateAction extends ControlAction {
+}
+
+concept DefenceEstablishment extends GovernmentBuilding {
+}
+
 concept DefinedRegion extends StructuredValue {
   o Country,string addressCountry
   o String addressRegion
@@ -1154,6 +1520,9 @@ concept DefinedTerm extends Intangible {
 
 concept DefinedTermSet extends CreativeWork {
   o DefinedTerm hasDefinedTerm
+}
+
+concept DeleteAction extends UpdateAction {
 }
 
 concept DeliveryChargeSpecification extends PriceSpecification {
@@ -1219,8 +1588,23 @@ concept Demand extends Intangible {
   o String serialNumber
 }
 
+concept Dentist extendsDentistDentistDentist {
+}
+
+concept DepartAction extends MoveAction {
+}
+
+concept DepartmentStore extends Store {
+}
+
+concept DepositAccount extendsDepositAccountDepositAccount {
+}
+
 concept DiagnosticLab extends MedicalOrganization {
   o MedicalTest availableTest
+}
+
+concept DiagnosticProcedure extends MedicalProcedure {
 }
 
 concept Diet extendsDietDiet {
@@ -1268,6 +1652,24 @@ enum DigitalPlatformEnumeration {
   o IOSPlatform
 }
 
+concept DisagreeAction extends ReactAction {
+}
+
+concept DiscoverAction extends FindAction {
+}
+
+concept DiscussionForumPosting extends SocialMediaPosting {
+}
+
+concept DislikeAction extends ReactAction {
+}
+
+concept Distance extends Quantity {
+}
+
+concept Distillery extends FoodEstablishment {
+}
+
 concept DonateAction extends TradeAction {
   o Person,Audience,ContactPoint,Organization recipient
 }
@@ -1279,11 +1681,23 @@ concept DoseSchedule extends MedicalIntangible {
   o number,QualitativeValue doseValue
 }
 
+concept DownloadAction extends TransferAction {
+}
+
+concept DrawAction extends CreateAction {
+}
+
+concept Drawing extends CreativeWork {
+}
+
+concept DrinkAction extends ConsumeAction {
+}
+
 concept DriveWheelConfigurationValue extends QualitativeValue {
-  o schema:DriveWheelConfigurationValue FrontWheelDriveConfiguration
-  o schema:DriveWheelConfigurationValue FourWheelDriveConfiguration
-  o schema:DriveWheelConfigurationValue AllWheelDriveConfiguration
-  o schema:DriveWheelConfigurationValue RearWheelDriveConfiguration
+  o DriveWheelConfigurationValue FrontWheelDriveConfiguration
+  o DriveWheelConfigurationValue FourWheelDriveConfiguration
+  o DriveWheelConfigurationValue AllWheelDriveConfiguration
+  o DriveWheelConfigurationValue RearWheelDriveConfiguration
 }
 
 concept Drug extends Substance {
@@ -1365,6 +1779,12 @@ concept DrugStrength extends MedicalIntangible {
   o Double strengthValue
 }
 
+concept DryCleaningOrLaundry extends LocalBusiness {
+}
+
+concept Duration extends Quantity {
+}
+
 enum EUEnergyEfficiencyEnumeration {
   o EUEnergyEfficiencyCategoryD
   o EUEnergyEfficiencyCategoryA2Plus
@@ -1376,6 +1796,9 @@ enum EUEnergyEfficiencyEnumeration {
   o EUEnergyEfficiencyCategoryF
   o EUEnergyEfficiencyCategoryC
   o EUEnergyEfficiencyCategoryG
+}
+
+concept EatAction extends ConsumeAction {
 }
 
 concept EducationEvent extends Event {
@@ -1428,19 +1851,55 @@ concept EducationalOrganization extendsEducationalOrganizationEducationalOrganiz
   o Person alumni
 }
 
+concept Electrician extends HomeAndConstructionBusiness {
+}
+
+concept ElectronicsStore extends Store {
+}
+
+concept ElementarySchool extends EducationalOrganization {
+}
+
+concept EmailMessage extends Message {
+}
+
+concept Embassy extends GovernmentBuilding {
+}
+
+concept EmergencyService extends LocalBusiness {
+}
+
 concept EmployeeRole extends OrganizationRole {
   o String salaryCurrency
   o number,PriceSpecification,MonetaryAmount baseSalary
+}
+
+concept EmployerAggregateRating extends AggregateRating {
+}
+
+concept EmployerReview extends Review {
+}
+
+concept EmploymentAgency extends LocalBusiness {
 }
 
 concept EndorseAction extends ReactAction {
   o Person,Organization endorsee
 }
 
+concept EndorsementRating extends Rating {
+}
+
+concept Energy extends Quantity {
+}
+
 concept EnergyConsumptionDetails extends Intangible {
   o EUEnergyEfficiencyEnumeration energyEfficiencyScaleMin
   o EnergyEfficiencyEnumeration hasEnergyEfficiencyCategory
   o EUEnergyEfficiencyEnumeration energyEfficiencyScaleMax
+}
+
+enum EnergyEfficiencyEnumeration {
 }
 
 enum EnergyStarEnergyEfficiencyEnumeration {
@@ -1453,6 +1912,9 @@ concept EngineSpecification extends StructuredValue {
   o QuantitativeValue engineDisplacement
   o QuantitativeValue enginePower
   o QualitativeValue,string,string engineType
+}
+
+concept EntertainmentBusiness extends LocalBusiness {
 }
 
 concept EntryPoint extends Intangible {
@@ -1533,12 +1995,21 @@ enum EventAttendanceModeEnumeration {
   o OnlineEventAttendanceMode
 }
 
+concept EventReservation extends Reservation {
+}
+
+concept EventSeries extendsEventSeriesEventSeries {
+}
+
 enum EventStatusType {
   o EventCancelled
   o EventScheduled
   o EventRescheduled
   o EventPostponed
   o EventMovedOnline
+}
+
+concept EventVenue extends CivicStructure {
 }
 
 concept ExchangeRateSpecification extends StructuredValue {
@@ -1563,6 +2034,9 @@ concept ExerciseAction extends PlayAction {
   o String exerciseType
 }
 
+concept ExerciseGym extends SportsActivityLocation {
+}
+
 concept ExercisePlan extendsExercisePlanExercisePlan {
   o number,QuantitativeValue repetitions
   o QuantitativeValue,string intensity
@@ -1574,6 +2048,24 @@ concept ExercisePlan extendsExercisePlanExercisePlan {
   o String exerciseType
 }
 
+concept ExhibitionEvent extends Event {
+}
+
+concept FAQPage extends WebPage {
+}
+
+concept FMRadioChannel extends RadioChannel {
+}
+
+concept FastFoodRestaurant extends FoodEstablishment {
+}
+
+concept Festival extends Event {
+}
+
+concept FilmAction extends CreateAction {
+}
+
 concept FinancialProduct extends Service {
   o number,QuantitativeValue annualPercentageRate
   o string,string feesAndCommissionsSpecification
@@ -1582,6 +2074,12 @@ concept FinancialProduct extends Service {
 
 concept FinancialService extends LocalBusiness {
   o string,string feesAndCommissionsSpecification
+}
+
+concept FindAction extends Action {
+}
+
+concept FireStation extendsFireStationFireStation {
 }
 
 concept Flight extends Trip {
@@ -1609,6 +2107,9 @@ concept FlightReservation extends Reservation {
   o String passengerSequenceNumber
 }
 
+concept Float extends number {
+}
+
 concept FloorPlan extends Intangible {
   o Accommodation isPlanForApartment
   o Double numberOfBathroomsTotal
@@ -1622,6 +2123,9 @@ concept FloorPlan extends Intangible {
   o Double numberOfFullBathrooms
   o string,boolean petsAllowed
   o ImageObject,string layoutImage
+}
+
+concept Florist extends Store {
 }
 
 concept FollowAction extends InteractAction {
@@ -1640,6 +2144,21 @@ concept FoodEstablishmentReservation extends Reservation {
   o number,QuantitativeValue partySize
   o dateTime,time startTime
   o dateTime,time endTime
+}
+
+concept FoodEvent extends Event {
+}
+
+concept FoodService extends Service {
+}
+
+concept FundingAgency extends Project {
+}
+
+concept FundingScheme extends Organization {
+}
+
+concept FurnitureStore extends Store {
 }
 
 concept Game extends CreativeWork {
@@ -1674,6 +2193,15 @@ enum GameServerStatus {
   o OfflineTemporarily
 }
 
+concept GardenStore extends Store {
+}
+
+concept GasStation extends AutomotiveBusiness {
+}
+
+concept GatedResidenceCommunity extends Residence {
+}
+
 enum GenderType {
   o Male
   o Female
@@ -1684,6 +2212,9 @@ concept Gene extends BioChemEntity {
   o String hasBioPolymerSequence
   o BioChemEntity encodesBioChemEntity
   o AnatomicalStructure,BioChemEntity,DefinedTerm,AnatomicalSystem expressedIn
+}
+
+concept GeneralContractor extends HomeAndConstructionBusiness {
 }
 
 concept GeoCircle extends GeoShape {
@@ -1728,6 +2259,9 @@ concept GiveAction extends TransferAction {
   o Person,Audience,ContactPoint,Organization recipient
 }
 
+concept GolfCourse extends SportsActivityLocation {
+}
+
 enum GovernmentBenefitsType {
   o HealthCare
   o BusinessSupport
@@ -1737,6 +2271,18 @@ enum GovernmentBenefitsType {
   o UnemploymentSupport
   o PaidLeave
   o BasicIncome
+}
+
+concept GovernmentBuilding extends CivicStructure {
+}
+
+concept GovernmentOffice extends LocalBusiness {
+}
+
+concept GovernmentOrganization extends Organization {
+}
+
+concept GovernmentPermit extends Permit {
 }
 
 concept GovernmentService extends Service {
@@ -1750,8 +2296,26 @@ concept Grant extends Intangible {
   o Organization,Person sponsor
 }
 
+concept GroceryStore extends Store {
+}
+
 concept Guide extends CreativeWork {
   o String reviewAspect
+}
+
+concept HVACBusiness extends HomeAndConstructionBusiness {
+}
+
+concept Hackathon extends Event {
+}
+
+concept HairSalon extends HealthAndBeautyBusiness {
+}
+
+concept HardwareStore extends Store {
+}
+
+concept HealthAndBeautyBusiness extends LocalBusiness {
 }
 
 enum HealthAspectEnumeration {
@@ -1784,6 +2348,9 @@ enum HealthAspectEnumeration {
   o PatientExperienceHealthAspect
   o RelatedTopicsHealthAspect
   o MisconceptionsHealthAspect
+}
+
+concept HealthClub extendsHealthClubHealthClub {
 }
 
 concept HealthInsurancePlan extends Intangible {
@@ -1822,10 +2389,31 @@ concept HealthTopicContent extends WebContent {
   o HealthAspectEnumeration hasHealthAspect
 }
 
+concept HighSchool extends EducationalOrganization {
+}
+
+concept HinduTemple extends PlaceOfWorship {
+}
+
+concept HobbyShop extends Store {
+}
+
+concept HomeAndConstructionBusiness extends LocalBusiness {
+}
+
+concept HomeGoodsStore extends Store {
+}
+
 concept Hospital extendsHospitalHospitalHospital {
   o MedicalTest,MedicalProcedure,MedicalTherapy availableService
   o Dataset,CDCPMDRecord healthcareReportingData
   o MedicalSpecialty medicalSpecialty
+}
+
+concept Hostel extends LodgingBusiness {
+}
+
+concept Hotel extends LodgingBusiness {
 }
 
 concept HotelRoom extends Room {
@@ -1835,6 +2423,9 @@ concept HotelRoom extends Room {
 
 concept House extends Accommodation {
   o QuantitativeValue,number numberOfRooms
+}
+
+concept HousePainter extends HomeAndConstructionBusiness {
 }
 
 concept HowTo extends CreativeWork {
@@ -1868,8 +2459,17 @@ concept HowToSection extendsHowToSectionHowToSectionHowToSection {
   o ItemList,CreativeWork,string steps
 }
 
+concept HowToStep extendsHowToStepHowToStepHowToStep {
+}
+
 concept HowToSupply extends HowToItem {
   o string,MonetaryAmount estimatedCost
+}
+
+concept HowToTip extendsHowToTipHowToTip {
+}
+
+concept HowToTool extends HowToItem {
 }
 
 concept HyperToc extends CreativeWork {
@@ -1883,12 +2483,24 @@ concept HyperTocEntry extends CreativeWork {
   o String utterances
 }
 
+concept IceCreamShop extends FoodEstablishment {
+}
+
+concept IgnoreAction extends AssessAction {
+}
+
+concept ImageGallery extends MediaGallery {
+}
+
 concept ImageObject extends MediaObject {
   o String embeddedTextCaption
   o Boolean representativeOfPage
   o string,MediaObject caption
   o ImageObject thumbnail
   o PropertyValue,string exifData
+}
+
+concept ImageObjectSnapshot extends ImageObject {
 }
 
 concept ImagingTest extends MedicalTest {
@@ -1922,6 +2534,21 @@ concept InsertAction extends AddAction {
   o Place toLocation
 }
 
+concept InstallAction extends ConsumeAction {
+}
+
+concept InsuranceAgency extends FinancialService {
+}
+
+concept Intangible extends Thing {
+}
+
+concept Integer extends number {
+}
+
+concept InteractAction extends Action {
+}
+
 concept InteractionCounter extends StructuredValue {
   o dateTime,time startTime
   o Double userInteractionCount
@@ -1929,6 +2556,12 @@ concept InteractionCounter extends StructuredValue {
   o Action interactionType
   o SoftwareApplication,WebSite interactionService
   o dateTime,time endTime
+}
+
+concept InternetCafe extends LocalBusiness {
+}
+
+concept InvestmentFund extends InvestmentOrDeposit {
 }
 
 concept InvestmentOrDeposit extends FinancialProduct {
@@ -1983,6 +2616,12 @@ enum ItemListOrderType {
   o ItemListOrderAscending
 }
 
+concept ItemPage extends WebPage {
+}
+
+concept JewelryStore extends Store {
+}
+
 concept JobPosting extends Intangible {
   o String employerOverview
   o MonetaryAmountDistribution,MonetaryAmount,number estimatedSalary
@@ -2033,6 +2672,18 @@ concept Joint extends AnatomicalStructure {
   o string,MedicalEntity functionalClass
 }
 
+concept LakeBodyOfWater extends BodyOfWater {
+}
+
+concept Landform extends Place {
+}
+
+concept LandmarksOrHistoricalBuildings extends Place {
+}
+
+concept Language extends Intangible {
+}
+
 concept LearningResource extends CreativeWork {
   o DefinedTerm,string teaches
   o string,DefinedTerm,string educationalLevel
@@ -2051,6 +2702,9 @@ enum LegalForceStatus {
   o NotInForce
   o InForce
   o PartiallyInForce
+}
+
+concept LegalService extends LocalBusiness {
 }
 
 enum LegalValueLevel {
@@ -2080,8 +2734,26 @@ concept LegislationObject extendsLegislationObjectLegislationObject {
   o LegalValueLevel legislationLegalValue
 }
 
+concept LegislativeBuilding extends GovernmentBuilding {
+}
+
 concept LendAction extends TransferAction {
   o Person borrower
+}
+
+concept Library extends LocalBusiness {
+}
+
+concept LibrarySystem extends Organization {
+}
+
+concept LifestyleModification extends MedicalEntity {
+}
+
+concept Ligament extends AnatomicalStructure {
+}
+
+concept LikeAction extends ReactAction {
 }
 
 concept LinkRole extends Role {
@@ -2089,11 +2761,20 @@ concept LinkRole extends Role {
   o string,Language inLanguage
 }
 
+concept LiquorStore extends Store {
+}
+
 concept ListItem extends Intangible {
   o number,string position
   o ListItem nextItem
   o Thing item
   o ListItem previousItem
+}
+
+concept ListenAction extends ConsumeAction {
+}
+
+concept LiteraryEvent extends Event {
 }
 
 concept LiveBlogPosting extends BlogPosting {
@@ -2128,6 +2809,9 @@ concept LocationFeatureSpecification extends PropertyValue {
   o dateTime,date validThrough
 }
 
+concept Locksmith extends HomeAndConstructionBusiness {
+}
+
 concept LodgingBusiness extends LocalBusiness {
   o QuantitativeValue,number numberOfRooms
   o Audience audience
@@ -2158,6 +2842,9 @@ concept LymphaticVessel extends Vessel {
   o Vessel originatesFrom
 }
 
+concept Manuscript extends CreativeWork {
+}
+
 concept Map extends CreativeWork {
   o MapCategoryType mapType
 }
@@ -2169,8 +2856,23 @@ enum MapCategoryType {
   o TransitMap
 }
 
+concept MarryAction extends InteractAction {
+}
+
+concept Mass extends Quantity {
+}
+
 concept MathSolver extends CreativeWork {
   o SolveMathAction,string mathExpression
+}
+
+concept MaximumDoseSchedule extends DoseSchedule {
+}
+
+enum MeasurementTypeEnumeration {
+}
+
+concept MediaGallery extends CollectionPage {
 }
 
 enum MediaManipulationRatingEnumeration {
@@ -2220,9 +2922,15 @@ concept MediaSubscription extends Intangible {
   o Organization authenticator
 }
 
+concept MedicalAudience extendsMedicalAudienceMedicalAudience {
+}
+
 enum MedicalAudienceType {
   o MedicalResearcher
   o Clinician
+}
+
+concept MedicalBusiness extends LocalBusiness {
 }
 
 concept MedicalCause extends MedicalEntity {
@@ -2263,6 +2971,9 @@ concept MedicalConditionStage extends MedicalIntangible {
   o Double stageAsNumber
 }
 
+concept MedicalContraindication extends MedicalEntity {
+}
+
 concept MedicalDevice extends MedicalEntity {
   o MedicalEntity adverseOutcome
   o String preOp
@@ -2288,6 +2999,9 @@ concept MedicalEntity extends Thing {
   o MedicalSpecialty relevantSpecialty
 }
 
+enum MedicalEnumeration {
+}
+
 enum MedicalEvidenceLevel {
   o EvidenceLevelA
   o EvidenceLevelB
@@ -2301,6 +3015,9 @@ concept MedicalGuideline extends MedicalEntity {
   o date guidelineDate
 }
 
+concept MedicalGuidelineContraindication extends MedicalGuideline {
+}
+
 concept MedicalGuidelineRecommendation extends MedicalGuideline {
   o String recommendationStrength
 }
@@ -2311,6 +3028,12 @@ enum MedicalImagingTechnique {
   o MRI
   o Ultrasound
   o CT
+}
+
+concept MedicalIndication extends MedicalEntity {
+}
+
+concept MedicalIntangible extends MedicalEntity {
 }
 
 concept MedicalObservationalStudy extends MedicalStudy {
@@ -2346,6 +3069,9 @@ enum MedicalProcedureType {
   o NoninvasiveProcedure
 }
 
+concept MedicalRiskCalculator extends MedicalRiskEstimator {
+}
+
 concept MedicalRiskEstimator extends MedicalEntity {
   o MedicalEntity estimatesRiskOf
   o MedicalRiskFactor includedRiskFactor
@@ -2373,47 +3099,47 @@ concept MedicalSignOrSymptom extends MedicalCondition {
 }
 
 concept MedicalSpecialty extendsMedicalSpecialtyMedicalSpecialty {
-  o schema:MedicalSpecialty Cardiovascular
-  o schema:MedicalSpecialty Renal
-  o schema:MedicalSpecialty Nursing
-  o schema:MedicalSpecialty Dermatologic
-  o schema:MedicalSpecialty DietNutrition
-  o schema:MedicalSpecialty PrimaryCare
-  o schema:MedicalSpecialty Oncologic
-  o schema:MedicalSpecialty Physiotherapy
-  o schema:MedicalSpecialty Optometric
-  o schema:MedicalSpecialty Gynecologic
-  o schema:MedicalSpecialty Midwifery
-  o schema:MedicalSpecialty SpeechPathology
-  o schema:MedicalSpecialty CommunityHealth
-  o schema:MedicalSpecialty Emergency
-  o schema:MedicalSpecialty LaboratoryScience
-  o schema:MedicalSpecialty Geriatric
-  o schema:MedicalSpecialty Anesthesia
-  o schema:MedicalSpecialty Endocrine
-  o schema:MedicalSpecialty RespiratoryTherapy
-  o schema:MedicalSpecialty Pediatric
-  o schema:MedicalSpecialty Genetic
-  o schema:MedicalSpecialty Infectious
-  o schema:MedicalSpecialty Rheumatologic
-  o schema:MedicalSpecialty Musculoskeletal
-  o schema:MedicalSpecialty Podiatric
-  o schema:MedicalSpecialty Obstetric
-  o schema:MedicalSpecialty Pathology
-  o schema:MedicalSpecialty Pulmonary
-  o schema:MedicalSpecialty Dermatology
-  o schema:MedicalSpecialty Dentistry
-  o schema:MedicalSpecialty Gastroenterologic
-  o schema:MedicalSpecialty PublicHealth
-  o schema:MedicalSpecialty Psychiatric
-  o schema:MedicalSpecialty PharmacySpecialty
-  o schema:MedicalSpecialty Hematologic
-  o schema:MedicalSpecialty Toxicologic
-  o schema:MedicalSpecialty PlasticSurgery
-  o schema:MedicalSpecialty Urologic
-  o schema:MedicalSpecialty Neurologic
-  o schema:MedicalSpecialty Otolaryngologic
-  o schema:MedicalSpecialty Surgical
+  o MedicalSpecialty Cardiovascular
+  o MedicalSpecialty Renal
+  o MedicalSpecialty Nursing
+  o MedicalSpecialty Dermatologic
+  o MedicalSpecialty DietNutrition
+  o MedicalSpecialty PrimaryCare
+  o MedicalSpecialty Oncologic
+  o MedicalSpecialty Physiotherapy
+  o MedicalSpecialty Optometric
+  o MedicalSpecialty Gynecologic
+  o MedicalSpecialty Midwifery
+  o MedicalSpecialty SpeechPathology
+  o MedicalSpecialty CommunityHealth
+  o MedicalSpecialty Emergency
+  o MedicalSpecialty LaboratoryScience
+  o MedicalSpecialty Geriatric
+  o MedicalSpecialty Anesthesia
+  o MedicalSpecialty Endocrine
+  o MedicalSpecialty RespiratoryTherapy
+  o MedicalSpecialty Pediatric
+  o MedicalSpecialty Genetic
+  o MedicalSpecialty Infectious
+  o MedicalSpecialty Rheumatologic
+  o MedicalSpecialty Musculoskeletal
+  o MedicalSpecialty Podiatric
+  o MedicalSpecialty Obstetric
+  o MedicalSpecialty Pathology
+  o MedicalSpecialty Pulmonary
+  o MedicalSpecialty Dermatology
+  o MedicalSpecialty Dentistry
+  o MedicalSpecialty Gastroenterologic
+  o MedicalSpecialty PublicHealth
+  o MedicalSpecialty Psychiatric
+  o MedicalSpecialty PharmacySpecialty
+  o MedicalSpecialty Hematologic
+  o MedicalSpecialty Toxicologic
+  o MedicalSpecialty PlasticSurgery
+  o MedicalSpecialty Urologic
+  o MedicalSpecialty Neurologic
+  o MedicalSpecialty Otolaryngologic
+  o MedicalSpecialty Surgical
 }
 
 concept MedicalStudy extends MedicalEntity {
@@ -2435,6 +3161,9 @@ enum MedicalStudyStatus {
   o ResultsAvailable
   o Terminated
   o Withdrawn
+}
+
+concept MedicalSymptom extends MedicalSignOrSymptom {
 }
 
 concept MedicalTest extends MedicalEntity {
@@ -2483,6 +3212,12 @@ enum MedicineSystem {
   o Osteopathic
   o WesternConventional
   o Ayurvedic
+}
+
+concept MeetingRoom extends Room {
+}
+
+concept MensClothingStore extends Store {
 }
 
 concept Menu extends CreativeWork {
@@ -2552,8 +3287,14 @@ concept Message extends CreativeWork {
   o Person,Audience,Organization sender
 }
 
+concept MiddleSchool extends EducationalOrganization {
+}
+
 concept MobileApplication extends SoftwareApplication {
   o String carrierRequirements
+}
+
+concept MobilePhoneStore extends Store {
 }
 
 concept MolecularEntity extends BioChemEntity {
@@ -2596,6 +3337,27 @@ concept MortgageLoan extends LoanOrCredit {
   o Boolean domiciledMortgage
 }
 
+concept Mosque extends PlaceOfWorship {
+}
+
+concept Motel extends LodgingBusiness {
+}
+
+concept Motorcycle extends Vehicle {
+}
+
+concept MotorcycleDealer extends AutomotiveBusiness {
+}
+
+concept MotorcycleRepair extends AutomotiveBusiness {
+}
+
+concept MotorizedBicycle extends Vehicle {
+}
+
+concept Mountain extends Landform {
+}
+
 concept MoveAction extends Action {
   o Place fromLocation
   o Place toLocation
@@ -2615,6 +3377,12 @@ concept Movie extends CreativeWork {
   o Person directors
 }
 
+concept MovieClip extends Clip {
+}
+
+concept MovieRentalStore extends Store {
+}
+
 concept MovieSeries extends CreativeWorkSeries {
   o Person director
   o Person actor
@@ -2629,12 +3397,18 @@ concept MovieTheater extendsMovieTheaterMovieTheater {
   o Double screenCount
 }
 
+concept MovingCompany extends HomeAndConstructionBusiness {
+}
+
 concept Muscle extends AnatomicalStructure {
   o AnatomicalStructure insertion
   o Muscle antagonist
   o Nerve nerve
   o Vessel bloodSupply
   o String muscleAction
+}
+
+concept Museum extends CivicStructure {
 }
 
 concept MusicAlbum extends MusicPlaylist {
@@ -2674,6 +3448,9 @@ concept MusicComposition extends CreativeWork {
   o CreativeWork lyrics
   o String musicalKey
   o Person lyricist
+}
+
+concept MusicEvent extends Event {
 }
 
 concept MusicGroup extends PerformingGroup {
@@ -2719,9 +3496,24 @@ enum MusicReleaseFormatType {
   o DVDFormat
 }
 
+concept MusicStore extends Store {
+}
+
+concept MusicVenue extends CivicStructure {
+}
+
+concept MusicVideoObject extends MediaObject {
+}
+
+concept NGO extends Organization {
+}
+
 concept NLNonprofitType extends NonprofitType {
-  o schema:NLNonprofitType NonprofitANBI
-  o schema:NLNonprofitType NonprofitSBBI
+  o NLNonprofitType NonprofitANBI
+  o NLNonprofitType NonprofitSBBI
+}
+
+concept NailSalon extends HealthAndBeautyBusiness {
 }
 
 concept Nerve extends AnatomicalStructure {
@@ -2751,6 +3543,21 @@ concept NewsMediaOrganization extends Organization {
   o CreativeWork,string unnamedSourcesPolicy
   o string,CreativeWork verificationFactCheckingPolicy
   o CreativeWork,string noBylinesPolicy
+}
+
+concept Newspaper extends Periodical {
+}
+
+concept NightClub extends EntertainmentBusiness {
+}
+
+enum NonprofitType {
+}
+
+concept Notary extends LegalService {
+}
+
+concept NoteDigitalDocument extends DigitalDocument {
 }
 
 concept NutritionInformation extends StructuredValue {
@@ -2789,6 +3596,12 @@ concept Occupation extends Intangible {
 
 concept OccupationalExperienceRequirements extends Intangible {
   o Double monthsOfExperience
+}
+
+concept OccupationalTherapy extends MedicalTherapy {
+}
+
+concept OceanBodyOfWater extends BodyOfWater {
 }
 
 concept Offer extends Intangible {
@@ -2842,6 +3655,15 @@ concept Offer extends Intangible {
   o String serialNumber
 }
 
+concept OfferCatalog extends ItemList {
+}
+
+concept OfferForLease extends Offer {
+}
+
+concept OfferForPurchase extends Offer {
+}
+
 enum OfferItemCondition {
   o DamagedCondition
   o RefurbishedCondition
@@ -2859,12 +3681,30 @@ concept OfferShippingDetails extends StructuredValue {
   o MonetaryAmount shippingRate
 }
 
+concept OfficeEquipmentStore extends Store {
+}
+
+concept OnDemandEvent extends PublicationEvent {
+}
+
+concept OnlineBusiness extends Organization {
+}
+
+concept OnlineStore extends OnlineBusiness {
+}
+
 concept OpeningHoursSpecification extends StructuredValue {
   o time closes
   o DayOfWeek dayOfWeek
   o dateTime,date validFrom
   o time opens
   o dateTime,date validThrough
+}
+
+concept OpinionNewsArticle extends NewsArticle {
+}
+
+concept Optician extends MedicalBusiness {
 }
 
 concept Order extends Intangible {
@@ -2988,11 +3828,26 @@ concept OrganizationRole extends Role {
   o Double numberedPosition
 }
 
+concept OrganizeAction extends Action {
+}
+
+concept OutletStore extends Store {
+}
+
 concept OwnershipInfo extends StructuredValue {
   o dateTime ownedFrom
   o Product,Service typeOfGood
   o Organization,Person acquiredFrom
   o dateTime ownedThrough
+}
+
+concept PaintAction extends CreateAction {
+}
+
+concept Painting extends CreativeWork {
+}
+
+concept PalliativeProcedure extendsPalliativeProcedurePalliativeProcedure {
 }
 
 concept ParcelDelivery extends Intangible {
@@ -3015,6 +3870,12 @@ concept ParentAudience extends PeopleAudience {
   o Double childMinAge
 }
 
+concept Park extends CivicStructure {
+}
+
+concept ParkingFacility extends CivicStructure {
+}
+
 concept PathologyTest extends MedicalTest {
   o String tissueSample
 }
@@ -3023,6 +3884,9 @@ concept Patient extendsPatientPatient {
   o MedicalCondition healthCondition
   o Drug drug
   o MedicalCondition diagnosis
+}
+
+concept PawnShop extends Store {
 }
 
 concept PayAction extends TradeAction {
@@ -3039,6 +3903,12 @@ concept PaymentCard extendsPaymentCardPaymentCard {
 concept PaymentChargeSpecification extends PriceSpecification {
   o PaymentMethod appliesToPaymentMethod
   o DeliveryMethod appliesToDeliveryMethod
+}
+
+enum PaymentMethod {
+}
+
+concept PaymentService extends FinancialProduct {
 }
 
 enum PaymentStatusType {
@@ -3067,6 +3937,15 @@ concept PerformAction extends PlayAction {
 
 concept PerformanceRole extends Role {
   o String characterName
+}
+
+concept PerformingArtsTheater extends CivicStructure {
+}
+
+concept PerformingGroup extends Organization {
+}
+
+concept Periodical extends CreativeWorkSeries {
 }
 
 concept Permit extends Intangible {
@@ -3145,6 +4024,18 @@ concept Person extends Thing {
   o String faxNumber
 }
 
+concept PetStore extends Store {
+}
+
+concept Pharmacy extendsPharmacyPharmacy {
+}
+
+concept Photograph extends CreativeWork {
+}
+
+concept PhotographAction extends CreateAction {
+}
+
 concept PhysicalActivity extends LifestyleModification {
   o string,string,PhysicalActivityCategory,Thing,CategoryCode category
   o String pathophysiology
@@ -3163,20 +4054,23 @@ enum PhysicalActivityCategory {
 }
 
 concept PhysicalExam extendsPhysicalExamPhysicalExam {
-  o schema:PhysicalExam Genitourinary
-  o schema:PhysicalExam Abdomen
-  o schema:PhysicalExam Appearance
-  o schema:PhysicalExam CardiovascularExam
-  o schema:PhysicalExam Skin
-  o schema:PhysicalExam Lung
-  o schema:PhysicalExam Neck
-  o schema:PhysicalExam Ear
-  o schema:PhysicalExam MusculoskeletalExam
-  o schema:PhysicalExam Head
-  o schema:PhysicalExam Eye
-  o schema:PhysicalExam Throat
-  o schema:PhysicalExam Neuro
-  o schema:PhysicalExam Nose
+  o PhysicalExam Genitourinary
+  o PhysicalExam Abdomen
+  o PhysicalExam Appearance
+  o PhysicalExam CardiovascularExam
+  o PhysicalExam Skin
+  o PhysicalExam Lung
+  o PhysicalExam Neck
+  o PhysicalExam Ear
+  o PhysicalExam MusculoskeletalExam
+  o PhysicalExam Head
+  o PhysicalExam Eye
+  o PhysicalExam Throat
+  o PhysicalExam Neuro
+  o PhysicalExam Nose
+}
+
+concept PhysicalTherapy extends MedicalTherapy {
 }
 
 concept Physician extendsPhysicianPhysician {
@@ -3233,8 +4127,14 @@ concept Place extends Thing {
   o Event event
 }
 
+concept PlaceOfWorship extends CivicStructure {
+}
+
 concept PlanAction extends OrganizeAction {
   o dateTime scheduledTime
+}
+
+concept Play extends CreativeWork {
 }
 
 concept PlayAction extends Action {
@@ -3246,9 +4146,30 @@ concept PlayGameAction extends ConsumeAction {
   o GameAvailabilityEnumeration,string gameAvailabilityType
 }
 
+concept Playground extends CivicStructure {
+}
+
+concept Plumber extends HomeAndConstructionBusiness {
+}
+
+concept PodcastEpisode extends Episode {
+}
+
+concept PodcastSeason extends CreativeWorkSeason {
+}
+
 concept PodcastSeries extends CreativeWorkSeries {
   o Person actor
   o DataFeed,string webFeed
+}
+
+concept PoliceStation extendsPoliceStationPoliceStation {
+}
+
+concept Pond extends BodyOfWater {
+}
+
+concept PostOffice extends GovernmentOffice {
 }
 
 concept PostalAddress extends ContactPoint {
@@ -3263,6 +4184,24 @@ concept PostalAddress extends ContactPoint {
 concept PostalCodeRangeSpecification extends StructuredValue {
   o String postalCodeEnd
   o String postalCodeBegin
+}
+
+concept Poster extends CreativeWork {
+}
+
+concept PreOrderAction extends TradeAction {
+}
+
+concept PrependAction extends InsertAction {
+}
+
+concept Preschool extends EducationalOrganization {
+}
+
+concept PresentationDigitalDocument extends DigitalDocument {
+}
+
+concept PreventionIndication extends MedicalIndication {
 }
 
 enum PriceComponentTypeEnumeration {
@@ -3365,6 +4304,12 @@ concept ProductModel extends Product {
   o ProductModel,ProductGroup isVariantOf
 }
 
+concept ProfessionalService extends LocalBusiness {
+}
+
+concept ProfilePage extends WebPage {
+}
+
 concept ProgramMembership extends Intangible {
   o number,QuantitativeValue membershipPointsEarned
   o Organization,Person member
@@ -3374,7 +4319,10 @@ concept ProgramMembership extends Intangible {
   o Person,Organization members
 }
 
-concept PronounceableText extends Text {
+concept Project extends Organization {
+}
+
+concept PronounceableText extends string {
   o String phoneticText
   o String speechToTextMarkup
   o String textValue
@@ -3417,6 +4365,15 @@ concept Protein extends BioChemEntity {
   o String hasBioPolymerSequence
 }
 
+concept PsychologicalTreatment extends TherapeuticProcedure {
+}
+
+concept PublicSwimmingPool extends SportsActivityLocation {
+}
+
+concept PublicToilet extends CivicStructure {
+}
+
 concept PublicationEvent extends Event {
   o Organization,Person publishedBy
   o Boolean free
@@ -3435,6 +4392,9 @@ concept PublicationVolume extends CreativeWork {
   o string,number pageEnd
   o number,string volumeNumber
   o String pagination
+}
+
+concept QAPage extends WebPage {
 }
 
 enum QualitativeValue {
@@ -3467,6 +4427,9 @@ concept QuantitativeValueDistribution extends StructuredValue {
   o Duration duration
 }
 
+concept Quantity extends Intangible {
+}
+
 concept Question extends Comment {
   o ItemList,Answer suggestedAnswer
   o Answer,ItemList acceptedAnswer
@@ -3474,8 +4437,35 @@ concept Question extends Comment {
   o String eduQuestionType
 }
 
+concept Quiz extends LearningResource {
+}
+
 concept Quotation extends CreativeWork {
   o Person,Organization spokenByCharacter
+}
+
+concept QuoteAction extends TradeAction {
+}
+
+concept RVPark extends CivicStructure {
+}
+
+concept RadiationTherapy extends MedicalTherapy {
+}
+
+concept RadioBroadcastService extends BroadcastService {
+}
+
+concept RadioChannel extends BroadcastChannel {
+}
+
+concept RadioClip extends Clip {
+}
+
+concept RadioEpisode extends Episode {
+}
+
+concept RadioSeason extends CreativeWorkSeason {
 }
 
 concept RadioSeries extends CreativeWorkSeries {
@@ -3495,6 +4485,9 @@ concept RadioSeries extends CreativeWorkSeries {
   o Person directors
 }
 
+concept RadioStation extends LocalBusiness {
+}
+
 concept Rating extends Intangible {
   o String reviewAspect
   o string,number worstRating
@@ -3502,6 +4495,15 @@ concept Rating extends Intangible {
   o string,number bestRating
   o number,string ratingValue
   o String ratingExplanation
+}
+
+concept ReactAction extends AssessAction {
+}
+
+concept ReadAction extends ConsumeAction {
+}
+
+concept RealEstateAgent extends LocalBusiness {
 }
 
 concept RealEstateListing extends WebPage {
@@ -3531,10 +4533,22 @@ concept Recommendation extends Review {
   o string,string,PhysicalActivityCategory,Thing,CategoryCode category
 }
 
+concept RecommendedDoseSchedule extends DoseSchedule {
+}
+
+concept RecyclingCenter extends LocalBusiness {
+}
+
 enum RefundTypeEnumeration {
   o StoreCreditRefund
   o ExchangeRefund
   o FullRefund
+}
+
+concept RegisterAction extends InteractAction {
+}
+
+concept RejectAction extends AllocateAction {
 }
 
 concept RentAction extends TradeAction {
@@ -3570,6 +4584,21 @@ concept Report extends Article {
   o String reportNumber
 }
 
+concept ReportageNewsArticle extends NewsArticle {
+}
+
+concept ReportedDoseSchedule extends DoseSchedule {
+}
+
+concept ResearchOrganization extends Organization {
+}
+
+concept ResearchProject extends Project {
+}
+
+concept Researcher extends Audience {
+}
+
 concept Reservation extends Intangible {
   o dateTime modifiedTime
   o PriceSpecification,number,string totalPrice
@@ -3597,8 +4626,20 @@ enum ReservationStatusType {
   o ReservationHold
 }
 
+concept ReserveAction extends PlanAction {
+}
+
+concept Reservoir extends BodyOfWater {
+}
+
 concept Residence extends Place {
   o FloorPlan accommodationFloorPlan
+}
+
+concept Resort extends LodgingBusiness {
+}
+
+concept Restaurant extends FoodEstablishment {
 }
 
 enum RestrictedDiet {
@@ -3613,6 +4654,9 @@ enum RestrictedDiet {
   o LowLactoseDiet
   o GlutenFreeDiet
   o DiabeticDiet
+}
+
+concept ResumeAction extends ControlAction {
 }
 
 concept ReturnAction extends TransferAction {
@@ -3655,11 +4699,23 @@ concept ReviewAction extends AssessAction {
   o Review resultReview
 }
 
+concept ReviewNewsArticle extendsReviewNewsArticleReviewNewsArticle {
+}
+
+concept RiverBodyOfWater extends BodyOfWater {
+}
+
 concept Role extends Intangible {
   o string,string namedPosition
   o dateTime,date startDate
   o date,dateTime endDate
   o string,string roleName
+}
+
+concept RoofingContractor extends HomeAndConstructionBusiness {
+}
+
+concept Room extends Accommodation {
 }
 
 concept RsvpAction extends InformAction {
@@ -3672,6 +4728,12 @@ enum RsvpResponseType {
   o RsvpResponseNo
   o RsvpResponseMaybe
   o RsvpResponseYes
+}
+
+concept SaleEvent extends Event {
+}
+
+concept SatiricalArticle extends Article {
 }
 
 concept Schedule extends Intangible {
@@ -3690,14 +4752,41 @@ concept Schedule extends Intangible {
   o Double byMonthWeek
 }
 
+concept ScheduleAction extends PlanAction {
+}
+
+concept ScholarlyArticle extends Article {
+}
+
+concept School extends EducationalOrganization {
+}
+
+concept SchoolDistrict extends AdministrativeArea {
+}
+
 concept ScreeningEvent extends Event {
   o Language,string subtitleLanguage
   o String videoFormat
   o Movie workPresented
 }
 
+concept Sculpture extends CreativeWork {
+}
+
+concept SeaBodyOfWater extends BodyOfWater {
+}
+
 concept SearchAction extends Action {
   o String query
+}
+
+concept SearchRescueOrganization extends Organization {
+}
+
+concept SearchResultsPage extends WebPage {
+}
+
+concept Season extends CreativeWork {
 }
 
 concept Seat extends Intangible {
@@ -3711,6 +4800,9 @@ concept SeekToAction extends Action {
   o number,HyperTocEntry startOffset
 }
 
+concept SelfStorage extends LocalBusiness {
+}
+
 concept SellAction extends TradeAction {
   o WarrantyPromise warrantyPromise
   o Person,Organization buyer
@@ -3719,6 +4811,9 @@ concept SellAction extends TradeAction {
 concept SendAction extends TransferAction {
   o Person,Audience,ContactPoint,Organization recipient
   o DeliveryMethod deliveryMethod
+}
+
+concept Series extends Intangible {
 }
 
 concept Service extends Intangible {
@@ -3759,6 +4854,12 @@ concept ServiceChannel extends Intangible {
   o Place serviceLocation
 }
 
+concept ShareAction extends CommunicateAction {
+}
+
+concept SheetMusic extends CreativeWork {
+}
+
 concept ShippingDeliveryTime extends StructuredValue {
   o QuantitativeValue transitTime
   o OpeningHoursSpecification businessDays
@@ -3775,9 +4876,24 @@ concept ShippingRateSettings extends StructuredValue {
   o MonetaryAmount,DeliveryChargeSpecification freeShippingThreshold
 }
 
+concept ShoeStore extends Store {
+}
+
+concept ShoppingCenter extends LocalBusiness {
+}
+
+concept ShortStory extends CreativeWork {
+}
+
 concept SingleFamilyResidence extends House {
   o QuantitativeValue,number numberOfRooms
   o QuantitativeValue occupancy
+}
+
+concept SiteNavigationElement extends WebPageElement {
+}
+
+enum SizeGroupEnumeration {
 }
 
 concept SizeSpecification extends QualitativeValue {
@@ -3792,6 +4908,12 @@ concept SizeSpecification extends QualitativeValue {
 enum SizeSystemEnumeration {
   o SizeSystemMetric
   o SizeSystemImperial
+}
+
+concept SkiResort extendsSkiResortSkiResort {
+}
+
+concept SocialEvent extends Event {
 }
 
 concept SocialMediaPosting extends Article {
@@ -3864,6 +4986,18 @@ concept SpecialAnnouncement extends CreativeWork {
   o DataFeed,string webFeed
 }
 
+enum Specialty {
+}
+
+concept SportingGoodsStore extends Store {
+}
+
+concept SportsActivityLocation extends LocalBusiness {
+}
+
+concept SportsClub extends SportsActivityLocation {
+}
+
 concept SportsEvent extends Event {
   o Person,SportsTeam homeTeam
   o SportsTeam,Person awayTeam
@@ -3881,20 +5015,47 @@ concept SportsTeam extends SportsOrganization {
   o Person coach
 }
 
+concept SpreadsheetDigitalDocument extends DigitalDocument {
+}
+
+concept StadiumOrArena extendsStadiumOrArenaStadiumOrArena {
+}
+
+concept State extends AdministrativeArea {
+}
+
+concept Statement extends CreativeWork {
+}
+
 concept StatisticalPopulation extends Intangible {
   o Class populationType
   o Double numConstraints
   o Double constrainingProperty
 }
 
+enum StatusEnumeration {
+}
+
 concept SteeringPositionValue extends QualitativeValue {
-  o schema:SteeringPositionValue LeftHandDriving
-  o schema:SteeringPositionValue RightHandDriving
+  o SteeringPositionValue LeftHandDriving
+  o SteeringPositionValue RightHandDriving
+}
+
+concept Store extends LocalBusiness {
+}
+
+concept StructuredValue extends Intangible {
+}
+
+concept SubscribeAction extends InteractAction {
 }
 
 concept Substance extends MedicalEntity {
   o MaximumDoseSchedule maximumIntake
   o String activeIngredient
+}
+
+concept SubwayStation extends CivicStructure {
 }
 
 concept Suite extends Accommodation {
@@ -3909,6 +5070,15 @@ concept SuperficialAnatomy extends MedicalEntity {
   o AnatomicalSystem,AnatomicalStructure relatedAnatomy
   o MedicalCondition relatedCondition
   o String associatedPathophysiology
+}
+
+concept SurgicalProcedure extends MedicalProcedure {
+}
+
+concept SuspendAction extends ControlAction {
+}
+
+concept Synagogue extends PlaceOfWorship {
 }
 
 concept TVClip extends Clip {
@@ -3945,10 +5115,28 @@ concept TVSeries extendsTVSeriesTVSeries {
   o Person directors
 }
 
+concept Table extends WebPageElement {
+}
+
+concept TakeAction extends TransferAction {
+}
+
+concept TattooParlor extends HealthAndBeautyBusiness {
+}
+
+concept Taxi extends Service {
+}
+
 concept TaxiReservation extends Reservation {
   o number,QuantitativeValue partySize
   o dateTime pickupTime
   o Place pickupLocation
+}
+
+concept TaxiService extends Service {
+}
+
+concept TaxiStand extends CivicStructure {
 }
 
 concept Taxon extends Thing {
@@ -3961,6 +5149,24 @@ concept Taxon extends Thing {
 concept TechArticle extends Article {
   o String dependencies
   o String proficiencyLevel
+}
+
+concept TelevisionChannel extends BroadcastChannel {
+}
+
+concept TelevisionStation extends LocalBusiness {
+}
+
+concept TennisComplex extends SportsActivityLocation {
+}
+
+concept TextDigitalDocument extends DigitalDocument {
+}
+
+concept TheaterEvent extends Event {
+}
+
+concept TheaterGroup extends PerformingGroup {
 }
 
 concept TherapeuticProcedure extends MedicalProcedure {
@@ -3999,8 +5205,14 @@ concept Ticket extends Intangible {
   o Organization,Person underName
 }
 
+concept TieAction extends AchieveAction {
+}
+
 concept TipAction extends TradeAction {
   o Person,Audience,ContactPoint,Organization recipient
+}
+
+concept TireShop extends Store {
 }
 
 concept TouristAttraction extends Place {
@@ -4013,8 +5225,14 @@ concept TouristDestination extends Place {
   o TouristAttraction includesAttraction
 }
 
+concept TouristInformationCenter extends LocalBusiness {
+}
+
 concept TouristTrip extends Trip {
   o Audience,string touristType
+}
+
+concept ToyStore extends Store {
 }
 
 concept TrackAction extends FindAction {
@@ -4025,6 +5243,12 @@ concept TradeAction extends Action {
   o String priceCurrency
   o PriceSpecification priceSpecification
   o number,string price
+}
+
+concept TrainReservation extends Reservation {
+}
+
+concept TrainStation extends CivicStructure {
 }
 
 concept TrainTrip extends Trip {
@@ -4043,6 +5267,12 @@ concept TransferAction extends Action {
 
 concept TravelAction extends MoveAction {
   o Distance distance
+}
+
+concept TravelAgency extends LocalBusiness {
+}
+
+concept TreatmentIndication extends MedicalIndication {
 }
 
 concept Trip extends Intangible {
@@ -4064,49 +5294,55 @@ concept TypeAndQuantityNode extends StructuredValue {
 }
 
 concept UKNonprofitType extends NonprofitType {
-  o schema:UKNonprofitType UnincorporatedAssociationCharity
-  o schema:UKNonprofitType UKTrust
-  o schema:UKNonprofitType CharitableIncorporatedOrganization
-  o schema:UKNonprofitType LimitedByGuaranteeCharity
+  o UKNonprofitType UnincorporatedAssociationCharity
+  o UKNonprofitType UKTrust
+  o UKNonprofitType CharitableIncorporatedOrganization
+  o UKNonprofitType LimitedByGuaranteeCharity
+}
+
+concept URL extends string {
 }
 
 concept USNonprofitType extends NonprofitType {
-  o schema:USNonprofitType Nonprofit501c4
-  o schema:USNonprofitType Nonprofit501c23
-  o schema:USNonprofitType Nonprofit501k
-  o schema:USNonprofitType Nonprofit501c1
-  o schema:USNonprofitType Nonprofit501n
-  o schema:USNonprofitType Nonprofit501c7
-  o schema:USNonprofitType Nonprofit501c9
-  o schema:USNonprofitType Nonprofit501c3
-  o schema:USNonprofitType Nonprofit501c2
-  o schema:USNonprofitType Nonprofit501a
-  o schema:USNonprofitType Nonprofit501c21
-  o schema:USNonprofitType Nonprofit501e
-  o schema:USNonprofitType Nonprofit501c14
-  o schema:USNonprofitType Nonprofit501c28
-  o schema:USNonprofitType Nonprofit501c18
-  o schema:USNonprofitType Nonprofit501c27
-  o schema:USNonprofitType Nonprofit501d
-  o schema:USNonprofitType Nonprofit501c25
-  o schema:USNonprofitType Nonprofit501c15
-  o schema:USNonprofitType Nonprofit501c12
-  o schema:USNonprofitType Nonprofit501c13
-  o schema:USNonprofitType Nonprofit501c26
-  o schema:USNonprofitType Nonprofit501c8
-  o schema:USNonprofitType Nonprofit501c10
-  o schema:USNonprofitType Nonprofit501c11
-  o schema:USNonprofitType Nonprofit501f
-  o schema:USNonprofitType Nonprofit501c5
-  o schema:USNonprofitType Nonprofit501c20
-  o schema:USNonprofitType Nonprofit501c6
-  o schema:USNonprofitType Nonprofit527
-  o schema:USNonprofitType Nonprofit501c19
-  o schema:USNonprofitType Nonprofit501c16
-  o schema:USNonprofitType Nonprofit501c24
-  o schema:USNonprofitType Nonprofit501q
-  o schema:USNonprofitType Nonprofit501c22
-  o schema:USNonprofitType Nonprofit501c17
+  o USNonprofitType Nonprofit501c4
+  o USNonprofitType Nonprofit501c23
+  o USNonprofitType Nonprofit501k
+  o USNonprofitType Nonprofit501c1
+  o USNonprofitType Nonprofit501n
+  o USNonprofitType Nonprofit501c7
+  o USNonprofitType Nonprofit501c9
+  o USNonprofitType Nonprofit501c3
+  o USNonprofitType Nonprofit501c2
+  o USNonprofitType Nonprofit501a
+  o USNonprofitType Nonprofit501c21
+  o USNonprofitType Nonprofit501e
+  o USNonprofitType Nonprofit501c14
+  o USNonprofitType Nonprofit501c28
+  o USNonprofitType Nonprofit501c18
+  o USNonprofitType Nonprofit501c27
+  o USNonprofitType Nonprofit501d
+  o USNonprofitType Nonprofit501c25
+  o USNonprofitType Nonprofit501c15
+  o USNonprofitType Nonprofit501c12
+  o USNonprofitType Nonprofit501c13
+  o USNonprofitType Nonprofit501c26
+  o USNonprofitType Nonprofit501c8
+  o USNonprofitType Nonprofit501c10
+  o USNonprofitType Nonprofit501c11
+  o USNonprofitType Nonprofit501f
+  o USNonprofitType Nonprofit501c5
+  o USNonprofitType Nonprofit501c20
+  o USNonprofitType Nonprofit501c6
+  o USNonprofitType Nonprofit527
+  o USNonprofitType Nonprofit501c19
+  o USNonprofitType Nonprofit501c16
+  o USNonprofitType Nonprofit501c24
+  o USNonprofitType Nonprofit501q
+  o USNonprofitType Nonprofit501c22
+  o USNonprofitType Nonprofit501c17
+}
+
+concept UnRegisterAction extends InteractAction {
 }
 
 concept UnitPriceSpecification extends PriceSpecification {
@@ -4125,12 +5361,45 @@ concept UpdateAction extends Action {
   o Thing collection
 }
 
+concept UseAction extends ConsumeAction {
+}
+
+concept UserBlocks extends UserInteraction {
+}
+
+concept UserCheckins extends UserInteraction {
+}
+
 concept UserComments extends UserInteraction {
   o String replyToUrl
   o CreativeWork discusses
   o dateTime,date commentTime
   o String commentText
   o Organization,Person creator
+}
+
+concept UserDownloads extends UserInteraction {
+}
+
+concept UserInteraction extends Event {
+}
+
+concept UserLikes extends UserInteraction {
+}
+
+concept UserPageVisits extends UserInteraction {
+}
+
+concept UserPlays extends UserInteraction {
+}
+
+concept UserPlusOnes extends UserInteraction {
+}
+
+concept UserReview extends Review {
+}
+
+concept UserTweets extends UserInteraction {
 }
 
 concept Vehicle extends Product {
@@ -4181,6 +5450,15 @@ concept Vein extends Vessel {
   o Vessel drainsTo
 }
 
+concept Vessel extends AnatomicalStructure {
+}
+
+concept VeterinaryCare extends MedicalOrganization {
+}
+
+concept VideoGallery extends MediaGallery {
+}
+
 concept VideoGame extendsVideoGameVideoGame {
   o Person director
   o Person actor
@@ -4194,6 +5472,9 @@ concept VideoGame extendsVideoGameVideoGame {
   o string,string,Thing gamePlatform
   o Person,MusicGroup musicBy
   o Person directors
+}
+
+concept VideoGameClip extends Clip {
 }
 
 concept VideoGameSeries extends CreativeWorkSeries {
@@ -4235,6 +5516,18 @@ concept VideoObject extends MediaObject {
   o Person directors
 }
 
+concept VideoObjectSnapshot extends VideoObject {
+}
+
+concept ViewAction extends ConsumeAction {
+}
+
+concept VirtualLocation extends Intangible {
+}
+
+concept VisualArtsEvent extends Event {
+}
+
 concept VisualArtwork extends CreativeWork {
   o QuantitativeValue,Distance width
   o Person letterer
@@ -4251,13 +5544,46 @@ concept VisualArtwork extends CreativeWork {
   o string,string artMedium
 }
 
+concept VitalSign extends MedicalSign {
+}
+
+concept Volcano extends Landform {
+}
+
 concept VoteAction extends ChooseAction {
   o Person candidate
+}
+
+concept WPAdBlock extends WebPageElement {
+}
+
+concept WPFooter extends WebPageElement {
+}
+
+concept WPHeader extends WebPageElement {
+}
+
+concept WPSideBar extends WebPageElement {
+}
+
+concept WantAction extends ReactAction {
 }
 
 concept WarrantyPromise extends StructuredValue {
   o WarrantyScope warrantyScope
   o QuantitativeValue durationOfWarranty
+}
+
+enum WarrantyScope {
+}
+
+concept WatchAction extends ConsumeAction {
+}
+
+concept Waterfall extends BodyOfWater {
+}
+
+concept WearAction extends UseAction {
 }
 
 enum WearableMeasurementTypeEnumeration {
@@ -4320,6 +5646,9 @@ concept WebApplication extends SoftwareApplication {
   o String browserRequirements
 }
 
+concept WebContent extends CreativeWork {
+}
+
 concept WebPage extends CreativeWork {
   o date lastReviewed
   o Specialty specialty
@@ -4342,8 +5671,14 @@ concept WebSite extends CreativeWork {
   o String issn
 }
 
+concept WholesaleStore extends Store {
+}
+
 concept WinAction extends AchieveAction {
   o Person loser
+}
+
+concept Winery extends FoodEstablishment {
 }
 
 concept WorkBasedProgram extends EducationalOccupationalProgram {
@@ -4351,15 +5686,18 @@ concept WorkBasedProgram extends EducationalOccupationalProgram {
   o CategoryCode,string occupationalCategory
 }
 
+concept WorkersUnion extends Organization {
+}
+
 concept WriteAction extends CreateAction {
   o string,Language inLanguage
   o Language language
 }
 
-concept Intangible {
+concept XPathType extends string {
 }
 
-concept Thing {
+concept Zoo extends CivicStructure {
 }
 
 

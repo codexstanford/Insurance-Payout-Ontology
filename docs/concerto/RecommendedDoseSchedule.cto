@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept RecommendedDoseSchedule extends DoseSchedule {
+}

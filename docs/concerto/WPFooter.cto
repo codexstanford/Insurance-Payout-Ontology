@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept WPFooter extends WebPageElement {
+}

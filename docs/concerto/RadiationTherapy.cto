@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept RadiationTherapy extends MedicalTherapy {
+}

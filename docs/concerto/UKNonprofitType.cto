@@ -1,11 +1,11 @@
 namespace undefined
 
-import org.codex.insurance.core.schema:UKNonprofitType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/schema:UKNonprofitType.cto
+import org.codex.insurance.core.UKNonprofitType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/UKNonprofitType.cto
 
 
 concept UKNonprofitType extends NonprofitType {
-  o schema:UKNonprofitType UnincorporatedAssociationCharity
-  o schema:UKNonprofitType UKTrust
-  o schema:UKNonprofitType CharitableIncorporatedOrganization
-  o schema:UKNonprofitType LimitedByGuaranteeCharity
+  o UKNonprofitType UnincorporatedAssociationCharity
+  o UKNonprofitType UKTrust
+  o UKNonprofitType CharitableIncorporatedOrganization
+  o UKNonprofitType LimitedByGuaranteeCharity
 }

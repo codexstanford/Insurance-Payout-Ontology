@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept ListenAction extends ConsumeAction {
+}

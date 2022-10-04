@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept MusicVideoObject extends MediaObject {
+}

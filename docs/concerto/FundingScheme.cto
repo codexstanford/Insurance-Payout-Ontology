@@ -1,0 +1,6 @@
+namespace undefined
+
+
+
+concept FundingScheme extends Organization {
+}

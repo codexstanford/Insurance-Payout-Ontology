@@ -8,8 +8,8 @@ const DATA_MODEL_MERMAID_PATH = `${__dirname}/../datamodel-build/mermaid`;
 // document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
 
 // todo add it as an argument
-const REDO_ALL = true;
-
+const REDO_ALL = false;
+const SKIP_SCHEMA = true;
 let renderQueue = [];
 
 // remove old build
@@ -28,7 +28,6 @@ let objectsList = loadObjFromSrc();
 let output = "classDiagram";
 
 for (let file of objectsList) {
-
   let data = buildMermaid(file);
 
   if (data && data != "undefined") {
@@ -74,6 +73,9 @@ fs.writeFileSync(`${DATA_MODEL_MERMAID_PATH}/diagram.svg`, styleIt(
 ));
 
 function buildMermaid(file) {
+  if (SKIP_SCHEMA && file.namespace == "Schema") {
+    return "";
+  }
   let fileName = file.name;
   let data = file.data;
 

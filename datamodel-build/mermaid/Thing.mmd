@@ -1,7 +1,29 @@
 classDiagram
+  Thing -- CreativeWork
+  Thing -- Action
+  Thing -- ImageObject
+  Thing -- Event
+  Thing -- PropertyValue
 
 
 class Thing {
 
+  CreativeWork mainEntityOfPage
+  string mainEntityOfPage
+  string alternateName
+  string name
+  Action potentialAction
+  string image
+  ImageObject image
+  string url
+  string description
+  Event subjectOf
+  CreativeWork subjectOf
+  string additionalType
+  string disambiguatingDescription
+  string sameAs
+  string identifier
+  string identifier
+  PropertyValue identifier
 
  }
