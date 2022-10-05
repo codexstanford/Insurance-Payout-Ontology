@@ -392,19 +392,19 @@ We encourage the provision of "name", "text", "datePosted", "expires" (if approp
 "url" as a simple baseline. It is important to provide a value for "category" where possible, most ideally as a well known
 URL from Wikipedia or Wikidata. In the case of the 2019-2020 Coronavirus pandemic, this should be "https://en.wikipedia.org/w/index.php?title=2019-20\_coronavirus\_pandemic" or "https://www.wikidata.org/wiki/Q81068910".
 
-For many of the possible properties, values can either be simple links or an inline description, depending on whether a summary is available. For a link, provide just the URL of the appropriate page as the property's value. For an inline description, use a [[WebContent]] type, and provide the url as a property of that, alongside at least a simple "[[text]]" summary of the page. It is
+For many of the possible properties, values can either be simple links or an inline description, depending on whether a summary is available. For a link, provide just the URL of the appropriate page as the property's value. For an inline description, use a <a href="WebContent.html">WebContent</a> type, and provide the url as a property of that, alongside at least a simple "<a href="text.html">text</a>" summary of the page. It is
 unlikely that a single SpecialAnnouncement will need all of the possible properties simultaneously.
 
-We expect that in many cases the page referenced might contain more specialized structured data, e.g. contact info, [[openingHours]], [[Event]], [[FAQPage]] etc. By linking to those pages from a [[SpecialAnnouncement]] you can help make it clearer that the events are related to the situation (e.g. Coronavirus) indicated by the [[category]] property of the [[SpecialAnnouncement]].
+We expect that in many cases the page referenced might contain more specialized structured data, e.g. contact info, <a href="openingHours.html">openingHours</a>, <a href="Event.html">Event</a>, <a href="FAQPage.html">FAQPage</a> etc. By linking to those pages from a <a href="SpecialAnnouncement.html">SpecialAnnouncement</a> you can help make it clearer that the events are related to the situation (e.g. Coronavirus) indicated by the <a href="category.html">category</a> property of the <a href="SpecialAnnouncement.html">SpecialAnnouncement</a>.
 
-Many [[SpecialAnnouncement]]s will relate to particular regions and to identifiable local organizations. Use [[spatialCoverage]] for the region, and [[announcementLocation]] to indicate specific [[LocalBusiness]]es and [[CivicStructure]]s. If the announcement affects both a particular region and a specific location (for example, a library closure that serves an entire region), use both [[spatialCoverage]] and [[announcementLocation]].
+Many <a href="SpecialAnnouncement.html">SpecialAnnouncement</a>s will relate to particular regions and to identifiable local organizations. Use <a href="spatialCoverage.html">spatialCoverage</a> for the region, and <a href="announcementLocation.html">announcementLocation</a> to indicate specific <a href="LocalBusiness.html">LocalBusiness</a>es and <a href="CivicStructure.html">CivicStructure</a>s. If the announcement affects both a particular region and a specific location (for example, a library closure that serves an entire region), use both <a href="spatialCoverage.html">spatialCoverage</a> and <a href="announcementLocation.html">announcementLocation</a>.
 
-The [[about]] property can be used to indicate entities that are the focus of the announcement. We now recommend using [[about]] only
-for representing non-location entities (e.g. a [[Course]] or a [[RadioStation]]). For places, use [[announcementLocation]] and [[spatialCoverage]]. Consumers of this markup should be aware that the initial design encouraged the use of /about for locations too.
+The <a href="about.html">about</a> property can be used to indicate entities that are the focus of the announcement. We now recommend using <a href="about.html">about</a> only
+for representing non-location entities (e.g. a <a href="Course.html">Course</a> or a <a href="RadioStation.html">RadioStation</a>). For places, use <a href="announcementLocation.html">announcementLocation</a> and <a href="spatialCoverage.html">spatialCoverage</a>. Consumers of this markup should be aware that the initial design encouraged the use of /about for locations too.
 
-The basic content of [[SpecialAnnouncement]] is similar to that of an [RSS](https://en.wikipedia.org/wiki/RSS) or [Atom](https://en.wikipedia.org/wiki/Atom_(Web_standard)) feed. For publishers without such feeds, basic feed-like information can be shared by posting
-[[SpecialAnnouncement]] updates in a page, e.g. using JSON-LD. For sites with Atom/RSS functionality, you can point to a feed
-with the [[webFeed]] property. This can be a simple URL, or an inline [[DataFeed]] object, with [[encodingFormat]] providing
+The basic content of <a href="SpecialAnnouncement.html">SpecialAnnouncement</a> is similar to that of an [RSS](https://en.wikipedia.org/wiki/RSS) or [Atom](https://en.wikipedia.org/wiki/Atom_(Web_standard)) feed. For publishers without such feeds, basic feed-like information can be shared by posting
+<a href="SpecialAnnouncement.html">SpecialAnnouncement</a> updates in a page, e.g. using JSON-LD. For sites with Atom/RSS functionality, you can point to a feed
+with the <a href="webFeed.html">webFeed</a> property. This can be a simple URL, or an inline <a href="DataFeed.html">DataFeed</a> object, with <a href="encodingFormat.html">encodingFormat</a> providing
 media type information e.g. "application/rss+xml" or "application/atom+xml".
 </p>
   <svg id="mermaid-1664844543414" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="451.1875" style="max-width: 1397.140625px;" viewBox="-20 -20 1397.140625 451.1875"><style>#mermaid-1664844543414{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-1664844543414 .error-icon{fill:#552222;}#mermaid-1664844543414 .error-text{fill:#552222;stroke:#552222;}#mermaid-1664844543414 .edge-thickness-normal{stroke-width:2px;}#mermaid-1664844543414 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-1664844543414 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-1664844543414 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-1664844543414 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-1664844543414 .marker{fill:#333333;stroke:#333333;}#mermaid-1664844543414 .marker.cross{stroke:#333333;}#mermaid-1664844543414 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-1664844543414 g.classGroup text{fill:#222222;fill:#131300;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#mermaid-1664844543414 g.classGroup text .title{font-weight:bolder;}#mermaid-1664844543414 .classTitle{font-weight:bolder;}#mermaid-1664844543414 .node rect,#mermaid-1664844543414 .node circle,#mermaid-1664844543414 .node ellipse,#mermaid-1664844543414 .node polygon,#mermaid-1664844543414 .node path{fill:#eeeeee;stroke:#222222;stroke-width:1px;}#mermaid-1664844543414 .divider{stroke:#222222;stroke:1;}#mermaid-1664844543414 g.clickable{cursor:pointer;}#mermaid-1664844543414 g.classGroup rect{fill:#eeeeee;stroke:#222222;}#mermaid-1664844543414 g.classGroup line{stroke:#222222;stroke-width:1;}#mermaid-1664844543414 .classLabel .box{stroke:none;stroke-width:0;fill:#eeeeee;opacity:0.5;}#mermaid-1664844543414 .classLabel .label{fill:#222222;font-size:10px;}#mermaid-1664844543414 .relation{stroke:#333333;stroke-width:1;fill:none;}#mermaid-1664844543414 .dashed-line{stroke-dasharray:3;}#mermaid-1664844543414 #compositionStart,#mermaid-1664844543414 .composition{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1664844543414 #compositionEnd,#mermaid-1664844543414 .composition{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1664844543414 #dependencyStart,#mermaid-1664844543414 .dependency{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1664844543414 #dependencyStart,#mermaid-1664844543414 .dependency{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1664844543414 #extensionStart,#mermaid-1664844543414 .extension{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1664844543414 #extensionEnd,#mermaid-1664844543414 .extension{fill:#333333 !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1664844543414 #aggregationStart,#mermaid-1664844543414 .aggregation{fill:#eeeeee !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1664844543414 #aggregationEnd,#mermaid-1664844543414 .aggregation{fill:#eeeeee !important;stroke:#333333 !important;stroke-width:1;}#mermaid-1664844543414 .edgeTerminals{font-size:11px;}#mermaid-1664844543414:root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g></g><defs><marker id="extensionStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 1,7 L18,13 V 1 Z"></path></marker></defs><defs><marker id="extensionEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 1,1 V 13 L18,7 Z"></path></marker></defs><defs><marker id="compositionStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="compositionEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="aggregationStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="aggregationEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="dependencyStart" class="extension" refX="0" refY="7" markerWidth="190" markerHeight="240" orient="auto"><path d="M 5,7 L9,13 L1,7 L9,1 Z"></path></marker></defs><defs><marker id="dependencyEnd" refX="19" refY="7" markerWidth="20" markerHeight="28" orient="auto"><path d="M 18,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><g id="classid-SpecialAnnouncement-0" class="classGroup" transform="translate(618.4609375,0 )"><rect x="0" y="0" width="212.515625" height="331.125" class=" "></rect><text y="15" x="0"><tspan class="title" x="54.3828125">SpecialAnnouncement</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="212.515625"></line><text x="5" y="31.0625" fill="white" class="classText"><tspan x="5">GovernmentService governmentBenefitsInfo</tspan><tspan x="5" dy="10">string category</tspan><tspan x="5" dy="10">string category</tspan><tspan x="5" dy="10">PhysicalActivityCategory category</tspan><tspan x="5" dy="10">Thing category</tspan><tspan x="5" dy="10">CategoryCode category</tspan><tspan x="5" dy="10">Dataset diseaseSpreadStatistics</tspan><tspan x="5" dy="10">Observation diseaseSpreadStatistics</tspan><tspan x="5" dy="10">WebContent diseaseSpreadStatistics</tspan><tspan x="5" dy="10">string diseaseSpreadStatistics</tspan><tspan x="5" dy="10">WebContent gettingTestedInfo</tspan><tspan x="5" dy="10">string gettingTestedInfo</tspan><tspan x="5" dy="10">CivicStructure announcementLocation</tspan><tspan x="5" dy="10">LocalBusiness announcementLocation</tspan><tspan x="5" dy="10">string travelBans</tspan><tspan x="5" dy="10">WebContent travelBans</tspan><tspan x="5" dy="10">string diseasePreventionInfo</tspan><tspan x="5" dy="10">WebContent diseasePreventionInfo</tspan><tspan x="5" dy="10">string publicTransportClosuresInfo</tspan><tspan x="5" dy="10">WebContent publicTransportClosuresInfo</tspan><tspan x="5" dy="10">WebContent schoolClosuresInfo</tspan><tspan x="5" dy="10">string schoolClosuresInfo</tspan><tspan x="5" dy="10">date datePosted</tspan><tspan x="5" dy="10">dateTime datePosted</tspan><tspan x="5" dy="10">string newsUpdatesAndGuidelines</tspan><tspan x="5" dy="10">WebContent newsUpdatesAndGuidelines</tspan><tspan x="5" dy="10">string quarantineGuidelines</tspan><tspan x="5" dy="10">WebContent quarantineGuidelines</tspan><tspan x="5" dy="10">DataFeed webFeed</tspan><tspan x="5" dy="10">string webFeed</tspan></text><line x1="0" y1="327.125" y2="327.125" x2="212.515625"></line><text x="5" y="342.125" fill="white" class="classText"></text></g><g id="classid-GovernmentService-1" class="classGroup" transform="translate(0,381.15625 )"><rect x="0" y="0" width="102.03125" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">GovernmentService</tspan></text><line x1="0" y1="21" y2="21" x2="102.03125"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="102.03125"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-PhysicalActivityCategory-2" class="classGroup" transform="translate(152.03125,381.125 )"><rect x="0" y="0" width="125.234375" height="30.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">PhysicalActivityCategory</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="125.234375"></line><text x="5" y="31.0625" fill="white" class="classText"></text><line x1="0" y1="26.0625" y2="26.0625" x2="125.234375"></line><text x="5" y="41.0625" fill="white" class="classText"></text></g><g id="classid-Thing-3" class="classGroup" transform="translate(327.265625,381.125 )"><rect x="0" y="0" width="35.953125" height="30.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">Thing</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="35.953125"></line><text x="5" y="31.0625" fill="white" class="classText"></text><line x1="0" y1="26.0625" y2="26.0625" x2="35.953125"></line><text x="5" y="41.0625" fill="white" class="classText"></text></g><g id="classid-CategoryCode-4" class="classGroup" transform="translate(413.21875,381.125 )"><rect x="0" y="0" width="74.78125" height="30.0625" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">CategoryCode</tspan></text><line x1="0" y1="21.0625" y2="21.0625" x2="74.78125"></line><text x="5" y="31.0625" fill="white" class="classText"></text><line x1="0" y1="26.0625" y2="26.0625" x2="74.78125"></line><text x="5" y="41.0625" fill="white" class="classText"></text></g><g id="classid-Dataset-5" class="classGroup" transform="translate(538,381.15625 )"><rect x="0" y="0" width="45.078125" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">Dataset</tspan></text><line x1="0" y1="21" y2="21" x2="45.078125"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="45.078125"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-Observation-6" class="classGroup" transform="translate(633.078125,381.15625 )"><rect x="0" y="0" width="66.296875" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">Observation</tspan></text><line x1="0" y1="21" y2="21" x2="66.296875"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="66.296875"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-WebContent-7" class="classGroup" transform="translate(749.375,381.15625 )"><rect x="0" y="0" width="67.671875" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">WebContent</tspan></text><line x1="0" y1="21" y2="21" x2="67.671875"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="67.671875"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-CivicStructure-8" class="classGroup" transform="translate(867.046875,381.15625 )"><rect x="0" y="0" width="76.75" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">CivicStructure</tspan></text><line x1="0" y1="21" y2="21" x2="76.75"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="76.75"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-LocalBusiness-9" class="classGroup" transform="translate(993.796875,381.15625 )"><rect x="0" y="0" width="74" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">LocalBusiness</tspan></text><line x1="0" y1="21" y2="21" x2="74"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="74"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-date-10" class="classGroup" transform="translate(1117.796875,381.15625 )"><rect x="0" y="0" width="30.859375" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">date</tspan></text><line x1="0" y1="21" y2="21" x2="30.859375"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="30.859375"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-dateTime-11" class="classGroup" transform="translate(1198.65625,381.15625 )"><rect x="0" y="0" width="54.296875" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">dateTime</tspan></text><line x1="0" y1="21" y2="21" x2="54.296875"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="54.296875"></line><text x="5" y="41" fill="white" class="classText"></text></g><g id="classid-DataFeed-12" class="classGroup" transform="translate(1302.953125,381.15625 )"><rect x="0" y="0" width="54.1875" height="30" class=" "></rect><text y="15" x="0"><tspan class="title" x="5">DataFeed</tspan></text><line x1="0" y1="21" y2="21" x2="54.1875"></line><text x="5" y="31" fill="white" class="classText"></text><line x1="0" y1="26" y2="26" x2="54.1875"></line><text x="5" y="41" fill="white" class="classText"></text></g><path d="M618.4609375,195.61840094974139L523.88671875,222.36950079145117C429.3125,249.12060063316093,240.1640625,302.6228003165805,145.58984375,333.54577515829027C51.015625,364.46875,51.015625,372.8125,51.015625,376.984375L51.015625,381.15625" id="edge0" class="relation"></path><path d="M618.4609375,205.26046692398413L551.1588541666666,230.40455576998679C483.8567708333333,255.54864461598945,349.2526041666667,305.83682230799474,281.9505208333333,335.147577820664C214.6484375,364.4583333333333,214.6484375,372.7916666666667,214.6484375,376.9583333333333L214.6484375,381.125" id="edge1" class="relation"></path><path d="M618.4609375,218.92219700244993L572.9244791666666,241.78933083537495C527.3880208333334,264.6564646683,436.3151041666667,310.39073233414996,390.7786458333333,337.4245328337417C345.2421875,364.4583333333333,345.2421875,372.7916666666667,345.2421875,376.9583333333333L345.2421875,381.125" id="edge2" class="relation"></path><path d="M618.4609375,239.43357571395998L590.4856770833334,258.8821464283C562.5104166666666,278.33071714263997,506.5598958333333,317.22785857132,478.5846354166667,340.8430959523267C450.609375,364.4583333333333,450.609375,372.7916666666667,450.609375,376.9583333333333L450.609375,381.125" id="edge3" class="relation"></path><path d="M618.4609375,288.89538424934574L608.8072916666666,300.1003202077881C599.1536458333334,311.3052561662305,579.8463541666666,333.71512808311525,570.1927083333334,349.0919390415576C560.5390625,364.46875,560.5390625,372.8125,560.5390625,376.984375L560.5390625,381.15625" id="edge4" class="relation"></path><path d="M673.90018499918,331.125L672.6212479159834,335.2916666666667C671.3423108327867,339.4583333333333,668.7844366663934,347.7916666666667,667.5054995831966,356.1302083333333C666.2265625,364.46875,666.2265625,372.8125,666.2265625,376.984375L666.2265625,381.15625" id="edge5" class="relation"></path><path d="M775.53731500082,331.125L776.8162520840166,335.2916666666667C778.0951891672133,339.4583333333333,780.6530633336066,347.7916666666667,781.9320004168034,356.1302083333333C783.2109375,364.46875,783.2109375,372.8125,783.2109375,376.984375L783.2109375,381.15625" id="edge6" class="relation"></path><path d="M830.9765625,277.6178637051448L843.3841145833334,290.70238642095404C855.7916666666666,303.7869091367632,880.6067708333334,329.9559545683816,893.0143229166666,347.2123522841908C905.421875,364.46875,905.421875,372.8125,905.421875,376.984375L905.421875,381.15625" id="edge7" class="relation"></path><path d="M830.9765625,231.7180097886569L864.2799479166666,252.45250815721408C897.5833333333334,273.18700652577127,964.1901041666666,314.65600326288563,997.4934895833334,339.5623766314428C1030.796875,364.46875,1030.796875,372.8125,1030.796875,376.984375L1030.796875,381.15625" id="edge8" class="relation"></path><path d="M830.9765625,215.13010623649333L881.3515625,238.62925519707778C931.7265625,262.12840415766226,1032.4765625,309.1267020788311,1082.8515625,336.7977260394155C1133.2265625,364.46875,1133.2265625,372.8125,1133.2265625,376.984375L1133.2265625,381.15625" id="edge9" class="relation"></path><path d="M830.9765625,205.97224387658054L896.78125,230.99770323048378C962.5859375,256.023162584387,1094.1953125,306.0740812921935,1160,335.2714156460967C1225.8046875,364.46875,1225.8046875,372.8125,1225.8046875,376.984375L1225.8046875,381.15625" id="edge10" class="relation"></path><path d="M830.9765625,199.01337326733952L914.1549479166666,225.19864438944958C997.3333333333334,251.38391551155965,1163.6901041666667,303.7544577557798,1246.8684895833333,334.11160387788993C1330.046875,364.46875,1330.046875,372.8125,1330.046875,376.984375L1330.046875,381.15625" id="edge11" class="relation"></path></svg><div><h2>Properties</h2>
@@ -426,8 +426,8 @@ media type information e.g. "application/rss+xml" or "application/atom+xml".
     <h3>diseaseSpreadStatistics</h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Dataset.html"> Dataset</a>, <a href="Observation.html"> Observation</a>, <a href="WebContent.html"> WebContent</a>, <a href="string.html"> string</a></div><p class="documentation">
-    Statistical information about the spread of a disease, either as [[WebContent]], or
-  described directly as a [[Dataset]], or the specific [[Observation]]s in the dataset. When a [[WebContent]] URL is
+    Statistical information about the spread of a disease, either as <a href="WebContent.html">WebContent</a>, or
+  described directly as a <a href="Dataset.html">Dataset</a>, or the specific <a href="Observation.html">Observation</a>s in the dataset. When a <a href="WebContent.html">WebContent</a> URL is
   provided, the page indicated might also contain more such markup.
     </p>   
 </div></div>
@@ -435,14 +435,14 @@ media type information e.g. "application/rss+xml" or "application/atom+xml".
     <h3>gettingTestedInfo</h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="WebContent.html"> WebContent</a>, <a href="string.html"> string</a></div><p class="documentation">
-    Information about getting tested (for a [[MedicalCondition]]), e.g. in the context of a pandemic.
+    Information about getting tested (for a <a href="MedicalCondition.html">MedicalCondition</a>), e.g. in the context of a pandemic.
     </p>   
 </div></div>
   <div id="announcementLocation">
     <h3>announcementLocation</h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="CivicStructure.html"> CivicStructure</a>, <a href="LocalBusiness.html"> LocalBusiness</a></div><p class="documentation">
-    Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the SpecialAnnouncement. For example, a specific testing facility or business with special opening hours. For a larger geographic region like a quarantine of an entire region, use [[spatialCoverage]].
+    Indicates a specific <a href="CivicStructure.html">CivicStructure</a> or <a href="LocalBusiness.html">LocalBusiness</a> associated with the SpecialAnnouncement. For example, a specific testing facility or business with special opening hours. For a larger geographic region like a quarantine of an entire region, use <a href="spatialCoverage.html">spatialCoverage</a>.
     </p>   
 </div></div>
   <div id="travelBans">
@@ -484,7 +484,7 @@ media type information e.g. "application/rss+xml" or "application/atom+xml".
     <h3>newsUpdatesAndGuidelines</h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="WebContent.html"> WebContent</a></div><p class="documentation">
-    Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page containing [[SpecialAnnouncement]] markup on a site.
+    Indicates a page with news updates and guidelines. This could often be (but is not required to be) the main page containing <a href="SpecialAnnouncement.html">SpecialAnnouncement</a> markup on a site.
     </p>   
 </div></div>
   <div id="quarantineGuidelines">
@@ -519,7 +519,7 @@ media type information e.g. "application/rss+xml" or "application/atom+xml".
     <h3>abstract <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a></div><p class="documentation">
-    An abstract is a short description that summarizes a [[CreativeWork]].
+    An abstract is a short description that summarizes a <a href="CreativeWork.html">CreativeWork</a>.
     </p>   
 </div></div>
   <div id="creativeWorkStatus">
@@ -533,7 +533,7 @@ media type information e.g. "application/rss+xml" or "application/atom+xml".
     <h3>expires <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="date.html"> date</a></div><p class="documentation">
-    Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, or a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.
+    Date the content expires and is no longer useful or available. For example a <a href="VideoObject.html">VideoObject</a> or <a href="NewsArticle.html">NewsArticle</a> whose availability or relevance is time-limited, or a <a href="ClaimReview.html">ClaimReview</a> fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.
     </p>   
 </div></div>
   <div id="contentReferenceTime">
@@ -613,7 +613,7 @@ media type information e.g. "application/rss+xml" or "application/atom+xml".
 <div class="type-info"><b>Type</b> <a href="Country.html"> Country</a></div><p class="documentation">
     The country of origin of something, including products as well as creative  works such as movie and TV content.
 
-In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
+In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of <a href="CreativeWork.html">CreativeWork</a> it is difficult to provide fully general guidance, and properties such as <a href="contentLocation.html">contentLocation</a> and <a href="locationCreated.html">locationCreated</a> may be more applicable.
 
 In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.
     </p>   
@@ -636,7 +636,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <h3>funding <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Grant.html"> Grant</a></div><p class="documentation">
-    A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+    A <a href="Grant.html">Grant</a> that directly or indirectly provide funding or sponsorship for this item. See also <a href="ownershipFundingInfo.html">ownershipFundingInfo</a>.
     </p>   
 </div></div>
   <div id="educationalUse">
@@ -692,7 +692,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <h3>offers <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Offer.html"> Offer</a>, <a href="Demand.html"> Demand</a></div><p class="documentation">
-    An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+    An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use <a href="businessFunction.html">businessFunction</a> to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a <a href="Demand.html">Demand</a>. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
       
     </p>   
 </div></div>
@@ -749,7 +749,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <h3>sdDatePublished <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="date.html"> date</a></div><p class="documentation">
-    Indicates the date on which the current structured data was generated / published. Typically used alongside [[sdPublisher]]
+    Indicates the date on which the current structured data was generated / published. Typically used alongside <a href="sdPublisher.html">sdPublisher</a>
     </p>   
 </div></div>
   <div id="producer">
@@ -764,7 +764,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Place.html"> Place</a></div><p class="documentation">
     The "spatial" property can be used in cases when more specific properties
-(e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are not known to be appropriate.
+(e.g. <a href="locationCreated.html">locationCreated</a>, <a href="spatialCoverage.html">spatialCoverage</a>, <a href="contentLocation.html">contentLocation</a>) are not known to be appropriate.
     </p>   
 </div></div>
   <div id="publisher">
@@ -806,7 +806,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <h3>usageInfo <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="CreativeWork.html"> CreativeWork</a>, <a href="string.html"> string</a></div><p class="documentation">
-    The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.
+    The schema.org <a href="usageInfo.html">usageInfo</a> property indicates further information about a <a href="CreativeWork.html">CreativeWork</a>. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.
 
 This property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.
     </p>   
@@ -823,7 +823,7 @@ This property can be used alongside the license property which indicates license
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Organization.html"> Organization</a>, <a href="Person.html"> Person</a></div><p class="documentation">
     Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The
-[[sdPublisher]] property helps make such practices more explicit.
+<a href="sdPublisher.html">sdPublisher</a> property helps make such practices more explicit.
     </p>   
 </div></div>
   <div id="comment">
@@ -928,9 +928,9 @@ This property can be used alongside the license property which indicates license
     <h3>publishingPrinciples <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="CreativeWork.html"> CreativeWork</a></div><p class="documentation">
-    The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].
+    The publishingPrinciples property indicates (typically via <a href="URL.html">URL</a>) a document describing the editorial principles of an <a href="Organization.html">Organization</a> (or individual e.g. a <a href="Person.html">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a href="CreativeWork.html">CreativeWork</a> (e.g. <a href="NewsArticle.html">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a href="CreativeWork.html">CreativeWork</a>.
 
-While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a href="funder.html">funder</a>) can be expressed using schema.org terminology.
 
     </p>   
 </div></div>
@@ -987,11 +987,11 @@ While such policies are most typically expressed in natural language, sometimes 
     <h3>editEIDR <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a></div><p class="documentation">
-    An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing a specific edit / edition for a work of film or television.
+    An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) <a href="identifier.html">identifier</a> representing a specific edit / edition for a work of film or television.
 
-For example, the motion picture known as "Ghostbusters" whose [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
+For example, the motion picture known as "Ghostbusters" whose <a href="titleEIDR.html">titleEIDR</a> is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
 
-Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
+Since schema.org types like <a href="Movie.html">Movie</a> and <a href="TVEpisode.html">TVEpisode</a> can be used for both works and their multiple expressions, it is possible to use <a href="titleEIDR.html">titleEIDR</a> alone (for a general description), or alongside <a href="editEIDR.html">editEIDR</a> for a more edit-specific description.
 
     </p>   
 </div></div>
@@ -1029,7 +1029,7 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a></div><p class="documentation">
     Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
 
-In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.
+In cases where a <a href="CreativeWork.html">CreativeWork</a> has several media type representations, <a href="encoding.html">encoding</a> can be used to indicate each <a href="MediaObject.html">MediaObject</a> alongside particular <a href="encodingFormat.html">encodingFormat</a> information.
 
 Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
     </p>   
@@ -1038,7 +1038,7 @@ Unregistered or niche encoding and file formats can be indicated instead via the
     <h3>maintainer <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Person.html"> Person</a>, <a href="Organization.html"> Organization</a></div><p class="documentation">
-    A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on "upstream" sources. When [[maintainer]] is applied to a specific version of something e.g. a particular version or packaging of a [[Dataset]], it is always  possible that the upstream source has a different maintainer. The [[isBasedOn]] property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.
+    A maintainer of a <a href="Dataset.html">Dataset</a>, software package (<a href="SoftwareApplication.html">SoftwareApplication</a>), or other <a href="Project.html">Project</a>. A maintainer is a <a href="Person.html">Person</a> or <a href="Organization.html">Organization</a> that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on "upstream" sources. When <a href="maintainer.html">maintainer</a> is applied to a specific version of something e.g. a particular version or packaging of a <a href="Dataset.html">Dataset</a>, it is always  possible that the upstream source has a different maintainer. The <a href="isBasedOn.html">isBasedOn</a> property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.
       
     </p>   
 </div></div>
@@ -1048,7 +1048,7 @@ Unregistered or niche encoding and file formats can be indicated instead via the
 <div class="type-info"><b>Type</b> <a href="AlignmentObject.html"> AlignmentObject</a></div><p class="documentation">
     An alignment to an established educational framework.
 
-This property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
+This property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource <a href="teaches.html">teaches</a> or <a href="assesses.html">assesses</a> a competency.
     </p>   
 </div></div>
   <div id="acquireLicensePage">
@@ -1092,14 +1092,14 @@ This property should not be used where the nature of the alignment can be descri
     <h3>conditionsOfAccess <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a></div><p class="documentation">
-    Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.<br/><br/>For example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ". 
+    Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an <a href="ArchiveComponent.html">ArchiveComponent</a> held by an <a href="ArchiveOrganization.html">ArchiveOrganization</a>. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.<br/><br/>For example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ". 
     </p>   
 </div></div>
   <div id="correction">
     <h3>correction <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a>, <a href="CorrectionComment.html"> CorrectionComment</a></div><p class="documentation">
-    Indicates a correction to a [[CreativeWork]], either via a [[CorrectionComment]], textually or in another document.
+    Indicates a correction to a <a href="CreativeWork.html">CreativeWork</a>, either via a <a href="CorrectionComment.html">CorrectionComment</a>, textually or in another document.
     </p>   
 </div></div>
   <div id="contentRating">
@@ -1113,7 +1113,7 @@ This property should not be used where the nature of the alignment can be descri
     <h3>size <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="QuantitativeValue.html"> QuantitativeValue</a>, <a href="DefinedTerm.html"> DefinedTerm</a>, <a href="string.html"> string</a>, <a href="SizeSpecification.html"> SizeSpecification</a></div><p class="documentation">
-    A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured [[SizeSpecification]]; in other cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be more applicable. 
+    A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured <a href="SizeSpecification.html">SizeSpecification</a>; in other cases, the <a href="width.html">width</a>, <a href="height.html">height</a>, <a href="depth.html">depth</a> and <a href="weight.html">weight</a> properties may be more applicable. 
     </p>   
 </div></div>
   <div id="isPartOf">
@@ -1128,7 +1128,7 @@ This property should not be used where the nature of the alignment can be descri
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="dateTime.html"> dateTime</a>, <a href="string.html"> string</a></div><p class="documentation">
     The "temporal" property can be used in cases where more specific properties
-(e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate.
+(e.g. <a href="temporalCoverage.html">temporalCoverage</a>, <a href="dateCreated.html">dateCreated</a>, <a href="dateModified.html">dateModified</a>, <a href="datePublished.html">datePublished</a>) are not known to be appropriate.
     </p>   
 </div></div>
   <div id="thumbnailUrl">
@@ -1142,7 +1142,7 @@ This property should not be used where the nature of the alignment can be descri
     <h3>inLanguage <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="Language.html"> Language</a></div><p class="documentation">
-    The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+    The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also <a href="availableLanguage.html">availableLanguage</a>.
     </p>   
 </div></div>
   <div id="license">
@@ -1219,7 +1219,7 @@ This property should not be used where the nature of the alignment can be descri
     <h3>interpretedAsClaim <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Claim.html"> Claim</a></div><p class="documentation">
-    Used to indicate a specific claim contained, implied, translated or refined from the content of a [[MediaObject]] or other [[CreativeWork]]. The interpreting party can be indicated using [[claimInterpreter]].
+    Used to indicate a specific claim contained, implied, translated or refined from the content of a <a href="MediaObject.html">MediaObject</a> or other <a href="CreativeWork.html">CreativeWork</a>. The interpreting party can be indicated using <a href="claimInterpreter.html">claimInterpreter</a>.
     </p>   
 </div></div>
   <div id="accessibilityControl">
@@ -1247,7 +1247,7 @@ This property should not be used where the nature of the alignment can be descri
     <h3>archivedAt <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="WebPage.html"> WebPage</a>, <a href="string.html"> string</a></div><p class="documentation">
-    Indicates a page or other link involved in archival of a [[CreativeWork]]. In the case of [[MediaReview]], the items in a [[MediaReviewItem]] may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content.
+    Indicates a page or other link involved in archival of a <a href="CreativeWork.html">CreativeWork</a>. In the case of <a href="MediaReview.html">MediaReview</a>, the items in a <a href="MediaReviewItem.html">MediaReviewItem</a> may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content.
     </p>   
 </div></div>
   <div id="learningResourceType">
@@ -1349,7 +1349,7 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
     <h3>image <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="ImageObject.html"> ImageObject</a></div><p class="documentation">
-    An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+    An image of the item. This can be a <a href="URL.html">URL</a> or a fully described <a href="ImageObject.html">ImageObject</a>.
     </p>   
 </div></div>
   <div id="url">
@@ -1398,7 +1398,7 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
     <h3>identifier <span class="inheritedTag">inherited from <a href="CreativeWork.html"> CreativeWork </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a>, <a href="PropertyValue.html"> PropertyValue</a></div><p class="documentation">
-    The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+    The identifier property represents any kind of identifier for any kind of <a href="Thing.html">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
         
     </p>   
 </div></div></div>

@@ -117,6 +117,7 @@ for (let key in INDEX) {
 
 function toHTML(text) {
   return text
+    .replaceAll(/\[\[(?<Path>[a-zA-Z0-9]*)\]\]/g, '<a href="$<Path>.html">$<Path></a>')
     .replace('$$$', ' $ $ $ ')
     .replace(/\\n/g, "<br/>")
 }

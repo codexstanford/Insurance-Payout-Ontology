@@ -382,14 +382,14 @@ concept Variable extends Operable {
   o String name
 }
 
-concept InsurancePerson extends RiskObject, Person {
+concept InsurancePerson extendsInsurancePersonInsurancePerson {
   o PersonRelationToPolicyHolderEnum relationToPolicyHolder
   o String firstName
   o String lastName
   o Double age
 }
 
-concept InsuranceVehicle extends RiskObject, Vehicle {
+concept InsuranceVehicle extendsInsuranceVehicleInsuranceVehicle {
   o Amount productionYear
   o Amount age
   o Amount length

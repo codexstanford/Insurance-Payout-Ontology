@@ -3,7 +3,7 @@ namespace undefined
 import org.codex.insurance.core.Amount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Amount.cto
 
 
-concept InsuranceVehicle extends RiskObject, Vehicle {
+concept InsuranceVehicle extendsInsuranceVehicleInsuranceVehicle {
   o Amount productionYear
   o Amount age
   o Amount length

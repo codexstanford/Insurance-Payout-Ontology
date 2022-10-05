@@ -401,7 +401,7 @@
     <h3>backstory <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="CreativeWork.html"> CreativeWork</a></div><p class="documentation">
-    For an [[Article]], typically a [[NewsArticle]], the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.
+    For an <a href="Article.html">Article</a>, typically a <a href="NewsArticle.html">NewsArticle</a>, the backstory property provides a textual summary giving a brief explanation of why and how an article was created. In a journalistic setting this could include information about reporting process, methods, interviews, data sources, etc.
     </p>   
 </div></div>
   <div id="wordCount">
@@ -428,13 +428,13 @@ The *speakable* property can be repeated an arbitrary number of times, with thre
 
 1.) *id-value* URL references - uses *id-value* of an element in the page being annotated. The simplest use of *speakable* has (potentially relative) URL values, referencing identified sections of the document concerned.
 
-2.) CSS Selectors - addresses content in the annotated page, eg. via class attribute. Use the [[cssSelector]] property.
+2.) CSS Selectors - addresses content in the annotated page, eg. via class attribute. Use the <a href="cssSelector.html">cssSelector</a> property.
 
-3.)  XPaths - addresses content via XPaths (assuming an XML view of the content). Use the [[xpath]] property.
+3.)  XPaths - addresses content via XPaths (assuming an XML view of the content). Use the <a href="xpath.html">xpath</a> property.
 
 
 For more sophisticated markup of speakable sections beyond simple ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this
-we define a supporting type, [[SpeakableSpecification]]  which is defined to be a possible value of the *speakable* property.
+we define a supporting type, <a href="SpeakableSpecification.html">SpeakableSpecification</a>  which is defined to be a possible value of the *speakable* property.
          
     </p>   
 </div></div>
@@ -463,7 +463,7 @@ we define a supporting type, [[SpeakableSpecification]]  which is defined to be 
     <h3>abstract <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a></div><p class="documentation">
-    An abstract is a short description that summarizes a [[CreativeWork]].
+    An abstract is a short description that summarizes a <a href="CreativeWork.html">CreativeWork</a>.
     </p>   
 </div></div>
   <div id="creativeWorkStatus">
@@ -477,7 +477,7 @@ we define a supporting type, [[SpeakableSpecification]]  which is defined to be 
     <h3>expires <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="date.html"> date</a></div><p class="documentation">
-    Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, or a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.
+    Date the content expires and is no longer useful or available. For example a <a href="VideoObject.html">VideoObject</a> or <a href="NewsArticle.html">NewsArticle</a> whose availability or relevance is time-limited, or a <a href="ClaimReview.html">ClaimReview</a> fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date.
     </p>   
 </div></div>
   <div id="contentReferenceTime">
@@ -557,7 +557,7 @@ we define a supporting type, [[SpeakableSpecification]]  which is defined to be 
 <div class="type-info"><b>Type</b> <a href="Country.html"> Country</a></div><p class="documentation">
     The country of origin of something, including products as well as creative  works such as movie and TV content.
 
-In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
+In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of <a href="CreativeWork.html">CreativeWork</a> it is difficult to provide fully general guidance, and properties such as <a href="contentLocation.html">contentLocation</a> and <a href="locationCreated.html">locationCreated</a> may be more applicable.
 
 In the case of products, the country of origin of the product. The exact interpretation of this may vary by context and product type, and cannot be fully enumerated here.
     </p>   
@@ -580,7 +580,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <h3>funding <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Grant.html"> Grant</a></div><p class="documentation">
-    A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+    A <a href="Grant.html">Grant</a> that directly or indirectly provide funding or sponsorship for this item. See also <a href="ownershipFundingInfo.html">ownershipFundingInfo</a>.
     </p>   
 </div></div>
   <div id="educationalUse">
@@ -636,7 +636,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <h3>offers <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Offer.html"> Offer</a>, <a href="Demand.html"> Demand</a></div><p class="documentation">
-    An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use [[businessFunction]] to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a [[Demand]]. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
+    An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use <a href="businessFunction.html">businessFunction</a> to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a <a href="Demand.html">Demand</a>. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
       
     </p>   
 </div></div>
@@ -693,7 +693,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <h3>sdDatePublished <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="date.html"> date</a></div><p class="documentation">
-    Indicates the date on which the current structured data was generated / published. Typically used alongside [[sdPublisher]]
+    Indicates the date on which the current structured data was generated / published. Typically used alongside <a href="sdPublisher.html">sdPublisher</a>
     </p>   
 </div></div>
   <div id="producer">
@@ -708,7 +708,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Place.html"> Place</a></div><p class="documentation">
     The "spatial" property can be used in cases when more specific properties
-(e.g. [[locationCreated]], [[spatialCoverage]], [[contentLocation]]) are not known to be appropriate.
+(e.g. <a href="locationCreated.html">locationCreated</a>, <a href="spatialCoverage.html">spatialCoverage</a>, <a href="contentLocation.html">contentLocation</a>) are not known to be appropriate.
     </p>   
 </div></div>
   <div id="publisher">
@@ -750,7 +750,7 @@ In the case of products, the country of origin of the product. The exact interpr
     <h3>usageInfo <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="CreativeWork.html"> CreativeWork</a>, <a href="string.html"> string</a></div><p class="documentation">
-    The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.
+    The schema.org <a href="usageInfo.html">usageInfo</a> property indicates further information about a <a href="CreativeWork.html">CreativeWork</a>. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.
 
 This property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.
     </p>   
@@ -767,7 +767,7 @@ This property can be used alongside the license property which indicates license
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Organization.html"> Organization</a>, <a href="Person.html"> Person</a></div><p class="documentation">
     Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The
-[[sdPublisher]] property helps make such practices more explicit.
+<a href="sdPublisher.html">sdPublisher</a> property helps make such practices more explicit.
     </p>   
 </div></div>
   <div id="comment">
@@ -872,9 +872,9 @@ This property can be used alongside the license property which indicates license
     <h3>publishingPrinciples <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="CreativeWork.html"> CreativeWork</a></div><p class="documentation">
-    The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].
+    The publishingPrinciples property indicates (typically via <a href="URL.html">URL</a>) a document describing the editorial principles of an <a href="Organization.html">Organization</a> (or individual e.g. a <a href="Person.html">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a href="CreativeWork.html">CreativeWork</a> (e.g. <a href="NewsArticle.html">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a href="CreativeWork.html">CreativeWork</a>.
 
-While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a href="funder.html">funder</a>) can be expressed using schema.org terminology.
 
     </p>   
 </div></div>
@@ -931,11 +931,11 @@ While such policies are most typically expressed in natural language, sometimes 
     <h3>editEIDR <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a></div><p class="documentation">
-    An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing a specific edit / edition for a work of film or television.
+    An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) <a href="identifier.html">identifier</a> representing a specific edit / edition for a work of film or television.
 
-For example, the motion picture known as "Ghostbusters" whose [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
+For example, the motion picture known as "Ghostbusters" whose <a href="titleEIDR.html">titleEIDR</a> is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
 
-Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
+Since schema.org types like <a href="Movie.html">Movie</a> and <a href="TVEpisode.html">TVEpisode</a> can be used for both works and their multiple expressions, it is possible to use <a href="titleEIDR.html">titleEIDR</a> alone (for a general description), or alongside <a href="editEIDR.html">editEIDR</a> for a more edit-specific description.
 
     </p>   
 </div></div>
@@ -973,7 +973,7 @@ Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both wor
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a></div><p class="documentation">
     Media type typically expressed using a MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml) and [MDN reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).
 
-In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.
+In cases where a <a href="CreativeWork.html">CreativeWork</a> has several media type representations, <a href="encoding.html">encoding</a> can be used to indicate each <a href="MediaObject.html">MediaObject</a> alongside particular <a href="encodingFormat.html">encodingFormat</a> information.
 
 Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
     </p>   
@@ -982,7 +982,7 @@ Unregistered or niche encoding and file formats can be indicated instead via the
     <h3>maintainer <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Person.html"> Person</a>, <a href="Organization.html"> Organization</a></div><p class="documentation">
-    A maintainer of a [[Dataset]], software package ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a [[Person]] or [[Organization]] that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on "upstream" sources. When [[maintainer]] is applied to a specific version of something e.g. a particular version or packaging of a [[Dataset]], it is always  possible that the upstream source has a different maintainer. The [[isBasedOn]] property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.
+    A maintainer of a <a href="Dataset.html">Dataset</a>, software package (<a href="SoftwareApplication.html">SoftwareApplication</a>), or other <a href="Project.html">Project</a>. A maintainer is a <a href="Person.html">Person</a> or <a href="Organization.html">Organization</a> that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on "upstream" sources. When <a href="maintainer.html">maintainer</a> is applied to a specific version of something e.g. a particular version or packaging of a <a href="Dataset.html">Dataset</a>, it is always  possible that the upstream source has a different maintainer. The <a href="isBasedOn.html">isBasedOn</a> property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.
       
     </p>   
 </div></div>
@@ -992,7 +992,7 @@ Unregistered or niche encoding and file formats can be indicated instead via the
 <div class="type-info"><b>Type</b> <a href="AlignmentObject.html"> AlignmentObject</a></div><p class="documentation">
     An alignment to an established educational framework.
 
-This property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
+This property should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource <a href="teaches.html">teaches</a> or <a href="assesses.html">assesses</a> a competency.
     </p>   
 </div></div>
   <div id="acquireLicensePage">
@@ -1036,14 +1036,14 @@ This property should not be used where the nature of the alignment can be descri
     <h3>conditionsOfAccess <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a></div><p class="documentation">
-    Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an [[ArchiveComponent]] held by an [[ArchiveOrganization]]. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.<br/><br/>For example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ". 
+    Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an <a href="ArchiveComponent.html">ArchiveComponent</a> held by an <a href="ArchiveOrganization.html">ArchiveOrganization</a>. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.<br/><br/>For example "Available by appointment from the Reading Room" or "Accessible only from logged-in accounts ". 
     </p>   
 </div></div>
   <div id="correction">
     <h3>correction <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a>, <a href="CorrectionComment.html"> CorrectionComment</a></div><p class="documentation">
-    Indicates a correction to a [[CreativeWork]], either via a [[CorrectionComment]], textually or in another document.
+    Indicates a correction to a <a href="CreativeWork.html">CreativeWork</a>, either via a <a href="CorrectionComment.html">CorrectionComment</a>, textually or in another document.
     </p>   
 </div></div>
   <div id="contentRating">
@@ -1057,7 +1057,7 @@ This property should not be used where the nature of the alignment can be descri
     <h3>size <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="QuantitativeValue.html"> QuantitativeValue</a>, <a href="DefinedTerm.html"> DefinedTerm</a>, <a href="string.html"> string</a>, <a href="SizeSpecification.html"> SizeSpecification</a></div><p class="documentation">
-    A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured [[SizeSpecification]]; in other cases, the [[width]], [[height]], [[depth]] and [[weight]] properties may be more applicable. 
+    A standardized size of a product or creative work, specified either through a simple textual string (for example 'XL', '32Wx34L'), a  QuantitativeValue with a unitCode, or a comprehensive and structured <a href="SizeSpecification.html">SizeSpecification</a>; in other cases, the <a href="width.html">width</a>, <a href="height.html">height</a>, <a href="depth.html">depth</a> and <a href="weight.html">weight</a> properties may be more applicable. 
     </p>   
 </div></div>
   <div id="isPartOf">
@@ -1072,7 +1072,7 @@ This property should not be used where the nature of the alignment can be descri
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="dateTime.html"> dateTime</a>, <a href="string.html"> string</a></div><p class="documentation">
     The "temporal" property can be used in cases where more specific properties
-(e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate.
+(e.g. <a href="temporalCoverage.html">temporalCoverage</a>, <a href="dateCreated.html">dateCreated</a>, <a href="dateModified.html">dateModified</a>, <a href="datePublished.html">datePublished</a>) are not known to be appropriate.
     </p>   
 </div></div>
   <div id="thumbnailUrl">
@@ -1086,7 +1086,7 @@ This property should not be used where the nature of the alignment can be descri
     <h3>inLanguage <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="Language.html"> Language</a></div><p class="documentation">
-    The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
+    The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also <a href="availableLanguage.html">availableLanguage</a>.
     </p>   
 </div></div>
   <div id="license">
@@ -1163,7 +1163,7 @@ This property should not be used where the nature of the alignment can be descri
     <h3>interpretedAsClaim <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Claim.html"> Claim</a></div><p class="documentation">
-    Used to indicate a specific claim contained, implied, translated or refined from the content of a [[MediaObject]] or other [[CreativeWork]]. The interpreting party can be indicated using [[claimInterpreter]].
+    Used to indicate a specific claim contained, implied, translated or refined from the content of a <a href="MediaObject.html">MediaObject</a> or other <a href="CreativeWork.html">CreativeWork</a>. The interpreting party can be indicated using <a href="claimInterpreter.html">claimInterpreter</a>.
     </p>   
 </div></div>
   <div id="accessibilityControl">
@@ -1191,7 +1191,7 @@ This property should not be used where the nature of the alignment can be descri
     <h3>archivedAt <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="WebPage.html"> WebPage</a>, <a href="string.html"> string</a></div><p class="documentation">
-    Indicates a page or other link involved in archival of a [[CreativeWork]]. In the case of [[MediaReview]], the items in a [[MediaReviewItem]] may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content.
+    Indicates a page or other link involved in archival of a <a href="CreativeWork.html">CreativeWork</a>. In the case of <a href="MediaReview.html">MediaReview</a>, the items in a <a href="MediaReviewItem.html">MediaReviewItem</a> may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content.
     </p>   
 </div></div>
   <div id="learningResourceType">
@@ -1293,7 +1293,7 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
     <h3>image <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="ImageObject.html"> ImageObject</a></div><p class="documentation">
-    An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+    An image of the item. This can be a <a href="URL.html">URL</a> or a fully described <a href="ImageObject.html">ImageObject</a>.
     </p>   
 </div></div>
   <div id="url">
@@ -1342,7 +1342,7 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
     <h3>identifier <span class="inheritedTag">inherited from <a href="Article.html"> Article </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a>, <a href="PropertyValue.html"> PropertyValue</a></div><p class="documentation">
-    The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+    The identifier property represents any kind of identifier for any kind of <a href="Thing.html">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
         
     </p>   
 </div></div></div>

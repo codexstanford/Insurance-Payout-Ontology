@@ -391,7 +391,7 @@
     <h3>image <span class="inheritedTag">inherited from <a href="MedicalAudience.html"> MedicalAudience </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="ImageObject.html"> ImageObject</a></div><p class="documentation">
-    An image of the item. This can be a [[URL]] or a fully described [[ImageObject]].
+    An image of the item. This can be a <a href="URL.html">URL</a> or a fully described <a href="ImageObject.html">ImageObject</a>.
     </p>   
 </div></div>
   <div id="url">
@@ -440,7 +440,7 @@
     <h3>identifier <span class="inheritedTag">inherited from <a href="MedicalAudience.html"> MedicalAudience </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a>, <a href="PropertyValue.html"> PropertyValue</a></div><p class="documentation">
-    The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
+    The identifier property represents any kind of identifier for any kind of <a href="Thing.html">Thing</a>, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.
         
     </p>   
 </div></div>
@@ -560,7 +560,7 @@
     <h3>knowsAbout <span class="inheritedTag">inherited from <a href="Person.html"> Person </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="string.html"> string</a>, <a href="Thing.html"> Thing</a></div><p class="documentation">
-    Of a [[Person]], and less typically of an [[Organization]], to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or [[JobPosting]] descriptions.
+    Of a <a href="Person.html">Person</a>, and less typically of an <a href="Organization.html">Organization</a>, to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or <a href="JobPosting.html">JobPosting</a> descriptions.
     </p>   
 </div></div>
   <div id="performerIn">
@@ -616,7 +616,7 @@
     <h3>funding <span class="inheritedTag">inherited from <a href="Person.html"> Person </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Grant.html"> Grant</a></div><p class="documentation">
-    A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].
+    A <a href="Grant.html">Grant</a> that directly or indirectly provide funding or sponsorship for this item. See also <a href="ownershipFundingInfo.html">ownershipFundingInfo</a>.
     </p>   
 </div></div>
   <div id="vatID">
@@ -658,7 +658,7 @@
     <h3>gender <span class="inheritedTag">inherited from <a href="Person.html"> Person </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="GenderType.html"> GenderType</a>, <a href="string.html"> string</a></div><p class="documentation">
-    Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
+    Gender of something, typically a <a href="Person.html">Person</a>, but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The <a href="gender.html">gender</a> property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender <a href="SportsTeam.html">SportsTeam</a> can be indicated with a text value of "Mixed".
     </p>   
 </div></div>
   <div id="parent">
@@ -756,9 +756,9 @@
     <h3>publishingPrinciples <span class="inheritedTag">inherited from <a href="Person.html"> Person </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="string.html"> string</a>, <a href="CreativeWork.html"> CreativeWork</a></div><p class="documentation">
-    The publishingPrinciples property indicates (typically via [[URL]]) a document describing the editorial principles of an [[Organization]] (or individual e.g. a [[Person]] writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a [[CreativeWork]] (e.g. [[NewsArticle]]) the principles are those of the party primarily responsible for the creation of the [[CreativeWork]].
+    The publishingPrinciples property indicates (typically via <a href="URL.html">URL</a>) a document describing the editorial principles of an <a href="Organization.html">Organization</a> (or individual e.g. a <a href="Person.html">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a href="CreativeWork.html">CreativeWork</a> (e.g. <a href="NewsArticle.html">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a href="CreativeWork.html">CreativeWork</a>.
 
-While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a [[funder]]) can be expressed using schema.org terminology.
+While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a href="funder.html">funder</a>) can be expressed using schema.org terminology.
 
     </p>   
 </div></div>
@@ -878,7 +878,7 @@ While such policies are most typically expressed in natural language, sometimes 
     <h3>knowsLanguage <span class="inheritedTag">inherited from <a href="Person.html"> Person </a></span></h3>
     <div class="" >
 <div class="type-info"><b>Type</b> <a href="Language.html"> Language</a>, <a href="string.html"> string</a></div><p class="documentation">
-    Of a [[Person]], and less typically of an [[Organization]], to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
+    Of a <a href="Person.html">Person</a>, and less typically of an <a href="Organization.html">Organization</a>, to indicate a known language. We do not distinguish skill levels or reading/writing/speaking/signing here. Use language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).
     </p>   
 </div></div>
   <div id="relatedTo">

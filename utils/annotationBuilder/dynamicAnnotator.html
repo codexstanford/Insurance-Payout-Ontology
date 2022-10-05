@@ -104,14 +104,15 @@
 
 
 
-      function buildAnnotator(target, path, preset, past) {
+      function buildAnnotator(target, path, preset, past = []) {
+  
+
+        
         if (Array.isArray(target)) {
           let div = document.createElement('div');
-          if (!past) {
-            past = [];
-          }
+
           for (let targetItem of target) {
-            console.log(targetItem, past);
+       
             if (past.indexOf(targetItem) == -1) {
               past.push(targetItem);
               div.appendChild(buildAnnotator(targetItem, path, preset, past));
@@ -119,6 +120,7 @@
           }
           return div;
         }
+
         if (target == "string") {
           let input = document.createElement('input');
           if (preset) {
@@ -128,6 +130,40 @@
           input.className = "annotationInput";
           return input;
         } 
+
+        if (target == "date") {
+          let input = document.createElement('input');
+          if (preset) {
+            input.value = preset
+          }
+          input.setAttribute('path', path);
+          input.type = "date";
+          input.className = "annotationInput";
+          return input;
+        } 
+
+        if (target == "dateTime") {
+          let input = document.createElement('input');
+          if (preset) {
+            input.value = preset
+          }
+          input.setAttribute('path', path);
+          input.type = "date";
+          input.className = "annotationInput";
+          return input;
+        } 
+
+        if (target == "time") {
+          let input = document.createElement('input');
+          if (preset) {
+            input.value = preset
+          }
+          input.setAttribute('path', path);
+          input.type = "date";
+          input.className = "annotationInput";
+          return input;
+        } 
+
         if (target == "boolean") {
           let input = document.createElement('input');
           input.type = "checkbox";
@@ -188,38 +224,7 @@
         if (!datamodel[target]) {
           return container;
         }
-        if (datamodel[target].type == "object") {
-          for (let property in datamodel[target].properties) {
-            container.innerHTML += `<div>${property}: `;
-            if (datamodel[target].properties[property].type == "List") {
-              let targetAddDiv = document.createElement('div');
-              targetAddDiv.id= path + "--" + property + "---ctn";
-              container.appendChild(targetAddDiv)
-              let addButton = document.createElement('button');
-              addButton.innerHTML = "Add item"
-              addButton.className = "btn btn-success"
-              addButton.setAttribute("path", path + "--" + property);
-              addButton.setAttribute("target", datamodel[target].properties[property].of);
-              addButton.setAttribute("count", 1);
 
-              addButton.setAttribute("onclick", "addButtonInListClicked(event)");
-              container.appendChild(addButton)
-            }
-            else {
-              if (preset && preset[property]) {
-       
-                container.appendChild(buildAnnotator(preset[property].split('.')[0], path + "--" + property, preset[property].split('.').slice(1).join(".")));
-              } else {
-                container.appendChild(buildAnnotator(datamodel[target].properties[property].type, path + "--" + property, datamodel[target].properties[property].with));
-              }
-              
-            }
-            container.innerHTML += "</div>"
-    
-          }
-
-        }
- 
         if (datamodel[target].type == "enum") {
           let select = document.createElement('select');
           let option = document.createElement('option');
@@ -242,7 +247,55 @@
           select.setAttribute("path", path);
           select.className = "annotationInput";
           container.appendChild(select);
+          return container;
         }
+
+        // stop infinite object loop
+        if (past && past.indexOf(target) == -1) {
+          past.push(target);
+        }
+        else {
+          let div = document.createElement('div');
+          div.innerHTML = `<input type='button' value="Add ${target}" />`;
+          return div;
+        }
+
+        if (datamodel[target].type == "object") {
+          for (let property in datamodel[target].properties) {
+            container.innerHTML += `<div>${property}: `;
+            if (datamodel[target].properties[property].type == "List") {
+              let targetAddDiv = document.createElement('div');
+              targetAddDiv.id= path + "--" + property + "---ctn";
+              container.appendChild(targetAddDiv)
+              let addButton = document.createElement('button');
+              addButton.innerHTML = "Add item"
+              addButton.className = "btn btn-success"
+              addButton.setAttribute("path", path + "--" + property);
+              addButton.setAttribute("target", datamodel[target].properties[property].of);
+              addButton.setAttribute("count", 1);
+
+              addButton.setAttribute("onclick", "addButtonInListClicked(event)");
+              container.appendChild(addButton)
+            }
+            else {
+              if (preset && preset[property]) {
+       
+                container.appendChild(
+                  buildAnnotator(preset[property].split('.')[0], path + "--" + property, preset[property].split('.').slice(1).join("."), null, past)
+                  );
+              } else {
+                container.appendChild(buildAnnotator(datamodel[target].properties[property].type, path + "--" + property, datamodel[target].properties[property].with, past));
+              }
+              
+            }
+            container.innerHTML += "</div>"
+    
+          }
+          return container;
+
+        }
+ 
+        console.log("Unhandled", target);
         return container;
       }
 
