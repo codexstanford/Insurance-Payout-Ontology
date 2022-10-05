@@ -1,6 +1,6 @@
 InsurancePerson:
   type: object
-  inherit: Person
+  inherit: RiskObject, Person
   properties:
     relationToPolicyHolder:
       type: PersonRelationToPolicyHolderEnum

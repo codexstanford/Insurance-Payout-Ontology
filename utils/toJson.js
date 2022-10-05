@@ -52,6 +52,10 @@ function render(name, data) {
 
   output[name] = data;
 
+  if (data.inherit && data.inherit.indexOf(',') != -1) {
+    data.inherit = data.inherit.split(', ');
+  }
+
   if (!data.type) {
     console.error(`Error Unspecified Object ${name} (no type property).`)
     throw (`Error Unspecified Object ${name} (no type property).`);

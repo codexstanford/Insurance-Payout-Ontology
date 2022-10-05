@@ -1,6 +1,6 @@
 InsuranceVehicle:
   type: object
-  inherit: Vehicle
+  inherit: RiskObject, Vehicle
   properties:
     productionYear: 
       type: Amount

@@ -122,7 +122,7 @@ concept Relation {
 
 concept RiskChain {
   o Chainable[] chain
-  o Thing[] actors
+  o RiskObject[] actors
   o Relation[] relations
 }
 
@@ -382,14 +382,14 @@ concept Variable extends Operable {
   o String name
 }
 
-concept InsurancePerson extends Person {
+concept InsurancePerson extends RiskObject, Person {
   o PersonRelationToPolicyHolderEnum relationToPolicyHolder
   o String firstName
   o String lastName
   o Double age
 }
 
-concept InsuranceVehicle extends Vehicle {
+concept InsuranceVehicle extends RiskObject, Vehicle {
   o Amount productionYear
   o Amount age
   o Amount length
