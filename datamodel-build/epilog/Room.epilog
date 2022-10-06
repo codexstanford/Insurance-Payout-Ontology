@@ -1,0 +1,2 @@
+type("Room",class)
+inherits("Room","Accommodation")

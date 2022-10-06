@@ -1,0 +1,2 @@
+type("UserPlusOnes",class)
+inherits("UserPlusOnes","UserInteraction")

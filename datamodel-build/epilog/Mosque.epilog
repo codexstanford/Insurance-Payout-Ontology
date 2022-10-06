@@ -1,0 +1,2 @@
+type("Mosque",class)
+inherits("Mosque","PlaceOfWorship")

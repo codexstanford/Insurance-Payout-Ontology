@@ -1,0 +1,3 @@
+type("PoliceStation",class)
+inherits("PoliceStation","CivicStructure")
+inherits("PoliceStation","EmergencyService")

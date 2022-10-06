@@ -1,0 +1,2 @@
+type("LiteraryEvent",class)
+inherits("LiteraryEvent","Event")

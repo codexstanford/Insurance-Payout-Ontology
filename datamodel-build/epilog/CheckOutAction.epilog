@@ -1,0 +1,2 @@
+type("CheckOutAction",class)
+inherits("CheckOutAction","CommunicateAction")

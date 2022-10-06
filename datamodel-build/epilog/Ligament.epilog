@@ -1,0 +1,2 @@
+type("Ligament",class)
+inherits("Ligament","AnatomicalStructure")

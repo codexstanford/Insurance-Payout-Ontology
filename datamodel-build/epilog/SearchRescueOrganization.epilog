@@ -1,0 +1,2 @@
+type("SearchRescueOrganization",class)
+inherits("SearchRescueOrganization","Organization")

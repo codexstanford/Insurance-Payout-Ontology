@@ -1,0 +1,2 @@
+type("AdvertiserContentArticle",class)
+inherits("AdvertiserContentArticle","Article")

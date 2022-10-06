@@ -1,0 +1,2 @@
+type("StructuredValue",class)
+inherits("StructuredValue","Intangible")

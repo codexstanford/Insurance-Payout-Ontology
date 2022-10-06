@@ -1,0 +1,2 @@
+type("Conversation",class)
+inherits("Conversation","CreativeWork")

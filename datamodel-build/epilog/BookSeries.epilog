@@ -1,0 +1,2 @@
+type("BookSeries",class)
+inherits("BookSeries","CreativeWorkSeries")

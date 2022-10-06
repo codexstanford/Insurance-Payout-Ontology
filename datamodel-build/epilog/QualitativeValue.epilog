@@ -1,0 +1,8 @@
+"QualitativeValue"("valueReference")
+"QualitativeValue"("greaterOrEqual")
+"QualitativeValue"("nonEqual")
+"QualitativeValue"("equal")
+"QualitativeValue"("lesser")
+"QualitativeValue"("greater")
+"QualitativeValue"("additionalProperty")
+"QualitativeValue"("lesserOrEqual")

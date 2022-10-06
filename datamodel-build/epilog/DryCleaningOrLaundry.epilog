@@ -1,0 +1,2 @@
+type("DryCleaningOrLaundry",class)
+inherits("DryCleaningOrLaundry","LocalBusiness")

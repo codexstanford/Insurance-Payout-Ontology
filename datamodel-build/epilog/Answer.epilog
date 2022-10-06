@@ -1,0 +1,7 @@
+type("Answer",class)
+inherits("Answer","Comment")
+attribute(Answer,"Answer.answerExplanation")
+type("Answer.answerExplanation",attributerelation)
+domain("Answer.answerExplanation",Answer)
+unique("Answer.answerExplanation",yes)
+range("Answer.answerExplanation",WebContent,Comment)

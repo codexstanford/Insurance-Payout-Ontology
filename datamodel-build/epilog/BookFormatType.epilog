@@ -1,0 +1,5 @@
+"BookFormatType"("AudiobookFormat")
+"BookFormatType"("GraphicNovel")
+"BookFormatType"("Paperback")
+"BookFormatType"("Hardcover")
+"BookFormatType"("EBook")

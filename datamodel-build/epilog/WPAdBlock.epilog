@@ -1,0 +1,2 @@
+type("WPAdBlock",class)
+inherits("WPAdBlock","WebPageElement")

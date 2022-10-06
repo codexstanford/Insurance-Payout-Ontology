@@ -1,0 +1,2 @@
+type("Mountain",class)
+inherits("Mountain","Landform")

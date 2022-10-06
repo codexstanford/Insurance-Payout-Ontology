@@ -1,0 +1,2 @@
+type("IgnoreAction",class)
+inherits("IgnoreAction","AssessAction")

@@ -1,0 +1,2 @@
+type("ContactPage",class)
+inherits("ContactPage","WebPage")

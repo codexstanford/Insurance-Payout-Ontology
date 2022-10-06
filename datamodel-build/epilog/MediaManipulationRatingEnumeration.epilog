@@ -1,0 +1,6 @@
+"MediaManipulationRatingEnumeration"("OriginalMediaContent")
+"MediaManipulationRatingEnumeration"("SatireOrParodyContent")
+"MediaManipulationRatingEnumeration"("EditedOrCroppedContent")
+"MediaManipulationRatingEnumeration"("DecontextualizedContent")
+"MediaManipulationRatingEnumeration"("StagedContent")
+"MediaManipulationRatingEnumeration"("TransformedContent")

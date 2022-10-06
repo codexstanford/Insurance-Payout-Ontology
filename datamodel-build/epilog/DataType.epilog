@@ -1,0 +1,2 @@
+type("DataType",class)
+inherits("DataType","string")

@@ -1,0 +1,7 @@
+type("TVClip",class)
+inherits("TVClip","Clip")
+attribute(TVClip,"TVClip.partOfTVSeries")
+type("TVClip.partOfTVSeries",attributerelation)
+domain("TVClip.partOfTVSeries",TVClip)
+unique("TVClip.partOfTVSeries",yes)
+range("TVClip.partOfTVSeries",TVSeries)

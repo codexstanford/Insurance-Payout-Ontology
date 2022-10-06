@@ -1,0 +1,2 @@
+type("DeleteAction",class)
+inherits("DeleteAction","UpdateAction")

@@ -1,0 +1,2 @@
+type("PrependAction",class)
+inherits("PrependAction","InsertAction")

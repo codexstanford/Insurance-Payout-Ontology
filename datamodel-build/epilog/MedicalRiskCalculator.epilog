@@ -1,0 +1,2 @@
+type("MedicalRiskCalculator",class)
+inherits("MedicalRiskCalculator","MedicalRiskEstimator")

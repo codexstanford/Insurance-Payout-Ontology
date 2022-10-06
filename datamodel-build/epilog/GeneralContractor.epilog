@@ -1,0 +1,2 @@
+type("GeneralContractor",class)
+inherits("GeneralContractor","HomeAndConstructionBusiness")

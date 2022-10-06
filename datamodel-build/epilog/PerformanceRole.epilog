@@ -1,0 +1,7 @@
+type("PerformanceRole",class)
+inherits("PerformanceRole","Role")
+attribute(PerformanceRole,"PerformanceRole.characterName")
+type("PerformanceRole.characterName",attributerelation)
+domain("PerformanceRole.characterName",PerformanceRole)
+unique("PerformanceRole.characterName",yes)
+range("PerformanceRole.characterName",string)

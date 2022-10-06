@@ -1,0 +1,7 @@
+type("SportsOrganization",class)
+inherits("SportsOrganization","Organization")
+attribute(SportsOrganization,"SportsOrganization.sport")
+type("SportsOrganization.sport",attributerelation)
+domain("SportsOrganization.sport",SportsOrganization)
+unique("SportsOrganization.sport",yes)
+range("SportsOrganization.sport",string,string)

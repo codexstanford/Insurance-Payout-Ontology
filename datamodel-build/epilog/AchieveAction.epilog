@@ -1,0 +1,2 @@
+type("AchieveAction",class)
+inherits("AchieveAction","Action")

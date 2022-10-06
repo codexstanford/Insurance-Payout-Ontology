@@ -1,0 +1,7 @@
+type("InvestmentOrDeposit",class)
+inherits("InvestmentOrDeposit","FinancialProduct")
+attribute(InvestmentOrDeposit,"InvestmentOrDeposit.amount")
+type("InvestmentOrDeposit.amount",attributerelation)
+domain("InvestmentOrDeposit.amount",InvestmentOrDeposit)
+unique("InvestmentOrDeposit.amount",yes)
+range("InvestmentOrDeposit.amount",number,MonetaryAmount)

@@ -1,0 +1,7 @@
+type("MedicalTrial",class)
+inherits("MedicalTrial","MedicalStudy")
+attribute(MedicalTrial,"MedicalTrial.trialDesign")
+type("MedicalTrial.trialDesign",attributerelation)
+domain("MedicalTrial.trialDesign",MedicalTrial)
+unique("MedicalTrial.trialDesign",yes)
+range("MedicalTrial.trialDesign",MedicalTrialDesign)

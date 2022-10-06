@@ -1,0 +1,2 @@
+type("GovernmentPermit",class)
+inherits("GovernmentPermit","Permit")

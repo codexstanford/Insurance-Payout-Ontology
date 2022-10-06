@@ -1,0 +1,2 @@
+type("Vessel",class)
+inherits("Vessel","AnatomicalStructure")

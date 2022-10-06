@@ -1,0 +1,7 @@
+type("HealthTopicContent",class)
+inherits("HealthTopicContent","WebContent")
+attribute(HealthTopicContent,"HealthTopicContent.hasHealthAspect")
+type("HealthTopicContent.hasHealthAspect",attributerelation)
+domain("HealthTopicContent.hasHealthAspect",HealthTopicContent)
+unique("HealthTopicContent.hasHealthAspect",yes)
+range("HealthTopicContent.hasHealthAspect",HealthAspectEnumeration)

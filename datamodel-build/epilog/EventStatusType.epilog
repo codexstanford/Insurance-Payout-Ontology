@@ -1,0 +1,5 @@
+"EventStatusType"("EventCancelled")
+"EventStatusType"("EventScheduled")
+"EventStatusType"("EventRescheduled")
+"EventStatusType"("EventPostponed")
+"EventStatusType"("EventMovedOnline")

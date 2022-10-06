@@ -1,0 +1,7 @@
+type("DonateAction",class)
+inherits("DonateAction","TradeAction")
+attribute(DonateAction,"DonateAction.recipient")
+type("DonateAction.recipient",attributerelation)
+domain("DonateAction.recipient",DonateAction)
+unique("DonateAction.recipient",yes)
+range("DonateAction.recipient",Person,Audience,ContactPoint,Organization)

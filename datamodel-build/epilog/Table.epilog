@@ -1,0 +1,2 @@
+type("Table",class)
+inherits("Table","WebPageElement")

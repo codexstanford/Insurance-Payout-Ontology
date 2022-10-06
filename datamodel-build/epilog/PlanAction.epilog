@@ -1,0 +1,7 @@
+type("PlanAction",class)
+inherits("PlanAction","OrganizeAction")
+attribute(PlanAction,"PlanAction.scheduledTime")
+type("PlanAction.scheduledTime",attributerelation)
+domain("PlanAction.scheduledTime",PlanAction)
+unique("PlanAction.scheduledTime",yes)
+range("PlanAction.scheduledTime",dateTime)

@@ -1,0 +1,2 @@
+type("IceCreamShop",class)
+inherits("IceCreamShop","FoodEstablishment")

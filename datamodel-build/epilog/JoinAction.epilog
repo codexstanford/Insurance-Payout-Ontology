@@ -1,0 +1,7 @@
+type("JoinAction",class)
+inherits("JoinAction","InteractAction")
+attribute(JoinAction,"JoinAction.event")
+type("JoinAction.event",attributerelation)
+domain("JoinAction.event",JoinAction)
+unique("JoinAction.event",yes)
+range("JoinAction.event",Event)

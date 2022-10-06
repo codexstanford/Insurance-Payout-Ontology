@@ -1,0 +1,2 @@
+type("OrganizeAction",class)
+inherits("OrganizeAction","Action")

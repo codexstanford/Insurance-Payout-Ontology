@@ -1,0 +1,2 @@
+type("MusicVenue",class)
+inherits("MusicVenue","CivicStructure")

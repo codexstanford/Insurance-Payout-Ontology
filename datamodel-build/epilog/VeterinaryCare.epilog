@@ -1,0 +1,2 @@
+type("VeterinaryCare",class)
+inherits("VeterinaryCare","MedicalOrganization")

@@ -1,0 +1,2 @@
+type("AddAction",class)
+inherits("AddAction","UpdateAction")

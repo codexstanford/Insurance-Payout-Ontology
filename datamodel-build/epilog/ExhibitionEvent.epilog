@@ -1,0 +1,2 @@
+type("ExhibitionEvent",class)
+inherits("ExhibitionEvent","Event")

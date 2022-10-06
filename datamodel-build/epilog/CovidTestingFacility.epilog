@@ -1,0 +1,2 @@
+type("CovidTestingFacility",class)
+inherits("CovidTestingFacility","MedicalClinic")

@@ -1,0 +1,2 @@
+type("ViewAction",class)
+inherits("ViewAction","ConsumeAction")

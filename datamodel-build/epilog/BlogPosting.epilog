@@ -1,0 +1,2 @@
+type("BlogPosting",class)
+inherits("BlogPosting","SocialMediaPosting")

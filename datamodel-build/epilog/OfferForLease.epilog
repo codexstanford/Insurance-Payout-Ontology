@@ -1,0 +1,2 @@
+type("OfferForLease",class)
+inherits("OfferForLease","Offer")

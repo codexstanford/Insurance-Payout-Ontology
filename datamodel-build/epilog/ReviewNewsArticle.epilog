@@ -1,0 +1,3 @@
+type("ReviewNewsArticle",class)
+inherits("ReviewNewsArticle","CriticReview")
+inherits("ReviewNewsArticle","NewsArticle")

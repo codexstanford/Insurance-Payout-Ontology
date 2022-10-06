@@ -1,0 +1,7 @@
+type("SocialMediaPosting",class)
+inherits("SocialMediaPosting","Article")
+attribute(SocialMediaPosting,"SocialMediaPosting.sharedContent")
+type("SocialMediaPosting.sharedContent",attributerelation)
+domain("SocialMediaPosting.sharedContent",SocialMediaPosting)
+unique("SocialMediaPosting.sharedContent",yes)
+range("SocialMediaPosting.sharedContent",CreativeWork)

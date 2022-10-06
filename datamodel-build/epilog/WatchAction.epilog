@@ -1,0 +1,2 @@
+type("WatchAction",class)
+inherits("WatchAction","ConsumeAction")

@@ -1,0 +1,7 @@
+type("FinancialService",class)
+inherits("FinancialService","LocalBusiness")
+attribute(FinancialService,"FinancialService.feesAndCommissionsSpecification")
+type("FinancialService.feesAndCommissionsSpecification",attributerelation)
+domain("FinancialService.feesAndCommissionsSpecification",FinancialService)
+unique("FinancialService.feesAndCommissionsSpecification",yes)
+range("FinancialService.feesAndCommissionsSpecification",string,string)

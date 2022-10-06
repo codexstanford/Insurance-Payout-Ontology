@@ -1,0 +1,2 @@
+type("Duration",class)
+inherits("Duration","Quantity")

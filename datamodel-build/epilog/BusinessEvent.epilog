@@ -1,0 +1,2 @@
+type("BusinessEvent",class)
+inherits("BusinessEvent","Event")

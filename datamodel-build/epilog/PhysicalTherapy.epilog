@@ -1,0 +1,2 @@
+type("PhysicalTherapy",class)
+inherits("PhysicalTherapy","MedicalTherapy")

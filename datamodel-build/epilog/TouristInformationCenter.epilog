@@ -1,0 +1,2 @@
+type("TouristInformationCenter",class)
+inherits("TouristInformationCenter","LocalBusiness")

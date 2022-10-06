@@ -1,0 +1,2 @@
+type("CssSelectorType",class)
+inherits("CssSelectorType","string")

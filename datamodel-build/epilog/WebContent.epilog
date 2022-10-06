@@ -1,0 +1,2 @@
+type("WebContent",class)
+inherits("WebContent","CreativeWork")

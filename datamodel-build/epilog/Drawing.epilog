@@ -1,0 +1,2 @@
+type("Drawing",class)
+inherits("Drawing","CreativeWork")

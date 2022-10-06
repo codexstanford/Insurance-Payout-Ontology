@@ -1,0 +1,2 @@
+type("BookmarkAction",class)
+inherits("BookmarkAction","OrganizeAction")

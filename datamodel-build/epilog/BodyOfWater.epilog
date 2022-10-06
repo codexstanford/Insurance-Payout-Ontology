@@ -1,0 +1,2 @@
+type("BodyOfWater",class)
+inherits("BodyOfWater","Landform")

@@ -1,0 +1,2 @@
+type("AssignAction",class)
+inherits("AssignAction","AllocateAction")

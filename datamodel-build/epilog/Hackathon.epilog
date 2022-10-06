@@ -1,0 +1,2 @@
+type("Hackathon",class)
+inherits("Hackathon","Event")

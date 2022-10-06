@@ -1,0 +1,2 @@
+type("Periodical",class)
+inherits("Periodical","CreativeWorkSeries")

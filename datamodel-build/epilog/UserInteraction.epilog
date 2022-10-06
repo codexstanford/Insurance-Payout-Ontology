@@ -1,0 +1,2 @@
+type("UserInteraction",class)
+inherits("UserInteraction","Event")

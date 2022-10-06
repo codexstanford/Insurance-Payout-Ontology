@@ -1,0 +1,2 @@
+type("Series",class)
+inherits("Series","Intangible")

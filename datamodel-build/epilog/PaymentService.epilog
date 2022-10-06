@@ -1,0 +1,2 @@
+type("PaymentService",class)
+inherits("PaymentService","FinancialProduct")

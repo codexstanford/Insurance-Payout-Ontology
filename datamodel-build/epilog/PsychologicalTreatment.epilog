@@ -1,0 +1,2 @@
+type("PsychologicalTreatment",class)
+inherits("PsychologicalTreatment","TherapeuticProcedure")

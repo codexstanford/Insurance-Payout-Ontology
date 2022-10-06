@@ -1,0 +1,2 @@
+type("SpreadsheetDigitalDocument",class)
+inherits("SpreadsheetDigitalDocument","DigitalDocument")

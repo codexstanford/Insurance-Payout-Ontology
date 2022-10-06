@@ -1,0 +1,7 @@
+type("DiagnosticLab",class)
+inherits("DiagnosticLab","MedicalOrganization")
+attribute(DiagnosticLab,"DiagnosticLab.availableTest")
+type("DiagnosticLab.availableTest",attributerelation)
+domain("DiagnosticLab.availableTest",DiagnosticLab)
+unique("DiagnosticLab.availableTest",yes)
+range("DiagnosticLab.availableTest",MedicalTest)

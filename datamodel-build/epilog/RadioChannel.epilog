@@ -1,0 +1,2 @@
+type("RadioChannel",class)
+inherits("RadioChannel","BroadcastChannel")

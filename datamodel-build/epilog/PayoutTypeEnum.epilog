@@ -1,0 +1,8 @@
+"PayoutTypeEnum"("Limit")
+"PayoutTypeEnum"("Excess")
+"PayoutTypeEnum"("Deductible")
+"PayoutTypeEnum"("Franchise")
+"PayoutTypeEnum"("StrictLimit")
+"PayoutTypeEnum"("Exclusion")
+"PayoutTypeEnum"("CoPayment")
+"PayoutTypeEnum"("CoInsurance")

@@ -1,0 +1,2 @@
+type("ControlAction",class)
+inherits("ControlAction","Action")

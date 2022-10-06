@@ -1,0 +1,2 @@
+type("VitalSign",class)
+inherits("VitalSign","MedicalSign")

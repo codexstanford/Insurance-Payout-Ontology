@@ -1,0 +1,2 @@
+type("Attorney",class)
+inherits("Attorney","LegalService")

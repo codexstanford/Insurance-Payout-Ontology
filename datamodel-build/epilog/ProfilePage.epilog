@@ -1,0 +1,2 @@
+type("ProfilePage",class)
+inherits("ProfilePage","WebPage")

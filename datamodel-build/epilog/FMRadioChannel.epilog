@@ -1,0 +1,2 @@
+type("FMRadioChannel",class)
+inherits("FMRadioChannel","RadioChannel")

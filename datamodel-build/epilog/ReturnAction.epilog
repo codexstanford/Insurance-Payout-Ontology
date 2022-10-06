@@ -1,0 +1,7 @@
+type("ReturnAction",class)
+inherits("ReturnAction","TransferAction")
+attribute(ReturnAction,"ReturnAction.recipient")
+type("ReturnAction.recipient",attributerelation)
+domain("ReturnAction.recipient",ReturnAction)
+unique("ReturnAction.recipient",yes)
+range("ReturnAction.recipient",Person,Audience,ContactPoint,Organization)

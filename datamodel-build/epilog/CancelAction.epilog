@@ -1,0 +1,2 @@
+type("CancelAction",class)
+inherits("CancelAction","PlanAction")

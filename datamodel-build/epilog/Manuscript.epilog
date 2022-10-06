@@ -1,0 +1,2 @@
+type("Manuscript",class)
+inherits("Manuscript","CreativeWork")

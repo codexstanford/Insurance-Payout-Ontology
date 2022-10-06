@@ -1,0 +1,2 @@
+type("FundingScheme",class)
+inherits("FundingScheme","Organization")

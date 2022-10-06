@@ -1,0 +1,3 @@
+"CarUsageType"("TaxiVehicleUsage")
+"CarUsageType"("DrivingSchoolVehicleUsage")
+"CarUsageType"("RentalVehicleUsage")

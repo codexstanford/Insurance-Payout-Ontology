@@ -1,0 +1,2 @@
+type("OnDemandEvent",class)
+inherits("OnDemandEvent","PublicationEvent")

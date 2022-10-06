@@ -1,0 +1,2 @@
+type("AutomatedTeller",class)
+inherits("AutomatedTeller","FinancialService")

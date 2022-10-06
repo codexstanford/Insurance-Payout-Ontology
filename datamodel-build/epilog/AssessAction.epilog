@@ -1,0 +1,2 @@
+type("AssessAction",class)
+inherits("AssessAction","Action")

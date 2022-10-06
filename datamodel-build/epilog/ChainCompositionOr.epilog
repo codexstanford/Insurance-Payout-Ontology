@@ -1,0 +1,7 @@
+type("ChainCompositionOr",class)
+inherits("ChainCompositionOr","Chainable")
+attribute(ChainCompositionOr,"ChainCompositionOr.operands")
+type("ChainCompositionOr.operands",attributerelation)
+domain("ChainCompositionOr.operands",ChainCompositionOr)
+unique("ChainCompositionOr.operands",no)
+range("ChainCompositionOr.operands",RiskChain)

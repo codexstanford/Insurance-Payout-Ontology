@@ -1,0 +1,2 @@
+type("ImageObjectSnapshot",class)
+inherits("ImageObjectSnapshot","ImageObject")

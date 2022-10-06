@@ -1,0 +1,2 @@
+type("BedType",class)
+inherits("BedType","QualitativeValue")

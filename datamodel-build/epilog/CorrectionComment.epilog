@@ -1,0 +1,2 @@
+type("CorrectionComment",class)
+inherits("CorrectionComment","Comment")

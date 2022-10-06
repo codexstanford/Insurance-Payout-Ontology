@@ -1,0 +1,3 @@
+"EventAttendanceModeEnumeration"("OfflineEventAttendanceMode")
+"EventAttendanceModeEnumeration"("MixedEventAttendanceMode")
+"EventAttendanceModeEnumeration"("OnlineEventAttendanceMode")

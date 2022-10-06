@@ -1,0 +1,2 @@
+type("BreadcrumbList",class)
+inherits("BreadcrumbList","ItemList")

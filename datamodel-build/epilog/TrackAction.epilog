@@ -1,0 +1,7 @@
+type("TrackAction",class)
+inherits("TrackAction","FindAction")
+attribute(TrackAction,"TrackAction.deliveryMethod")
+type("TrackAction.deliveryMethod",attributerelation)
+domain("TrackAction.deliveryMethod",TrackAction)
+unique("TrackAction.deliveryMethod",yes)
+range("TrackAction.deliveryMethod",DeliveryMethod)

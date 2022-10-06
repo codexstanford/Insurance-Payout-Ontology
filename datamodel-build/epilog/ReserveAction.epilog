@@ -1,0 +1,2 @@
+type("ReserveAction",class)
+inherits("ReserveAction","PlanAction")

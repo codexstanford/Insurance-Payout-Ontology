@@ -1,0 +1,2 @@
+type("DiagnosticProcedure",class)
+inherits("DiagnosticProcedure","MedicalProcedure")

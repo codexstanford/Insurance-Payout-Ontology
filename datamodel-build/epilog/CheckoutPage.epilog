@@ -1,0 +1,2 @@
+type("CheckoutPage",class)
+inherits("CheckoutPage","WebPage")

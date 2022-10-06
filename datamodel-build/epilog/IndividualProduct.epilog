@@ -1,0 +1,7 @@
+type("IndividualProduct",class)
+inherits("IndividualProduct","Product")
+attribute(IndividualProduct,"IndividualProduct.serialNumber")
+type("IndividualProduct.serialNumber",attributerelation)
+domain("IndividualProduct.serialNumber",IndividualProduct)
+unique("IndividualProduct.serialNumber",yes)
+range("IndividualProduct.serialNumber",string)

@@ -1,0 +1,7 @@
+type("AskAction",class)
+inherits("AskAction","CommunicateAction")
+attribute(AskAction,"AskAction.question")
+type("AskAction.question",attributerelation)
+domain("AskAction.question",AskAction)
+unique("AskAction.question",yes)
+range("AskAction.question",Question)

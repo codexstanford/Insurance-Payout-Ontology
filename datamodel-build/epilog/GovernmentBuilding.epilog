@@ -1,0 +1,2 @@
+type("GovernmentBuilding",class)
+inherits("GovernmentBuilding","CivicStructure")

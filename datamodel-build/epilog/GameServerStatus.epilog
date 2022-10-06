@@ -1,0 +1,4 @@
+"GameServerStatus"("OnlineFull")
+"GameServerStatus"("OfflinePermanently")
+"GameServerStatus"("Online")
+"GameServerStatus"("OfflineTemporarily")

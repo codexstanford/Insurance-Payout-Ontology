@@ -1,0 +1,6 @@
+"PriceComponentTypeEnumeration"("Subscription")
+"PriceComponentTypeEnumeration"("Installment")
+"PriceComponentTypeEnumeration"("ActivationFee")
+"PriceComponentTypeEnumeration"("Downpayment")
+"PriceComponentTypeEnumeration"("CleaningFee")
+"PriceComponentTypeEnumeration"("DistanceFee")

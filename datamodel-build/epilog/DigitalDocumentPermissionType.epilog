@@ -1,0 +1,3 @@
+"DigitalDocumentPermissionType"("CommentPermission")
+"DigitalDocumentPermissionType"("ReadPermission")
+"DigitalDocumentPermissionType"("WritePermission")

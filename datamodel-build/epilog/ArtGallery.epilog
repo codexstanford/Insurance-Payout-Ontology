@@ -1,0 +1,2 @@
+type("ArtGallery",class)
+inherits("ArtGallery","EntertainmentBusiness")

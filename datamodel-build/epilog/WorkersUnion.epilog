@@ -1,0 +1,2 @@
+type("WorkersUnion",class)
+inherits("WorkersUnion","Organization")

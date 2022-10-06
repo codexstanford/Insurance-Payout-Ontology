@@ -1,0 +1,2 @@
+type("HomeAndConstructionBusiness",class)
+inherits("HomeAndConstructionBusiness","LocalBusiness")

@@ -1,0 +1,2 @@
+type("TaxiStand",class)
+inherits("TaxiStand","CivicStructure")

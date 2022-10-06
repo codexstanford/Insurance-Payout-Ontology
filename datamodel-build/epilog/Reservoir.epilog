@@ -1,0 +1,2 @@
+type("Reservoir",class)
+inherits("Reservoir","BodyOfWater")

@@ -1,0 +1,7 @@
+type("DataFeed",class)
+inherits("DataFeed","Dataset")
+attribute(DataFeed,"DataFeed.dataFeedElement")
+type("DataFeed.dataFeedElement",attributerelation)
+domain("DataFeed.dataFeedElement",DataFeed)
+unique("DataFeed.dataFeedElement",yes)
+range("DataFeed.dataFeedElement",Thing,DataFeedItem,string)

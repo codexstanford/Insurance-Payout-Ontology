@@ -1,0 +1,2 @@
+type("Volcano",class)
+inherits("Volcano","Landform")

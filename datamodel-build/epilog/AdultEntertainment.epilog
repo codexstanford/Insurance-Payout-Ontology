@@ -1,0 +1,2 @@
+type("AdultEntertainment",class)
+inherits("AdultEntertainment","EntertainmentBusiness")

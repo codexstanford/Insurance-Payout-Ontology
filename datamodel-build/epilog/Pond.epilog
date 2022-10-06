@@ -1,0 +1,2 @@
+type("Pond",class)
+inherits("Pond","BodyOfWater")

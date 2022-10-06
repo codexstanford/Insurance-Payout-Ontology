@@ -1,0 +1,3 @@
+"RefundTypeEnumeration"("StoreCreditRefund")
+"RefundTypeEnumeration"("ExchangeRefund")
+"RefundTypeEnumeration"("FullRefund")

@@ -1,0 +1,2 @@
+type("RadioEpisode",class)
+inherits("RadioEpisode","Episode")

@@ -1,0 +1,2 @@
+type("OccupationalTherapy",class)
+inherits("OccupationalTherapy","MedicalTherapy")

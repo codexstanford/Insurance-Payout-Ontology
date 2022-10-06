@@ -1,0 +1,2 @@
+type("MarryAction",class)
+inherits("MarryAction","InteractAction")

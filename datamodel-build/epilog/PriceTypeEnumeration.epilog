@@ -1,0 +1,6 @@
+"PriceTypeEnumeration"("SalePrice")
+"PriceTypeEnumeration"("SRP")
+"PriceTypeEnumeration"("ListPrice")
+"PriceTypeEnumeration"("InvoicePrice")
+"PriceTypeEnumeration"("MinimumAdvertisedPrice")
+"PriceTypeEnumeration"("MSRP")

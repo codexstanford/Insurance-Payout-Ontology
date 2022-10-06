@@ -1,0 +1,2 @@
+type("Barcode",class)
+inherits("Barcode","ImageObject")

@@ -1,0 +1,7 @@
+type("HowToItem",class)
+inherits("HowToItem","ListItem")
+attribute(HowToItem,"HowToItem.requiredQuantity")
+type("HowToItem.requiredQuantity",attributerelation)
+domain("HowToItem.requiredQuantity",HowToItem)
+unique("HowToItem.requiredQuantity",yes)
+range("HowToItem.requiredQuantity",QuantitativeValue,number,string)

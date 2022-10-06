@@ -1,0 +1,2 @@
+type("BoatReservation",class)
+inherits("BoatReservation","Reservation")

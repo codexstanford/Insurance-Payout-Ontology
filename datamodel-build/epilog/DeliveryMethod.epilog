@@ -1,0 +1,3 @@
+"DeliveryMethod"("ParcelService")
+"DeliveryMethod"("OnSitePickup")
+"DeliveryMethod"("LockerDelivery")

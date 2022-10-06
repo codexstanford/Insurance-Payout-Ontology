@@ -1,0 +1,2 @@
+type("EventVenue",class)
+inherits("EventVenue","CivicStructure")

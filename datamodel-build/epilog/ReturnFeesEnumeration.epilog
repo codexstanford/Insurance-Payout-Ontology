@@ -1,0 +1,5 @@
+"ReturnFeesEnumeration"("ReturnFeesCustomerResponsibility")
+"ReturnFeesEnumeration"("OriginalShippingFees")
+"ReturnFeesEnumeration"("ReturnShippingFees")
+"ReturnFeesEnumeration"("FreeReturn")
+"ReturnFeesEnumeration"("RestockingFees")

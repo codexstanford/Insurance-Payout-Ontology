@@ -1,0 +1,7 @@
+type("Variable",class)
+inherits("Variable","Operable")
+attribute(Variable,"Variable.name")
+type("Variable.name",attributerelation)
+domain("Variable.name",Variable)
+unique("Variable.name",yes)
+range("Variable.name",string)

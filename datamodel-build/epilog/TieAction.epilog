@@ -1,0 +1,2 @@
+type("TieAction",class)
+inherits("TieAction","AchieveAction")

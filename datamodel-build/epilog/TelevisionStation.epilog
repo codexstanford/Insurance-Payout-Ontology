@@ -1,0 +1,2 @@
+type("TelevisionStation",class)
+inherits("TelevisionStation","LocalBusiness")

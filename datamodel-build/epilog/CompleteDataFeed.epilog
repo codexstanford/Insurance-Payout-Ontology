@@ -1,0 +1,2 @@
+type("CompleteDataFeed",class)
+inherits("CompleteDataFeed","DataFeed")

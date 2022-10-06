@@ -1,0 +1,2 @@
+type("FAQPage",class)
+inherits("FAQPage","WebPage")

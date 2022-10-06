@@ -1,0 +1,7 @@
+type("WinAction",class)
+inherits("WinAction","AchieveAction")
+attribute(WinAction,"WinAction.loser")
+type("WinAction.loser",attributerelation)
+domain("WinAction.loser",WinAction)
+unique("WinAction.loser",yes)
+range("WinAction.loser",Person)

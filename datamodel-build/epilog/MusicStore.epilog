@@ -1,0 +1,2 @@
+type("MusicStore",class)
+inherits("MusicStore","Store")

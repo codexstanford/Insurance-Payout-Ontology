@@ -1,0 +1,2 @@
+type("PetStore",class)
+inherits("PetStore","Store")

@@ -1,0 +1,2 @@
+type("DiscussionForumPosting",class)
+inherits("DiscussionForumPosting","SocialMediaPosting")

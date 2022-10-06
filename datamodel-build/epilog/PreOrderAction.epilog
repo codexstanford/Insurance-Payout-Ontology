@@ -1,0 +1,2 @@
+type("PreOrderAction",class)
+inherits("PreOrderAction","TradeAction")

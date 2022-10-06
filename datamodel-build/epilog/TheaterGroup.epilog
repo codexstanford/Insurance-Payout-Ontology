@@ -1,0 +1,2 @@
+type("TheaterGroup",class)
+inherits("TheaterGroup","PerformingGroup")

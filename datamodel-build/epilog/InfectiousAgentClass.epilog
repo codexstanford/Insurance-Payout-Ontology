@@ -1,0 +1,6 @@
+"InfectiousAgentClass"("Bacteria")
+"InfectiousAgentClass"("Protozoa")
+"InfectiousAgentClass"("Fungus")
+"InfectiousAgentClass"("Virus")
+"InfectiousAgentClass"("Prion")
+"InfectiousAgentClass"("MulticellularParasite")

@@ -1,0 +1,2 @@
+type("InvestmentFund",class)
+inherits("InvestmentFund","InvestmentOrDeposit")

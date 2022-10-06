@@ -1,0 +1,2 @@
+type("CriticReview",class)
+inherits("CriticReview","Review")

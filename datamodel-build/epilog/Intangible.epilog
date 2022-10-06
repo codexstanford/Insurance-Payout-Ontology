@@ -1,0 +1,2 @@
+type("Intangible",class)
+inherits("Intangible","Thing")

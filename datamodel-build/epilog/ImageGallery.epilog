@@ -1,0 +1,2 @@
+type("ImageGallery",class)
+inherits("ImageGallery","MediaGallery")

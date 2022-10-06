@@ -1,0 +1,2 @@
+type("RVPark",class)
+inherits("RVPark","CivicStructure")

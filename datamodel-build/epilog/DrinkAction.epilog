@@ -1,0 +1,2 @@
+type("DrinkAction",class)
+inherits("DrinkAction","ConsumeAction")

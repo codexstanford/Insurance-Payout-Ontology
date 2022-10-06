@@ -1,0 +1,5 @@
+"UnitDimensionEnum"("monetary")
+"UnitDimensionEnum"("time")
+"UnitDimensionEnum"("distance")
+"UnitDimensionEnum"("mass")
+"UnitDimensionEnum"("person")

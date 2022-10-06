@@ -1,0 +1,2 @@
+type("PaintAction",class)
+inherits("PaintAction","CreateAction")

@@ -1,0 +1,2 @@
+type("Sculpture",class)
+inherits("Sculpture","CreativeWork")

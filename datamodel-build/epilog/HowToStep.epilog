@@ -1,0 +1,4 @@
+type("HowToStep",class)
+inherits("HowToStep","ListItem")
+inherits("HowToStep","ItemList")
+inherits("HowToStep","CreativeWork")

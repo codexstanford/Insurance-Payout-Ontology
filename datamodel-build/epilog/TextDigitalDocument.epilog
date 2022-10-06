@@ -1,0 +1,2 @@
+type("TextDigitalDocument",class)
+inherits("TextDigitalDocument","DigitalDocument")

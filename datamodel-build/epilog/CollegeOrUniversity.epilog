@@ -1,0 +1,2 @@
+type("CollegeOrUniversity",class)
+inherits("CollegeOrUniversity","EducationalOrganization")

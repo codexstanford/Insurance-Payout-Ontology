@@ -1,0 +1,2 @@
+type("SchoolDistrict",class)
+inherits("SchoolDistrict","AdministrativeArea")

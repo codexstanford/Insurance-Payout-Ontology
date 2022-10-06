@@ -1,0 +1,8 @@
+type("MovieTheater",class)
+inherits("MovieTheater","CivicStructure")
+inherits("MovieTheater","EntertainmentBusiness")
+attribute(MovieTheater,"MovieTheater.screenCount")
+type("MovieTheater.screenCount",attributerelation)
+domain("MovieTheater.screenCount",MovieTheater)
+unique("MovieTheater.screenCount",yes)
+range("MovieTheater.screenCount",number)

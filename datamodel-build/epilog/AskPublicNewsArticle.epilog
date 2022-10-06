@@ -1,0 +1,2 @@
+type("AskPublicNewsArticle",class)
+inherits("AskPublicNewsArticle","NewsArticle")

@@ -1,0 +1,2 @@
+type("Language",class)
+inherits("Language","Intangible")

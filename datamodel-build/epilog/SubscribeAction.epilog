@@ -1,0 +1,2 @@
+type("SubscribeAction",class)
+inherits("SubscribeAction","InteractAction")

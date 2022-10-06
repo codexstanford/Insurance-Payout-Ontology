@@ -1,0 +1,4 @@
+"MerchantReturnEnumeration"("MerchantReturnNotPermitted")
+"MerchantReturnEnumeration"("MerchantReturnUnlimitedWindow")
+"MerchantReturnEnumeration"("MerchantReturnFiniteReturnWindow")
+"MerchantReturnEnumeration"("MerchantReturnUnspecified")

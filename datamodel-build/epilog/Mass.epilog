@@ -1,0 +1,2 @@
+type("Mass",class)
+inherits("Mass","Quantity")

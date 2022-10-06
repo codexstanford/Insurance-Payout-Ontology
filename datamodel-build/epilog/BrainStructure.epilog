@@ -1,0 +1,2 @@
+type("BrainStructure",class)
+inherits("BrainStructure","AnatomicalStructure")

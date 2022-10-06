@@ -1,0 +1,2 @@
+type("Bone",class)
+inherits("Bone","AnatomicalStructure")

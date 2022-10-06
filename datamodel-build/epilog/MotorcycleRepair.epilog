@@ -1,0 +1,2 @@
+type("MotorcycleRepair",class)
+inherits("MotorcycleRepair","AutomotiveBusiness")

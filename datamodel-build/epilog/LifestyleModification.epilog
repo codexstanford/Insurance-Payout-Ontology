@@ -1,0 +1,2 @@
+type("LifestyleModification",class)
+inherits("LifestyleModification","MedicalEntity")

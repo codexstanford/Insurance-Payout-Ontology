@@ -1,0 +1,2 @@
+type("Optician",class)
+inherits("Optician","MedicalBusiness")

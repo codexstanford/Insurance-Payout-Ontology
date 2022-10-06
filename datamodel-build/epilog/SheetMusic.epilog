@@ -1,0 +1,2 @@
+type("SheetMusic",class)
+inherits("SheetMusic","CreativeWork")

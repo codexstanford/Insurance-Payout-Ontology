@@ -1,0 +1,2 @@
+type("ReportedDoseSchedule",class)
+inherits("ReportedDoseSchedule","DoseSchedule")

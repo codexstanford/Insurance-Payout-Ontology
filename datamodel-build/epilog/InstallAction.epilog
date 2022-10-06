@@ -1,0 +1,2 @@
+type("InstallAction",class)
+inherits("InstallAction","ConsumeAction")

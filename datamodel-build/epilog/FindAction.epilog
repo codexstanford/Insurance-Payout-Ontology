@@ -1,0 +1,2 @@
+type("FindAction",class)
+inherits("FindAction","Action")

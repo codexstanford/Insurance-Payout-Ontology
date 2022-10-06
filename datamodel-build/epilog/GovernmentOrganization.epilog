@@ -1,0 +1,2 @@
+type("GovernmentOrganization",class)
+inherits("GovernmentOrganization","Organization")

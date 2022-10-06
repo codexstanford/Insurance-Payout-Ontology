@@ -1,0 +1,2 @@
+type("ScholarlyArticle",class)
+inherits("ScholarlyArticle","Article")

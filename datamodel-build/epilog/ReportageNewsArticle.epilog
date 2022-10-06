@@ -1,0 +1,2 @@
+type("ReportageNewsArticle",class)
+inherits("ReportageNewsArticle","NewsArticle")

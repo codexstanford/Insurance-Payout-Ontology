@@ -1,0 +1,2 @@
+type("MaximumDoseSchedule",class)
+inherits("MaximumDoseSchedule","DoseSchedule")

@@ -1,0 +1,2 @@
+type("MusicVideoObject",class)
+inherits("MusicVideoObject","MediaObject")

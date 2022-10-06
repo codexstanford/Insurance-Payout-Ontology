@@ -1,0 +1,4 @@
+"MusicAlbumReleaseType"("EPRelease")
+"MusicAlbumReleaseType"("BroadcastRelease")
+"MusicAlbumReleaseType"("SingleRelease")
+"MusicAlbumReleaseType"("AlbumRelease")

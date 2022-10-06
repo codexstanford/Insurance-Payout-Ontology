@@ -1,0 +1,7 @@
+type("WebApplication",class)
+inherits("WebApplication","SoftwareApplication")
+attribute(WebApplication,"WebApplication.browserRequirements")
+type("WebApplication.browserRequirements",attributerelation)
+domain("WebApplication.browserRequirements",WebApplication)
+unique("WebApplication.browserRequirements",yes)
+range("WebApplication.browserRequirements",string)

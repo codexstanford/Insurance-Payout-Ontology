@@ -1,0 +1,2 @@
+type("XPathType",class)
+inherits("XPathType","string")

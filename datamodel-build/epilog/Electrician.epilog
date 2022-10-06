@@ -1,0 +1,2 @@
+type("Electrician",class)
+inherits("Electrician","HomeAndConstructionBusiness")

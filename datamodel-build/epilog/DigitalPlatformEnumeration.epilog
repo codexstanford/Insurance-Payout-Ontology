@@ -1,0 +1,5 @@
+"DigitalPlatformEnumeration"("MobileWebPlatform")
+"DigitalPlatformEnumeration"("AndroidPlatform")
+"DigitalPlatformEnumeration"("GenericWebPlatform")
+"DigitalPlatformEnumeration"("DesktopWebPlatform")
+"DigitalPlatformEnumeration"("IOSPlatform")

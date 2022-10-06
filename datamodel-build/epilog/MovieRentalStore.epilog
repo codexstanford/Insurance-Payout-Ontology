@@ -1,0 +1,2 @@
+type("MovieRentalStore",class)
+inherits("MovieRentalStore","Store")

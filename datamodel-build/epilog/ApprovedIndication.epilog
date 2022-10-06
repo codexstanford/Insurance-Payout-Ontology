@@ -1,0 +1,2 @@
+type("ApprovedIndication",class)
+inherits("ApprovedIndication","MedicalIndication")

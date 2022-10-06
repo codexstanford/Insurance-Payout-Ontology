@@ -1,0 +1,2 @@
+type("RegisterAction",class)
+inherits("RegisterAction","InteractAction")

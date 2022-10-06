@@ -1,0 +1,2 @@
+type("AnimalShelter",class)
+inherits("AnimalShelter","LocalBusiness")

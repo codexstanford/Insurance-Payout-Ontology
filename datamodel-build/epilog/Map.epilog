@@ -1,0 +1,7 @@
+type("Map",class)
+inherits("Map","CreativeWork")
+attribute(Map,"Map.mapType")
+type("Map.mapType",attributerelation)
+domain("Map.mapType",Map)
+unique("Map.mapType",yes)
+range("Map.mapType",MapCategoryType)

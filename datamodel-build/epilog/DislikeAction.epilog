@@ -1,0 +1,2 @@
+type("DislikeAction",class)
+inherits("DislikeAction","ReactAction")

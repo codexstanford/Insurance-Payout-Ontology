@@ -1,0 +1,2 @@
+type("MotorizedBicycle",class)
+inherits("MotorizedBicycle","Vehicle")

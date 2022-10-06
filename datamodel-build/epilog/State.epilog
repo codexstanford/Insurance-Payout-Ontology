@@ -1,0 +1,2 @@
+type("State",class)
+inherits("State","AdministrativeArea")

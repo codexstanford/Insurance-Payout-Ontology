@@ -1,0 +1,2 @@
+type("ResearchOrganization",class)
+inherits("ResearchOrganization","Organization")

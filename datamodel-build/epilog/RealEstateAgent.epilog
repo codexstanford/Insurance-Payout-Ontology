@@ -1,0 +1,2 @@
+type("RealEstateAgent",class)
+inherits("RealEstateAgent","LocalBusiness")

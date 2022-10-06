@@ -1,0 +1,2 @@
+type("RadioSeason",class)
+inherits("RadioSeason","CreativeWorkSeason")

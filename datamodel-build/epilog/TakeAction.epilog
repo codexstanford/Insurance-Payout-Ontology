@@ -1,0 +1,2 @@
+type("TakeAction",class)
+inherits("TakeAction","TransferAction")

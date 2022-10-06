@@ -1,0 +1,2 @@
+type("VideoGameClip",class)
+inherits("VideoGameClip","Clip")

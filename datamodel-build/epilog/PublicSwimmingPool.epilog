@@ -1,0 +1,2 @@
+type("PublicSwimmingPool",class)
+inherits("PublicSwimmingPool","SportsActivityLocation")

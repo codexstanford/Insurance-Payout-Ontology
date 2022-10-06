@@ -1,0 +1,2 @@
+type("UserLikes",class)
+inherits("UserLikes","UserInteraction")

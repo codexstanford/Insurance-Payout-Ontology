@@ -1,0 +1,2 @@
+type("SuspendAction",class)
+inherits("SuspendAction","ControlAction")

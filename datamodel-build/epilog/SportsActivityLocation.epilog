@@ -1,0 +1,2 @@
+type("SportsActivityLocation",class)
+inherits("SportsActivityLocation","LocalBusiness")

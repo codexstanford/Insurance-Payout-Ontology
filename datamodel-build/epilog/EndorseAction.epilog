@@ -1,0 +1,7 @@
+type("EndorseAction",class)
+inherits("EndorseAction","ReactAction")
+attribute(EndorseAction,"EndorseAction.endorsee")
+type("EndorseAction.endorsee",attributerelation)
+domain("EndorseAction.endorsee",EndorseAction)
+unique("EndorseAction.endorsee",yes)
+range("EndorseAction.endorsee",Person,Organization)

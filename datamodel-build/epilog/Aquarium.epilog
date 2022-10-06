@@ -1,0 +1,2 @@
+type("Aquarium",class)
+inherits("Aquarium","CivicStructure")

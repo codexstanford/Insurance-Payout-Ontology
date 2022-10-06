@@ -1,0 +1,2 @@
+type("Project",class)
+inherits("Project","Organization")

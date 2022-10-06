@@ -1,0 +1,2 @@
+type("CheckInAction",class)
+inherits("CheckInAction","CommunicateAction")

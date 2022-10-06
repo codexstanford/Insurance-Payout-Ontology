@@ -1,0 +1,2 @@
+type("LegalService",class)
+inherits("LegalService","LocalBusiness")

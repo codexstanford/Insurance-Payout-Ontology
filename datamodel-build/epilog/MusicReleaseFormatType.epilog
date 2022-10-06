@@ -1,0 +1,7 @@
+"MusicReleaseFormatType"("CDFormat")
+"MusicReleaseFormatType"("DigitalAudioTapeFormat")
+"MusicReleaseFormatType"("DigitalFormat")
+"MusicReleaseFormatType"("LaserDiscFormat")
+"MusicReleaseFormatType"("VinylFormat")
+"MusicReleaseFormatType"("CassetteFormat")
+"MusicReleaseFormatType"("DVDFormat")

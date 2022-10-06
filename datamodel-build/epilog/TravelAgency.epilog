@@ -1,0 +1,2 @@
+type("TravelAgency",class)
+inherits("TravelAgency","LocalBusiness")

@@ -1,0 +1,2 @@
+type("CampingPitch",class)
+inherits("CampingPitch","Accommodation")

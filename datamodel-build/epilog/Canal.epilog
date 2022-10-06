@@ -1,0 +1,2 @@
+type("Canal",class)
+inherits("Canal","BodyOfWater")

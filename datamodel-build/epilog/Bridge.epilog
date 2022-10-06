@@ -1,0 +1,2 @@
+type("Bridge",class)
+inherits("Bridge","CivicStructure")

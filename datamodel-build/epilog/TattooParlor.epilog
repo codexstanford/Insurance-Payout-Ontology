@@ -1,0 +1,2 @@
+type("TattooParlor",class)
+inherits("TattooParlor","HealthAndBeautyBusiness")

@@ -1,0 +1,2 @@
+type("URL",class)
+inherits("URL","string")

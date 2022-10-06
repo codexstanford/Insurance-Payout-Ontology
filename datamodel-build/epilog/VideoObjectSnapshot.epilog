@@ -1,0 +1,2 @@
+type("VideoObjectSnapshot",class)
+inherits("VideoObjectSnapshot","VideoObject")

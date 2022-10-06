@@ -1,0 +1,3 @@
+type("DepositAccount",class)
+inherits("DepositAccount","InvestmentOrDeposit")
+inherits("DepositAccount","BankAccount")

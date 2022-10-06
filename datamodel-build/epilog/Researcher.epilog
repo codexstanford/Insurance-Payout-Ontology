@@ -1,0 +1,2 @@
+type("Researcher",class)
+inherits("Researcher","Audience")

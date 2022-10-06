@@ -1,0 +1,3 @@
+type("AmpStory",class)
+inherits("AmpStory","CreativeWork")
+inherits("AmpStory","MediaObject")

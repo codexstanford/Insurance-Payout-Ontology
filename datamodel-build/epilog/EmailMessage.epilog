@@ -1,0 +1,2 @@
+type("EmailMessage",class)
+inherits("EmailMessage","Message")

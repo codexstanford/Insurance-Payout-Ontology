@@ -1,0 +1,2 @@
+type("Integer",class)
+inherits("Integer","number")

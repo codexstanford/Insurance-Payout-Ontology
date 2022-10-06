@@ -1,0 +1,2 @@
+type("AboutPage",class)
+inherits("AboutPage","WebPage")

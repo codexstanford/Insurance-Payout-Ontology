@@ -1,0 +1,2 @@
+type("LandmarksOrHistoricalBuildings",class)
+inherits("LandmarksOrHistoricalBuildings","Place")

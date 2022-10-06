@@ -1,0 +1,3 @@
+type("SkiResort",class)
+inherits("SkiResort","SportsActivityLocation")
+inherits("SkiResort","Resort")

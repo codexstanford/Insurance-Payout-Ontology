@@ -1,0 +1,2 @@
+type("ReadAction",class)
+inherits("ReadAction","ConsumeAction")

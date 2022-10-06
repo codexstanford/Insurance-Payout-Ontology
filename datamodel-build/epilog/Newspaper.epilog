@@ -1,0 +1,2 @@
+type("Newspaper",class)
+inherits("Newspaper","Periodical")

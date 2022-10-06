@@ -1,0 +1,7 @@
+type("DataDownload",class)
+inherits("DataDownload","MediaObject")
+attribute(DataDownload,"DataDownload.measurementTechnique")
+type("DataDownload.measurementTechnique",attributerelation)
+domain("DataDownload.measurementTechnique",DataDownload)
+unique("DataDownload.measurementTechnique",yes)
+range("DataDownload.measurementTechnique",string,string)

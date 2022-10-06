@@ -1,0 +1,5 @@
+"PaymentStatusType"("PaymentDue")
+"PaymentStatusType"("PaymentDeclined")
+"PaymentStatusType"("PaymentAutomaticallyApplied")
+"PaymentStatusType"("PaymentComplete")
+"PaymentStatusType"("PaymentPastDue")

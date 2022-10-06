@@ -1,0 +1,7 @@
+type("TipAction",class)
+inherits("TipAction","TradeAction")
+attribute(TipAction,"TipAction.recipient")
+type("TipAction.recipient",attributerelation)
+domain("TipAction.recipient",TipAction)
+unique("TipAction.recipient",yes)
+range("TipAction.recipient",Person,Audience,ContactPoint,Organization)

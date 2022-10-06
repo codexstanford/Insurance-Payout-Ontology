@@ -1,0 +1,2 @@
+type("AdministrativeArea",class)
+inherits("AdministrativeArea","Place")

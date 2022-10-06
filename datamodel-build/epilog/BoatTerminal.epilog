@@ -1,0 +1,2 @@
+type("BoatTerminal",class)
+inherits("BoatTerminal","CivicStructure")

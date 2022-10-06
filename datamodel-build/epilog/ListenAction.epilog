@@ -1,0 +1,2 @@
+type("ListenAction",class)
+inherits("ListenAction","ConsumeAction")

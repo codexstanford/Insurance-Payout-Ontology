@@ -1,0 +1,2 @@
+type("OfferCatalog",class)
+inherits("OfferCatalog","ItemList")

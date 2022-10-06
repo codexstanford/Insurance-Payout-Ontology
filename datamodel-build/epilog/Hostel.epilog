@@ -1,0 +1,2 @@
+type("Hostel",class)
+inherits("Hostel","LodgingBusiness")

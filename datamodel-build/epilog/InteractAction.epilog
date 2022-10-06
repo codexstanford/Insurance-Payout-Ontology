@@ -1,0 +1,2 @@
+type("InteractAction",class)
+inherits("InteractAction","Action")

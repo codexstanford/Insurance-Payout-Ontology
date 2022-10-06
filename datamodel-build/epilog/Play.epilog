@@ -1,0 +1,2 @@
+type("Play",class)
+inherits("Play","CreativeWork")

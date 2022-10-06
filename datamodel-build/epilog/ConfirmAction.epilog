@@ -1,0 +1,2 @@
+type("ConfirmAction",class)
+inherits("ConfirmAction","InformAction")

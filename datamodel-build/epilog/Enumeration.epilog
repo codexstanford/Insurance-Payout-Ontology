@@ -1,0 +1,7 @@
+type("Enumeration",class)
+inherits("Enumeration","Intangible")
+attribute(Enumeration,"Enumeration.supersededBy")
+type("Enumeration.supersededBy",attributerelation)
+domain("Enumeration.supersededBy",Enumeration)
+unique("Enumeration.supersededBy",yes)
+range("Enumeration.supersededBy",Enumeration,Class,Property)

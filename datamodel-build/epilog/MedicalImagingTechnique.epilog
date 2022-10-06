@@ -1,0 +1,5 @@
+"MedicalImagingTechnique"("XRay")
+"MedicalImagingTechnique"("PET")
+"MedicalImagingTechnique"("MRI")
+"MedicalImagingTechnique"("Ultrasound")
+"MedicalImagingTechnique"("CT")

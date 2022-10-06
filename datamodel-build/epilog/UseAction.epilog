@@ -1,0 +1,2 @@
+type("UseAction",class)
+inherits("UseAction","ConsumeAction")

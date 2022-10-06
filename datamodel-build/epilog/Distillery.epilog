@@ -1,0 +1,2 @@
+type("Distillery",class)
+inherits("Distillery","FoodEstablishment")

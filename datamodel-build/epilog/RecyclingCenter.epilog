@@ -1,0 +1,2 @@
+type("RecyclingCenter",class)
+inherits("RecyclingCenter","LocalBusiness")

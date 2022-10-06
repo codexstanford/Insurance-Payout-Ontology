@@ -1,0 +1,4 @@
+"MapCategoryType"("SeatingMap")
+"MapCategoryType"("VenueMap")
+"MapCategoryType"("ParkingMap")
+"MapCategoryType"("TransitMap")

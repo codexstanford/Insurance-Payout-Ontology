@@ -1,0 +1,2 @@
+type("WantAction",class)
+inherits("WantAction","ReactAction")

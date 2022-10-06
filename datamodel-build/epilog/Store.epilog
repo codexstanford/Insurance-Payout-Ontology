@@ -1,0 +1,2 @@
+type("Store",class)
+inherits("Store","LocalBusiness")

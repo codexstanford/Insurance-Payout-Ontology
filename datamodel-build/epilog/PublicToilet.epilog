@@ -1,0 +1,2 @@
+type("PublicToilet",class)
+inherits("PublicToilet","CivicStructure")

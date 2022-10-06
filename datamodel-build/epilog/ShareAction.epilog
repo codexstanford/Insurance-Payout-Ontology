@@ -1,0 +1,2 @@
+type("ShareAction",class)
+inherits("ShareAction","CommunicateAction")

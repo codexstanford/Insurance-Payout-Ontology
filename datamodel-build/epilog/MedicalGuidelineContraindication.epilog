@@ -1,0 +1,2 @@
+type("MedicalGuidelineContraindication",class)
+inherits("MedicalGuidelineContraindication","MedicalGuideline")

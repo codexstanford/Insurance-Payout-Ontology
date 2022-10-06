@@ -1,0 +1,2 @@
+type("GatedResidenceCommunity",class)
+inherits("GatedResidenceCommunity","Residence")

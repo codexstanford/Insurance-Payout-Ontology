@@ -1,0 +1,7 @@
+type("InviteAction",class)
+inherits("InviteAction","CommunicateAction")
+attribute(InviteAction,"InviteAction.event")
+type("InviteAction.event",attributerelation)
+domain("InviteAction.event",InviteAction)
+unique("InviteAction.event",yes)
+range("InviteAction.event",Event)

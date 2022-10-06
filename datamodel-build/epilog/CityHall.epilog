@@ -1,0 +1,2 @@
+type("CityHall",class)
+inherits("CityHall","GovernmentBuilding")

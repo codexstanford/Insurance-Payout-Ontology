@@ -1,0 +1,2 @@
+type("BloodTest",class)
+inherits("BloodTest","MedicalTest")

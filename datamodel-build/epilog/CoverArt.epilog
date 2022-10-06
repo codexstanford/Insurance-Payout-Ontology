@@ -1,0 +1,2 @@
+type("CoverArt",class)
+inherits("CoverArt","VisualArtwork")

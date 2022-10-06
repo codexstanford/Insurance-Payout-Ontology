@@ -1,0 +1,2 @@
+type("BefriendAction",class)
+inherits("BefriendAction","InteractAction")

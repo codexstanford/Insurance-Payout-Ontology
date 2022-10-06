@@ -1,0 +1,7 @@
+type("MonetaryAmountDistribution",class)
+inherits("MonetaryAmountDistribution","QuantitativeValueDistribution")
+attribute(MonetaryAmountDistribution,"MonetaryAmountDistribution.currency")
+type("MonetaryAmountDistribution.currency",attributerelation)
+domain("MonetaryAmountDistribution.currency",MonetaryAmountDistribution)
+unique("MonetaryAmountDistribution.currency",yes)
+range("MonetaryAmountDistribution.currency",string)

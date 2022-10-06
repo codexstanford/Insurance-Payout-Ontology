@@ -1,0 +1,4 @@
+type("Dentist",class)
+inherits("Dentist","MedicalOrganization")
+inherits("Dentist","MedicalBusiness")
+inherits("Dentist","LocalBusiness")

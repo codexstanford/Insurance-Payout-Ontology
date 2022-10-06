@@ -1,0 +1,7 @@
+"MultiplierTimeEnum"("perMinutes")
+"MultiplierTimeEnum"("perHour")
+"MultiplierTimeEnum"("perDay")
+"MultiplierTimeEnum"("perMonth")
+"MultiplierTimeEnum"("perCalendarMonth")
+"MultiplierTimeEnum"("perYear")
+"MultiplierTimeEnum"("perPeriodOfInsurance")

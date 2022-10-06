@@ -1,0 +1,2 @@
+type("SelfStorage",class)
+inherits("SelfStorage","LocalBusiness")

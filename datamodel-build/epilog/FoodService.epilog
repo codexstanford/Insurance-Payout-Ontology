@@ -1,0 +1,2 @@
+type("FoodService",class)
+inherits("FoodService","Service")

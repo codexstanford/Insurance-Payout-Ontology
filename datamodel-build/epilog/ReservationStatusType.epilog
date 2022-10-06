@@ -1,0 +1,4 @@
+"ReservationStatusType"("ReservationPending")
+"ReservationStatusType"("ReservationConfirmed")
+"ReservationStatusType"("ReservationCancelled")
+"ReservationStatusType"("ReservationHold")

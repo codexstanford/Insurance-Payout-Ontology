@@ -1,0 +1,2 @@
+type("DepartAction",class)
+inherits("DepartAction","MoveAction")

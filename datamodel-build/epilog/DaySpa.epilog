@@ -1,0 +1,2 @@
+type("DaySpa",class)
+inherits("DaySpa","HealthAndBeautyBusiness")

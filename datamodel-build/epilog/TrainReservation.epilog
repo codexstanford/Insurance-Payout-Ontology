@@ -1,0 +1,2 @@
+type("TrainReservation",class)
+inherits("TrainReservation","Reservation")

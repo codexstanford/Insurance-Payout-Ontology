@@ -1,0 +1,2 @@
+type("EmploymentAgency",class)
+inherits("EmploymentAgency","LocalBusiness")

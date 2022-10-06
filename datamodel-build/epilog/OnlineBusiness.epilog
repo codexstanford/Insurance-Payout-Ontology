@@ -1,0 +1,2 @@
+type("OnlineBusiness",class)
+inherits("OnlineBusiness","Organization")

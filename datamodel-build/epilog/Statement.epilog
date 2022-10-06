@@ -1,0 +1,2 @@
+type("Statement",class)
+inherits("Statement","CreativeWork")

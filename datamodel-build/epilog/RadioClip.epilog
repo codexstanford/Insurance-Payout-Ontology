@@ -1,0 +1,2 @@
+type("RadioClip",class)
+inherits("RadioClip","Clip")

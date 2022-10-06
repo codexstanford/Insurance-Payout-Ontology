@@ -1,0 +1,2 @@
+type("Poster",class)
+inherits("Poster","CreativeWork")

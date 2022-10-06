@@ -1,0 +1,2 @@
+type("NightClub",class)
+inherits("NightClub","EntertainmentBusiness")

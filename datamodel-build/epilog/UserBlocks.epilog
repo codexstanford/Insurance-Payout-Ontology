@@ -1,0 +1,2 @@
+type("UserBlocks",class)
+inherits("UserBlocks","UserInteraction")

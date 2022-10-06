@@ -1,0 +1,2 @@
+type("SeaBodyOfWater",class)
+inherits("SeaBodyOfWater","BodyOfWater")

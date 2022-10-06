@@ -1,0 +1,3 @@
+type("CreditCard",class)
+inherits("CreditCard","PaymentCard")
+inherits("CreditCard","LoanOrCredit")

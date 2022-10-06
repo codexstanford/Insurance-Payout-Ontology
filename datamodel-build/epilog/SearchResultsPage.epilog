@@ -1,0 +1,2 @@
+type("SearchResultsPage",class)
+inherits("SearchResultsPage","WebPage")

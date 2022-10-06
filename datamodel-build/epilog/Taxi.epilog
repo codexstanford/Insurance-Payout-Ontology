@@ -1,0 +1,2 @@
+type("Taxi",class)
+inherits("Taxi","Service")

@@ -1,0 +1,7 @@
+type("OrganizationRole",class)
+inherits("OrganizationRole","Role")
+attribute(OrganizationRole,"OrganizationRole.numberedPosition")
+type("OrganizationRole.numberedPosition",attributerelation)
+domain("OrganizationRole.numberedPosition",OrganizationRole)
+unique("OrganizationRole.numberedPosition",yes)
+range("OrganizationRole.numberedPosition",number)

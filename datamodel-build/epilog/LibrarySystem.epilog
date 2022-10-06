@@ -1,0 +1,2 @@
+type("LibrarySystem",class)
+inherits("LibrarySystem","Organization")

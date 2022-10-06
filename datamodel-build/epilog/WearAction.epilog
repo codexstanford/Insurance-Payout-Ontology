@@ -1,0 +1,2 @@
+type("WearAction",class)
+inherits("WearAction","UseAction")

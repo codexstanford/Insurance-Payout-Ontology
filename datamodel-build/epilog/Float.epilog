@@ -1,0 +1,2 @@
+type("Float",class)
+inherits("Float","number")
