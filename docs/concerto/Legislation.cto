@@ -7,7 +7,6 @@ import org.codex.insurance.core.string,AdministrativeArea from https://codexstan
 import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
 import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
 import org.codex.insurance.core.AdministrativeArea,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea,string.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.Person,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Organization.cto
 
 
@@ -20,9 +19,9 @@ concept Legislation extends CreativeWork {
   o Legislation legislationChanges
   o Organization,Person legislationResponsible
   o AdministrativeArea,string legislationJurisdiction
-  o date legislationDate
+  o DateTime legislationDate
   o Person,Organization legislationPassedBy
   o Legislation legislationConsolidates
   o Legislation legislationApplies
-  o date legislationDateVersion
+  o DateTime legislationDateVersion
 }

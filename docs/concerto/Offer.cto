@@ -4,7 +4,6 @@ import org.codex.insurance.core.AdultOrientedEnumeration from https://codexstanf
 import org.codex.insurance.core.Review from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Review.cto
 import org.codex.insurance.core.Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service.cto
 import org.codex.insurance.core.string,string,PhysicalActivityCategory,Thing,CategoryCode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,PhysicalActivityCategory,Thing,CategoryCode.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.OfferShippingDetails from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/OfferShippingDetails.cto
 import org.codex.insurance.core.TypeAndQuantityNode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/TypeAndQuantityNode.cto
 import org.codex.insurance.core.BusinessFunction from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BusinessFunction.cto
@@ -38,7 +37,7 @@ concept Offer extends Intangible {
   o Review review
   o Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service itemOffered
   o string,string,PhysicalActivityCategory,Thing,CategoryCode category
-  o date priceValidUntil
+  o DateTime priceValidUntil
   o OfferShippingDetails shippingDetails
   o String mpn
   o TypeAndQuantityNode includesObject

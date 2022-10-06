@@ -1,6 +1,5 @@
 namespace undefined
 
-import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
 import org.codex.insurance.core.PriceSpecification,number,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PriceSpecification,number,string.cto
 import org.codex.insurance.core.Ticket from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Ticket.cto
 import org.codex.insurance.core.ReservationStatusType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ReservationStatusType.cto
@@ -11,13 +10,13 @@ import org.codex.insurance.core.Thing from https://codexstanford.github.io/Insur
 
 
 concept Reservation extends Intangible {
-  o dateTime modifiedTime
+  o DateTime modifiedTime
   o PriceSpecification,number,string totalPrice
   o Ticket reservedTicket
   o ReservationStatusType reservationStatus
   o Organization,Person provider
   o Person,Organization broker
-  o dateTime bookingTime
+  o DateTime bookingTime
   o ProgramMembership programMembershipUsed
   o Person,Organization bookingAgent
   o String priceCurrency

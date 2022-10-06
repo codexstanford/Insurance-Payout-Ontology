@@ -2,12 +2,11 @@ namespace undefined
 
 import org.codex.insurance.core.MedicalEvidenceLevel from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalEvidenceLevel.cto
 import org.codex.insurance.core.MedicalEntity from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalEntity.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 
 
 concept MedicalGuideline extends MedicalEntity {
   o MedicalEvidenceLevel evidenceLevel
   o String evidenceOrigin
   o MedicalEntity guidelineSubject
-  o date guidelineDate
+  o DateTime guidelineDate
 }

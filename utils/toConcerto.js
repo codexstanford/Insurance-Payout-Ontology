@@ -99,7 +99,10 @@ function renderObject(name, data) {
   let systemType = {
     boolean : "Boolean",
     string: "String",
-    number: "Double"
+    number: "Double",
+    date: "DateTime",
+    dateTime: "DateTime",
+    time: "DateTime"
   }
 
   if (data.properties) {
@@ -120,9 +123,15 @@ function renderObject(name, data) {
       }
       else {
         let typeName = property.type;
+        if (typeName.indexOf(",") != -1) {
+          // for now only first type
+          typeName = typeName.split(",").shift().trim();
+          console.log("rework", typeName)
+        } 
         if (systemType[typeName]) {
           typeName = systemType[typeName];
         }
+
         output += `
   o ${typeName} ${propertyName}`;
       typeList[property.type] = true;

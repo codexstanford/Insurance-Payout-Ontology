@@ -1,11 +1,10 @@
 namespace undefined
 
-import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
 import org.codex.insurance.core.BlogPosting from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BlogPosting.cto
 
 
 concept LiveBlogPosting extends BlogPosting {
-  o dateTime coverageEndTime
-  o dateTime coverageStartTime
+  o DateTime coverageEndTime
+  o DateTime coverageStartTime
   o BlogPosting liveBlogUpdate
 }

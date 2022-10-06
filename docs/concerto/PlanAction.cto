@@ -1,8 +1,7 @@
 namespace undefined
 
-import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
 
 
 concept PlanAction extends OrganizeAction {
-  o dateTime scheduledTime
+  o DateTime scheduledTime
 }

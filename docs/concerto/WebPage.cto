@@ -1,6 +1,5 @@
 namespace undefined
 
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.Specialty from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Specialty.cto
 import org.codex.insurance.core.ImageObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ImageObject.cto
 import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
@@ -10,7 +9,7 @@ import org.codex.insurance.core.BreadcrumbList,string from https://codexstanford
 
 
 concept WebPage extends CreativeWork {
-  o date lastReviewed
+  o DateTime lastReviewed
   o Specialty specialty
   o ImageObject primaryImageOfPage
   o String significantLink

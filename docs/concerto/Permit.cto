@@ -2,7 +2,6 @@ namespace undefined
 
 import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
 import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
 import org.codex.insurance.core.Service from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Service.cto
 import org.codex.insurance.core.AdministrativeArea from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AdministrativeArea.cto
@@ -12,7 +11,7 @@ import org.codex.insurance.core.Audience from https://codexstanford.github.io/In
 concept Permit extends Intangible {
   o Duration validFor
   o Organization issuedBy
-  o date validUntil
+  o DateTime validUntil
   o dateTime,date validFrom
   o Service issuedThrough
   o AdministrativeArea validIn

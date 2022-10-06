@@ -6,7 +6,6 @@ import org.codex.insurance.core.Person from https://codexstanford.github.io/Insu
 import org.codex.insurance.core.Review from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Review.cto
 import org.codex.insurance.core.string,string,Thing from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,Thing.cto
 import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.Grant from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Grant.cto
 import org.codex.insurance.core.DefinedTerm,string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedTerm,string,string.cto
 import org.codex.insurance.core.ContactPoint from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ContactPoint.cto
@@ -46,7 +45,7 @@ concept Organization extends Thing {
   o String award
   o Organization,Person member
   o Person employee
-  o date dissolutionDate
+  o DateTime dissolutionDate
   o Grant funding
   o String vatID
   o String globalLocationNumber
@@ -90,7 +89,7 @@ concept Organization extends Thing {
   o Person alumni
   o String leiCode
   o AdministrativeArea,GeoShape,string,Place areaServed
-  o date foundingDate
+  o DateTime foundingDate
   o Language,string knowsLanguage
   o Review reviews
   o Demand seeks

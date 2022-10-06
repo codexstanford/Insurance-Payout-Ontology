@@ -1288,8 +1288,8 @@ concept CreativeWork extends Thing {
   o string,DefinedTerm,string educationalLevel
   o String abstract
   o string,DefinedTerm creativeWorkStatus
-  o date expires
-  o dateTime contentReferenceTime
+  o DateTime expires
+  o DateTime contentReferenceTime
   o string,string,Product material
   o Review review
   o string,string fileFormat
@@ -1318,7 +1318,7 @@ concept CreativeWork extends Thing {
   o Organization,Person copyrightHolder
   o String awards
   o Place contentLocation
-  o date sdDatePublished
+  o DateTime sdDatePublished
   o Organization,Person producer
   o Place spatial
   o Person,Organization publisher
@@ -1472,7 +1472,7 @@ concept Dataset extends CreativeWork {
   o DataCatalog includedDataCatalog
   o PropertyValue,string variableMeasured
   o string,string measurementTechnique
-  o dateTime datasetTimeInterval
+  o DateTime datasetTimeInterval
   o DataDownload distribution
   o String issn
   o DataCatalog includedInDataCatalog
@@ -1534,9 +1534,9 @@ concept DeliveryChargeSpecification extends PriceSpecification {
 
 concept DeliveryEvent extends Event {
   o String accessCode
-  o dateTime availableThrough
+  o DateTime availableThrough
   o DeliveryMethod hasDeliveryMethod
-  o dateTime availableFrom
+  o DateTime availableFrom
 }
 
 enum DeliveryMethod {
@@ -1829,7 +1829,7 @@ concept EducationalOccupationalProgram extends Intangible {
   o DayOfWeek dayOfWeek
   o Offer,Demand offers
   o number,StructuredValue typicalCreditsPerTerm
-  o date applicationStartDate
+  o DateTime applicationStartDate
   o String timeOfDay
   o date,dateTime endDate
   o Organization,Person provider
@@ -1843,7 +1843,7 @@ concept EducationalOccupationalProgram extends Intangible {
   o string,DefinedTerm programType
   o Double maximumEnrollment
   o string,DefinedTerm financialAidEligible
-  o date applicationDeadline
+  o DateTime applicationDeadline
   o CategoryCode,string occupationalCategory
 }
 
@@ -1972,7 +1972,7 @@ concept Event extends Thing {
   o Duration duration
   o Person,Organization organizer
   o Organization,Person sponsor
-  o date previousStartDate
+  o DateTime previousStartDate
   o Boolean isAccessibleForFree
   o Double remainingAttendeeCapacity
   o Event subEvents
@@ -2084,7 +2084,7 @@ concept FireStation extendsFireStationFireStation {
 
 concept Flight extends Trip {
   o Distance,string flightDistance
-  o dateTime webCheckinTime
+  o DateTime webCheckinTime
   o Vehicle,string aircraft
   o Organization,Person seller
   o Airport arrivalAirport
@@ -2578,7 +2578,7 @@ concept Invoice extends Intangible {
   o Order referencesOrder
   o String accountId
   o string,string,PhysicalActivityCategory,Thing,CategoryCode category
-  o date scheduledPaymentDate
+  o DateTime scheduledPaymentDate
   o String confirmationNumber
   o Organization,Person customer
   o Organization,Person provider
@@ -2587,7 +2587,7 @@ concept Invoice extends Intangible {
   o Person,Organization broker
   o PaymentStatusType,string paymentStatus
   o String paymentMethodId
-  o dateTime paymentDue
+  o DateTime paymentDue
   o PaymentMethod paymentMethod
 }
 
@@ -2723,11 +2723,11 @@ concept Legislation extends CreativeWork {
   o Legislation legislationChanges
   o Organization,Person legislationResponsible
   o AdministrativeArea,string legislationJurisdiction
-  o date legislationDate
+  o DateTime legislationDate
   o Person,Organization legislationPassedBy
   o Legislation legislationConsolidates
   o Legislation legislationApplies
-  o date legislationDateVersion
+  o DateTime legislationDateVersion
 }
 
 concept LegislationObject extendsLegislationObjectLegislationObject {
@@ -2778,8 +2778,8 @@ concept LiteraryEvent extends Event {
 }
 
 concept LiveBlogPosting extends BlogPosting {
-  o dateTime coverageEndTime
-  o dateTime coverageStartTime
+  o DateTime coverageEndTime
+  o DateTime coverageStartTime
   o BlogPosting liveBlogUpdate
 }
 
@@ -2898,7 +2898,7 @@ concept MediaObject extends CreativeWork {
   o CreativeWork encodesCreativeWork
   o Duration duration
   o string,string encodingFormat
-  o date uploadDate
+  o DateTime uploadDate
   o String embedUrl
   o String bitrate
   o dateTime,time endTime
@@ -3012,7 +3012,7 @@ concept MedicalGuideline extends MedicalEntity {
   o MedicalEvidenceLevel evidenceLevel
   o String evidenceOrigin
   o MedicalEntity guidelineSubject
-  o date guidelineDate
+  o DateTime guidelineDate
 }
 
 concept MedicalGuidelineContraindication extends MedicalGuideline {
@@ -3278,11 +3278,11 @@ concept MerchantReturnPolicySeasonalOverride extends Intangible {
 concept Message extends CreativeWork {
   o Person,ContactPoint,Organization bccRecipient
   o Person,Audience,ContactPoint,Organization recipient
-  o dateTime dateReceived
+  o DateTime dateReceived
   o Person,Organization,ContactPoint ccRecipient
   o CreativeWork messageAttachment
   o ContactPoint,Person,Audience,Organization toRecipient
-  o dateTime dateSent
+  o DateTime dateSent
   o date,dateTime dateRead
   o Person,Audience,Organization sender
 }
@@ -3579,7 +3579,7 @@ concept Observation extends Intangible {
   o DataType measuredValue
   o StatisticalPopulation observedNode
   o Property measuredProperty
-  o dateTime observationDate
+  o DateTime observationDate
   o QuantitativeValue marginOfError
 }
 
@@ -3610,7 +3610,7 @@ concept Offer extends Intangible {
   o Review review
   o Trip,Event,Product,AggregateOffer,CreativeWork,MenuItem,Service itemOffered
   o string,string,PhysicalActivityCategory,Thing,CategoryCode category
-  o date priceValidUntil
+  o DateTime priceValidUntil
   o OfferShippingDetails shippingDetails
   o String mpn
   o TypeAndQuantityNode includesObject
@@ -3694,10 +3694,10 @@ concept OnlineStore extends OnlineBusiness {
 }
 
 concept OpeningHoursSpecification extends StructuredValue {
-  o time closes
+  o DateTime closes
   o DayOfWeek dayOfWeek
   o dateTime,date validFrom
-  o time opens
+  o DateTime opens
   o dateTime,date validThrough
 }
 
@@ -3725,7 +3725,7 @@ concept Order extends Intangible {
   o String paymentMethodId
   o String paymentUrl
   o String discountCurrency
-  o dateTime paymentDue
+  o DateTime paymentDue
   o date,dateTime orderDate
   o Boolean isGift
   o Service,OrderItem,Product orderedItem
@@ -3765,7 +3765,7 @@ concept Organization extends Thing {
   o String award
   o Organization,Person member
   o Person employee
-  o date dissolutionDate
+  o DateTime dissolutionDate
   o Grant funding
   o String vatID
   o String globalLocationNumber
@@ -3809,7 +3809,7 @@ concept Organization extends Thing {
   o Person alumni
   o String leiCode
   o AdministrativeArea,GeoShape,string,Place areaServed
-  o date foundingDate
+  o DateTime foundingDate
   o Language,string knowsLanguage
   o Review reviews
   o Demand seeks
@@ -3835,10 +3835,10 @@ concept OutletStore extends Store {
 }
 
 concept OwnershipInfo extends StructuredValue {
-  o dateTime ownedFrom
+  o DateTime ownedFrom
   o Product,Service typeOfGood
   o Organization,Person acquiredFrom
-  o dateTime ownedThrough
+  o DateTime ownedThrough
 }
 
 concept PaintAction extends CreateAction {
@@ -3951,7 +3951,7 @@ concept Periodical extends CreativeWorkSeries {
 concept Permit extends Intangible {
   o Duration validFor
   o Organization issuedBy
-  o date validUntil
+  o DateTime validUntil
   o dateTime,date validFrom
   o Service issuedThrough
   o AdministrativeArea validIn
@@ -3986,7 +3986,7 @@ concept Person extends Thing {
   o String awards
   o Person sibling
   o string,DefinedTerm jobTitle
-  o date birthDate
+  o DateTime birthDate
   o Organization,Person funder
   o Offer makesOffer
   o Person children
@@ -3997,7 +3997,7 @@ concept Person extends Thing {
   o ProgramMembership,Organization memberOf
   o string,CreativeWork publishingPrinciples
   o Person colleagues
-  o date deathDate
+  o DateTime deathDate
   o String email
   o Organization affiliation
   o Person siblings
@@ -4131,7 +4131,7 @@ concept PlaceOfWorship extends CivicStructure {
 }
 
 concept PlanAction extends OrganizeAction {
-  o dateTime scheduledTime
+  o DateTime scheduledTime
 }
 
 concept Play extends CreativeWork {
@@ -4250,11 +4250,11 @@ concept Product extends Thing {
   o String mpn
   o Distance,QuantitativeValue height
   o DefinedTerm,string,string keywords
-  o date purchaseDate
+  o DateTime purchaseDate
   o EnergyConsumptionDetails hasEnergyConsumptionDetails
   o Audience audience
   o Offer,Demand offers
-  o date productionDate
+  o DateTime productionDate
   o OfferItemCondition itemCondition
   o String awards
   o String gtin
@@ -4277,7 +4277,7 @@ concept Product extends Thing {
   o String inProductGroupWithID
   o ProductModel,string model
   o MerchantReturnPolicy hasMerchantReturnPolicy
-  o date releaseDate
+  o DateTime releaseDate
   o String gtin14
   o QuantitativeValue weight
   o QuantitativeValue,DefinedTerm,string,SizeSpecification size
@@ -4558,8 +4558,8 @@ concept RentAction extends TradeAction {
 
 concept RentalCarReservation extends Reservation {
   o Place dropoffLocation
-  o dateTime dropoffTime
-  o dateTime pickupTime
+  o DateTime dropoffTime
+  o DateTime pickupTime
   o Place pickupLocation
 }
 
@@ -4600,13 +4600,13 @@ concept Researcher extends Audience {
 }
 
 concept Reservation extends Intangible {
-  o dateTime modifiedTime
+  o DateTime modifiedTime
   o PriceSpecification,number,string totalPrice
   o Ticket reservedTicket
   o ReservationStatusType reservationStatus
   o Organization,Person provider
   o Person,Organization broker
-  o dateTime bookingTime
+  o DateTime bookingTime
   o ProgramMembership programMembershipUsed
   o Person,Organization bookingAgent
   o String priceCurrency
@@ -4864,7 +4864,7 @@ concept ShippingDeliveryTime extends StructuredValue {
   o QuantitativeValue transitTime
   o OpeningHoursSpecification businessDays
   o QuantitativeValue handlingTime
-  o time cutoffTime
+  o DateTime cutoffTime
 }
 
 concept ShippingRateSettings extends StructuredValue {
@@ -5129,7 +5129,7 @@ concept Taxi extends Service {
 
 concept TaxiReservation extends Reservation {
   o number,QuantitativeValue partySize
-  o dateTime pickupTime
+  o DateTime pickupTime
   o Place pickupLocation
 }
 
@@ -5409,10 +5409,10 @@ concept Vehicle extends Product {
   o QuantitativeValue trailerWeight
   o EngineSpecification vehicleEngine
   o Double emissionsCO2
-  o date purchaseDate
+  o DateTime purchaseDate
   o QuantitativeValue,number numberOfForwardGears
   o QuantitativeValue weightTotal
-  o date productionDate
+  o DateTime productionDate
   o number,QuantitativeValue numberOfPreviousOwners
   o SteeringPositionValue steeringPosition
   o QuantitativeValue wheelbase
@@ -5427,18 +5427,18 @@ concept Vehicle extends Product {
   o QuantitativeValue fuelConsumption
   o String vehicleInteriorColor
   o number,QuantitativeValue numberOfAxles
-  o date modelDate
+  o DateTime modelDate
   o QuantitativeValue,number numberOfDoors
   o QuantitativeValue,number vehicleSeatingCapacity
   o String callSign
   o QuantitativeValue tongueWeight
   o QuantitativeValue fuelEfficiency
-  o date vehicleModelDate
+  o DateTime vehicleModelDate
   o String vehicleConfiguration
   o QuantitativeValue mileageFromOdometer
   o QuantitativeValue,number seatingCapacity
   o QualitativeValue,string,string bodyType
-  o date dateVehicleFirstRegistered
+  o DateTime dateVehicleFirstRegistered
   o String vehicleIdentificationNumber
   o string,string,QualitativeValue meetsEmissionStandard
   o CarUsageType,string vehicleSpecialUsage
@@ -5650,7 +5650,7 @@ concept WebContent extends CreativeWork {
 }
 
 concept WebPage extends CreativeWork {
-  o date lastReviewed
+  o DateTime lastReviewed
   o Specialty specialty
   o ImageObject primaryImageOfPage
   o String significantLink

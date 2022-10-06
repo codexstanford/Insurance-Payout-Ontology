@@ -10,7 +10,6 @@ import org.codex.insurance.core.MediaSubscription,boolean from https://codexstan
 import org.codex.insurance.core.CreativeWork from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWork.cto
 import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
 import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
 import org.codex.insurance.core.Claim from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Claim.cto
 
@@ -29,7 +28,7 @@ concept MediaObject extends CreativeWork {
   o CreativeWork encodesCreativeWork
   o Duration duration
   o string,string encodingFormat
-  o date uploadDate
+  o DateTime uploadDate
   o String embedUrl
   o String bitrate
   o dateTime,time endTime

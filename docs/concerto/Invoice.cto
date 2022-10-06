@@ -4,12 +4,10 @@ import org.codex.insurance.core.MonetaryAmount,PriceSpecification from https://c
 import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
 import org.codex.insurance.core.Order from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Order.cto
 import org.codex.insurance.core.string,string,PhysicalActivityCategory,Thing,CategoryCode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,PhysicalActivityCategory,Thing,CategoryCode.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
 import org.codex.insurance.core.dateTime,date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime,date.cto
 import org.codex.insurance.core.Person,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Organization.cto
 import org.codex.insurance.core.PaymentStatusType,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PaymentStatusType,string.cto
-import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
 import org.codex.insurance.core.PaymentMethod from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PaymentMethod.cto
 
 
@@ -19,7 +17,7 @@ concept Invoice extends Intangible {
   o Order referencesOrder
   o String accountId
   o string,string,PhysicalActivityCategory,Thing,CategoryCode category
-  o date scheduledPaymentDate
+  o DateTime scheduledPaymentDate
   o String confirmationNumber
   o Organization,Person customer
   o Organization,Person provider
@@ -28,6 +26,6 @@ concept Invoice extends Intangible {
   o Person,Organization broker
   o PaymentStatusType,string paymentStatus
   o String paymentMethodId
-  o dateTime paymentDue
+  o DateTime paymentDue
   o PaymentMethod paymentMethod
 }

@@ -1,7 +1,6 @@
 namespace undefined
 
 import org.codex.insurance.core.Distance,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Distance,string.cto
-import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
 import org.codex.insurance.core.Vehicle,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Vehicle,string.cto
 import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
 import org.codex.insurance.core.Airport from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Airport.cto
@@ -12,7 +11,7 @@ import org.codex.insurance.core.BoardingPolicyType from https://codexstanford.gi
 
 concept Flight extends Trip {
   o Distance,string flightDistance
-  o dateTime webCheckinTime
+  o DateTime webCheckinTime
   o Vehicle,string aircraft
   o Organization,Person seller
   o Airport arrivalAirport

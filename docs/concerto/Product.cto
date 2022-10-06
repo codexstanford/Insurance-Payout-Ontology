@@ -11,7 +11,6 @@ import org.codex.insurance.core.string,string,PhysicalActivityCategory,Thing,Cat
 import org.codex.insurance.core.Grant from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Grant.cto
 import org.codex.insurance.core.Distance,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Distance,QuantitativeValue.cto
 import org.codex.insurance.core.DefinedTerm,string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedTerm,string,string.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.EnergyConsumptionDetails from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/EnergyConsumptionDetails.cto
 import org.codex.insurance.core.Audience from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Audience.cto
 import org.codex.insurance.core.Offer,Demand from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Offer,Demand.cto
@@ -45,11 +44,11 @@ concept Product extends Thing {
   o String mpn
   o Distance,QuantitativeValue height
   o DefinedTerm,string,string keywords
-  o date purchaseDate
+  o DateTime purchaseDate
   o EnergyConsumptionDetails hasEnergyConsumptionDetails
   o Audience audience
   o Offer,Demand offers
-  o date productionDate
+  o DateTime productionDate
   o OfferItemCondition itemCondition
   o String awards
   o String gtin
@@ -72,7 +71,7 @@ concept Product extends Thing {
   o String inProductGroupWithID
   o ProductModel,string model
   o MerchantReturnPolicy hasMerchantReturnPolicy
-  o date releaseDate
+  o DateTime releaseDate
   o String gtin14
   o QuantitativeValue weight
   o QuantitativeValue,DefinedTerm,string,SizeSpecification size

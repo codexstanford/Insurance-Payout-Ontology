@@ -1,13 +1,12 @@
 namespace undefined
 
-import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
 import org.codex.insurance.core.Product,Service from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Product,Service.cto
 import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
 
 
 concept OwnershipInfo extends StructuredValue {
-  o dateTime ownedFrom
+  o DateTime ownedFrom
   o Product,Service typeOfGood
   o Organization,Person acquiredFrom
-  o dateTime ownedThrough
+  o DateTime ownedThrough
 }

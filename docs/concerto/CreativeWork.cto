@@ -3,8 +3,6 @@ namespace undefined
 import org.codex.insurance.core.DefinedTerm,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DefinedTerm,string.cto
 import org.codex.insurance.core.string,DefinedTerm,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,DefinedTerm,string.cto
 import org.codex.insurance.core.string,DefinedTerm from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,DefinedTerm.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
-import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
 import org.codex.insurance.core.string,string,Product from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,Product.cto
 import org.codex.insurance.core.Review from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Review.cto
 import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
@@ -54,8 +52,8 @@ concept CreativeWork extends Thing {
   o string,DefinedTerm,string educationalLevel
   o String abstract
   o string,DefinedTerm creativeWorkStatus
-  o date expires
-  o dateTime contentReferenceTime
+  o DateTime expires
+  o DateTime contentReferenceTime
   o string,string,Product material
   o Review review
   o string,string fileFormat
@@ -84,7 +82,7 @@ concept CreativeWork extends Thing {
   o Organization,Person copyrightHolder
   o String awards
   o Place contentLocation
-  o date sdDatePublished
+  o DateTime sdDatePublished
   o Organization,Person producer
   o Place spatial
   o Person,Organization publisher

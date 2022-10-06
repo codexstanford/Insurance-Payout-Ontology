@@ -13,7 +13,6 @@ import org.codex.insurance.core.ContactPoint from https://codexstanford.github.i
 import org.codex.insurance.core.Occupation from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Occupation.cto
 import org.codex.insurance.core.GenderType,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GenderType,string.cto
 import org.codex.insurance.core.string,DefinedTerm from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,DefinedTerm.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
 import org.codex.insurance.core.Offer from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Offer.cto
 import org.codex.insurance.core.Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization.cto
@@ -60,7 +59,7 @@ concept Person extends Thing {
   o String awards
   o Person sibling
   o string,DefinedTerm jobTitle
-  o date birthDate
+  o DateTime birthDate
   o Organization,Person funder
   o Offer makesOffer
   o Person children
@@ -71,7 +70,7 @@ concept Person extends Thing {
   o ProgramMembership,Organization memberOf
   o string,CreativeWork publishingPrinciples
   o Person colleagues
-  o date deathDate
+  o DateTime deathDate
   o String email
   o Organization affiliation
   o Person siblings

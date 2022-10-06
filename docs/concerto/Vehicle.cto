@@ -2,7 +2,6 @@ namespace undefined
 
 import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
 import org.codex.insurance.core.EngineSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/EngineSpecification.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.QuantitativeValue,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue,number.cto
 import org.codex.insurance.core.number,QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,QuantitativeValue.cto
 import org.codex.insurance.core.SteeringPositionValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/SteeringPositionValue.cto
@@ -21,10 +20,10 @@ concept Vehicle extends Product {
   o QuantitativeValue trailerWeight
   o EngineSpecification vehicleEngine
   o Double emissionsCO2
-  o date purchaseDate
+  o DateTime purchaseDate
   o QuantitativeValue,number numberOfForwardGears
   o QuantitativeValue weightTotal
-  o date productionDate
+  o DateTime productionDate
   o number,QuantitativeValue numberOfPreviousOwners
   o SteeringPositionValue steeringPosition
   o QuantitativeValue wheelbase
@@ -39,18 +38,18 @@ concept Vehicle extends Product {
   o QuantitativeValue fuelConsumption
   o String vehicleInteriorColor
   o number,QuantitativeValue numberOfAxles
-  o date modelDate
+  o DateTime modelDate
   o QuantitativeValue,number numberOfDoors
   o QuantitativeValue,number vehicleSeatingCapacity
   o String callSign
   o QuantitativeValue tongueWeight
   o QuantitativeValue fuelEfficiency
-  o date vehicleModelDate
+  o DateTime vehicleModelDate
   o String vehicleConfiguration
   o QuantitativeValue mileageFromOdometer
   o QuantitativeValue,number seatingCapacity
   o QualitativeValue,string,string bodyType
-  o date dateVehicleFirstRegistered
+  o DateTime dateVehicleFirstRegistered
   o String vehicleIdentificationNumber
   o string,string,QualitativeValue meetsEmissionStandard
   o CarUsageType,string vehicleSpecialUsage

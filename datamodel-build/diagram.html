@@ -11053,10 +11053,13 @@ undefined
 mermaid.initialize({startOnLoad:true,   maxTextSize: 9000000});
 </script>
 
+<script src='svgpan.js'>
 
+</script>
 <script>
 setTimeout(function() {
   document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
+ // document.getElementByTagName('svg').id = 'viewport';
 }, 100);
 </script>
 </body>

@@ -16,7 +16,6 @@ import org.codex.insurance.core.date,dateTime from https://codexstanford.github.
 import org.codex.insurance.core.AggregateRating from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/AggregateRating.cto
 import org.codex.insurance.core.PostalAddress,string,Place,VirtualLocation from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PostalAddress,string,Place,VirtualLocation.cto
 import org.codex.insurance.core.Duration from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Duration.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.CreativeWork from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWork.cto
 import org.codex.insurance.core.time,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/time,dateTime.cto
 import org.codex.insurance.core.string,Language from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,Language.cto
@@ -51,7 +50,7 @@ concept Event extends Thing {
   o Duration duration
   o Person,Organization organizer
   o Organization,Person sponsor
-  o date previousStartDate
+  o DateTime previousStartDate
   o Boolean isAccessibleForFree
   o Double remainingAttendeeCapacity
   o Event subEvents

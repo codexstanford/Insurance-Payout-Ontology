@@ -3,7 +3,6 @@ namespace undefined
 import org.codex.insurance.core.DataCatalog from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DataCatalog.cto
 import org.codex.insurance.core.PropertyValue,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/PropertyValue,string.cto
 import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
-import org.codex.insurance.core.dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/dateTime.cto
 import org.codex.insurance.core.DataDownload from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DataDownload.cto
 
 
@@ -12,7 +11,7 @@ concept Dataset extends CreativeWork {
   o DataCatalog includedDataCatalog
   o PropertyValue,string variableMeasured
   o string,string measurementTechnique
-  o dateTime datasetTimeInterval
+  o DateTime datasetTimeInterval
   o DataDownload distribution
   o String issn
   o DataCatalog includedInDataCatalog

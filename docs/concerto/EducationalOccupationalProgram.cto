@@ -7,7 +7,6 @@ import org.codex.insurance.core.MonetaryAmountDistribution from https://codexsta
 import org.codex.insurance.core.DayOfWeek from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DayOfWeek.cto
 import org.codex.insurance.core.Offer,Demand from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Offer,Demand.cto
 import org.codex.insurance.core.number,StructuredValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,StructuredValue.cto
-import org.codex.insurance.core.date from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date.cto
 import org.codex.insurance.core.date,dateTime from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/date,dateTime.cto
 import org.codex.insurance.core.Organization,Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Organization,Person.cto
 import org.codex.insurance.core.string,EducationalOccupationalCredential,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,EducationalOccupationalCredential,string.cto
@@ -27,7 +26,7 @@ concept EducationalOccupationalProgram extends Intangible {
   o DayOfWeek dayOfWeek
   o Offer,Demand offers
   o number,StructuredValue typicalCreditsPerTerm
-  o date applicationStartDate
+  o DateTime applicationStartDate
   o String timeOfDay
   o date,dateTime endDate
   o Organization,Person provider
@@ -41,6 +40,6 @@ concept EducationalOccupationalProgram extends Intangible {
   o string,DefinedTerm programType
   o Double maximumEnrollment
   o string,DefinedTerm financialAidEligible
-  o date applicationDeadline
+  o DateTime applicationDeadline
   o CategoryCode,string occupationalCategory
 }

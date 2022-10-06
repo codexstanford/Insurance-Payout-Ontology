@@ -2,12 +2,11 @@ namespace undefined
 
 import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
 import org.codex.insurance.core.OpeningHoursSpecification from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/OpeningHoursSpecification.cto
-import org.codex.insurance.core.time from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/time.cto
 
 
 concept ShippingDeliveryTime extends StructuredValue {
   o QuantitativeValue transitTime
   o OpeningHoursSpecification businessDays
   o QuantitativeValue handlingTime
-  o time cutoffTime
+  o DateTime cutoffTime
 }
