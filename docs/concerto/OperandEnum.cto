@@ -2,6 +2,6 @@ namespace undefined
 
 enum OperandEnum {
   o addition
-  o substraction
+  o subtraction
 }
 

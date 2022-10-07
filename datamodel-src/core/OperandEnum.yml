@@ -4,6 +4,6 @@ OperandEnum:
     addition:
       documentation:
         en: "Represent an addition [+]"
-    substraction:
+    subtraction:
       documentation:
-        en: "Represent a substraction"
+        en: "Represent a subtraction"

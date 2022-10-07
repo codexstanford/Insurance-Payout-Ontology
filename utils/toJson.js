@@ -20,6 +20,7 @@ fs.mkdirSync(DATA_MODEL_JSON_PATH);
 
 
 let output = {};
+let outputCore = {};
 for (let file of objectsList) {
 
   buildJSON(file);
@@ -31,6 +32,9 @@ fs.writeFileSync(`${DATA_MODEL_JSON_PATH}/datamodel.json`, JSON.stringify(output
 fs.writeFileSync(`${DATA_MODEL_JSON_PATH}/datamodel.js`, "let datamodel = " + JSON.stringify(output, null, 2), 'utf8');
 fs.writeFileSync(`${UTILS_ANNOTATION_PATH}/datamodel.js`, "let datamodel = " + JSON.stringify(output, null, 2), 'utf8');
 
+fs.writeFileSync(`${UTILS_ANNOTATION_PATH}/coreDataModel.js`, "let coreDataModel = " + JSON.stringify(outputCore, null, 2), 'utf8');
+
+
 
 
 function buildJSON(file) {
@@ -40,7 +44,7 @@ function buildJSON(file) {
   for (let ObjName in data) {
 
   
-    render(ObjName, data[ObjName])
+    render(ObjName, data[ObjName], file)
 
 
   }
@@ -48,9 +52,14 @@ function buildJSON(file) {
 
 }
 
-function render(name, data) {
+function render(name, data, raw) {
 
   output[name] = data;
+
+  if (raw.namespace == 'Core') {
+  
+    outputCore[name] = data;
+  }
 
   if (!data.type) {
     console.error(`Error Unspecified Object ${name} (no type property).`)
