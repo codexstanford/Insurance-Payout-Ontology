@@ -1,6 +1,6 @@
 type("HowToItem",class)
 inherits("HowToItem","ListItem")
-attribute(HowToItem,"HowToItem.requiredQuantity")
+attribute("HowToItem","HowToItem.requiredQuantity")
 type("HowToItem.requiredQuantity",attributerelation)
 domain("HowToItem.requiredQuantity",HowToItem)
 unique("HowToItem.requiredQuantity",yes)

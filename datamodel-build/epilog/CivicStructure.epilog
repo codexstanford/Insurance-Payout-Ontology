@@ -1,6 +1,6 @@
 type("CivicStructure",class)
 inherits("CivicStructure","Place")
-attribute(CivicStructure,"CivicStructure.openingHours")
+attribute("CivicStructure","CivicStructure.openingHours")
 type("CivicStructure.openingHours",attributerelation)
 domain("CivicStructure.openingHours",CivicStructure)
 unique("CivicStructure.openingHours",yes)

@@ -1,6 +1,6 @@
 type("HowToSupply",class)
 inherits("HowToSupply","HowToItem")
-attribute(HowToSupply,"HowToSupply.estimatedCost")
+attribute("HowToSupply","HowToSupply.estimatedCost")
 type("HowToSupply.estimatedCost",attributerelation)
 domain("HowToSupply.estimatedCost",HowToSupply)
 unique("HowToSupply.estimatedCost",yes)

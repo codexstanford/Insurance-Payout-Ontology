@@ -1,6 +1,6 @@
 type("ArchiveComponent",class)
 inherits("ArchiveComponent","CreativeWork")
-attribute(ArchiveComponent,"ArchiveComponent.[object Object]")
+attribute("ArchiveComponent","ArchiveComponent.[object Object]")
 type("ArchiveComponent.[object Object]",attributerelation)
 domain("ArchiveComponent.[object Object]",ArchiveComponent)
 unique("ArchiveComponent.[object Object]",yes)

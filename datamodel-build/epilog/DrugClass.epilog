@@ -1,6 +1,6 @@
 type("DrugClass",class)
 inherits("DrugClass","MedicalEntity")
-attribute(DrugClass,"DrugClass.drug")
+attribute("DrugClass","DrugClass.drug")
 type("DrugClass.drug",attributerelation)
 domain("DrugClass.drug",DrugClass)
 unique("DrugClass.drug",yes)

@@ -1,6 +1,6 @@
 type("TipAction",class)
 inherits("TipAction","TradeAction")
-attribute(TipAction,"TipAction.recipient")
+attribute("TipAction","TipAction.recipient")
 type("TipAction.recipient",attributerelation)
 domain("TipAction.recipient",TipAction)
 unique("TipAction.recipient",yes)

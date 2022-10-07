@@ -1,6 +1,6 @@
 type("SolveMathAction",class)
 inherits("SolveMathAction","Action")
-attribute(SolveMathAction,"SolveMathAction.eduQuestionType")
+attribute("SolveMathAction","SolveMathAction.eduQuestionType")
 type("SolveMathAction.eduQuestionType",attributerelation)
 domain("SolveMathAction.eduQuestionType",SolveMathAction)
 unique("SolveMathAction.eduQuestionType",yes)

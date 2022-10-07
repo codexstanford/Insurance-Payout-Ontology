@@ -1,6 +1,6 @@
 type("CategoryCodeSet",class)
 inherits("CategoryCodeSet","DefinedTermSet")
-attribute(CategoryCodeSet,"CategoryCodeSet.hasCategoryCode")
+attribute("CategoryCodeSet","CategoryCodeSet.hasCategoryCode")
 type("CategoryCodeSet.hasCategoryCode",attributerelation)
 domain("CategoryCodeSet.hasCategoryCode",CategoryCodeSet)
 unique("CategoryCodeSet.hasCategoryCode",yes)

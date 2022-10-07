@@ -1,6 +1,6 @@
 type("SomeProducts",class)
 inherits("SomeProducts","Product")
-attribute(SomeProducts,"SomeProducts.inventoryLevel")
+attribute("SomeProducts","SomeProducts.inventoryLevel")
 type("SomeProducts.inventoryLevel",attributerelation)
 domain("SomeProducts.inventoryLevel",SomeProducts)
 unique("SomeProducts.inventoryLevel",yes)

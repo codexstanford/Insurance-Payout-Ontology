@@ -1,6 +1,6 @@
 type("DefinedTermSet",class)
 inherits("DefinedTermSet","CreativeWork")
-attribute(DefinedTermSet,"DefinedTermSet.hasDefinedTerm")
+attribute("DefinedTermSet","DefinedTermSet.hasDefinedTerm")
 type("DefinedTermSet.hasDefinedTerm",attributerelation)
 domain("DefinedTermSet.hasDefinedTerm",DefinedTermSet)
 unique("DefinedTermSet.hasDefinedTerm",yes)

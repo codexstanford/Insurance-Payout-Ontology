@@ -1,6 +1,6 @@
 type("WebSite",class)
 inherits("WebSite","CreativeWork")
-attribute(WebSite,"WebSite.issn")
+attribute("WebSite","WebSite.issn")
 type("WebSite.issn",attributerelation)
 domain("WebSite.issn",WebSite)
 unique("WebSite.issn",yes)

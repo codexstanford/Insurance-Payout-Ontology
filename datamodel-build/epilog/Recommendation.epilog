@@ -1,6 +1,6 @@
 type("Recommendation",class)
 inherits("Recommendation","Review")
-attribute(Recommendation,"Recommendation.category")
+attribute("Recommendation","Recommendation.category")
 type("Recommendation.category",attributerelation)
 domain("Recommendation.category",Recommendation)
 unique("Recommendation.category",yes)

@@ -1,6 +1,6 @@
 type("VoteAction",class)
 inherits("VoteAction","ChooseAction")
-attribute(VoteAction,"VoteAction.candidate")
+attribute("VoteAction","VoteAction.candidate")
 type("VoteAction.candidate",attributerelation)
 domain("VoteAction.candidate",VoteAction)
 unique("VoteAction.candidate",yes)

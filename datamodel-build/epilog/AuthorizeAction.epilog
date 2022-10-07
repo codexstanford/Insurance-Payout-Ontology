@@ -1,6 +1,6 @@
 type("AuthorizeAction",class)
 inherits("AuthorizeAction","AllocateAction")
-attribute(AuthorizeAction,"AuthorizeAction.recipient")
+attribute("AuthorizeAction","AuthorizeAction.recipient")
 type("AuthorizeAction.recipient",attributerelation)
 domain("AuthorizeAction.recipient",AuthorizeAction)
 unique("AuthorizeAction.recipient",yes)

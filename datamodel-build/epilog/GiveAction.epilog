@@ -1,6 +1,6 @@
 type("GiveAction",class)
 inherits("GiveAction","TransferAction")
-attribute(GiveAction,"GiveAction.recipient")
+attribute("GiveAction","GiveAction.recipient")
 type("GiveAction.recipient",attributerelation)
 domain("GiveAction.recipient",GiveAction)
 unique("GiveAction.recipient",yes)

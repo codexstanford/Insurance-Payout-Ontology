@@ -1,6 +1,6 @@
 type("TravelAction",class)
 inherits("TravelAction","MoveAction")
-attribute(TravelAction,"TravelAction.distance")
+attribute("TravelAction","TravelAction.distance")
 type("TravelAction.distance",attributerelation)
 domain("TravelAction.distance",TravelAction)
 unique("TravelAction.distance",yes)

@@ -1,6 +1,6 @@
 type("ReservationPackage",class)
 inherits("ReservationPackage","Reservation")
-attribute(ReservationPackage,"ReservationPackage.subReservation")
+attribute("ReservationPackage","ReservationPackage.subReservation")
 type("ReservationPackage.subReservation",attributerelation)
 domain("ReservationPackage.subReservation",ReservationPackage)
 unique("ReservationPackage.subReservation",yes)

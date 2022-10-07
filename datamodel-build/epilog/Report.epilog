@@ -1,6 +1,6 @@
 type("Report",class)
 inherits("Report","Article")
-attribute(Report,"Report.reportNumber")
+attribute("Report","Report.reportNumber")
 type("Report.reportNumber",attributerelation)
 domain("Report.reportNumber",Report)
 unique("Report.reportNumber",yes)

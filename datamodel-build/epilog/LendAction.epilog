@@ -1,6 +1,6 @@
 type("LendAction",class)
 inherits("LendAction","TransferAction")
-attribute(LendAction,"LendAction.borrower")
+attribute("LendAction","LendAction.borrower")
 type("LendAction.borrower",attributerelation)
 domain("LendAction.borrower",LendAction)
 unique("LendAction.borrower",yes)

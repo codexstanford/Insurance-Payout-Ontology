@@ -1,6 +1,6 @@
 type("MediaReviewItem",class)
 inherits("MediaReviewItem","CreativeWork")
-attribute(MediaReviewItem,"MediaReviewItem.mediaItemAppearance")
+attribute("MediaReviewItem","MediaReviewItem.mediaItemAppearance")
 type("MediaReviewItem.mediaItemAppearance",attributerelation)
 domain("MediaReviewItem.mediaItemAppearance",MediaReviewItem)
 unique("MediaReviewItem.mediaItemAppearance",yes)

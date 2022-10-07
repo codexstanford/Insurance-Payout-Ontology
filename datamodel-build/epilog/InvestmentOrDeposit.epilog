@@ -1,6 +1,6 @@
 type("InvestmentOrDeposit",class)
 inherits("InvestmentOrDeposit","FinancialProduct")
-attribute(InvestmentOrDeposit,"InvestmentOrDeposit.amount")
+attribute("InvestmentOrDeposit","InvestmentOrDeposit.amount")
 type("InvestmentOrDeposit.amount",attributerelation)
 domain("InvestmentOrDeposit.amount",InvestmentOrDeposit)
 unique("InvestmentOrDeposit.amount",yes)

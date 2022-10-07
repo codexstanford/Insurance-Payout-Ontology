@@ -1,7 +1,7 @@
 type("EducationalOrganization",class)
 inherits("EducationalOrganization","CivicStructure")
 inherits("EducationalOrganization","Organization")
-attribute(EducationalOrganization,"EducationalOrganization.alumni")
+attribute("EducationalOrganization","EducationalOrganization.alumni")
 type("EducationalOrganization.alumni",attributerelation)
 domain("EducationalOrganization.alumni",EducationalOrganization)
 unique("EducationalOrganization.alumni",yes)

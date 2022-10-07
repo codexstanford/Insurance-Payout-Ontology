@@ -1,6 +1,6 @@
 type("3DModel",class)
 inherits("3DModel","MediaObject")
-attribute(3DModel,"3DModel.isResizable")
+attribute("3DModel","3DModel.isResizable")
 type("3DModel.isResizable",attributerelation)
 domain("3DModel.isResizable",3DModel)
 unique("3DModel.isResizable",yes)

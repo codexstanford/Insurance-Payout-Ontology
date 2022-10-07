@@ -1,6 +1,6 @@
 type("ArchiveOrganization",class)
 inherits("ArchiveOrganization","LocalBusiness")
-attribute(ArchiveOrganization,"ArchiveOrganization.[object Object]")
+attribute("ArchiveOrganization","ArchiveOrganization.[object Object]")
 type("ArchiveOrganization.[object Object]",attributerelation)
 domain("ArchiveOrganization.[object Object]",ArchiveOrganization)
 unique("ArchiveOrganization.[object Object]",yes)

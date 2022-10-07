@@ -1,5 +1,6 @@
 const fs = require('fs');
 const loadObjFromSrc  = require('./lib/loadObjFromSrc.js');
+const injectInheritedProperties  = require('./lib/injectInheritedProperties.js');
 
 const DATA_MODEL_SRC_PATH = `${__dirname}/../datamodel-src`;
 const DATA_MODEL_EPILOG_PATH = `${__dirname}/../datamodel-build/epilog`;
@@ -54,7 +55,7 @@ function renderObject(name, data) {
     const prop = data.properties[propName];
     const relationName = `"${name}.${propName}"`;
 
-    output += `\nattribute(${name},${relationName})`;
+    output += `\nattribute("${name}",${relationName})`;
 
     output += `\ntype(${relationName},attributerelation)`;
 

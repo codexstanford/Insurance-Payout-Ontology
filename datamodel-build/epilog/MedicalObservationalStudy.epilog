@@ -1,6 +1,6 @@
 type("MedicalObservationalStudy",class)
 inherits("MedicalObservationalStudy","MedicalStudy")
-attribute(MedicalObservationalStudy,"MedicalObservationalStudy.studyDesign")
+attribute("MedicalObservationalStudy","MedicalObservationalStudy.studyDesign")
 type("MedicalObservationalStudy.studyDesign",attributerelation)
 domain("MedicalObservationalStudy.studyDesign",MedicalObservationalStudy)
 unique("MedicalObservationalStudy.studyDesign",yes)

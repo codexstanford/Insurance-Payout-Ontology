@@ -1,6 +1,6 @@
 type("SeekToAction",class)
 inherits("SeekToAction","Action")
-attribute(SeekToAction,"SeekToAction.startOffset")
+attribute("SeekToAction","SeekToAction.startOffset")
 type("SeekToAction.startOffset",attributerelation)
 domain("SeekToAction.startOffset",SeekToAction)
 unique("SeekToAction.startOffset",yes)

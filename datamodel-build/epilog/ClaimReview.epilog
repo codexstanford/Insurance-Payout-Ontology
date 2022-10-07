@@ -1,6 +1,6 @@
 type("ClaimReview",class)
 inherits("ClaimReview","Review")
-attribute(ClaimReview,"ClaimReview.claimReviewed")
+attribute("ClaimReview","ClaimReview.claimReviewed")
 type("ClaimReview.claimReviewed",attributerelation)
 domain("ClaimReview.claimReviewed",ClaimReview)
 unique("ClaimReview.claimReviewed",yes)

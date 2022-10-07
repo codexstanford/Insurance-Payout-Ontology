@@ -1,6 +1,6 @@
 type("Quotation",class)
 inherits("Quotation","CreativeWork")
-attribute(Quotation,"Quotation.spokenByCharacter")
+attribute("Quotation","Quotation.spokenByCharacter")
 type("Quotation.spokenByCharacter",attributerelation)
 domain("Quotation.spokenByCharacter",Quotation)
 unique("Quotation.spokenByCharacter",yes)

@@ -1,6 +1,6 @@
 type("DrugLegalStatus",class)
 inherits("DrugLegalStatus","MedicalIntangible")
-attribute(DrugLegalStatus,"DrugLegalStatus.applicableLocation")
+attribute("DrugLegalStatus","DrugLegalStatus.applicableLocation")
 type("DrugLegalStatus.applicableLocation",attributerelation)
 domain("DrugLegalStatus.applicableLocation",DrugLegalStatus)
 unique("DrugLegalStatus.applicableLocation",yes)

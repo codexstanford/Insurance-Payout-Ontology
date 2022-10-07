@@ -1,6 +1,6 @@
 type("PlanAction",class)
 inherits("PlanAction","OrganizeAction")
-attribute(PlanAction,"PlanAction.scheduledTime")
+attribute("PlanAction","PlanAction.scheduledTime")
 type("PlanAction.scheduledTime",attributerelation)
 domain("PlanAction.scheduledTime",PlanAction)
 unique("PlanAction.scheduledTime",yes)

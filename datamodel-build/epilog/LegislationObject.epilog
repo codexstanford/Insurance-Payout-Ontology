@@ -1,7 +1,7 @@
 type("LegislationObject",class)
 inherits("LegislationObject","Legislation")
 inherits("LegislationObject","MediaObject")
-attribute(LegislationObject,"LegislationObject.legislationLegalValue")
+attribute("LegislationObject","LegislationObject.legislationLegalValue")
 type("LegislationObject.legislationLegalValue",attributerelation)
 domain("LegislationObject.legislationLegalValue",LegislationObject)
 unique("LegislationObject.legislationLegalValue",yes)

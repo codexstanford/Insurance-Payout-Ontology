@@ -1,6 +1,6 @@
 type("PerformAction",class)
 inherits("PerformAction","PlayAction")
-attribute(PerformAction,"PerformAction.entertainmentBusiness")
+attribute("PerformAction","PerformAction.entertainmentBusiness")
 type("PerformAction.entertainmentBusiness",attributerelation)
 domain("PerformAction.entertainmentBusiness",PerformAction)
 unique("PerformAction.entertainmentBusiness",yes)

@@ -1,6 +1,6 @@
 type("MedicalCause",class)
 inherits("MedicalCause","MedicalEntity")
-attribute(MedicalCause,"MedicalCause.causeOf")
+attribute("MedicalCause","MedicalCause.causeOf")
 type("MedicalCause.causeOf",attributerelation)
 domain("MedicalCause.causeOf",MedicalCause)
 unique("MedicalCause.causeOf",yes)

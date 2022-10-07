@@ -1,6 +1,6 @@
 type("LoseAction",class)
 inherits("LoseAction","AchieveAction")
-attribute(LoseAction,"LoseAction.winner")
+attribute("LoseAction","LoseAction.winner")
 type("LoseAction.winner",attributerelation)
 domain("LoseAction.winner",LoseAction)
 unique("LoseAction.winner",yes)

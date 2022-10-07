@@ -1,6 +1,6 @@
 type("PlayGameAction",class)
 inherits("PlayGameAction","ConsumeAction")
-attribute(PlayGameAction,"PlayGameAction.gameAvailabilityType")
+attribute("PlayGameAction","PlayGameAction.gameAvailabilityType")
 type("PlayGameAction.gameAvailabilityType",attributerelation)
 domain("PlayGameAction.gameAvailabilityType",PlayGameAction)
 unique("PlayGameAction.gameAvailabilityType",yes)

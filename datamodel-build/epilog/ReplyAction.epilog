@@ -1,6 +1,6 @@
 type("ReplyAction",class)
 inherits("ReplyAction","CommunicateAction")
-attribute(ReplyAction,"ReplyAction.resultComment")
+attribute("ReplyAction","ReplyAction.resultComment")
 type("ReplyAction.resultComment",attributerelation)
 domain("ReplyAction.resultComment",ReplyAction)
 unique("ReplyAction.resultComment",yes)

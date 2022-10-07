@@ -1,5 +1,5 @@
 type("RiskObject",class)
-attribute(RiskObject,"RiskObject.id")
+attribute("RiskObject","RiskObject.id")
 type("RiskObject.id",attributerelation)
 domain("RiskObject.id",RiskObject)
 unique("RiskObject.id",yes)

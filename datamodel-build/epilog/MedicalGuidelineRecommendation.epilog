@@ -1,6 +1,6 @@
 type("MedicalGuidelineRecommendation",class)
 inherits("MedicalGuidelineRecommendation","MedicalGuideline")
-attribute(MedicalGuidelineRecommendation,"MedicalGuidelineRecommendation.recommendationStrength")
+attribute("MedicalGuidelineRecommendation","MedicalGuidelineRecommendation.recommendationStrength")
 type("MedicalGuidelineRecommendation.recommendationStrength",attributerelation)
 domain("MedicalGuidelineRecommendation.recommendationStrength",MedicalGuidelineRecommendation)
 unique("MedicalGuidelineRecommendation.recommendationStrength",yes)

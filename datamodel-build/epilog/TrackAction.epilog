@@ -1,6 +1,6 @@
 type("TrackAction",class)
 inherits("TrackAction","FindAction")
-attribute(TrackAction,"TrackAction.deliveryMethod")
+attribute("TrackAction","TrackAction.deliveryMethod")
 type("TrackAction.deliveryMethod",attributerelation)
 domain("TrackAction.deliveryMethod",TrackAction)
 unique("TrackAction.deliveryMethod",yes)

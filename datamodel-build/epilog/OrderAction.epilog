@@ -1,6 +1,6 @@
 type("OrderAction",class)
 inherits("OrderAction","TradeAction")
-attribute(OrderAction,"OrderAction.deliveryMethod")
+attribute("OrderAction","OrderAction.deliveryMethod")
 type("OrderAction.deliveryMethod",attributerelation)
 domain("OrderAction.deliveryMethod",OrderAction)
 unique("OrderAction.deliveryMethod",yes)

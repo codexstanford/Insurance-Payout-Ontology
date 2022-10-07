@@ -1,6 +1,6 @@
 type("FollowAction",class)
 inherits("FollowAction","InteractAction")
-attribute(FollowAction,"FollowAction.followee")
+attribute("FollowAction","FollowAction.followee")
 type("FollowAction.followee",attributerelation)
 domain("FollowAction.followee",FollowAction)
 unique("FollowAction.followee",yes)

@@ -1,6 +1,6 @@
 type("Collection",class)
 inherits("Collection","CreativeWork")
-attribute(Collection,"Collection.[object Object]")
+attribute("Collection","Collection.[object Object]")
 type("Collection.[object Object]",attributerelation)
 domain("Collection.[object Object]",Collection)
 unique("Collection.[object Object]",yes)

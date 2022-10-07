@@ -1,6 +1,6 @@
 type("DataFeed",class)
 inherits("DataFeed","Dataset")
-attribute(DataFeed,"DataFeed.dataFeedElement")
+attribute("DataFeed","DataFeed.dataFeedElement")
 type("DataFeed.dataFeedElement",attributerelation)
 domain("DataFeed.dataFeedElement",DataFeed)
 unique("DataFeed.dataFeedElement",yes)

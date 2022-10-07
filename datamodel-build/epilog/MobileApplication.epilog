@@ -1,6 +1,6 @@
 type("MobileApplication",class)
 inherits("MobileApplication","SoftwareApplication")
-attribute(MobileApplication,"MobileApplication.carrierRequirements")
+attribute("MobileApplication","MobileApplication.carrierRequirements")
 type("MobileApplication.carrierRequirements",attributerelation)
 domain("MobileApplication.carrierRequirements",MobileApplication)
 unique("MobileApplication.carrierRequirements",yes)

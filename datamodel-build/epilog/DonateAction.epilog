@@ -1,6 +1,6 @@
 type("DonateAction",class)
 inherits("DonateAction","TradeAction")
-attribute(DonateAction,"DonateAction.recipient")
+attribute("DonateAction","DonateAction.recipient")
 type("DonateAction.recipient",attributerelation)
 domain("DonateAction.recipient",DonateAction)
 unique("DonateAction.recipient",yes)

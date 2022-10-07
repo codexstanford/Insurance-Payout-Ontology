@@ -1,6 +1,6 @@
 type("MedicalScholarlyArticle",class)
 inherits("MedicalScholarlyArticle","ScholarlyArticle")
-attribute(MedicalScholarlyArticle,"MedicalScholarlyArticle.publicationType")
+attribute("MedicalScholarlyArticle","MedicalScholarlyArticle.publicationType")
 type("MedicalScholarlyArticle.publicationType",attributerelation)
 domain("MedicalScholarlyArticle.publicationType",MedicalScholarlyArticle)
 unique("MedicalScholarlyArticle.publicationType",yes)

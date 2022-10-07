@@ -1,6 +1,6 @@
 type("Residence",class)
 inherits("Residence","Place")
-attribute(Residence,"Residence.accommodationFloorPlan")
+attribute("Residence","Residence.accommodationFloorPlan")
 type("Residence.accommodationFloorPlan",attributerelation)
 domain("Residence.accommodationFloorPlan",Residence)
 unique("Residence.accommodationFloorPlan",yes)

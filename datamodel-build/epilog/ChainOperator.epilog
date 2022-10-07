@@ -1,6 +1,6 @@
 type("ChainOperator",class)
 inherits("ChainOperator","Chainable")
-attribute(ChainOperator,"ChainOperator.type")
+attribute("ChainOperator","ChainOperator.type")
 type("ChainOperator.type",attributerelation)
 domain("ChainOperator.type",ChainOperator)
 unique("ChainOperator.type",yes)

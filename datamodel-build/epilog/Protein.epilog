@@ -1,6 +1,6 @@
 type("Protein",class)
 inherits("Protein","BioChemEntity")
-attribute(Protein,"Protein.hasBioPolymerSequence")
+attribute("Protein","Protein.hasBioPolymerSequence")
 type("Protein.hasBioPolymerSequence",attributerelation)
 domain("Protein.hasBioPolymerSequence",Protein)
 unique("Protein.hasBioPolymerSequence",yes)

@@ -1,6 +1,6 @@
 type("LeaveAction",class)
 inherits("LeaveAction","InteractAction")
-attribute(LeaveAction,"LeaveAction.event")
+attribute("LeaveAction","LeaveAction.event")
 type("LeaveAction.event",attributerelation)
 domain("LeaveAction.event",LeaveAction)
 unique("LeaveAction.event",yes)

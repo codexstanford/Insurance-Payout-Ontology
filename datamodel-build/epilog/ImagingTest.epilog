@@ -1,6 +1,6 @@
 type("ImagingTest",class)
 inherits("ImagingTest","MedicalTest")
-attribute(ImagingTest,"ImagingTest.imagingTechnique")
+attribute("ImagingTest","ImagingTest.imagingTechnique")
 type("ImagingTest.imagingTechnique",attributerelation)
 domain("ImagingTest.imagingTechnique",ImagingTest)
 unique("ImagingTest.imagingTechnique",yes)

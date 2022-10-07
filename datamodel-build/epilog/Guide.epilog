@@ -1,6 +1,6 @@
 type("Guide",class)
 inherits("Guide","CreativeWork")
-attribute(Guide,"Guide.reviewAspect")
+attribute("Guide","Guide.reviewAspect")
 type("Guide.reviewAspect",attributerelation)
 domain("Guide.reviewAspect",Guide)
 unique("Guide.reviewAspect",yes)
