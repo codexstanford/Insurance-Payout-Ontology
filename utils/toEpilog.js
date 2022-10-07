@@ -59,7 +59,7 @@ function renderObject(name, data) {
 
     output += `\ntype(${relationName},attributerelation)`;
 
-    output += `\ndomain(${relationName},${name})`;
+    output += `\ndomain(${relationName},"${name}")`;
 
     if (prop.type === 'List') {
       output += `\nunique(${relationName},no)`;
