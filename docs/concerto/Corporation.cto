@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept Corporation extends Organization {
-  o String tickerSymbol
-}

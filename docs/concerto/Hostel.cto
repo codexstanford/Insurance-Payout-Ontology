@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept Hostel extends LodgingBusiness {
-}

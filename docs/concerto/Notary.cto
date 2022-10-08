@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept Notary extends LegalService {
-}

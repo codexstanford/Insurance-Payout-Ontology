@@ -2,7 +2,7 @@ namespace undefined
 
 
 
-concept Situation extends Chainable {
+concept Situation {
   o String id
   o String event
   o String location

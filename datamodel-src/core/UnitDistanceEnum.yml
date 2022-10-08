@@ -1,6 +1,5 @@
 UnitDistanceEnum:
   type: enum
-  inherit: UnitEnum
   values:
     meter:
       primaryKey: "meter"

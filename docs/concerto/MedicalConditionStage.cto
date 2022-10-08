@@ -1,8 +1,0 @@
-namespace undefined
-
-
-
-concept MedicalConditionStage extends MedicalIntangible {
-  o String subStageSuffix
-  o Double stageAsNumber
-}

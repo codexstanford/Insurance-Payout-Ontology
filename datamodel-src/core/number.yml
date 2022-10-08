@@ -1,6 +1,5 @@
 Number:
   type: object
-  inherit: Operable
   properties:
     value: 
       type: number

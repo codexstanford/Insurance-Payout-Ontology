@@ -4,7 +4,7 @@ RiskChain:
   properties:
     chain:
       type: List
-      of: Chainable
+      of: ChainCompositionOr, ChainOperator, Situation
     actors:
       type: List
       of: RiskObject

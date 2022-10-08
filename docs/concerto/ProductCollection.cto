@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.TypeAndQuantityNode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/TypeAndQuantityNode.cto
-
-
-concept ProductCollection extendsProductCollectionProductCollection {
-  o TypeAndQuantityNode includesObject
-}

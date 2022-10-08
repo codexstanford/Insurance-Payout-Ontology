@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.QuantitativeValue,number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue,number.cto
-
-
-concept House extends Accommodation {
-  o QuantitativeValue,number numberOfRooms
-}

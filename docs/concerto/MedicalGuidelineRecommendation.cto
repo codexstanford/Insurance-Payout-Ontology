@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept MedicalGuidelineRecommendation extends MedicalGuideline {
-  o String recommendationStrength
-}

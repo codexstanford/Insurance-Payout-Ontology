@@ -27,7 +27,7 @@ InsurancePayout:
           name: "A limit with a minimal amount"
           legalese: "In case of fire we will pay you up to 10% of value insured but at least $5000"
           explanation: "In this case the minimal amount will be $5000"
-    multipliers:
+    per:
       type: Multiplier
       documentation: "The Payout multiplier, eg: per Person. As it is not possible to have 2 multipliers affecting the same dimension the multiplier object is used as a way to constraint to one multiplier per dimension."
     for:

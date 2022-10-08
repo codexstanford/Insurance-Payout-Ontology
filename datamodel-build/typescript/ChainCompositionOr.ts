@@ -1,7 +1,7 @@
 import { List } from "./List";
 
 
-export class ChainCompositionOr extends Chainable {
+export class ChainCompositionOr {
   operands: List;
 
 

@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.LegalValueLevel from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/LegalValueLevel.cto
-
-
-concept LegislationObject extendsLegislationObjectLegislationObject {
-  o LegalValueLevel legislationLegalValue
-}

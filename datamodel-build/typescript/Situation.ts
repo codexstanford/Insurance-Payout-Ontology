@@ -1,6 +1,6 @@
 
 
-export class Situation extends Chainable {
+export class Situation {
   id: string;
   event: string;
   location: string;

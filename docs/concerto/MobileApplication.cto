@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept MobileApplication extends SoftwareApplication {
-  o String carrierRequirements
-}

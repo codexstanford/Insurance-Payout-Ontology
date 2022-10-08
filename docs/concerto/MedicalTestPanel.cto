@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.MedicalTest from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTest.cto
-
-
-concept MedicalTestPanel extends MedicalTest {
-  o MedicalTest subTest
-}

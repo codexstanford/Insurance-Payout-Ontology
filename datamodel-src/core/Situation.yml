@@ -1,6 +1,5 @@
 Situation:
   type: object
-  inherit: Chainable
   documentation: Represent a Situation
   properties:
     id:

@@ -1,12 +1,12 @@
 classDiagram
-  Operation -- Operable
+  Operation -- Operation, Variable, number
   Operation -- OperandEnum
 
 
 class Operation {
 
-  Operable leftHand
+  Operation, Variable, number leftHand
   OperandEnum operand
-  Operable rightHand
+  Operation, Variable, number rightHand
 
  }

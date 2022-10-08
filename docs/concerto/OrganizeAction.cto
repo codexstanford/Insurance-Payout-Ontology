@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept OrganizeAction extends Action {
-}

@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Event from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Event.cto
-
-
-concept LeaveAction extends InteractAction {
-  o Event event
-}

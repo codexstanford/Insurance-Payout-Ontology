@@ -10,7 +10,7 @@ concept InsurancePayout {
   o PayoutTypeEnum payoutType
   o Amount[] amount
   o Amount[] minimalAmount
-  o Multiplier multipliers
+  o Multiplier per
   o RiskChain for
   o Boolean impactOtherConsumption
 }

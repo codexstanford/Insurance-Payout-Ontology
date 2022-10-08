@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.string,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string.cto
-
-
-concept FinancialService extends LocalBusiness {
-  o string,string feesAndCommissionsSpecification
-}

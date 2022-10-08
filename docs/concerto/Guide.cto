@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept Guide extends CreativeWork {
-  o String reviewAspect
-}

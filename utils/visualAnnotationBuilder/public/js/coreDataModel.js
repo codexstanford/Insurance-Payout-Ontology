@@ -4,13 +4,13 @@ let coreDataModel = {
     "type": "object",
     "properties": {
       "quantity": {
-        "type": "Operable",
+        "type": "Operation, Variable, number",
         "documentation": {
           "en": "An expression representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
         }
       },
       "unit": {
-        "type": "UnitEnum",
+        "type": "UnitDistanceEnum, UnitMassEnum, UnitMonetaryEnum, UnitPersonEnum, UnitTimeEnum, string",
         "documentation": {
           "en": "The unit of the amount. It is recommended that it match an enum value corresponding to the dimension object."
         }
@@ -38,7 +38,6 @@ let coreDataModel = {
   "ChainCompositionOr": {
     "type": "object",
     "documentation": "Represent a composition in a chain, aka an OR on multiple risk chains",
-    "inherit": "Chainable",
     "properties": {
       "operands": {
         "type": "List",
@@ -49,7 +48,6 @@ let coreDataModel = {
   "ChainOperator": {
     "type": "object",
     "documentation": "Represent an operator in a chain, such as a wildcard or initial",
-    "inherit": "Chainable",
     "properties": {
       "type": {
         "type": "ChainOperatorEnum"
@@ -68,10 +66,6 @@ let coreDataModel = {
       }
     }
   },
-  "Chainable": {
-    "type": "object",
-    "isAbstract": true
-  },
   "Coverage": {
     "type": "object",
     "properties": {
@@ -82,12 +76,23 @@ let coreDataModel = {
       "riskChain": {
         "type": "RiskChain"
       },
-      "riskObject": {
-        "type:": "List",
+      "riskObjects": {
+        "type": "List",
         "of": "RiskObject"
       },
       "text": {
         "type": "string"
+      }
+    }
+  },
+  "RiskObject": {
+    "type": "object",
+    "isAbstract": true,
+    "documentation": "Represent a real thing in the world!",
+    "properties": {
+      "id": {
+        "type": "string",
+        "documentation": "A unique id for the object"
       }
     }
   },
@@ -126,7 +131,7 @@ let coreDataModel = {
           }
         }
       },
-      "multipliers": {
+      "per": {
         "type": "Multiplier",
         "documentation": "The Payout multiplier, eg: per Person. As it is not possible to have 2 multipliers affecting the same dimension the multiplier object is used as a way to constraint to one multiplier per dimension."
       },
@@ -275,36 +280,11 @@ let coreDataModel = {
   },
   "Number": {
     "type": "object",
-    "inherit": "Operable",
     "properties": {
       "value": {
         "type": "number"
       }
     }
-  },
-  "NumberRange": {
-    "type": "object",
-    "inherit": "Operable",
-    "properties": {
-      "from": {
-        "type": "number"
-      },
-      "to": {
-        "type": "number"
-      },
-      "fromIncluded": {
-        "type": "boolean",
-        "default": true
-      },
-      "toIncluded": {
-        "type": "boolean",
-        "default": true
-      }
-    }
-  },
-  "Operable": {
-    "type": "object",
-    "isAbstract": true
   },
   "OperandEnum": {
     "type": "enum",
@@ -323,16 +303,15 @@ let coreDataModel = {
   },
   "Operation": {
     "type": "object",
-    "inherit": "Operable",
     "properties": {
       "leftHand": {
-        "type": "Operable"
+        "type": "Operation, Variable, number"
       },
       "operand": {
         "type": "OperandEnum"
       },
       "rightHand": {
-        "type": "Operable"
+        "type": "Operation, Variable, number"
       }
     }
   },
@@ -386,7 +365,7 @@ let coreDataModel = {
     "properties": {
       "chain": {
         "type": "List",
-        "of": "Chainable"
+        "of": "ChainCompositionOr, ChainOperator, Situation"
       },
       "actors": {
         "type": "List",
@@ -399,20 +378,8 @@ let coreDataModel = {
       }
     }
   },
-  "RiskObject": {
-    "type": "object",
-    "isAbstract": true,
-    "documentation": "Represent a real thing in the world!",
-    "properties": {
-      "id": {
-        "type": "string",
-        "documentation": "A unique id for the object"
-      }
-    }
-  },
   "Situation": {
     "type": "object",
-    "inherit": "Chainable",
     "documentation": "Represent a Situation",
     "properties": {
       "id": {
@@ -462,7 +429,6 @@ let coreDataModel = {
   },
   "UnitDistanceEnum": {
     "type": "enum",
-    "inherit": "UnitEnum",
     "values": {
       "meter": {
         "primaryKey": "meter",
@@ -538,13 +504,8 @@ let coreDataModel = {
       }
     }
   },
-  "UnitEnum": {
-    "type": "enum",
-    "isAbstract": true
-  },
   "UnitMassEnum": {
     "type": "enum",
-    "inherit": "UnitEnum",
     "values": {
       "kilogram": {
         "primaryKey": "kilogram",
@@ -570,7 +531,6 @@ let coreDataModel = {
   },
   "UnitMonetaryEnum": {
     "type": "enum",
-    "inherit": "UnitEnum",
     "documentation": {
       "en": "A List of currency based on iso 4217"
     },
@@ -1846,7 +1806,6 @@ let coreDataModel = {
   },
   "UnitPersonEnum": {
     "type": "enum",
-    "inherit": "UnitEnum",
     "values": {
       "person": {
         "documentation": "A person"
@@ -1864,7 +1823,6 @@ let coreDataModel = {
   },
   "UnitTimeEnum": {
     "type": "enum",
-    "inherit": "UnitEnum",
     "values": {
       "second": {
         "primaryKey": "second",
@@ -1906,7 +1864,6 @@ let coreDataModel = {
   },
   "Variable": {
     "type": "object",
-    "inherit": "Operable",
     "properties": {
       "name": {
         "type": "string"

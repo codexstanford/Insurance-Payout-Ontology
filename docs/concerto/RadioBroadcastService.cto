@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept RadioBroadcastService extends BroadcastService {
-}

@@ -1,10 +1,9 @@
 Operation:
   type: object
-  inherit: Operable
   properties:
     leftHand:
-      type: Operable
+      type: Operation, Variable, number
     operand:
       type: OperandEnum
     rightHand:
-      type: Operable
+      type: Operation, Variable, number

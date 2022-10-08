@@ -1,9 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.BoatTerminal from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/BoatTerminal.cto
-
-
-concept BoatTrip extends Trip {
-  o BoatTerminal arrivalBoatTerminal
-  o BoatTerminal departureBoatTerminal
-}

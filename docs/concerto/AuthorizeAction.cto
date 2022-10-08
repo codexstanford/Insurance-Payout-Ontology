@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Person,Audience,ContactPoint,Organization from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person,Audience,ContactPoint,Organization.cto
-
-
-concept AuthorizeAction extends AllocateAction {
-  o Person,Audience,ContactPoint,Organization recipient
-}

@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept PerformanceRole extends Role {
-  o String characterName
-}

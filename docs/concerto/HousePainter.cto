@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept HousePainter extends HomeAndConstructionBusiness {
-}

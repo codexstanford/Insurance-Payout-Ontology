@@ -1,11 +1,11 @@
-import { Operable } from "./Operable";
+import { Operation, Variable, number } from "./Operation, Variable, number";
 import { OperandEnum } from "./OperandEnum";
 
 
-export class Operation extends Operable {
-  leftHand: Operable;
+export class Operation {
+  leftHand: Operation, Variable, number;
   operand: OperandEnum;
-  rightHand: Operable;
+  rightHand: Operation, Variable, number;
 
 
 }

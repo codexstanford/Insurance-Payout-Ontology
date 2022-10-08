@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept VirtualLocation extends Intangible {
-}

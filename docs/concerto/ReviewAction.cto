@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Review from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Review.cto
-
-
-concept ReviewAction extends AssessAction {
-  o Review resultReview
-}

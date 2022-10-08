@@ -1,6 +1,6 @@
 
 
-export class Variable extends Operable {
+export class Variable {
   name: string;
 
 

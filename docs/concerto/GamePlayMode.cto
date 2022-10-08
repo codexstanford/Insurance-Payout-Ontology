@@ -1,8 +1,0 @@
-namespace undefined
-
-enum GamePlayMode {
-  o MultiPlayer
-  o CoOp
-  o SinglePlayer
-}
-

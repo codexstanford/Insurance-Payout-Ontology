@@ -1,6 +1,5 @@
 Variable:
   type: object
-  inherit: Operable
   properties:
     name:
       type: string

@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.string,string,PhysicalActivityCategory,Thing,CategoryCode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,string,PhysicalActivityCategory,Thing,CategoryCode.cto
-
-
-concept Recommendation extends Review {
-  o string,string,PhysicalActivityCategory,Thing,CategoryCode category
-}

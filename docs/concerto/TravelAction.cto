@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Distance from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Distance.cto
-
-
-concept TravelAction extends MoveAction {
-  o Distance distance
-}

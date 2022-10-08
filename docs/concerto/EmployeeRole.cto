@@ -1,9 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.number,PriceSpecification,MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/number,PriceSpecification,MonetaryAmount.cto
-
-
-concept EmployeeRole extends OrganizationRole {
-  o String salaryCurrency
-  o number,PriceSpecification,MonetaryAmount baseSalary
-}

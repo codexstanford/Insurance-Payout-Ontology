@@ -1,7 +1,7 @@
 import { ChainOperatorEnum } from "./ChainOperatorEnum";
 
 
-export class ChainOperator extends Chainable {
+export class ChainOperator {
   type: ChainOperatorEnum;
 
 

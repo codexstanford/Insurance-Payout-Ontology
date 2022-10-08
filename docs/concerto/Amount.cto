@@ -1,12 +1,12 @@
 namespace undefined
 
-import org.codex.insurance.core.Operable from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Operable.cto
-import org.codex.insurance.core.UnitEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/UnitEnum.cto
+import org.codex.insurance.core.Operation, Variable, number from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Operation, Variable, number.cto
+import org.codex.insurance.core.UnitDistanceEnum, UnitMassEnum, UnitMonetaryEnum, UnitPersonEnum, UnitTimeEnum, string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/UnitDistanceEnum, UnitMassEnum, UnitMonetaryEnum, UnitPersonEnum, UnitTimeEnum, string.cto
 import org.codex.insurance.core.UnitDimensionEnum from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/UnitDimensionEnum.cto
 
 
 concept Amount {
-  o Operable quantity
-  o UnitEnum unit
+  o Operation quantity
+  o UnitDistanceEnum unit
   o UnitDimensionEnum unitDimension
 }

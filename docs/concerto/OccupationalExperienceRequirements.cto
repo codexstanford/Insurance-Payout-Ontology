@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept OccupationalExperienceRequirements extends Intangible {
-  o Double monthsOfExperience
-}

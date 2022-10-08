@@ -1,12 +1,12 @@
 classDiagram
-  RiskChain -- Chainable
+  RiskChain -- ChainCompositionOr, ChainOperator, Situation
   RiskChain -- RiskObject
   RiskChain -- Relation
 
 
 class RiskChain {
 
-  Chainable[] chain
+  ChainCompositionOr, ChainOperator, Situation[] chain
   RiskObject[] actors
   Relation[] relations
 

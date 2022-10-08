@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
-
-
-concept SomeProducts extends Product {
-  o QuantitativeValue inventoryLevel
-}

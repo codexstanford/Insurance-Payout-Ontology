@@ -1,9 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.MonetaryAmount from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MonetaryAmount.cto
-
-
-concept MortgageLoan extends LoanOrCredit {
-  o MonetaryAmount loanMortgageMandateAmount
-  o Boolean domiciledMortgage
-}

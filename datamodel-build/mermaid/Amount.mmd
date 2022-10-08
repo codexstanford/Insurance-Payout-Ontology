@@ -1,13 +1,13 @@
 classDiagram
-  Amount -- Operable
-  Amount -- UnitEnum
+  Amount -- Operation, Variable, number
+  Amount -- UnitDistanceEnum, UnitMassEnum, UnitMonetaryEnum, UnitPersonEnum, UnitTimeEnum, string
   Amount -- UnitDimensionEnum
 
 
 class Amount {
 
-  Operable quantity
-  UnitEnum unit
+  Operation, Variable, number quantity
+  UnitDistanceEnum, UnitMassEnum, UnitMonetaryEnum, UnitPersonEnum, UnitTimeEnum, string unit
   UnitDimensionEnum unitDimension
 
  }

@@ -1,7 +1,0 @@
-namespace undefined
-
-enum GenderType {
-  o Male
-  o Female
-}
-

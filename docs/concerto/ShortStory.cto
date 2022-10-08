@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept ShortStory extends CreativeWork {
-}

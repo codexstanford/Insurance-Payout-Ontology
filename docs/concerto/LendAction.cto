@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Person from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Person.cto
-
-
-concept LendAction extends TransferAction {
-  o Person borrower
-}

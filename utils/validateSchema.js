@@ -79,6 +79,9 @@ function checkMissingObject() {
         if (type == "List") {
           type = property.of;
         }
+        if (type.indexOf(", ") != -1) {
+          type = type.split(", ")
+        }
         if (Array.isArray(type)) {
           for (let ttype of type) {
             if (!INDEX[ttype]) {

@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept WebApplication extends SoftwareApplication {
-  o String browserRequirements
-}

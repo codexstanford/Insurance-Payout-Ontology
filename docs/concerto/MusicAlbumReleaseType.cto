@@ -1,9 +1,0 @@
-namespace undefined
-
-enum MusicAlbumReleaseType {
-  o EPRelease
-  o BroadcastRelease
-  o SingleRelease
-  o AlbumRelease
-}
-

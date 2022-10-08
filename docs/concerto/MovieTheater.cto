@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept MovieTheater extendsMovieTheaterMovieTheater {
-  o Double screenCount
-}

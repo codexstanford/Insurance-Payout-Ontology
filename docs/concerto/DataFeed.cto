@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Thing,DataFeedItem,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Thing,DataFeedItem,string.cto
-
-
-concept DataFeed extends Dataset {
-  o Thing,DataFeedItem,string dataFeedElement
-}

@@ -1,6 +1,5 @@
 UnitTimeEnum:
   type: enum
-  inherit: UnitEnum
   values:
     second:
       primaryKey: "second"

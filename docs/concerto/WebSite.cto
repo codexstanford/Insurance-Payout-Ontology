@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept WebSite extends CreativeWork {
-  o String issn
-}

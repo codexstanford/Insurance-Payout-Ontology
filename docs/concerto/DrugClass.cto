@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Drug from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Drug.cto
-
-
-concept DrugClass extends MedicalEntity {
-  o Drug drug
-}

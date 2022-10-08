@@ -1,6 +1,5 @@
 UnitMassEnum:
   type: enum
-  inherit: UnitEnum
   values:
     kilogram:
       primaryKey: "kilogram"

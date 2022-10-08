@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place.cto
-
-
-concept InsertAction extends AddAction {
-  o Place toLocation
-}

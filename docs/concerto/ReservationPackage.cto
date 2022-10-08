@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Reservation from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Reservation.cto
-
-
-concept ReservationPackage extends Reservation {
-  o Reservation subReservation
-}

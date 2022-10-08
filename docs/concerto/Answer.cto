@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.WebContent,Comment from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/WebContent,Comment.cto
-
-
-concept Answer extends Comment {
-  o WebContent,Comment answerExplanation
-}

@@ -2,6 +2,6 @@ namespace undefined
 
 
 
-concept Variable extends Operable {
+concept Variable {
   o String name
 }

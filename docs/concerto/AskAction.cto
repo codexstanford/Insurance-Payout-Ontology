@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Question from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Question.cto
-
-
-concept AskAction extends CommunicateAction {
-  o Question question
-}

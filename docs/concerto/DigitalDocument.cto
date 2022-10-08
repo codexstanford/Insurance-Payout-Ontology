@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.DigitalDocumentPermission from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/DigitalDocumentPermission.cto
-
-
-concept DigitalDocument extends CreativeWork {
-  o DigitalDocumentPermission hasDigitalDocumentPermission
-}

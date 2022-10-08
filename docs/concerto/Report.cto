@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept Report extends Article {
-  o String reportNumber
-}

@@ -1,0 +1,39 @@
+Vehicle:
+  type: object
+  inherit: Entity
+  properties:
+    productionYear: 
+      type: Amount
+      documentation: "The year the vehicle was produce"
+      ask:
+        en: "Which year was the vehicle produced?"
+        fr: "Quand le vehicle a-t-il ete produit?"
+    age: 
+      type: Amount
+      documentation: "The age of the vehicle"
+      ask:
+        en: "How old is the vehicle in year?"
+    length:
+      type: Amount
+      with:
+        unit: UnitDistanceEnum.meter
+        unitDimension: UnitDimensionEnum.distance
+      documentation: "The length of the vehicle in meter"   
+    weight:
+      type: Amount 
+      with:
+        unit: UnitMassEnum.kilogram
+        unitDimension: UnitDimensionEnum.mass
+      documentation: "The weight of the vehicle in kilogram"    
+    height:
+      type: Amount 
+      with:
+        unit: UnitDistanceEnum.meter
+        unitDimension: UnitDimensionEnum.distance
+      documentation: "The height of the vehicle in meter"
+    width:
+      type: Amount 
+      with:
+        unit: UnitDistanceEnum.meter
+        unitDimension: UnitDimensionEnum.distance
+      documentation: "The width of the vehicle in meter"

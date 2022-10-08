@@ -1,6 +1,6 @@
 
 
-export class Number extends Operable {
+export class Number {
   value: number;
 
 

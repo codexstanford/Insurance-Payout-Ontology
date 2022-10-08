@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept AppendAction extends InsertAction {
-}

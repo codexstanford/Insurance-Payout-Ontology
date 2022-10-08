@@ -1,6 +1,5 @@
 UnitMonetaryEnum:
   type: enum
-  inherit: UnitEnum
   documentation:
     en: "A List of currency based on iso 4217"
   values:

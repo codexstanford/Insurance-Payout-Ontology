@@ -1,12 +1,12 @@
 namespace undefined
 
-import org.codex.insurance.core.Chainable from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Chainable.cto
+import org.codex.insurance.core.ChainCompositionOr, ChainOperator, Situation from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/ChainCompositionOr, ChainOperator, Situation.cto
 import org.codex.insurance.core.RiskObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/RiskObject.cto
 import org.codex.insurance.core.Relation from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Relation.cto
 
 
 concept RiskChain {
-  o Chainable[] chain
+  o ChainCompositionOr, ChainOperator, Situation[] chain
   o RiskObject[] actors
   o Relation[] relations
 }

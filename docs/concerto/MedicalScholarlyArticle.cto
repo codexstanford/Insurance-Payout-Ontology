@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept MedicalScholarlyArticle extends ScholarlyArticle {
-  o String publicationType
-}

@@ -1,9 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.SteeringPositionValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/SteeringPositionValue.cto
-
-
-concept SteeringPositionValue extends QualitativeValue {
-  o SteeringPositionValue LeftHandDriving
-  o SteeringPositionValue RightHandDriving
-}

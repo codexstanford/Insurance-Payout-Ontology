@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.MedicalTrialDesign from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTrialDesign.cto
-
-
-concept MedicalTrial extends MedicalStudy {
-  o MedicalTrialDesign trialDesign
-}

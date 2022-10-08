@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.SolveMathAction,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/SolveMathAction,string.cto
-
-
-concept MathSolver extends CreativeWork {
-  o SolveMathAction,string mathExpression
-}

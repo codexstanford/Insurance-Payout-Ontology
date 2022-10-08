@@ -1,6 +1,5 @@
 UnitPersonEnum:
     type: enum
-    inherit: UnitEnum
     values:
       person:
         documentation: "A person"

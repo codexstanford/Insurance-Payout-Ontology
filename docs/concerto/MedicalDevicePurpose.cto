@@ -1,7 +1,0 @@
-namespace undefined
-
-enum MedicalDevicePurpose {
-  o Therapeutic
-  o Diagnostic
-}
-

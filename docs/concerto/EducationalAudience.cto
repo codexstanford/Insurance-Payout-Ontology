@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept EducationalAudience extends Audience {
-  o String educationalRole
-}

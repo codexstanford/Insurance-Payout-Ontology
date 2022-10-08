@@ -1,9 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.MedicalAudienceType,MedicalAudience from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalAudienceType,MedicalAudience.cto
-
-
-concept MedicalWebPage extends WebPage {
-  o String aspect
-  o MedicalAudienceType,MedicalAudience medicalAudience
-}

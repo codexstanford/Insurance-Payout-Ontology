@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.CreativeWork from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CreativeWork.cto
-
-
-concept SocialMediaPosting extends Article {
-  o CreativeWork sharedContent
-}

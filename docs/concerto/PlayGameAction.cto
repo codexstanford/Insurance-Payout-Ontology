@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.GameAvailabilityEnumeration,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/GameAvailabilityEnumeration,string.cto
-
-
-concept PlayGameAction extends ConsumeAction {
-  o GameAvailabilityEnumeration,string gameAvailabilityType
-}

@@ -1,9 +1,0 @@
-namespace undefined
-
-enum MapCategoryType {
-  o SeatingMap
-  o VenueMap
-  o ParkingMap
-  o TransitMap
-}
-

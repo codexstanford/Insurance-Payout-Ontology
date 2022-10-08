@@ -1,8 +1,0 @@
-namespace undefined
-
-enum LegalForceStatus {
-  o NotInForce
-  o InForce
-  o PartiallyInForce
-}
-

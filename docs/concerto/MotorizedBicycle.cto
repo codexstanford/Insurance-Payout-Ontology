@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept MotorizedBicycle extends Vehicle {
-}

@@ -1,9 +1,0 @@
-namespace undefined
-
-enum OfferItemCondition {
-  o DamagedCondition
-  o RefurbishedCondition
-  o UsedCondition
-  o NewCondition
-}
-

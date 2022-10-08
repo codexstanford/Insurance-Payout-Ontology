@@ -1,7 +1,0 @@
-namespace undefined
-
-
-
-concept MonetaryAmountDistribution extends QuantitativeValueDistribution {
-  o String currency
-}

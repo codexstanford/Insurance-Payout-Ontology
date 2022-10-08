@@ -1,8 +1,0 @@
-namespace undefined
-
-enum ReturnLabelSourceEnumeration {
-  o ReturnLabelCustomerResponsibility
-  o ReturnLabelDownloadAndPrint
-  o ReturnLabelInBox
-}
-

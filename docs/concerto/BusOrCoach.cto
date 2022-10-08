@@ -1,9 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.QuantitativeValue from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue.cto
-
-
-concept BusOrCoach extends Vehicle {
-  o QuantitativeValue roofLoad
-  o String acrissCode
-}

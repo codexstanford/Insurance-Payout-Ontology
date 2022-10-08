@@ -1,12 +1,14 @@
 classDiagram
   Coverage -- InsurancePayout
   Coverage -- RiskChain
+  Coverage -- RiskObject
 
 
 class Coverage {
 
   InsurancePayout[] payouts
   RiskChain riskChain
+  RiskObject[] riskObjects
   string text
 
  }

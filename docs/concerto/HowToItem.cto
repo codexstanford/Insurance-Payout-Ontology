@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.QuantitativeValue,number,string from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/QuantitativeValue,number,string.cto
-
-
-concept HowToItem extends ListItem {
-  o QuantitativeValue,number,string requiredQuantity
-}

@@ -1,8 +1,0 @@
-namespace undefined
-
-enum EventAttendanceModeEnumeration {
-  o OfflineEventAttendanceMode
-  o MixedEventAttendanceMode
-  o OnlineEventAttendanceMode
-}
-

@@ -1,0 +1,13 @@
+Person:
+  type: object
+  inherit: Entity
+  properties:
+    relationToPolicyHolder:
+      type: PersonRelationToPolicyHolderEnum
+    # KYC
+    firstName:
+      type: string
+    lastName:
+      type: string
+    age:
+      type: number

@@ -3,11 +3,11 @@ Amount:
   type: object
   properties:
     quantity:
-      type: Operable
+      type: Operation, Variable, number
       documentation:
         en: "An expression representing a quantity. Can contain a number, a name variable, or a numerical expression : supporting ( ) + - * / %"
     unit: 
-      type: UnitEnum
+      type: UnitDistanceEnum, UnitMassEnum, UnitMonetaryEnum, UnitPersonEnum, UnitTimeEnum, string
       documentation: 
         en: "The unit of the amount. It is recommended that it match an enum value corresponding to the dimension object."
     unitDimension:

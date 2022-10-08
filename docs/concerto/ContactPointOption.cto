@@ -1,7 +1,0 @@
-namespace undefined
-
-enum ContactPointOption {
-  o HearingImpairedSupported
-  o TollFree
-}
-

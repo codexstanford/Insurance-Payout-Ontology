@@ -2,6 +2,6 @@ namespace undefined
 
 
 
-concept Number extends Operable {
+concept Number {
   o Double value
 }

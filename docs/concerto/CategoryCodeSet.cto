@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.CategoryCode from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/CategoryCode.cto
-
-
-concept CategoryCodeSet extends DefinedTermSet {
-  o CategoryCode hasCategoryCode
-}

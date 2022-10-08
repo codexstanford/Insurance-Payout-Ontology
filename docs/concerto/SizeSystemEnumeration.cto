@@ -1,7 +1,0 @@
-namespace undefined
-
-enum SizeSystemEnumeration {
-  o SizeSystemMetric
-  o SizeSystemImperial
-}
-

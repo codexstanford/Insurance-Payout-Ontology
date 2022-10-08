@@ -1,9 +1,0 @@
-namespace undefined
-
-enum LegalValueLevel {
-  o DefinitiveLegalValue
-  o UnofficialLegalValue
-  o OfficialLegalValue
-  o AuthoritativeLegalValue
-}
-

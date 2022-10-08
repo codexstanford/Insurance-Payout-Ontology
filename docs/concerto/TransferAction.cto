@@ -1,9 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Place from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Place.cto
-
-
-concept TransferAction extends Action {
-  o Place fromLocation
-  o Place toLocation
-}

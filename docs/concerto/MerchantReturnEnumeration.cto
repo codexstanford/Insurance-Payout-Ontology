@@ -1,9 +1,0 @@
-namespace undefined
-
-enum MerchantReturnEnumeration {
-  o MerchantReturnNotPermitted
-  o MerchantReturnUnlimitedWindow
-  o MerchantReturnFiniteReturnWindow
-  o MerchantReturnUnspecified
-}
-

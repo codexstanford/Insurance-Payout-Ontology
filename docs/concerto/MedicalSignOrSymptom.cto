@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.MedicalTherapy from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MedicalTherapy.cto
-
-
-concept MedicalSignOrSymptom extends MedicalCondition {
-  o MedicalTherapy possibleTreatment
-}

@@ -1,8 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.MapCategoryType from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/MapCategoryType.cto
-
-
-concept Map extends CreativeWork {
-  o MapCategoryType mapType
-}

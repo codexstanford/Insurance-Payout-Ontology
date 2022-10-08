@@ -1,9 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.Thing from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/Thing.cto
-
-
-concept ReplaceAction extends UpdateAction {
-  o Thing replacee
-  o Thing replacer
-}

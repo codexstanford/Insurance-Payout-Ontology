@@ -1,7 +1,0 @@
-namespace undefined
-
-enum DrugPrescriptionStatus {
-  o OTC
-  o PrescriptionOnly
-}
-

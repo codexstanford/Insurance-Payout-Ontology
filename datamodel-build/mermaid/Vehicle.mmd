@@ -1,70 +1,14 @@
 classDiagram
-  Vehicle -- QuantitativeValue
-  Vehicle -- EngineSpecification
-  Vehicle -- date
-  Vehicle -- SteeringPositionValue
-  Vehicle -- QualitativeValue
-  Vehicle -- DriveWheelConfigurationValue
-  Vehicle -- CarUsageType
+  Vehicle -- Amount
 
 
 class Vehicle {
 
-  QuantitativeValue fuelCapacity
-  QuantitativeValue accelerationTime
-  QuantitativeValue speed
-  QuantitativeValue trailerWeight
-  EngineSpecification vehicleEngine
-  number emissionsCO2
-  date purchaseDate
-  QuantitativeValue numberOfForwardGears
-  number numberOfForwardGears
-  QuantitativeValue weightTotal
-  date productionDate
-  number numberOfPreviousOwners
-  QuantitativeValue numberOfPreviousOwners
-  SteeringPositionValue steeringPosition
-  QuantitativeValue wheelbase
-  string vehicleInteriorType
-  string numberOfAirbags
-  number numberOfAirbags
-  string fuelType
-  string fuelType
-  QualitativeValue fuelType
-  QuantitativeValue cargoVolume
-  string vehicleTransmission
-  QualitativeValue vehicleTransmission
-  string vehicleTransmission
-  QuantitativeValue payload
-  string driveWheelConfiguration
-  DriveWheelConfigurationValue driveWheelConfiguration
-  string knownVehicleDamages
-  QuantitativeValue fuelConsumption
-  string vehicleInteriorColor
-  number numberOfAxles
-  QuantitativeValue numberOfAxles
-  date modelDate
-  QuantitativeValue numberOfDoors
-  number numberOfDoors
-  QuantitativeValue vehicleSeatingCapacity
-  number vehicleSeatingCapacity
-  string callSign
-  QuantitativeValue tongueWeight
-  QuantitativeValue fuelEfficiency
-  date vehicleModelDate
-  string vehicleConfiguration
-  QuantitativeValue mileageFromOdometer
-  QuantitativeValue seatingCapacity
-  number seatingCapacity
-  QualitativeValue bodyType
-  string bodyType
-  string bodyType
-  date dateVehicleFirstRegistered
-  string vehicleIdentificationNumber
-  string meetsEmissionStandard
-  string meetsEmissionStandard
-  QualitativeValue meetsEmissionStandard
-  CarUsageType vehicleSpecialUsage
-  string vehicleSpecialUsage
+  Amount productionYear
+  Amount age
+  Amount length
+  Amount weight
+  Amount height
+  Amount width
 
  }

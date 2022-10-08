@@ -1,3 +1,8 @@
+
+<html>
+    <body>
+<div class="mermaid">
+
 classDiagram
   Amount -- Operation, Variable, number
   Amount -- UnitDistanceEnum, UnitMassEnum, UnitMonetaryEnum, UnitPersonEnum, UnitTimeEnum, string
@@ -31,7 +36,7 @@ class ChainOperator {
  }
 
 class ChainOperatorEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o wildcard
   o not
  }
@@ -53,7 +58,7 @@ class Coverage {
 
 
 class RiskObject {
-<<abstract>>
+&lt&ltabstract&gt&gt
 
   string id
 
@@ -106,19 +111,19 @@ class Multiplier {
  }
 
 class MultiplierInsuredObjectEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o perCar
  }
 
 class MultiplierOccurrenceEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o perClaim
   o perLine
   o perIncident
  }
 
 class MultiplierPersonEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o perPerson
   o perPassenger
   o perEmployee
@@ -126,7 +131,7 @@ class MultiplierPersonEnum {
  }
 
 class MultiplierTimeEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o perMinutes
   o perHour
   o perDay
@@ -143,7 +148,7 @@ class Number {
  }
 
 class OperandEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o addition
   o subtraction
  }
@@ -161,7 +166,7 @@ class Operation {
  }
 
 class PayoutTypeEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o Limit
   o Excess
   o Deductible
@@ -214,7 +219,7 @@ class Specific {
  }
 
 class UnitDimensionEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o monetary
   o time
   o distance
@@ -223,7 +228,7 @@ class UnitDimensionEnum {
  }
 
 class UnitDistanceEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o meter
   o decimeter
   o centimeter
@@ -232,7 +237,7 @@ class UnitDistanceEnum {
  }
 
 class UnitMassEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o kilogram
   o gram
   o ton
@@ -240,7 +245,7 @@ class UnitMassEnum {
  }
 
 class UnitMonetaryEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o AED
   o AFN
   o ALL
@@ -249,7 +254,7 @@ class UnitMonetaryEnum {
  }
 
 class UnitPersonEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o person
   o passenger
   o driver
@@ -257,7 +262,7 @@ class UnitPersonEnum {
  }
 
 class UnitTimeEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o second
   o millisecond
   o minute
@@ -286,7 +291,7 @@ class Person {
  }
 
 class PersonRelationToPolicyHolderEnum {
-<<enumeration>>
+&lt&ltenumeration&gt&gt
   o aunt
   o bother
   o brotherInLaw
@@ -314,3 +319,20 @@ undefined
 undefined
 undefined
 undefined
+
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({startOnLoad:true,   maxTextSize: 9000000});
+</script>
+
+
+<script>
+setTimeout(function() {
+  document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
+}, 100);
+</script>
+</body>
+</html>

@@ -1,9 +1,0 @@
-namespace undefined
-
-import org.codex.insurance.core.string,DefinedTermSet from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/string,DefinedTermSet.cto
-
-
-concept DefinedTerm extends Intangible {
-  o String termCode
-  o string,DefinedTermSet inDefinedTermSet
-}

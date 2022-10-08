@@ -1,9 +1,0 @@
-namespace undefined
-
-enum ReservationStatusType {
-  o ReservationPending
-  o ReservationConfirmed
-  o ReservationCancelled
-  o ReservationHold
-}
-

@@ -8,7 +8,7 @@ export class InsurancePayout {
   payoutType: PayoutTypeEnum;
   amount: List;
   minimalAmount: List;
-  multipliers: Multiplier;
+  per: Multiplier;
   for: RiskChain;
   impactOtherConsumption: boolean;
 

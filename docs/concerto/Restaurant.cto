@@ -1,6 +1,0 @@
-namespace undefined
-
-
-
-concept Restaurant extends FoodEstablishment {
-}

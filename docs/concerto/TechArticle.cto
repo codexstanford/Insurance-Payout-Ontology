@@ -1,8 +1,0 @@
-namespace undefined
-
-
-
-concept TechArticle extends Article {
-  o String dependencies
-  o String proficiencyLevel
-}
