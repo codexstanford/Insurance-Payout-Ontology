@@ -2,10 +2,12 @@ namespace undefined
 
 import org.codex.insurance.core.InsurancePayout from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/InsurancePayout.cto
 import org.codex.insurance.core.RiskChain from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/RiskChain.cto
+import org.codex.insurance.core.RiskObject from https://codexstanford.github.io/Insurance-Payout-Ontology/concerto/RiskObject.cto
 
 
 concept Coverage {
   o InsurancePayout[] payouts
   o RiskChain riskChain
+  o RiskObject[] riskObjects
   o String text
 }

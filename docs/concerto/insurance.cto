@@ -25,6 +25,7 @@ abstract concept Chainable {
 concept Coverage {
   o InsurancePayout[] payouts
   o RiskChain riskChain
+  o RiskObject[] riskObjects
   o String text
 }
 
@@ -380,6 +381,9 @@ enum UnitTimeEnum {
 
 concept Variable extends Operable {
   o String name
+}
+
+concept InsuranceBusiness extendsInsuranceBusinessInsuranceBusiness {
 }
 
 concept InsurancePerson extendsInsurancePersonInsurancePerson {

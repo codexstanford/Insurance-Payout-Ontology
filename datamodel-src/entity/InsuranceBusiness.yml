@@ -1,0 +1,3 @@
+InsuranceBusiness:
+  type: object
+  inherit: RiskObject, Organization

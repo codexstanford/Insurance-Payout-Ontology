@@ -123,6 +123,9 @@ function renderObject(name, data) {
       }
       else {
         let typeName = property.type;
+        if (!typeName) {
+          console.log("Missing property type", data, property);
+        }
         if (typeName.indexOf(",") != -1) {
           // for now only first type
           typeName = typeName.split(",").shift().trim();

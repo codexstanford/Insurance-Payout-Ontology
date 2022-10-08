@@ -8,6 +8,7 @@ RiskChain:
     actors:
       type: List
       of: RiskObject
+      isReference: true
     relations:
       type: List
       of: Relation

@@ -6,5 +6,8 @@ Coverage:
       of: InsurancePayout
     riskChain:
       type: RiskChain
+    riskObjects:
+      type: List
+      of: RiskObject
     text:
       type: string

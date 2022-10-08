@@ -15,6 +15,9 @@ function inheritParentProperties(data, parentObjectName, chain) {
     return;
   }
   if (data.type == 'object') {
+    if (!data.properties) {
+      data.properties = {};
+    }
     for (let property in parentObj.properties) {
       if (!data.properties[property] && !property.inherited) {
       //  parentObj.properties[property].inherited = parentObjectName;

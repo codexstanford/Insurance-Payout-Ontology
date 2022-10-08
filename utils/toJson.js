@@ -6,6 +6,7 @@ let objectsList = injectInheritedProperties(loadObjFromSrc());
 
 const DATA_MODEL_JSON_PATH = `${__dirname}/../datamodel-build/json`;
 const UTILS_ANNOTATION_PATH = `${__dirname}/annotationBuilder`;
+const UTILS_VISUAL_ANNOTATION_PATH = `${__dirname}/visualAnnotationBuilder/public/js`;
 // document.querySelectorAll("svg g .divider:last-of-type").forEach(e => e.remove());
 
 console.log("...Building Json")
@@ -33,6 +34,7 @@ fs.writeFileSync(`${DATA_MODEL_JSON_PATH}/datamodel.js`, "let datamodel = " + JS
 fs.writeFileSync(`${UTILS_ANNOTATION_PATH}/datamodel.js`, "let datamodel = " + JSON.stringify(output, null, 2), 'utf8');
 
 fs.writeFileSync(`${UTILS_ANNOTATION_PATH}/coreDataModel.js`, "let coreDataModel = " + JSON.stringify(outputCore, null, 2), 'utf8');
+fs.writeFileSync(`${UTILS_VISUAL_ANNOTATION_PATH}/coreDataModel.js`, "let coreDataModel = " + JSON.stringify(outputCore, null, 2), 'utf8');
 
 
 
