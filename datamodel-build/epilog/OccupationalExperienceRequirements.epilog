@@ -4,4 +4,4 @@ attribute("OccupationalExperienceRequirements","OccupationalExperienceRequiremen
 type("OccupationalExperienceRequirements.monthsOfExperience",attributerelation)
 domain("OccupationalExperienceRequirements.monthsOfExperience","OccupationalExperienceRequirements")
 unique("OccupationalExperienceRequirements.monthsOfExperience",yes)
-range("OccupationalExperienceRequirements.monthsOfExperience",number)
+range("OccupationalExperienceRequirements.monthsOfExperience","number")

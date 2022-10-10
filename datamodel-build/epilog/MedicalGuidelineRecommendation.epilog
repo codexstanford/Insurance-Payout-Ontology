@@ -4,4 +4,4 @@ attribute("MedicalGuidelineRecommendation","MedicalGuidelineRecommendation.recom
 type("MedicalGuidelineRecommendation.recommendationStrength",attributerelation)
 domain("MedicalGuidelineRecommendation.recommendationStrength","MedicalGuidelineRecommendation")
 unique("MedicalGuidelineRecommendation.recommendationStrength",yes)
-range("MedicalGuidelineRecommendation.recommendationStrength",string)
+range("MedicalGuidelineRecommendation.recommendationStrength","string")

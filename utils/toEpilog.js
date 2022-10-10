@@ -63,10 +63,10 @@ function renderObject(name, data) {
 
     if (prop.type === 'List') {
       output += `\nunique(${relationName},no)`;
-      output += `\nrange(${relationName},${prop.of})`;
+      output += `\nrange(${relationName},"${prop.of}")`;
     } else {
       output += `\nunique(${relationName},yes)`;
-      output += `\nrange(${relationName},${prop.type})`;
+      output += `\nrange(${relationName},"${prop.type}")`;
     }
   }
 
