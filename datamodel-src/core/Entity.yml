@@ -1,4 +1,4 @@
-RiskObject:
+Entity:
   type: object
   isAbstract: true
   documentation: "Represent a real thing in the world!"

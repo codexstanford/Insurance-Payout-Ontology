@@ -8,6 +8,6 @@ Coverage:
       type: RiskChain
     riskObjects:
       type: List
-      of: RiskObject
+      of: Entity
     text:
       type: string

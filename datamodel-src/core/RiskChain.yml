@@ -7,7 +7,7 @@ RiskChain:
       of: ChainCompositionOr, ChainOperator, Situation
     actors:
       type: List
-      of: RiskObject
+      of: Entity
       isReference: true
     relations:
       type: List

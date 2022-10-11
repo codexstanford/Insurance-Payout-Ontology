@@ -10,7 +10,7 @@ InsurancePolicy:
         en: "A product contain one or multiple coverage, describing what is the insurer promise in what situation"
     riskObjects:
       type: List
-      of: RiskObject
+      of: Entity
       documentation:
         en: "Risk objects describe what specific things are insured in the contract."
     specifics:
