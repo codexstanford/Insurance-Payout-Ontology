@@ -1,8 +1,0 @@
-AutoPartsStore:
-  type: object
-  documentation:
-    en: An auto parts store.
-  inherit:
-    - Store
-    - AutomotiveBusiness
-  properties: {}

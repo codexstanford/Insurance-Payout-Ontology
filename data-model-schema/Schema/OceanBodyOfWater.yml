@@ -1,6 +1,0 @@
-OceanBodyOfWater:
-  type: object
-  documentation:
-    en: An ocean (for example, the Pacific).
-  inherit: BodyOfWater
-  properties: {}

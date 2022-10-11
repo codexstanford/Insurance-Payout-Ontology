@@ -1,6 +1,0 @@
-BookStore:
-  type: object
-  documentation:
-    en: A bookstore.
-  inherit: Store
-  properties: {}

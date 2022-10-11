@@ -1,6 +1,0 @@
-Volcano:
-  type: object
-  documentation:
-    en: A volcano, like Fuji san.
-  inherit: Landform
-  properties: {}

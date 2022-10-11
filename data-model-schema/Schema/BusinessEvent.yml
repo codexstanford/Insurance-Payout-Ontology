@@ -1,6 +1,0 @@
-BusinessEvent:
-  type: object
-  documentation:
-    en: "Event type: Business event."
-  inherit: Event
-  properties: {}

@@ -1,7 +1,0 @@
-Attorney:
-  type: object
-  documentation:
-    en: "Professional service: Attorney. \\n\\nThis type is deprecated -
-      [[LegalService]] is more inclusive and less ambiguous."
-  inherit: LegalService
-  properties: {}

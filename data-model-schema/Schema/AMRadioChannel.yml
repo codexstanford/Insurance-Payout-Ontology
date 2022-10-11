@@ -1,6 +1,0 @@
-AMRadioChannel:
-  type: object
-  documentation:
-    en: A radio channel that uses AM.
-  inherit: RadioChannel
-  properties: {}

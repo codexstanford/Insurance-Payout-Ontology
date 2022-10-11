@@ -1,6 +1,0 @@
-ImageGallery:
-  type: object
-  documentation:
-    en: "Web page type: Image gallery page."
-  inherit: MediaGallery
-  properties: {}

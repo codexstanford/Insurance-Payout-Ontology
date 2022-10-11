@@ -1,7 +1,0 @@
-Intangible:
-  type: object
-  documentation:
-    en: A utility class that serves as the umbrella for a number of 'intangible'
-      things such as quantities, structured values, etc.
-  inherit: Thing
-  properties: {}

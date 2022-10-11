@@ -1,6 +1,0 @@
-CityHall:
-  type: object
-  documentation:
-    en: A city hall.
-  inherit: GovernmentBuilding
-  properties: {}

@@ -1,6 +1,0 @@
-LibrarySystem:
-  type: object
-  documentation:
-    en: A [[LibrarySystem]] is a collaborative system amongst several libraries.
-  inherit: Organization
-  properties: {}

@@ -1,6 +1,0 @@
-NightClub:
-  type: object
-  documentation:
-    en: A nightclub or discotheque.
-  inherit: EntertainmentBusiness
-  properties: {}

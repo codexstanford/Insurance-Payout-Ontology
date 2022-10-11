@@ -1,6 +1,0 @@
-DeleteAction:
-  type: object
-  documentation:
-    en: The act of editing a recipient by removing one of its objects.
-  inherit: UpdateAction
-  properties: {}

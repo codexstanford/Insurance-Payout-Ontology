@@ -1,6 +1,0 @@
-ExerciseGym:
-  type: object
-  documentation:
-    en: A gym.
-  inherit: SportsActivityLocation
-  properties: {}

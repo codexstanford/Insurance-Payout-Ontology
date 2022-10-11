@@ -1,6 +1,0 @@
-DanceEvent:
-  type: object
-  documentation:
-    en: "Event type: A social dance."
-  inherit: Event
-  properties: {}

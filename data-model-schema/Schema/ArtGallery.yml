@@ -1,6 +1,0 @@
-ArtGallery:
-  type: object
-  documentation:
-    en: An art gallery.
-  inherit: EntertainmentBusiness
-  properties: {}

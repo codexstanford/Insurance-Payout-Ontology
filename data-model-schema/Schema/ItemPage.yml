@@ -1,6 +1,0 @@
-ItemPage:
-  type: object
-  documentation:
-    en: A page devoted to a single item, such as a particular product or hotel.
-  inherit: WebPage
-  properties: {}

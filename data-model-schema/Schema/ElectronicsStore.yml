@@ -1,6 +1,0 @@
-ElectronicsStore:
-  type: object
-  documentation:
-    en: An electronics store.
-  inherit: Store
-  properties: {}

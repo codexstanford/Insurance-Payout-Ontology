@@ -1,6 +1,0 @@
-DefenceEstablishment:
-  type: object
-  documentation:
-    en: A defence establishment, such as an army or navy base.
-  inherit: GovernmentBuilding
-  properties: {}

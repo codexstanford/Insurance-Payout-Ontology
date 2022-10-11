@@ -1,6 +1,0 @@
-SheetMusic:
-  type: object
-  documentation:
-    en: Printed music, as opposed to performed or recorded music.
-  inherit: CreativeWork
-  properties: {}

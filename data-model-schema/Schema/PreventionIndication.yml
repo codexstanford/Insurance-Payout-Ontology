@@ -1,6 +1,0 @@
-PreventionIndication:
-  type: object
-  documentation:
-    en: An indication for preventing an underlying condition, symptom, etc.
-  inherit: MedicalIndication
-  properties: {}

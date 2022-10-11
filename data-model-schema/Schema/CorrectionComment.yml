@@ -1,6 +1,0 @@
-CorrectionComment:
-  type: object
-  documentation:
-    en: A [[comment]] that corrects [[CreativeWork]].
-  inherit: Comment
-  properties: {}

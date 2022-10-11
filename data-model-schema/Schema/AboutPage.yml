@@ -1,6 +1,0 @@
-AboutPage:
-  type: object
-  documentation:
-    en: "Web page type: About page."
-  inherit: WebPage
-  properties: {}

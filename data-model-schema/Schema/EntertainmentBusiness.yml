@@ -1,6 +1,0 @@
-EntertainmentBusiness:
-  type: object
-  documentation:
-    en: A business providing entertainment.
-  inherit: LocalBusiness
-  properties: {}

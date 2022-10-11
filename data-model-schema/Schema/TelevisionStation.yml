@@ -1,6 +1,0 @@
-TelevisionStation:
-  type: object
-  documentation:
-    en: A television station.
-  inherit: LocalBusiness
-  properties: {}

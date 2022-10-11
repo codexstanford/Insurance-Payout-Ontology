@@ -1,7 +1,0 @@
-RadioChannel:
-  type: object
-  documentation:
-    en: A unique instance of a radio BroadcastService on a CableOrSatelliteService
-      lineup.
-  inherit: BroadcastChannel
-  properties: {}

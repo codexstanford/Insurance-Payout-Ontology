@@ -1,6 +1,0 @@
-AutoDealer:
-  type: object
-  documentation:
-    en: An car dealership.
-  inherit: AutomotiveBusiness
-  properties: {}

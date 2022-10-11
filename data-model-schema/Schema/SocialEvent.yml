@@ -1,6 +1,0 @@
-SocialEvent:
-  type: object
-  documentation:
-    en: "Event type: Social event."
-  inherit: Event
-  properties: {}

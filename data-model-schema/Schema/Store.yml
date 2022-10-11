@@ -1,6 +1,0 @@
-Store:
-  type: object
-  documentation:
-    en: A retail good store.
-  inherit: LocalBusiness
-  properties: {}

@@ -1,7 +1,0 @@
-RVPark:
-  type: object
-  documentation:
-    en: A place offering space for "Recreational Vehicles", Caravans, mobile homes
-      and the like.
-  inherit: CivicStructure
-  properties: {}

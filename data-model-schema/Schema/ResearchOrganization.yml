@@ -1,6 +1,0 @@
-ResearchOrganization:
-  type: object
-  documentation:
-    en: A Research Organization (e.g. scientific institute, research company).
-  inherit: Organization
-  properties: {}

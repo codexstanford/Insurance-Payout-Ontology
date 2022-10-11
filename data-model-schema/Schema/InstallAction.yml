@@ -1,6 +1,0 @@
-InstallAction:
-  type: object
-  documentation:
-    en: The act of installing an application.
-  inherit: ConsumeAction
-  properties: {}

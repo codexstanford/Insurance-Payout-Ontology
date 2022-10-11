@@ -1,6 +1,0 @@
-MusicStore:
-  type: object
-  documentation:
-    en: A music store.
-  inherit: Store
-  properties: {}

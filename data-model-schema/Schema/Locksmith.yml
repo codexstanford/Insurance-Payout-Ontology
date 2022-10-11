@@ -1,6 +1,0 @@
-Locksmith:
-  type: object
-  documentation:
-    en: A locksmith.
-  inherit: HomeAndConstructionBusiness
-  properties: {}

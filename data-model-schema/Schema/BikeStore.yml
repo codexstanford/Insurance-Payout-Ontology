@@ -1,6 +1,0 @@
-BikeStore:
-  type: object
-  documentation:
-    en: A bike store.
-  inherit: Store
-  properties: {}

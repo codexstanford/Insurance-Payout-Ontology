@@ -1,6 +1,0 @@
-SizeGroupEnumeration:
-  type: enum
-  documentation:
-    en: Enumerates common size groups for various product categories.
-  inherit: Enumeration
-  values: {}

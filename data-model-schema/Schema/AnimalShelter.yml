@@ -1,6 +1,0 @@
-AnimalShelter:
-  type: object
-  documentation:
-    en: Animal shelter.
-  inherit: LocalBusiness
-  properties: {}

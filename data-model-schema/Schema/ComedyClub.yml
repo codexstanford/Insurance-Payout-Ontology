@@ -1,6 +1,0 @@
-ComedyClub:
-  type: object
-  documentation:
-    en: A comedy club.
-  inherit: EntertainmentBusiness
-  properties: {}

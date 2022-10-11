@@ -1,6 +1,0 @@
-TheaterEvent:
-  type: object
-  documentation:
-    en: "Event type: Theater performance."
-  inherit: Event
-  properties: {}

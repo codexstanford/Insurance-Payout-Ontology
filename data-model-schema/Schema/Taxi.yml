@@ -1,6 +1,0 @@
-Taxi:
-  type: object
-  documentation:
-    en: A taxi.
-  inherit: Service
-  properties: {}

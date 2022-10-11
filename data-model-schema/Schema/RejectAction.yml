@@ -1,7 +1,0 @@
-RejectAction:
-  type: object
-  documentation:
-    en: "The act of rejecting to/adopting an object.\\n\\nRelated actions:\\n\\n*
-      [[AcceptAction]]: The antonym of RejectAction."
-  inherit: AllocateAction
-  properties: {}

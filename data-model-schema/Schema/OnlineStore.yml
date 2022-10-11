@@ -1,6 +1,0 @@
-OnlineStore:
-  type: object
-  documentation:
-    en: An eCommerce site.
-  inherit: OnlineBusiness
-  properties: {}

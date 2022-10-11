@@ -1,6 +1,0 @@
-BeautySalon:
-  type: object
-  documentation:
-    en: Beauty salon.
-  inherit: HealthAndBeautyBusiness
-  properties: {}

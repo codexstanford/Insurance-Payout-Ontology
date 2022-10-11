@@ -1,6 +1,0 @@
-HardwareStore:
-  type: object
-  documentation:
-    en: A hardware store.
-  inherit: Store
-  properties: {}

@@ -1,6 +1,0 @@
-Bakery:
-  type: object
-  documentation:
-    en: A bakery.
-  inherit: FoodEstablishment
-  properties: {}

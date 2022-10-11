@@ -1,6 +1,0 @@
-PetStore:
-  type: object
-  documentation:
-    en: A pet store.
-  inherit: Store
-  properties: {}

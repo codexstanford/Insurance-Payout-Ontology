@@ -1,6 +1,0 @@
-Aquarium:
-  type: object
-  documentation:
-    en: Aquarium.
-  inherit: CivicStructure
-  properties: {}

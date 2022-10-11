@@ -1,6 +1,0 @@
-GolfCourse:
-  type: object
-  documentation:
-    en: A golf course.
-  inherit: SportsActivityLocation
-  properties: {}

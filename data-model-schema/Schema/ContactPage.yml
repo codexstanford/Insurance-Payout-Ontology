@@ -1,6 +1,0 @@
-ContactPage:
-  type: object
-  documentation:
-    en: "Web page type: Contact page."
-  inherit: WebPage
-  properties: {}

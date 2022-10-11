@@ -1,7 +1,0 @@
-RadioBroadcastService:
-  type: object
-  documentation:
-    en: A delivery service through which radio content is provided via broadcast
-      over the air or online.
-  inherit: BroadcastService
-  properties: {}

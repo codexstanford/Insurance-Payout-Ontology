@@ -1,6 +1,0 @@
-PresentationDigitalDocument:
-  type: object
-  documentation:
-    en: A file containing slides or used for a presentation.
-  inherit: DigitalDocument
-  properties: {}

@@ -1,7 +1,0 @@
-PawnShop:
-  type: object
-  documentation:
-    en: A shop that will buy, or lend money against the security of, personal
-      possessions.
-  inherit: Store
-  properties: {}

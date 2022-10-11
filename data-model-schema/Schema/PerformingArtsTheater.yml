@@ -1,6 +1,0 @@
-PerformingArtsTheater:
-  type: object
-  documentation:
-    en: A theater or other performing art center.
-  inherit: CivicStructure
-  properties: {}

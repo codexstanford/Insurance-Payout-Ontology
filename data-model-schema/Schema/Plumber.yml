@@ -1,6 +1,0 @@
-Plumber:
-  type: object
-  documentation:
-    en: A plumbing service.
-  inherit: HomeAndConstructionBusiness
-  properties: {}

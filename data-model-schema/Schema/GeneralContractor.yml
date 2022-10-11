@@ -1,6 +1,0 @@
-GeneralContractor:
-  type: object
-  documentation:
-    en: A general contractor.
-  inherit: HomeAndConstructionBusiness
-  properties: {}

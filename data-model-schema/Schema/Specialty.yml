@@ -1,7 +1,0 @@
-Specialty:
-  type: enum
-  documentation:
-    en: Any branch of a field in which people typically develop specific expertise,
-      usually after significant study, time, and effort.
-  inherit: Enumeration
-  values: {}

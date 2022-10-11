@@ -1,6 +1,0 @@
-Beach:
-  type: object
-  documentation:
-    en: Beach.
-  inherit: CivicStructure
-  properties: {}

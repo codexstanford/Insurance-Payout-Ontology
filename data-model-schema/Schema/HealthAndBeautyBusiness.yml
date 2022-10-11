@@ -1,6 +1,0 @@
-HealthAndBeautyBusiness:
-  type: object
-  documentation:
-    en: Health and beauty.
-  inherit: LocalBusiness
-  properties: {}

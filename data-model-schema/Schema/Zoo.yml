@@ -1,6 +1,0 @@
-Zoo:
-  type: object
-  documentation:
-    en: A zoo.
-  inherit: CivicStructure
-  properties: {}

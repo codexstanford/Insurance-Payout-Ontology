@@ -1,6 +1,0 @@
-Embassy:
-  type: object
-  documentation:
-    en: An embassy.
-  inherit: GovernmentBuilding
-  properties: {}

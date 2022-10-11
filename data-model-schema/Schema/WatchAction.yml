@@ -1,6 +1,0 @@
-WatchAction:
-  type: object
-  documentation:
-    en: The act of consuming dynamic/moving visual content.
-  inherit: ConsumeAction
-  properties: {}

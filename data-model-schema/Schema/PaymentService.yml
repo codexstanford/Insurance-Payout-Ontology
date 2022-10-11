@@ -1,7 +1,0 @@
-PaymentService:
-  type: object
-  documentation:
-    en: A Service to transfer funds from a person or organization to a beneficiary
-      person or organization.
-  inherit: FinancialProduct
-  properties: {}

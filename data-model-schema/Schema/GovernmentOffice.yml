@@ -1,6 +1,0 @@
-GovernmentOffice:
-  type: object
-  documentation:
-    en: A government office&#x2014;for example, an IRS or DMV office.
-  inherit: LocalBusiness
-  properties: {}

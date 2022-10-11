@@ -1,7 +1,0 @@
-ActivateAction:
-  type: object
-  documentation:
-    en: The act of starting or activating a device or application (e.g. starting a
-      timer or turning on a flashlight).
-  inherit: ControlAction
-  properties: {}

@@ -1,6 +1,0 @@
-Festival:
-  type: object
-  documentation:
-    en: "Event type: Festival."
-  inherit: Event
-  properties: {}

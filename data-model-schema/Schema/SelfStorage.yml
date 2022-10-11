@@ -1,6 +1,0 @@
-SelfStorage:
-  type: object
-  documentation:
-    en: A self-storage facility.
-  inherit: LocalBusiness
-  properties: {}

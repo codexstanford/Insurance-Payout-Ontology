@@ -1,6 +1,0 @@
-Photograph:
-  type: object
-  documentation:
-    en: A photograph.
-  inherit: CreativeWork
-  properties: {}

@@ -1,6 +1,0 @@
-SearchResultsPage:
-  type: object
-  documentation:
-    en: "Web page type: Search results page."
-  inherit: WebPage
-  properties: {}

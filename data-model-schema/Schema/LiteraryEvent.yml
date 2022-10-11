@@ -1,6 +1,0 @@
-LiteraryEvent:
-  type: object
-  documentation:
-    en: "Event type: Literary event."
-  inherit: Event
-  properties: {}

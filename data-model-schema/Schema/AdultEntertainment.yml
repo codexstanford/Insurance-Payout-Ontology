@@ -1,6 +1,0 @@
-AdultEntertainment:
-  type: object
-  documentation:
-    en: An adult entertainment establishment.
-  inherit: EntertainmentBusiness
-  properties: {}

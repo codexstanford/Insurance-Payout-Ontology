@@ -1,8 +1,0 @@
-StadiumOrArena:
-  type: object
-  documentation:
-    en: A stadium.
-  inherit:
-    - SportsActivityLocation
-    - CivicStructure
-  properties: {}

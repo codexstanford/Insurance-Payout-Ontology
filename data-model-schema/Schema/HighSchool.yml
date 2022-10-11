@@ -1,6 +1,0 @@
-HighSchool:
-  type: object
-  documentation:
-    en: A high school.
-  inherit: EducationalOrganization
-  properties: {}

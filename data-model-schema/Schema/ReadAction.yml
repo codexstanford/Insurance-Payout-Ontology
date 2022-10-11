@@ -1,6 +1,0 @@
-ReadAction:
-  type: object
-  documentation:
-    en: The act of consuming written content.
-  inherit: ConsumeAction
-  properties: {}

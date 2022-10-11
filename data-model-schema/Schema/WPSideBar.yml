@@ -1,6 +1,0 @@
-WPSideBar:
-  type: object
-  documentation:
-    en: A sidebar section of the page.
-  inherit: WebPageElement
-  properties: {}

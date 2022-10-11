@@ -1,6 +1,0 @@
-ComedyEvent:
-  type: object
-  documentation:
-    en: "Event type: Comedy event."
-  inherit: Event
-  properties: {}

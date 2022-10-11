@@ -1,8 +1,0 @@
-MedicalAudience:
-  type: object
-  documentation:
-    en: Target audiences for medical web pages.
-  inherit:
-    - Audience
-    - PeopleAudience
-  properties: {}

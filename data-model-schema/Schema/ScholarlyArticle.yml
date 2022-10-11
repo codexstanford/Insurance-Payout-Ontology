@@ -1,6 +1,0 @@
-ScholarlyArticle:
-  type: object
-  documentation:
-    en: A scholarly article.
-  inherit: Article
-  properties: {}

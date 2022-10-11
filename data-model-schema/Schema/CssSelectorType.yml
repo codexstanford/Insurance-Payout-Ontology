@@ -1,6 +1,0 @@
-CssSelectorType:
-  type: object
-  documentation:
-    en: Text representing a CSS selector.
-  inherit: string
-  properties: {}

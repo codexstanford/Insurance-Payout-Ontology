@@ -1,6 +1,0 @@
-XPathType:
-  type: object
-  documentation:
-    en: Text representing an XPath (typically but not necessarily version 1.0).
-  inherit: string
-  properties: {}

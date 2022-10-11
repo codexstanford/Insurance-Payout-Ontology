@@ -1,6 +1,0 @@
-CheckoutPage:
-  type: object
-  documentation:
-    en: "Web page type: Checkout page."
-  inherit: WebPage
-  properties: {}

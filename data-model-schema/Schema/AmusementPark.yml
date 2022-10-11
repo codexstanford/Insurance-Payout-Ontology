@@ -1,6 +1,0 @@
-AmusementPark:
-  type: object
-  documentation:
-    en: An amusement park.
-  inherit: EntertainmentBusiness
-  properties: {}

@@ -1,6 +1,0 @@
-LakeBodyOfWater:
-  type: object
-  documentation:
-    en: A lake (for example, Lake Pontrachain).
-  inherit: BodyOfWater
-  properties: {}

@@ -1,6 +1,0 @@
-NailSalon:
-  type: object
-  documentation:
-    en: A nail salon.
-  inherit: HealthAndBeautyBusiness
-  properties: {}

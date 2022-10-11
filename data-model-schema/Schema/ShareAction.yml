@@ -1,7 +1,0 @@
-ShareAction:
-  type: object
-  documentation:
-    en: The act of distributing content to people for their amusement or
-      edification.
-  inherit: CommunicateAction
-  properties: {}

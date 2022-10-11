@@ -1,6 +1,0 @@
-TreatmentIndication:
-  type: object
-  documentation:
-    en: An indication for treating an underlying condition, symptom, etc.
-  inherit: MedicalIndication
-  properties: {}

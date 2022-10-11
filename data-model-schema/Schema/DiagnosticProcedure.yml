@@ -1,7 +1,0 @@
-DiagnosticProcedure:
-  type: object
-  documentation:
-    en: A medical procedure intended primarily for diagnostic, as opposed to
-      therapeutic, purposes.
-  inherit: MedicalProcedure
-  properties: {}

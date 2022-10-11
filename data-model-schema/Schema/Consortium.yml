@@ -1,7 +1,0 @@
-Consortium:
-  type: object
-  documentation:
-    en: A Consortium is a membership [[Organization]] whose members are typically
-      Organizations.
-  inherit: Organization
-  properties: {}

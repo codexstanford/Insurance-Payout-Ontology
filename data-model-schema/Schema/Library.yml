@@ -1,6 +1,0 @@
-Library:
-  type: object
-  documentation:
-    en: A library.
-  inherit: LocalBusiness
-  properties: {}

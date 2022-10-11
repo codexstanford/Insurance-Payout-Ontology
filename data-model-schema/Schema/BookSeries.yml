@@ -1,7 +1,0 @@
-BookSeries:
-  type: object
-  documentation:
-    en: A series of books. Included books can be indicated with the hasPart
-      property.
-  inherit: CreativeWorkSeries
-  properties: {}

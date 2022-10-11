@@ -1,6 +1,0 @@
-HinduTemple:
-  type: object
-  documentation:
-    en: A Hindu temple.
-  inherit: PlaceOfWorship
-  properties: {}

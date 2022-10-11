@@ -1,6 +1,0 @@
-InsuranceAgency:
-  type: object
-  documentation:
-    en: An Insurance agency.
-  inherit: FinancialService
-  properties: {}

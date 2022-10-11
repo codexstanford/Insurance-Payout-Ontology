@@ -1,6 +1,0 @@
-AutomatedTeller:
-  type: object
-  documentation:
-    en: ATM/cash machine.
-  inherit: FinancialService
-  properties: {}

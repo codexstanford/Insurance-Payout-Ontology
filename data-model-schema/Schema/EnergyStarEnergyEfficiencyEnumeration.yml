@@ -1,9 +1,0 @@
-EnergyStarEnergyEfficiencyEnumeration:
-  type: enum
-  documentation:
-    en: Used to indicate whether a product is EnergyStar certified.
-  inherit: EnergyEfficiencyEnumeration
-  values:
-    EnergyStarCertified:
-      documentation:
-        en: Represents EnergyStar certification.

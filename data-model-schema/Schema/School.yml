@@ -1,6 +1,0 @@
-School:
-  type: object
-  documentation:
-    en: A school.
-  inherit: EducationalOrganization
-  properties: {}

@@ -1,6 +1,0 @@
-GasStation:
-  type: object
-  documentation:
-    en: A gas station.
-  inherit: AutomotiveBusiness
-  properties: {}

@@ -1,6 +1,0 @@
-WearAction:
-  type: object
-  documentation:
-    en: The act of dressing oneself in clothing.
-  inherit: UseAction
-  properties: {}

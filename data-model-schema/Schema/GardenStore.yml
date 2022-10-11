@@ -1,6 +1,0 @@
-GardenStore:
-  type: object
-  documentation:
-    en: A garden store.
-  inherit: Store
-  properties: {}

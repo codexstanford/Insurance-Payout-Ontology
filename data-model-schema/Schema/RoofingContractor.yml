@@ -1,6 +1,0 @@
-RoofingContractor:
-  type: object
-  documentation:
-    en: A roofing contractor.
-  inherit: HomeAndConstructionBusiness
-  properties: {}

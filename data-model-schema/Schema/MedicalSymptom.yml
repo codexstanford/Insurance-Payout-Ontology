@@ -1,7 +1,0 @@
-MedicalSymptom:
-  type: object
-  documentation:
-    en: Any complaint sensed and expressed by the patient (therefore defined as
-      subjective)  like stomachache, lower-back pain, or fatigue.
-  inherit: MedicalSignOrSymptom
-  properties: {}

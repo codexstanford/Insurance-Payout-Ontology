@@ -1,7 +1,0 @@
-SchoolDistrict:
-  type: object
-  documentation:
-    en: A School District is an administrative area for the administration of
-      schools.
-  inherit: AdministrativeArea
-  properties: {}

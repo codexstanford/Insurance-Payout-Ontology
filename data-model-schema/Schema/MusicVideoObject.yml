@@ -1,6 +1,0 @@
-MusicVideoObject:
-  type: object
-  documentation:
-    en: A music video file.
-  inherit: MediaObject
-  properties: {}

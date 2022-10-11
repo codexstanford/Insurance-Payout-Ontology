@@ -1,6 +1,0 @@
-Electrician:
-  type: object
-  documentation:
-    en: An electrician.
-  inherit: HomeAndConstructionBusiness
-  properties: {}

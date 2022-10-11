@@ -1,6 +1,0 @@
-EmployerAggregateRating:
-  type: object
-  documentation:
-    en: An aggregate rating of an Organization related to its role as an employer.
-  inherit: AggregateRating
-  properties: {}

@@ -1,6 +1,0 @@
-Synagogue:
-  type: object
-  documentation:
-    en: A synagogue.
-  inherit: PlaceOfWorship
-  properties: {}

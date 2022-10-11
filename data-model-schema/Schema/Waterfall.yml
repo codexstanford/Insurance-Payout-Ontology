@@ -1,6 +1,0 @@
-Waterfall:
-  type: object
-  documentation:
-    en: A waterfall, like Niagara.
-  inherit: BodyOfWater
-  properties: {}

@@ -1,6 +1,0 @@
-Canal:
-  type: object
-  documentation:
-    en: A canal, like the Panama Canal.
-  inherit: BodyOfWater
-  properties: {}

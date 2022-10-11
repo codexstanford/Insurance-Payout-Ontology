@@ -1,6 +1,0 @@
-Optician:
-  type: object
-  documentation:
-    en: A store that sells reading glasses and similar devices for improving vision.
-  inherit: MedicalBusiness
-  properties: {}

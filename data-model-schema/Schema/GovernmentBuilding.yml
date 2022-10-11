@@ -1,6 +1,0 @@
-GovernmentBuilding:
-  type: object
-  documentation:
-    en: A government building.
-  inherit: CivicStructure
-  properties: {}

@@ -1,8 +1,0 @@
-FindAction:
-  type: object
-  documentation:
-    en: "The act of finding an object.\\n\\nRelated actions:\\n\\n*
-      [[SearchAction]]: FindAction is generally lead by a SearchAction, but not
-      necessarily."
-  inherit: Action
-  properties: {}

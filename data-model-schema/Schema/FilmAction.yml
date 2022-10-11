@@ -1,6 +1,0 @@
-FilmAction:
-  type: object
-  documentation:
-    en: The act of capturing sound and moving images on film, video, or digitally.
-  inherit: CreateAction
-  properties: {}

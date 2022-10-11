@@ -1,6 +1,0 @@
-MusicEvent:
-  type: object
-  documentation:
-    en: "Event type: Music event."
-  inherit: Event
-  properties: {}

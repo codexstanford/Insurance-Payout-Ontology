@@ -1,6 +1,0 @@
-BusStop:
-  type: object
-  documentation:
-    en: A bus stop.
-  inherit: CivicStructure
-  properties: {}

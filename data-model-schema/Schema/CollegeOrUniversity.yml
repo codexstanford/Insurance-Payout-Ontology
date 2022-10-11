@@ -1,6 +1,0 @@
-CollegeOrUniversity:
-  type: object
-  documentation:
-    en: A college, university, or other third-level educational institution.
-  inherit: EducationalOrganization
-  properties: {}

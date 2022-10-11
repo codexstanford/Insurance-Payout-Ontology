@@ -1,6 +1,0 @@
-Museum:
-  type: object
-  documentation:
-    en: A museum.
-  inherit: CivicStructure
-  properties: {}

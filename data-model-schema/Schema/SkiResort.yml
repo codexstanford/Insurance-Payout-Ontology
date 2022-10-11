@@ -1,8 +1,0 @@
-SkiResort:
-  type: object
-  documentation:
-    en: A ski resort.
-  inherit:
-    - SportsActivityLocation
-    - Resort
-  properties: {}

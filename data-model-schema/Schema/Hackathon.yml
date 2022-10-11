@@ -1,6 +1,0 @@
-Hackathon:
-  type: object
-  documentation:
-    en: A [hackathon](https://en.wikipedia.org/wiki/Hackathon) event.
-  inherit: Event
-  properties: {}

@@ -1,6 +1,0 @@
-Winery:
-  type: object
-  documentation:
-    en: A winery.
-  inherit: FoodEstablishment
-  properties: {}

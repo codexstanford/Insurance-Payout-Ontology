@@ -1,6 +1,0 @@
-GovernmentPermit:
-  type: object
-  documentation:
-    en: A permit issued by a government agency.
-  inherit: Permit
-  properties: {}

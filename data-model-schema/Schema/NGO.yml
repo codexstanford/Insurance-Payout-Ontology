@@ -1,6 +1,0 @@
-NGO:
-  type: object
-  documentation:
-    en: "Organization: Non-governmental Organization."
-  inherit: Organization
-  properties: {}

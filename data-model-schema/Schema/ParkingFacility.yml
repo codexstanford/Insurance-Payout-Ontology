@@ -1,6 +1,0 @@
-ParkingFacility:
-  type: object
-  documentation:
-    en: A parking lot or other parking facility.
-  inherit: CivicStructure
-  properties: {}

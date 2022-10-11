@@ -1,6 +1,0 @@
-PrependAction:
-  type: object
-  documentation:
-    en: The act of inserting at the beginning if an ordered collection.
-  inherit: InsertAction
-  properties: {}

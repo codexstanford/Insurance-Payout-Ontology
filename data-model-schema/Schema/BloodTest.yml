@@ -1,6 +1,0 @@
-BloodTest:
-  type: object
-  documentation:
-    en: A medical test performed on a sample of a patient's blood.
-  inherit: MedicalTest
-  properties: {}

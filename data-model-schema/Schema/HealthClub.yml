@@ -1,8 +1,0 @@
-HealthClub:
-  type: object
-  documentation:
-    en: A health club.
-  inherit:
-    - HealthAndBeautyBusiness
-    - SportsActivityLocation
-  properties: {}

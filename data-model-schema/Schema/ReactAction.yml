@@ -1,7 +1,0 @@
-ReactAction:
-  type: object
-  documentation:
-    en: The act of responding instinctively and emotionally to an object, expressing
-      a sentiment.
-  inherit: AssessAction
-  properties: {}

@@ -1,6 +1,0 @@
-DrinkAction:
-  type: object
-  documentation:
-    en: The act of swallowing liquids.
-  inherit: ConsumeAction
-  properties: {}

@@ -1,6 +1,0 @@
-ComputerStore:
-  type: object
-  documentation:
-    en: A computer store.
-  inherit: Store
-  properties: {}

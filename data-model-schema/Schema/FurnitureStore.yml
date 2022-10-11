@@ -1,6 +1,0 @@
-FurnitureStore:
-  type: object
-  documentation:
-    en: A furniture store.
-  inherit: Store
-  properties: {}

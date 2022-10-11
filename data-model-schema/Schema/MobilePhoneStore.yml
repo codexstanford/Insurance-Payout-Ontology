@@ -1,6 +1,0 @@
-MobilePhoneStore:
-  type: object
-  documentation:
-    en: A store that sells mobile phones and related accessories.
-  inherit: Store
-  properties: {}

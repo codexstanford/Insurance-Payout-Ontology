@@ -1,6 +1,0 @@
-Table:
-  type: object
-  documentation:
-    en: A table on a Web page.
-  inherit: WebPageElement
-  properties: {}

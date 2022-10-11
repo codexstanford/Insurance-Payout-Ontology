@@ -1,6 +1,0 @@
-MotorcycleDealer:
-  type: object
-  documentation:
-    en: A motorcycle dealer.
-  inherit: AutomotiveBusiness
-  properties: {}

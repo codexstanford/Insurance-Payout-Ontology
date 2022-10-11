@@ -1,6 +1,0 @@
-DiscussionForumPosting:
-  type: object
-  documentation:
-    en: A posting to a discussion forum.
-  inherit: SocialMediaPosting
-  properties: {}

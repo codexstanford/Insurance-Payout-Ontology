@@ -1,6 +1,0 @@
-CollectionPage:
-  type: object
-  documentation:
-    en: "Web page type: Collection page."
-  inherit: WebPage
-  properties: {}

@@ -1,8 +1,0 @@
-Pharmacy:
-  type: object
-  documentation:
-    en: A pharmacy or drugstore.
-  inherit:
-    - MedicalOrganization
-    - MedicalBusiness
-  properties: {}

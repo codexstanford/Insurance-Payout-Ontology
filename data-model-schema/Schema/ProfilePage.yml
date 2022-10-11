@@ -1,6 +1,0 @@
-ProfilePage:
-  type: object
-  documentation:
-    en: "Web page type: Profile page."
-  inherit: WebPage
-  properties: {}

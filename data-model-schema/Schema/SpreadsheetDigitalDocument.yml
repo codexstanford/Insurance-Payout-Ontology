@@ -1,6 +1,0 @@
-SpreadsheetDigitalDocument:
-  type: object
-  documentation:
-    en: A spreadsheet file.
-  inherit: DigitalDocument
-  properties: {}

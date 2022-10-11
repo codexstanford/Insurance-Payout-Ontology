@@ -1,6 +1,0 @@
-HobbyShop:
-  type: object
-  documentation:
-    en: A store that sells materials useful or necessary for various hobbies.
-  inherit: Store
-  properties: {}

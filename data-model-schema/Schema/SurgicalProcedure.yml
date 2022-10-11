@@ -1,7 +1,0 @@
-SurgicalProcedure:
-  type: object
-  documentation:
-    en: A medical procedure involving an incision with instruments; performed for
-      diagnose, or therapeutic purposes.
-  inherit: MedicalProcedure
-  properties: {}

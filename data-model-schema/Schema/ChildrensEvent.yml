@@ -1,6 +1,0 @@
-ChildrensEvent:
-  type: object
-  documentation:
-    en: "Event type: Children's event."
-  inherit: Event
-  properties: {}

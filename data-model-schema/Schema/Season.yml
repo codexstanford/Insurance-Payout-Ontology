@@ -1,6 +1,0 @@
-Season:
-  type: object
-  documentation:
-    en: A media season e.g. tv, radio, video game etc.
-  inherit: CreativeWork
-  properties: {}

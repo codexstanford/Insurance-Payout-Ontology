@@ -1,6 +1,0 @@
-HousePainter:
-  type: object
-  documentation:
-    en: A house painting service.
-  inherit: HomeAndConstructionBusiness
-  properties: {}

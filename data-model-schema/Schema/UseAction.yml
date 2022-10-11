@@ -1,6 +1,0 @@
-UseAction:
-  type: object
-  documentation:
-    en: The act of applying an object to its intended purpose.
-  inherit: ConsumeAction
-  properties: {}

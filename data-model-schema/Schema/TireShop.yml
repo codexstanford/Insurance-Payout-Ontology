@@ -1,6 +1,0 @@
-TireShop:
-  type: object
-  documentation:
-    en: A tire shop.
-  inherit: Store
-  properties: {}

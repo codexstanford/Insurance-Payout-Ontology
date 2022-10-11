@@ -1,6 +1,0 @@
-OfficeEquipmentStore:
-  type: object
-  documentation:
-    en: An office equipment store.
-  inherit: Store
-  properties: {}

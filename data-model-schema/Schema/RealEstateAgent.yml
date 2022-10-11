@@ -1,6 +1,0 @@
-RealEstateAgent:
-  type: object
-  documentation:
-    en: A real-estate agent.
-  inherit: LocalBusiness
-  properties: {}

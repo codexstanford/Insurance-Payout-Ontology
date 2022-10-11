@@ -1,6 +1,0 @@
-IceCreamShop:
-  type: object
-  documentation:
-    en: An ice cream shop.
-  inherit: FoodEstablishment
-  properties: {}

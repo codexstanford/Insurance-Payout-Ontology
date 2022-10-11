@@ -1,6 +1,0 @@
-PublicSwimmingPool:
-  type: object
-  documentation:
-    en: A public swimming pool.
-  inherit: SportsActivityLocation
-  properties: {}

@@ -1,6 +1,0 @@
-BankOrCreditUnion:
-  type: object
-  documentation:
-    en: Bank or credit union.
-  inherit: FinancialService
-  properties: {}
